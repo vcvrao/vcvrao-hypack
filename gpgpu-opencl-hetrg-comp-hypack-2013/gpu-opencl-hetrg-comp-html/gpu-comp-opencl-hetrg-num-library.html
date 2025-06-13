@@ -1,0 +1,2220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+  
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B>  </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../../hypack13-mode04-gpgpu-lab-overview.html">
+                  &#149; Mode-4 GPGPUs </A>
+                   
+                <A class=menul
+                    href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                    &#149;  NVIDIA - CUDA/OpenCL</A>
+              
+	       <A class=menul  
+                  href="./../../hypack13-mode04-gpgpu-amd-opencl.html">
+                  &#149; AMD APP  OpenCL </A>
+                             
+	          <!-- ** -->
+                  <A class=menulslct  
+                   href="./../../hypack13-mode04-gpgpu-opencl.html">
+                   &#149; GPGPUs - OpenCL</A>
+                   <!-- ** -->
+
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-power-perf.html">
+                   &#149; GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../../index.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>  hyPACK-2013 :  Programming on Heterogeneous computing Platforms : OpencL   </b> </font></DIV>
+ </TD>
+</TR>
+
+<TR>
+
+ <td height="24" align="left" >
+ <P align=justify><span  class="content" >
+<BR> <BR>
+
+The Open Computing Language is a framework for writing programs that execute across heterogeneous platforms 
+consisting of CPUs, GPUs, and other processors. OpenCL includes a language (based on C99) for writing kernels
+(functions that execute on OpenCL devices), plus APIs that are used to define and then control the 
+heterogeneous platform. The OpenCL provides an opportunity for developers to effectively use the multiple
+heterogeneous compute resources on their CPUs, GPUs and other processors. 
+Developers wanted to be able to access them together, not just off load the GPU for specific tasks 
+and the OpenCL programming environment may address these issues. OpenCL supports wide range of 
+applications, ranging from embedded and consume software to HPC solutions, through a low-level, 
+high-performance, portable abstraction. It is expected that OpenCL will form the foundation layer 
+of a parallel programming Eco-system of platform-independent tools, middle-ware, and applications. 
+</span> </p>
+</td>
+</tr> 
+
+</Tbody> 
+</Table>
+
+<BR> 
+
+	<!-- *************** Table for Listing of Programs Starts  ****************** -->
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+
+<p> <font size="2" face="Arial" color="red"> <b> List of  Programs </b> </font> </p>
+
+
+
+
+
+<!-- ************ Example 3.1 : starts ************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+        <a href="#hetr-opencl-prog-num-lib-id01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.1 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+        <span class = "content">
+         Write OpenCL program for Matrix - Vector multiplication using BLAS Library
+       (<font color = "red"> Assignment </font> )
+      </span> 
+     </td>
+
+   </tr>
+ <!-- *************** Example 3.1 : ends ***************** -->
+
+ <!--************* Example 3.2 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-num-lib-id02">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.2 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+     <span class = "content">
+          Write a OpenCL Program for Matrix Matrix multiplication using AMD APP BLAS library function calls.        
+
+      </span> 
+     </td>
+
+   </tr>
+ <!-- ***************** Example 3.2 : ends ***************** -->
+
+ 
+ <!--*********** Example 3.3 : starts ************ -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-num-lib-id03">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.3 </b> </font> 
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+        <span class = "content">
+         <span class = "content">
+         Write a OPENCL  Program for  implement solution of matrix system of linear 
+      equations <B>Ax = b </B> by Jacobi method using BLAS librarry 
+     (<font color = "red"> Assignment </font> )
+       </span> 
+     </td>
+
+   </tr>
+ <!-- **************** Example 3.3 : ends ****************** -->
+
+
+<!-- *************** Example 3.4 : starts ****************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-num-lib-id04">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.4</b> </font>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+      <span class = "content">
+         Write  OpenCL program to implement the  solution of Matrix system of Linear Equations 
+     <B>[A]{x}={b} </b>  
+       by Conjugate Gradient (Iterative) Method).  (<font color = "red" > Assignment </font> )
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 3.4 : ends ************ -->
+
+ <!-- ************* Example 3.5 : starts ************ -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+          <font size="2" face="Arial" color="blue">
+            <b>  Example 3.5 </b> </font> 
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+     <span class = "content">
+        Demonstrate performance of LINPACK OpenCL open source Software on AMD-APP GPU
+        (<font color = "red" > Assignment </font> )
+       </span>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 3.5 : ends **************** -->
+
+
+
+</TBODY> 
+</TABLE> 
+
+
+<BR> <BR>
+
+  <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+  <BR> <BR>
+
+
+<HR>
+
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<BR> <BR>
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+
+<DIV align=Left>
+ <font size="2"  Color="black" face= "verdana">
+    <B>  Brief description of OpenCL  Programs for  Numerical (Matrix)  Computations  </b> </font></DIV> 
+</TD> 
+</TR> 
+</TBODY>
+ </TABLE> 
+
+
+<!-- ********************** Example 3.1 starts *********************** -->
+
+<a name="hetr-opencl-prog-num-lib-id01"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+
+     <b>  Example 3.1:  </b> </td>
+    <td width="70%" height="2" align="left">
+     <b>   Write OpenCL program for Matrix - Vector multiplication using BLAS Library </b>
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+
+<LI><B> Objective </B>
+
+<P>  Write OpenCL program to compute Matrix - vector Multiplication using BLAS 1 Library calls<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+The program takes input a Matrix and Vector and uses AMD-APP provided BLAS 1 library. <BR> <BR>
+
+
+
+<!-- **************** -->
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+    <tr>
+     <td  valign = "top"  width = "5 % " height="2" valign="top">  1  </td>
+   
+       <td  height="2 %  width = "85 % " " valign="top">
+       <span class ="content"> <font color = "black">  
+           <I>   OpenCL Device context object </i>
+        </font> </span> 
+
+    </td>
+    </tr>
+
+
+    <tr>
+     <td  valign = "top"  width = "5 % " height="2" valign="top">   2   </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+        <span class ="content"> <font color = "black">  
+           <I>   Command queue, attached to device context</i>
+        </font> </span> 
+
+    </td>
+    </tr>
+ 
+    <tr>
+     <td  valign = "top"  width = "5 % " height="2" valign="top">  3  </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+      <span class ="content"> <font color = "black">  
+           <I>  OpenCL program for kernel source; </i>
+        </font> </span>  
+
+    </td>
+    </tr>
+
+    <tr>
+     <td  valign = "top"  width = "5 % " height="2" valign="top">  4 </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+     <span class ="content"> <font color = "black">  
+           <I>   Some memory buffer object to hold input/output data </i>
+        </font> </span>  
+
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+<BR> <B> Important steps of Implementation  : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  Input  </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   Read input scalar, vector, platform ( CPU/GPU ) 
+Read kernel source code from specified kernel source file.
+At runtime, OpenCL kernel source  is compiled. "KERNEL_SOURCE_PATH" is user defined macro, 
+which defines physical path to kernel source file. "ReadKernelSource" is
+the function reads kernel source and put into a character string.
+ </i>
+  </font> </span>  </p>
+
+    </td>
+    </tr>
+
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  OpenCL Prog. Env. SetUp   </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   SetExeEnv() to set-up 
+       context, device context, platform identification, selection of target device, building kernel source code,
+      binding kernel binary object with selected context as well as with device and platform.
+ </i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+ 
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  Create kernel handle  </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>  The call "clCreateKernel()" is an OpenCL API , which binds kernel object with a
+          name or handle( pointer).
+ </i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  Memory allocation </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   Allocate memory on host and device for required arrays  </i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  Kernel Arguments </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   Configure kernel arguments using "clSetKernelArg()" and Initialize
+        global and local work-size of OpenCL Kernel. </i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  Enqueue OpenCL kernel  </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   Configure kernel arguments using "clSetKernelArg()" and Initialize
+       Enqueue OpenCL kernel execution request & Wait for kernel execution to finish.</i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">  __kernel void vectVectMult_kernel </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   Kernel: A kernel is a function declared in a program and executed on an OpenCL device</i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+
+    <tr>
+     <td  valign = "top"  width = "40 % " height="2" valign="top">   Release  </td>
+   
+       <td  height="2 %  width = "50 % " " valign="top">
+        <p align = "justify"> <span class ="content"> <font color = "black">  
+           <I>   Configure kernel arguments using "clSetKernelArg()" and Initialize
+      Release acquired memory objects and resources</i>
+        </font> </span>  </p>
+
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+
+<!-- ***************** -->
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p align = "justity"> Input Matrix and Vector </p> 
+
+
+ <LI><B>Output</B>
+</LI>
+
+<p>  Resultant vector  </p>
+
+</ul>
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 3.1 ends **************************** -->
+
+
+
+<!-- ************************ Example 3.2 starts ***************  -->
+
+<a name="hetr-opencl-prog-num-lib-id02"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+    
+     <b>  Example 3.2:  </b> </td>
+
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program  for  Matrix into Matrix  multiplication using AMD-APP BLAS Libraries  </b>
+
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download AMd-APP Makefile &amp; source code - :  <BR> 
+
+  <a href="../gpu-opencl-hetrg-comp-num-library-codes/AMD-APP-Blas-Makefile">
+       <font color = "blue"> Makefile  </font> </a> &nbsp; &nbsp; &nbsp; &nbsp;
+ 
+ <a href="../gpu-opencl-hetrg-comp-num-library-codes/AMD-APP-OpenclDgemmGPU.c">
+       <font color = "blue"> AMD-APP-OpenclDgemmGPU.c</font> </a>) <BR>
+
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ </tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a OpenCL Program to perform Matrix Matrix multiplication using BLAS Libraries <br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify"> <span class ="content">
+This Program performs matrix into matrix multiplication. . <BR> <BR>
+
+
+</span>
+</P> 
+</LI>
+
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+<BR> <B> Important Steps   : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host and  Input data Generation    </i> <BR>  
+		Allocate memory for input  matrices on host-CPU  
+               and filled with the single  or double prcesion  data.
+             
+                
+                </font> <BR>
+          </td>
+      </tr>
+    
+       <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Set opencl execution environment : </i> <BR>  
+		Call the function <B> setExeEnv </b> which sets  execution environment for opencl  
+                  which performs the following :<BR> 
+                 <blockquote>
+                 	- Get Platform Information <BR>
+                  	- Get Device Information <BR>
+                        - Create context for GPU-devices to be used <BR>
+                       	- Create program object.<BR>
+                     	- Build  the program executable from the program source. <BR>
+               </blockquote>
+           <I> The function performs (a). Discover &amp; Initilaise the platforms; (b). Discoer &amp; Initialie the devices; (c). Create a Context; (d); Create program object 
+build the program executable </i>
+</i>
+                
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Create command queue  </i> using 
+ <font size = 2, face = " Courier New " color ="#FF00FF" > Using clCreateCommandQueue(*)
+ </font> and associate it with the device you want to execute on.
+
+                 </i> <BR>
+		 <BR> </font>
+           </td> 
+      </tr>
+
+   <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Create device bufffer using <font size = 2, face = " Courier New " color ="#FF00FF" > <i>clCreateBuffer() </i>Api 
+</i> </font><BR>
+		that will contain the data from  
+                the host-buffer.
+      </font>  </i>
+          <BR></font>
+        </td> 
+      </tr>
+
+
+
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black">  
+           <I>  Write host-CPU data to device buffers
+             : </i> <BR>
+		
+           Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+     <i>  clEnqueueWriteBuffer </i> 
+      </font>  </i>
+          <BR></font>
+        </td> 
+      </tr>
+
+
+
+
+   
+  
+     <!-- ******* Step6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		Perform Matrix matrix Multiplication using <font size = 2, face = " Courier New " color ="#FF00FF" > 
+<i>clAmdBlasDgemm()</i></font>.Api.
+
+</font> </i> <BR>
+              </font>
+           </td> 
+      </tr>
+
+<!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		Write the output buffer to the Host (Copy result from device-gpu to host-cpu) using <font size = 2, face = " Courier New " color ="#FF00FF" > 
+<i>clEnqueueReadBuffer()</i> <BR> </font>
+           </td> 
+
+
+     <!-- ******* Step 8. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  8. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of result on host-CPU </i> <BR>		
+                  Compute matrix-matrix multiplication on host-CPU and compare CPU and GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 9. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  9. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Release OpenCL resources (Free the memory)  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+              
+           </td> 
+      </tr>
+</tbody>
+</table>
+
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+<!-- ************** Input ************** -->
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Size of the Input Matrices
+ </p> 
+
+
+
+
+<LI><B>Output</B> </LI>
+
+	
+<p>  Resultant vector  </p> <br>
+	
+</UL>
+
+  <a href="#top">
+  <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</TD>
+
+</tbody>
+</table>
+
+
+<!-- ********************* Example 3.2 ends ************************* -->
+
+
+
+
+
+<!-- ************************ Example 3.3 starts ***************  -->
+
+<a name="hetr-opencl-prog-num-lib-id03"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  Example 3.3:  <BR>  <BR>  </b> </td>
+    <td width="80%" height="2" align="left">
+     <b> Write a OpenCL  Program for  implement solution of matrix system of linear equations
+       <B> [A]{x} = {b} </b> by Jacobi method. 
+ </b>
+
+ 
+
+   </td>
+  </tr> 
+ </tbody>
+ </table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a  OpenCL program, for solving system of linear equations <B> [A]{x} = {b} </b> using Jacobi method <br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+ The Jacobi iterative method is one of the simplest iterative techniques to solve system of linear equations.
+    The <I>i<SUP>th</SUP></I> equation of a system of linear equations [A]{x}={b} is  </span> </p> <BR> <BR>
+ 
+
+<div align =  "center"> <IMG SRC="../gpu-opencl-hetrg-comp-images/jacobi-sum13.gif" HEIGHT = 70 WIDTH = 350> </div> <BR>
+
+<P align="justify"> <span class = "content">
+  If all the diagonal elements of <B>A</B> are nonzero (or are made nonzero
+     by permuting the rows and columns of <B>A</B>), we can rewrite equation (1)  </span> </p> <BR>
+
+ <div align =  "center"> <IMG SRC="../gpu-opencl-hetrg-comp-images/jacobi-sum14.gif" HEIGHT=84 WIDTH=350> <BR> <BR>
+
+<P align="justify"> <span class = "content">
+  The Jacobi method starts with an initial guess <I>x</I><SUB>0</SUB> for
+  the solution vector <I>x</I>. This initial vector <I>x</I><SUB>0</SUB>
+  is used in the right-hand side of equation (2) to arrive at the next approximation
+  <I>x</I><SUB>1</SUB> to the solution vector. The vector <I>x</I><SUB>1</SUB>
+  is then used in the right hand side of equation (2), and the process continues
+  until a close enough approximation to the actual solution is found. A typical
+  iteration step in the Jacobi method is </span> </p> <br> <BR>
+
+<div align="Center"> <IMG SRC="../gpu-opencl-hetrg-comp-images/jacobi-sum15.gif" HEIGHT=86 WIDTH=350> </div> <br>
+
+<P align="justify"> <span class = "content"> 
+  We now express the iteration step of equation 3 in terms of residual <I>r<SUB>k</SUB></I>. 
+  Equation (3) can be rewritten as  </span>< </p> </div> <br>
+
+<div align = "Center" > <IMG SRC="../gpu-opencl-hetrg-comp-images/jacobi-sum16.gif" HEIGHT=86 WIDTH=350> </div>  <br> 
+
+<P align="justify"> <span class = "content">
+ Each process computes <I>n/p </I>values of the vector x in each iteration. These values are 
+     gathered by all the processes and each  process tests for convergence. If the values have been 
+    computed up-to a certain accuracy the iterations are stopped otherwise the processes use 
+    these values in the next iterations to compute a new set of values. </span> </p>
+</p>
+
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Input Matrix <B> A </B> and Initial Solution  Vector <B> x </b>
+ </p> 
+
+</ul>
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  solution  of matrix system <B> Ax = b </B> </p>
+<br>
+
+  <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ******************* Example 3.3 ends *************************** -->
+
+
+<!-- ******************* Example 3.4 starts ***************  -->
+
+<a name="hetr-opencl-prog-num-lib-id04"> </a>
+
+<table border="0"  height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+  
+     <b>  Example 3.4:  <BR>  <BR>  </b> </td>
+    <td width="70%" height="2" align="left">
+     <b> Write a OpenCL  Program for  implement solution of matrix system of linear equations
+       <B> [A]{x} = {b} </b> by Conjugate Gradient method. 
+ </b>
+
+ 
+ 
+   </td>
+  </tr> 
+ </tbody>
+ </table>
+
+
+ 
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+
+<p align = "justify"> <span class = "content">
+
+ CUDA implementation for Conjugate Gradient Method to solve the system of 
+linear equations [A]{x}={b}. Assume that A is symmetric positive definite matrix.    <br>
+
+</span> </p>
+</LI>
+
+
+<LI><B> Description </B>
+										
+
+<p align = "justify"> <span class = "content">
+
+<B>Description of  conjugate gradient method :</B> <BR> <BR>
+
+
+ The conjugate gradient (<I>CG</I>) method is an example of minimizing
+ method. A real n x n matrix A is positive definite if <I>x<SUP>T </SUP></I><B>A</B><I> x &gt; </I>{0} 
+ for any <I>n</I> x 1 real, nonzero vector <I>x. </I>For a symmetric positive definite matrix <B>A</B>, 
+ the unique vector <I>x</I> that minimizes the quadratic functional <BR> <BR>
+
+  <FONT COLOR="#ff00ff"> 
+ f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x-x<SUP>T</SUP>b</I>&nbsp;  </FONT> <BR> <BR>
+
+
+   is the solution to the system <B>A<I>x</I></B><I> </I>= <B>b</B>, here <I>x </I>and b 
+   are <I>n </I>x 1 vectors. It is not particularly relevant
+   when <I> n </i>  is very large, since the conjugating time for that number of iterations
+   is usually prohibitive and the property does not hold in presence of rounding
+   errors. The reason is that the gradient of functional f (<I>x</I>)<I> </I>is
+   <B>A<I>x</I></B><I> - <B>b</B></I>, which is zero when f (<I>x</I>) is
+    minimum. The gradient of a function is a <I>n</I> x 1 vector. We explain
+   some important steps in the algorithm. An iteration of a minimization method
+   is of the form </span> </p>
+
+        <DIR>  <FONT COLOR="#ff00ff"> 
+         <I>x<SUB>k+</SUB></I><SUB>1</SUB><I> </I>= <I>x<SUB>k</SUB>&nbsp;
+             +<SUB> </SUB></I>tau<I><SUB>k</SUB></I>d<I><SUB>k</SUB></I> &nbsp; &nbsp;  </FONT>         
+           (1)&nbsp;
+           <BR>&nbsp;
+        </DIR>
+<BR>
+
+<p align = "justify"> <span class = "content">
+
+     where  tau<I><SUB>k</SUB></I> is a scalar step size and d<I><SUB>k</SUB></I>is
+     the direction vector, d<I><SUB>k </SUB></I>is a descent direction for f
+     at <I>x</I>.&nbsp; We now consider the problem of determining tau<I><SUB>k</SUB></I>,
+     given <I>x<SUB>k</SUB></I> and d<I><SUB>k</SUB></I>, so that f(<I>x</I>)
+     is minimized on the line <I>x<SUB> </SUB></I>= <I>x<SUB>k</SUB></I> + tau<I><SUB>k</SUB></I>
+     d<I><SUB>k</SUB></I>, for tau<I><SUB>k</SUB></I>. The function f(<I>x<SUB>k</SUB></I>+
+     tau<I> </I>d<I><SUB>k</SUB></I>) is quadratic in tau, and its minimization
+     leads to the condition </span> </p>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+         tau<I><SUB> k </SUB></I>=&nbsp; g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k
+     </SUB>/</I> d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB> </i>,  </FONT>                                
+         &nbsp;&nbsp; (2)&nbsp;
+ </DIR>
+ <BR>
+
+<p align = "justify"> <span class = "content">
+    where g<I><SUB>k</SUB>=</I><B>A</B><I>x<SUB>k </SUB>- </I><B>b</B><I> </I>is
+    the gradient (residue)&nbsp; vector after <I>k</I> iterations. The residual
+    need not be computed explicitly in each iteration because it can be computed
+    incrementally by using its value from the previous iteration. In the (<I>k+</I>1)<I><SUP>th
+   </SUP></I>iteration, the residual g<SUB><I>k+</I>1</SUB> can be expressed
+    as follows:&nbsp; </span> </p>
+
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <FONT COLOR="#ff00ff"> 
+    g<SUB><I>k+</I>1</SUB><I>&nbsp; </I>=<I> </I><B>A</B><I>x<SUB>k+</SUB></I><SUB>1</SUB><I>
+    -</I> <I>b&nbsp;</I>&nbsp; </FONT>
+
+    <DIR>  <FONT COLOR="#ff00ff"> 
+          &nbsp;&nbsp;&nbsp;&nbsp; =<I> </I><B>A</B>(<I>x<SUB>k</SUB></I>+ tau<I><SUB>k
+         </SUB></I>d<I><SUB>k</SUB></I>) <I>- b</I>&nbsp; 
+   <BR>
+   
+          &nbsp;&nbsp;&nbsp;&nbsp; = <B>A</B><I>x<SUB>k</SUB>- b + </I>tau<I><SUB>k
+         </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp;
+   <BR> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp; 
+       = g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k </sub> 
+                                </i> &nbsp; &nbsp; 
+ </FONT>  (3) 
+   </DIR> <BR> <BR>
+
+
+<p align = "justify"> <span class = "content">
+
+
+
+   Thus, the only matrix-vector product computed in each iteration is <B>A</B>d<I><SUB>k</SUB></I>,
+   which is already required to compute tau<I><SUB>k&nbsp; </SUB></I>in the
+   equation (2). If <B>A </B>is a symmetric positive definite matrix and d<SUB>1</SUB><I>,
+   </I>d<SUB>2<I>,</I>..., </SUB>d<I><SUB>n</SUB></I> are direction vectors
+   that are conjugate with respect to <B>A </B>(that is, d<I><SUB>i</SUB><SUP>T
+   </SUP></I><B>A</B>d<I><SUB>j</SUB>=</I>0 for all 0<I>&lt;n, j&lt;=n</I>,<I> i</I>!=<I>j</I>), 
+   then <I>x<SUB>k+</SUB></I><SUB>1</SUB> in the Equation (1) converges to the solution 
+   of <B>A</B><I>x = </I>bin at most <I>n</I>
+   iterations, assuming no rounding errors. <Br> <BR>
+
+
+   In practice, however, the number of iterations that yields an acceptable approximation to the solution is
+   much smaller than <I>n</I>.&nbsp; It&nbsp; also&nbsp; makes the gradient
+   at <I>x<SUB>k+</SUB>1</I> orthogonal to search direction, i.e&nbsp; d<SUB>k</SUB><I><SUP>T
+   </SUP></I>g<SUB><I>k+</I>1</SUB><I>&nbsp; = </I>0.&nbsp; Now we suppose that the search directions
+   are determined by an iteration of the form&nbsp; </span> </p>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    d<SUB><I>k+</I>1</SUB><I> </I>=<I> -</I>g<SUB><I>k+</I>1</SUB>+ beta<I><SUB>k
+    </SUB></I>d<I><SUB>k&nbsp;</SUB> </i> &nbsp; &nbsp; </FONT> (4) 
+  </DIR> <BR> <BR>
+
+ <p align = "justify"> <span class ="content"> 
+
+    where d<SUB>0<I> </I></SUB>=<I> -</I>g<SUB>0</SUB><I>&nbsp;</I> and beta<SUB>0</SUB>,
+    beta<SUB>1</SUB> , ...... remain to be determined. We find the new search
+    direction in the&nbsp; plane spanned by the gradient at the most recent
+    point and previous search direction. The parameter beta<SUB><I>k+</I>1</SUB>i<I>s </I> determined by following       
+   equation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    Beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>Ad<I><SUB>k</SUB></I>/
+    d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>k</SUB></i> &nbsp; &nbsp; </FONT> (5) 
+  </DIR> 
+  <BR>
+
+
+  and, one can derive orthogonality relations<BR>&nbsp;
+</span> </p>
+
+   <DIR>  <FONT COLOR="#ff00ff"> 
+      g<I><SUP>T</SUP><SUB>k</SUB></I>g <I><SUB>l</SUB></I>= 0 (<I>l </I>!=
+      <I>k</I>); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>l </SUB></I>= 0 (<I>l </I>!=<I>k</I>) </FONT>
+   </DIR>
+ <BR> <BR>
+
+ <p align = "justify"> <span class ="content"> 
+      The derivation of the above equation (5)&nbsp; and orthogonality relations
+      is beyond the scope of this document. For details please refer [ ]. Using
+      equation (3) and orthogonality relations, the equation (5)&nbsp; can be
+      further reduced to <BR> <BR>
+
+  <DIR>
+ <FONT COLOR="#ff00ff"> 
+   Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB><</i> &nbsp; &nbsp; </FONT>  (6) 
+ </DIR> <BR>
+
+</span> </p>
+
+
+<p align = "justify"> <span class = "content">
+   The above equations (1) to (6) lead to <I>CG</I> algorithm. The algorithm
+   terminates when the square of the Euclidean vector norm of gradient (residual)
+   falls below a predetermined tolerance value.&nbsp; Although all of the
+   versions of the conjugate gradient method obtained by combining the formulas
+   for g<I><SUB>k</SUB></I>, Beta<I><SUB>k</SUB></I>, and tau<I><SUB>k</SUB></I>
+   in various ways are mathematically equivalent, their computer implementation
+   is not. The following version is compared with respect to computational
+   labor, storage requirements, and accuracy. The following sequence of steps
+   are widely accepted.
+ </span> </p>
+
+
+
+ <DIR>  <FONT COLOR="#ff00ff"> 
+      1. tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+         g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k </SUB>/</I>        
+        d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+
+      2. <i> x<SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>= 
+         <I>x<SUB>k</SUB>&nbsp; +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      3. g<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I> 
+          g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+      4. Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+         g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      5. d<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I> -</I>g<I><SUB>k+</SUB>1 </I>+          
+         Beta<I><SUB>k </SUB></I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+</FONT>
+
+  </DIR> <BR>
+
+   where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+        calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b , and put d<SUB>0</SUB>= -g<SUB>0</SUB>.&nbsp;
+
+
+<!-- ***********  Conjugate Gradient  Method   implementation  Algorithm  ************* -->
+
+<BR> 
+
+  The computer implementation of this algorithm is explained as follows : <BR> <BR>
+
+   <FONT COLOR="#ff00ff"> 
+
+    void CongugateGradient(float
+
+   <I> x<SUB>0</SUB> </I>[ ],  <i> float b [ ], float d)&nbsp;  </i> <BR>
+
+ <i>  &nbsp; &nbsp; {&nbsp;  </i> <BR>
+
+ <i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      float &nbsp;&nbsp; g, Delta0, Delta1, beta;&nbsp; </i> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  float &nbsp;&nbsp; temp, tau;&nbsp;  </i> <BR>
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  int &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration;  </i> <BR>
+
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration = 0; </i><BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x &nbsp; =  <I>x<SUB>0</SUB></I><SUB>;&nbsp;</SUB>&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  g = b;&nbsp;  </i><BR>
+
+<i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g = A <I>x - </I>g;&nbsp;<BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Delta0 = g<SUP>T </SUP>* g;&nbsp; &nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( Delta0 &lt;= EPSILON)&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return; &nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = -g;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do {&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   iteration = iteration + 1;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   temp = A * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   tau = Delta0 / d<I><SUP>T&nbsp;</SUP></I> * temp;&nbsp;&nbsp; <BR>
+
+<I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  x</I> = <I>x</I> + tau * d;&nbsp;&nbsp;  </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   g = g + tau * temp;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Delta1 = g<I><SUP>T&nbsp;</SUP></I> * g; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  if ( Delta1 &lt;= EPSILON )&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;&nbsp;</i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   beta = Delta1 / Delta0;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Delta0 = Delta1;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   d = -g + beta * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+ while(Delta0 &gt; EPSILON &amp;&amp; Iteration &lt; MAX_ITERATIONS); </i><BR>
+
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return; </i><BR>
+
+ </i> </FONT>&nbsp;
+
+</span> </p>
+
+ <p align = "justify"> <span class ="content"> 
+
+
+   Regarding one-dimensional arrays of size <I>n </I>x 1 are required for
+   temp, g, <I>x, </I>d. The storage requirement for matrix. A is depends upon the structure 
+   ( dense, band, sparse )  of the matrix.The two dimensional <I>n</I> x <I>n</I> array is the 
+   simplest structure to store  matrix A. For large sparse matrix A this structure wastes a large amount 
+    of storage space, for such matrix A suitable storage scheme should be 
+    used.
+</span> </p>
+
+
+<!-- ****************** Example 3.4 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] Ends ********** -->
+
+
+<!-- ************* Example 3.4 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] 
+                         Pre - conditioned CG method Starts ************ -->
+
+
+<LI>
+  <B>The preconditioned conjugate gradient algorithm&nbsp;</B>&nbsp;  </LI>
+
+<p align = "justify"> <span class = "content">
+ 
+    Let C be a positive definite matrix factored in the form C = E E<I><SUP>T</SUP></I>, 
+    and let the quadratic functional&nbsp;  </FONT>
+  
+ <BR> 
+<DIR>
+   <FONT COLOR="#ff00ff"> 
+    f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x - x<SUP>T</SUP>b + C </I>,&nbsp;
+</FONT>
+</DIR>
+ <BR>
+
+  We define second quadratic functional g(y) by the transformation y = E<I><SUP>T</SUP>x</I>,<BR> <BR>
+
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+     g(<I>x</I>) = g(E<SUP>-T</SUP>y) = (1<I>/</I>2)<I>y<SUP>T</SUP></I><B>A<SUP>*</SUP></B><I>y
+    - y<SUP>T</SUP>b <SUP>*</SUP> + C<SUP>*</SUP>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>where A <SUP>*</SUP> = E<SUP>-1</SUP>AE<SUP>-<I>T</I></SUP>, b<SUP>*</SUP> = 
+         E<SUP>-1</SUP>b, C<SUP>*</SUP> = C.&nbsp; </FONT>
+</DIR>
+<BR>
+  Here, A<SUP>*</SUP> is symmetric and positive definite. The similarity transformation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+
+    E<SUP>-<I>T</I></SUP>A<SUP>*</SUP>E<I><SUP>T</SUP> </I>= E<SUP>-<I>T</I></SUP>E<SUP>-1</SUP>A
+    = C<SUP>-1</SUP>A&nbsp; </FONT>
+
+  </DIR>
+<BR>
+</span> </p>
+
+<p align = "justify"> <span class = "content">
+
+   reveals that A<SUP>*</SUP> and A have same eigen values. If C can be found
+   such that the condition number of the matrix A<SUP>*</SUP> is less than
+   the condition number of the matrix A, then the rate of convergence of the
+   preconditioned method is better than that of conjugate gradient method.
+   We call C the <I>preconditioning </I>matrix, A<SUP>*</SUP> the <I>preconditioned</I>
+   matrix, We assume that the matrix C = EE<SUP>T</SUP> is positive definite,
+   since E is nonsingular by assumption. If the coefficient matrix A has <I>l</I>
+   distinct eigen values, the CG algorithm  converges to the solution
+   of the system <B>A<I>x</I> </B>=<B> b </B>in at most <I>l</I> iterations
+   (assuming no rounding errors). Therefore, if A has many distinct eigen
+   values that vary widely in magnitude, the CG algorithm may require a large
+   number of iterations to converge to an acceptable approximation to the
+   solution. <BR> <BR>
+
+
+
+  The speed of convergence of the <I>CG</I> algorithm can be increased
+  by preconditioning <B>A</B> with the congruence transformation <B>A*</B><I>
+    = </I>E<SUP>-1</SUP>AE<SUP>-<I>T</I> </SUP> where E is a nonsingular
+  matrix. E is chosen such that <B>A*</B> has fewer distinct eigen values
+  than <B>A</B>. The <I>CG</I> algorithm is then used to solve <B>A* y <I>=</I>b<I>*</I></B>,
+  where <I>x =</I>(E<I><SUP>T</SUP></I>)<I><SUP>-</SUP>1y</I> . The resulting
+  algorithm is called the <I>preconditioned conjugate gradient</I> (<I>PCG</I>)
+  algorithm. The step performed in each iteration of the preconditioned
+ conjugate gradient algorithm are as follows <BR> <BR>
+
+<DIR>  <FONT COLOR="#ff00ff"> 
+ 
+ 1. &nbsp; tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+     g<I><SUB>k</SUB><SUP>T</SUP></I>h<I><SUB>k </SUB>/</I>        
+     d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 2. &nbsp; <i> x<SUB>k+</SUB></I><SUB>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>= <I>x<SUB>k</SUB> +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 3.&nbsp;  g<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I>
+    g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+ 4. &nbsp; h<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=&nbsp;
+    C<SUP>-1</SUP>g<SUB><I>k+</I>1</SUB>&nbsp; <BR>
+
+ 5. &nsbp;  beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>h<SUB><I>k+</I>1</SUB>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>h<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 6. &nbsp;  d<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>
+    -</I>h<SUB><I>k+</I>1</SUB><I> </I>+ beta<SUB><I>k+</I>1</SUB>d<I><SUB>k</SUB></I>
+</FONT>
+</DIR>
+
+</span> </p>
+
+<p align = "justify"> <span class = "content">
+
+  where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+  calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b, h<SUB>0</SUB>= 
+  C<SUP>-1</SUP>g<SUB>0</SUB> and d<SUB>0</SUB> = -h<SUB>0</SUB>. 
+
+  The multiplication by C<SUP>-1</SUP> in step (4) is to be interpreted as solving a system of equations  
+  with coefficient matrix C. A source of preconditioning matrices is the class
+  of stationary iterative methods for solving the system 
+ 
+  <B>A<I>x</I><SUP>*</SUP></B> = <B>b</B>.&nbsp;</DIR> 
+
+</span> </p>
+
+<!-- ******** Example 3.4 : Conjugate Gradient  Method  Parallel implementation of PCG Starts ********* -->
+
+
+<LI> <B> Parallel implementations of the PCG algorithm </B> </li>
+
+
+<p align = "justify"> <span class = "content">
+The parallel conjugate gradient algorithm involves the following&nbsp;
+   type of computations and communications <BR> <BR>
+
+Partitioning of a matrix : The matrix A is obtained by discretization
+of partial differential equations by finite element, or finite difference
+method. In such cases, the matrix is either sparse or banded. Consequently,
+the partition&nbsp; of the matrix onto <I>p</I> processes play a vital
+role for performance. For, simplicity , we assume that <B>A </B>is symmetric
+positive definite and  is<I> row-wise</I> block-striped partitioned.<BR> <BR>
+
+
+<B>Scalar Multiplication of a vector and addition of vectors : </B>  <BR>
+
+Each of these computations  can be performed sequentially regardless
+of the preconditioner and the type of coefficient matrix. If all vectors
+are distributed identically among the processes, these steps require no
+communication in a parallel implementation. <BR> <BR>
+
+<B>Vector inner products :</B>  <BR>
+
+In some situations, partial vectors are available on each&nbsp; processes.&nbsp;
+MPI Collective library calls are necessary to perform vector inner products&nbsp;
+If the parallel computer supports fast reduction operations, such as optimized
+MPI, then the communication time for the inner-product calculations can
+be made minimum. <BR> <BR>
+
+<B>Matrix-vector multiplication :</B>
+
+The computation and the communication cost of the matrix-vector
+multiplication;  depends on the structure of the matrix A. The
+parallel implementation of the PCG algorithm for three cases one
+in which A is a block-tridiagonal matrix of the  type, two in
+which it is banded unstructured sparse matrix, and three in which the matrix
+is sparse give different performance on parallel computers. Various
+parts of the algorithm in each of the three cases dominate in terms of
+communication overheads.<BR> <BR>
+
+<B>Solving the preconditioned system :</B> <BR>
+
+The PCG algorithm solves  system of linear equations in each
+iteration The preconditioner C is chosen so that solving the system modified
+system is in expensive compared to solving the original system of
+equations <B>A<I>x </I></B>=  <B>b</B>. Nevertheless, preconditioning increases
+the  amount of computation in each iteration. For good preconditioners,
+however, the increase is compensated by a reduction in the number of iterations
+required to achieve acceptable convergence. The computation and the
+communication requirements of this step depends on the type
+of preconditioner used. preconditioning method such as diagonal preconditioning,
+in which the preconditioning matrix C has nonzero elements only
+along the principle diagonal does not involve any communication Also,
+Incomplete Cholesky (IC) preconditioning, in which C is based on incomplete
+Cholesky factorization of A and it may involve different computations and
+communications in parallel implementation. <BR> <BR>
+
+
+The convergence of CG method iterations performed by checking the error
+criteria i.e. euclidean norm of the residual vector should be less than
+prescribed tolerance. This convergence check involves gathering of real
+value from all processes, which may be very costly operation. <BR> <BR>
+
+We consider parallel implementations of the PCG algorithm using
+diagonal preconditioner for dense coefficient matrix type. As we
+will see, if C is a diagonal preconditioner, then solving the modified
+system does not require any interprocessor communication. Hence,
+the communication time in a CG iteration with diagonal preconditioning
+is the same as that in an iteration of the unpreconditioned algorithm. <BR> <BR>
+
+Thus the operations that involve any 
+   communication overheads are computation of inner products, matrix-vector 
+   multiplication and, in case of IC preconditioner solving the 
+   system.
+</span> </p>
+
+</LI>
+
+<!-- ************** Example  1.4: Conjugate Gradient  Method  Parallel implementation of PCG Ends ************* -->
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p align = "justify"> <span class = "content">Row and Column in input Matrix
+</span> </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p align = "justify"> <span class = "content">
+ prints the results of the solution x of linear system of matrix equations Ax = b 
+</span> </p>
+<br>
+
+</ul>
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* Example 3.4 ends ***************************** -->
+
+
+
+<!-- *************************  Table for codes ends ********************** -->
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+
+ 
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

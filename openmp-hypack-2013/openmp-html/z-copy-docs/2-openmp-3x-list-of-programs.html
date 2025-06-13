@@ -1,0 +1,1117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML><HEAD><TITLE>:C-DAC PEMG-2010 tech. workshop - OpenMP - C-DAC ECity-Bengalore June 21-24,2010</TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=Content-Language content=en-us>
+<META id=ROBOTS content=ALL name=ROBOTS>
+
+<META id=Copyright content="Copyright (c) 2010, C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<META id=keywords content=HDF name=keywords><LINK href="../../pemg10-files/pemg-main.css" 
+type=text/css rel=stylesheet><LINK href="../../pemg10-files/pemg-home.css" type=text/css 
+rel=stylesheet><LINK href="../../pemg10-files/pemg-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="../../pemg10-files/pemg-main.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo><A 
+            href="http://www.cdac.in/pemg2010/"><IMG alt=PEMG-2010
+            src="../../pemg10-files/PEMG-2010-header.jpg" border=0></A></TD>
+
+        
+
+</TR></TBODY></TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+
+      <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+            
+
+		  <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:pemgShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('1', 1)" 
+       		href="../../pemg10-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:pemgShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('2', 1)" 
+                  href="../../pemg10-topics-of-interest-mode01-multicore.html">Topics</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:pemgShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('3', 1)" 
+                  href="../../pemg10-tech-prog-overview.html">Tech. Prog.</A></TD>
+
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:pemgShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('4', 1)" 
+                  href="../../pemg10-complab-overview.html">Comp. Lab.</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:pemgShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('5', 1)" 
+                  href="../../pemg10-mode01-multicore-lab-overview.html"> Mode-1 (Multi-Cores)</A></TD>
+		<TD class=menusep></TD>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow6 
+                  onmouseover="javascript:pemgShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('6', 1)" 
+                  href="../../pemg10-mode02-gpgpu-lab-overview.html"> Mode-2 (GPGPUs)</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+                  href="../../pemg10-reg-private-sector.html">Registration 
+                  </A></TD>
+                <TD class=menusep></TD>
+		
+                <TD class=menu1><A class=menu1 id=mainmenurow8
+                  onmouseover="javascript:pemgShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('8', 1)" 
+                  href="../../pemg10-contact-address.html">Contact
+                 </A></TD>
+
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+       <TABLE id=submenutab1 onmouseover="javascript:pemgShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:pemgHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+        <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-overview.html"><B> 
+            PEMG-2010 Overview</B></A>
+
+        <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-venue.html"><B>
+            Venue : ECity, Bengaluru </B></A>
+
+        <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-faculty.html"><B>
+            Faculty Members</B></A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B> </A>
+
+
+	<A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-audience.html"><B>
+            Target Audience / Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-proceedings.html"><B>
+            PEMG-2010 Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-download-software.html"><B> 
+              Download Software </B> </A>
+
+
+	<A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-sponsors.html"><B>
+            PEMG-2010 Sponsors</B></A>
+                  
+	<A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-past-workshops.html"><B> 
+             Past Tech. Workshops </B></A>
+   
+        <A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-accommodation.html"><B>
+             Accommodation </B></A>
+
+       
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-local-travel.html"><B>
+            Local Travel</B></A>
+    
+
+	<A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-organisers.html"><B> 
+             Organisers</B> </A>
+
+        <A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-feedback.html"><B>
+             Feedback </B></A>
+
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-acknowledgements.html"><B> 
+             Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-contact-address.html"><B>Contact</B></A>
+ 
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onmouseover="javascript:pemgShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores </B></A>
+
+         <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+
+         <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-handson.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+         <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+
+<!--   Sub menu for **** Row-3-Technical program  **** start here -->
+
+
+      <TABLE id=submenutab3 onmouseover="javascript:pemgShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 152px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-overview.html"><B> 
+            Tech. Prog. Overview</B></A>
+
+    
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-at-glance-poster.html"><B> 
+            Prog. at Glance / Poster</B></A>
+
+
+	<A class=menu2 id=submenurow3s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores</B></A>
+
+	 <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+	
+
+         <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B></A>
+
+	<A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-demonstration.html"><B> 
+            Demonstration</B></A>
+
+        <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-handson-overview.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+        <A class=menu2 id=submenurow3s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-3-TechnicalProgram **** End here -->
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory **** start  here -->
+
+      <TABLE id=submenutab4 onmouseover="javascript:pemgShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 247px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	    <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-overview.html"><B> Comp. Lab. Overview </B></A>
+
+	<A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-access.html"><B> Comp. Lab. Access </B></A>
+
+           <A class=menu2 id=submenurow4s3
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode01-multicore.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+		
+	<A class=menu2 id=submenurow4s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode02-gpgpu.html"><B> Mode-2  (GPGPU ) Lab. </B></A>
+
+        <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> <A/>
+
+	</TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory ****  End  here -->
+
+
+<!--   Sub menu for **** Row-5-Mode 1 : Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onmouseover="javascript:pemgShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 350px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-lab-overview.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+
+	<A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-pthreads.html"><B>  Pthreads</B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+
+	<A class=menu2 id=submenurow5s4
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow5s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi.html"><B>MPI 1.0 / MPI 2.0</B></A>
+ 
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-openmp.html"><B>
+            MPI-OpenMP</B></A>
+ 
+      <A class=menu2 id=submenurow5s7
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-pthreads.html"><B>
+            MPI-Pthreads </B></A>
+
+      <A class=menu2 id=submenurow5s8
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-tbb.html"><B>
+            MPI-TBB </B></A>
+ 
+      <A class=menu2 id=submenurow5s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-java-threads.html"><B> Java Prog. - Threads</B></A>
+
+	<A class=menu2 id=submenurow5s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-software-tools.html"><B> Software threads- tools</B></A>
+
+        <A class=menu2 id=submenurow5s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Tuning / Perf. </B></A>
+
+        <A class=menu2 id=submenurow5s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-perf-math-lib.html"><B> Threads- Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow5s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+
+       <A class=menu2 id=submenurow5s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Performance </B></A>
+
+
+       <A class=menu2 id=submenurow5s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5-Mode 1 : Hands-on ****  End here  -->
+
+
+<!--   Sub menu for **** Row-6-Mode 2 : Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onmouseover="javascript:pemgShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 465px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-lab-overview.html"><B> Mode-2  (GPGPU ) Lab.   </B></A>
+
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-nvidia-gpu-cuda.html"><B>CUDA enabled NVIDIA GPUs </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-amd-stream-comp.html"><B>AMD-ATI Stream Comp.-SDK</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-opencl-opengl.html"><B> GPU Programming - OpenCL    </B></A>
+
+
+	<A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-hybrid-comp.html"><B>Hybrid Comp. (CPUs/GPUs)</B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6-Mode 2 : Hands-on **** End here  -->
+
+
+
+<!--  Sub menu for **** Row-7-Registration **** Start here  -->
+
+      <TABLE id=submenutab7 onmouseover="javascript:pemgShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-private-sector.html"><B>Private Sector</B></A>
+
+      <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-public-sector.html"><B>Public Sector/ Govt.  Org.</B></A>
+
+      <A class=menu2 id=submenurow7s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-academic-staff.html"><B>Govt. Academic Staff </B></A>
+
+      <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-students.html"><B>Students</B></A>
+
+      <A class=menu2 id=submenurow7s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-online-registration.html"><B>Online Registration</B></A>
+ 
+      <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+             href="../../pemg10-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-7-Registration **** End here  -->
+
+
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** Start here  -->
+
+      <TABLE id=submenutab8 onmouseover="javascript:pemgShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+
+      <TD class=menu2>
+
+     <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-address.html"><B>Contact</B></A>
+
+
+     <A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-accommodation.html"><B>Accommodation </B></A>
+
+        
+     <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+  </TD> </TR></TBODY> </TABLE>
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** End here  -->
+
+  </DIV>
+
+
+<!-- **************** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+
+	       
+           <A class=menul
+	       href="../../pemg10-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 (Multi-Cores) Lab. </A>
+                
+               
+             
+           <A class=menul
+               href="../../pemg10-mode01-multicore-pthreads.html">
+               &#149; Pthreads</A>
+           	
+	
+	   <A class=menul  
+              href="../../pemg10-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+               <!-- *** -->
+	       <A class=menulslct  
+                href="../../pemg10-mode01-multicore-openmp.html">
+                &#149; OpenMP</A>
+	       <!-- *** -->
+              
+	   <A class=menul
+              href="../../pemg10-mode01-multicore-mpi.html">
+              &#149; MPI 1.0 / MPI 2.0</A>
+              
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-openmp.html">
+              &#149;  MPI-OpenMP</A>
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-pthreads.html">
+              &#149;  MPI-Pthreads</A> 
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-tbb.html">
+              &#149;  MPI-TBB</A>  
+   
+          
+           <A class=menul
+	      href="../../pemg10-mode01-multicore-java-threads.html">
+              &#149;  Java Prog.-Threads</A>
+          
+
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-software-tools.html">
+              &#149;  Software threads - Tools</A>
+
+           
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-compiler-tune-perf.html">
+              &#149;  Compilers - Tuning /Perf.</A>
+             
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-perf-math-lib.html">
+              &#149; Threads - Perf.  Math. Lib. </A>
+
+           
+	   <A class=menul
+	      href="../../pemg10-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators </A>
+            
+
+	   <A class=menul
+	      href="../../pemg10-mode01-multicore-threads-io-perf.html">
+              &#149;  Threads-I/O Performance </A>
+        
+
+          <A class=menul 
+	     href="../../index.html">
+             &#149;  Home </A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+
+
+	
+		 <BR>
+                  <DIV 
+                  style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"></DIV><BR><BR><BR><BR></TD>
+                
+
+
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt >
+          
+
+ 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD >
+
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Programming on Multi-Core Processors Using OpenMP APIs </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<BR>
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align="justify"><span class="content">
+  The OpenMP API is used for writing portable multithreaded applications written in Fortran, C and C++ languages.
+  The OpenMP programming model plays a key role by providing an easy method for threading applications without burdening 
+  the programmer with the complications of creating, synchronizing load balancing, and destroying threads. 
+  The OpenMP model provides a platform independent set of compiler pragmas, directives, function calls, and environment
+  variables that explicitly instruct the compiler how and where to use the parallelism in the application. 
+
+   Example   programs using 
+   compiler pragmas, directives, function calls, and environment variables, Compilation and execution
+   of OpenMP programs, programs numerical and non-numerical computations.
+   are discussed. <BR> <BR>
+</span> </p>
+</td> </tr> 
+</tbody>
+</table>
+
+
+
+
+<!-- *********************** Table for Listing of Programs Starts *************************** -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+
+   <!-- ************************ Example 1  ************************ -->
+   <tr>
+     <td width="015" height="2" valign="top"> 
+  
+           <font size="2" face="Arial" color="black">
+            <b>  1. </b></font>  <BR>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+        <a href="#openmp-3x-multicore-prog-id01">
+          <font size="2" face="Arial" color="blue">
+          Memory Consistenccy Model with respect to flush operations
+       </font>
+      </a>
+     </td>
+     </tr>
+
+ <!-- *************************** Example 2  *********************** -->
+ 
+
+  <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b> 2. </b> </font> <BR>  
+      </td>
+   
+      <td width="500" height="2" valign="top">
+     <a href="#openmp-3x-multicore-prog-id02">       
+      <font size="2" face="Arial" color="blue">
+          Program illustrating the use of OpenMP Conditional Compilation 
+       </font>
+      </a>
+     </td>
+   </tr>
+
+
+ 
+
+
+  
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<tD>
+<BR>
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books; </b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-threads-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi Threading </b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP </b>  </font> </a> 
+       -[MCMTh-01], [MCMTh-02], [MCMTh-I03], [MCMTh-05], [MCMTh-09], [MCMTh-11], 
+       [MCMTh-15], [MCMTh-21], [MCBW-44], [MCOMP-01], [MCOMP-02],
+[MCOMP-04], [MCOMP-12], [MCOMP-19], [MCOMP-25])  <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ******************** Table for Description of OpemMP Programs Starts  ******************* -->
+
+
+
+</TBODY> 
+</TABLE> 
+</p>
+
+
+<!-- ********************* Table for Listing of Programs Ends  ********************** -->
+
+<p align ="left">
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=Left><font size="2" Color="black" face= "verdana">
+    <B>  Description of OpenMP Programs </b> </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+</p>
+
+<br>
+
+
+<!-- ************************* Example 1 starts ***************************** -->
+
+
+<!-- **************** Example 1 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id01"></a> 
+  <p align ="left">
+<TABLE cellPadding=3  border=0> 
+<TBODY
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+
+    
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 1 : Memory Consistenccy Model with respect to flush operations 
+        </b> </font> 
+       <BR>
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/mem-consistency-openmp3x.c">
+            <font color = "blue"> <I> mem-consistency-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/mem-consistency-openmp3x.f">
+
+            <font color = "blue"> <I> mem-consistency-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+
+    </TD>  
+    </TR> 
+ 
+    <TR>
+    <TD>
+
+     <BR> 
+
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Example program illustrating the  memory consistency model provided by OpenMP. 
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+
+           The program demonstrates how the OpenMP implicit flush (barrier) operation enforces 
+           consistency between temporary view and memory. The barrier contains implicit flushes
+           on all threads, as well as thread synchronization.
+           
+           In this example program, at Print 1, the value of <B> x </b>  could be 
+		either 2 or 5, depending on the timing of the threads, and the 
+		implementation of the assignment to <B> x</b>. There are two reasons 
+      		that the value at Print 1 might not be 5. First, Print 1 might 
+		be executed before the assignment to <B> x </b> is executed. Second, even 
+		if Print 1 is executed after the assignment, the value 5 is not 
+		guaranteed to be seen by thread 1 because a flush may not have 
+		been executed by thread 0 since the assignment.
+
+		The barrier after Print 1 contains implicit flushes on all 
+		thread as well as a thread synchronization, so the programmer
+ 		is guaranteed that the value 5 will be printed by both Print 2
+ 		and Print 3.
+            </span> </p>
+
+
+               <p align = "justify"> <span class = "content">
+
+                     
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Value of the variable  <B> x </b> 
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+    </tbody>
+ </table>
+  
+
+<!-- *******************  Example 1 Ends ************************ -->
+
+
+<!-- ************************  Example 2 starts *************************** -->
+
+
+<A NAME="openmp-3x-multicore-prog-id02"></A> 
+ <p> <table border="0"  height="6">
+      <tbody>
+      <TR ALIGN=LEFT> 
+      <TD height="90%"><font face="Verdana" size="2"> &nbsp;
+            <IMG SRC="./../openmp-images/bullet2.gif" HEIGHT=20 WIDTH=20><FONT COLOR="#FF6600">
+         <B> Example 2 :</B>&nbsp;</FONT></B>Simple OpenMP program : <i> Hello 
+             World</i>  using OpenMP <i>PARALLEL</i> directive <BR>
+         
+           &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;
+<!-- ************download start here ***************--> 
+(Download source code ; <I><FONT COLOR="#CC66CC">
+<a HREF="../openmp-codes-c-lang/omp-hello-world.c">omp-hello-world.c</a></FONT></I><FONT COLOR="#009900"> 
+          </FONT><FONT SIZE=+1>/<I> </I></FONT>
+<I><FONT COLOR="#33CC00"><a HREF="../openmp-codes-f-lang/omp-hello-world.f">omp-hello-world.f</a></FONT></I>)&nbsp; 
+          
+<!-- ************download Ends here ***************--> 
+      
+ </TD>  
+ </TR> 
+
+ 
+<TR>
+<TD>
+<BR>
+
+   <UL>
+           <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+            <P align="justify">Write a simple OpenMP program to print &quot;<i>Hello World</i>&quot;<i> 
+              </i>using OpenMP <i>PARALLEL</i> directives.</P>
+             <LI> <B>Description</B></LI>
+            <P align="justify"> Each thread prints "<i>Hello World</i>" message. In this program 
+              OpenMP <i> PARALLEL</i> directive, <i> PRIVATE</i> clause and <i> OMP_GET_THREAD_NUM</i> run-time 
+              library routine is used. The PARALLEL
+  directive pair specifies that the enclosed block of program, referred to as <i>
+  PARALLEL</i> region, be executed in parallel by multiple threads. The <i> PRIVATE</i>
+  clause is typically used to identify variables that are used as scratch
+  storage in the program segment within the parallel region. It provides a list
+  of variables and specifies that each thread have a private copy of those
+            variables for the duration of the parallel region.
+            </P>
+            <LI> <B>Input</B></LI>
+            <p align="justify"> User has to set <i> OMP_NUM_THREADS</i> environment variable for <i>n 
+              </i>number of threads.
+   e.g. To set the number of threads to use by means of the OMP_NUM_THREADS environment variable.
+		   
+<br>
+ <br>
+              <center><i>setenv OMP_NUM_THREADS 4 (if using csh/tcsh shell)&nbsp;</i></center><br>
+
+	<center><i>export OMP_NUM_THREADS=4 (if using bash/ksh shell)&nbsp;</i></center>
+            </p>
+            <LI> <B>Output</B></LI>
+            <P align="justify"> Each thread prints a message "<i>Hello World</i>" and its identifier. </p> 
+          </UL>
+ 
+
+
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+ </TD>  </TR> 
+</tbody>
+ </table>
+</p>
+        
+     
+
+<!-- ************************* Example 1.2 Ends ****************************** -->
+
+
+
+
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        <TD class=footertext align=center>
+           <A href="http://www.iitm.ac.in" target=_blank><FONT color=red size=2>
+           Indian Institute of technology Madras </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

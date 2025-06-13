@@ -1,0 +1,2011 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+	   <A class=menul
+               href="./../hypack13-mode01-multicore-openmp.html">
+               &#149; OpenMP</A>
+
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+              <!-- ** -->
+	      <A class=menulslct
+               href="./../hypack13-mode01-multicore-mpi.html">
+               &#149; Message Passing (MPI)</A>
+              <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013 Mode 1 : Parallel Programming Using MPI C++ Library Calls </H1> 
+
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+
+<TR> 
+<TD> 
+ <DIV align=left> <p align ="justify"> <font size="2"  Color="black" face= "Arial">
+     
+Example programs using MPI-1X & C++ language include numerical integration, global summation algorithms 
+on various topologies, and matrix vector 
+multiplication using different decomposition techniques. </font. </p>
+</DIV> </TD> </TR> 
+</TBODY> 
+</TABLE>
+
+
+
+
+<!-- ************* List of Programs  Start Here  ***************** --> 
+ 
+<table  border="0">
+<TBODY>
+<TR>
+<TD>
+
+
+   <!-- ***************** Example 1.1 ******************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+       Write MPI C++ Program (SPMD) to get started
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ******************** Example 1.2 ******************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id02">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Write MPI C++ program (MPMD) to get started.
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ******************* Example 1.3 ********************* -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id03">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="justify">
+       <p align = "justify"> <span class = "content">
+        Write MPI C++ program to find sum of n integers on Parallel Processing Platform. 
+       You have to use MPI point-to-point blocking communication library calls
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- ********************* Example 1.4 ********************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id04">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 </b> <BR> <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="justify">
+        <p align = "justify"> <span class = "content">
+         Write MPI C++ program to find sum of n integers on a Parallel Computing System 
+        in which procesors are connected with linear array topology and use MPI point-to-point 
+      blocking communication library calls <B>(Assignment Question) </B>
+
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+
+<!-- ********************* Example 1.5 ********************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id05">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5 </b> <BR> <BR></font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="justify">
+        <p align = "justify"> <span class = "content">
+        Write MPI C++ program to find sum of n integers on a Parallel Computing System in which
+       procesors are connected with ring topology and use MPI point-to-point blocking communication 
+        library calls 
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+<!-- ************************ Example 1.6 ********************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id06">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6 </b> <BR> <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="justify">
+         <p align = "justify"> <span class = "content">
+        Write MPI C++ program to find sum of n integers on a Parallel Computing System in which procesors are
+     connected with tree topology (Associative-fan-in rule for tree can be assumed) and use MPI point-to-point
+      blocking communication library callson library calls. 
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- ****************** Example 1.7 *********************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id07">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.7</b> <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="justify">
+        <p align = "justify"> <span class = "content">
+       Write MPI C++ program to compute the value of PI by numerical integration using MPI
+     point-to-point blocking communication library calls.
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- ***************** Example 1.8 ******************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+       <a href="basic-point-to-point-mpi-cpp.html#p2p-prog-id08">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.8 </b>  <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="justify">
+         <p align = "justify"> <span class = "content">
+         Write MPI C++ program for prefix sum (scan operation) calculation using MPI point-to-point blocking communication library calls. <b>( Assignment Question ) </b>
+
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- *************** Example 1.9 ***************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+         <font size="2" face="Arial" color="red">
+            <b>  Example 1.9 </b>  <BR> <BR>  </font> <BR>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+        Write   MPI C++ program  to find sum of  <i>n </i> numbers on  <i>p </i> processor HyperCube Parallel computing system with Hypercube as interconnection 
+    network topology using MPI point-to-point blocking communciation library calls. &nbsp;<b> (Assignment Question) </b>
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- ******************* Example 1.10 ***************** -->
+    <tr>
+     <td width="120" height="2" align="justify"> 
+         <font size="2" face="Arial" color="red">
+            <b>  Example 1.10 </b>  <BR> <BR> </font> <BR>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+        Write   MPI C++ program to find sum of <i> n </i> integers   on a Parallel Computing System 
+ in which procesors are connected 
+    with tree topology (Associative-fan-in rule for tree can be assumed) and use MPI point-to-point 
+non-blocking communication library calls. <b> (Assignment Question) </b> 
+       </span> </p>
+     </td>
+   </tr>
+
+
+</td>
+</tr>
+</tbody></table>
+
+<!-- ************* List of Programs  Ends Here  ***************** --> 
+<br>
+
+
+<table width = "100%" border="0">
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left> <font size="2"  color="black" face = "Arial"> 
+        <b> Description of Programs - MPI Point-to-Point Communication Library Calls   </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+<BR>
+
+
+<!-- ********************** Example 1.1 starts ********************* -->
+
+
+
+<a name="p2p-prog-id01"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+      
+     <b>  Example 1.1: <BR> <BR>   </b> </td>
+    <td width="86%" height="2" align="left">
+     <b>  Write  MPI C++ program to get started (SPMD) - Hello World to all process  </b>
+ 
+ <!-- ***************** download  Starts here ****************** -->
+<BR> 
+(Download source code : 
+
+<a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-hello-world.C">
+<font color ="blue"> <i> mpicpp-hello-world.C   </I> </font></A>
+
+
+<!-- ********************* download  Ends here ********************** -->
+
+ </td>
+ </tr> 
+ </TBODY>
+ </table>
+ </p>
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+<font size="2" face="verdana">
+<p align ="left">  Write a MPI C++ program to print "<I>Hello World</I>"<br> </P>
+
+
+<LI><B> Description </B> </li>
+										
+
+<P align = "justify">
+
+ Process with rank <I>k</I> ( <I>k</I> = 1, 2, ....., <I>p</I>-1) will send"<I>Hello World</I>" message to 
+ process with rank<I>0</I>. Process with rank<I>0</I>receives the
+ message and prints it. You have to use MPI <I>point-to-point </I> blocking communication library calls (MPI::COMM_WORLD.Send and MPI::COMM_WORLD.Recv) 
+ to write this program.
+</P>
+
+
+<LI>
+<B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+<p> None </p> 
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+
+<P align = "justify">
+ Process with rank <I>0</I>    prints the following message with each of the other process's 
+   Rank Numbers  (i.e. <i>rank</i> = 1,2, ..., p-1). Hello World from  Process's <i> rank</i> 
+  where <i>rank </i>=  <i> 1,2, ..., p-1  </i> </ul>
+</p>
+
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+<IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- *************** Example 1.1 ends ********************* -->
+
+
+
+<!-- ***************** Example 1.2 starts ******************** -->
+
+
+<a name="p2p-prog-id02"> </a>
+
+
+<table border="0"  height="6">
+    <tr>
+     <td width="18%" height="2" align="left">
+      
+     <b>  Example 1.2: <BR>  <BR><BR><BR>  </b> </td>
+    <td width="86%" height="2" align="left">
+     <b>  Write  MPI C++ program to get started (MPMD) - Hello World to all process  </b>
+ 
+ <!-- ****************** download  Starts here ******************* -->
+ 
+(Download source code : 
+
+  <a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-hello-world-master.C">
+<font color ="blue"> <i> mpicpp-hello-world-master.C   </I> </font></A>
+  
+  
+&nbsp; / &nbsp;
+
+ <a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-hello-world-slave.C">
+<font color ="blue"> <i> mpicpp-hello-world-slave.C   </I> </font></A>
+
+
+
+<!-- **************** download  Ends here ***************** -->
+
+ </td>
+ </tr> 
+</tbody>
+ </table>
+
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+
+<font size="2" face="verdana">
+<P> Write a MPI C++ program to print "<I>Hello World</I>"
+</P>
+
+<LI><B> Description </B> </li>
+										
+
+<P align = "justify">
+Process with rank <I> k </I>( <I>k</I> = 1, 2, ....., <I>p</I>-1) will send "
+<I> Hello World</I>" message to process with rank <I>0</I>.Process with rank <I>0</I>
+    receives the message and prints it. MPI <I>point-to-point </I>communication 
+    library calls (MPI::COMM_WORLD.Send and MPI::COMM_WORLD.Recv) have been used in this program. The master process is  responsible for receiving the "hello message" from all participating processes (i.e slaves). On        the other hand, the  slave program is responsible for sending "Hello Message" to the master process. All slaves perform identical tasks. In ohterwords, the slave program send the result back     to the master process. 
+</P>
+
+
+<LI>
+<B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+
+<p> None </p> 
+
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+        
+
+<p> Process with rank <I>0</I> prints the following message with each of the other process's
+    Rank Numbers  (i.e. <i>rank</i> = 1,2, ..., p-1). Hello World From process
+    <i>rank</i> where <i>rank </i>= 1,2, .....p-1</p>
+
+
+</ul>
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+<IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- *************** Example 1.2 ends ******************** -->
+
+
+<!-- ****************** Example 1.3 starts *************** -->
+
+<a name="p2p-prog-id03"> </a>
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+      
+     <b>  Example 1.3: <BR>  <BR> <BR> <BR>  </b> </td>
+    <td width="90%" height="2" align="left">
+      <b>  Description for implementation of MPI C++ program to find sum of<i> n</i>
+   integers using MPI point-to-point blocking communication  library calls   </b><BR>
+ 
+ <!-- *************** download  Starts here ***************** -->
+ (Download source code : 
+
+  <a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-sum-pt-to-pt.C">
+   <font color ="blue"> <i>mpicpp-sum-pt-to-pt.C</I> </font></A>)
+
+<!-- ************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ <tbody>
+ </table>
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+<font size="2" face="verdana">
+<P> Write a MPI program to find sum of <I>n </I>integers on <I>p </I>processors of 
+    Message Passing cluster </P>
+
+
+<LI><B> Description </B> </li>
+										
+ 
+<P align = "justify">
+ Each process with rank greater than <I>0</I> sends the value of its rank to the 
+    process with rank <I>0</I>. Process with rank <I>0</I> receives the values from 
+    each process and calculate the sum. Finally, process with rank <I>0</I> prints 
+    the sum.
+ </P>
+
+
+<LI> <B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+
+<P> For input data, let each process uses its identifying number, i.e. the value of 
+    its rank. For example, process with rank <I>0</I> uses the number 0, process 
+    with rank <I>1</I> uses the number 1, etc.
+</P>
+
+
+<LI> <B>Output&nbsp;</B>&nbsp;  </li>
+
+        
+
+<P> Process with rank <I>0</I> prints the final sum.
+</P>
+
+
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+ <IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</ul>
+
+</td>
+</tr>
+</tbody>
+</table>
+<!-- ***************8 Example 1.3 ends ******************* -->
+
+<!-- ************ Example 1.4 starts ******************* -->
+
+<a name="p2p-prog-id04"> </a>
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+    
+     <b>  Example 1.4: <BR>  <BR> <BR>  <BR> </b> </td>
+    <td width="86%" height="2" align="left">
+       <b>  Write  MPI C++ program to find sum of <i> n </i> integers on a Parallel Processing platform in which processors 
+     are connected by linear array topology. You have to  use MPI point-to-point blocking communication library calls. </b>
+
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+
+<font size="2" face="verdana">
+<P> MPI program to find sum of <i> n </i> integers on a Parallel Processing platform in which processors 
+     are connected by linear array topology.</P>
+
+
+
+
+<LI><B> Description </B> </li>
+
+<P align = "justify">
+
+In <I>linear array</I> interconnection network, each processor ( except the 
+    processor at the end ) has a direct communication link to the immediate next 
+    processor. A simple way of communicating a message between processors is, by 
+    repeatedly passing message to the processor immediately to either right or left 
+    , until it reaches its destination, i.e. last processor in the <I>linear array</I>. 
+    A simple way to connect processors is illustrated in Figure 1.
+</P>
+
+	
+<div align = "center">
+
+<IMG SRC="./cpp-point-to-point-mpi-images/linear-array-topology.gif" width=360>
+<BR> <BR>
+
+<B>  Figure 1 Parallel Computing system - Processors are connected by Linear Array topology </b>
+</div>
+
+<BR>
+
+
+<P align = "justify">
+
+All the processes are involved in communication. The processes with rank <I>k</I>
+     (<I>k</I> is greater than <I>0</I>) receives the accumulated or partial sum 
+     from the previous process with rank <I>k</I>-1. Finally, process with rank <I>p</I>-1 
+     prints the final sum. </p>
+
+
+<LI>
+<B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+
+<p> For input data,let each process use its identifying number, i.e. the value of  
+    its rank. For example, process with rank <I>0</I> uses the number 0, process 
+    with rank <I>1</I> uses the number 1, etc.
+</P>
+
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+        
+<P> Process with rank <I>p</I>-1 prints the final sum. </p>
+
+
+
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+<IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a> </DIV>
+
+</ul>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- *************** Example 1.4 ends ************************* -->
+
+
+<!-- *********** Example 1.5 starts **************** -->
+
+
+
+<a name="p2p-prog-id05"> </a>
+
+
+<p align ="left">
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+     
+     <b>  Example 1.5: <BR>  <BR><BR><BR> </b> </td>
+    <td width="86%" height="2" align="left">
+            <b>  Description for implementation of MPI C++ program to find sum of <i>n</i> integers on  
+     parallel computer in which processors are arranged in <i>ring topology</i> using   
+      point-to-point blocking communication library calls </b>
+<!-- ****** Download Start here ********** -->
+<BR>
+(Download source code : 
+
+ <a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-sum-ring-topology.C">
+   <font color ="blue"><i>mpicpp-sum-ring-topology.C  </I> </font></A>) 
+ 
+<!-- ****** Download Ends here ********** -->
+ </td>
+ </tr> 
+</tbody>
+ </table>
+ </p>
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+
+<LI><B> Objective </B> </li>
+
+
+
+<font size="2" face="verdana">
+<P> Write a MPI program to find sum of <I>n </I>values using <I>p</I> processors of 
+     cluster. Assume that <I>p </I>processors are arranged in <I>ring topology</I>.
+</P>
+
+
+
+<LI><B> Description </B> </li>
+										
+
+<P align = "justify">
+
+In linear array interconnection network (<I> Refer <U>
+<A HREF="basic-point-to-point-mpi-cpp.html#p2p-prog-id04"><font color ="blue"> Example 
+    1.4 </font> </A></U>for more details on linear array topology </I>) with a wraparound connection is called     
+  as a <I>ring</I>. A wraparound connection is often provided between the processors at the       
+  end.A simple way of communicating a message between processors is, by repeatedly passing message   
+   to the processor immediately to either right or left; depending on which direction yield a shorter   
+    path, until it reaches its destination, i.e., first processor in the <I>ring</I>.
+<BR><BR>
+ 
+All the processes are involved in communication. The process with rank <I>k</I> 
+    (<I>k</I> is greater than <I>0</I>) receives the accumulated or partial sum 
+    from the previous process with rank <I>k</I>-1. Process with rank <I>p</I>-1 
+    sends the final sum to process with rank <I>0</I>. Finally, process with rank <I>0</I>
+    prints the final sum. </p>
+
+
+<LI>
+<B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+
+<P> For input data, let each process use its identifying number, i.e. the value of 
+    its rank. For example, process with rank <I>0</I> uses the number 0, process 
+    with rank <I>1</I> uses the number 1, etc.
+</P>
+
+
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+        
+
+
+
+<P> Process with rank <I>0</I> prints the final sum.</P>
+
+
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+<IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</ul>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- *************** Example 1.5 ends ********************* -->
+
+
+<!-- *************** Example 1.6 starts ************************ -->
+
+
+<a name="p2p-prog-id06"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+    
+     <b>  Example 1.6: <BR>  <BR> <BR> <BR> <BR> </b> </td>
+    <td width="86%" height="2" align="left">
+        <b>  Description for implementation of MPI C++ program to find sum of <i>n</i> integers on
+    parallel computer in which processors are arranged in <i>binary tree topology (associative fan-in rule) </i>
+   using MPI point-to-point blocking communication library calls </b>
+<BR>
+<!-- ****** Download Start here ********** -->
+
+(Download source code : 
+
+  <a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-sum-associative-fanin-blocking-tree.C">
+<font color ="blue"> <i> mpicpp-sum-associative-fanin-blocking-tree.C</I> </font></A>)
+
+<!-- ****** Download Ends here ********** -->
+
+</td>
+</tr>
+</tbody> 
+</table>
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+
+<font size="2" face="verdana">
+<P> Write a MPI program to find sum of <I>n </I>(<I> n</I> = 2 <SUP><i>i</i> </SUP>;<I> i</I>
+    = 3) integers on <I>p</I> (<I>p</I>=<I>n</I>) processors of cluster using <I>associative    
+  fan-in </I>rule.
+</P> 
+
+
+
+<LI><B> Description </B> </li>
+										
+
+<P align = "justify">
+The <I>first step</I> is to group the total number of processors in ordered 
+    pairs such as (<I>P</I><SUB>0</SUB><I>, P</I><SUB>1</SUB>), (<I>P</I><SUB>2</SUB><I>, 
+    p</I><SUB>3</SUB>), (<I>P</I><SUB>4</SUB><I>, P</I><SUB>5</SUB>), (<I>P</I><SUB>6</SUB><I>, 
+    p</I><SUB>7</SUB>), .................., (<I>P<SUB>p-2</SUB>, P<SUB>p-1</SUB></I>). 
+    Then compute the partial sums in all pairs of processors using MPI point-to-point    
+    blocking communication and accumulate the partial sum on the processors    
+    P<SUB>0</SUB>, P<SUB>2</SUB>, ....,P<SUB><I>p</I>-2</SUB>. For example, the    
+    processor <I>P<SUB>i</SUB> </I>(<I>i </I>is even)<I> </I>computes the partial sum for the pair        
+   (<I>P<SUB>i</SUB>, P<SUB>i+</SUB></I><SUB>1</SUB>) by performing MPI point-to-point blocking    
+    communication library calls. 
+</p>
+
+<div align = "center">
+ 
+<IMG SRC="./cpp-point-to-point-mpi-images/associative-fanin-tree.gif" width=360> <br> 
+
+<B> Figure 2. Tree Structure for sum of <I>n</I> integers by Associativ fan-in rule </b>
+</div>
+
+
+<P align = "justify">
+In the <I>second step</I>, consider the pair of processors (<I>P</I><SUB>0</SUB>,
+      <I>P</I><SUB>2</SUB>), (<I>P</I><SUB>4</SUB>, <I>P</I><SUB>6</SUB>), .................,         
+    (<I>P<SUB>p-</SUB></I><SUB>4</SUB>, <I>P<SUB>p-</SUB></I><SUB>2</SUB>) obtain the new      
+ partial sum by considering the existing accumulated partial sums on the processors               
+    P<SUB>0</SUB>, P<SUB>2</SUB>, P<SUB>4</SUB>, ..., P<SUB>8</SUB>as explained in the previous   
+         step. This procedure is repeated till two processors are left out and finally accumulate the    
+       global sum on the processor <I>P</I><SUB>0</SUB>.In this example, MPI point-to-point blocking     
+     communication library calls such as,<B>MPI::COMM_WORLD.Send</B> and <B>MPI::COMM_WORLD.Recv</B>, are used. An example of     
+  <I>associative fan-in </I>rule is described as a tree structure in the 
+Figure 2 for <I>n</I>= 16 
+
+</P>
+
+
+<LI><B>Input</B> </li>
+
+<P> For input data, let each process use its identifying number, i.e. the value of its rank. For   
+  example, process with rank <I>0</I> uses the number 0, process with rank <I>1</I> 
+uses the number 1, etc.
+
+</P>
+
+
+<LI>
+<B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+
+<P> For input data, let each process use its identifying 
+number, i.e. the value of its rank. For   
+  example, process with rank <I>0</I> uses the number 0, process
+ with rank <I>1</I> uses the number 1, etc.
+
+</P>
+
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+        
+
+<P> process with rank <I>0</I> prints the final sum.</P>
+
+
+
+
+<DIV align ="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+  <IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</ul>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- *************** Example 1.6 ends ******************** -->
+
+
+<!-- ************** Example 1.7 starts *********************** -->
+
+
+
+<a name="p2p-prog-id07"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+      
+     <b>  Example 1.7: <BR>  <BR> <BR>  </b> </td>
+    <td width="86%" height="2" align="left">
+   <b>  Description for implementation of MPI C++ program to compute the value of <I> pie  </i> by Numerical 
+    Integration using MPI point-to-point communication library calls </b>
+
+<BR>
+
+<!-- ****** Download Strts here ********** -->
+
+(Download source code : 
+ 
+  <a href="./cpp-lang-pt2pt-mpi-codes/mpicpp-pie-pt-to-pt.C">
+  <font color ="blue"> <i> mpicpp-pie-pt-to-pt.C </I> </font></A>)
+
+
+<!-- ****** Download Ends here ********** -->
+
+ </td>
+ </tr> 
+</tbody>
+ </table>
+
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+
+<font size="2" face="verdana">
+<P> Write a MPI program to compute the value of <I> pie</I> function by numerical integration of a function
+ <I>f</I>(<I>x</I>) = 4/(1+<I>x <SUP>2</SUP> </I>) between the limits 0 and 1.
+</P>
+
+
+
+
+
+<LI><B> Description </B> </li>
+										
+<p align ="justify">
+There are several approaches to parallelizing a serial program. One approach is 
+    to partition the data among the processes. That is we partition the interval of 
+    integration [0,1] among the processes, and each process estimates local integral over
+    its own subinterval. The local calculations produced by the individual  
+    processes are combined to produce the final result. Each process sends its integral to process 0,
+    which adds them and prints the result. </P>
+
+<p align ="justify">
+
+To perform this integration numerically, divide the interval from 0 to 1 into <I>n</I>
+   subintervals and add up the areas of the rectangles as shown in the Figure 3 (<I>n</I>
+   = 5). Large values of <I>n</I> give more accurate approximations of <I>pi</I>
+   . Use MPI point-to-point communication library calls. </p>
+  
+   <div align="center">
+  
+    <IMG SRC="./cpp-point-to-point-mpi-images/pie-comp.gif" width=360>  <BR> <BR>
+     Figure 3 Numerical integration of <i> pie </i> function
+   </div>
+
+<P align = "justify">
+
+ We assume that <i>n</i> is total number of subintervals, <I>p</I> is the number 
+    of processes and <I>p</I> &lt; <I>n</I>. One simple way to distribute the total 
+    number of subintervals to each process is to divide<I>n</I> by <I>p</I>. There 
+    are two kinds of mappings that balance the load. One is a <I>block mapping</I>, 
+    partitions the array elements into blocks of consecutive entries and assigns 
+    the block to the processes. The other mapping is a <I>cyclic mapping</I>. It 
+    assigns the first element to the first process, the second element to the 
+    second, and so on. If <I>n</I> &gt; <I>p</I>, we get back to the first process, 
+    and repeat the assignment process for remaining elements. This process is 
+    repeated until all the elements are assigned. We have used a <I>cyclic mapping</I>
+    for partition of interval [0,1] onto<I>p</I> processes. </P>
+
+<LI><B>Input</B> </li>
+
+<P align = "justify">
+For input data, let each process use its identifying number, i.e. the value of its rank. For   
+  example, process with rank <I>0</I> uses the number 0, process with rank <I>1</I> uses the 
+number 1, etc.
+
+</P>
+
+
+<LI>
+<B>Input&nbsp;</B>&nbsp;  </li>
+        
+
+
+<P>Process with rank<I>0</I> reads the input parameter <I>n</I>, the number of intervals on 
+   command line.<BR> </P>
+
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+        
+
+<P> Process with rank <I>0</I> prints the computed value of <I>pi</I> function. </P>
+
+
+</ul>
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+<IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- **************** Example 1.7 ends ********************* -->
+
+
+
+
+<!-- **************** Example 1.8 starts ********************* -->
+
+
+
+<a name="p2p-prog-id08"> </a>
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+    
+     <b>  Example 1.8: <BR>  <BR> <BR>  </b> </td>
+    <td width="86%" height="2" align="left">
+    <b>  Example 1.8:   </b> 
+     <b>  Write a MPI C++ program to find sum of <I>n </I>(<I> n</I> = 2 <SUP><i>i</i> </SUP>;<I> i</I>
+    = 3) integers on <I>p</I> (<I>p</I>=<I>n</I>) processors of cluster using <I>associative    
+  fan-in </I>rule. You have to use MPI Non-blocking communication library calls</b>
+
+
+ </td>
+ </tr> 
+</tbody>
+ </table>
+
+
+<table border="0"  height="6">
+<tbody>
+<tr> 
+<td>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+
+<font size="2" face="verdana">
+<P> Write a MPI program to find sum of <I>n </I>(<I> n</I> = 2 <SUP><i>i</i> </SUP>;<I> i</I>
+    = 3) integers on <I>p</I> (<I>p</I>=<I>n</I>) processors of cluster using <I>associative    
+  fan-in </I>rule.
+</P> 
+
+
+
+
+
+<LI><B> Description </B> </li>
+
+<P align = "justify">
+The <I>first step</I> is to group the total number of processors in ordered 
+    pairs such as (<I>P</I><SUB>0</SUB><I>, P</I><SUB>1</SUB>), (<I>P</I><SUB>2</SUB><I>, 
+    p</I><SUB>3</SUB>), (<I>P</I><SUB>4</SUB><I>, P</I><SUB>5</SUB>), (<I>P</I><SUB>6</SUB><I>, 
+    p</I><SUB>7</SUB>), .................., (<I>P<SUB>p-2</SUB>, P<SUB>p-1</SUB></I>). 
+    Then compute the partial sums in all pairs of processors using MPI point-to-point    
+    blocking communication and accumulate the partial sum on the processors    
+    P<SUB>0</SUB>, P<SUB>2</SUB>, ....,P<SUB><I>p</I>-2</SUB>. For example, the    
+    processor <I>P<SUB>i</SUB> </I>(<I>i </I>is even)<I> </I>computes the partial sum for the pair        
+   (<I>P<SUB>i</SUB>, P<SUB>i+</SUB></I><SUB>1</SUB>) by performing MPI point-to-point blocking    
+    communication library calls. </p>
+
+  <div Align = "Center"> 
+    <IMG SRC="./cpp-point-to-point-mpi-images/associative-fanin-tree.gif" width=360> <br> 
+
+   <B> Figure 2. Tree Structure for sum of <I>n</I> integers by Associativ fan-in rule </b>
+
+  </div>
+
+
+<P align = "justify">
+
+In the <I>second step</I>, consider the pair of processors (<I>P</I><SUB>0</SUB>,
+      <I>P</I><SUB>2</SUB>), (<I>P</I><SUB>4</SUB>, <I>P</I><SUB>6</SUB>), .................,         
+    (<I>P<SUB>p-</SUB></I><SUB>4</SUB>, <I>P<SUB>p-</SUB></I><SUB>2</SUB>) obtain the new      
+ partial sum by considering the existing accumulated partial sums on the processors               
+    P<SUB>0</SUB>, P<SUB>2</SUB>, P<SUB>4</SUB>, ..., P<SUB>8</SUB>as explained in the previous   
+         step. This procedure is repeated till two processors are left out and finally accumulate the    
+       global sum on the processor <I>P</I><SUB>0</SUB>.In this example, MPI point-to-point non-blocking     
+     communication library calls such as,<B>MPI::COMM_WORLD.ISend</B> and <B>MPI::COMM_WORLD.IRecv</B>, can be  used. An example of     
+  <I>associative fan-in </I>rule is described as a tree structure in the Figure 2 for <I>n</I>= 16 </P>
+
+
+<LI><B>Input</B> </li>
+
+<P align = "justify"> For input data, let each process use its identifying number, i.e. the value of its rank. For   
+  example, process with rank <I>0</I> uses the number 0, process with rank <I>1</I> uses the number 1, etc.
+
+</P>
+
+<P>Process with rank<I>0</I> reads the input parameter <I>n</I>, the number of intervals on 
+   command line.<BR> </P>
+
+
+<LI>
+<B>Output&nbsp;</B>&nbsp;  </li>
+
+
+<P> process with rank <I>0</I> prints the final sum.</P>
+
+
+
+<DIV align="right">
+<a href="./basic-point-to-point-mpi-cpp.html">
+<IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</ul>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- *********************** Example 1.8 ends *************************** -->
+
+
+
+
+
+
+</TD></TR>
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+   
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

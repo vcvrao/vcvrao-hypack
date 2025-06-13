@@ -1,0 +1,81 @@
+#--------------------------------------------------------------------------------------#
+#    				TBB-Producer-Consumer-v1.0                             #
+#                                 README                                               #
+#--------------------------------------------------------------------------------------#
+# Description : This is the README which provides the usage and summary of             #
+#               tbb-producer-consumer-v1.0                                             #
+#                                                                                      #
+# Created     : August-2013                                                            #
+#                                                                                      #
+# E-mail      : hpcfte@cdac.in                                                         #
+#--------------------------------------------------------------------------------------#
+
+Contents
+-----------
+    [Section 1] Information regarding the TBB-Producer-Consumer-v1.0 directory structure.
+    [Section 2] Steps for using TBB-Producer-Consumer-v1.0
+    [Section 3] Pre-Requisites.
+    [Section 4] Steps for compiling TBBProCon-v1.0
+    [Section 5] Execution of code
+    [Section 6] Limitations.
+
+==========================================================================================
+Section 1 : Information regarding the TBB-Producer-Consumer-v1.0 directory structure.
+------------------------------------------------------------------------------------------
+include_header/--> consists of header files
+src/           --> consists Source codes 
+Makefile       --> How to make 
+README         --> Gives quick information regarding Package and how to execute 
+                   the code.
+
+
+
+=============================================================================================
+Section 2 : Steps for using TBB-Producer-Consumer-v1.0 
+---------------------------------------------------------------------------------------------
+Copy the "TBB-Producer-Consumer-v1.0" in your home directory. 
+This will create folder "TBB-Producer-Consumer-v1.0"
+
+The following directory structure of TBB-Producer-Consumer-v1.0. will be created in the
+main directory i.e "TBB-Producer-Consumer-v1.0".
+    
+	  /include_header        /src         Makefile 	README 
+
+
+==============================================================================================
+Section 3 : Pre-Requisites.
+----------------------------------------------------------------------------------------------
+
+TBB2.0 should be installed and configured with Linux /Unix OS.
+
+===============================================================================================
+Section 4 : Steps for compiling producer_consumer_v1.0
+-----------------------------------------------------------------------------------------------
+
+Go in the respective directory
+and give
+         make
+
+
+===============================================================================================
+Section 5 : Steps for executing producer_consumer_v1.0
+-----------------------------------------------------------------------------------------------
+
+        ./name_of_executable
+
+
+===============================================================================================
+Section 6 : Limitations
+-----------------------------------------------------------------------------------------------
+
+  --> Number of producers and consumers are fixed in code itself to strike balance with
+      num of items(to evenely divide chunk size)
+  
+  --> num of items = 500
+      (for demo purpose)
+
+
+In next version number of producers and consumers and num of items  will be taken from command
+line itself and problem size will also be increased.
+
+

@@ -1,0 +1,40 @@
+#/*****************************************************************************************
+#
+#                          C-DAC Tech Workshop : HEMPA-2011
+#                             Oct 17 - 21, 2011
+#                               
+#
+# Created         : Aug 2011 
+#
+# Email           : betatest@cdac.in        
+#*****************************************************************************************/
+# Heterogeneous computing package is a collection of computing kernle written 
+# in MPI-OpenCL. 
+
+
+1.Configuration of package : Before compilation
+  	i) vi make.inc
+	ii)set the package home location path variable "MPIOCLHOME".
+	iii)Set MPI installation path "CC"
+	iv) Set OpenCL SDK Installation path "CLHOME".
+	v)  Set OpenCL Blas implementation lib path to "CLAMDBLASHOME" 
+	vi) save all your setting.
+
+2. Compilation 
+	i) from home loacation of package type bellow command.
+		$ make
+
+3. Run 
+	i)   goto "bin" dir
+	ii)  Use bellow command with proper command line argument.
+		mpirun -n <numer-of-processes> ./<executable-name>  < list-of-command-line-argument >
+		
+		example :
+		
+		mpirun -n 4 ./hybridPrefixSum 1000
+		
+			where : "4" is number of processes. 
+				"./hybridPrefixSum" is binary executable name.
+				"1000"  is array length of which prefix sum will be calculated.
+
+

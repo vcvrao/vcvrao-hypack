@@ -1,0 +1,2686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML><HEAD><TITLE> PEMG-2010  Mode-01 Lab  OpenMP Overview  : Tech workshop - June 21-24, 2010 C-DAC Ecity, Bengaluru</TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=Content-Language content=en-us>
+<META id=ROBOTS content=ALL name=ROBOTS>
+
+<META id=Copyright content="Copyright (c) 2010, C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<META id=keywords content=HDF name=keywords><LINK href="../pemg10-files/pemg-main.css" 
+type=text/css rel=stylesheet><LINK href="../pemg10-files/pemg-home.css" type=text/css 
+rel=stylesheet><LINK href="../pemg10-files/pemg-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="../pemg10-files/pemg-main.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo><A 
+            href="http://www.cdac.in/pemg2010/"><IMG alt=PEMG-2010
+            src="../pemg10-files/PEMG-2010-header.jpg" border=0></A></TD>
+
+        
+
+</TR></TBODY></TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+
+      <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+            
+
+		  <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:pemgShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('1', 1)" 
+       		href="../pemg10-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:pemgShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('2', 1)" 
+                  href="../pemg10-topics-of-interest-mode01-multicore.html">Topics </A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:pemgShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('3', 1)" 
+                  href="../pemg10-tech-prog-overview.html">Tech. Prog.</A></TD>
+
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:pemgShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('4', 1)" 
+                  href="../pemg10-complab-overview.html">Comp. Lab.</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:pemgShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('5', 1)" 
+                  href="../pemg10-mode01-multicore-lab-overview.html"> Mode-1 (Multi-Cores)</A></TD>
+		<TD class=menusep></TD>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow6 
+                  onmouseover="javascript:pemgShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('6', 1)" 
+                  href="../pemg10-mode02-gpgpu-lab-overview.html"> Mode-2 (GPGPUs)</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+                  href="../pemg10-reg-private-sector.html">Registration 
+                  </A></TD>
+                <TD class=menusep></TD>
+		
+                <TD class=menu1><A class=menu1 id=mainmenurow8
+                  onmouseover="javascript:pemgShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('8', 1)" 
+                  href="../pemg10-contact-address.html">Contact
+                 </A></TD>
+
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+       <TABLE id=submenutab1 onmouseover="javascript:pemgShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:pemgHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+        <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-overview.html"><B> 
+            PEMG-2010 Overview</B></A>
+
+        <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-venue.html"><B>
+            Venue : ECity, Bengaluru </B></A>
+
+        <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-faculty.html"><B>
+            Faculty Members</B></A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B> </A>
+
+
+	<A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-audience.html"><B>
+            Target Audience / Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-proceedings.html"><B>
+            PEMG-2010 Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-download-software.html"><B> 
+              Download Software </B> </A>
+
+
+	<A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-sponsors.html"><B>
+            PEMG-2010 Sponsors</B></A>
+                  
+	<A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-past-workshops.html"><B> 
+             Past Tech. Workshops </B></A>
+   
+        <A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-accommodation.html"><B>
+             Accommodation </B></A>
+
+       
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-local-travel.html"><B>
+            Local Travel</B></A>
+    
+
+	<A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-organisers.html"><B> 
+             Organisers</B> </A>
+
+        <A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-feedback.html"><B>
+             Feedback </B></A>
+
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-acknowledgements.html"><B> 
+             Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-about-contact-address.html"><B>Contact</B></A>
+ 
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onmouseover="javascript:pemgShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-topics-of-interest-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores </B></A>
+
+         <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-topics-of-interest-mode02-gpgpu.html"><B> 
+           Mode-2 GPGPUs/GPU Comp. </B></A>
+
+         <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-topics-of-interest-handson.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+         <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+
+<!--   Sub menu for **** Row-3-Technical program  **** start here -->
+
+
+      <TABLE id=submenutab3 onmouseover="javascript:pemgShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 152px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-overview.html"><B> 
+            Tech. Prog. Overview</B></A>
+
+    
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-at-glance-poster.html"><B> 
+            Prog. at Glance / Poster</B></A>
+
+
+	<A class=menu2 id=submenurow3s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores</B></A>
+
+	 <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+	
+
+         <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B>
+		</A>
+	<A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-demonstration.html"><B> 
+            Demonstration</B></A>
+
+        <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-tech-prog-handson-overview.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+        <A class=menu2 id=submenurow3s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>   Home  </B> </A>
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-3-TechnicalProgram **** End here -->
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory **** start  here -->
+
+      <TABLE id=submenutab4 onmouseover="javascript:pemgShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 247px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	    <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-complab-overview.html"><B> Comp. Lab. Overview </B></A>
+
+	<A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-complab-access.html"><B> Comp. Lab. Access </B></A>
+
+           <A class=menu2 id=submenurow4s3
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-complab-mode01-multicore.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+		
+	<A class=menu2 id=submenurow4s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-complab-mode02-gpgpu.html"><B> Mode-2  (GPGPU ) Lab. </B></A>
+
+        <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>  Home  </B> </A>
+
+	</TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory ****  End  here -->
+
+
+<!--   Sub menu for **** Row-5-Mode 1 : Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onmouseover="javascript:pemgShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 350px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-lab-overview.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+
+	<A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-pthreads.html"><B>  Pthreads</B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+
+	<A class=menu2 id=submenurow5s4
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow5s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-mpi.html"><B>MPI 1.0 / MPI 2.0</B></A>
+ 
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-mpi-openmp.html"><B>
+            MPI-OpenMP</B></A>
+ 
+      <A class=menu2 id=submenurow5s7
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-mpi-pthreads.html"><B>
+            MPI-Pthreads </B></A>
+
+      <A class=menu2 id=submenurow5s8
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-mpi-tbb.html"><B>
+            MPI-TBB </B></A>
+ 
+      <A class=menu2 id=submenurow5s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-java-threads.html"><B> Java Prog. - Threads</B></A>
+
+	<A class=menu2 id=submenurow5s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-software-tools.html"><B> Software threads- tools</B></A>
+
+        <A class=menu2 id=submenurow5s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="pemg10-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Tuning / Perf. </B></A>
+
+        <A class=menu2 id=submenurow5s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-perf-math-lib.html"><B> Threads- Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow5s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+
+       <A class=menu2 id=submenurow5s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Performance </B></A>
+
+
+       <A class=menu2 id=submenurow5s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5-Mode 1 : Hands-on ****  End here  -->
+
+
+<!--   Sub menu for **** Row-6-Mode 2 : Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onmouseover="javascript:pemgShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 465px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode02-gpgpu-lab-overview.html"><B> Mode-2  (GPGPU ) Lab.   </B></A>
+
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode02-gpgpu-nvidia-gpu-cuda.html"><B>CUDA enabled NVIDIA GPUs </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode02-gpgpu-amd-stream-comp.html"><B>AMD-ATI Stream Comp.-SDK</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode02-gpgpu-opencl-opengl.html"><B> GPU Programming - OpenCL    </B></A>
+
+
+	<A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-mode02-gpgpu-hybrid-comp.html"><B>Hybrid Comp. (CPUs/GPUs)</B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6-Mode 2 : Hands-on **** End here  -->
+
+
+
+<!--  Sub menu for **** Row-7-Registration **** Start here  -->
+
+      <TABLE id=submenutab7 onmouseover="javascript:pemgShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-reg-private-sector.html"><B>Private Sector</B></A>
+
+      <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-reg-govt-public-sector.html"><B>Public Sector/ Govt.  Org.</B></A>
+
+      <A class=menu2 id=submenurow7s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-reg-govt-academic-staff.html"><B>Govt. Academic Staff </B></A>
+
+      <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-reg-students.html"><B>Students</B></A>
+
+      <A class=menu2 id=submenurow7s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-reg-online-registration.html"><B>Online Registration</B></A>
+ 
+      <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+             href="../pemg10-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-7-Registration **** End here  -->
+
+
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** Start here  -->
+
+      <TABLE id=submenutab8 onmouseover="javascript:pemgShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+
+      <TD class=menu2>
+
+     <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-contact-address.html"><B>Contact</B></A>
+
+
+     <A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../pemg10-contact-accommodation.html"><B>Accommodation </B></A>
+
+        
+     <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../index.html"><B>  Home  </B> </A>
+
+  </TD> </TR></TBODY> </TABLE>
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** End here  -->
+
+  </DIV>
+
+<!-- **************** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+
+	     
+           <A class=menul
+	       href="../pemg10-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 (Multi-Cores) Lab. </A>
+            
+               
+           <A class=menul
+               href="../pemg10-mode01-multicore-pthreads.html">
+               &#149; Pthreads</A>
+               
+			
+	   <A class=menul  
+              href="../pemg10-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+                <!-- *** -->
+	        <A class=menulslct  
+                 href="../pemg10-mode01-multicore-openmp.html">
+                 &#149; OpenMP</A>
+	         <!-- *** -->
+              
+	   <A class=menul
+              href="../pemg10-mode01-multicore-mpi.html">
+              &#149; MPI 1.0 / MPI 2.0</A>
+              
+
+           <A class=menul 
+	      href="../pemg10-mode01-multicore-mpi-openmp.html">
+              &#149;  MPI-OpenMP</A>
+
+
+           <A class=menul 
+	      href="../pemg10-mode01-multicore-mpi-pthreads.html">
+              &#149;  MPI-Pthreads</A> 
+
+
+           <A class=menul 
+	      href="../pemg10-mode01-multicore-mpi-tbb.html">
+              &#149;  MPI-TBB</A>  
+   
+          
+           <A class=menul
+	      href="../pemg10-mode01-multicore-java-threads.html">
+              &#149;  Java Prog.-Threads</A>
+          
+
+	   <A class=menul 
+	      href="../pemg10-mode01-multicore-software-tools.html">
+              &#149;  Software threads - Tools</A>
+
+            
+	   <A class=menul 
+	      href="../pemg10-mode01-multicore-compiler-tune-perf.html">
+              &#149;  Compilers - Tuning /Perf.</A>
+            
+
+	  <A class=menul 
+	     href="../pemg10-mode01-multicore-perf-math-lib.html">
+             &#149; Threads - Perf.  Math. Lib. </A>
+
+           
+	  <A class=menul
+	     href="../pemg10-mode01-multicore-memory-allocators.html">
+             &#149;  Memory Allocators</A>
+            
+
+	  <A class=menul
+	     href="../pemg10-mode01-multicore-threads-io-perf.html">
+             &#149;  Threads-I/O Performance </A>
+        
+
+          <A class=menul 
+	     href="../index.html">
+             &#149;  Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+ 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD >
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Programming on Multi-Core Processors Using OpenMP APIs </b> </font>
+ </DIV> </TD> </TR> <BR>
+</TBODY> 
+</TABLE> 
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align=justify><span class="content"> <BR>
+
+  The OpenMP API is used for writing portable multithreaded applications written in Fortran, C and C++ languages.
+  The OpenMP programming model plays a key role by providing an easy method for threading applications without burdening 
+  the programmer with the complications of creating, synchronizing load balancing, and destroying threads. 
+  The OpenMP model provides a platform independent set of compiler pragmas, directives, function calls, and environment
+  variables that explicitly instruct the compiler how and where to use the parallelism in the application. 
+
+This software threading model on the computing platform consists of multi-core processors
+  play an important role to understand and enhance the performance of your application. <BR> <BR>
+
+ 
+
+   Example   programs using 
+   compiler pragmas, directives, function calls, and environment variables, Compilation and execution
+   of OpenMP programs, programs numerical and non-numerical computations
+   are discussed. </font>
+</span> </p>
+</td> </tr> 
+</tbody>
+</table>
+
+
+<!-- ************************** Sub-title Starts topics here *************************** -->
+
+<BR> 
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+   <td height="24" align="left">
+
+   <p align = "left" >
+   
+   <a href="#openmp-intro">
+   <font size="2" face="Arial" color="blue"> <B> Introduction </b>  </font> </a> 
+   &nbsp; &nbsp; &nbsp;   
+
+
+   <a href="#openmp-whyopenmp">
+   <font size="2" face="Arial" color="blue"> <B> Why OpenMP ? </b>  </font> </a> 
+    &nbsp; &nbsp; &nbsp;
+
+
+   <a href="#openmp-faqs">
+   <font size="2" face="Arial" color="blue"> <B> OpenMP FAQ </b>  </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+
+
+   <a href="#openmp-features">
+   <font size="2" face="Arial " color="blue"> <B> Key features  </b>  </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+  
+
+  <a href="#openmp-lib-calls">
+  <font size="2" face="Arial" color="blue"> <B>  OpenMP  Lib. Calls </b>   
+  </font> </a> 
+<BR> <BR>
+
+
+ <a href="#openmp-compile-exe-prog">
+ <font size="2" face="Arial" color="blue"> <B>Compilation &amp; Execution</ b>  
+ </font> </a> 
+   &nbsp; &nbsp;  
+
+   <a href="#openmp-tools">
+ <font size="2" face="Arial" color="blue"> <B> OpenMP Tools </ b>  
+ </font> </a> 
+&nbsp; &nbsp; &nbsp;
+
+<B><font size="2" face="Arial" color="#FF0011"> Example :</font></b>
+ <a href="#openmp-example-prog-fortran">
+
+  <B><font size="2" face="Arial" color="blue"> OpenMP-Fortran </b>  </font> </a>  
+&nbsp; &nbsp;  
+
+ <a href="#openmp-c-prog">
+ <font size="2" face="Arial" color="blue"> <B> OpenMP-C </b>  </font> </a>  
+ &nbsp; &nbsp; 
+ 
+ <BR> <BR> 
+
+
+   <a href="#openmp-3.0">
+   <font size="2" face="Arial " color="blue"> <B> About OpenMP 3.0  </b>  </font> </a> 
+   &nbsp;  &nbsp; &nbsp;&nbsp;
+
+
+   <a href="#openmp-3.0-lib-calls">
+   <font size="2" face="Arial " color="blue"> <B>  OpenMP 3.0 Lib Calls  </b>  </font> </a> 
+   &nbsp;  &nbsp; &nbsp;&nbsp;
+
+
+   <BR> <BR> 
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+
+<font size="2" face="Arial" color="#FF0011"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-opecg-2009/reference-overview-mode01.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-opecg-2009/reference-overview-mode01.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-opecg-2009/reference-overview-mode01.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-opecg-2009/reference-overview-mode01.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-opecg-2009/reference-overview-mode01.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp; 
+
+<a href="../reference-opecg-2009/reference-overview-mode01.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp; 
+
+<!-- ************* Reference Ends Here ************************ -->
+
+</tbody>
+</td>
+</tr>
+</table>
+
+<!-- ********************** Sub-title topics Ends here *************************** -->
+<BR>
+
+<HR> 
+ 
+<!-- *********************** List of Programs - OpenMP APIs   Starts [1] here *************************** -->
+
+<p> <font size="2" face="Arial" color="red"> <b> List of OpenMP Programs </b> </font> </p>
+
+
+<p align = "left" >
+<table border="0"  height="6">
+  <tbody> 
+
+     <tr>
+     <td width="4%" height="2" align="left">     </td>
+
+     <td width="96%" height="2" align="left">
+          <P align=justify>
+    
+        <a href="./openmp-html/openmp-basic-pragmas.html"> 
+          <font size="2" face="Arial" color="blue"> 
+               <B>  OpenMP programs to illustrate basic OpenMP  API library calls : </b>  
+          </font> 
+       </a>   
+     
+    <span class="content"> 
+      Examples include some introductory 
+programs on use of OpenMP pragmas, parallel directives (the <i> for </i> directive), Threading a Loop,  work-Sharing constructs, 
+function calls,  Reduction Operations, synchronization,  data handling, Managing  Shared & Private Data, Critical Section & 
+Environment Variables. <BR> <BR>
+
+       </span> </p>
+     </td>
+     </tr>
+
+<!-- ********************** List of Programs - OpenMP APIs ends  [1] here ******************************* -->
+
+
+<!-- ************************* List of Programs Numerical  Computations Starts [2] here ********************* -->
+
+     <tr>
+     <td width="4%" height="2" align="left">     </td>
+
+     <td width="96%" height="2" align="left">
+          <P align=justify>
+    
+        <a href="./openmp-html/openmp-numerical-pragmas.html"> 
+      <font size="2" face="Arial" color="blue"> 
+         <B> Programs based on Numerical Computations (Dense Matrix Computations) using thread APIs : </b> 
+        </font> </a> 
+     
+    <span class="content"> 
+      Examples programs on  numerical integration of "pi" value by using different algorithms  and OpenMP pragmas, 
+    vector-vector multiplication using block striped partitioning, 
+    matrix-vector multiplication using self scheduling algorithm, and block checkerboard
+    partitioning, computation of Infinity norm of the square matrix using block striped partitioning. 
+    The focus is to use
+    different thread APIs and understand  Performance issues on multi-core processors.<BR> <BR>
+ 
+        </span> </p>
+     </td>
+     </tr>
+<!-- ******************** List of Programs Numerical  Computations  Ends  [2] here *********************** -->
+
+
+<!-- ********************* List of Programs Non-Numerical  Kernels Starts [3] here ********************* -->
+  <tr>
+     <td width="4%" height="2" align="left">     </td>
+
+     <td width="96%" height="2" align="left">
+          <P align="justify">
+    
+        <a href="./openmp-html/openmp-non-numerical-pragmas.html"> 
+    <font size="2" face="Arial" color="blue"> 
+         <B>Non-Numerical Computations & I/O (Sorting, Searching, Producer-Consumer) 
+  using thread APIs : </b> 
+        </font> </a> <BR>
+     
+    <span class="content"> 
+    Examples programs on  Sorting, Searching algorithms, Producer Consumer programs & OpenMP I/O programs 
+    using different OpenMP pragmas are discussed. The focus is to use
+    different OpenMP pragmas and understand Performance issues on multi-core processors. <BR> <BR>
+ 
+    </span> </p>
+    </td>
+    </tr>
+<!-- *************************** List of Programs Non-Numerical  Kernels  Ends  [3] here ************************** -->
+
+
+<!-- ************************ List of Programs Benchmark Kernels Starts [4] here ******************** -->
+  <tr>
+     <td width="4%" height="2" align="left">     </td>
+
+     <td width="96%" height="2" align="left">
+          <P align="justify">
+    
+    
+        <a href="./openmp-html/openmp-benchmarks-kernels.html"> 
+    <font size="2" face="Arial" color="blue"> 
+         <B>Test suite of Programs/Kernels and Benchmarks on Multi-Core Processors  </b> 
+        </font> </a> <BR>
+     
+    <span class="content"> 
+    A test suite of programs on selective Dense Matrix computations, and Sorting Algorithms,  are discussed on multi-core processors. 
+    Different OpenMP Pragma have been 
+    used to  understand  Performance issues on multi-core processors.
+ 
+   </span> </p>
+    </td>
+    </tr>
+<!-- ********************* List of Programs Benchmark Kernels  Ends  [4] here ******************************* -->
+
+<tr>
+<td> </td>
+<td>
+<DIV ALIGN=right>
+      <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+      </DIV>
+</td>
+    </tr>
+</tbody>
+</table>
+
+<BR> <BR>
+
+<!-- ***************** Histroy &amp; Introduction to OpenMP starts ******************************* -->
+
+  
+<a name="openmp-intro"> </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+
+<DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+  <B> Introduction to OpenMP  </b>  </font> </font></DIV> 
+</TD> </TR> 
+
+
+<P align=justify> 
+
+<TR>
+<TD>
+<BR>
+<FONT face="verdana" size=2, class="content" >
+ 
+          Three explicit parallel programming models
+          are data-parallel, shared-variable and message passing.
+          Explicit parallelism means that the programmer using special
+          language constructs, compiler directives, or library function calls
+          explicitly specifies parallelism in the source code. If the programmer
+          does not explicitly specify parallelism, but lets the compiler and the
+          run-time support system automatically exploit it, we have the implicit
+          parallelism. Out of many explicit parallel-programming models, the
+          dominant ones are data-parallel, message passing, and shared-variable
+          model. <BR>  <BR>
+
+
+
+<DIV align=Left>
+<font Color="black" face= "verdana" size="2"> <B> OpenMP History  </b>  </font> </DIV> 
+<BR>
+<FONT face="verdana" size=2, class="content" >
+
+<P align="justify">
+
+   In the early 90's, vendors of shared-memory machines supplied similar, 
+            directive-based, Fortran programming extensions to make use of the 
+            architecture and its advantages:
+            
+          <UL>
+            <LI> The user would augment a serial Fortran program with directives 
+              specifying which loops were to be parallelized&nbsp;</LI>
+            <LI> The compiler would be responsible for automatically parallelizing 
+              such loops across the SMP processors implementations were all functionally 
+              similar, but were diverging (as usual) as different vendors used 
+              different methods and implementations based on their architecture 
+              and platform.&nbsp;</LI>
+          </UL>
+
+          <P align="justify">
+
+        First attempt at a standard was the draft for ANSI X3H5 in 1994. 
+            It was never adopted, largely due to waning interest as distributed 
+            memory machines became popular. The OpenMP standard specification 
+            started in the spring of 1997, taking over where ANSI X3H5 had left 
+            off, as newer shared memory machine architectures started to become 
+            prevalent.&nbsp; </p>
+
+       <P align="justify">The OpenMP groups believes that pThread is not
+          scalable, since it is targeted at low end Unix SMPs, not technical
+          high performance computing. It does not even has fortran binding/
+          pThread is low level, because it uses the library approach, not
+          compiler directive. The library approach precludes compiler
+          optimizations. PThread supports only thread parallelism, not fine
+          grain parallelism. The concept of OpenMP is flexible to support coarse
+          grain parallelism. </p> 
+
+    <P align="justify">Pthreads do not support incremental parallelism
+          well. Given a sequential computing program, it is difficult for the
+          user to parallelize it using pThreads. The user has to worry about
+          many low level details, and pThreads do not naturally support loop
+          level data parallelism. </p>
+
+        <P align="justify">OpenMP is designed to alleviate the short 	
+			comings discussed above. For wide acceptance of OpenMP, the key to
+          develop good compilers and run time environment.</P>
+
+          <p><B><font color="#000000">Shared Memory Programming&nbsp;</font></b></p>
+
+          <p align="justify">
+          Shared-memory
+          systems typically provide both static and dynamic process creation.
+          That is, processes can be created at the beginning of program
+          execution by a directive to the operating system, or they can be
+          created during the execution of the program. The best-known dynamic
+          process creation function is fork. A typical implementation will allow
+          a process to start another, or child, process by a fork. Three
+          processes typically manage coordinating among processes in shared
+          memory programs. The starting, or a parent, process can wait for the
+          termination of the child process by calling join. The second prevents
+          processes from improperly accessing shared resources. The third
+          provides a means for synchronizing the processes. </p>
+
+
+    
+          <p align="justify"> The shared-memory model is similar to the data-parallel model.
+          It has a single address (global naming) space.
+         It is similar to the message-passing model in that it is
+          multithreading and synchronous. However,
+          data reside in a single, shared address space, thus does not have to
+          be explicitly allocated. Workload
+          can be either explicitly or implicitly allocated. Communication is
+          done implicitly through shared reads and writes of variables.
+          However, synchronization is explicit.
+          </p>
+
+
+          <p align="justify"> Shared variable programs are multi threaded and asynchronous; require
+          explicit synchronizations to maintain correct execution order among
+          the processes. Parallel programming based on the shared memory model
+          has not progressed as much as message passing parallel programming.
+          An indicator is the lack of a widely accepted standard such as
+          MPI or PVM for message passing. The
+          current situation is that shared-memory programs are written in a
+          platform specific language for multiprocessors (mostly SMPs and PVPs).
+          Such programs are not portable even among multiprocessors, not
+          to mention multicomputers (MPPs and clusters). Three platform
+          independent shared memory-programming models are X3H5, Pthreads, and
+          OpenMP.
+          </p>
+
+
+          <P align="justify">OpenMP is an Application Program Interface (API) that may be used 
+            to explicitly direct multi-threaded, shared memory parallelism. It 
+            is a specification for a set of compiler directives, library routines 
+            and environment variables that can be used to specify shared memory 
+            parallelism in Fortran and C/C++ programs. The OpenMP is a shared
+          memory standard supported by a group of hardware and software
+          vendors, such as DEC, Intel, IBM, Kuck &amp; Associates, SGI, Portland
+          Group, Numerical Algorithms Group, U.S DOE ASCI program, etc.&nbsp; It
+          is comprised of three primary API components:&nbsp; 
+
+
+            &nbsp; 
+          <UL>
+            <LI> Compiler Directives&nbsp;</LI>
+            <LI> Runtime Library Routines&nbsp;</LI>
+            <LI> Environment Variables&nbsp;</LI>
+          </UL>
+
+
+          <P align="justify">OpenMP is portable and the API is specified for C/C++ and Fortran. 
+            Multiple platforms have been implemented including most Unix platforms 
+            and Windows NT. It is jointly defined and endorsed by a group of major 
+            computer hardware and software vendors. It is not an ANSI standard 
+            yet.&nbsp; 
+
+
+          <P><b><font color="#000000">Goals</font></b> 
+
+          <P align="justify">Standardization: Provide a standard among a variety of shared memory 
+            architectures/platforms.&nbsp; 
+
+          <P align="justify">Lean and Mean: Establish a simple and limited set of directives for 
+            programming shared memory machines. Significant parallelism can be 
+            implemented by using just 3 or 4 directives.&nbsp; 
+        </font>
+<br>
+ <DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</TBODY> 
+</TABLE> 
+
+<BR> <BR>
+<!-- ******************  History & Introduction to OpenMP  ends here  ************************ -->
+
+   
+
+<!-- ******************  Why OpenMP   starts  here  ********************** -->
+
+<a name="openmp-whyopenmp">   </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left>
+<font Color="black" face= "verdana" size="2"> <B> Why OpenMP ?  </b>  </font> </DIV> 
+</TD> 
+</TR> 
+
+
+<P align=justify> 
+
+<TR>
+<TD>
+<BR>
+<FONT face="verdana" size=2, class="content" >
+
+<P align="justify">
+
+
+        Shared-memory parallel programming directives have never been
+          standardized in the industry. An earlier standardization effort, ANSI
+          X3H5 was never formally adopted. So vendors have each provided a
+          different set of directives, very similar in syntax and semantics, and
+          each used a unique comment or pragma notation for
+          &quot;portability&quot;. OpenMP consolidates these directive sets into
+          a single syntax and semantics, and finally delivers the long- awaited
+          promise of single source portability for shared-memory parallelism. </p>
+
+
+          <p align="justify">
+
+         OpenMP also addresses the inability of previous shared-memory
+          directive sets to deal with coarse grain parallelism. In the past,
+          limited support for coarse grain work has led to developers thinking
+          that shared memory parallel programming was inherently limited to
+          fine-grain parallelism. This is not the case with OpenMP. Orphaned
+          directives in OpenMP offer the features necessary to represent
+          coarse-grained algorithms. <BR> <BR>
+
+         <font color="#000000"><b>Ease of Use</b> </font> <BR>  
+          <UL>
+            <LI> Provide capability to incrementally parallelize a serial program, 
+              unlike message-passing libraries which typically require an all 
+              or nothing approach&nbsp;</LI>
+
+            <LI> Provide the capability to implement both coarse-grain and fine-grain 
+              parallelism portability</LI>
+
+            <LI> Supports Fortran (77, 90, and 95), C, and C++ languages </LI>
+
+            <LI> Public forum  for API and membership </LI>
+         </ul>
+      </p>
+
+
+<DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</font>
+</TBODY> 
+</TABLE> 
+<!-- ****************************  Why OpenMP   Ends  here *************************** -->
+ 
+<!-- ************************ OpenMP Features s start here **************************** -->
+
+<a name="openmp-features"> </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<font Color="black" face= "verdana" size="2">  <b> OpenMP Key Features  </b> </font> </DIV> 
+ 
+ </TD>
+ </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+
+<ul>
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+<li>
+   OpenMP incorporates the concept of orphan directives, do not appear in the lexical extent of a parallel construct but lie in its
+          dynamic (execution) extent. They are not lexically enclosed in the parallel construct of the main program,
+          but they are in its dynamic execution path.<br>
+          <br> </li> 
+
+      <li>
+          User parallelize the main program using one or more parallel directives,
+          and use other directives to control execution in the parallel subroutines.
+          This way, he could enable parallel execution of major portions of the
+          program with small modification.  This concept also facilitates the development
+          and reuse of modular parallel programs. X3H5 does not support orphan
+          directives.<br>
+          <br> </li>
+
+    <li>
+
+          Besides compiler directives, OpenMP provides a set of run-time library
+          routines with associated environment variables.  They are used to control
+          and query the parallel execution environment, provide general-purpose lock
+          functions, set execution mode, etc.  For instance, OpenMP allows a throughput mode.<br>
+          <br> </li>
+
+      <li>
+          The system then dynamically sets the number of threads used to execute
+          parallel regions. This can maximize the throughput performance of the system, probably
+          at the expense of prolonging the elapsed wall-clock time of one application. X3H5
+          and OpenMP have similar parallelism directives. Only the notations are slightly different.  OpenMP includes a new MASTER directive.
+          Only the master thread should execute the program.<br>
+          <br> </li>
+
+      <li>
+          OpenMP provides more flexible functionality to control the data environment
+          than X3H5.  For instance, OpenMP supports reduction by a REDUCTION (+ :
+          sum) clause in a PARALLEL DO directive. A private copy of the reduction variable sum  is created for each thread. The private copy is initialized to 0 according to the
+          reduction operator +. Each thread computes a private result. At the end of PARALLEL DO, the reduction variable sum  is updated to equal the result of combining the original value of the
+          reduction variable sum with the private results using the operator +.  Reduction operators other than + can be specified. <br><br>
+          The clause DEFAULT (PRIVATE) directs all variables in a parallel region to be private,
+          unless overwritten by other explicit SHARED clauses.  There is also a DEFAULT (SHARED)
+          clause to direct all variables as shared.  Autoscoping makes it unnecessary to
+          explicitly enumerate all variables. This can save programmer's time and reduce errors.<br>
+          <br>  </li>
+
+       <li>
+          OpenMP introduces an ATOMIC directive, which allows the compiler to take advantage of the most efficient scheme to implement atomic updates to a variable.
+          This is superior to mutually exclusive constructs such as critical regions and
+          locks.
+       </li>
+</p>
+   </ul>
+
+
+<BR>
+
+<DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</font>
+</TBODY> 
+</TABLE> 
+
+<BR>
+<!-- **************************  OpenMP Key Features  Ends here  ******************************* -->
+
+<!-- ********************** Basic OpenMP Pragmas  Starts  **************************************** -->
+<a name="openmp-lib-calls"> </a>
+  
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<font Color="black" face= "verdana" size="2"> <B> Basic OpenMP Library Calls  </b> </font> </DIV> 
+ 
+ </TD>
+ </TR> 
+
+
+<TR>
+<TD>
+
+<BR> 
+
+<ul>
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+
+
+<BR> 
+
+  Most commonly used OpenMP Run time pragmas  in FORTRAN/C -Language 
+  are explained below.<br> 
+  <br>
+  <b>Syntax</b>:&nbsp;&nbsp;&nbsp;&nbsp; 'FORTRAN' Call <br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  'C' Call 
+
+
+    <!-- ********************* Pragma call starts ******************** -->
+
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+        <font color="#FF00FF">OMP_SET_NUM_THREADS</font>  <BR>
+     
+
+        <b>SUBROUTINE </b>OMP_SET_NUM_THREADS (scalar_integer_expression) 
+        <br>
+        <b>void omp_set_num_threads</b>(<i>int num_threads</i>) 
+     </p>
+
+        <p><font color="#FF9900"><i>sets the number of threads to use in a team</i>&nbsp;</font> </p>
+
+        <p align="justify">This subroutine sets the number of threads that will be used in the 
+          next parallel region. The dynamic threads mechanism modifies the effect 
+          of this routine. If enabled, specifies the maximum number of threads 
+          that can be used for any parallel region. If disabled, specifies exact 
+          number of threads to use until next call to this routine. This routine 
+          can only be called from the serial portions of the code. This call has 
+          precedence over the OMP_NUM_THREADS environment variable. </p>
+
+
+    <!-- ***********************  Pragma call starts ************************* -->
+
+    
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+          <font color="#FF00FF">OMP_GET_NUM_THREAD</font> 
+        </p>
+
+        <p><b>INTEGER FUNCTION OMP_GET_NUM_THREADS</b>() <br>
+          <b>int omp_get_num_threads</b>(<i>void</i>) </p>
+
+        <p><i><font color="#FF9900">returns the number of threads in the currently 
+          executing parallel region.</font> </i> </p>
+
+        <p align="justify">
+          This subroutine/function returns the number of threads that are currently 
+          in the team executing the parallel region from which it is called. If 
+          this call is made from a serial portion of the program, or a nested 
+          parallel region that is serialized, it will return 1. The default number 
+          of threads is implementation dependent. </p>
+
+     
+
+    <!-- *********************** Pragma call starts ************************* -->
+
+    
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+            <font color="#FF00FF"> OMP_GET_MAX_THREADS</font> </p> 
+
+        <p><b>INTEGER FUNCTION OMP_GET_MAX_THREADS</b>() <br>
+
+          <b>int omp_get_max_threads</b>(<i>void</i>) </p>
+
+        <p><i><font color="#FF9900">returns the maximum value that can be returned 
+          by a call to the OMP_GET_NUM_THREADS function.</font></i></p>
+
+        <p align="justify">Generally reflects the number of threads as set by the OMP_NUM_THREADS 
+          environment variable or the OMP_SET_NUM_THREADS() library routine. This 
+          function can be called from both serial and parallel regions of code.&nbsp;&nbsp;&nbsp;
+
+
+    <!-- ******************** Pragma call starts *************************** -->
+
+
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+         <font color="#FF00FF">OMP_GET_THREAD_NUM</font> 
+        </p>
+
+        <p><b>INTEGER FUNCTION OMP_GET_THREAD_NUM</b>() <br>
+          <b>int omp_get_thread_num</b>(<i>void</i>) </p>
+
+        <p><i><font color="#FF9900">returns the thread number within the team</font> 
+          </i></p>
+
+        <p align="justify">This function returns the thread number of the thread, within the team, 
+          making this call. This function returns the thread number. This number 
+          will be between 0 and OMP_GET_NUM_THREADS-1. The master thread of the 
+          team is thread 0. If called from a nested parallel region, or a serial 
+          region, this function will return 0.&nbsp;&nbsp;&nbsp;</p>
+
+
+      <!-- ************************ Pragma call starts *********************** -->
+
+      <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+
+       <font color="#FF00FF">OMP_GET_NUM_PROCS</font> 
+        </p>
+        <p><b>INTEGER FUNCTION OMP_GET_NUM_PROCS</b>() <br>
+          <b>int omp_get_num_procs</b>(<i>void</i>) </p>
+        <p><font color="#FF9900"><i>returns the number of processors that are 
+          available to the program.</i>&nbsp;&nbsp;</font></p>
+ 
+
+    <!-- ******************** Pragma call starts ************************** -->
+
+   
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+            <font color="#FF00FF">OMP_IN_PARALLEL</font> 
+        </p>
+
+        <p><b>LOGICAL FUNCTION OMP_IN_PARALLEL</b>() <br>
+          <b>int omp_in_parallel</b>(<i>void</i>) </p>
+
+        <p><i><font color="#FF9900">returns .TRUE. for calls within a parallel 
+          region, .FALSE. otherwise.</font> </i></p>
+
+        <p align="justify">This function/subroutine is called to determine if the section of code 
+          which is executing is parallel or not. For Fortran, this function returns
+        .TRUE. if it is called from the dynamic extent of a region executing 
+          in parallel, and .FALSE. otherwise. For C/C++, it will return a non-zero
+        integer if parallel, and zero otherwise. </p>
+
+
+    <!-- ************************* Pragma call starts ************************-->
+  
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+        <font color="#FF00FF">OMP_SET_DYNAMIC</font>
+        <p><b>SUBROUTINE OMP_SET_DYNAMIC</b>(<i>scalar_logical_expression</i>) </font>
+          <br>
+          <b>void omp_set_dynamic</b>(<i>int dynamic_threads</i>) </p>
+
+        <p><i><font color="#FF9900">control the dynamic adjustment of the number 
+          of parallel threads.</font> </i></p>
+
+        <p align="justify">This subroutine enables or disables dynamic adjustment (by the run 
+          time system) of the number of threads available for execution of parallel
+        regions. For Fortran, if called with .TRUE. then the number of threads 
+          available for subsequent parallel regions can be adjusted automatically 
+          by the run-time environment. If called with .FALSE., dynamic adjustment 
+          is disabled. For C/C++, if dynamic_threads evaluates to non-zero, then 
+          the mechanism is enabled, otherwise it is disabled. The OMP_SET_DYNAMIC 
+          subroutine has precedence over the OMP_DYNAMIC environment variable. 
+          The default setting is implementation dependent. Must be called from 
+          a serial section of the program.&nbsp;&nbsp;&nbsp;
+ 
+
+    <!-- ******************** Pragma call starts ************************* -->
+
+    
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+
+         <font color="#FF00FF">OMP_GET_DYNAMIC</font></p>
+
+        <p><b>LOGICAL FUNCTION OMP_GET_DYNAMIC</b>() <br>
+          <b>int omp_get_dynamic</b>(<i>void</i>) </p>
+
+        <p><i><font color="#FF9900">returns .TRUE. if dynamic threads is enabled, 
+          .FALSE. otherwise.</font> </i></p>
+
+        <p align="justify">This function is used to determine if dynamic thread adjustment is 
+          enabled or not. For Fortran, this function returns .TRUE. if dynamic 
+          thread adjustment is enabled, and .FALSE. otherwise. For C/C++, non-zero will 
+          be returned if dynamic thread adjustment is enabled, and zero otherwise. </p>
+
+    <!-- *************************8 Pragma call starts ************************* -->
+
+
+     
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+         <font color="#FF00FF">
+            OMP_SET_NESTED</font> 
+        </p>
+        <p><b>SUBROUTINE OMP_SET_NESTED</b>(<i>scalar_logical_expression</i>) 
+          <br>
+          <b>void omp_set_nested</b>(<i>int nested</i>) </p>
+
+        <p><i><font color="#FF9900">enable or disable nested parallelism.</font> </i></p>
+
+        <p align="justify">
+          This subroutine is used to enable or disable nested parallelism. For 
+          Fortran, calling this function with .FALSE. will disable nested parallelism, and calling with .TRUE. will enable it. For C/C++, if nested 
+          evaluates to non-zero, nested parallelism is enabled; otherwise it is disabled. The default is for nested parallelism to be disabled. This 
+          call has precedence over the OMP_NESTED environment variable.&nbsp;&nbsp;&nbsp;
+
+
+    <!-- ************************ Pragma call starts **************************** -->
+
+  
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+          <font color="#FF00FF">OMP_GET_NESTED</font> 
+        </p>
+
+        <p><b>LOGICAL FUNCTION OMP_GET_NESTED</b> <br>
+          <b>void omp_get_nested </b></p>
+
+        <p><i><font color="#FF9900">returns .TRUE. if nested parallelism is enabled, 
+          .FALSE. otherwise.</font> </i></p>
+
+        <p align="justify">This function/subroutine is used to determine if nested parallelism 
+          is enabled or not. For Fortran, this function returns .TRUE. if nested
+        parallelism is enabled, and .FALSE. otherwise. For C/C++, non-zero will 
+          be returned if nested parallelism is enabled, and zero otherwise.</p>
+
+    <!-- ******************** Pragma call starts *************** -->
+
+
+    
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+         <font color="#FF00FF">OMP_INIT_LOCK</font> 
+        </p>
+
+        <p><b>SUBROUTINE OMP_INIT_LOCK</b>(<i>var</i>) <br>
+          <b>void omp_init_lock</b>(<i>omp_lock_t *lock</i>) <br>
+          <b>void omp_nest_init_lock</b>(<i>omp_nest_lock_t *lock</i>) </p>
+
+        <p><i><font color="#FF9900">allocate and initialise the lock</font> </i></p>
+
+        <p align="justify">This subroutine / function initializes a lock associated with the lock 
+          variable. The initial state is unlocked.</p>
+
+
+
+    <!-- *********************** Pragma call starts ********************* -->
+
+ 
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+         <font color="#FF00FF">OMP_DESTROY_LOCK</font> 
+        </p>
+
+        <p><b>SUBROUTINE OMP_DESTROY_LOCK</b>(<i>var</i>) <br>
+          <b>void omp_destroy_lock</b>(<i>omp_lock_t *lock</i>) <br>
+          <b>void omp_destroy_nest_lock</b>(<i>omp_nest_lock_t *lock</i>) </p>
+
+        <p><i><font color="#FF9900">deallocate and free the lock</font> </i></p>
+
+        <p align="justify">This subroutine/function disassociates the given lock variable from 
+          any locks. It is illegal to call this routine with a lock variable that 
+          is not initialized.</p>
+
+
+    <!-- *********************  Pragma call starts ************************** -->
+
+  
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20">  
+        <font color="#FF00FF">OMP_SET_LOCK</font> 
+        </p>
+        <p><b>SUBROUTINE OMP_SET_LOCK</b>(<i>var</i>) <br>
+          <b>void omp_set_lock</b>(<i>omp_lock_t *lock</i>) <br>
+          <b>void omp_set_nest__lock</b>(<i>omp_nest_lock_t *lock</i>) </p>
+
+        <p><i><font color="#FF9900">acquire the lock, waiting until it becomes 
+          available, if necessary.</font> </i></p>
+
+        <p align="justify">This subroutine forces the executing thread to wait until the specified 
+          lock is available. A thread is granted ownership of a lock when it becomes 
+          available. It is illegal to call this routine with a lock variable that 
+          is not initialized.</p>
+
+
+    <!-- *********************** Pragma call starts *********************** -->
+
+
+   
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+           <font color="#FF00FF">OMP_UNSET_LOCK</font> </p>
+
+        <b>SUBROUTINE OMP_UNSET_LOCK</b>(<i>var</i>) <br>
+        <b>void omp_unset_lock</b>(<i>omp_lock_t *lock</i>) <br>
+        <b>void omp_unset_nest__lock</b>(<i>omp_nest_lock_t *lock</i>) 
+        <p><i><font color="#FF9900">release the lock, resuming a waiting thread 
+          if any.</font></i> 
+
+        <p align="justify">This subroutine releases the lock from the executing subroutine. It 
+          is illegal to call this routine with a lock variable that is not initialized. </p>
+
+    <!-- ***************************  Pragma call starts ************************* -->
+
+   
+        <p><img src="./openmp-images/bullet-type.gif" width="20" height="20"> 
+          <font color="#FF00FF">OMP_TEST_LOCK</font></p>
+        <p><b>SUBROUTINE OMP_TEST_LOCK</b>(<i>var</i>) <br>
+          <b>void omp_test_lock</b>(<i>omp_lock_t *lock</i>) <br>
+          <b>void omp_test_nest__lock</b>(<i>omp_nest_lock_t *lock</i>) </p>
+        <p><i><font color="#FF9900">try to acquire the lock, return success or 
+          failure</font> </i> </p>
+
+        <p align="justify">This subroutine attempts to set a lock, but does not block if the lock 
+          is unavailable. For Fortran, .TRUE. is returned if the lock was set 
+          successfully, otherwise .FALSE. is returned. For C/C++, non-zero is 
+          returned if the lock was set successfully, otherwise zero is returned. 
+          It is illegal to call this routine with a lock variable that is not 
+          initialized.</P>
+
+<!--********************  Basic OpenMP Library Calls Ends ************************ -->
+<DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</TBODY> 
+</TABLE> 
+</p>
+<!-- **********************  Basic OpenMP Pragmas  ends  ************************* -->
+
+
+
+<! -- ******************* OpenMP Compilation and Execution Starts  ******************** -->
+
+<a name="openmp-compile-exe-prog"> </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Compilation & Execution of OpenMP Programs </b> </font> </font></DIV>
+ </TD> </TR> 
+
+<TR>
+<TD>
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+
+    <!-- ***************** Using command line ************************ -->
+       <BR> 
+        <p><B><font color="#FF0011"> 
+          Using command 
+            line arguments &nbsp;</font> 
+          </b> </p>
+
+          <P align="justify">The compilation and execution details of an OpenMP program may vary 
+            on different architectures. Depending upon your language preference 
+          (C or Fortran), use
+          following command line options. To compile the program : <br><br>
+        
+
+Using GNU Fortran or C compiler
+
+ 
+          <P align="center"><I><FONT COLOR="#FF00FF"># gfortran&nbsp;  -o&nbsp; &lt;Name of executable> &lt;program name>&nbsp;-fopenmp&nbsp;</FONT>&nbsp;</I>  </p>
+
+
+    <P align="center">
+      <i><font COLOR="#FF00FF"># gcc&nbsp; -o&nbsp; &lt;Name of 
+      executable&gt;&nbsp;&lt;program name&gt;&nbsp; -fopenmp&nbsp;</font>&nbsp;</i> </p>
+
+
+
+  Using Intel Fortran or C compiler</p>
+
+ 
+          <P align="center"><I><FONT COLOR="#FF00FF"># ifort&nbsp;-o&nbsp; &lt;Name of executable>&nbsp;&lt;program name>&nbsp; -openmp&nbsp;</FONT>&nbsp;</I>  </p>
+
+
+    <P align="center">
+      <i><font COLOR="#FF00FF"># icc&nbsp;  -o&nbsp; &lt;Name of 
+      executable&gt;&nbsp;&lt;program name&gt;&nbsp; -openmp&nbsp;</font>&nbsp;</i> </p><br>
+
+
+
+  Using PGI Fortran or C compiler</p>
+
+ 
+          <P align="center"><I><FONT COLOR="#FF00FF"># pgf90 &nbsp;  -o&nbsp; &lt;Name of executable>&nbsp; &lt;program name>&nbsp; &lt;program name>&nbsp;-mp&nbsp;</FONT>&nbsp;</I>  </p>
+
+
+    <P align="center">
+      <i><font COLOR="#FF00FF"># pgcc &nbsp;  -o&nbsp; &lt;Name of 
+      executable&gt;&nbsp;&lt;program name&gt;&nbsp; -mp&nbsp;</font>&nbsp;</i> </p><br>
+
+
+
+
+  Using PATH Scale Fortran or C compiler</p>
+
+ 
+          <P align="center"><I><FONT COLOR="#FF00FF"># pathf95 &nbsp;  -o&nbsp; &lt;Name of executable>&nbsp;&lt;program name>&nbsp; -openmp&nbsp;</FONT>&nbsp;</I>  </p>
+
+
+    <P align="center">
+      <i><font COLOR="#FF00FF"># pathcc &nbsp;  -o&nbsp; &lt;Name of 
+      executable&gt;&nbsp;&lt;program name&gt;&nbsp; -openmp&nbsp;</font>&nbsp;</i> </p><br>
+
+
+
+     <P>For example to compile a simple <I> Hello World </i> program user can type&nbsp; on the command line </p>
+
+        <P align="center">
+         <I><FONT COLOR="#FF00FF">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # ifort&nbsp; -o HelloWorld omp-hello-world.f (Fortran codes) &nbsp;
+          -openmp&nbsp;</FONT></I> </p>
+
+           <P align="center"><I><FONT COLOR="#FF00FF"># icc&nbsp;  -o HelloWorld omp-hello-world.c (C codes)&nbsp;&nbsp;
+          -openmp&nbsp;</FONT></I> <BR>
+            &nbsp; </p>
+
+   
+        </center> 
+
+
+
+
+
+
+
+
+<p><b> Compiler Flags </b> </p>
+<p> The syntax of the command to compile the OpenMP programs :
+<br><br><font face="verdena" color="#FF00FF">
+<center> # &lt;compiler&gt; -o &lt;executable-name&gt; &lt;program-name&gt; &lt;compiler-flag&gt; -lm </center></font><br>
+
+
+
+<font face="verdena" >
+
+Use the following compiler flag to "turn On " OpenMP compilation </font><br><br>
+
+
+
+<!-- ****************** table for loop ************************* -->
+    <TABLE cellPadding=3 width="300" bgcolor=#EBDDE2 border=1>
+     <tbody>
+      <font face="verdena" size="2">
+         <tr><B>
+           <td><b> Compiler</b> </td>
+           <td><b> Compiler flag</b> </td>
+         </B></tr>
+         <tr>
+           <td> GNU </td>
+           <td> -fopenmp </td> 
+	</tr>
+         <tr>
+           <td> PGI </td>
+           <td> -mp </td> 
+	</tr>
+        <tr>
+           <td> Path Scale </td>
+           <td> -openmp </td> 
+	</tr>
+
+         <tr>
+           <td> IBM </td>
+           <td> -qsmp=omp </td> 
+	</tr>
+
+            <tr>
+           <td> Intel</td>
+           <td> -openmp </td> 
+	</tr>
+	<tr>
+           <td> Sun </td>
+           <td> -xopenmp</td> 
+	</tr>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- *********************** table for loop  ************************** -->
+
+
+
+
+
+
+  <!-- ******************** Using Makefile  *************************** -->
+          <DIV ALIGN=right>
+            <p align="left"><font color="#FF0011"><a name="Makefile"></a> <b> Using Makefile&nbsp; </b>
+            </font></p></DIV>
+
+
+
+          <P align="justify">For more control over the process of compiling and linking programs 
+            for OpenMP, you should use a 'Makefile'. 
+            You may also use some commands in Makefile particularly for programs 
+            contained in a large number of files.&nbsp; The user has to specify 
+            the names of the program and appropriate compiler options/paths to link some of the 
+            libraries required for OpenMP in the Makefile  </p>
+
+
+          <P align="left">To compile and link an OpenMP program in C or Fortran, you can use 
+            the command&nbsp;&nbsp;  </p>
+
+          <P align="center"> <font color="#FF9900"><i>make </i></font>  </p> 
+          <P align="center"> <font color="#FF9900"><i>Note: If the Makefile has 
+          some extension like Makefile_C&nbsp; then user is required to type
+          </i></font>  </p>
+
+          <P align="center"> <font color="#FF9900"><i>make -f Makefile_C 
+          (instead of simply typing make)</i></font><CENTER>  </p>
+
+	<P align="left">  
+     User can refer the Makefile 
+    <a href="./openmp-codes-f-lang/Makefile_Fortran"><I>Makefile_Fortran</I></a> for Fortran openmp programs and the Makefile 
+  	<a href="./openmp-codes-c-lang/Makefile_C"><I>Makefile_C</I></a>&nbsp; for C openmp programs compilation .&nbsp; 
+
+
+
+      
+        </center>
+
+
+
+    <!-- *********************** Execution of OpenMP Program  *********************** -->
+
+<P align="left"><font color="#FF0011"><a name="Execution"></a>
+         <b>  Execution of program</font></b><P align="left">To execute an OpenMP program 
+          user has to set the OMP_NUM_THREADS Environment variable depending on 
+            user shell like </b> </p>
+
+          <P align="center">
+              <I><FONT COLOR="#FF9900">setenv OMP_NUM_THREADS&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 
+              (if using csh/tcsh)&nbsp;</FONT></I>  </p>
+
+     
+          <P align="center"> <I><FONT COLOR="#FF9900">export OMP_NUM_THREADS=3&nbsp;&nbsp;&nbsp; 
+          (if using bash/ksh)&nbsp;</FONT></I> </p>
+
+       <P align="left">then simply type the name of executable 
+            on command line.&nbsp; </p>
+
+          <P align="center"><I><FONT COLOR="#FF9900">
+           ./&lt;&nbsp;Name of executable&gt;</FONT></I> </p>
+
+          <P align="left">For example to execute a simple <i>Hello World</i> program user can 
+            type&nbsp; </p>
+
+             <P align="center"> <I><FONT COLOR="#FF9900">./HelloWorld</FONT></I>&nbsp; </p>
+
+          <P align="justify">The output should look similar to below using three threads. The 
+            actual number of threads and order of output may vary.&nbsp;  </p>
+
+          <P align="left"><FONT FACE="Courier New,Courier"><FONT COLOR="#FF9900">Hello World 
+            from thread = 0&nbsp;</FONT></FONT> <BR> 
+
+            <FONT FACE="Courier New,Courier"><FONT COLOR="#FF9900">Number of threads = 3&nbsp;</FONT></FONT> <BR>
+
+            <FONT FACE="Courier New,Courier"><FONT COLOR="#FF9900">Hello World 
+            from thread = 2&nbsp;</FONT></FONT> <BR>
+
+            <FONT FACE="Courier New,Courier"><FONT COLOR="#FF9900">Hello World 
+            from thread = 1&nbsp;</FONT></FONT> <BR><BR>
+
+      </p><BR>
+          
+<font color="red">Note :</font> To Execute the above Programs on MPI based Cluster of Multi-Core processors,
+ the user should submit job to scheduler. To submit the job use the following command.
+          
+                  
+
+         <FONT COLOR="#FF9900"><I></I><font face="Courier New,Courier"><br><br>bsub -q &lt;queue-name&gt; [options] ./&lt;executablename&gt;</font></FONT>  </p>
+       
+For Example :
+
+  <P align="center">&nbsp;<FONT COLOR="#FF9900"></I><font face="Courier New,Courier">bsub -q normal -ext"SULRM[nodes=1]" -o omp-hello-world.out -e omp-hello-world.err ./omp-hello-world </font></FONT>  </p>
+       
+Note: Refer man pages of "bsub" for options.
+
+
+ 
+<DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<! -- ******************* OpenMP Compilation and Execution Ends  ******************** -->
+ 
+
+
+<!-- ********************** OpenMP Tools Starts **************************** -->
+
+
+<a name="openmp-tools">  </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"  Color="black" face= "verdana">
+     <B>  OpenMP tools </b> </font> 
+  </DIV> 
+  </TD> 
+ </TR> 
+
+
+<TR>
+<TD>
+ <P align="justify"> <FONT face="verdana" size=2, class="content" >
+<BR> <BR>
+
+       Performance is a critical issue in Multi core system. Performance
+       evaluation and visualization is an important and useful technique that  helps the user to 
+      understand  the behavior of a parallel program <and
+       improve complex parallel performance phenomena. <BR> <BR>
+
+      There are many problems associated with debugging an OpenMP program.
+       It's difficult to understand the flow of your program's execution, and
+       accessing variables is complicated because of the nature of private and
+       shared variables in OpenMP program.<BR> <BR>
+
+       There are many tools available for debugging and performance
+       visualization of an OpenMP programs. Some of them are listed below :
+     </p>
+         
+       <p align="left"><b>KAP/Pro Toolset for OpenMP</b></p>
+         
+        <p align="left">The KAP/Pro Toolset consists of </p>
+        
+        <ul>
+           <li>
+              <p align="left"><b>Guide </b>: OpenMP compiler, </li>
+           <li>
+              <p align="left"><b>Guide View </b>: A performance analysis tool for
+              OpenMP </li>
+            <li>
+              <p align="left"><b>Assure </b>: OpenMP Analyzer, a tool for verifying the correctness 
+             of OpenMP applications. </li>
+        </ul>
+
+        <p align="justify"><font color="black">
+
+           The Guide OpenMP Compiler provides OpenMP directive-based 
+          application development for Fortran, C, and C++. The GuideView Performance 
+          Analyzer presents a window into the performance details of a program's 
+          parallel execution. The Assure OpenMP Analyzer is the industry's first 
+          parallel correctness verifier.</font>
+        </p>
+
+
+        <p align="left">They are available at </p>
+
+        <p align="left"> 
+         <a href=" http://developer.intel.com/software/products/threadtool.htm" >
+       <font color = "blue">  http://developer.intel.com/software/products/threadtool.htm </font> </a>
+       </p>
+
+ 
+        <p align="justify"> <font color="black"> With the KAP/Pro tools and OpenMP, the application developer 
+          can easily and quickly develop, debug and tune programs for Windows 
+          NT and Unix. The Toolset provides a major advance in usability over 
+          alternative systems.</font>
+        </p>
+
+
+          <p align="left">  <b> Sun's Compilers and Tools for OpenMP</b></p>
+
+
+          <p align="left">Sun Microsystems <a href="http://wwws.sun.com/software/sundev/suncc/index.html">
+            <font color = "blue"> Sun Studio 12, Compiler Collection, Fortran 95, C, and C++ </font> </a> &amp; 
+              
+           </p>
+
+
+            <p align="left"><b>Performance</b> <b>Analyzers</b> : Paraver from 
+            the Paraver project
+            </p>
+
+            <p align="left"><b>Paraver</b> is a flexible performance 
+              visualization and analysis tool that can be used to analyze MPI, 
+             OpenMP, MPI+OpenMP, Java, Hardware counters profile etc..
+           </p>
+
+            <p align="left"><a href="http://www.cepba.upc.es/paraver/">
+           <font color = "blue"> http://www.cepba.upc.es/paraver/  </font> </a>
+           </p>
+
+            <p align="left"><b>TotalView</b></p>
+
+            <p align="justify"><font color="black">TotalView is the debugger for 
+            complex code. TotalView is far and away the best choice for those 
+            working with parallelism or large amounts of data because it scales 
+            transparently to support the big code and data sets running on 
+            anywhere from one to thousands of processes or processors. It's been 
+            proven in the world's toughest debugging environments.</font>
+          </p>
+          
+          <p align="left">It is available at</p>
+
+            <p align="left"><a href="http://www.etnus.com/Products/TotalView">
+            <font color = "blue">   http://www.etnus.com/Products/TotalView </font> </a>
+           </p>
+
+            <p align="justify"><font color="black">TotalView's support for 
+              OpenMP debugging lets you view the state of your program as if it 
+              were a non-parallel code. With TotalView, you can</font> 
+            </p>
+
+            <ul>
+              <li>
+              <p align="left">Debug threaded codes whether OpenMP directives are 
+              present or not.</li>
+              <li>
+              <p align="left">Understanding OpenMP code execution</li>
+              <li>
+              <p align="left">Access private and shared variables as well as 
+              thread private variables. </li>
+           </ul>
+        <DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>    
+    </td>
+     </tr>
+ </tbody>
+</table>
+
+
+<!-- **************** List Of Tools Avilable in OpenMP  Ends ******************** -->
+
+
+<!-- *********************** OpenMP FAQs start ************************* -->
+
+<a name="openmp-faqs"> </a>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"  Color="black" face= "verdana">
+      <B> OpenMP  FAQs  </b>  </font> 
+  </DIV> 
+  </TD> 
+ </TR> 
+
+
+<TR>
+<TD>
+ <P align="justify"> <FONT face="verdana" size=2, class="content" >
+<BR> <BR>
+
+         <P align="left">The OpenMP FAQ (frequently asked questions) list is available at&nbsp;
+              <I><FONT FACE="Courier New,Courier">
+          <A HREF="http://www.openmp.org">
+           <font color = "blue"> http://www.openmp.org</A> </font></I>
+         </p>
+
+         <p align="left">Q1: 
+
+   <a href="#Q1">What is OpenMP?</a><br>
+   Q2:
+
+   <a href="#Q2">What does the MP in OpenMP stand for?</a><br>
+  Q3:
+
+  <a href="#Q3">How does OpenMP compare with ... ?</a><br>
+  Q4:
+
+   <a href="#Q4">What languages does OpenMP work with?</a><br>
+    Q5:
+
+   <a href="#Q5">Is OpenMP scalable?</a><br>&nbsp;
+</p>
+
+<p align="left">
+
+   <a name="Q1"><b>Q1:</a> What is OpenMP?</b><br>
+   <font color="black"><span style="mso-bidi-font-weight: normal">
+   <b>A1:</b>OpenMP is a specification for a set of
+      compiler directives, library routines, and environment variables that can
+      be used to specify shared memory parallelism in Fortran and C/C++
+      programs.</span></font>
+</p>
+
+
+  <p align="justify">
+    <a name="Q2"><b>Q2:</a>
+     What does the MP in OpenMP stand for?</b><br>
+       <b>A2:</b>
+       The MP in OpenMP stands for Multi Processing.
+      We provide Open specifications for Multi Processing via collaborative work
+      with interested parties from the hardware and software industry,
+      government and academia. </p>
+
+    <p align="justify">
+     <a name="Q3"><b>Q3:</a>How does OpenMP compare with ... ?</b><br>
+     <b>A3:</b>
+      MPI? Message passing has
+      become accepted as a portable style of parallel programming, but has
+      several significant weaknesses that limit its effectiveness and
+      scalability. Message-passing in general is difficult to program and
+      doesn't support incremental parallelization of an existing sequential
+      program. Message-passing was initially defined for client/server
+      applications running across a network, and so includes costly semantics
+      (including message queuing and selection and the assumption of wholly
+      separate memories) that are often not required by tightly-coded scientific
+      applications running on modern scalable systems with globally addressable
+      and cache coherent distributed memories. </p>
+
+
+      <p align="justify">HPF? HPF has never really gained wide acceptance among
+      parallel application developers or hardware vendors. Some applications
+      written in HPF perform well, but others find that limitations resulting
+      from the HPF language itself or the compiler implementations lead to
+      disappointing performance. HPF's focus on data parallelism has also
+      limited its appeal. </p>
+
+      <p align="justify">Pthreads? Pthreads have never been targeted toward the
+      technical/HPC market. This is reflected in the minimal Fortran support,
+      and its lack of support for data parallelism. Even for C applications,
+      pthreads requires programming at a level lower than most technical
+      developers would prefer. </p>
+
+      <p align="justify">FORALL loops? FORALL loops are not rich or general
+      enough to use as a complete parallel programming model. Their focus on
+      loops and the rule that subroutines called by those loops can't have side
+      effects effectively limit their scalability. FORALL loops are useful for
+      providing information to automatic parallelizing compilers and
+      preprocessors. </p>
+
+      <p align="justify">BSP or LINDA or SISAL
+      or...? There are lots of parallel programming languages being researched
+      or prototyped in the industry. These may be targeted towards a specific
+      architecture, or focused on exploring one key requirement. If you have a
+      question about how OpenMP compares with a specific language or model, we
+      can help you figure this out.</p>
+
+
+         <p align="justify">
+       <a name="Q4"><b>Q4:b</a>
+       What languages does OpenMP work with?</b><br>
+       <b>A4:</b>
+          OpenMP is designed for Fortran, C and C++ to
+      support the language that the underlying compiler supports. The OpenMP
+      specification does not introduce any constructs that require specific
+      Fortran 90 or C++ features. OpenMP cannot be supported by compilers that
+      do not support one of Fortran 77, Fortran 90, ANSI 89 C or ANSI C++.
+     </p>
+
+     <p align="justify">
+      <a name="Q5"><b>Q5:</a>
+      Is OpenMP scalable?</b>
+     <br>
+        <b>A5:</b>
+          OpenMP can deliver scalability for
+      applications using shared - memory parallel programming. Significant effort
+      was spent to ensure that OpenMP can be used for scalable applications.
+      Ultimately, scalability is a property of the application and the
+      algorithms used. The parallel programming language can only support the
+      scalability by providing constructs that simplify the specification of
+      the parallelism and can be implemented with low overhead by compiler
+      vendors. OpenMP certainly delivers these kinds of constructs.
+       </p>
+              
+<BR>
+	<DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>							
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- *********************** OpenMP FAQs Ends ************************* -->
+
+
+<!-- ************************ OpenMP Example Progams Fortran starts  ********************** -->
+
+
+<br><br>
+<a name="openmp-example-prog-fortran"> </a>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+   <DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+      <B> OpenMP Example Program in Fortran language   </b> </font></DIV> 
+</TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+ <P align=justify><span class="content">
+  <br>
+  
+The simple OpenMP program is "<I>Hello World</I>" program, in which 
+  each thread simply prints the message "<I>Hello&nbsp; World</I>". In this example, 
+  thread with identifier 0, 1, 2, ......, p-1 will print the message "<i>Hello 
+  World</i>".<br> <BR>
+
+  The simple OpenMP program in Fortran language in which each thread
+prints "<I>Hello World</I>"&nbsp; message is explained below. We describe 
+the features of the entire program and describe the program in details.&nbsp; <BR> <BR> 
+
+
+ First 
+few lines of the program explain variable definitions, and constants. Followed 
+by these declarations, OpenMP library calls are declared in the program. 
+The library call OMP_GET_THREAD_NUM returns <I>ThreadID</I> the identifier 
+of each thread and the library call OMP_GET_NUM_THREADS returns 
+<I>NoofThreads</I> the total number of threads that the user has started 
+for this program. <br> <br>
+
+
+  The following fragment of the program exzxplains these features. The description 
+    of program is as follows:  <br> <BR>
+</span> </p>
+
+  <P align="jusitfy"><FONT FACE="Courier New,Courier">program HelloWorld</FONT>
+<BR><FONT FACE="Courier New,Courier">integer NoofThreads, ThreadID, OMP_GET_NUM_THREADS</FONT>
+<BR><FONT FACE="Courier New,Courier">integer OMP_GET_THREAD_NUM</FONT> </p>
+
+ <P align=justify><span class="content">
+  <I>ThreadID</I> is the identifier of each thread and <I>NoofThreads</I> is 
+    total number of threads used in the program. <I>ThreadID</I> and <I>NoofThreads</I> 
+    are private to each thread. Each thread obtains its own identifier and then 
+    prints the message "<I>Hello World</I>" in parallel. <br> <BR>
+
+  Starting of OpenMP PARALLEL directive and PRIVATE clause. The PARALLEL
+  directive pair specifies that the enclosed block of program, referred to as
+  PARALLEL region, be executed in parallel by multiple threads. The PRIVATE
+  clause is typically used to identify variables that are used as scratch
+  storage in the program segment within the parallel region. It provides a list
+  of variables and specifies that each thread have a private copy of those
+  variables for the duration of the parallel region. <BR> </span. </p>
+
+
+<P align="left"><font color = "red" FACE="Courier New,Courier">C$OMP&nbsp; PARALLEL PRIVATE(NoofThreads,
+ThreadID)</FONT> </p>
+
+<P align="left">Each thread gets its own copies of variables, identifier and prints
+it. </p>
+
+
+<P align="left"><font color = "red" FACE="Courier New,Courier">ThreadID = OMP_GET_THREAD_NUM()</FONT>
+<BR><font color = "red" FACE="Courier New,Courier">print *, 'Hello World from thread
+= ', ThreadID</FONT> </p>
+
+
+  <P align="left">Only master thraed obtains <I>NoofThreads</I> the total number of threads used 
+    in program and prints it.  </p>
+
+  <P align="left"><font color = "red" FACE="Courier New,Courier">if (ThreadID .EQ. 0) then</FONT>
+<BR><font color = "red" FACE="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NoofThreads = OMP_GET_NUM_THREADS()</FONT> 
+
+<BR><font color = "red" FACE="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+print *, 'Number of threads = ', NoofThreads</FONT>
+<BR><font color = "red" FACE="Courier New,Courier">&nbsp;end if</FONT> </p>
+
+
+  <P align="left">Ending of OpenMP PARALLEL directive. All threads join master thread and disband. </p>
+  <P align="left"><font color = "red" FACE="Courier New,Courier">C$OMP&nbsp; END PARALLEL</FONT> </p>
+
+
+<P align="left"><font color = "red" FACE="Courier New,Courier">stop</FONT> <BR>
+
+<BR><font color = "red" FACE="Courier New,Courier">end</FONT> </p>
+
+
+</font>
+<DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</TD> 
+</TR> 
+</TBODY> 
+</TABLE> 
+
+
+<!-- ************************** OpenMP Fortran Program Ends   **************************** -->
+
+
+<!-- ************************ OpenMP Example Progams C Program starts ******************** -->
+
+
+<a name="openmp-c-prog"> </a>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+   <DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+     <B> OpenMP Example Program in C language  </b> </font> </font></DIV> 
+</TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+  <br>
+ 
+  The simple OpenMP program in C language in which each thread
+   prints "<I>Hello World</I>"&nbsp; message is as below. </p>
+
+
+  <p align="left"><font color = "red" face="Courier New,Courier">#include &lt;stdio.h&gt;<br>
+  #include &lt;omp.h&gt;</font></p>
+  
+  <p align="left"><font color = "red" face="Courier New,Courier">/* Main Program */<br>
+  main()<br>
+  {</font></p>
+
+  <font color = "red" face="Courier New,Courier"><blockquote>
+    <p align="left">int ThreadID, NoofThreads; </p>
+
+  <p align="left"><br>
+  /* OpenMP Parallel Directive */</font>
+  </p>
+
+  <p align="left"><font color = "red" face="Courier New,Courier">#pragma omp parallel
+  private(ThreadID)<br> </p>
+
+  {<br>
+
+   
+    <p align="left">
+    ThreadID = omp_get_thread_num();<br>
+    printf(&quot;\nHello World is being printed by the thread id %d\n&quot;,
+    ThreadID);</font>  </p>
+
+
+    <p align="left"><font color = "red" face="Courier New,Courier">/* Master Thread Has Its ThreadID 0 */</font></p>
+
+    <p align="left"><font color = "red" face="Courier New,Courier">if (ThreadID == 0) <BR>
+      {<br> </p>
+
+
+        <blockquote>
+           <p align="left">printf(&quot;\nMaster prints Numof threads \n&quot;);<br>
+            NoofThreads = omp_get_num_threads();<br>
+           printf(&quot;Total number of threads are %d\n&quot;, NoofThreads);
+          
+      </blockquote>
+
+              <p align="left">}</p>			 
+    </blockquote>
+   } </font> <BR>
+  
+
+  <font color ="red"> }  </font>
+
+  <DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</font>
+
+</TD> 
+</TR> 
+</TBODY> 
+</TABLE> 
+
+
+<!-- ************************ OpenMP Example Progams C Program Ends ******************** -->
+
+
+<!-- ************************ OpenMP 3.0  starts ******************** -->
+
+
+<a name="openmp-3.0"> </a>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+   <DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+     <B> OpenMP 3.0 Overview  </b> </font> </DIV> 
+</TD> </TR> 
+
+<BR> <BR> 
+
+<TR>
+<TD>
+
+ <P align=justify> <span class="content">
+  <br>
+ 
+ OpenMP is a shared-memory model and all OpenMP threads have access to memory. Each thread is allowed to have its own temporary view of the memory and other threads cannot access this memory. This is usually called threadprivate memory. The major changes between the OpenMP API Version 2.5 specification and the OpenMP API Version 3.0 specification are given below. For more details, please visit the below web sites. <BR> <BR>
+
+
+<div>
+<P align = "justify"> <font size="2"  Color="red" face= "verdana">
+     <B> OpenMP 3.0 Important Features   </b> </font>  </p> </DIV> 
+
+
+ An Overview of OpenMP 3.0 Ruud van der Pas, Sun Microsystems 
+
+ Tasking in OpenMP 3.0 Alejandro Duran, Barcelona Supercomputing Center 
+
+ Sun Studio OpenMP Compilers and Tools Ruud van der Pas, Sun Microsystems
+
+ OpenMP And Performance Ruud van der Pas, Sun Microsystems 
+
+<!-- ********** OpenMP 3.0 Summary points starts **** -->
+
+<ul>
+<li>
+<p align = "justify"> <span Class = "content">
+The concept of tasks has been added to the OpenMP execution model. The
+
+ <font color = "black" face="Courier New,Courier" size ="2"> task </font>  construct has been added, which provides a mechanism for creating tasks explicitly. 
+The <font color = "black" face="Courier New,Courier" size ="2"> taskwait </font> construct has been 
+added, which causes a task to wait for all its child tasks to complete.
+</span> </p>
+</li>
+
+<li>
+<p align = "justify"> <span Class = "content">
+The OpenMP memory model now covers atomicity of memory accesses. The description of the behavior of volatile in terms of flush was removed. </p> </span>
+</li>
+
+<li>
+<p align = "justify"> <span Class = "content">
+OpenMP Version 2.5, supports  a single copy of the 
+<font color = "black" face="Courier New,Courier" size ="2">
+nest-var, dyn-var, nthreads-var and run-sched-var  </font>
+
+internal control variables (<B> ICVs </b> ) for the whole program. In Version 3.0,
+ there is one copy of these <B> ICVs </b>  per task As a result, the 
+<font color = "black" face="Courier New,Courier" size ="2">
+omp_set_num_threads, omp_set_nested and omp_set_dynamic  </font> runtime library routines now have specified effects when called from inside a parallel region. </p> </span>
+
+</li>
+
+
+<li><p align = "justify"> <span Class = "content">
+The definition of active parallel region has been changed: in Version 3.0 a parallel region is 
+active if it is executed by a team consisting of more than one thread.</span> </p> 
+</li>
+
+<li><p align = "justify"> <span Class = "content">
+The rules for determining the number of threads used in a parallel region have 
+ been modified. </span> </p></li>
+
+<li><p align = "justify"> <span Class = "content">
+In  Version 3.0,  the assignment of iterations to threads in a 
+
+<font color = "black" face="Courier New,Courier" size ="2"> loop construct  </font>, 
+<font color = "black" face="Courier New,Courier" size ="2"> collapase clause  </font>, 
+and <font color = "black" face="Courier New,Courier" size ="2"> the shceudle kinf auto  </font> have 
+been  modified and modified  with addtitional features.</span> </p>
+
+</li>
+
+<li><p align = "justify"> <span Class = "content">
+In viresion 3.0, Fortran arrays with 
+
+<font color = "black" face="Courier New,Courier" size ="2"> 
+data-sharing attributes, private, firstprivate, lastprivate, reduction, copyin </font> and 
+
+<font color = "black" face="Courier New,Courier" size ="2"> copyprivate </font> clause 
+have been included as well as modified. 
+</li> </span> </p>
+
+<li><p align = "justify"> <span Class = "content">
+The thread-limit-var <B> ICV </b> has been added, which controls the maximium number of threads
+ participating in the OpenMP program </li> </span> </p>
+ 
+<li><p align = "justify"> <span Class = "content">
+The stacksize-var <B> ICV  </b> has been added, which controls the stack size for threads that
+ the OpenMP implementation creates.  </span> </p>
+</li>
+
+<li><p align = "justify"> <span Class = "content">
+The runtime libraries 
+ 
+
+<font color = "black" face="Courier New,Courier" size ="2"> 
+
+omp_get_level,omp_get_ancestor_thread_num, omp_get_team_size, omp_get_active_level  
+
+</font>
+
+
+have been added for
+
+
+<font color = "black" face="Courier New,Courier" size ="2"> 
+ parallel </font>
+ region work.  </span> </p>
+
+</li>
+
+</ul>
+
+
+<div>
+<P align = "justify"> 
+<font size="2"  Color="red" face= "verdana">
+     <B> OpenMP 3.0 Example Programs   </b>
+</font> 
+</p> 
+</dIV> 
+
+<p align = "justify"> <span class = "content">
+Examples programs on matrix-matrix multiplication algorithms, Gauss seidel Method, 
+ Conjugate Gradient Method for solution of linear system of equations, Producer Consumer 
+example programs  and Solution of Poisson Equations (Partial differential equations)  are 
+tested using various OpenMP 3.0 pragmas on multi-core processors. </content> </p>
+
+
+<div>
+<P align = "justify"> 
+<font size="2"  Color="red" face= "verdana">
+     <B> OpenMP 3.0 Web Sites & Presentations   </b>
+</font> 
+</p> 
+</dIV> 
+
+
+<a href = "https://iwomp.zih.tu-dresden.de/program.html"> <font color ="blue">
+International Workshop on OpenMP  (<B> IWOMP 2009 </b> )</font> </a>   June 3 - 5, Dresden University of Technology,
+Dresden, Germany <BR> <BR>
+
+<a href =" http://www.openmp.org">  <font color = "blue"> http://www.openmp.org/forum </font>
+</a> The OpenMP Forum
+  <BR> <BR>
+
+
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/2.Overview_OpenMP.pdf"> <font color ="blue">
+ An Overview of OpenMP 3.0 </font> </a> Ruud Van der Pas, Sun Mircosystems, USA,   International Workshop on OpenMP  (<B> IWOMP 2009</b>), June 3 - 5, 2009, Dresden University of Technology,
+ Dresden, Germany  <BR> <BR>
+
+
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/omp30-tasks.pdf"> <font color ="blue">
+Tasking in OpenMP </font> </a> Alejandro Duran, Barcelona Supercomputing Center,
+International Workshop on  OpenMP  (<B> IWOMP 2009</b>), June 3 - 5, 2009, Dresden University of Technology, 
+Dresden, Germany  <BR> <BR>
+
+
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/omp30-tasks.pdf"> <font color ="blue">
+OpenMP Support in Sun Studio </font> </a>
+Ruud van der Pas, Senior Staff Engineer, Sun Microsystems, Menlo Park, CA, USA
+International Workshop on  OpenMP  (<B> IWOMP 2009</b>), June 3 - 5, 2009 Dresden University of Technology, 
+Dresden, Germany  <BR> <BR>
+
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/4.OpenMP_and_Performance.pdf"> 
+<font color ="blue"> Getting OpenMP Up to Speed </font> </a>
+Ruud van der Pas, Senior Staff Engineer, Sun Microsystems, Menlo Park, CA, USA
+International Workshop on  OpenMP  (<B> IWOMP 2009</b>), June 3 - 5, 2009, Dresden University of Technology, 
+ Dresden, Germany  <BR> <BR>
+
+<a href =" http://www.openmp.org/wp/" > 
+<font color = "blue"> The OpenMP News - The OpenMP API Specification for Parallel Programming :     http://www.openmp.org/wp/</font> </a> 
+ <BR> <BR>
+
+
+
+<a href = "http://www.thinkingparallel.com/2007/10/23/openmp-30-public-draft-available/">
+<font color = "blue" > OpenMP 3.0 Public Draft Available </font>  </a> Thinking Parallel, Michael Suess  <BR> <BR>
+
+
+<a href = "http://www.compunity.org/futures/Mark_SC06BOF.pdf"> <font color ="blue">
+ OpenMP 3.0 Overview  </font> </a> Mark Bull EPCC, University of Edinburgh and OpenMPARB <BR> <BR>
+
+
+
+<!-- ********** OpenMP 3.0 Summary points Ends **** -->
+
+  <DIV ALIGN=right>
+         <A HREF="openmp-overview.html"> <IMG SRC="./openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</font>
+
+</TD> 
+</TR> 
+</TBODY> 
+</TABLE> 
+
+ <!-- ************************ OpenMP 3.0  Ends ******************** -->
+
+</TD>
+</TR>
+
+ <!--  content of web page End here  --> 
+ 
+      
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        <TD class=footertext align=center>
+           <A href="http://www.iitm.ac.in" target=_blank><FONT color=red size=2>
+           Indian Institute of technology Madras </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

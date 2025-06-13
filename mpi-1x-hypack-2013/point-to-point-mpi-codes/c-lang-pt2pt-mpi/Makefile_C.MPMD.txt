@@ -1,0 +1,52 @@
+#
+# *******************************************************************
+#
+#	C-DAC Tech Workshop : hyPACK-2013
+#                October 15-18, 2013
+#
+# *******************************************************************
+#   Created          : August  2013
+#
+# *******************************************************************
+#
+ALL: default
+##### User configurable options #####
+
+SHELL       = /bin/sh
+ARCH        = 
+COMM        = 
+
+MPIR_HOME   = /opt/intel/impi/3.1
+
+CC          = $(MPIR_HOME)/bin/mpicc
+CLINKER     = $(CC)
+
+
+MPILIB     = 
+LIBS       = -lsocket -lnsl -lm
+
+OPTFLAGS    = 
+
+### End User configurable options ###
+
+EXECS	  =  master_c slave_c 
+
+#OBJECTS1 = mv_mult_master_sschd.o
+#OBJECTS2 = mv_mult_slave_sschd.o
+#OBJECTS1 = mm_mult_master_sschd.o
+#OBJECTS2 = mm_mult_slave_sschd.o
+
+default: $(EXECS)
+
+master_c: $(OBJECTS1) 
+	$(CLINKER) $(OPTFLAGS) -o master_c $(OBJECTS1) $(LIBS) $(MPILIB)
+slave_c:  $(OBJECTS2) 
+	$(CLINKER) $(OPTFLAGS) -o slave_c $(OBJECTS2) $(LIBS) $(MPILIB)
+
+
+.c.o:
+	$(CC) -c $*.c
+
+
+clean : 
+	$(RM) *.o core master_c slave_c 

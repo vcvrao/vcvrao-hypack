@@ -1,0 +1,2170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from Octobe6 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of Hyderabad, Hyderabad.
+  The hyPACK-2013 is designed four days for HPC GPU Cluster for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,
+ C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css"    type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css"    type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript 
+       src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013
+               src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B> Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B>Cluster -Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>Cluster- Power &amp; Perf.</B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+    
+           <A class=menul
+	      href="./../hypack13-mode03-coprocessor-lab-overview.html">
+              &#149; Mode-3 Coprocessors  </A>   
+      
+	   <A class=menul
+	       href="./../hypack13-mode03-coprocessor-arch-software.html">
+               &#149; Arch. Software </A>
+            
+	   <A class=menul  
+              href="./../hypack13-mode03-coprocessor-compiler-vect.html">
+              &#149; Compiler &amp;  Vect.</A>
+
+	   <A class=menul  
+              href="./../hypack13-mode03-coprocessor-prog-env.html">
+              &#149; Prog. Env. </A>
+
+                <!-- ** -->
+                <A class=menulslct
+                 href="./../hypack13-mode03-coprocessor-benchmarks.html">
+                 &#149; Benchmarks </A>
+                <!-- ** -->
+              
+            <A class=menul
+	     href="./../hypack13-mode03-coprocessor-power-perf.html">
+             &#149; Power-Perf. </A>
+
+           <A class=menul 
+	     href="./../index.html">
+             &#149; Home</A>
+
+	
+<!-- ****************** left section code for about link End  here ************* -->
+	
+         <BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+         </DIV><BR><BR><BR><BR></TD>
+                
+
+ <TD class=rightctnt> 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left> <font size="3"  Color="black" face= "Arial">
+    <B>  Prog.on Multi-Core Processors with Intel Xeon Phi Coprocessors </b> </font> 
+ </DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+   <P align=justify><span class="content"> 
+
+   Example   programs using 
+   compiler pragmas, directives, function calls, and environment variables, Compilation and execution
+   of OpenMP programs, programs numerical and non-numerical computations
+   are discussed. </font>
+  </span> </p>
+
+
+   <p align = "left" >
+  <a name ="xeon-phi-matrix-matrix-multiply-mkl-01"> </a>
+
+
+ <font size="2" face="Arial" color="red"> <B> Matrix - Matrix Multiply using MKL Lib. on
+One Core of Xeon-Phi (NATIVE) </b>  </font> 
+ 
+ <BR> <BR>
+
+<!-- **************** Example 1 *********** -->
+    <a href="#coproc-matrixmatrix-multiply-mkl-one-core-example-01">
+   <font size="2" face="Arial" color="blue"> <B> Example 1 : Matrix - Matrix Multiply using MKL -Single Core of Xeon-Phi  (NATIVE)  </b>  </font> </a> 
+  
+<blockquote> 
+
+    <a href="#coproc-matrixmatrix-multiply-obj">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#coproc-matrixmatrix-multiply-inp">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;   &nbsp;  
+
+   <a href="#coproc-matrixmatrix-multiply-des">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#coproc-matrixmatrix-multiply-out">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+
+   <a href="#coproc-matrixmatrix-multiply-sum">
+   <font size="2" face="Arial " color="blue"> <B> Summary  </b>  </font> </a> 
+  </font> </a> 
+  <BR> <BR>
+
+<a href= "#coproc-matrixmatrix-multiply-compile-execution-mkl-threads-ex-01">
+  <font size="2" face="Arial" color="blue"> <B> 
+   Compilation &amp; Execution :  OpenMP Scale to 60 Cores </b>  </font> </a>
+
+</blockquote>
+
+
+<!-- **************** Example 2 *********** -->
+  <a href="#coproc-matrixmatrix-multiply-mkl-many-cores-example-02">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 2 : Matrix - Matrix Multiply Using MKL Lib. - All cores of Xeon-Phi (NATIVE) </b>  </font> </a>
+    
+<BR> <BR>
+
+<!-- **************** Example 3 *********** -->
+    <a href="#coproc-matrixmatrix-multiply-mkl-one-core-example-03">
+   <font size="2" face="Arial" color="blue"> <B> Example 3 : Matrix - Matrix Multiply using MKL-Single Core of Xeon-Phi (OFFLOAD)  </b>  </font> </a> 
+  
+<BR> <BR>
+
+
+<!-- **************** Example 4 *********** -->
+  <a href="#coproc-matrixmatrix-multiply-mkl-many-cores-example-04">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 4 : Matrix - Matrix Multiply Using MKL Lib. - All cores of Xeon-Phi (OFFLOAD) </b>  </font> </a>
+    
+<BR> <BR>
+
+<HR>
+
+
+<!-- **************** References  *********** -->
+
+  <a href="../reference-hypack-2013/reference-overview-hypack13-mode03-xeon-phi-coprocessor.html"> 
+  <font size="2" face="Arial" color="blue"><B> References </b>  </font> </a> 
+<BR>
+
+</tbody>
+</td>
+</tr>
+</table>
+
+<!-- ********************** Sub-title topics Ends here *************************** -->
+<BR>
+<HR> 
+ <!-- ***************** Example 1 : Matrix-Matrix  Multiply Prog Starts **************** -->
+  <a name ="coproc-matrixmatrix-multiply-mkl-one-core-example-01"> </a>
+  <table border="0"  height="6">
+  <tbody>
+   <TR ALIGN=LEFT> 
+   <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example.  1  :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+   Matrix - Matrix Multiply (SGEMM /DGEMM ) using MKL Lib. - Single Core of Xeon-Phi  (NATIVE) </b> </font>
+          <BR> 
+        
+<!-- ************download start here ***************--> 
+
+        (Download source code : <BR>
+
+ <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/matrix-matrix-multiply-dgemm-mkl-single-core-native.c">
+         <I><FONT COLOR = "blue"><B> DGEMM (Single Core): matrix-matrix-multiply-dgemm-mkl-single-core-native.c</b></FONT></I></a>;
+ <BR> 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/env_var_setup_mkl_native.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_sequential_native.sh</b></FONT></I></a></font>;
+   &nbsp; &nbsp; 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/Makefile_MKL_SingleCore.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_MKL_SingleCore</b> </FONT>  </I> </a>)</font>
+</p>
+
+<!-- ************download End  here ***************--> 
+  </TD> 
+  </TR> 
+
+  <TR>
+  <TD>
+   <UL>    
+            <a name ="coproc-matrixmatrix-multiply-obj"> </a>
+            <font face="Verdana" size="2">
+            <LI> <B>Objective</B></LI>
+
+           <p align = "justiyf">
+            Extract performance in G/flops for Matrix Matrix Multiply 
+            and analyze the performance on Intel Xeon-Phi coprocessor  </p>
+
+            <a name ="coproc-matrixmatrix-multiply-des"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align = "justify"> 
+
+       Two input matrices are filled with real data and matrix-matrix Multiply is performed 
+       using compiler &amp; vectorization features, OpenMP, OpenMP thread affinity, &amp; 
+       KMP_thread affinity.  
+       It is assumed that both matrices are of same size.  This example demonstrates the use of
+       Intel MKL Library &quot; SGEMM &quot;  to obtain  the maximum achievable performance on one  Core of Intel Xeon-Phi.
+       The SGEMM routine is executed in an iterative fashion and the average G/flops are calculated 
+ 
+    <a name ="coproc-matrixmatrix-multiply-inp"> </a>
+       <LI> <B>Input</B></LI>
+        <P>Number of threads, Size of  the Matrices. </p>
+
+    <a name ="coproc-matrixmatrix-multiply-obj"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> 
+              Prints the time taken for the computation and G/flops and the number of threads.</p>
+        </UL>
+
+    <DIV ALIGN=right>
+         <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+ </TR>
+ </TD>
+ 
+<TR> 
+<TD>
+
+<p align = "justify">
+   The  important steps of the implementation of algoirthm are given below.
+</TD> 
+</TR>
+
+ <!-- *********** Intel Xeon-Phi Prog. Summary Starts  ******** -->
+ 
+<TR>
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> The key specifications of Intel Xeon Coprocessor </b> </font> </font></DIV>
+
+</TD> 
+</tr>
+
+<Tr>
+<td>
+
+<!-- ****************** table for loop ************************* -->
+    <TABLE align = "center" cellPadding=3 width="450"  border=1>
+     <tbody>
+     <P align="justify"><span class = "content">
+         <tr><B>
+           <td><b> Specification </b> </td>
+           <td><b> Feature</b> </td>
+         </B></tr>
+         <tr>
+           <td> Clock Frequency </td>
+           <td> 1.091 GHz</td> 
+	</tr>
+         <tr>
+           <td> No. of Cores </td>
+           <td> 61 </td> 
+	</tr>
+        <tr>
+           <td> Memory Size / Type </td>
+           <td> 8 GB/GDDR5 </td> 
+	</tr>
+
+         <tr>
+           <td> Memory Speed  </td>
+           <td> 5.5 GT/sec</td> 
+	</tr>
+
+            <tr>
+           <td> Peak DP/SP </td>
+           <td> 1.065/2.130 teraFLOP/s</td> 
+	</tr>
+	<tr>
+           <td> Peak Memory Bandwdith </td>
+           <td> 352 GB/s</td> 
+	</tr>
+       </span> </p> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- *********************** table for loop  ************************** -->
+
+    <DIV ALIGN=right>
+         <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<table border="0"  height="6">
+<tbody>
+
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>  Intel Xeon Coprocessor : Intel's Compiler Offload</b> </font> </DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+ <P align="justify">
+ <font face="Verdana" size="2">  <B>Intel compiler's offload pragmas :  </B>  
+
+  On Xeon-host, the code to transfer the data to the Xeon Phi coprocessor  is automatically 
+created by the Intel complier.  When the code is written using  OpenMP pragmas to C/CC+ Fortran 
+code,  the Intel complier encounters an offload pragma, it generates code for both the coprocessor
+ and the host.
+The programmer responsibility is to include appropriate offload pragmas by adding data clauses.
+ Details can be found under &quot; Offload Using a Pragma&quot; in the Intel compiler documentation as 
+given in the references. </font> </p>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+ <TR>
+ <TD>
+             <!-- *************** table for loop  ***************** -->
+      <TABLE align = center cellPadding=3  bgcolor=#EBDDE2 border=1>
+      <tbody>
+         <tr>
+         <td>
+<font face="Verdana" color ="black" size="2">
+// Matrix-matrix multiply using MKL Library<BR> <BR>
+#ifndef MIC_DEV <BR>
+#define MIC_DEV 0 <BR>
+#endif <BR> <BR>
+
+#include &lt;stdio.h&gt; <BR>
+#include &lt;stdlib.h&gt;<BR>
+#include &lt;omp.h&gt; <BR>
+#include &lt;mkl.h&gt;<BR>
+#include &lt;math.h&gt;<BR> <BR>
+
+
+<font color ="red"> <B>void doMultply</B></font>(int size,
+    &nbsp; &nbsp; &nbsp;  float (*restrict Matrix_A)[size], \ <BR>
+    &nbsp; &nbsp; &nbsp;  float (*restrict Matrix_B)[size], \ <BR>
+  &nbsp; &nbsp; &nbsp;    float (*restrict Matrix_C)[size], nIter, float *error) <BR> 
+{ <BR>
+
+ &nbsp; &nbsp; float (*restrict MatrixTranspose_A)[size] = malloc(sizeof(float)*size*size);   <BR>
+ &nbsp; &nbsp; float (*restrict MatrixTranspose_B)[size] = malloc(sizeof(float)*size*size);   <BR>
+ &nbsp; &nbsp; float (*restrict MatrixTranspose_C)[size] = malloc(sizeof(float)*size*size);   <BR>
+ &nbsp; &nbsp; float (*restrict Cgemm)[size] = malloc(sizeof(float)*size*size);  <BR> <BR>
+
+ &nbsp; &nbsp; // transpose to get best sgemm performance <BR>
+
+  &nbsp; &nbsp; <font color ="red"> <B> #pragma omp parallel for  </b> </font>  <BR>
+  &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> (i = 0; i < size; i++) <BR>   
+  &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> (j = 0; j < size; j++) { <BR>  
+  
+           &nbsp; &nbsp; &nbsp; &nbsp;  MatrixTranspose_A[i][j] = Matrix_A[j][i]; <BR>     
+           &nbsp; &nbsp; &nbsp; &nbsp;  MatrixTranspose_B[i][j] = Matrix_B[j][i];   <BR>
+      &nbsp; &nbsp;   } <BR>  <BR>  
+
+
+&nbsp; &nbsp; float alpha = 1.0f, beta = 0.0f;  /* Scaling factors */   <BR>
+
+         &nbsp; &nbsp; // warm up  <BR> <BR>
+   &nbsp; &nbsp;sgemm("N", "N", &size, &size, &size, &alpha,     \ <BR>
+   &nbsp; &nbsp; &nbsp; &nbsp;      (float *)MatrixTranspose_A, &size,  \  <BR>
+   &nbsp; &nbsp; &nbsp; &nbsp;      (float *)MatrixTranspose_B, &size, &beta,  \  <BR>
+   &nbsp; &nbsp; &nbsp; &nbsp;      (float *)MatrixTranspose_C, &size);  <BR> <BR>
+
+
+  &nbsp; &nbsp;  double mklStartTime = dsecnd();   <BR> <BR>
+
+     &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> ( i=0; i < nIter; i++) <BR>   
+
+      &nbsp; &nbsp; &nbsp;   sgemm("N", "N", &size, &size, &size, &alpha,     \ <BR>
+   &nbsp; &nbsp; &nbsp; &nbsp;         (float *)MatrixTranspose_A, &size,  \  <BR>
+   &nbsp; &nbsp; &nbsp; &nbsp;       (float *)MatrixTranspose_B, &size, &beta,  \  <BR>
+   &nbsp; &nbsp;  &nbsp; &nbsp;      (float *)MatrixTranspose_C, &size);  <BR> <BR>
+
+   &nbsp; &nbsp;        double mklEndTime = dsecnd();     <BR> <BR>
+
+    &nbsp; &nbsp;         // transpose in Cgemm to calculate error  <BR>
+
+    &nbsp; &nbsp;        <font color ="red"> <B> #pragma omp parallel for </b> </font> <BR>
+           &nbsp; &nbsp; <font color ="red"> <B> for </b> </font>  ( i=0; i < size; i++)  <BR>   
+            &nbsp; &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> ( j=0; j < size; j++)    <BR>
+       &nbsp; &nbsp;&nbsp; &nbsp;   Cgemm[i][j] = MatrixTranspose_C[j][i]; <BR> <BR>  
+                  
+       &nbsp; &nbsp;&nbsp;  free(MatrixTranspose_A); <BR>
+       &nbsp; &nbsp;&nbsp;  free(MatrixTranspose_B); <BR>
+       &nbsp; &nbsp;&nbsp;  free(MatrixTranspose_C); <BR>
+       
+     
+} <BR>
+   
+
+/* .................... Main Program ............ */ <BR>
+int main(int argc, char* argv[]) <BR>
+{ <BR>
+&nbsp; &nbsp;  if(argc != 4) <BR>
+&nbsp; &nbsp;  { <BR>
+&nbsp; &nbsp; &nbsp;  fprintf(stderr,"Use: %s size nThreads nIter \n",argv[0]); <BR>
+&nbsp; &nbsp; &nbsp; return -1; <BR>
+&nbsp; &nbsp;   } <BR> 
+
+ &nbsp; &nbsp; int i, j, k; <BR>
+ &nbsp; &nbsp; int <font color ="red"><B>size </b></font>     = atoi(argv[1]);  <BR>
+ &nbsp; &nbsp; int <font color ="red"><B>nThreads </b></font> = atoi(argv[2]);  <BR>
+ &nbsp; &nbsp; int <font color ="red"><B>nIter   </b></font>  = atoi(argv[3]);   <BR> <BR>
+
+ &nbsp; &nbsp; <font color ="red"><B>omp_set_num_threads</b></font>(nThreads);  <BR> <BR>
+
+ &nbsp; &nbsp; float (*restrict Matrix_A)[size] = malloc(sizeof(float)*size*size);<BR>
+ &nbsp; &nbsp; float (*restrict Matrix_B)[size] = malloc(sizeof(float)*size*size);<BR>
+ &nbsp; &nbsp; float (*restrict Matrix_C)[size] = malloc(sizeof(float)*size*size);<BR> <BR> <BR>
+
+ &nbsp; &nbsp; // Initialize matrices <BR>
+ &nbsp; &nbsp; / Fill the A and B arrays <BR> 
+ &nbsp; &nbsp;  #pragma omp parallel for default(none) shared(Matrix_A, Matrix_B,size) \ <BR>
+        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   private(i,j,k)  <BR> 
+ &nbsp; &nbsp;<font color ="red"> <B> for </b> </font> ( i = 0; i < size; i++)  {<BR> 
+    &nbsp; &nbsp;  &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> ( j = 0; j < size; j++) { <BR>   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;   Matrix_A[i][j] = (float)i + j;  <BR>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Matrix_B[i][j] = (float)i - j; <BR>
+    &nbsp; &nbsp; &nbsp; &nbsp;  } <BR>
+  &nbsp; &nbsp; } <BR> <BR>
+ 
+&nbsp; &nbsp;// warm up <BR>
+&nbsp; &nbsp; <font color ="red"> <B>doMultiply</b> </font>(size, Matrix_A, Matrix_B, Matrix_C); <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; double aveTime, minTime=1e6, maxTime=0.; <BR> 
+&nbsp; &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> (i=0; i < nIter; i++) { <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double startTime = dsecnd(); <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font color ="red"> <B>doMultiply</b> </font>(size, Matrix_A, Matrix_B, Matrix_C); <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double endTime = dsecnd(); <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double runtime = endTime - startTime; <BR> <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; maxTime = (maxTime> runtime)?maxTime:runtime; <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minTime = (minTime< runtime)?minTime:runtime; <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; aveTime += runtime; <BR>
+&nbsp; &nbsp;} <BR>
+&nbsp; &nbsp; aveTime /= nIter; <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; <font color ="red"> <B>#pragma </B> </font> omp parallel  <BR>
+&nbsp; &nbsp; &nbsp; <font color ="red"> <B>#pragma omp master </b> </font>  <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; printf("%s nThreads %d matrix %d %d runtime %g GFlop/s %g", \ <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  argv[0], omp_get_num_threads(), size, size,  \ <BR>
+&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;   aveTime, 2e-9*size*size*size/aveTime);  <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; <font color ="red"> <B>#pragma omp barrier </b> </font>   <BR> <BR>
+
+&nbsp; &nbsp; printf("\n");   <BR> <BR>
+&nbsp; &nbsp; free(Matrix_A); <BR>
+&nbsp; &nbsp; free(Matrix_B); <BR>
+&nbsp; &nbsp; free(Matrix_C);<BR> <BR>
+&nbsp; &nbsp; return 0; <BR> 
+}<BR> 
+</font>
+    
+       </td>
+      </tr>
+   </tbody>
+  </table>
+  
+  </TD>
+  </TR>
+
+<TR> <TD> <Br> </TD> </TR>
+
+<TR>
+<TD>
+
+<a name = "coproc-matrixmatrix-multiply-compile-execution-mkl-threads-01"> </a>
+
+ <P align=justify> <font face="Verdana" size="2"> 
+
+ <!-- ***************** Using command line ************************ -->
+ 
+ <font color="#FF0011"> 
+       <B>  Using command  line arguments  </b> </font> 
+    </font> </p>
+
+<P align ="justify"><font face="Verdana" size="2"> 
+The compilation and execution of a program  to run natively on an Intel Xeon Phi 
+coprocessor as a MKL Multi-threaded application with the Intel C Compiler (icc) command shown 
+in below. 
+
+</font> </p>
+
+<!-- ************* Commented ******* -->
+
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Compile to run natively on the Xeon Phi : </b> </font> <BR>
+
+<P align="center"> <font face="Verdana" size="2"> 
+
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mkl&nbsp;  -O3&nbsp;  -mmic&nbsp;   -openmp&nbsp;   
+        /opt/intel/lib/mic-Wno-unknown-pragma&nbsp;  -std=c99&nbsp; -vec-report3&nbsp;<BR>
+     &lt;program name&gt;  -O&nbsp; 
+       &lt;Name of executable&gt; </b>
+</FONT>&nbsp;</I>  
+</font> </p>
+
+<!-- ********* Commented ******* -->
+
+<!-- ************* Commented ******* -->
+<BR> <BR>
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Compile to run on host Xeon - OpenMP : </b> </font> <BR>
+
+<P align="center"> <font face="Verdana" size="2"> 
+
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mkl&nbsp;   -O3&nbsp;  -no-offload&nbsp;   -openmp&nbsp;   
+        /opt/intel/lib/mic-Wno-unknown-pragma&nbsp;  -std=c99&nbsp; -vec-report3&nbsp;  <BR>
+     &lt;program name&gt;  -O&nbsp; 
+       &lt;Name of executable&gt; </b>
+</FONT>&nbsp;</I>  
+</font> </p>
+
+<!-- ********* Commented ******* -->
+
+<!-- ************* Commented ******* -->
+<BR> <BR>
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Compile to run for offload mode  : </b> </font> <BR>
+
+<P align="center"> <font face="Verdana" size="2"> 
+
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mkl&nbsp; -O3&nbsp;  -offload-build&nbsp;   -openmp&nbsp;   
+        /opt/intel/lib/mic-Wno-unknown-pragma&nbsp;  -std=c99&nbsp; -vec-report3&nbsp;  <BR>
+     &lt;program name&gt;  -O&nbsp; 
+       &lt;Name of executable&gt; </b>
+</FONT>&nbsp;</I>  
+</font> </p>
+
+<!-- ********* Commented ******* -->
+  
+  
+</td>
+</tr>
+
+<TR> <TD> <HR> </TD></TR>
+
+<TR>
+<TD>
+
+<P align="left">
+<font color="red"> <B> Script to run on Xeon Phi in Native Mode   : </b> </font></b>
+<BR> <BR>
+
+ <font face="Verdana" size="2">
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> MKL_MIC_ENABLE=0 <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> KMP_AFFINITY=
+         <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;granularity=thread,balanced&quot; </b> </font> <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> LD_LIBRARY_PATH=/tmp <BR>
+ &nbsp; nThreads=240  <BR>
+ &nbsp; i=1  <BR>
+ &nbsp; &nbsp; while[ $i -lt 1000 ]  <BR>
+ &nbsp; &nbsp; do <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>echo</b></font>-n 
+          <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;mic&quot;  </b> </font> <BR>
+ &nbsp; &nbsp; &nbsp; ./openmp_matrix_matrix_multiply 1000 $i  10  <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>let</b></font>i++  <BR> 
+
+ &nbsp;  done <BR>
+</FONT> </P>
+
+<!-- ******* Compile & Execute : Compiler to Vectorize OpenMP Scale to 60 Cores Starts ******* -->
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+
+<!-- **************  Compile & Execute : Example 1  Ends **************** -->
+
+<!-- **************   Example 2  Starts **************** -->
+<TR>
+<TD>
+
+<a name = "coproc-matrixmatrix-multiply-mkl-many-cores-example-02"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<HR> 
+   <TR ALIGN=LEFT> 
+   <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example.  2  (NATIVE) :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+   Matrix - Matrix Multiply (DGEMM) using MKL Lib. Many cores of Xeon-Phi    </b> </font>
+   <BR>
+   <BR> 
+        
+<!-- ************download start here ***************--> 
+
+        (Download source code : <BR>
+
+   <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/matrix-matrix-multiply-sgemm-mkl-native.c">
+         <I><FONT COLOR = "blue"><B> SGEMM (Many Core) : matrix-matrix-multiply-sgemm-mkl-native.c</b></FONT></I></a>;
+  <BR> 
+    <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/matrix-matrix-multiply-dgemm-mkl-native.c">
+         <I><FONT COLOR = "blue"><B> DGEMM  (Many Core) : matrix-matrix-multiply-dgemm-mkl-native.c</b></FONT></I></a>;
+ <BR> <BR>
+
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/env_var_setup_mkl_native.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_sequential_native.sh</b></FONT></I></a></font>;
+   &nbsp; &nbsp; 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_native/Makefile_MKL.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_MKL </b> </FONT>  </I> </a>)</font>
+</p>
+
+<!-- ************download End  here ***************--> 
+  </TD> 
+  </TR>
+
+
+   </TD>
+   </TR>
+<TR>
+<TD>
+
+<blockquote> 
+
+    <a href="#coproc-matrixmatrix-multiply-mkl-summary">
+   <font size="2" face="Arial" color="blue"> <B> Summary  </b>  </font> </a> 
+   &nbsp; &nbsp;       
+
+   <a href="#coproc-matrixmatrix-multiply-mkl-auto-offload">
+   <font size="2" face="Arial" color="blue"> <B> Automatic Offload</b>  </font> </a> 
+    &nbsp; &nbsp;     
+
+   <a href="#coproc-matrixmatrix-multiply-mkl-comp-assist-offload">
+   <font size="2" face="Arial" color="blue"> <B> Compiler Assisted Offload </b>  </font> </a> 
+   &nbsp;   &nbsp;
+
+ <a href="#coproc-matrixmatrix-multiply-mkl-native-offload">
+   <font size="2" face="Arial" color="blue"> <B> Native </b>  </font> </a> 
+ <BR> <BR>  
+  
+  <a href="#coproc-matrixmatrix-multiply-mkl-performance">
+   <font size="2" face="Arial" color="blue"> <B> Performance  with  MKL </b>  </font> </a> 
+&nbsp; &nbsp;    
+
+  <a href="#coproc-matrixmatrix-multiply-mkl-performance-native">
+   <font size="2" face="Arial" color="blue"> <B> Perf. with MKL NATIVE </b>  </font> </a> 
+<BR> <BR>  
+
+  <a href="#coproc-matrixmatrix-multiply-mkl-performance-automatic-offload">
+   <font size="2" face="Arial" color="blue"> <B> Perf. with MKL - auotmatic offload  </b>  </font> </a> 
+&nbsp; &nbsp;
+
+  <a href="#coproc-matrixmatrix-multiply-mkl-performance-comp-asst-load">
+   <font size="2" face="Arial" color="blue"> <B> Perf. with Compiler Assisted load </b>  </font> </a> 
+<BR> <BR>
+  <a href="#coproc-matrixmatrix-multiply-mkl-functions">
+   <font size="2" face="Arial" color="blue"> <B>  MKL Lib. Support Functions &amp; Env. Variables </b> 
+&nbsp;&nbsp;
+<a href= "#coproc-matrixmatrix-multiply-compile-execution-mkl-threads-ex-02">
+   <font size="2" face="Arial" color="blue"> <B>  Compilation Execution  </b> 
+  
+</font> </a> 
+  
+</TD>
+</TR>  
+
+
+<TR>
+<TD>
+<p align = "justify">  <font face="Verdana" size="2"> 
+<B> Summary of Intel MKL Library : </B>
+Intel MKL is structured to support multiple compilers and interfaces, 
+different OpenMP* implementations, both serial and multiple threads, and a wide range of processors. Conceptually Intel MKL can be divided into
+distinct parts to support different interfaces, threading models, and core computations:>
+</font> </p> 
+
+<ul>
+<li> <font face="Verdana" size="2"> 1. Interface Layer </font> </li>
+<li> <font face="Verdana" size="2"> 2. Threading Layer </font> </li>
+<li> <font face="Verdana" size="2"> 3. Computational Layer </font> </li>
+</ul>
+
+<p align = "justify">  <font face="Verdana" size="2"> 
+Intel  Math Kernel Library (Intel  MKL) offers two sets of libraries to support Intel Many Integrated Core (Intel MIC) Architecture: (1) For the host computer based on Intel 64 or compatible architecture and running a Linux operating system, (2) For Intel MIC Architecture coprocessors.You can control how Intel MKL offloads computations to Intel MIC Architecture coprocessors. Either you can offload computations automatically or use Compiler Assisted Offload: </p>
+
+<a name = "coproc-matrixmatrix-multiply-mkl-auto-offload"> </a>
+<p align = "justify">  <font face="Verdana" size="2"> 
+ <B> Automatic Offload : </b>  On Linux OS running on Intel 64 or compatible architecture systems, Automatic Offload automatically detects the presence of Intel MIC Architecture coprocessors and automatically offloads computations that may benefit from additional computational resources available. This usage model allows you to call Intel MKL routines as you would normally with minimal changes to your program. The only change needed to enable Automatic Offload is either the setting of an environment variable or a single function call. <B> For details see Automatic Offload. </b>
+
+
+</font> </p>
+
+To use Intel MKL, three programming models such as 
+<ul>
+ <li> Native </li>
+ <li> Offload Automatic </li>
+ <li> Offload, Compiler Assisted </li>
+</ul>
+
+are utilized and these are different interfaces to the same underlying performance 
+capabilities of the processors and coprocessors. As per needs of your application,
+these multiple models can easily be utilized in the same program. These MKL libraries
+may assist the developer to use the performance capabilities of Xeon host processors 
+and Xeon Coprocessors.  The proper choice of &quot; native &quot; or &quot; offload &quot;
+depends upon the workload, persistant of data, PCIe data transfer, support of SSE 
+instructions in the program and choice of algorithm with data parallel comptuations.
+
+<p align = "justify">  <font face="Verdana" size="2"> 
+
+Automatic Offload provides performance improvements with fewer changes to the code than Compiler
+Assisted Offload. If you are executing a function on the host CPU, Intel MKL running in the Automatic Offload
+mode may offload part of the computations to one or multiple Intel MIC Architecture coprocessors without
+you explicitly offloading computations. By default, Intel MKL determines the best division of the work
+between the host CPU and Intel MIC Architecture coprocessors. However, you can specify a custom work
+division.  </font> </p>
+
+<p align = "justify">  <font face="Verdana" size="2"> 
+
+To enable Automatic Offload and control the division of work, use environment variables or support
+functions. <B> See the Intel MKL Reference Manualfor detailed descriptions of the support functions. </b> 
+</font> </p>
+
+
+<a name = "coproc-matrixmatrix-multiply-mkl-comp-assist-offload"> </a>
+ <p align = "justify">  <font face="Verdana" size="2"> 
+
+<B> Compiler Assisted Offload : </b>
+This usage model enables you to use the Intel compiler and its offload pragma support 
+to manage the
+functions and data offloaded to a coprocessor. Within an offload region, you should 
+specify both the input
+and output data for the Intel MKL functions to be offloaded. After linking with the
+ Intel MKL libraries for
+Intel MIC Architecture, the compiler provided run-time libraries transfer the functions 
+along with their
+data to an Intel MIC Architecture coprocessor to carry out the computations. 
+For details see Compiler
+Assisted Offload.
+</font> </p>  
+
+<a name = "coproc-matrixmatrix-multiply-mkl-native-offload"> </a>
+<p align = "justify">  <font face="Verdana" size="2"> 
+<B> Native : </B> In addition to offloading computations to Intel MIC Architecture coprocessors, you can call Intel MKL
+functions from an application that runs natively on a coprocessor. Native execution occurs when an
+application runs entirely on Intel MIC Architecture. Native mode is a fast way to make an existing application
+run on Intel MIC Architecture with minimal changes to the source code. For more information, see Running
+Intel MKL on Intel MIC Architecture Coprocessors in Native Mode.
+Intel MKL functionality offers different levels of support for Intel MIC Architecture coprocessors:
+</font> </p> 
+ 
+<a name = "coproc-matrixmatrix-multiply-mkl-performance"> </a>
+<p align = "justify">  <font face="Verdana" size="2"> 
+  <B> Performance with Intel MKL : </b>  </font>
+
+You can control how Intel MKL offloads computations to Intel MIC Architecture coprocessors. Either you can offload computations automatically or use Compiler Assisted Offload: To obtain the best performance with Intel MKL, ensure the following data alignment in your source code: 
+</font> </p>
+
+<ul>
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+Align arrays on 128-byte boundaries. See Example of Data Alignmentfor how to do it.
+Make sure leading dimension values (n*element_size) of two-dimensional arrays are divisible by 128,
+where element_sizeis the size of an array element in bytes.
+</font> </p> </li>
+
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+For two-dimensional arrays, avoid leading dimension values divisible by 2048 bytes. For example, for a
+double-precision Needs for best performance with Intel MKL or for reproducible results from run to run of Intel MKL functions
+require alignment of data arrays. 
+</font> </p> </li>
+
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+To align an array on 128-byte boundaries, use mkl_malloc()in place of system provided memory
+</li>
+</ul>
+
+<a name ="coproc-matrixmatrix-multiply-mkl-performance-native"> </a>
+
+<p align = "justify">  <font face="Verdana" size="2"> 
+  <B> Performance with Intel MKL using NATIVE Mode </b>  </font>
+Usage of Intel MKL without offload  (NATIVE Mode) are given below.
+
+<ul>
+
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+Use all the threads to et best performance and it depends upon the problem
+size in the case of matrix-matrix multiplication. For example, on a 60-
+core Intel Xeon Phi Processor use the following command 
+<FONT SIZE = 2 COLOR="#FF00FF">  <B> OMP_NUM_THREADS =240 </b> </font>
+</li>
+
+ 
+<li><p align = "justify">  <font face="Verdana" size="2">
+Thread migration can be avoided using thread affinity.  For example, on a 60-
+core Intel Xeon Phi Processor use the following command <BR>
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> KMP_AFFINITY = explicit, granularity = fine, proclist = [1:239:1,0] </B> </font> 
+</font> </li>
+
+<li><p align = "justify">  <font face="Verdana" size="2">
+Enable huge-paging for memory allocation by using 
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> libhugetlbs.so </b> </font> or using the 
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> mmap() </b> </font> system call. 
+</font> </li>
+</ul>
+
+<a name ="coproc-matrixmatrix-multiply-mkl-performance-automatic-offload"> </a>
+
+<p align = "justify">  <font face="Verdana" size="2"> 
+  <B> Performance with Intel MKL using automatic offload </b>  </font>
+Usage of Intel MKL with automatic offload are given below.
+
+<ul>
+
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+Right size of matrix is required to get good performance and the overhead
+of transferring data should be as small as possible compare to the 
+computations performed. The best performance can be achieved when the
+matrices are square. The MKL environment variable 
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> MKL_MIC_MAX_MEMORY </b> </font>
+may be valuable to guide MKL on memory usage to suite your application 
+and system.
+</li>
+</ul>
+
+<a name ="coproc-matrixmatrix-multiply-mkl-performance-comp-asst-load"> </a>
+<p align = "justify">  <font face="Verdana" size="2"> 
+  <B> Use automatic and compiler-assisted offload together </b>  </font>
+
+
+<ul>
+
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+
+Intel MKL supports compiler-assisted offload.  That is, offload can be explicitly 
+specified using compiler pragams provided in Intel Compiler suite. Special care is
+required when automatic offload and compiler-assisted offloading  in one applicaiton 
+is used. Issues such as number of threads used to paralllelise computations, data 
+alignment and leading dimensions need to be addressed carefully from performance 
+point of view. <BR> <BR>
+
+Compiler assisted offload  gives more control over data movement and the data can 
+be re-used on the coprocessors, if required. This required some progra modifications,
+but the complier offers syntax for pragmas and directives hat limit the amount of 
+work to.  Using the thread affinity and larer pages may further assist the developer
+to use compiler assisted offload effectively.
+</font> </p>
+
+</ul>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<a name = "coproc-matrixmatrix-multiply-mkl-functions" > </a>
+
+<p align = "justify">  <font face="Verdana" size="2">
+  <font size="2" face="Arial" color="red"> 
+    <B>  MKL Functions and Environment Variables </b>  </font> 
+  
+<BR> <BR>
+<ul>
+<li><p align = "justify">  <font face="Verdana" size="2"> 
+Intel MKL inlcudes subroutines and functions optmized for the Intel Coprocessors
+and these include BLAS, LINPACK, Sparse BLAS, LAPACK, PARDISO, Iterative Sparse 
+Solvers, FFTs, & tools for solving partial differential equations etc.. The Intel 
+MKL supports ability to autonmatically offload from the xeon-host processors to 
+xeon coprocessors.
+</font> </p> </li>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+<p align = "justify">  <font face="Verdana" size="2"> 
+Various funtions to support Intel MKL on Xeon-Phi coprocessor are given in the 
+tabular form.
+</font> </p>
+
+<!-- ****************** table for loop ************************* -->
+    <TABLE align = "center" cellPadding=3 width="450"  border=1>
+     <tbody>
+     <P align="justify"><span class = "content">
+         <tr><B>
+           <td><b> Function <BR>
+                   (Environment Variable) </b> </td>
+           <td><b> Description </b> </td>
+         </B></tr>
+         <tr>
+           <td> mkl_mic_enable (MKL_MIC_ENABLE=1) </td>
+           <td>  Enables Automatic Offload mode</td> 
+	</tr>
+         <tr>
+           <td> mkl_mic_disable (MKL_MIC_ENABLE = 0)</td>
+           <td> Disables Automatic Offload mode </td> 
+	</tr>
+        <tr>
+           <td> (OFFLOAD_DEVICES) / Type </td>
+           <td> control offloading constructs from 
+                the  compiler as well as Intel MKL  </td> 
+	</tr>
+
+         <tr>
+           <td> mkl_mic_get_devices_count </td>
+           <td> Returns the number of Intel Xeon Phi 
+                coprocessors  on the system with called on processors </td> 
+	</tr>
+
+         <tr>
+           <td> mkl_mic_set_workdivision (MKL_MIC_WORKDIVISION or
+                MKL_MIC_<i>num</i>_WORKDIVISION or 
+                MKL_HOST_WORKDIVISION) </td>
+           <td> For computations in the Automatic Offload mode, sets
+                the fraction of the work for the coprocessors </td> 
+	</tr>
+
+             <tr>
+           <td> mkl_mic_get_workdivision (MKL_MIC_WORKDIVISION or
+                </td>
+           <td> For computations in the Automatic Offload mode, 
+                retrive the fraction of the work for the 
+                speficied target (processor or coprocessor) to do </td> 
+	</tr>
+
+          <tr>
+           <td> mkl_mic_set_max_memory (MKL_MIC_MAX_MEMORY or
+                MKL_MIC_<i>num</i>_MAX_MEMORY)  </td>
+           <td> Sets the maximum amount </td> 
+	</tr>of coprocessor memory reserved for Automatic Offload computations
+
+	<tr>
+           <td> mkl_mic_free_memory </td>
+           <td> Frees the coprocessor memory reserved for Automatic Offload 
+                computations. </td> 
+	</tr>
+
+
+	<tr>
+           <td> mkl_mic_set_offload_reprt 
+                (OFFLOAD_REPORT)</td>
+           <td> The intel compilers and the Inte MKL  share the offload 
+                report  capability and report will contain information
+              about offload from the both sources. </td> 
+	</tr>
+       </span> </p> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+
+
+<TR> <TD> <BR> <BR> </TD> </TR>
+
+<TR> <TD>
+
+The environment variables (C language) to use the Intel MKL calls on Intel Xeon Phi coprocessors are given below. <BR> <BR>
+
+ </TD> </TR>
+
+
+ <TR>
+ <TD>
+             <!-- *************** table for loop  ***************** -->
+ <TABLE align = center cellPadding=3  bgcolor=#EBDDE2 border=1>
+ <tbody>
+  <tr>
+  <td>
+<font face="Verdana" color ="black" size="2">
+#include mkl.h &quot; <BR>
+rc = mkl_mic_enable(); <BR>
+rc = mkl_mic_enable(); <BR>
+rc = mkl_mic_set_workdivisionn(MKL_MIC_DEFAULT_TARGET_TYPE, \ <Br>
+&nbsp; &nbsp; &nbsp; &nbsp; MKL_MIC_DEFAULT_TARGET_NUMER_,0,0); <BR>
+rc = mkl_mic_set_workdivision(MKL_TARGET_MIC,0, \ <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; MKL_MIC_AUTO_WORKDIVISION); <BR>
+rc = mkl_mic_set_workdivision(MKL_TARGET_MIC,0,&wd); <BR>
+rc = mkl_mic_set_offload_report(1); <BR>
+rc = mkl_mic_set_max_memory(MKL_TARGET_MIC,0, mem_size); <BR>
+rc = mkl_mic_free_memory(MKL_TARGET_MIC, 0);  <BR>
+rc = mkl_mic_disable();  <BR>  
+       </td>
+      </tr>
+   </tbody>
+  </table>
+  
+  </TD>
+  </TR>
+
+<TR> <TD>
+
+The environment variables (C language) for Intel MKL calls on Intel Xeon Phi coprocessor for 
+the bash shell  are shown below. <BR> <BR>
+
+ </TD> </TR>
+
+
+ <TR>
+ <TD>
+             <!-- *************** table for loop  ***************** -->
+ <TABLE align = center cellPadding=3  bgcolor=#EBDDE2 border=1>
+ <tbody>
+  <tr>
+  <td>
+<font face="Verdana" color ="black" size="2">
+export MKL_MIC_ENABLE=1 <BR> <BR>
+# export OFFLOAD _DEVICES = &lt;list&gt;<BR>
+export MKL_HOST_WORKDIVISION=1.3 <BR> <BR>
+
+#export MKL_HOST_WORKDIVISION=&lt;value&gt; <BR>
+ exprt MKL_HOST_WORKDIVISION=0.2 <BR> <BR>
+
+# export MKL_MIC_WORKDIVISION= &lt;VALUE&gt; <BR>
+# export MKL_MIC_<number>_WORKDIVISION=&lt;value&gt; <BR>
+export MKL_MIC_2_WORKDIVISION=0.33 <BR> <BR>
+
+#export MKL_MIC_MAX_MEMORY = &lt;value&gt; <BR>
+#export MKL_MIC_<number>_MAX_MEMORY=&lt;value&gt; <BR>
+export MKL_MIC_0_MAX_MEMORY = 20 <BR> <BR>
+
+#export OFFLOAD_REPORT = &lt;level&t; <BR>
+export OFFLOAD_REPORT = 2 <BR>
+<Br>
+
+       </td>
+      </tr>
+   </tbody>
+  </table>
+  
+  </TD>
+  </TR>
+
+<TR> <TD> <Br> <BR> </TD> </TR>
+
+<TR> <TD> A list of MKL DGEMM implementaiton usin NATIVE mode for all cores of 
+Intel Xeon Phi Coprocessor is given below. <BR> <BR>
+
+</TD> </TR>
+
+            <!-- *************** table for loop  ***************** -->
+ <TABLE align = center cellPadding=3  bgcolor=#EBDDE2 border=1>
+ <tbody>
+  <tr>
+  <td>
+<font face="Verdana" color ="black" size="2">
+&nbsp; &nbsp; # Proram : matrix-multiply MKL DGEMM NATIVE MODE <BR>
+&nbsp; &nbsp;#include <stdlib.h> <BR> 
+&nbsp; &nbsp;#include <stdio.h> <BR> 
+
+&nbsp; &nbsp;#include "omp.h" <BR> 
+&nbsp; &nbsp;#include "mkl.h" <BR>
+
+&nbsp; &nbsp;#pragma native_attribute(push, target(mic)) <BR> 
+
+#pragma native_attribute(pop) <BR> 
+#pragma UNROLL_AND_JAM <BR> 
+
+//#define THREADS 168 <BR> 
+&nbsp; &nbsp;#define  NITERS 3 <BR> 
+
+&nbsp; &nbsp;// Subroutine DEMM <BR> 
+&nbsp; &nbsp;void local_dgemm(int N, int LD, double *A, double *B, double *C)<BR> 
+&nbsp; &nbsp;{<BR> 
+&nbsp; &nbsp;&nbsp; &nbsp;
+	cblas_dgemm(CblasColMajor, CblasNoTrans, CblasNoTrans, \ <BR> 
+			N, N, N, 1.0, A, LD, B, LD, 1.0, C, LD); <BR> 
+&nbsp; &nbsp;}<BR> 
+
+&nbsp; &nbsp;double native_dgemm(int N, int LD, double *A, double *B, double *C) <BR> <BR> 
+&nbsp; &nbsp;{<BR> 
+&nbsp; &nbsp; &nbsp;	double t;<BR> 
+&nbsp; &nbsp; &nbsp; static int first_run = 1;<BR> 
+
+&nbsp; &nbsp; &nbsp;	t = dsecnd();<BR> 
+
+
+&nbsp; &nbsp; &nbsp;	local_dgemm(N, LD, A, B, C);<BR> 
+
+
+&nbsp; &nbsp; &nbsp;	t = dsecnd() - t;<BR> 
+
+&nbsp; &nbsp; &nbsp;	first_run = 0;<BR> 
+&nbsp; &nbsp; &nbsp;	return t;<BR> 
+&nbsp; &nbsp; }<BR> 
+
+
+&nbsp; &nbsp; void bench_dgemm(int use_native, int N)<BR> 
+&nbsp; &nbsp; {<BR> 
+
+&nbsp; &nbsp; &nbsp;	/* Choose such leading dimension that there is no cache aliasing. */<BR> 
+&nbsp; &nbsp; &nbsp;	int LD = (N % 512) ? N : N + 128;<BR> <BR> 
+
+&nbsp; &nbsp; &nbsp;	/* Allocate memory using MKL function to make sure the addresses are<BR> 
+ * 	 * properly aligned. */ <BR> 
+&nbsp; &nbsp; &nbsp;	double *A = mkl_malloc(sizeof(double) * N * LD, 4096);<BR> 
+&nbsp; &nbsp; &nbsp;	double *B = mkl_malloc(sizeof(double) * N * LD, 4096);<BR> 
+&nbsp; &nbsp; &nbsp;	double *C = mkl_malloc(sizeof(double) * N * LD, 4096);<BR> <BR> 
+
+&nbsp; &nbsp; &nbsp;	/* Select DGEMM : native . */<BR> 
+&nbsp; &nbsp; &nbsp;	double (*dgemm_func)(int, int, double *, double *, double *);<BR> 
+&nbsp; &nbsp; &nbsp;	dgemm_func = native_dgemm;<BR> <BR> 
+
+&nbsp; &nbsp; &nbsp;      #pragma omp barrier<BR> <BR> 
+
+&nbsp; &nbsp; &nbsp;	double t = 0.0;<BR> 
+&nbsp; &nbsp; &nbsp;	for (int i = 0; i < NITERS + 1 ; i++) {<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; double t_tmp = dgemm_func(N, LD, A, B, C);<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; /* Discard performance obtained on the warmup iteration. */<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; if (i > 0) t += t_tmp;
+&nbsp; &nbsp; &nbsp;	}<BR> <BR> 
+
+&nbsp; &nbsp; &nbsp;	mkl_free(A);<BR> 
+&nbsp; &nbsp; &nbsp;	mkl_free(B);<BR> 
+&nbsp; &nbsp; &nbsp;	mkl_free(C);<BR> 
+
+&nbsp; &nbsp; &nbsp;	const double NOPS = 2.0 * N * N * N;<BR> 
+&nbsp; &nbsp; &nbsp;	double gflops = NOPS / (t * 1E9 / NITERS);<BR> 
+&nbsp; &nbsp; &nbsp;	printf("Native %dx%d DGEMM: %8.2f GFlops\n",<BR> 
+&nbsp; &nbsp; &nbsp;			N, N, gflops);<BR><BR>  
+&nbsp; &nbsp; &nbsp;} <BR>
+
+&nbsp; &nbsp; int main(int argc, char **argv)<BR> 
+&nbsp; &nbsp; {<BR>
+&nbsp; &nbsp; 	if (argc != 2) {<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; 		printf("Usage: %s <N> \n", argv[0]);<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; 		return -1;<BR> 
+&nbsp; &nbsp; 	}<BR> <BR> 
+
+&nbsp; &nbsp; 	int N = atoi(argv[1]);<BR> 
+&nbsp; &nbsp; 	printf("Matrix : %d", N);<BR> 
+&nbsp; &nbsp; 	printf("  ITR : %d\n", NITERS);<BR> 
+&nbsp; &nbsp; 	/* The following settings will make MKL use OpenMP even <BR> 
+&nbsp; &nbsp;         * when called from an OpenMP region. */<BR> 
+
+&nbsp; &nbsp; 	/* Enables Intel MKL to dynamically change the number of threads */<BR> 
+&nbsp; &nbsp; 	mkl_set_dynamic(0);<BR> <BR>
+	
+&nbsp; &nbsp; 	/* Enable nested parallel region */<BR> 	
+&nbsp; &nbsp; 	omp_set_nested(1);<BR> <BR> 
+	
+&nbsp; &nbsp; 	/* Set number of MKL threads */<BR> 
+&nbsp; &nbsp; 	mkl_set_num_threads(mkl_get_max_threads());<BR> <BR> 
+		
+&nbsp; &nbsp; 	printf("\nMKL threads = %d\n", mkl_get_max_threads());<BR> <BR> 
+	
+&nbsp; &nbsp; 	/* call fcuntion to tune MKL DGEMM on MIC */<BR> 
+&nbsp; &nbsp; 	bench_dgemm(1, N);<BR> 
+
+&nbsp; &nbsp; 	return 0;<BR> 
+&nbsp; &nbsp; } 
+
+       </td>
+      </tr>
+   </tbody>
+  </table>
+  
+  </TD>
+  </TR>
+
+<TR>
+<TD>
+
+<a name = "coproc-matrixmatrix-multiply-compile-execution-mkl-threads-ex-02"> </a>
+
+ <P align=justify> <font face="Verdana" size="2"> 
+
+ <!-- ***************** Using command line ************************ -->
+ 
+ <font color="#FF0011"> 
+       <B>  Using command  line arguments  </b> </font> 
+    </font> </p>
+
+<P align ="justify"><font face="Verdana" size="2"> 
+The compilation and execution of a program  to run natively on an Intel Xeon Phi 
+coprocessor as an MKL (Multi-threaded) application with the Intel C Compiler (icc) command shown in below. 
+</font> </p>
+
+<!-- ************* Commented ******* -->
+
+<p align = "left"> <font face="Verdana" size="2"> 
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Compile to run natively on the Xeon Phi : </b> </font> 
+</font> </p>
+
+<P align="center"> <font face="Verdana" size="2"> 
+
+<I><FONT COLOR="#FF00FF"> <B>
+<!-- ****
+icc  -O3 -o run matrix-multiplication-dgemm-test.c -openmp -mmic -std=c99 -mkl -DMKL_ILP64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lpthread -lm   -L/opt/intel/lib/mic -Wno-unknown-pragmas
+*** -->
+
+&nbsp;  # icc &nbsp;   -O3&nbsp;  -mmic&nbsp;  -mkl&nbsp; -DMKL_ILP64&nbsp;  
+&nbsp;   -lmkl_intel_ilp64&nbsp; <BR> -lmkl_intel_thread&nbsp; 
+&nbsp; -lmkl_core&nbsp;      -Wno-unknown-pragmas&nbsp; <BR> -std=c99&nbsp; -vec-report3&nbsp;
+&nbsp;    &lt;program name&gt;  -O&nbsp;  <BR>  &lt;Name of executable&gt; </b>
+</FONT>&nbsp;</I>  
+</font> </p>
+
+
+<p align = "left"> <font face="Verdana" size="2"> 
+ <font color ="red" face " verdeana" size ="2"> 
+  <B>  # Compile to run natively on the Xeon Phi Using Makefile </b> </font> <BR>
+To compile the code use using MAKEFILE utility:
+make -f Makefile.NATIVE
+</font> </p>
+
+<!-- ************download start here ***************--> 
+        (Download source code (OFFLOAD):
+ 
+<fONT size = 2 Face = "verdana" >
+<a href ="../make -f Makefile.NATIVE">
+ <I><FONT COLOR = "blue">make -f Makefile.NATIVE</FONT>  </I> </a>)</font>
+
+</td>
+</tr>
+
+<TR> <TD> <HR>  </TD></TR>
+
+<TR>
+<TD>
+
+<P align="left">
+<font color="red"> <B> Environment on Xeon Phi in Native Mode   : </b> </font></b>
+<BR> <BR>
+
+ <font face="Verdana" size="2">
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> LD_LIBRARY_PATH = <BR> /opt/intel/lib/mic/:/opt/intel/mkl/lib/mic/:${LD_LIBRARY_PATH} <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> KMP_AFFINITY=
+         <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;granularity=thread,balanced&quot; </b> </font> <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B> export </b> </font> MKL_NUM_THREADS=236  <BR>
+
+ <BR>
+</FONT> </P>
+
+<!-- ****** Compile & Execute : Compiler  MKL Scale to 60 Cores Ends ******* -->
+</TD>
+</TR>
+
+
+
+<TR> <TD> 
+<HR>
+  <DIV ALIGN=right>
+         <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+ </TD> </TR>
+
+
+
+<!-- ***************** Example 3 : Matrix-Matrix  Multiply Prog Starts **************** -->
+  <a name ="coproc-matrixmatrix-multiply-mkl-one-core-example-03"> </a>
+
+   <TR ALIGN=LEFT> 
+   <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example.  3  (OFFLOAD) :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+   Matrix - Matrix Multiply (SGEMM /DGEMM ) using MKL Lib. - Single Core of Xeon-Phi  (OFFLOAD) </b> </font>
+          <BR> 
+        
+<!-- ************download start here ***************--> 
+
+        (Download source code : <BR>
+
+ <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_offload/matrix-matrix-multiply-dgemm-mkl-single-core-offload.c">
+         <I><FONT COLOR = "blue"><B> DGEMM (Single Core): matrix-matrix-multiply-dgemm-mkl-single-core-offload.c</b></FONT></I></a>;
+ <BR> 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_offload/env_var_setup_mkl_offload.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_sequential_offload.sh</b></FONT></I></a></font>;
+   &nbsp; &nbsp; 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_offload/Makefile_MKL_SingleCore.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_MKL_SingleCore.OFFLOAD </b> </FONT>  </I> </a>)</font>
+</p>
+
+<!-- ************download End  here ***************--> 
+
+
+<!-- ***************** Example 3 : Matrix-Matrix  Multiply Prog Ends **************** -->
+  </TD> 
+  </TR> 
+
+<TR> <TD> 
+<HR>
+  <DIV ALIGN=right>
+         <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+ </TD> </TR>
+
+
+
+<!-- ***************** Example 4 : Matrix-Matrix  Multiply Prog Starts **************** -->
+  <a name ="coproc-matrixmatrix-multiply-mkl-one-core-example-04"> </a>
+
+   <TR ALIGN=LEFT> 
+   <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 4  (OFFLOAD) :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+   Matrix - Matrix Multiply (DGEMM ) using MKL Lib. - Many Cores of Xeon-Phi  (OFFLOAD) </b> </font>
+          <BR> 
+        
+<!-- ************download start here ***************--> 
+
+        (Download source code : <BR>
+
+ <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_offload/matrix-matrix-multiply-dgemm-mkl-offload.c">
+         <I><FONT COLOR = "blue"><B> DGEMM (Single Core): matrix-matrix-multiply-dgemm-mkl-offload.c</b></FONT></I></a>;
+ <BR> 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_offload/env_var_setup_mkl_offload.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_sequential_offload.sh</b></FONT></I></a></font>;
+   &nbsp; &nbsp; 
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_mkl_offload/Makefile_MKL.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_MKL.OFFLOAD </b> </FONT>  </I> </a>)</font>
+</p>
+
+<!-- ************download End  here ***************--> 
+
+
+<!-- ***************** Example 4 : Matrix-Matrix  Multiply Prog Ends **************** -->
+ </TD> 
+</TR> 
+
+
+<!-- *********************** table for loop  ************************** -->
+<TR> <TD> 
+<HR>
+ <DIV ALIGN=right>
+      <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply.html"> 
+      <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+  </DIV>
+</TD>
+</TR>
+
+  
+<!-- ************download start here ***************--> 
+
+<!--  content of web page End here  --> 
+      
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+    
+        </TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+ 

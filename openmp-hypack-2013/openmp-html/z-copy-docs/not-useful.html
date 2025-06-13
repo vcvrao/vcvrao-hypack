@@ -1,0 +1,2526 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML><HEAD><TITLE>:C-DAC PEMG-2010 tech. workshop - OpenMP - C-DAC ECity-Bengalore June 21-24,2010</TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=Content-Language content=en-us>
+<META id=ROBOTS content=ALL name=ROBOTS>
+
+<META id=Copyright content="Copyright (c) 2010, C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<META id=keywords content=HDF name=keywords><LINK href="../../pemg10-files/pemg-main.css" 
+type=text/css rel=stylesheet><LINK href="../../pemg10-files/pemg-home.css" type=text/css 
+rel=stylesheet><LINK href="../../pemg10-files/pemg-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="../../pemg10-files/pemg-main.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo><A 
+            href="http://www.cdac.in/pemg2010/"><IMG alt=PEMG-2010
+            src="../../pemg10-files/PEMG-2010-header.jpg" border=0></A></TD>
+
+        
+
+</TR></TBODY></TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+
+      <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+            
+
+		  <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:pemgShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('1', 1)" 
+       		href="../../pemg10-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:pemgShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('2', 1)" 
+                  href="../../pemg10-topics-of-interest-mode01-multicore.html">Topics</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:pemgShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('3', 1)" 
+                  href="../../pemg10-tech-prog-overview.html">Tech. Prog.</A></TD>
+
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:pemgShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('4', 1)" 
+                  href="../../pemg10-complab-overview.html">Comp. Lab.</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:pemgShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('5', 1)" 
+                  href="../../pemg10-mode01-multicore-lab-overview.html"> Mode-1 (Multi-Cores)</A></TD>
+		<TD class=menusep></TD>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow6 
+                  onmouseover="javascript:pemgShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('6', 1)" 
+                  href="../../pemg10-mode02-gpgpu-lab-overview.html"> Mode-2 (GPGPUs)</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+                  href="../../pemg10-reg-private-sector.html">Registration 
+                  </A></TD>
+                <TD class=menusep></TD>
+		
+                <TD class=menu1><A class=menu1 id=mainmenurow8
+                  onmouseover="javascript:pemgShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('8', 1)" 
+                  href="../../pemg10-contact-address.html">Contact
+                 </A></TD>
+
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+       <TABLE id=submenutab1 onmouseover="javascript:pemgShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:pemgHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+        <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-overview.html"><B> 
+            PEMG-2010 Overview</B></A>
+
+        <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-venue.html"><B>
+            Venue : ECity, Bengaluru </B></A>
+
+        <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-faculty.html"><B>
+            Faculty Members</B></A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B> </A>
+
+
+	<A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-audience.html"><B>
+            Target Audience / Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-proceedings.html"><B>
+            PEMG-2010 Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-download-software.html"><B> 
+              Download Software </B> </A>
+
+
+	<A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-sponsors.html"><B>
+            PEMG-2010 Sponsors</B></A>
+                  
+	<A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-past-workshops.html"><B> 
+             Past Tech. Workshops </B></A>
+   
+        <A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-accommodation.html"><B>
+             Accommodation </B></A>
+
+       
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-local-travel.html"><B>
+            Local Travel</B></A>
+    
+
+	<A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-organisers.html"><B> 
+             Organisers</B> </A>
+
+        <A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-feedback.html"><B>
+             Feedback </B></A>
+
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-acknowledgements.html"><B> 
+             Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-contact-address.html"><B>Contact</B></A>
+ 
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onmouseover="javascript:pemgShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores </B></A>
+
+         <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+
+         <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-handson.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+         <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+
+<!--   Sub menu for **** Row-3-Technical program  **** start here -->
+
+
+      <TABLE id=submenutab3 onmouseover="javascript:pemgShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 152px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-overview.html"><B> 
+            Tech. Prog. Overview</B></A>
+
+    
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-at-glance-poster.html"><B> 
+            Prog. at Glance / Poster</B></A>
+
+
+	<A class=menu2 id=submenurow3s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores</B></A>
+
+	 <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+	
+
+         <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B></A>
+
+	<A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-demonstration.html"><B> 
+            Demonstration</B></A>
+
+        <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-handson-overview.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+        <A class=menu2 id=submenurow3s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-3-TechnicalProgram **** End here -->
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory **** start  here -->
+
+      <TABLE id=submenutab4 onmouseover="javascript:pemgShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 247px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	    <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-overview.html"><B> Comp. Lab. Overview </B></A>
+
+	<A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-access.html"><B> Comp. Lab. Access </B></A>
+
+           <A class=menu2 id=submenurow4s3
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode01-multicore.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+		
+	<A class=menu2 id=submenurow4s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode02-gpgpu.html"><B> Mode-2  (GPGPU ) Lab. </B></A>
+
+        <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> <A/>
+
+	</TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory ****  End  here -->
+
+
+<!--   Sub menu for **** Row-5-Mode 1 : Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onmouseover="javascript:pemgShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 350px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-lab-overview.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+
+	<A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-pthreads.html"><B>  Pthreads</B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+
+	<A class=menu2 id=submenurow5s4
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow5s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi.html"><B>MPI 1.0 / MPI 2.0</B></A>
+ 
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-openmp.html"><B>
+            MPI-OpenMP</B></A>
+ 
+      <A class=menu2 id=submenurow5s7
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-pthreads.html"><B>
+            MPI-Pthreads </B></A>
+
+      <A class=menu2 id=submenurow5s8
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-tbb.html"><B>
+            MPI-TBB </B></A>
+ 
+      <A class=menu2 id=submenurow5s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-java-threads.html"><B> Java Prog. - Threads</B></A>
+
+	<A class=menu2 id=submenurow5s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-software-tools.html"><B> Software threads- tools</B></A>
+
+        <A class=menu2 id=submenurow5s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Tuning / Perf. </B></A>
+
+        <A class=menu2 id=submenurow5s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-perf-math-lib.html"><B> Threads- Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow5s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+
+       <A class=menu2 id=submenurow5s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Performance </B></A>
+
+
+       <A class=menu2 id=submenurow5s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5-Mode 1 : Hands-on ****  End here  -->
+
+
+<!--   Sub menu for **** Row-6-Mode 2 : Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onmouseover="javascript:pemgShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 465px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-lab-overview.html"><B> Mode-2  (GPGPU ) Lab.   </B></A>
+
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-nvidia-gpu-cuda.html"><B>CUDA enabled NVIDIA GPUs </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-amd-stream-comp.html"><B>AMD-ATI Stream Comp.-SDK</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-opencl-opengl.html"><B> GPU Programming - OpenCL    </B></A>
+
+
+	<A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-hybrid-comp.html"><B>Hybrid Comp. (CPUs/GPUs)</B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6-Mode 2 : Hands-on **** End here  -->
+
+
+
+<!--  Sub menu for **** Row-7-Registration **** Start here  -->
+
+      <TABLE id=submenutab7 onmouseover="javascript:pemgShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-private-sector.html"><B>Private Sector</B></A>
+
+      <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-public-sector.html"><B>Public Sector/ Govt.  Org.</B></A>
+
+      <A class=menu2 id=submenurow7s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-academic-staff.html"><B>Govt. Academic Staff </B></A>
+
+      <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-students.html"><B>Students</B></A>
+
+      <A class=menu2 id=submenurow7s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-online-registration.html"><B>Online Registration</B></A>
+ 
+      <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+             href="../../pemg10-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-7-Registration **** End here  -->
+
+
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** Start here  -->
+
+      <TABLE id=submenutab8 onmouseover="javascript:pemgShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+
+      <TD class=menu2>
+
+     <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-address.html"><B>Contact</B></A>
+
+
+     <A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-accommodation.html"><B>Accommodation </B></A>
+
+        
+     <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+  </TD> </TR></TBODY> </TABLE>
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** End here  -->
+
+  </DIV>
+
+
+<!-- **************** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+
+	       
+           <A class=menul
+	       href="../../pemg10-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 (Multi-Cores) Lab. </A>
+                
+               
+             
+           <A class=menul
+               href="../../pemg10-mode01-multicore-pthreads.html">
+               &#149; Pthreads</A>
+           	
+	
+	   <A class=menul  
+              href="../../pemg10-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+               <!-- *** -->
+	       <A class=menulslct  
+                href="../../pemg10-mode01-multicore-openmp.html">
+                &#149; OpenMP</A>
+	       <!-- *** -->
+              
+	   <A class=menul
+              href="../../pemg10-mode01-multicore-mpi.html">
+              &#149; MPI 1.0 / MPI 2.0</A>
+              
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-openmp.html">
+              &#149;  MPI-OpenMP</A>
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-pthreads.html">
+              &#149;  MPI-Pthreads</A> 
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-tbb.html">
+              &#149;  MPI-TBB</A>  
+   
+          
+           <A class=menul
+	      href="../../pemg10-mode01-multicore-java-threads.html">
+              &#149;  Java Prog.-Threads</A>
+          
+
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-software-tools.html">
+              &#149;  Software threads - Tools</A>
+
+           
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-compiler-tune-perf.html">
+              &#149;  Compilers - Tuning /Perf.</A>
+             
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-perf-math-lib.html">
+              &#149; Threads - Perf.  Math. Lib. </A>
+
+           
+	   <A class=menul
+	      href="../../pemg10-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators </A>
+            
+
+	   <A class=menul
+	      href="../../pemg10-mode01-multicore-threads-io-perf.html">
+              &#149;  Threads-I/O Performance </A>
+        
+
+          <A class=menul 
+	     href="../../index.html">
+             &#149;  Home </A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+
+
+	
+		 <BR>
+                  <DIV 
+                  style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"></DIV><BR><BR><BR><BR></TD>
+                
+
+
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt >
+          
+
+ 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD >
+
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Programming on Multi-Core Processors Using OpenMP APIs </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<BR>
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align="justify"><span class="content">
+  The OpenMP API is used for writing portable multithreaded applications written in Fortran, C and C++ languages.
+  The OpenMP programming model plays a key role by providing an easy method for threading applications without burdening 
+  the programmer with the complications of creating, synchronizing load balancing, and destroying threads. 
+  The OpenMP model provides a platform independent set of compiler pragmas, directives, function calls, and environment
+  variables that explicitly instruct the compiler how and where to use the parallelism in the application. 
+
+   Example   programs using 
+   compiler pragmas, directives, function calls, and environment variables, Compilation and execution
+   of OpenMP programs, programs numerical and non-numerical computations.
+   are discussed. <BR> <BR>
+</span> </p>
+</td> </tr> 
+</tbody>
+</table>
+
+
+
+
+<!-- *********************** Table for Listing of Programs Starts *************************** -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+
+   <!-- ************************8 Example 1.1  ************************ -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id11">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to print unique identifier    
+       </font>
+     </td>
+     </tr>
+
+ <!-- *************************** Example 1.2  *********************** -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id12">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a "Hello world" Program Using OpenMP pragmas  
+       </font>
+     </td>
+
+   </tr>
+
+
+   <!-- *********************** Example 1.3  ************************* -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id13">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         Write a OpenMP program for a loop nest containing recurrence  relation  using OpenMP <I> Parallel FOR </i> directive  
+       </font>
+     </td>
+     </tr>
+
+ <!-- ****** *********************** Example 1.4 ********************** -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id14">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to find Sum of  Natural Numbers using OpenMP <I> Parallel FOR </i> directive  
+       </font>
+     </td>
+
+   </tr>
+
+
+   <!-- ********************** Example 1.5  *********************** -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id15">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to find Sum of  Natural Numbers using OpenMP <I> REDUCTION </I> clause  
+       </font>
+     </td>
+     </tr>
+
+ <!-- ********************** Example 1.6  ************************* -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id16">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP progam for Loop-carried dependence using OpenMP <i> parallel </i> Directive  
+       </font>
+     </td>
+
+   </tr>
+
+
+   <!-- ********************* Example 1.7  ************************ -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id17">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.7 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to illustrate <I> Data Race condition </i>   
+       </font>
+     </td>
+     </tr>
+
+ <!-- ********************** Example 1.8  ************************* -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id18">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.8 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to illustrate <I> Managing Shared & Private Data </i>  
+       </font>
+     </td>
+
+   </tr>
+
+   <!-- *********************** Example 1.9  ************************* -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id19">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.9 </b> </font> <BR>
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to illustrate <I> Loop Scheduling & Partitioning - Optimize Performance</i>  
+       </font>
+     </td>
+     </tr>
+
+     <!-- ************************* Example 1.10  ************************ -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id110">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.10 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to illustrate <I> Work-Sharing Sections </i>  
+       </font>
+     </td>
+
+   </tr> 
+<!-- ************************ Example 1.10 ends ********************** -->
+
+ <!-- ************************ Example 1.11  ************************** -->
+    <tr>
+     <td width="110" height="2" align="left"> 
+       <a href="#omp-par-prog-id111">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.11 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a OpenMP program to illustrate the  <I> performance improvement. </i>  
+       </font>
+     </td>
+   </tr> 
+<!-- ******************** Example 1.11 ends ************************* -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<tD>
+<BR>
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books; </b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-threads-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi Threading </b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP </b>  </font> </a> 
+       -[MCMTh-01], [MCMTh-02], [MCMTh-I03], [MCMTh-05], [MCMTh-09], [MCMTh-11], 
+       [MCMTh-15], [MCMTh-21], [MCBW-44], [MCOMP-01], [MCOMP-02],
+[MCOMP-04], [MCOMP-12], [MCOMP-19], [MCOMP-25])  <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</tabe>
+
+
+<!-- ******************** Table for Description of OpemMP Programs Starts  ******************* -->
+
+
+
+</TBODY> 
+</TABLE> 
+</p>
+
+
+<!-- ********************* Table for Listing of Programs Ends  ********************** -->
+
+<p align ="left">
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=Left><font size="2" Color="black" face= "verdana">
+    <B>  Description of OpenMP Programs </b> </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+</p>
+
+<br>
+
+
+<!-- ************************* Example 1.1 starts ***************************** -->
+
+
+
+<A NAME="omp-par-prog-id11"></A> 
+ <p> <table border="0"  height="6"><font face="Verdana" size="2">
+<tbody>
+      
+    
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+         <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=20 WIDTH=20><FONT COLOR="#FF6600">
+        <B> Example 1.1 </B></FONT> </B>&nbsp;&nbsp;Simple OpenMP program : print unique identifier
+        using OpenMP <i>PARALLEL</i> directive.&nbsp; <BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; 
+
+<!-- ************download start here ***************--> 
+
+        (Download source code ; <I><FONT COLOR="#CC66CC"><a HREF="../openmp-codes-c-lang/omp-unique-threadid.c">omp-unique-threadid.c</a>
+      </FONT></I><FONT COLOR="#009900"> 
+        </FONT><FONT SIZE=+1>/<I> </I></FONT><I><FONT COLOR="#33CC00">
+<a HREF="../openmp-codes-f-lang/omp-unique-threadid.f">omp-unique-threadid.f</a></FONT></I>)&nbsp </P>
+
+
+<!-- ************download End  here ***************--> 
+
+</TD> </TR>
+   
+<TR><TD>
+
+   <ul>
+         
+            <li><B>Objective</B></li>
+            <P> Write a simple OpenMP program to print unique thread identifier 
+              for each thread using OpenMP <i>PARALLEL</i> directive. </p>
+           
+            <LI> <B>Description</B></LI>
+            <p align="justify"> Each thread prints its thread identifier. In this program OpenMP
+            <i> 
+              PARALLEL</i> directive and <i> OMP_GET_THREAD_NUM</i> run-time library routine 
+              is used. The PARALLEL
+  directive pair specifies that the enclosed block of program, referred to as <i>
+  PARALLEL</i> region, be executed in parallel by multiple threads. The <i> PRIVATE</i>
+  clause is typically used to identify variables that are used as scratch
+  storage in the program segment within the parallel region. It provides a list
+  of variables and specifies that each thread have a private copy of those
+            variables for the duration of the parallel region. </p>
+            <li><b>Input</b></li>
+            <p align="justify">User has to set <i> OMP_NUM_THREADS</i> environment variable for <i>n</i> 
+              number of threads. <BR>
+            e.g. To set the number of threads to use by means of the OMP_NUM_THREADS environment variable.
+		   
+<br>
+ <br>
+              <center><i>setenv OMP_NUM_THREADS 4 (if using csh/tcsh shell)&nbsp;</i></center><br>
+
+	<center><i>export OMP_NUM_THREADS=4 (if using bash/ksh shell)&nbsp;</i></center>
+            </p>
+            <li><b>Output</b></li>
+            <p align="justify"> Each thread prints its thread identifier.</p>
+          </ul>
+
+
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> 
+<IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>	
+		
+</TD>  </TR>  
+</tbody>     
+</table>
+</p>
+
+<!-- ********************** Example 1.1 Ends ************************ -->
+
+
+<!-- ************************  Example 1.2 starts *************************** -->
+
+
+<A NAME="omp-par-prog-id12"></A> 
+ <p> <table border="0"  height="6">
+      <tbody>
+      <TR ALIGN=LEFT> 
+      <TD height="90%"><font face="Verdana" size="2"> &nbsp;
+            <IMG SRC="./../openmp-images/bullet2.gif" HEIGHT=20 WIDTH=20><FONT COLOR="#FF6600">
+         <B> Example 1.2 :</B>&nbsp;</FONT></B>Simple OpenMP program : <i> Hello 
+             World</i>  using OpenMP <i>PARALLEL</i> directive <BR>
+         
+           &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;
+<!-- ************download start here ***************--> 
+(Download source code ; <I><FONT COLOR="#CC66CC">
+<a HREF="../openmp-codes-c-lang/omp-hello-world.c">omp-hello-world.c</a></FONT></I><FONT COLOR="#009900"> 
+          </FONT><FONT SIZE=+1>/<I> </I></FONT>
+<I><FONT COLOR="#33CC00"><a HREF="../openmp-codes-f-lang/omp-hello-world.f">omp-hello-world.f</a></FONT></I>)&nbsp; 
+          
+<!-- ************download Ends here ***************--> 
+      
+ </TD>  
+ </TR> 
+
+ 
+<TR>
+<TD>
+<BR>
+
+   <UL>
+           <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+            <P align="justify">Write a simple OpenMP program to print &quot;<i>Hello World</i>&quot;<i> 
+              </i>using OpenMP <i>PARALLEL</i> directives.</P>
+             <LI> <B>Description</B></LI>
+            <P align="justify"> Each thread prints "<i>Hello World</i>" message. In this program 
+              OpenMP <i> PARALLEL</i> directive, <i> PRIVATE</i> clause and <i> OMP_GET_THREAD_NUM</i> run-time 
+              library routine is used. The PARALLEL
+  directive pair specifies that the enclosed block of program, referred to as <i>
+  PARALLEL</i> region, be executed in parallel by multiple threads. The <i> PRIVATE</i>
+  clause is typically used to identify variables that are used as scratch
+  storage in the program segment within the parallel region. It provides a list
+  of variables and specifies that each thread have a private copy of those
+            variables for the duration of the parallel region.
+            </P>
+            <LI> <B>Input</B></LI>
+            <p align="justify"> User has to set <i> OMP_NUM_THREADS</i> environment variable for <i>n 
+              </i>number of threads.
+   e.g. To set the number of threads to use by means of the OMP_NUM_THREADS environment variable.
+		   
+<br>
+ <br>
+              <center><i>setenv OMP_NUM_THREADS 4 (if using csh/tcsh shell)&nbsp;</i></center><br>
+
+	<center><i>export OMP_NUM_THREADS=4 (if using bash/ksh shell)&nbsp;</i></center>
+            </p>
+            <LI> <B>Output</B></LI>
+            <P align="justify"> Each thread prints a message "<i>Hello World</i>" and its identifier. </p> 
+          </UL>
+ 
+
+
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+ </TD>  </TR> 
+</tbody>
+ </table>
+</p>
+        
+     
+
+<!-- ************************* Example 1.2 Ends ****************************** -->
+
+<!-- ********************* Example 1.3 Starts ******************** -->
+
+<A NAME="omp-par-prog-id13"></A> 
+ <p> <table border="0"  height="6">
+      <tbody>
+    
+     <TR ALIGN=LEFT> 
+      <TD height="90%"><font face="Verdana" size="2"> &nbsp;
+          <IMG SRC="./../openmp-images/bullet3.gif" HEIGHT=20 WIDTH=20><FONT COLOR="#FF6600">
+             <B>  Example 1.3 : </b> </font> 
+ Parallelization of a loop nest containing a recurrence using OpenMP <i>PARALLEL
+        FOR</i> directive. <BR> 
+       &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+         
+<!-- ************download start here ***************--> 
+
+
+              (Download source code ; <I><FONT COLOR="#CC66CC"><a HREF="../openmp-codes-c-lang/omp-recurrence.c">omp-recurrence.c</a></FONT></I>
+           <FONT COLOR="#CC66CC"><i><u>)</u></i></FONT>
+          
+ <!-- ************download Ends here ***************--> 
+
+ </TD>  </TR> 
+ 
+<TR>
+<TD>
+
+ <ul>
+        <font face="Verdana" size="2">
+      
+      &nbsp;&nbsp; <li> 
+            <b>Objective </b></li>
+            
+            
+             <p align ="left"> 
+   Write a simple OpenMP program for parallelization of a loop nest 
+                containing a recurrence using
+          OpenMP <i>PARALLEL FOR</i> directive.
+                <br> <br>
+
+
+       <!-- *************** table for loop  ***************** -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+        
+          <font face="CourierNew" color ="red" size="3">
+           <blockquote> 
+                do <i>j </i>= 1, <i>N</i><br>
+              &nbsp;&nbsp;&nbsp; do<i> i</i> = 1, <i>N</i><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a(<i>i,j</i>) = a(<i>i,j</i>) + a(<i>i,j-1</i>)<br>
+              &nbsp;&nbsp;&nbsp; end do<br>
+                end do 
+          </blockquote>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+    <BR>
+   
+
+  
+          
+          <li> 
+            <b>Description </b> </li>
+
+          <p align ="justify">  <span class ="content">
+    In this program the <i> j</i> loop contains a recurrence i.e. the loop contain the data dependence
+           each iteration write an element of InputMatrix that is read by the next iteration ,that is difficult 
+                to remove, so the <i> i</i> loop is parallelised instead. We
+          have used OpenMP PARALLEL FOR directive. The choice of which loop 
+                in the nest executes in parallel can have a profound impact on 
+                performance, so the parallel loop must be chosen carefully.</p> </span>
+                     
+          <li> 
+            <b>Input</b></li>
+            <p>Number of threads and Size of Matrix </p>
+                     
+          <li> 
+             
+              <b>Output </b></li>
+              <p>The status of execution i.e. 
+                The status of comparison of parallel and serial result of a loop 
+                nest containing recurrence.</p>
+              
+        </ul>
+
+
+
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</TR></TD>
+</tbody>
+ </table>
+        
+     <BR>
+
+<!-- ********************** Example 1.3 Ends *************************** -->
+
+<!-- *******************  Example 1.4 starts  ************************** -->
+
+
+<A NAME="omp-par-prog-id14"></A> 
+ <p> <table border="0"  height="6">
+<tbody>
+     <font face="Verdana" size="2"> 
+     <TR ALIGN=LEFT> 
+      <TD height="90%"> 
+           <IMG SRC="./../openmp-images/bullet7.gif" HEIGHT=15 WIDTH=15>
+
+   <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.4 : </b> </font> 
+
+   <font face="Verdana" size="2">
+           Sum of elements 
+          of one-dimensional real array A using OpenMP <i>PARALLEL FOR</i> directive.&nbsp; <BR>
+          &nbsp; &nbsp; &nbsp; 
+<!-- ************download start here ***************--> 
+
+(Download source code ; <I><FONT COLOR="#CC66CC">
+        <a HREF="../openmp-codes-c-lang/omp-sumof-elements.c">omp-sumof-elements.c</a></FONT></I>
+     <FONT SIZE=2>/
+</FONT><I><FONT COLOR="#33CC00">
+  <a HREF="../openmp-codes-f-lang/omp-sumof-elements.f">omp-sumof-elements.f</a></FONT></I>)&nbsp;
+    
+<!-- ************download Ends here ***************--> 
+ 
+   </TD>  
+   </TR> 
+
+ 
+<TR><TD>
+
+
+   <BR>
+          <UL> <font face="Verdana" size="2">
+            <LI> <B>Objective</B></LI> 
+            <P align="justify"> Write an OpenMP program to find sum of elements of one-dimensional 
+              real array <i>A </i>using <i> </i>OpenMP <i> PARALLEL FOR </i>directive. </p>
+            <LI> <B>Description</B></LI>
+            <P align="justify">Addition of all the elements of a real array 
+              is performed using OpenMP <i> PARALLEL</i> <i> FOR </i> and <i>Critical</i> directive.
+              As all the treads using the sum variable, the sum variable must be synchronize 
+              between the threads in order to get the correct results.The critical directive specifies
+              a region of code that must be executed by only one thread at a time.At the end the final sum 
+              is written into the sum variable.<br>
+            <LI> <B>Input</B></LI>
+            <P align="justify">Number of threads and Size of an real array <i>A</i>. </p>
+             <LI> <B>Output</B></LI>
+            <P>Sum of <i>n</i> elements of an array <i>A</i> and comparitive results. </p>
+        </font>
+          </UL>
+    
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>  
+
+</TD>  </TR> 
+</tbody>
+ </table></p>
+      
+<!-- ********************* Example 1.4 Ends ************************** -->
+ 
+<!-- ************************  Example 1.5 starts  ************************* -->
+
+<A NAME="omp-par-prog-id15"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+<tbody> 
+
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.5 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+           Sum of elements of one-dimensional real array A using OpenMP <i> REDUCTION </i> clause.<BR>
+             &nbsp;&nbsp;&nbsp; 
+
+<!-- ************download start here ***************--> 
+
+          (Download source code ; 
+
+           <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-sumof-elements-reduction.c">omp-sumof-elements-reduction.c</a>
+        </FONT> </I> 
+ 
+    <FONT COLOR="black" SIZE="2"><I> /</I></FONT>
+
+    <I>  <FONT COLOR="#33CC00">
+          <a HREF="../openmp-codes-f-lang/omp-sumof-elements-reductionop.f">
+           omp-sumof-elements-reductionop.f 
+          </a>
+        </FONT> </I>&nbsp; )
+     <BR>
+
+<!-- ************download Ends here ***************--> 
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+            Write an OpenMP program to find sum of elements of one-dimensional 
+              real array <i> A</i> using OpenMP REDUCTION clause.  </li>
+
+             <BR>
+            <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+            Addition of all the elements of a real array <i> A</i> 
+              is performed using OpenMP <i> PARALLEL</i> <i> FOR</i> directive and
+            <i> REDUCTION</i> clause. 
+              Reductions are a sufficiently common type of operation that OpenMP 
+              includes a reduction data scope clause just to handle the variable. 
+              In reduction, we repeatedly apply a binary operator to a variable 
+              and, and store the result back in the variable. In <i>REDUCTION</i>
+            a private copy for each list variable is created for each thread. At
+            the end of the reduction, the reduction variable is applied to all
+            private copies of the shared variable, and the final result is
+            written to the global shared variable. In this example we have added the 
+           clause <i> REDUCTION</i> ( + : <i>Sum</i>), which 
+              tells the compiler that <i> Sum</i> is the target of a sum reduction operation. 
+            </p>
+
+
+            <li> <B>Input</B></li>
+
+
+            <p aign ="left"> Number of threads and Size of an real array <i>A</i>. </p>
+
+
+            <li> <B>Output</B></li>
+            <p aign ="left">  Sum of <I> n </i> elements of an array . </p>
+
+           </font>
+
+          </ul>
+   
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TD> 
+  </TR>
+</tbody> 
+ </table>   
+ 
+
+<!-- *************************** Example 1.5 Ends ***************************** -->
+
+
+<!-- ********************  Example 1.6 starts  ****************************** -->
+
+
+<A NAME="omp-par-prog-id16"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+ <tbody>
+
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.6 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+                Write a OpenMP progam for Loop-carried dependence using OpenMP <i> parallel </i> Directive <BR>
+             &nbsp;&nbsp;&nbsp; 
+<!-- ************download start here ***************--> 
+
+(Download source code ; 
+
+           <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-loop-carried-depend.c">omp-loop-carried-depend.c</a>
+        </FONT> </I> 
+ 
+    &nbsp; )
+     <BR>
+
+<!-- ************download Ends here ***************--> 
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+            Write an OpenMP program to restructure the  Loop-carried dependence to Loop-independent dependence 
+            using OpenMP <i> parallel for </i> pragma</LI>
+
+           <BR> <BR>
+            <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+           The objective in threading a loop is to convert independence loop iterations in threads to threads
+         and run these in parallel. The aim is to restructure the loop to make sure that no loop carries no dependence 
+         before adding OpenMP pragmas. There are possibilities that compiler can paralleizes the loop, the user must 
+         still ensure the loop is functionally correct. <BR> <BR>
+
+
+          In Multi-core Programming Environment, if the code has data dependencies, the compiler may or may not 
+ ignore due to presence of OpenMP pragmas.  For example, the fragment of the code has two statements 
+          S(1)   and S(2) which are executed in sequentially. Most commonly used execution path can be categorized 
+ into two ways. <b>  (1) : </b>	The statements S(1) and S(2) both reference the same memory location. 
+ <b> (2) </b> 	The execution of S(1) that references<B> L </B>  occurs before the execution of S(2), that references <B> L </b>.
+ <BR> <BR>
+
+
+The below example gives loop-carried dependence, and it is possible to re-write the code to get loop-independent dependence 
+in Multi-core environment.  You have to insert Parallel for pragma directives in the loop and special care is 
+required to avoid wrong results. OpenMP directives are commands to the compiler; the compiler will thread this loop. 
+The existing code may give wrong results. You have to re-write the code and convert the same to loop-independence dependent 
+code that is emendable for OpenMP-thread parallelisation.   
+
+The below loop code  consists of two statements with dependency as given below. and the values of the array
+i.e. X[8], & Y[*] are pre-defined. The value <I> n </i>is the loop upper-bound  and the dependence 
+distance <I> d </i> varies from 1 to <i> n </i> including both the values. <BR> <BR>
+</font>
+
+       <!-- ********************* table for loop  ************************ -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3">
+
+           <blockquote> 
+             <BR> 
+                &nbsp;&nbsp;&nbsp; // The Loop carries out dependence example in the code 
+              <BR> <BR>
+              &nbsp;&nbsp;&nbsp; X[0]=0; <BR>
+              &n
+bsp;&nbsp;&nbsp;  Y[1]=1;  
+             <BR> <BR>
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel for private (k); </font> <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for  <i> ( k </i>= 1; <I> k < n </i>;  <i>k++) &nbsp; </i> <br>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+          
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    x[k] = y[k-1] + 1; &nbsp; &nbsp; &nbsp; // S(1) <BR>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              y[k] = x[k-1] + 2; &nbsp; &nbsp; &nbsp; // S(2) <BR>
+
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  } <BR> <BR>
+          </blockquote>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+    <BR>
+   <!-- ******************** table for loop Ends  *********************** -->
+
+      <font face="Verdena" color ="black" size="2">
+
+            <li> <B>Input</B></li>
+
+
+            <p aign ="left"> Sequential code with loop dependence statements with suitable value of <I> n </i> </p>
+
+
+            <li> <B>Output</B></li>
+            <p aign ="left">  Correct results of the code & Performance of the program on Multiple cores </p>
+
+           </font>
+
+          </ul>
+   
+
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TD> 
+  </TR> 
+
+
+</tbody>
+ </table>   
+ 
+
+<!-- **************************** Example 1.6 Ends *************************** -->
+
+  <!-- ***************************  Example 1.7  starts  ************************* -->
+
+
+<A NAME="omp-par-prog-id17"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+<tbody>
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.7 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+            Write a OpenMP program to illustrate <I> Data Race condition </i>  <BR>
+             &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; 
+           
+<!-- ************download start here ***************--> 
+  
+           (Download source code ; 
+           <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-prime-datarace-condt.c">omp-prime-datarace-condt.c</a>
+        </FONT> </I> 
+ 
+     )
+     <BR>
+
+
+<!-- ************download Ends here ***************--> 
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+            Write  OpenMP programs   to illustrate <i> Data Race condition </i> and eliminate 
+             <I> Data Race Condition </i> using the <I> private </i> clause to the <I> parallel for </i> pragma
+             
+            <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+           Date-race Condition :
+
+Data-race condition occurs when multiple threads attempt to update the same memory location, or variable after threading.
+ Also, one of the threads write the variable whereas other threads attempts to update the memory location and threads
+ are not using any exclusive locks to control their accesses to that memory. <BR> <BR>
+
+
+When the above three conditions hold, the order of accesses is non-deterministic, and the computation may give 
+different results from one run to another, depending on that order. Some data races may be begin (for example, 
+when the memory access is used for a busy-wait), but many data races are either bugs or caused by bugs in the 
+programs 
+The OpenMP C ++ & Fortran compilers do not perform or ignores the detection of data-race condition. Different
+ types of bugs (synchronization & performance) may lead to undesired results. The synchronization bugs arise 
+due to race conditions and deadlocks that cause incorrect behaviors of codes.  To fix some of these bugs, 
+either a trace buffer concept provided y tools can be used or re-write the code using privatization pragams 
+of OpenMP.   In some situations of the code behaviors, the code needs to be modified via different methods. 
+The popular methods in OpenMP are use of privatization or synchronized using mechanisms like "mutuxes".  <BR> <BR>
+
+A simple example in which multiple threads are updating the variable x will lead to undesired or wrong results.
+  In this, the distribution of work of given loop to each thread is done using pragma omp parallel for. It is 
+observed that all the threads update the variable x concurrently and the results for multi-threads may produce 
+in-correct results. 
+
+The data-race condition can be eliminated for this loop by adding the private(x) clause to the parallel pragma. 
+
+The application developer can avoid these issues, taking care-off threading contention and race conditions in mind. 
+ Several tools such as Performance Analyzer and Thread-Checker can be used.</p> <BR> <BR>
+</font>
+
+       <!-- ********************** table for loop ************************* -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+                &nbsp;&nbsp;&nbsp; // The Loop carries out data-race condition exisits for variable <i> x </i> <BR>
+                &nbsp;&nbsp;&nbsp; // The Developer can eliminate it by adding private (x) clause <BR>
+              <BR> <BR>
+              &nbsp;&nbsp;&nbsp; float tolerance = 250.75;  <BR>
+              &nbsp;&nbsp;&nbsp; int  var = 75;  <BR> <BR>
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel for </font>  <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for   ( k = 1;  k < n ;  k++)  &nbsp; <br>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    x  = sinc (k*2.0) * var + 1; &nbsp; &nbsp; &nbsp;  <BR>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              if ( x > tolerance) x = x % tolerance + 1 ;  &nbsp; &nbsp; &nbsp; <BR>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              printf ( "x %d = %d \n ", k, x); <BR>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              A[k] = x *x ;  <BR>
+
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  } <BR> <BR>
+          </blockquote>
+       </font> 
+
+
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+    <BR>
+   <!-- *********************** table for loop Ends ********************* -->
+ 
+       <font face="Verdena" color ="black" size="2">
+
+        <li> <B>Input</B></li>
+
+
+       <p aign ="left"> Number of threads and Upper bound to find the Prime Number. </i>  </p>
+
+
+       <li> <B>Output</B></li>
+       <p aign ="left">  Correct results of the code & Performance of the program on Multiple cores </p>
+
+       </font>
+
+  </ul>
+   
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TD> 
+  </TR>
+</tbody> 
+ </table>   
+
+
+<!-- ************************* Example 1.7 Ends ***************************** -->
+
+   
+<!-- ******************************  Example 1.8 starts *************************** -->
+
+
+<A NAME="omp-par-prog-id18"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+    <tbody>
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.8 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+           Write a OpenMP program to illustrate <I> Mangaing Shared & Private Data </i>  <BR> 
+             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      
+<!-- ************download start here ***************--> 
+  (Download source code ; 
+           <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-shared-private-data.c">omp-shared-private-data.c</a>
+        </FONT> </I> 
+  )
+     <BR>
+
+  
+  <!-- ************download Ends here ***************--> 
+
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+            Write an OpenMP program to illustrate <I> Managing  Shared & Private Data </i> 
+
+            <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+<BR>
+
+        It is important to understand which data is shared and which is private in multi-threaded programs 
+        not only from correctness of the results but also from performance point of view.  
+        The developer carefully examines all memory references, including the reference made by 
+        calls functions. <BR> <BR> 
+
+         OpenMP provides a set of clauses such as <I> shared </I>, <I> private </I>, and 
+         <I> default </I>.  The developer's responsibility is to identify clearly on which fragment of the code's 
+          memory should be <I> private </I> & which memory is shared among the threads.  When the memory is 
+         identified as <I> private </I>, however a separate copy of the variable, is made for each thread to 
+        access in private. When the loop exists, these private copies become undefined.  In multi-threaded programming 
+        environment, all the variables in parallel region are shared. <BR> <BR>
+
+        First, in parallel for loops, the loop index is private.  In the next example, the <I> k </i>  variable is private. 
+       Second variables that are local to the block of the parallel region are private. And third, any variables 
+        listed in the private, first private, lastprivate, or reduction clauses are private. 
+      The privatization is done by making a distinct copy of each of these variables for each thread. <BR> <BR>
+
+      A simple example given below requires declaration of private variables carefully in the loops. The following loop 
+     is very easy to execute using  <I>  #pragma omp parallel  </I> and in this loop, the variable <I> x </i>  is shared
+      by all the threads based on OpenMP default shared rule, so there is a data race condition on the <I> x </i>  while 
+     one thread is reading <I> x </i> , another thread might be writing to it.  The execution of this loop may
+     fails to give correct results.  <BR> <BR>
+
+    <!-- *********************** table for loop Starts  ***************************** -->
+
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+                &nbsp;&nbsp;&nbsp; // The Loop carries out data-race condition exisits for variable <i> x </i> <BR>
+                &nbsp;&nbsp;&nbsp; // The Developer can eliminate it by adding private (x) clause <BR>
+              <BR> 
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel for </font>  <BR> <BR>
+               &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  y = 75;    <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for  ( k= 1;  k < n ;  k++)  &nbsp;  <br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               int x;  // Varaibles declared within a parallel     <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               x = array[k];    <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              array[k] = function(x, y) ;    <BR>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              printf ( "array[k] %d = %d \n ", k, array[k]); <BR>
+                     
+
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  } 
+          </blockquote>
+       </font> 
+
+        </td>
+        </tr>
+       </tbody>
+       </table>
+
+    <BR>
+   <!-- **************************** table for loop Ends ************************* -->
+
+
+    One way of obtaining correct results is to declare the variable <I> x </i> a private memory. Another way is declare
+     variables  in the parallel construct region, which by default are private.  <BR> <BR> 
+
+
+
+     <!-- *********************** table for loop Starts  ***************************** -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+                &nbsp;&nbsp;&nbsp; // The Loop carries out data-race condition exisits for variable <i> x </i> <BR>
+                &nbsp;&nbsp;&nbsp; // The Developer can eliminate it by adding private (x) clause <BR>
+              <BR> 
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel for private (x) </font>  <BR> <BR>
+               &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  y = 75;    <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for   ( k = 1;  k < n ;  k++)  &nbsp; <br>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               int x;  // Varaibles declared within a parallel     <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               x = array[k];    <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              array[k] = function(x, y) ;    <BR>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              printf ( "array[k] %d = %d \n ", k, array[k]); <BR>
+                     
+
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  } 
+          </blockquote>
+       </font> 
+
+        </td>
+        </tr>
+       </tbody>
+       </table>
+
+    <BR>
+   <!-- ********************** table for loop ****************************** -->
+
+
+
+    In the above, the variable <I> x </i> is declared inside the loop i.e., really inside the OpenMP
+    parallel region - without static keyword. compiler and linker statically allocate the designated memory
+    for static variables, but they are not truly <I> private </i> like other variables declared within a
+    function, which are allocated within the stack frame for the function. 
+
+
+
+     <!-- ************************ table for loop Starts ************************** -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+                &nbsp;&nbsp;&nbsp; // The Loop carries out data-race condition exisits for variable <i> x </i> <BR>
+                &nbsp;&nbsp;&nbsp; // The Developer can eliminate it by adding private (x) clause <BR>
+              <BR> 
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel for  </font>  <BR> <BR>
+               &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  y = 75;    <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for  ( k = 1;  k < n ;  k++)  &nbsp;  <br>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               int x;  // Varaibles declared within a parallel     <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; // construct area, by defintition, private  <BR> <BR>
+
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              array[k] = function(x, y) ;    <BR>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              printf ( "array[k] %d = %d \n ", k, array[k]); <BR>
+                     
+
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  } 
+          </blockquote>
+       </font> 
+
+        </td>
+        </tr>
+       </tbody>
+       </table>
+
+    <BR>
+   <!-- ************************ table for loop Ends*********************  -->
+
+ 
+       <font face="Verdena" color ="black" size="2">
+
+        <li> <B>Input</B></li>
+
+
+       <p aign ="left"> Number of threads and Size of an Array  </p>
+
+
+       <li> <B>Output</B></li>
+       <p aign ="left">  Correct results of the code & Performance of the program on Multiple cores. </p>
+
+       </font>
+
+  </ul>
+   
+   
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TD> 
+  </TR> 
+</tbody>
+ </table>   
+
+
+<!-- *********************** Example 1.8 Ends ************************* -->
+
+  
+<!-- ***************************  Example 1.9 starts *************************** -->
+
+
+<A NAME="omp-par-prog-id19"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+    <tbody>
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.9 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+           Write a OpenMP program to illustrate <I> Loop Scheduling & Partitioning - Optimize Performance</i>  <BR>
+             &nbsp;&nbsp;&nbsp; 
+
+<!-- ************download start here ***************--> 
+(Download source code ; 
+            <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-matmat-schedule.c">omp-matmat-schedule.c</a>
+        </FONT> </I> 
+ 
+    )
+     <BR>
+
+<!-- ************download Ends here ***************--> 
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+            Write a OpenMP program to illustrate <I> Loop Scheduling & Partitioning - Optimisze Performance</i>  
+             <BR> <BR>
+           
+           <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+            
+            
+              Effective Loop scheduling and partitioning of data among threads is required for good load balancing 
+              and thereby achieving optimal performance on multi-cores..  One of the objectives is to 
+              ensure that the execution cores are busy with computation with minimum amount of overhead of scheduling, 
+              context switching and synchronization. Applications having static load balancing or work, 
+             it is possible to estimate the performance. In the case of dynamic workload scenario of applications, 
+             some threads my finish the work significantly before others.  This leads to idleness of processor and 
+             thus wasting many CPU cycles. OpenMP provides four scheduling schemes, that are appropriate for many 
+              situations: </p><BR> 
+
+            <div align = "Center"> 
+            <font face = CourierNew size =3> 
+                 static,  dynamic,  runtime  </font> and 
+
+                  <font face = CourierNew size =3>   guided. </font> </div> 
+             <br> <br>
+
+	   <p align="justify">
+             It is important to estimate the workload among the loop iterations by examining the source code. 
+              Even though it is difficult & hard to determine the time taken to complete the work by each thread, but
+              the code can be modified in such a way that compiler and runtime library can better partition and 
+             distribute the iterations of the loop across the threads, and therefore the cores, for optimal load 
+            balancing.  Also, the loop scheduling information via the schedule (kind[, chunksize]) clause can further 
+             help the performance. </p><BR> <BR>
+
+		<p align="justify">
+
+              By default, an <I>  OpenMP parallel  for </I> or work-sharing <I> for </I> for loop uses static even 
+               scheduling.  This means the iterations of a loop are distributed among the threads in a roughly equal 
+             number of iterations. The static scheduling scheme minimize the chances of memory conflict that 
+             can arise when more than one process is trying to access the piece of required memory. This
+             is equivalent to use the optimal memory but it does not talk about the optimal load balancing. Thus, 
+            it is necessary to strike a balance between optimal memory usage and optimal load balancing by measuring 
+           performance to see what method produces the best results. </p><BR>
+
+
+
+		<p align="justify">
+            Loop-scheduling and partitioning information is conveyed to the compiler and runtime library on the 
+          openMP <I> for </I> construct with the <I> schedule </I> clause. </p><BR> 
+
+             <div align = "Center"> 
+              <font face = CourierNew size =3> 
+                   #pragma omp for schedule (kind {, chunksize})
+              </font> </div> 
+            <BR> <BR>
+
+<p align="justify">
+        The optimal choice of parameter <I> chunk size </I> and adjust the proper chunk-size play an important role to get 
+        performance.  Improper chunk size may lead to overhead of going to work queue by each thread increases, 
+        thereby reducing performance, and possibly offsetting the benefits of load balancing.  The dynamic scheduling, 
+        the chunks are handled with the first-come first server scheme. The default chunk size is set to 1. 
+        Each time, if the number of iterations are set equal to the chunk size specified in the scheduling clause for 
+        each thread. Usually, after the thread has finished executing the iterations given to it, it requests another 
+        set of chunk-size iterations.  This continues until all of the iterations are completed. The last set of 
+        iterations may be less than the chunk size. <BR> <BR>
+
+         For example, if the chunk size is specified as 16 with the schedule (dynamic, 16) clause, and the total number 
+      of iterations 50, the partition would be 16, 16, 16, 2  with a total of four chunks. <BR> <BR>
+
+      Consider the following  example for efficient loop Scheduling and optimization on a dual core /quad Core processor
+      with Cache line as  512 Mbytes or 1 GB memory. Write an OepnMP program with an optimal choice of chunk size and 
+      estimate the performance. </p><BR> <BR>
+
+
+    <!-- ************************ table for loop Starts **************************** -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+             
+                &nbsp;&nbsp;&nbsp; // The Developer should choose optimal chunk size as per System <BR>
+              <BR> <BR>
+              &nbsp;&nbsp;&nbsp; flaot x[1000], y[1000];  <BR> <BR>
+             
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel for schedule (dynamic, 8) </font>  <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for   ( k = 1;  k < n ;  k++)  &nbsp; <br>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    x[k] = cos(k) * x[k] + sin(k) *y(k);  &nbsp; &nbsp; &nbsp;  <BR>
+             
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  } 
+        <BR> <BR>
+          </blockquote>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- ************************ table for loop Ends  **************************** -->
+
+
+ 
+       <font face="Verdena" color ="black" size="2">
+
+        <li> <B>Input</B></li>
+
+
+       <p aign ="left"> Number of threads, Chunk Size and size of Matrices </p>
+
+
+       <li> <B>Output</B></li>
+       <p align="justify">  Correct results of the code & Performance of the program on Multiple cores. summary of  
+      performance with respect to  optimal choice of chunk size </p>
+
+       </font>
+
+  </ul>
+   
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TD> 
+  </TR>
+</tbody> 
+ </table>   
+ 
+
+<!-- *********************** Example 1.9 Ends ************************************** -->
+
+<!-- ***************************  Example 1.10 starts ****************************** -->
+
+
+<A NAME="omp-par-prog-id110"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+   <tbody>
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.10 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+           Write a OpenMP program to illustrate <I> Work-Sharing Sections </i>  (Functional Parallelism) <BR>
+             &nbsp;&nbsp;&nbsp;  
+
+<!-- ************download start here ***************--> 
+
+          (Download source code ; 
+
+           <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-workshare-section.c">omp-workshare-section.c</a>
+        </FONT> </I> )
+     <BR>
+
+<!-- ************download Ends here ***************--> 
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+             Write a OpenMP program to illustrate <I> Work-Sharing Sections </i> (Functional Parallelism)   
+             <BR> <BR>
+
+            <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+
+           <font face = "verdana" size ="2"> 
+        OpenMP provides Data Parallelism and functional parallelism. Different threads can be
+       associated with different portions of the code. There are some kinds of applications in which some portions 
+       of the code or functions can be executed in parallel to exploit the functional parallelism.  </font> <BR> <BR>
+
+     The parallel  <font face = "CourierNew" color="red" size="2" >  sections </font> pragma precedes a  block of <I> k </I> blocks 
+     of code that may be executed concurrently by <I> K </I> threads.  The syntax is <BR> <BR>
+
+ <div align ="center">
+  <font face ="CourierNew" color="red" size="3" > #pragma omp parallel sections  </font>  </diV>
+<BR> <BR>
+
+  Unlike loop scheduling, the schedule clause is not defined for <font face ="CourierNew" color="red" size="2" > sections  </font>.
+ OpenMP is an complete control of how, when, 
+ and in what order threads  are scheduled to execute the sections.
+
+The <font face ="CourierNew" color="red" > section </font> pragma precedes a block of code within the encompassing block preceded by 
+the  <font face ="CourinerNew" color="red" >  parallel sections  </font> pragma. <BR> <BR>
+
+
+The work-sharing <font face ="CourierNew" color="red"> section </font> pragma (construct) directs the OpenMP compiler and 
+runtime to distribute the identified sections of your application among threads in the team created for parallel region. <BR> <BR>
+
+
+Below example uses work-sharing for loops and work-sharing sections together within a single parallel region. 
+
+We considered, the calls to functions alpha, beta, gamma, delta could be evaluated concurrently.  After completion of these, the 
+remaining functions can be evaluated. 
+
+It is possible that the program contains more sections than threads; the remaining sections get scheduled as threads 
+finish previous sections. <BR> <BR>
+
+
+
+
+<!-- ************************** table for loop Start *************************-->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+             
+               &nbsp;&nbsp;&nbsp; // The Developer should check the independent functions  <BR> <BR>
+             
+             
+               &nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp parallel </font>  <BR> 
+              &nbsp;&nbsp;&nbsp;
+              { <BR> 
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color="black"> #pragma omp parallel </font> <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for   ( k = 1;  k < n ;  k++)  &nbsp; <br>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              { <BR>  
+
+               &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x = alpha(k) + beta(k);   <BR> <BR>
+
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }  <BR> <BR>
+  
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="black"> #pragma omp sections private(y,z) </font>  <BR> 
+              &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  { <BR> <BR>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  <font color="black"> #pragma omp section </font>  <BR> 
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    { y = telda(x); gamma(y); }   <BR> <BR>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  <font color="black"> #pragma omp section </font>  <BR> 
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    { y = epsilon(x); delta (z); }   <BR>
+             
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }  <BR>
+
+      &nbsp;&nbsp;&nbsp;
+              } <BR> 
+     
+          </blockquote>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- ************************** table for loop Ends *************************-->
+
+
+            </p>
+
+
+            <li> <B>Input</B></li>
+
+
+            <p aign ="left"> Number of threads and size of matrices. </p>
+
+
+            <li> <B>Output</B></li>
+            <p aign ="left">  Performance on Multi-Cores </p>
+
+           </font>
+
+          </ul>
+   
+<DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TD> 
+  </TR>
+</tbody> 
+ </table>   
+ 
+
+<!-- ****************************** Example 1.10 Ends *************************** -->
+ 
+<!-- *******************  Example 1.11 starts ****************************** -->
+
+
+<A NAME="omp-par-prog-id111"></A> 
+ <p> 
+    <table border="0"  height="6"><font face="Verdana" size="2">
+    <tbody>
+      <TD height="90%"> 
+        <IMG SRC="./../openmp-images/bullet1.gif" HEIGHT=15 WIDTH=15>
+
+           <font face="Verdana" size="2" COLOR="#FF6600">  <B>  Example 1.11 : </b> </font> 
+
+          <font face="Verdana" size="2">
+  
+           : Write a OpenMP program to illustrate the  <I> performance improvement  </i>   <BR>
+             &nbsp;&nbsp;&nbsp;  
+
+<!-- ************download start here ***************--> 
+
+           (Download source code ; 
+
+           <I><FONT COLOR="#CC66CC">
+    <a HREF="../openmp-codes-c-lang/omp-loop-invert.c">omp-loop-invert.c</a>
+        </FONT> </I> )
+     <BR>
+
+
+<!-- ************download start here ***************--> 
+
+   </TD>  
+    </TR> 
+
+  <TR>
+  <TD>
+   
+   <UL>
+  <BR>
+          <font face="Verdana" size="2">
+
+            <LI> <B>Objective</B></LI>
+             <p aign ="left">
+            Write a OpenMP program to illustrate the performance improvement of the parallel loops.   
+             <BR> <BR>
+
+            <LI> <B>Description</B>&nbsp;</LI>
+
+            <p align="justify">
+
+           <font face = "verdana" size ="2"> 
+        Transforming a sequential for loop into a parallel for loop can actually increase a program's execution time. 
+	But there is some ways of improving the performance of the parallel loops.<BR>
+
+	The following code segment shows the data dependency in this code ;
+ 	</font> <BR> <BR>
+
+
+<!-- ************************ table for loop Starts *************************** -->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+           <blockquote> 
+             <BR> 
+               for( i=0 ;  i < m ; i++ )
+             <blockquote> for( j=0 ;  j < n ; j++ )
+        	<blockquote>a[i][j] = 2 * a [i-1][j]
+
+     		</blockquote>
+	    </blockquote>
+          </blockquote>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- ************************ table for loop Ends *************************** -->
+
+
+ <p align="justify">
+
+           <font face = "verdana" size ="2"> 
+The above code shows that the two rows may not be updated simultaneously, because there is data dependence  between rows. 
+However the columns may be updated simultaneously. This means the loop indexed by j may be executed in parallel , 
+but not the loop indexed by i.<BR><BR>
+
+If the parallel for pragma insert before the inner loop , the resulting parallel program will execute correctly, but it may 
+not exhibit good performance , because it will require m-1 fork/join steps,one per iteration of the outer loop.<BR><BR>
+ However if the loops will invert :
+</font>
+
+
+            </p>
+
+
+
+<!-- ************************ table for loop Starts *********************-->
+          <TABLE cellPadding=3  bgcolor=#EBDDE2 border=1>
+         <tbody>
+         <tr>
+         <td>
+<blockquote>
+<font face="CourierNew" color ="black" size="3" letter-spacing= "2px">
+
+	#pragma parallel for private(i)</font>
+         <font face="CourierNew" color ="red" size="3" letter-spacing= "2px">
+
+            
+             <BR> for( j=0 ;  j < n ; j++ )
+              
+             <blockquote>  for( i=0 ;  i < m ; i++ )
+        	<blockquote>a[i][j] = 2 * a [i-1][j]
+
+     		</blockquote>
+	    </blockquote>
+          </blockquote>
+       </font> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- ************************ table for loop Ends *************************** -->
+
+
+
+ <p align="justify">
+
+           <font face = "verdana" size ="2"> 
+
+only a single fork/join step is required (surrounding the outer loop). The data dependences have not changed ; the iterations
+ of the loop indexed by j are still independent of each other. In this respect 
+the code may be improved.<BR><BR>
+
+However , we must always be cognizant of how code transformation affect the cache hit rate . 
+
+</font>
+
+
+            </p>
+
+
+            <li> <B>Input</B></li>
+
+
+            <p aign ="left"> Number of threads and size of matrix. </p>
+
+
+            <li> <B>Output</B></li>
+            <p aign ="left">  Performance on Multi-Cores </p>
+
+           </font>
+
+          </ul>
+   <DIV ALIGN=right>
+         <A HREF="openmp-basic-pragmas.html"> <IMG SRC="../openmp-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+
+   </TD> 
+  </TR> 
+</tbody>
+ </table>   
+ 
+
+<!-- ******************************* Example 1.11 Ends *****************************-->
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        <TD class=footertext align=center>
+           <A href="http://www.iitm.ac.in" target=_blank><FONT color=red size=2>
+           Indian Institute of technology Madras </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

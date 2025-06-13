@@ -1,0 +1,2777 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+  
+	   <A class=menulslct
+              href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+                <!-- ** -->  
+              <A class=menulslct
+	        href="./reference-overview-hypack13-mode01-pgas.html">
+                &#149;  Reference</A>
+              <!-- ** -->
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+        
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	
+	
+ 		
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+
+<TR>
+<TD>
+
+
+<A name = "mode01-pgas-upc-ref"> </A>
+
+<H1> HeGaPa-2012   References - PGAS   </H1>
+   
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  Partitioned Global Address Space (PGAS) : UPC  -  References & Web sites </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+        <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-01].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       <a href = "http://upc.lbl.gov/docs/user/upc_spec_1.2.pdf" target="newWin"> 
+          <font color = "blue"> UPC Language Specification, v1.2 </font> </a> </font>
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-02]. </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      David E. Hudak, Ph.D., Program Director for HPC Engineering, 
+     <I>  Introduction to PGAS -UPC, Ohio Supercomputer Center </i> </font>
+
+     </td>
+     </tr>
+ 
+  
+
+      <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-03]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Abdullah Kayi , Prof. Tarek El-Ghazawi (GWU) <i> PGAS Languages</i>, HPCL, The George Washington University  </font>
+       
+        </font>  
+    </td>
+    </tr> 
+
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-04].    </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Jithin Jose <i> PGAS Programming models</i></font>, PhD student,  Computer Science Department, The Ohio State University
+       
+        </font>  
+    </td>
+    </tr> 
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-05].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       P Balaji (Argonne), R. Thakuar (Argonne), E. Lusk (Argonne) &amp; James Dinan (OSU) <I> Hyrbid 
+       Parallel Programming MPI and PGAS (UPC) </font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [UPC-06].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > <I> James Dian, PhD Intern from Ohio State,  May, 2009 </i>
+       An Introduction to Unified Parallel C (UPC) </font>
+     </td>
+     </tr>
+
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [UPC-07].   </font>   
+     </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Kathy Yelick,(LBNL and UC Berkeley) <I> UPC Benchmarks </i>     
+     </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [UPC-08].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Ian Kirker and Adrian Jackson   <I> Unified Parallel C - UPC on HPCx </i>,
+      Jan 2008 </font>
+     </td>
+     </tr>
+
+  
+ 
+   <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-09].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+         <a href = "http://upc.lbl.gov/web-translator/2.4.0/runtime/opt/inst/share/doc/upcc/html/user/index.html" target="newWin"> 
+       <font color ="blue">  Berkeley UPC User's Guide, v2.4.0 </font> </a> </font>
+     </td>
+     </tr>
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-10].  </font>    </td>
+
+     <td width="80%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+     Dan OBonachea, Christian Bell,Wei Chen, Jason Duell, Paul Hargrove, Parry Husbands, Costin Iancu, Rajesh
+     Nishtala, MikeWelcome ,<i>
+         <a href = "http://upc.lbl.gov/publications/upc_tutorial_sp06.pdf"> 
+      <font color ="blue">  Programming in UPC (Unified Parallel C), CS267 Lecture, Spring 2006 </font>  </a> </font>
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-11]. </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Mike Welcome,  <I> (LBNL), Evaluation of High-Performance Networks as Compilation Targets for Global Address Space Language</i> 
+    In conjunction with the joint UCB and NERSC/LBL  UPC compiler development project 
+    <a href= "http://upc.nersc.gov"> <font color ="blue"> http://upc.nersc.gov" </font> </a> </font>
+     
+     </td>
+     </tr>
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-12].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       James Dinan (The Ohio State University), Pavan Balaji (ANL), Ewing Lusk (ANL), P. Sadayappan (Ohio-State University), 
+       Rajeev Thakur (ANL)  (2010) <I> 
+         Hybrid Parallel Programming with MPI and Unified Parallel C,    </i> 
+     ACM  2010 </font>
+     
+     </td>
+     </tr>
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-13].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Berkeley UPC. Berkeley UPC user’s guide version 2.8.0, 2009. </font>
+     
+     </td>
+     </tr>
+ 
+    
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-14].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      Zhang Zhang, Steven Seidel, <i> Benchmark Measurements of Current
+        UPC Platforms </i> Dept. of Computer Science, Michigan Technological University, UPC Developer's Workshop
+       Washington D.C. (2004)
+   </font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-15].  </font>    </td>
+
+     <td width="80%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Zhang Zhang, Steven Seidel, <i> Benchmark Measurements of Current
+       UPC Platforms </i> Dept. of Computer Science, Michigan Technological University, </i> Proceedings of the 
+      19th IEEE International Parallel and Distributed Processing Symposium (IPDPS’05)
+   </font>
+     </td>
+     </tr>
+
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-16].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+     Bill Carison, IDA; Tarek E-Ghazawi, GWU; Rober Numrich, University of Minnesota;
+     Kathy Yelick, UC Berkeley; <i> Progamming in the Partitioned Global Address Space Model</i> Sc-2003
+   </font>
+     </td>
+     </tr>
+
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [UPC-17].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+     E. Wiebel, D. Greenberg, and S. Seidel.  
+      <i> UPC Collective Operations Specification V1.0. Technical report, May 2003.  </i> </font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-18].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      F. Cantonnet and T. El-Ghazawi <i>
+      UPC Performance and Potential: A NPB Experimental Study</i>, In Proceedings, Supercomputing
+      2002: Baltimore, Maryland, Nov. 2002. </font>
+     </td>
+     </tr>
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [UPC-19].  </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+    Yili Zheng, Costin Iancu, Paul Hargrove, Seung-Jai Min, Katherine Yelick, Lawrence Berkeley National Lab 
+   <I> Extending Unified Parallel C for GPU Computing </i> 
+   FEbruary 2010, SIAM PP 2010  </font>
+     </td>
+     </tr>
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[UPC-20].    </font>    </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" >
+         F. Cantonnet T. El-Ghazawi. <i> UPC performance and potential:  A NPB experimental
+         study, 2002.</I> </font>
+ 
+  
+     </td>
+     </tr>
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [UPC-21].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     KAthy Yelick  <I> Unified Parallel C (UPC)</i>; PSC Petascale Methods, April 2004
+       </i>
+        </font>  
+    </td>
+    </tr> 
+
+   
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-22].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+        <A href ="http://gasnet.cs.berkeley.edu/" target="newWin"> 
+      
+        <font color = "blue"> UC Berkeley. GASNet Home Page, 2004 </font> </a>
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [UPC-23].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    UC Berkeley. Berkeley Unified Parallel C Home Page, 2004.
+       <A href ="http://upc.nersc.gov" target="newWin"> 
+        <font color = "blue">  http://upc.nersc.gov  </font> </a>
+        </font>  
+    </td>
+    </tr> 
+
+  <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [UPC-24].    </font>   </td>
+
+     <td width="87%" height="2" align="left">
+    T. El-Ghazawi and S. Chauvin. 
+<font face="Verdana" size="2">
+<I> UPC Benchmarking Issues </i> In Proceedings of ICPP </i> 2001. </font>
+        </font>  
+    </td>
+    </tr> 
+
+ <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [UPC-25].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+  
+<a href = " http://upc.gwu.edu/documentation.html" > 
+ <font color = "blue">  UPC Community Forum. UPC specification v1.2, 2005. </font>  </a> 
+
+        </font>  
+    </td>
+    </tr> 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-26].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <a href="http://upc.lbl.gov"> <font color = "blue"> The Berkeley UPC - Unified Parallel C  </font> </a> A Joint 
+Project of LBNL and UC Berkeley, 2002
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-27].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <a href="http://www.upc.mtu.edu/"> <font color = "blue"> MuPC portable UPC runtime system </font> </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-28].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      
+      UPC language specifications, v1.2. Technical Report, 
+      LBNL-59208, Berkeley National Lab, 2005.
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-29].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      T. El-Ghazawi, W. Carison, T. Sterling, and K. Yelick. 
+       UPC: Distributed shared memory programming. John Wiley &amp; Sons,  January 2005.
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [UPC-30].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     
+      Zhang Zhang and Steven R. Seidel, <i> A Performance Model for Fine-Grain Accesses in UPC</i>, 
+      Michigan Technological University, Dept. of Computer Science,  Houghton, MI 49931-1295 USA
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+</tbody>
+</table>
+</p>
+
+<!-- **************** PGAS UPC Ends  Here ********************* -->
+
+
+<!-- *********************** PGAS Titanium Starts ************************* -->
+
+<A name = "mode01-pgas-titanium-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Partitioned Global Address Space (PGAS) :Titanium -  References & Web sites </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+     <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-01].     </font>   </td>
+
+     <td width="87%" height="2" align="left">
+     <a href ="http://titanium.cs.berkeley.edu"> <font face="Verdana" color="blue" size="2"> Titanium home page</font> </a>
+
+ 
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="13%" height="2" valign = "top" valign="top">   <font face="Verdana" size="2"> [TNM-02]  </font>   </td>
+
+     <td width="80%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+   <i>   Paul  N. Hilfinger (ed.), Dan Oscar Bonachea, et al. </i> "Titanium Language Reference
+Manual." UC Berkeley EECS August 2005.
+
+<A href ="http://www.eecs.berkeley.edu/Pubs/TechRpts/2005/EECS-2005-15.html"> 
+<font color ="blue"> 
+Titanium Language Reference Manual, version 2.19  </font> </a>
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="13%" valign = "top" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-03].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+  <i>  Katherine Yelick, Paul Hilfinger, et al. </i>  "Parallel Languages and Compilers:
+Perspective from the Titanium Experience." International Journal of High
+Performance Computing Applications, Vol. 21, No. 3, 266290,
+2007. </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-04].    </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+  <I> Jason Ryder, Matt BeaumontGay, Aravind Bappanadu</i>, Titanium: A HighPerformance Java Dialect
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-05].  </font>   </td>
+
+     <td width="87%" height="2" align="top">
+       <font face="Verdana" size="2">
+<I> Kaushik Datta, Dan Bonachea1 and Katherine Yelick,
+    fkdatta, bonachea, yelick </i>,Titanium Performance and Potential: An NPB Experimental Study
+   Computer Science Division, University of California at Berkeley &amp; 
+   Lawrence Berkeley National Laboratory
+    </font>  
+    </td>
+    </tr> 
+   
+  <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-06].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <I>  K. Yelick, L. Semenzato, G. Pike, C. Miyamoto, B. Liblit,
+A. Krishnamurthy, P. Hilnger, S. Graham, D. Gay, P. Colella,
+and A. Aiken.  </i> Titanium: a high-performance Java dialect.
+In Proceedings of ACM 1998 Workshop on Java for High-
+Performance Network Computing, February 1998.
+    </font>  
+    </td>
+    </tr> 
+ <!-- ********************* END Here ******************* -->
+
+
+ <!-- ********************* Starts Here ******************* -->
+  <tr>   
+<td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-07].  </font>   </td> 
+ <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     
+<I> P. Hilfinger, D. Bonachea, K. Datta, D. Gay, S. Graham, B. Liblit, G. Pike, J. Su and K. Yelick. </i>
+Titanium Language Reference Manual,  U.C. Berkeley Tech Report
+
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-08].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+<I> Jimmy Su and Katherine Yelick, </i>  Array Prefetching for Irregular Array Accesses in Titanium 
+ Sixth Annual Workshop on Java for Parallel and Distributed Computing, Santa Fe, New Mexico, April 2004. 
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-09].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://gasnet.cs.berkeley.edu/" > <font color= "blue"> GASNet home page  </font> </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-10]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     <a href ="http://www.intrepid.com/"> <font color ="blue"> Intrepid Technology  Inc. </font> </a>; &nbsp; 
+     <a href ="http://www.gccupc.org/">  <font color= "blue">  Intrepid Tech.  GCC Unified Parallel C 
+        (GCCUPC)   </font> </a> toolset
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-11].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <I> J. Su and K. Yelick. </i>  Array prefetching for irregular array
+accesses in Titanium,  In Sixth Annual Workshop on Java for
+Parallel and Distributed Computing, Santa Fe, New Mexico,
+April 2004
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-12].</font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <I> Ben Liblit, Alex Aiken, and Katherine Yelick </i>,  Data Sharing Analysis for Titanium,  University of California, Berkeley, Computer Science 
+Division Technical Report, CSD-01-1165, November, 2001. 
+PDF available
+       
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-13].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <I> K. Yelick, L. Semenzato, G. Pike, C. Miyamoto, B. Liblit, A. Krishnamurthy, P.
+Hilfinger, S. Graham, D. Gay, P. Colella, and A. Aiken, </i>  "Titanium: A highperformance
+Java dialect," Concurrency Practice and Experience, vol. 10, pp. 825-
+836, 1998.
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-14]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+ <I>   K. Yelick, P. Hilfinger, S. Graham, D. Bonachea,
+   J. Su, A. Kamil, K. Datta, P. Colella, and T. Wen. </i> 
+Parallel languages and compilers: Perspective from
+the Titanium experience. The International Journal of
+High Performance Computing Applications, 21(2),
+2007.
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ********************* PGAS Titanium Ends  Here **************** -->
+
+
+
+<!-- ********************* PGAS CAF  Starts *********************** -->
+</tbody>
+</table>
+</p>
+
+<A name = "mode01-pgas-caf-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  Partitioned Global Address Space (PGAS) : CAF  -  References & Web sites </b> </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+ <!--------------------Starts Here ----------------->
+     <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-01].</font> </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+ 
+<I> Cristian Coarf, Yuri Dotsenko, John Mellor-Crummey (Rice University),
+Franciois Cantonnet, Tarek El-Ghazawi, Ashrujit Mohanty, Yiyi Yao,
+(George Washington University), Daniel Chavarria-Miranda (Pacific Northwest National Laboratory (PNNL))</i>; 
+    An Evaluation of Global Address Space Languages:
+Co-Array Fortran and Unified Parallel C; ACM-2005
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- .................. Ends  Here .................. -->
+
+    
+
+<!-- ****************** Starts Here ********************** -->
+
+    <tr>
+     <td width="13%" height="2" valign="top"> <font face="Verdana" size="2", class="content"> [CAF-02].</font> </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content"> 
+     
+  <a href =" http://www.caf.rice.edu">  <font color= "blue"> Co-Array Fortran 2.0  </font>  </a> Aprril,2009-2011
+
+     </td>
+     </tr>
+<!-- ***************** Ends  Here ******************** -->
+   
+  
+    
+
+<!-- ****************** Starts Here ********************** -->
+
+    <tr>
+     <td width="13%" height="2" valign="top"> <font face="Verdana" class="content" size="2"> [CAF-03].  </font> </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+ <i>   R. W. Numrich and J. K. Reid</i>,  Co-Array Fortran for
+parallel programming. ACM Fortran Forum,
+17(2):1–31, August 1998.
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+  <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-04]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+<i>   John Mellor-Crummey, Laksono Adhianto
+Mark Krentel, Guohua Jin, William Scherer III,
+Chaoran Yang; </i>, 2010 HPC Challenge Class II Submission:
+Coarray Fortran, Center for Scalable Application Development Software 2.0, Department of Computer Science
+Rice University, SC2010
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-05]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+
+<a href="http://caf.rice.edu"> <font color ="blue"> Coarray Fortran (CAF) 2.0</font></a>;  
+Department of Computer Science, Rice University, Houston, TX
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+    
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-06]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <i>  Robert W. Numerich and John Reid</I>, 
+      Co-arrays in the next fortran standard. SIGPLAN Fortran Forum, 24(2):4–17, 2005.
+    </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-07].</font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <I>  Robert W. Numrich </i>
+      Introduction to Co-Array Fortran, Minnesota Supercomputing Institute, University of Minnesota, Minneapolis
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-08]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+   <I> C. Koelbel, D. Loveman, R. Schreiber, G. Steele, Jr., and M. Zosel</i>,
+   The High Performance Fortran Handbook. The MIT Press, Cambridge, MA, 1994.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-09]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+ <I>  Robert W. Numrich </i>,   A parallel numerical library for co-array fortran. Springer Lecture Notes in Computer
+   Science, LNCS 3911:960–969, 2005.
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-10]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <i>   Y.Dotsenko, C. Coarfa, J. Mellor-Crummey, and D. Chavarria-Miranda. </i> 
+    Experiences with Co-Array Fortran on Hardware Shared Memory Platforms,  In
+    Proceedings of the 17th International Workshop on Languages and Compilers for Parallel Computing,
+    September 2004.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [CAF-11].   </font>   </td>
+
+  <td width="87%" height="2" align="left">
+  <font face="Verdana" size="2">
+  <I>   C. Coarfa, Y. Dotsenko, J. Eckhardt, and J. Mellor-Crummey</i>, Co-array Fortran Performance
+    and Potential: An NPB Experimental Study. In Proc. of the 16th Intl. Workshop on Languages and
+    Compilers for Parallel Computing, Number 2958 in
+    LNCS. Springer-Verlag, October 2-4, 2003. 
+
+
+</font>  
+</td>
+</tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+<tr>
+     <td width="13%" height="2" valign="top">    <font face="Verdana" class="content" size="2"> [CAF-12]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <I> Yuri Dotsenko Cristian Coarfa John MellorCrummey</i>,  A Multiplatform CoArray Fortran Compiler
+        Dept. of Computer Science, Rice University 
+    </font>  
+    </td>
+    </tr>
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+<tr>
+     <td width="13%" height="2" valign="top">  <font face="Verdana" class="content" size="2"> [CAF-13]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     <I> J. Reid and R. W. Numrich</i>,  Co-arrays in the next Fortran standard. Sci. Program., 15(1):9–26, 2007.
+    </font>  
+    </td>
+    </tr>
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+<tr>
+     <td width="13%" height="2" valign="top">  <font face="Verdana" class="content" size="2"> [CAF-14]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <I>   Dotsenko, C. Coarfa, and J. Mellor-Crummey,</i> A multi-platform co-array fortran compiler. In
+       Proceedings of the 13th International Conference of
+       Parallel Architectures and Compilation Techniques
+       (PACT 2004), Antibes Juan-les-Pins, France, October 2004.
+    </font>  
+    </td>
+    </tr>
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+<tr>
+     <td width="13%" height="2" valign="top"> <font face="Verdana" class="content"size="2"> [CAF-15].</font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       R. Numrich and J. Reid. Co-array fortran for parallel
+       programming. In ACM Fortran Forum 17, 2, 1-31.,
+    </font>  
+    </td>
+    </tr>
+<!-- ***************** Ends  Here ******************** -->
+
+</tbody>
+</table>
+</p>
+
+
+<!-- ******************** PGA GA  Starts Here ******************* -->
+
+<A name = "mode01-pgas-ga-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  Partitioned Global Address Space (PGAS) : GA  -  References & Web sites </b> </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+
+  
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" class="content" size="2"> [GA-01].</font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a  href="http://www.emsl.pnl.gov/docs/global/"  target="_blank" > <font color = "blue"> 
+        Global Arrays ToolKit Home Page </font></a>
+        </font>  
+    </td>
+    </tr> 
+
+  <!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+     <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-02].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     <I>  J. Nieplocha, R. J. Harrison, and R. J. Littlefield</i>,  "Global Arrays: A Portable Shared
+Memory Programming Model for Distributed Memory Computers," in proceedings of
+Supercomputing, 1994. </font>
+ 
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-03]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    <I>  J. Nieplocha, R. J. Harrison, and R. J. Littlefield</i>, "Global arrays: A nonuniform
+memory access programming model for high-performance computers," Journal of
+Supercomputing, vol. 10, pp. 169-189, 1996.  </font> 
+
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-04]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+  <I>    J. Nieplocha, R. J. Harrison, M. Krishnan, B. Palmer, and V. Tipparaju</i>,  "Combining
+shared and distributed memory models: Evolution and recent advancements of the
+Global Array Toolkit," in proceedings of POHLL'2002 workshop of ICS-2002, NYC,
+2002. </I>  
+
+   
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ***************** Ends  Here ******************** -->
+
+     
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-05]  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+ <I>  J. Nieplocha, M. Krishnan, B. Palmer, V. Tipparaju, and Y. Zhang, </i> "Exploiting
+Processor Groups to Extend Scalability of the GA Shared Memory Programming
+Model," in proceedings of ACM Computing Frontiers, Italy, 2005.
+        </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-06].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+<I> J. Nieplocha, R.J. Harrison and R.J. Littleld</i>,  The Global Array Programming Model for 
+High Performance Scientific  Computing, Pacific Northwest Laboratory, SIAM News, August/September 1995
+
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-07].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    
+  <I>  Jarek Nieplocha, Bruce Palmer, Vinod Tipparaju, Manojkumar Krishnan, Harold Trease, </i>
+     Computational Sciences and Mathematics Department, 
+   <I>  Edoardo A , William,  R. Wiley</i>,  Environmental Molecular Sciences Laboratory
+   Advances, Applications and Performance of the Global
+       Arrays Shared Memory Programming Toolkit,  Pacific Northwest National Laboratory, 
+      Richland, WA 99352
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-08].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+  
+   <I>  Vinod Tipparaju, Edoardo A  Weikuan Yu,  Jeffrey S. Vetter, </i>
+      Computer Science & Mathematics† Department of Computer Science
+      Oak Ridge National Laboratory Auburn University, 
+      Enabling a highly-scalable global address space model for petascale computing </i>
+      Oak Ridge, TN 37831 Auburn, AL 36849
+     </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-09].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    <I>  S.Goedecker  and A.Hoisie (2001) </i> Performance Optimisation of Numericaly Intensive 
+     Codes, SIAM 2001
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-10].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+   <I>  Manojkumar Krishnan, Bruce Palmer, Abhinav Vishnu,
+    Sriram Krishnamoorthy, Je Daily, Daniel Chavarria </i> 
+    The Global Arrays User Manual. November 12, 2010
+        </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-11].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     <I>  Nieplocha, R.J. Harrison, M.K. Kumar, B. Palmer, V. Tipparaju, H. Trease  </i>       
+      Combining Distributed and Shared Memory Models:
+       Approach and Evolution of the Global Arrays Toolkit, Pacific Northwest National Laboratory  
+    </font>  
+    </td>
+    </tr> 
+    
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-12]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <I> 	 Dr.Christian Halloy and Dr. Kwai Wong </i>
+  "Parallel Computing Techniques to Maximize Your Megaflops" 
+Supercomputing'99-Portland, OR  Tutorial Workshop Notes, November 15, 1999
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-13].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <I>	 L. Huang, B. Chapman, and Z. Liu. </I> Towards a more
+        excient implementation of openmp for clusters via
+        translation to global arrays. Parallel Computing, Jan 2005. 
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [GA-14].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <I> 	 J. Nieplocha, R. J. Harrison, and R. J. Littleeld </I> Towards a more
+        programming model for high-performance computers.
+        J. Supercomputing, (10):197-220, 1996.
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+</tbody>
+</table>
+</p>
+
+<!-- ******************** Heading Starts PGAS-X10  Here *************** -->
+
+
+<A name = "mode01-pgas-x10-ref"> </a>
+
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  Partitioned Global Address Space (PGAS) : X10 -  References & Web sites </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+   
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [X10-01].   </font>   </td>
+
+<td width="87%" height="2" align="left">
+<font face="Verdana" size="2">
+<a href = "http://X10-lang.org "> <font color = "blue"> X10 Web Site  </font> </a> 
+
+</font>  
+</td>
+</tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Ends  Here ********************* -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-02].   </font>   </td>
+
+<td width="87%" height="2" align="left">
+<font face="Verdana" size="2">
+
+<a href = "http://www.research.ibm.com/x10"> <font color = "blue"> The X10 programming language.  </font> </a>
+ 
+</font>  
+</td>
+</tr> 
+<!-- ****************** Ends  Here ********************* -->
+   
+
+   <tr>
+   <td width="13%" height="2" valign="top"> <font face="Verdana" size="2", class="content"> [X10-03] </font>    </td>
+
+    <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+     <i> Haichuan Wang, </I> IBM Research An Overview of the X10 programming language  November 2010</font>
+
+ <a href ="http://stap.sjtu.edu.cn/~chenyt/A7_A8_201011-X10.Tutorial-byHaichuanWang.pdf"> 
+  <font color = "blue"> X10.Tutorial-byHaichuanWang.pdf </font> </a> 
+    </td>
+    </tr>
+
+  <!-- ****************** Ends  Here ********************* -->
+
+    
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-04].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    <I>  Vijya Saraswat</i>, Report on the Experimental Language X10 DRAFT V 0.4,1, IBM USA, Feb 2006
+</font>
+
+    
+    </td>
+    </tr> 
+  
+<!-- ****************** Ends  Here ********************* -->
+
+
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">   [X10-05].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <i>  Al Geist, Adam Beguelin, Jack Dongarra, Weicheng Jiang, Bob Manchek, and Vaidy Sunderam, (1994)
+   P. Charles, C. Grothoff, C. Donawa, K. Ebcioglu, A. Kielstra,
+C. von Praun, V. Saraswat, and V. Sarkar</i>, X10: An
+object-oriented approach to non-uniform cluster computing.
+In Proceedings of OOPSLA, 2005. </font>
+        </font>  
+    </td>
+    </tr> 
+
+
+  <!-- ****************** Ends  Here ********************* -->
+
+
+    
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [X10-06].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+<I> Jose E. Moreira, Samuel P. Midkiff, Manish Gupta, Pedro
+V. Artigas, Marc Snir, and Richard D. Lawrence</i>,  Java
+programming for high-performance numerical computing. IBM Systems Journal, 39(1):21–, 2000.
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+    
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-07].  </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       X10 is a new language developed in the IBM X10  PERCS project as part of the DARPA program
+on High Productivity Computing Systems (HPCS)  (SC09 Tutorial)
+
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+     <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-08]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    
+      <a href ="http://x10.sf.net">  <font color = "blue"> X10 tutorial </font> </a>
+<I> Vijay Saraswat</i>, (Based on tutorial co-authored with Vivek Sarkar, Christoph von Praun, Nate Nystrom, Igor Peshansky)
+August 2008 IBM Research; <a href ="http://www.saraswat.org/X10-Tutorial-Rice.ppt"> 
+<font color = "blue"> htp://www.saraswat.org/X10-Tutorial-Rice.ppt </font> </a>
+
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+  
+     <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-09].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    "X10: an Experimental Language for High Productivity Programming of Scalable Systems", P-PHEC workshop, February 2005.
+ </font>  
+   
+     </td>
+     </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+  
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-10].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+         <a href="http://x10-lang.org/workshop/cfp/program.html"> <font color="blue"> 2011 X10 Workshop  Program </font> </A>
+
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-11].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Shivali Agarwal (TIFR, Mumbai, India), Rajkishore Barik, &amp; Rudrapatna K Shyamasundar (IBM India 
+        Research Lab, New Delhi, India), Vivek Sarakar (IBM T. J. Watson Research Center), 
+       “May-Happen-in-Parallel Analysis of X10 Programs”, PPoPP 2007 (ACM-2007)
+
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-12].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+        <I> Jonathan  P. Brezin, Thomas J. Watson Research Center, Hawthorne, NY USA</i>, An Introduction To Programming With X10, December 2010
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [X10-13].   </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <i> P. Charles et al.,</I> X10: An object-oriented approach to non-uniform
+      cluster computing,  in Conference on Object Oriented Programming
+      Systems Languages and Applications,  pp. 519–538. 2005
+
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+</tbody>
+</table>
+</p>
+
+
+<!-- ************************ Heading Starts Here ****************** -->
+
+<A name = "mode01-pgas-chapel-ref"> </a>
+
+ 
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  Partitioned Global Address Space (PGAS) : Chapel -  References & Web sites </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+<!-- ****************** Starts Here ********************** -->
+     <tr>
+     <td width="13%" height="2" valign="top"> <font face="Verdana" size="2", class="content"> [Chp-01]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      <a href = " http://chapel.cray.com/"> <font color ="blue"> 
+         Cray Inc. Chapel Language Specification </font> </a>  April 2010 </font>
+     </td>
+     </tr>
+<!-- *********** End Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-02].  <BR>  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+ <I> Bradford L. Chamberlain, David Callahan, Hans P. Zima, Cray Inc., Seattle WA, USA,  Microsoft Corporation, Redmond WA, USA, 
+  Parallel Programmability and the Chapel Language, JPL, Pasadena CA, USA, and University of Vienna, Austria
+
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-03]. </font>  </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+        <I> Joe Elizondo and Samuel Palmer</i>, 
+   Department of Computer Science University of Texas at Austin,
+   Using Chapel to Implement Dense Linear Algebra Libraries
+   May 16, 2010
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-04]. </font>  </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <I> Chamberlain, B. L., Choi, S.-E., Choi, S.-E., and Iten, D. </i>  Hpc challenge benchmarks in Chapel.
+      HPC Challenge Awards Competition at SC09 (November 2009).
+(available at <a href ="http://chapel.cray.com"> 
+<font color = "blue"> http://chapel.cray.com</a></font>)
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-05]. </font> </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2"> 
+      <I> Randy Dodgen</I>,Parallelizing a Sparse Domain Distribution in
+      Chapel, CS380P Spring 2010 - Final Project May 17, 2010
+
+    </font>  
+    </td>
+    </tr> 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [Chp-06]. </font></td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <I> Steven J. Deitz Bradford L. Chamberlain Sung-Eun Choi David Iten Lee Prokowich </I>,
+    Five Powerful Chapel Idioms,  Cray Inc. 
+   
+      </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2">  [Chp-07]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+ <I> Bradford L. Chamberlain, David Callahan, and Hans P. Zima. </I> Parallel programmability and the
+   Chapel language. International Journal of High Performance Computing Applications, 21(3):291–312,
+   August 2007.
+       </a>
+   
+      </font>  
+    </td>
+    </tr> 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-08]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    Chapel Team. Parallel programming in Chapel: The Cascade High-Productivity Language.
+       <a href ="http://chapel.cray.com/tutorials.html">  
+     <font color ="blue">     http://chapel.cray.com/tutorials.html </font> </a> November2010.
+        </font>  
+    </td>
+    </tr> 
+
+   
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-09]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+  Chapel Specification 0.4, Cray Inc, Seattle, WA 98104, February 4, 2005
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-10]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <I>  A. Waheed and J. Yan, </i> Parallelization of NAS Benchmarks for Shared Memory Multi-processors, 
+    Technical Report, NAS-98-010, March 1998, 
+   Available at <a href="http://www.nas.nasa.gov/Research/Reports/Techreports/1998/nas-98-010-abstract.html">
+  <font color = "blue"> http://www.nas.nasa.gov/Research/Reports/Techreports/1998/nas-98-010-abstract.html 
+</font> </a> 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-11].</font></td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <a href="http://chapel.cray.com/"> <font color ="blue"> The Chapel Parallel Programming Language </font> </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-12].</font></td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      <a href="http://chapel.cs.washington.edu/."> 
+<font color ="blue"> Chapel: The Cascade high productivity language. </font>  </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-13]. </font></td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <I>  B. Chamberlain, D. Callahan, and H. Zima </i> 
+    </i> Parallel programmability and the chapel language,  International Journal of High Performance
+     Computing Jan 2007.
+</i> </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [Chp-14]. </font> </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+   <I>  Brad Chamberlain, Chapel Team, Cray Inc. </i> 
+   HPC Programming Models:Current Practice, Emerging Promise
+    SIAM Conference on Parallel Processing for Scientific Computing (PP10),  February 25, 2010
+</i> </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+</tbody>
+</table>
+</p>
+ 
+
+ 
+<!-- ******************* PGAS Chapel Ends **************** -->
+ <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+  <A name = "mode01-pgas-lib-ref"> </a>
+
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  Partitioned Global Address Space (PGAS) : Libraries </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+ <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+<!-- ****************** Starts Here ********************** -->
+     <tr>
+     <td width="13%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [shm-01]. </font>    </td>
+
+     <td width="87%" height="2" align="left">  <FONT face="Verdana" size="2", class="content" > 
+      <a href ="http://docs.cray.com"> <font color ="blue"> SHMEM website </font>  </a>  </font>
+     </td>
+     </tr>
+
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-01].  <BR>  </font>       </td>
+     <td width="87%" height="2" align="left">  <font face="Verdana" size="2">
+       <a href =" http://docs.sgi.com/library/"> <font color ="blue"> Intro_shmem - Introduction to the SHMEM programming </font> </a>
+ 
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-02].  </font>       </td>
+     <td width="87%" height="2" align="left">  <font face="Verdana" size="2">
+     
+<I> Bonachea, D. and Jeong, J. Spring 2002. </i> GASNet: A portable high-performance communication
+layer for global address-space languages. CS258 Parallel Computer Architecture Project.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-03].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     APGAS 2009. Workshop on Asynchrony in the PGAS Programming Model. 
+   <a href =" http: //research.ihost.com/apgas09/ ">  <font color ="blue">  APGAS 2009. Workshop on Asynchrony 
+    in the PGAS Programming Model </font> </a>
+
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-04].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     
+<a href = "www.pmodels.org"> <font color ="blue"> GAS Models in PModels Project</font>,</a> The Center for Programming Models 
+for Scalable Parallel Programming. 
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-05].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     <I>  R. Barriuso and A. Knies.</i>, Shmem user's guide for c.
+      Cray Research Inc, Jan 1994.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-06].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    <I>   R. A. Kendall K. Parzyszek, J. Neiplocha </i> , A generalized portable SHMEM library
+      for high performance computing. pages 401–406, 2000.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-07].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     SGI’s SHMEM API is the baseline for OpenSHMEM Specification 1.0
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-08].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+      
+     <a href="http://www.gpi-site.com"> <font color ="blue">   GPI – Global Address Space Programming Interface </font> </a>
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-09].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     
+  <a href ="http://gasnet.cs.berkeley.edu"> <font color ="blue"> GASNet home page  </font> </a>
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+
+    <tr>
+     <td width="13%" height="2" align="left">   <font face="Verdana" size="2"> [shm-10].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     
+  <a href ="http://open64.sourceforge.net">  <font color ="blue"> Open64 compiler tools  </font> </a>
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [TNM-11]. </font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+     <a href ="http://www.intrepid.com/"> <font color ="blue"> Intrepid Technology  Inc. </font> </a>; &nbsp; 
+     <a href ="http://www.gccupc.org/">  <font color= "blue">  Intrepid Tech.  GCC Unified Parallel C 
+        (GCCUPC)   </font> </a> toolset
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-12].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <I>    D. Callahan, B. L. Chamberlain, and H. P. Zima, </i>
+  The Cascade high productivity language,” in Int’l Workshop on High-Level Parallel
+  Programming Models and Supportive Environments, 2004, pp. 52–60.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-13].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+   <I>  E. Allen, D. Chase, V. Luchangco, J.-W. Maessen, S. Ryu, G. Steele, and S. Tobin-Hochstadt. </i>
+  <a href ="http://research.sun.com/projects/plrg/"> <font color ="blue"> The Fortress language specification  </font> </a>
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-14].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+ <I>     E. Allen, D. Chase, J. Hallett, V. Luchangco, J.W. Maessen, S. Ryu, G. Steele, and S. Tobin-Hochstadt,</i>
+  The Fortress language specification version 0.707. Technical report,” Sun Microsystems, 2005.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-15].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <I>    A. Bhatele and L. V. Kale, </i> 
+   Benets of Topology Aware Mapping for Mesh Interconnects. Parallel
+   Processing Letters (Special issue on Large-Scale
+   Parallel Processing), 18(4):549-566, 2008.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-16].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+  <I>     A. Bhatele and L. V. Kale, </i> 
+  An Evaluation of the Effect of Interconnect Topologies on Message
+  Latencies in Large Supercomputers. In Proceedings of
+  Workshop on Large-Scale Parallel Processing (IPDPS '09), May 2009.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-17].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+   <I>  J. Su and K. Yelick. </i>
+  Automatic support for irregular computations in a high-level language. In 19th
+  International Parallel and Distributed Processing
+  Symposium (IPDPS), 2005.
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-18].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    Brad Chamberlain, Chapel Team, Cray Inc.
+ SIAM Conference on
+Parallel Processing for Scientific Computing (PP10)
+February 25, 2010
+    </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="13%" height="2" valign="top">   <font face="Verdana" size="2"> [shm-19].  </font>       </td>
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+ <a href =" http://www.mpi-forum.org/docs/mpi-20-html/mpi2-report.html ">  <font color ="blue">
+MPI-2 </font> </a>, 
+ Message Passing Interface Forum. MPI-2: Extensions to the Message-Passing Interface, </a>
+July 1997.
+
+
+<!-- **************** Ends  Here ****************** -->
+
+
+</tbody>
+</table>
+</p>
+            
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+         
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

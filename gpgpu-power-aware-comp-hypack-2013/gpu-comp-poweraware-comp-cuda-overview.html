@@ -1,0 +1,3631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../index.html">
+      <IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../hypack13-mode04-gpgpu-lab-overview.html">
+                  &#149; Mode-4 GPGPUs </A>
+                  
+	          <!-- ** -->
+                  <A class=menulslct
+                    href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                    &#149;  NVIDIA - CUDA/OpenCL</A>
+                  <!-- ** -->
+              
+	       <A class=menul  
+                  href="./../hypack13-mode04-gpgpu-amd-opencl.html">
+                  &#149; AMD APP  OpenCL </A>
+                             
+	       <A class=menul  
+                   href="./../hypack13-mode04-gpgpu-opencl.html">
+                   &#149; GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../hypack13-mode04-gpgpu-power-perf.html">
+                   &#149; GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../index.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+
+<BR>
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ 
+
+<H1> hyPACK-2013 Mode-4 : Power Management - NVML  CUDA enabled NVIDIA  GPU  </u></H1>
+
+
+
+<!--  .............******** NVIDIA - GPU Comp starts -->	
+	
+ <P align ="justify"> <span class="content">
+ 
+NVIDIA's
+Compute Unified Device Architecture (CUDA) is a software platform for massively parallel high-performance
+computing on the company's powerful GPUs.  NVIDIA's  software CUDA programming model effectively use GPUs which could be harnessed for tasks other than 
+graphics, achieving teraflops of computing power.  For high performance computing, the programming model has
+ been designed to improve the shaders, which is commonly used in terminology in Graphics Computing and shaders
+ are called as <I> stream processing</i> or <I> thread processing</i>. 
+
+</span> </p>
+</td> 
+</tr> 
+</tbody>
+</table>
+
+   <!--**************** Sub-title Starts topics here***************-->
+
+
+<table  width = "100%" border="0">
+<tbody>
+ <tr>
+ <td>
+  <p align = "left">
+  <a href="#cuda-tookit-5.0">
+   <font size="2" face="Arial" color="blue"> <B> CUDA Tool Kit 5.0  :  </b>  </font>    </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="#cuda-toolkitlib">
+     <font size="2" face="Arial" color="blue"> <B> CUDA Toolkit  Lib.  </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp;
+
+<a href="#cuda-nvml-power-comp">
+  <font size="2"  color="blue"> <B>  CUDA  NVML (Power-aware Comp.)  </font> </a>  
+<BR> 
+
+<font size="2" face="Arial" color="red">  <B>  Compilation &amp; Execution   : </b>  </font> 
+&nbsp; &nbsp; &nbsp; &nbsp;
+
+</b> </font>
+<I> <a href="./gpu-comp-poweraware-comp-cuda-codes/Makefile">
+  <font color ="blue"> Makefile</font> </a> </i> 
+
+ &nbsp; &nbsp;  
+ <a href="#compile-exe-prog"> 
+ <font color ="blue"> Command line  </b>  </font> </a>
+
+<BR> <BR>                                     
+         <font size="2" face="Arial" color="red">
+            <b> List of Codes using NVML   </b> </font>   <BR> <BR> 
+     
+<!-- **************** Example 1 *********** -->
+    <a href="#coproc-gpu-poweraware-comp-cuda-nvml-example-01">
+   <font size="2" face="Arial" color="blue"> <B> Example 1 : Matrix Matrix Multiplication using NVML   (Offload)  </b>  </font> </a> 
+<BR> <BR>
+
+     
+<!-- **************** Example 2 *********** -->
+    <a href="#coproc-gpu-poweraware-comp-cuda-nvml-example-02">
+   <font size="2" face="Arial" color="blue"> <B> Example 2 : Matrix Matrix Multiplication using CUBLAS -NVML </b>  </font> </a> 
+<BR> <BR>
+
+     
+<!-- **************** Example 3 *********** -->
+    <a href="#coproc-gpu-poweraware-comp-cuda-nvml-example-03">
+   <font size="2" face="Arial" color="blue"> <B> Example 3 : 
+Measure Power Consumption for Device Query Operation on GPUs   </b>  </font> </a> 
+<BR> <BR>
+     
+<!-- **************** Example 4 *********** -->
+    <a href="#coproc-gpu-poweraware-comp-cuda-nvml-example-04">
+   <font size="2" face="Arial" color="blue"> <B> Example 4 : 
+Measure Power Consumption for Bandwidth on GPUs   </b>  </font> </a> 
+<BR> <BR>
+
+<!-- **************** Example 5 *********** -->
+ <!--   <a href="#coproc-gpu-poweraware-comp-cuda-nvml-example-05">
+   <font size="2" face="Arial" color="blue"> <B> Example 5 : 
+      Measure Power Consumption for CUDA MEMCHECK  on GPUs   </b>  </font> </a> 
+<BR> <BR>-->
+
+
+<!-- **************** Example 6 *********** -->
+ <a href ="#coproc-gpu-poweraware-comp-cuda-nvml-example-06">
+<font size="2" face="Arial" color="blue"> <B>  Example 5 :  Measure Power Consumption for  floating point computations based on global memory with /without coalesced memory access   </b> </font> </a>
+  <BR> <BR> 
+
+
+<!-- **************** Example 7 *********** -->
+<font size="2" face="Arial" color="black"> <B>  Example 6 :  Measure Power Consumption for  Solution 
+of Poisson Eq. (PDE) Solver </b> </font> (Assignment)
+  <BR> <BR> 
+
+
+
+<!-- **************** Example 7 *********** -->
+<font size="2" face="Arial" color="black"> <B>  Example 7 :  Measure Power Consumption for  String 
+Search algorithm </b> </font> (Assignment)
+  <BR> <BR> 
+
+
+<HR>
+
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+
+ <a href="#nvml-cuda-codes">                                      
+         <font size="2" face="Arial" color="blue">
+            <b>Test Programs &amp;  Benchmarks using NVML :  </b> </font>   </a> :  
+<ul> 
+
+<li> <p align = "justify"> <span class = "content">
+ Power Watt Consumption : Memory Bandwidth; Asynchronous and Overlapping Transfers with Computation; 
+</span> </p>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+Power Watt Consumption : 
+Global and Shared Memory Implementation - Memory Intensive Benchmark 
+</span> </p>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+Power Watt Consumption : 
+Floating Point Benchmark - Coalesced Access to Global Memory;
+Floating Point Benchmark - Global and Shared Memory using CUBLAS library call - DGEMM;
+User Developed Codes for NLA Kernels 
+</span> </p>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+Power Consumption : Stream Benchmark; Open source software - MAGMA, Apps - String Search 
+Alg.; Poisson Equation Solver
+</span> </p>
+</li> 
+
+</ul>
+
+<BR> <BR>
+     
+</td>
+</tr>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+
+</tbody>
+</table>
+<!--************************* Sub-title topics Ends here***********************-->
+
+<!-- ****************List of Programs - simple CUDA programs starts [1] here***************** -->
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<table  border="0">
+<tbody>
+  <tr>
+  <td>
+<P align ="justify"> <span class="content">
+CUDA Programming model automatically manages the threads and it is significantly differs from single 
+threaded CPU code and to some extent even the parallel code.  Efficient CUDA programs exploit both 
+thread parallelism within a thread block and coarser block parallelism across thread blocks. Because only 
+threads within the same block can cooperate via shared memory and thread synchronization, programmers 
+must partition computation into multiple blocks.
+</span> </p>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ****************** CUDA Developer Forum *************** -->
+
+
+<a name="cuda-tookit-5.0"> </a>
+
+<TABLE>
+<TBODY>
+<TR>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B> CUDA  Developer  SDK  </b> </font></DIV> 
+
+</TD> 
+</TR> 
+
+<tr>
+<td>
+
+<P align=justify><span  class="content" >
+Visit <a href =" http://developer.download.nvidia.com/compute/cuda/sdk/website/samples.html">
+ <font color ="blue">  http://developer.download.nvidia.com/compute/cuda/sdk/website/samples.html </font> </a>
+to download CUDA enabled NVIDIA programs. <BR> <BR>
+
+Sample programs can be downloaded from <a href ="http://www.nvidia.com/object/cuda_get_samples.html"> 
+   <font color ="blue"> http://www.nvidia.com/object/cuda_get_samples.html </font> </a> <BR> <BR>
+</span> </p>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cudaprog-overview.html"> 
+      <IMG SRC="./gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</td>
+</tr>
+
+
+<!-- ........*********  CUDA Tool Kit 4.0 for Applications starts  ...... -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B> CUDA Tool Kit 4.0 for Applications : CUDA Multi-GPU Programming </b> </font></DIV> 
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+CUDA Programming model provides two basic approaches available to execute CUDA kernels on multiple GPUs (CUDA "devices") concurrently from a single host application: <BR>
+</font> </p>
+
+<ul>
+<li>
+
+ Use one host thread per device, since any given host thread can call cudaSetDevice() at most one time.
+</li>
+<li> Use the push/pop context functions provided by the CUDA Driver API. </li>
+</ul>
+
+<P align=justify> <span class="content" >
+Applications that require tight coupling of the various CUDA devices within a sytem, these approaches may 
+not be sufficent due to sychronization or communication with each other. The CUDA Runtime now provides features 
+in which single hos thread could easily launch work onto any devices it needed. To acommplish this, a host 
+thread can call 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaSetDevice()</B> </font> 
+ at any time to change the currently active device. Also, host-thread can now control more than one device.
+The CUDA Driver API (Version 4.0) provides a way to access multiple devices from within a singel host thread
+namely ( 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cuCtxPushCurrent() </B> </font>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cuCtxPopCurrent()</B></font>). For convenience 
+sake, CUDA application developers can use  set/get context management interface paradigm and CUDA 4.0 provides
+additional features.
+With this in mind, 
+ <font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cuCtxSetCurrent()</B></font>)
+ and 
+ <font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cuCtxGetCurrent()</B></font>)
+ have been added to version 4.0 of the CUDA Driver API in addition to the existing 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cuCtxPushCurrent()</B></font>)
+ and 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cuCtxPopCurrent()</B></font>)
+functions. <BR> 
+</span> </p>
+
+
+
+<p align = "justify"> <span class = "content">
+ Programming a multi-GPU application is straight forward and easy  from programming an application to 
+utilize multiple cores or sockets because CUDA is completely orthogonal to CPU thread management 
+or message passing APIs. Most importantly, selecting the correct GPU, which in most cases is a 
+free (without a context) GPU is important. Also, identification of compute intensive portion of the existing multi-threaded 
+CPU code  and port the code to GPU is easy without changing the inter-CPU-thread communication 
+code unchanged.
+</span> </p>
+
+ <p align = "justify"> <span class = "content"> In order to issue work to a GPU, a context is established between a CPU 
+thread (or group of threads) and the GPU. Only one context can be active on a GPU at any particular instant. Similarly, 
+a CPU thread can have one active context at a time. A context is established during the program's first call to a function 
+that changes state (such as 
+
+<font size = 2, face = " Courier New " color ="#FF00FF">  <B>cudaMalloc()</B></font>,
+etc.), so one can force the creation of a context by calling 
+
+<font size = 2, face = " Courier New " color ="#FF00FF">  <B>cudaFree(0)</B></font>.
+
+ Note that a context is created on GPU 0 by default, unless another GPU is selected explicitly prior to context creation with a 
+
+<font size = 2, face = " Courier New " color ="#FF00FF">  <B>cudaSetDevice()</B></font>
+call. The context is destroyed either with a 
+<font size = 2, face = " Courier New " color ="#FF00FF">  <B>cudaDeviceReset()</B></font>
+call or when the controlling CPU process exits. 
+</span> </p> 
+
+
+<p align = "justify"> <span class = "content"> 
+
+<B> MPI, OpenMP, Pthreads on Host CPU (Multi-Core) &amp; Multi-GPU </b> : 
+In order to issue work to <i> p </i> GPUs concurrently, a program can either use <I> p </i> CPU threads, each with its own 
+context, or it can use one CPU thread that swaps among several contexts, or some combination thereof. 
+CPU threads can be lightweight (pthreads,
+OpenMP, etc.) or heavyweight (MPI). Note that any CPU multi-threading or message-passing API or library
+ can be used, as CPU thread management is completely orthogonal to CUDA. For example, one can add GPU 
+processing to an existing MPI application by porting the compute-intensive portions of the code without 
+changing the communication structure. For synchronization across computations on GPUs, the host-CPU or GPUDirect
+is required for communication. <BR> <BR>
+
+Even though a GPU can execute calls from one context at a time, it can belong to multiple contexts. For example, 
+it is possible for several CPU threads to establish separate contexts with the same GPU (though multiple 
+CPU threads within the same process accessing the same GPU would normally share the same context by default).
+ The GPU driver manages GPU switching between the contexts, as well as partitioning memory among the contexts 
+(GPU memory allocated in one context cannot be accessed from another context). <BR> <BR>
+ 
+In many applications, the algorithm is designed in such a way that each CPU thread (Pthreads, OpenMP, MPI)
+to control a different GPU.  Achieving this is straightforward if a program spawns as many lightweight threads as there are 
+GPUs - one can derive GPU index from thread ID.
+
+ For example, OpenMP thread ID can be readily used to select GPUs.
+MPI rank can be used to choose a GPU reliably as long as all MPI processes are launched on a single host node 
+having GPU devices 
+and host  configuration of CUDA programming environment.
+<BR> 
+</span> 
+</p>
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<!-- **************** CUDA Mult-GPU Programming ends ********* -->
+
+</TD>
+</TR>
+
+
+<!-- ********* Unified Virtual Addressing and GPUDirect 2.0  ******* -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B> Unified Virtual Addressing and GPUDirect 2.0 :  </b> </font></DIV> 
+</TD>
+</TR>
+
+<TR>
+<TD>
+<BR> <BR>
+
+CUDA Toolkit 4.0 makes easy of programming on multi-GPU environments for NVIDIA Tesla T20-series (Fermi)
+GPUs running in 64-bit mode on Linux. 
+
+Unified Virtual Addressing (UVA) allows the system memory and the one or more device memories in a system to share a single virtual address space. This allows the CUDA Driver to determine the physical memory space to which a particular pointer refers by inspection, which simplifies the APIs of functions such as cudaMemcpy(), since the application need no longer keep track of which pointers refer to which memory. <BR> <BR>
+Built on top of UVA, GPUDirect v2.0 provides for direct peer-to-peer communication among the multiple devices in a system and for native MPI transfers directly from device memory. <BR>
+</font> </p>
+
+<P align=justify> <span class="content" >
+<B>  Multi-Threaded Programming : </b
+
+CUDA Toolkit 4.0 includes an improved capabilitites of sharing accessability of a single device in which 
+multiple host threads in a multi-threaded application. In version 4.0, host threads within a given process 
+that access a particular device automatically share a single context to that device, rather than each having 
+its own context. In other words, the new model for runtime applications is one context per device per process. 
+><BR>
+
+This has several important ramifications for multi-threaded processes and some of these are given below. 
+For more detail refer CUDA ToolKit 4.0 for Applications <BR> <BR>
+</span> </p> </li>
+
+
+<ul>
+
+<li> <p align = "justify"> <span class = "content">
+ Host threads can now share device memory allocations, streams, events, or any other per-context objects (as seen above).
+</span> </p> </li>
+
+<li> <p align = "justify"> <span class = "content">
+ Concurrent kernel execution on devices of compute capability 2.x is now possible across host threads, rather than just within a single host thread. Note that this requires the use of separate streams; unless streams are specified, the kernels will be executed sequentially on the device in the order they were launched. In all cases, kernel launch via the 
+
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  <<<>>> </B></font>
+ notation is a thread-safe operation.
+</li>
+<li> <p align = "justify"> <span class = "content">
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  cudaGetLastError() </B></font>)
+is per-host-thread: it returns the last error returned by an API call in that host thread, even if other host threads are concurrently accessing the same device
+</span> </p> </li>
+</ul>
+</span> 
+</p>
+
+<P align=justify> <span class="content" >
+
+<DIV ALIGN=right>
+ <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</span> 
+</p>
+
+<BR>
+
+</TD>
+</TR>
+
+<!-- ************ CUDA Driver API ***************** -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B>  CUDA Driver APIs :  </b> </font></DIV> 
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<P align=justify> <span class="content" >
+
+In CUDA version 4.0,   a features in which multiple host threads to set a particular context current simultaneously using either 
+
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  cuCtxSetCurrent()</B></font>
+
+
+or 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  cuCtxPushCurrent()</B></font>. 
+For more information refer CUDA Toolkit 4.0 for Applications.
+
+
+This has several important ramifications for multi-threaded processes: <BR> <BR>
+</span> </p>
+
+
+<ul>
+<li> <p align = "justify"> <span class = "content">
+
+ Host threads can now share device memory allocations, streams, events, or any other per-context objects (as seen above).
+</span> </p> </li>
+
+<li> <p align = "justify"> <span class = "content">
+
+ Concurrent kernel execution devices of compute capability 2.x is now possible across host threads, rather than just within a single host thread. Note that this requires the use of separate streams; unless streams are specified, the kernels will be executed sequentially on the device in the order they were launched
+</span> </p> </li>
+
+</ul>
+</span>
+ </p>
+
+
+<P align=justify> <span class="content" >
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</span> 
+</p>
+
+</TD>
+</TR>
+
+  
+ <!-- *************** CUDA ToolKIT *************** -->
+<BR>
+<TR>
+<TD>
+<a name ="cuda-toolkitlib"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B>  CUDA TOOLKIT Libraries  </b> </font></DIV> 
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<P align=justify> <span class="content" >
+
+<ul>
+
+<li> <p align = "justify"> <span class = "content">
+ The CUBLAS library now supports a new API that is thread-safe and allows the application to more easily take advantage of parallelism using streams, 
+especially for functions with scalar return parameters. This new API allows CUBLAS to work cleanly with applications using the new multi-threading 
+features of CUDA Runtime 4.0. The legacy CUBLAS API is still supported, but it is not thread-safe and does not offer as many opportunities for
+ parallelism with streams as the new API.
+</span> </p>
+ </li>
+
+<li> <p align = "justify"> <span class = "content"> The CURAND library now supports double precision Sobol, scrambled Sobol, log-normal distributions, 
+and a faster setup technique for XORWOW. </span> </p> 
+</li>
+
+<li> <p align = "justify"> <span class = "content"> The CUFFT and CUBLAS library APIs now include functions that will report the library's 
+version number.
+</span> </p> 
+</li>
+
+<li> <p align = "justify"> <span class = "content"> The CUSPARSE library now provides a solver for triangular sparse linear systems via the
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>   cusparse*csrsv_analysis() </B></font>
+and 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  cusparse*csrsv_solve() </B></font>
+ API functions.
+</span> </p> 
+</li>
+
+<li> <p align = "justify"> <span class = "content"> The Thrust template library and the NPP image processing library are now bundled with the CUDA Toolkit, with no additional download required.
+</span> </p> </li>
+
+<li> <p align = "justify"> <span class = "content"> Some API functions in the NPP library were changed to pass results via device pointer instead of via host pointer for consistency with all of the rest of the NPP API.
+</span> </p> 
+</li>
+
+</ul>
+
+</span> </p>
+
+<P align=justify> <span class="content" >
+
+<DIV ALIGN=right>
+<A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</span> 
+</p>
+
+<BR>  
+
+ <!-- *************** CUDA ToolKit Lib ends  *************** -->
+
+</TD>
+</TR>
+
+
+<!-- ************ NVML CUDA Power-aware Comp.  ***************** -->
+
+<TR>
+<TD>
+<a name ="cuda-nvml-power-comp"> </a>
+</TD>
+</TR>
+
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B>  NVML CUDA (Power-aware Computing) :  </b> </font></DIV> 
+
+</TD> 
+</TR> 
+
+<TR>
+<TD>
+
+<P align=justify> <span class="content" >
+
+GPU accelerated computing systems have drawn the attention of researchers because they
+ have tremendous computational power and high memory bandwidth, and are inherently well 
+suited for massively data parallel computation. Also, the the consumption of power in milliwatts
+to run the application starting stage to end of the execution is relatively in comparsion to 
+counter-part multi-core CPUs.
+While the memory bandwidth and latency issues stall a CPU, a GPU may outperform a CPU 
+in these aspects. For example the memory bandwidth for modern Nvidia  GPU processors is 
+C2075 is  more than 140 GB/s.  NVML is a C-based interface for monitoring and managing various states within Nvidia 
+Tesla GPUs  NVML has several functions that can measure characteristics of GPUs, such 
+as device power, device temperature, unit power, unit temperature, and clock frequency. 
+Using NVML, we measure power and temperature.  <BR> <BR>
+Nvidia Management Library (NVML) high level utility called nvidia-smi not only provides 
+a way to measure power but also various other features like the ability to set 
+ECC (Error Correction Code) to zero if it is not needed, or to monitor memory usage, 
+among other things. </span> </p>
+
+<div align = "center">
+ <img src="./gpu-comp-poweraware-comp-cuda-images/power-cpu-gpu-thread-model-table.jpg" alt="mic-process" border="0" height="200" width="400" > 
+ <BR>
+  Table I. GPU operations used for measurement of Power Consumption on NVIDIA GPUs
+</div>
+
+<BR> 
+<P align=justify> <span  class="content">
+
+NVML is a C-based interface for monitoring and managing various states within
+Nvidia Tesla GPUs. NVML has several functions that can measure characteristics
+of GPUs, such as device power, device temperature, unit power, unit temperature, and
+clock frequency. Using NVML, we measure power and temperature
+Nvidia Management Library (NVML) high level utility called nvidia-smi not only provides 
+a way to measure power but also various other features like the ability to set 
+ECC (Error Correction Code) to zero if it is not needed, or to monitor memory usage, 
+among other things. NVML can be used to measure power when running the kernel but 
+since nvidia-smi is a high level utility the rate of sampling power usage is very 
+low and unless the kernel is running for a very long time we would not notice the 
+change in power. NVML offers a lot of useful utilities for not only GPUs such as 
+C2075 but also the Nvidia Tesla C2050 GPU where one would see power in states 
+rather than in milliwatts. The nvmlDeviceGetPowerUsage function in the NVML 
+library retrieves the power usage reading for the device, in milliwatts. 
+This is the power draw for the entire board, including GPU, memory, etc. 
+The reading is accurate to within a range of +/- 5 watts error with milliwatt
+ precision. It is only available if power management mode is supported. <BR> <BR>
+
+ 
+The measurement
+ of CPU and GPU operations have been done independently as a subroutines, indicated in table I
+ and an average value is considered to estimate the power using NVML library calls for important 
+GPU operations.  Results are validated using total power-watt values for appropriate test-bed.
+
+For system with CUDA carma system and AMD GPUs, power consumption for various GPU operations are 
+measured using power off meter and other low level benchmarks.  On AMD APUs, the power off meter
+ is used to get the total power consumed for the application. <BR> <BR>
+
+ 
+On a Message Passing Cluster, the calculation of power consumption on <i> host </i> and the 
+<i> device </i>  such as NVIDIA GPU or AMD GPU using OpenL and CUDA is required. The calculated 
+power consumption out of GPU device, data transfer from host to device &amp; device 
+to host, IO operations as well as initial programming environment will contribute to the total 
+power consumption of an application. 
+
+</span> </p>
+
+<div align = "center">
+ <img src="./gpu-comp-poweraware-comp-cuda-images/power-cpu-gpu-thread-model.jpg" alt="mic-process" border="0" height="300" width="450" > 
+ <BR>
+  Figure 2. Typical Pthread Model for Calculation of Power Consumption on a system 
+</div>
+ <BR>
+
+<P align=justify> <span  class="content">
+Figure 2   explains the flow of completion of jobs in which two Pthreads are used. One thread 
+executes job on GPU accelerator using CUDA or OpenCL and another thread probes the power-off meter
+ and gathers the reported power values. Also, one thread works
+on Xeon multi-coprocessor and records the power values for the entire system. On NVIDIA GPU, 
+we use NVML library calls with CUDA and OpenCL. Multiple threads can be used to bind multiple 
+accelerators and coprocessors to record the power consumed and master thread gathers the data and display on the portal. The resolution of power meter is in watts.
+
+In the figure 2, we explore the use of the NVML library APIs to measure real-time power 
+consumption of BLAS kernels and PDE solver. We analyzed the performance and real-time power 
+
+consumption of two fundamental linear algebra algorithms - DGEMM and OpenMP & CUDA, 
+OpenCL implementation PDE Solver. The nvmlDeviceGetPowerUsage()routine exports the current 
+power in  milliwatt resolution. The power reported is that for the entire board,
+ including GPU and memory. <BR> <BR>
+
+
+The power analyzer electricity watt meter is also used to measure the reported power values.
+ The Watt's Up power meter is an external measurement device that is plugged into the 
+system and it provides various measurements via a USB serial connection. The power metrics 
+collected include average power, voltage, current, and various others.  Energy can be derived 
+based on the average power and time. The results are system-wide and low resolution, with 
+updates only once a second. Limited memory exists on power-meter and hence the reported power
+ values for computational performed are collected. Another thread reads the data on a regular 
+basis, and then returns overall values when an instrumented program requests it. 
+</span> </p> 
+
+
+
+</TD>
+</TR>
+
+</tbody>
+</table>
+
+<TABLE cellPadding=3  width = 100% border=0> 
+<TBODY>
+
+
+<TR>
+<TD>
+<HR>
+<DIV ALIGN=right>
+<A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</TD
+></TR>
+
+</tbody>
+</table>
+
+
+<!-- ************ NVML Overview Ends **************** -->
+
+
+
+<!-- **************** Compilation and execution of CUDA programs starts ********************** -->
+
+
+<a name="compile-exe-prog"> </a>
+
+<TABLE >
+<TBODY>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B> CUDA Compilation, Linking  and Execution of Program  </b> </font></DIV> 
+
+</TD> 
+</TR> 
+
+
+<TR>
+<TD>
+<BR>
+
+<P align=justify><span  class="content" >
+For Compilation of CUDA program, additional steps are involved, partly because the program targets 
+two different processor architectures (the GPU and a host CPU), and partly because of CUDA's hardware 
+abstraction. Compiling a CUDA program is not as straightforward as running a C compiler to convert 
+source code into executable object code.  The same source file mixes C/C++ code written for both the
+ GPU and the CPU, and special extensions and declarations identify the GPU code. The first step 
+is to separate the source code for each target architecture. <BR> <BR>
+
+<b> nvcc </b> is a compiler driver that simplifies the process of compiling CUDA code: It 
+provides simple and familiar command line options and executes them by invoking 
+the collection of tools that implement the different compilation stages. 
+nvcc's basic work flow consists in separating device code from host code and 
+compiling the device code into a binary form or cubin object. The generated host 
+code is output either as C code that is left to be compiled using another tool or as 
+object code directly by invoking the host compiler during the last compilation stage.
+<br><br>
+   CUDA code should include the  <font color = "red"> <b> cuda.h </b>  </font> header file. On the compilation 
+   command line, the cuda library should be specified to the linker on UNIX
+   and Linux environments as  explained below. <BR> <BR>
+
+   
+  <font color="red" size = "2", face="verdana"> <b> 1. Using command line arguments to compile CUDA source code: </b> </font> <br><br>
+   
+<blockquote>
+	The compilation and execution details of CUDA programs is simple as like compilation of C language source code.
+	<br><br>
+
+   <font color="red" size = "2", face="verdana"> <i>
+
+        $ <B> nvcc &nbsp; -o &nbsp;  &lt; executable name  &gt; &nbsp; &lt; name of source file &gt; &nbsp;  </b> </i> </font>
+   <br><br>
+
+        For example to compile a simple Hello World program user can give : <br><br>
+
+ 
+       <font color="red" size = "2", face="verdana"> <i>
+        $ <B> nvcc &nbsp; -o &nbsp; helloworld &nbsp;  cuda-helloworld.cu  &nbsp; </b> </i> </font>
+</blockquote>
+    <br>
+
+  
+   <font color="black" size = "2" face ="verdana"> <b>  Executing a Program: </b> </font> <br><br>
+
+<blockquote>
+
+        To execute a CUDA Program, give the name of the executable at command prompt.  <BR> <BR>
+
+     <font color="red" size = "2", face="verdana"> <i> <B> $  . / &lt; Name of the Executable &gt; </b> </i> </font>  <br> <br>
+
+        For example, to execute a simple HelloWorld Program, user must type:<br><br>
+  
+       <font color="red" size = "2", face="verdana"> <i>
+         $ <B>  ./helloworld  </B>  </font> <br><br></i>
+
+        The output must look similar to the following:<br><br>
+
+          <B>  Hello World! </b>  <br><br>
+</blockquote>
+
+</span></p>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+ <P align=justify> <font face="Verdana" size="2"> 
+
+
+ <!-- ***************** Using command line ************************ -->
+ 
+ <font color="#FF0011"> 
+       <B> Compilation and Execution :   </b> </font> 
+    </font> </p>
+
+<P align ="justify"><font face="Verdana" size="2"> 
+The compilation and execution of a program  to run in Offline mode is 
+ is shown   below. 
+</font> </p>
+
+<!-- ************* Commented ******* -->
+
+<p align = "left"> <font face="Verdana" size="2"> 
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Compile to run CUDA enabled NVIDIA GPUs</b> </font> 
+</font> </p>
+
+<P align="center"> <font face="Verdana" size="2"> 
+
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> <I>
+make &nbsp; -f &nbsp; Makefile_CUDA_NVML </I> </B>  <BR> 
+</font> </p>
+
+<!-- ************download start here *************** -->
+        (Download Makefile 
+<fONT size = 2 Face = "verdana" >
+ <!--<a href ="./gpu-comp-poweraware-comp-cuda-codes/Makefile_CUDA_NVML">-->
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/Makefile_CUDA_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_CUDA_NVML</b> </FONT>  </I> </a>)</font>
+<!-- ************ Download Commented *********** -->
+
+<BR> <BR>
+
+<p align = "left"> <font face="Verdana" size="2"> 
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Execution on the Xeon Phi : </b> </font> 
+</font> </p>
+<P align="center"> <font face="Verdana" size="2"> 
+<B> <I>
+./run 
+</I> </B>  <BR> 
+</font> </p>
+
+</td>
+</tr>
+
+<TR> <TD> <HR> </TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* Compilation and execution of CUDA programs : ends ******************* -->
+
+<!-- ************* Example 1 : Matrix Matrix Multiplication (User Code) Starts ************** -->
+ 
+<table width = 100%  border="0"  height="6">
+<tbody>
+
+<TR> 
+<TD>
+<a name ="coproc-gpu-poweraware-comp-cuda-nvml-example-01"> </a>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 1 :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+ Measure Power Consumption and extract maximum achieved performance for  Matrix Matrix Multiplication 
+ using CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.   </b> </font>
+          <BR> 
+     
+         
+<!-- ************download start here ***************--> 
+
+    (Download source code : <BR>
+
+  <fONT size = 2 Face = "verdana" >             
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/cuda_nvml_pthreads_power_main.cu">
+ <I><FONT COLOR = "blue"><B>cuda_nvml_pthreads_power_main.cu</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/cuda_nvml_mat_mat_multiply_power_kernel.cu">
+     <I><FONT COLOR = "blue"> <B> cuda_nvml_mat_mat_multiply_power_kernel.cu</b></FONT> </I></a></font>;
+ <BR>
+
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/cuda_nvml_measure_power.cu">
+     <I><FONT COLOR = "blue"> <B> cuda_nvml_measure_power.cu</b></FONT></I></a></font>;
+ 
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/cuda_nvml_power_kernel_functions.h">
+      <I><FONT COLOR = "blue"> <B> cuda_nvml_power_kernel_functions.h</b></FONT></I></a></font>;
+
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/cuda_nvml_power_kernel_define.h">
+          <I><FONT COLOR = "blue"> <B> cuda_nvml_power_kernel_define.h</b></FONT></I></a></font>;
+ 
+ <BR> 
+  <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_usercode/Makefile_CUDA_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_CUDA_NVML</b> </FONT>  </I> </a>)</font>;
+</font>
+
+
+<!-- ************download End  here ***************-->     
+ 
+<blockquote> 
+
+    <a href="#mat-mat-multiply-nvidia-cuda-nvml-obj-ex-01">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#mat-mat-multiply-nvidia-cuda-nvml-inp-ex-01">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;   &nbsp;  
+
+   <a href="#mat-mat-multiply-nvidia-cuda-nvml-des-ex-01">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#mat-mat-multiply-nvidia-cuda-nvml-out-ex-01">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+  <BR> 
+
+</p>
+</blockquote>
+ </TD> 
+  </TR> 
+ 
+  <TR>
+  <TD>
+   <UL>    
+            <a name ="mat-mat-multiply-nvidia-cuda-nvml-obj-ex-01"> </a>
+           
+            <LI> <B>Objective</B></LI>
+
+          <p align = "justify"> <span class = "content">
+             Extract performance in G/flops for Matrix Matrix Multiply 
+            and analyze the performance on Intel Xeon system with Xeon Phi Coprocessor 
+            based on  MPI-OpenMP. </span> </p>
+
+            <a name ="mat-mat-multiply-nvidia-cuda-nvml-des-ex-01"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align = "justify"> <span class = "content">
+Two input matrices are filled with real data and matrix-matrix Multiply 
+is performed  and perform matrix matrix multiply on CUDA enabled GPUs.
+
+POSIX thread programming model is used to measure Power Consumption 
+as well as and  obtain the performance for  Matrix Matrix Multiplication 
+ using CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.
+
+The Pthread programming on Xeon Host and offload computation of 
+  matrix-matrix multiply on GPU. The other thread obtains the 
+power consumption in Milli-watts as per calculations performed using 
+NVML power APIs at periodic intervals of time.
+In implementation, 
+
+The input matrices are generated on the Host-CPU. In simple algorithm, the input matrix is partitoned as 
+per Grid of thread blocks. Each thread reads one row of the matrix and performs computation with one column of 
+the another matrix and compute the correspodning elements of resultant marix on Device-GPU. The resultant matrix is
+ transferred back to Host-CPU. The application developer implements standard algorithm with approriate choice 
+of threading blocks of CUDA enabled NVIDIA GPUs are used for Matrix Matrix Multiplication algorithm. <BR> <BR>
+
+NVML APIs such as <BR> <BR>
+
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlInit(); </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B>  nvmlDevice_t device; </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlReturn_t result; </B> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetHandleByIndex(GPUDevId , &device); </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetPowerUsage( device, &p ); </b> </font> <BR> <BR>
+
+are used in this code.
+
+
+ </span> </p>
+
+    <a name ="#mat-mat-multiply-nvidia-cuda-nvml-inp-ex-01"> </a>
+       <LI> <B>Input</B></LI>
+        <P>Number of threads, Size of  the Matrices. </p>
+
+    <a name ="#mat-mat-multiply-nvidia-cuda-nvml-out-ex-01"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> <span class = "content">
+              Prints the reported Power Consumption in Milliwatts, Achieved Giaflops and the 
+   time taken for computation of Output matrix  and CUDA enabled NVIDIA GPU information  </span></p>
+        </UL>
+        </UL>
+</TD>
+</TR>
+
+ <TR><TD> <HR> </TD> </TR>
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD>
+</TR>
+
+<!-- **************** Matrix Matrix Multiply - NVML  Ends ************** -->
+
+</tbody>
+</table>
+
+<!-- **************  Example 1 Matix Matrix Multiply (User Code) Starts CUDA - NVML   Ends **************** -->
+
+  
+
+<!-- ************* Example 2 : Matrix Matrix Multiplication CUDA -NVML  Starts ************** -->
+ 
+<table width = 100%  border="0"  height="6">
+<tbody>
+
+<TR> 
+<TD>
+<a name ="coproc-gpu-poweraware-comp-cuda-nvml-example-02"> </a>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 2 :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+ Measure Power Consumption and extract maximum achieved performance for  Matrix Matrix Multiplication 
+ using CUBLAS Lib. of CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.   </b> </font>
+          <BR> 
+     
+    
+         
+<!-- ************download start here ***************--> 
+
+    (Download source code : <BR>
+
+  <fONT size = 2 Face = "verdana" >             
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_cublas/cublas_nvml_pthreads_power_main.cu">
+ <I><FONT COLOR = "blue"><B>cublas_nvml_pthreads_power_main.cu</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_cublas/cublas_nvml_mat_mat_multiply_power_kernel.cu">
+         <I><FONT COLOR = "blue"> <B> cublas_nvml_mat_mat_multiply_power_kernel.cu</b></FONT> </I></a></font>;
+ <BR>
+
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_cublas/cublas_nvml_measure_power.cu">
+          <I><FONT COLOR = "blue"> <B> cublas_nvml_measure_power.cu</b></FONT></I></a></font>;
+ 
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_cublas/cublas_nvml_power_kernel_functions.h">
+          <I><FONT COLOR = "blue"> <B> cublas_nvml_power_kernel_functions.h</b></FONT></I></a></font>;
+
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_cublas/cublas_nvml_power_kernel_define.h">
+          <I><FONT COLOR = "blue"> <B> cublas_nvml_power_kernel_define.h</b></FONT></I></a></font>;
+ 
+ <BR> 
+  <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_mat_mult_cublas/Makefile_CUBLAS_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_CUBLAS_NVML</b> </FONT>  </I> </a>)</font>;
+</font>
+
+
+
+
+<!-- ************download End  here ***************-->       
+ 
+<blockquote> 
+
+    <a href="#mat-mat-multiply-nvidia-cublas-nvml-obj-ex-02">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#mat-mat-multiply-nvidia-cublas-nvml-inp-ex-02">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;   &nbsp;  
+
+   <a href="#mat-mat-multiply-nvidia-cublas-nvml-des-ex-02">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#mat-mat-multiply-nvidia-cublas-nvml-out-ex-02">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+  <BR> 
+
+</blockquote>
+ </TD> 
+  </TR> 
+ 
+  <TR>
+  <TD>
+   <UL>    
+            <a name ="mat-mat-multiply-nvidia-cublas-nvml-obj-ex-02"> </a>
+           
+            <LI> <B>Objective</B></LI>
+
+          <p align = "justify"> <span class = "content">
+             Extract performance in G/flops for Matrix Matrix Multiply 
+            and analyze the performance on Intel Xeon system with Xeon Phi Coprocessor 
+            based on  MPI-OpenMP. </span> </p>
+
+            <a name ="mat-mat-multiply-nvidia-cublas-nvml-des-ex-02"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align = "justify"> <span class = "content">
+Two input matrices are filled with real data and matrix-matrix Multiply 
+is performed  and perform matrix matrix multiply on CUDA enabled GPUs.
+
+POSIX thread programming model is used to measure Power Consumption 
+as well as and  obtain the performance for  Matrix Matrix Multiplication 
+ using CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.
+
+The Pthread programming on Xeon Host and offload computation of 
+  matrix-matrix multiply on GPU. The other thread obtains the 
+power consumption in Milli-watts as per calculations performed using 
+NVML power APIs at periodic intervals of time.
+In implementation, 
+
+The input matrices are generated on the Host-CPU. In simple algorithm, the input matrix is partitoned as 
+per Grid of thread blocks. Each thread reads one row of the matrix and performs computation with one column of 
+the another matrix and compute the correspodning elements of resultant marix on Device-GPU. The resultant matrix is
+ transferred back to Host-CPU. The CUBLAS3 library call performs computation on the Device-GPU. <BR> <BR>
+
+NVML APIs such as <BR> <BR>
+
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlInit(); </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B>  nvmlDevice_t device; </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlReturn_t result; </B> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetHandleByIndex(GPUDevId , &device); </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetPowerUsage( device, &p ); </b> </font> <BR> <BR>
+
+are used in this code.
+
+
+ </span> </p>
+
+    <a name ="#mat-mat-multiply-nvidia-cublas-nvml-inp-ex-02"> </a>
+       <LI> <B>Input</B></LI>
+        <P>Number of threads, Size of  the Matrices. </p>
+
+    <a name ="#mat-mat-multiply-nvidia-cublas-nvml-out-ex-02"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> <span class = "content">
+              Prints the reported Power Consumption in Milliwatts, Achieved Giaflops and the 
+   time taken for computation of Output matrix  and CUDA enabled NVIDIA GPU information  </span></p>
+        </UL>
+        </UL>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+<HR>
+
+<A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</TD>
+</TR>
+
+<!-- **************** Matrix Matrix Multiply - NVML  Ends ************** -->
+<TR>
+<TD>
+
+ <a name  ="coproc-mat-mat-mult-mpi-openmp-compile-execution"> </a>
+
+
+
+ <P align=justify> <font face="Verdana" size="2"> 
+
+
+ <!-- ***************** Using command line ************************ -->
+ 
+ <font color="#FF0011"> 
+       <B> Compilation and Execution :   </b> </font> 
+    </font> </p>
+
+<P align ="justify"><font face="Verdana" size="2"> 
+The compilation and execution of a program  to run in Offline mode is 
+ is shown   below. 
+</font> </p>
+
+<!-- ************* Commented ******* -->
+
+<p align = "left"> <font face="Verdana" size="2"> 
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Compile to run CUDA enabled NVIDIA GPUs</b> </font> 
+</font> </p>
+
+<P align="center"> <font face="Verdana" size="2"> 
+
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> <I>
+make &nbsp; -f &nbsp; Makefile_CUDA_NVML </I> </B>  <BR> 
+</font> </p>
+
+<!-- ************download start here *************** -->
+        (Download Makefile 
+<fONT size = 2 Face = "verdana" >
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/Makefile">
+         <I><FONT COLOR = "blue"> <B> Makefile_CUBLAS_NVML</b> </FONT>  </I> </a>)</font>
+<!-- ************ Download Commented *********** -->
+
+<BR> <BR>
+
+<p align = "left"> <font face="Verdana" size="2"> 
+ <font color ="red" face " verdeana" size ="2"> 
+     <B>  # Execution on the Xeon Phi : </b> </font> 
+</font> </p>
+<P align="center"> <font face="Verdana" size="2"> 
+<B> <I>
+./run 
+</I> </B>  <BR> 
+</font> </p>
+
+</td>
+</tr>
+
+
+<TR> <TD> <HR></TD></TR>
+
+
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+<A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</TD>
+</TR>
+
+<!-- **************  Example 2 Matix Matrix Multiply Starts CUDA - NVML  Ends **************** -->
+
+<!-- ************* Example 3: Device Query   Starts ************** -->
+ 
+
+<TR> 
+<TD>
+<a name ="coproc-gpu-poweraware-comp-cuda-nvml-example-03"> </a>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 3 :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+ Measure Power Consumption for Device Query Operation on GPUs   </b> </font>
+          <BR> 
+     
+         
+<!-- ************download start here ***************--> 
+
+    (Download source code : <BR>
+
+  <fONT size = 2 Face = "verdana" >             
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/cuda_dev_query_nvml_pthreads_power_main.cu">
+ <I><FONT COLOR = "blue"><B>cuda_dev_query_nvml_pthreads_power_main.cu</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/cuda_dev_query_nvml_power_kernel.cu">
+         <I><FONT COLOR = "blue"> <B> cuda_dev_query_nvml_power_kernel.cu</b></FONT> </I></a></font>;
+ <BR>
+
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/cuda_dev_query_nvml_measure_power.cu">
+          <I><FONT COLOR = "blue"> <B> cuda_dev_query_nvml_measure_power.cu</b></FONT></I></a></font>;
+ 
+<BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/cuda_dev_query_nvml_power_kernel_functions.h">
+          <I><FONT COLOR = "blue"> <B> cuda_dev_query_nvml_power_kernel_functions.h</b></FONT></I></a></font>;
+
+
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/cuda_dev_query_nvml_power_kernel_define.h">
+          <I><FONT COLOR = "blue"> <B> cuda_dev_query_nvml_power_kernel_define.h</b></FONT></I></a></font>;
+ 
+ <BR> 
+  <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/Makefile_DeviceQuery_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_DeviceQuery_NVML</b> </FONT>  </I> </a>)</font>;
+</font>
+
+
+<!-- ************download End  here ***************-->     
+ 
+<blockquote> 
+
+    <a href="#cuda-devquery-nvml-obj-ex-03">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#cuda-devquery-nvml-inp-ex-03">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;   &nbsp;  
+
+   <a href="#cuda-devquery-nvml-des-ex-03">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#cuda-devquery-nvml-out-ex-03">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+  <BR> 
+
+</p>
+</blockquote>
+ </TD> 
+  </TR> 
+ 
+  <TR>
+  <TD>
+   <UL>    
+            <a name ="cuda-devquery-nvml-obj-ex-03"> </a>
+           
+            <LI> <B>Objective</B></LI>
+
+          <p align = "justify"> <span class = "content">
+            Power Consumption for Device Query  </span> </p>
+
+            <a name ="cuda-devquery-nvml-des-ex-03"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align = "justify"> <span class = "content">
+The CUDA programming paradigm consists of a host
+and one or more devices. The host manages the memory 
+and execution of the devices. 
+ CUDA program consists of host code that runs on the 
+host, and kernelcode that runs on the device.
+The CUDA <i> cudaDeviceProp struct </i> has a wealth of information as 
+given below. <BR> <BR>
+
+CUDA Device Properties  can be obtained by calling cudaGetDeviceProperties.
+The program that prints out  the number of CUDA devices and  the name of the current CUDA device
+
+CUDA Device Query operation (RUntime API)  gives information such as CUDA Driver 
+version, CUDA Runtime Version, CUDA Capability Major &amp; Minor revision, 
+Total amount of local memory, Number of Multi-processors,  Number of Cores, 
+Total amount of constant and shared memory per block, total number of 
+registers available per block, warp size, maximum number of thread per 
+block, Maximum number of threads per block, Maximum sizes of each dimension of a block,
+Maximum sizes of each dimension of a grid, Maximum memory pitch,Texture alignment,                         
+&amp; Clock rate.<BR>  <BR>         
+
+ If a CUDA-capable device and the CUDA Driver are installed but deviceQueryreports
+that no CUDA-capable devices are present, ensure the deivce and driver are properly
+installed. <BR> <BR>
+
+POSIX thread programming model is used to measure Power Consumption 
+as well as and  obtain the performance for  Matrix Matrix Multiplication 
+ using CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.
+
+The Pthread programming on Xeon Host and offload the device query operation 
+ on GPU. The other thread obtains the 
+power consumption in Milli-watts as per calculations performed using 
+NVML power APIs at periodic intervals of time.
+In implementation,  NVML APIs such as <BR> <BR>
+
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlInit(); </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B>  nvmlDevice_t device; </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlReturn_t result; </B> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetHandleByIndex(GPUDevId , &device); </b> </font> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetPowerUsage( device, &p ); </b> </font> <BR> <BR>
+
+are used in this code.
+
+
+ </span> </p>
+
+    <a name ="#cuda-devquery-nvml-inp-ex-03"> </a>
+       <LI> <B>Input</B></LI>
+        <P>None </p>
+
+    <a name ="#cuda-devquery-nvml-out-ex-03"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> <span class = "content">
+              Prints the reported Power Consumption in Milliwatts, Achieved Giaflops and the 
+   time taken for computation of Output matrix  and CUDA enabled NVIDIA GPU information  </span></p>
+        </UL>
+        </UL>
+</TD>
+</TR>
+
+ <TR><TD> <HR> </TD> </TR>
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD>
+</TR>
+
+
+<!-- **************  Example 3 Device Query  CUDA - NVML   Ends **************** -->
+
+<!-- ************* Example 4: Bandwidth Query   Starts ************** -->
+ 
+
+<TR> 
+<TD>
+<a name ="coproc-gpu-poweraware-comp-cuda-nvml-example-04"> </a>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 4 :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+ Measure Power Consumption for Bandwdith  on GPUs   </b> </font>
+          <BR> 
+     
+         
+<!-- ************download start here ***************--> 
+
+    (Download source code : <BR>
+
+  <fONT size = 2 Face = "verdana" >             
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_bandwidth/cuda_bandwidth_nvml_pthreads_power_main.cu">
+ <I><FONT COLOR = "blue"><B>cuda_bandwidth_nvml_pthreads_power_main.cu</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_bandwidth/cuda_bandwidth_nvml_power_kernel.cu">
+         <I><FONT COLOR = "blue"> <B> cuda_bandwidth_nvml_power_kernel.cu</b></FONT> </I></a></font>;
+ <BR>
+
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_bandwidth/cuda_bandwidth_nvml_measure_power.cu">
+          <I><FONT COLOR = "blue"> <B> cuda_bandwidth_nvml_measure_power.cu</b></FONT></I></a></font>;
+ 
+<BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_bandwidth/cuda_bandwidth_nvml_power_kernel_functions.h">
+          <I><FONT COLOR = "blue"> <B> cuda_bandwidth_nvml_power_kernel_functions.h</b></FONT></I></a></font>;
+
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_bandwidth/cuda_bandwidth_nvml_power_kernel_define.h">
+          <I><FONT COLOR = "blue"> <B> cuda_bandwidth_nvml_power_kernel_define.h</b></FONT></I></a></font>;
+ 
+ <BR> 
+  <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_bandwidth/Makefile_bandwidth_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_bandwidth_NVML</b> </FONT>  </I> </a>)</font>;
+</font>
+
+
+<!-- ************download End  here ***************-->     
+ 
+<blockquote> 
+
+    <a href="#cuda-bandwidth-nvml-obj-ex-04">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#cuda-bandwidth-nvml-des-ex-04">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#cuda-bandwidth-nvml-out-ex-04">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+  <BR> 
+
+</p>
+</blockquote>
+ </TD> 
+  </TR> 
+ 
+  <TR>
+  <TD>
+   <UL>    
+            <a name ="cuda-bandwidth-nvml-obj-ex-04"> </a>
+           
+            <LI> <B>Objective</B></LI>
+
+          <p align = "justify"> <span class = "content">
+            Power Consumption for Bandwidth Test  </span> </p>
+
+            <a name ="cuda-bandwidth-nvml-des-ex-04"> </a>
+            <LI> <B>Description</B></LI>
+ <p align = "justify"> <span class = "content">
+The CUDA programming paradigm consists of a host and one or more devices. The host 
+manages the memory and execution of the devices. 
+
+CUDA BandwidthTest program gives Host to Device, Device to Host and Device to Device 
+bandwidth using Pinned memory transfers. 
+
+The device name  and the bandwidth numbers vary from system to system.
+The important items are the second line, which confirms a CUDA device was found, and also
+confirms that all necessary tests passed.
+
+ If a CUDA-capable device and the CUDA Driver are installed but deviceQueryreports
+that no CUDA-capable devices are present, ensure the deivce and driver are properly
+installed. <BR> <BR>
+
+POSIX thread programming model is used to measure Power Consumption 
+as well as and  obtain the performance for  Matrix Matrix Multiplication 
+ using CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.
+
+The Pthread programming on Xeon Host and offload the device query operation 
+ on GPU. The other thread obtains the 
+power consumption in Milli-watts as per calculations performed using 
+NVML power APIs at periodic intervals of time.
+In implementation,  NVML APIs such as <BR> <BR>
+
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlInit(); </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B>  nvmlDevice_t device; </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlReturn_t result; </B> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetHandleByIndex(GPUDevId , &device); </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetPowerUsage( device, &p ); </b> </font> 
+<BR> <BR>
+
+are used in this code.
+
+
+ </span> </p>
+
+    <a name ="#cuda-bandwidth-nvml-inp-ex-04"> </a>
+       <LI> <B>Input</B></LI>
+        <P>None </p>
+
+    <a name ="#cuda-bandwidth-nvml-out-ex-04"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> <span class = "content">
+              Prints the reported Power Consumption in Milliwatts, Achieved Giaflops and the 
+   time taken for computation of Output matrix  and CUDA enabled NVIDIA GPU information  </span></p>
+        </UL>
+        </UL>
+</TD>
+</TR>
+
+ <TR><TD> <HR> </TD> </TR>
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD>
+</TR>
+
+
+<!-- **************  Example 4 Device Query  CUDA - NVML   Ends **************** -->
+
+<!-- ************* Example 5  CUDA MEMCHECK  Starts ************** -->
+<!-- 
+
+<TR> 
+<TD>
+<a name ="coproc-gpu-poweraware-comp-cuda-nvml-example-05"> </a>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 5 :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+ Measure Power Consumption for CUDA MEMCHECK  on GPUs   </b> </font>
+          <BR> 
+-->     
+         
+<!-- ************download start here ***************--> 
+
+<!--    (Download source code : <BR>
+
+  <fONT size = 2 Face = "verdana" >             
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_memcheck/cuda_memcheck_nvml_pthreads_power_main.cu">
+ <I><FONT COLOR = "blue"><B>cuda_memcheck_nvml_pthreads_power_main.cu</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_memcheck/cuda_memcheck_nvml_power_kernel.cu">
+         <I><FONT COLOR = "blue"> <B> cuda_memcheck_nvml_power_kernel.cu</b></FONT> </I></a></font>;
+ <BR>
+
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_memcheck/cuda_memcheck_nvml_measure_power.cu">
+          <I><FONT COLOR = "blue"> <B> cuda_memcheck_nvml_measure_power.cu</b></FONT></I></a></font>;
+ 
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_memcheck/cuda_memcheck_nvml_power_kernel_define.h">
+          <I><FONT COLOR = "blue"> <B> cuda_memcheck_nvml_power_kernel_define.h</b></FONT></I></a></font>;
+ 
+ <BR> 
+  <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_memcheck/Makefile_memcheck_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_memcheck_NVML</b> </FONT>  </I> </a>)</font>;
+</font>
+
+-->
+<!-- ************download End  here ***************-->     
+ <!--
+<blockquote> 
+
+    <a href="#cuda-memcheck-nvml-obj-ex-05">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#cuda-memcheck-nvml-des-ex-05">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#cuda-memcheck-nvml-out-ex-05">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+  <BR> 
+
+</p>
+</blockquote>
+ </TD> 
+ </TR> 
+ 
+ <TR>
+ <TD>
+  <UL>    
+ <a name ="cuda-memcheck-nvml-obj-ex-05"> </a>
+
+  <LI> <B>Objective</B></LI>
+
+   <p align = "justify"> <span class = "content">
+      Power Consumption for CUDA MEMCHECK Test  </span> </p>
+   
+<a name ="cuda-memcheck-nvml-des-ex-05"> </a>
+     <LI> <B>Description</B></LI>
+
+<p align = "justify"> <span class = "content">
+The CUDA programming paradigm consists of a host and one or more devices. The host 
+manages the memory and execution of the devices.
+
+ CUDA\A0uses\A0a\A0segmented\A0memory\A0architecture\A0that\A0allows\A0applications\A0to\A0access\A0data\A0in\A0
+global,\A0local,\A0shared,\A0constant,\A0and\A0texture\A0memory.
+\A0 
+The\A0CUDA MEMCHECK tool\A0supports\A0detection\A0of\A0out of bounds\A0and\A0misaligned\A0
+global\A0memory\A0accesses.\A0
+<B> cuda memcheck  </b> can be used in debug mode. <BR> <BR>
+POSIX thread programming model is used to measure Power Consumption 
+as well as and  obtain the performance for  Matrix Matrix Multiplication 
+ using CUDA enabled NVIDIA GPUs and NVML Lib. calls with Pthread Programming Env.
+
+The Pthread programming on Xeon Host and offload the device query operation 
+ on GPU. The other thread obtains the  power consumption in Milli-watts as per
+ calculations performed using NVML power APIs at periodic intervals of time.
+In implementation,  NVML APIs such as <BR> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlInit(); </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B>  nvmlDevice_t device; </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlReturn_t result; </B> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetHandleByIndex(GPUDevId , &device); </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetPowerUsage(device, &p ); </b> </font> 
+<BR> <BR>
+
+are used in this code.
+
+
+ </span> </p>
+
+    <a name ="#cuda-memcheck-nvml-inp-ex-05"> </a>
+       <LI> <B>Input</B></LI>
+        <P>None </p>
+
+    <a name ="#cuda-memcheck-nvml-out-ex-05"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> <span class = "content">
+               CUDA MEMCHECK\A0\A0prints\A0errors\A0it\A0encountered\A0while\A0running\A0the\A0application.\A0  </span</p>
+        </UL>
+        </UL>
+</TD>
+</TR>
+
+ <TR><TD> <HR> </TD> </TR>
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD>
+</TR>-->
+
+<!-- **************  Example 5 Device Query  CUDA - NVML   Ends **************** -->
+
+
+
+<!-- ************* Example  6 global-memory  Starts ************** -->
+ 
+
+<TR> 
+<TD>
+<a name ="coproc-gpu-poweraware-comp-cuda-nvml-example-06"> </a>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 5 :</B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+ Measure Power Consumption for global memory access of floating point computations.    </b> </font>
+          <BR> 
+     
+         
+<!-- ************download start here ***************--> 
+
+    (Download source code : <BR>
+
+  <fONT size = 2 Face = "verdana" >            
+                                                                             
+     <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_global_memory/cuda_globalmemory_nvml_pthreads_power_main.cu">
+ <I><FONT COLOR = "blue"><B>cuda_globalmemory_nvml_pthreads_power_main.cu</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_global_memory/cuda_globalmemory_nvml_power_kernel.cu">
+         <I><FONT COLOR = "blue"> <B> cuda_globalmemory_nvml_power_kernel.cu</b></FONT> </I></a></font>;
+ <BR>
+
+ <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_global_memory/cuda_globalmemory_nvml_measure_power.cu">
+          <I><FONT COLOR = "blue"> <B> cuda_globalmemory_nvml_measure_power.cu</b></FONT></I></a></font>;
+ 
+<BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_global_memory/cuda_globalmemory_nvml_power_kernel_functions.h">
+          <I><FONT COLOR = "blue"> <B> cuda_globalmemory_nvml_power_kernel_functions.h</b></FONT></I></a></font>;
+
+ <BR> 
+<a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_global_memory/cuda_globalmemory_nvml_power_kernel_define.h">
+          <I><FONT COLOR = "blue"> <B> cuda_globalmemory_nvml_power_kernel_define.h</b></FONT></I></a></font>;
+ 
+ <BR> 
+  <a href ="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_global_memory/Makefile_cuda_globalmemory_NVML">
+         <I><FONT COLOR = "blue"> <B> Makefile_cuda_globalmemory_NVML</b> </FONT>  </I> </a>)</font>;
+</font>
+
+<BR> <BR>
+
+Download source code (WinRAR ZIP Archive) ; <BR> 
+        
+          <a HREF="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_coalesced_memory.zip">
+        <FONT COLOR="blue"> <i> CUDA NVML POWER Coalesced Memory (WinRAR ZIP archive) </i> </font> </a> <BR> <BR>
+
+
+Download source code (WinRAR ZIP Archive) ; <BR> 
+        
+          <a HREF="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_shared_memory.zip">
+        <FONT COLOR="blue"> <i> CUDA NVML POWER Shared  Memory (WinRAR ZIP archive) </i> </font> </a> <BR> <BR>
+
+
+<!-- ************download End  here ***************-->     
+ 
+<blockquote> 
+
+    <a href="#cuda-globalmemory-nvml-obj-ex-06">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+   <a href="#cuda-globalmemory-nvml-des-ex-06">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+   <a href= "#cuda-globalmemory-nvml-out-ex-06">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+  <BR> 
+
+</p>
+</blockquote>
+ </TD> 
+ </TR> 
+ 
+ <TR>
+ <TD>
+  <UL>    
+ <a name ="cuda-globalmemory-nvml-obj-ex-06"> </a>
+
+  <LI> <B>Objective</B></LI>
+
+   <p align = "justify"> <span class = "content">
+      Power Consumption for CUDA globalmemory Test  </span> </p>
+   
+<a name ="cuda-globalmemory-nvml-des-ex-06"> </a>
+     <LI> <B>Description</B></LI>
+
+<p align = "justify"> <span class = "content">
+
+The CUDA programming paradigm consists of a host and 
+one or more devices. The host manages  the memory and execution of the devices. 
+
+
+CUDA\A0uses\A0a\A0segmented\A0memory\A0architecture\A0that\A0allows applications\A0to\A0access\A0data\A0in\A0global,\A0local,\A0
+shared,\A0constant,\A0and\A0texture\A0memory. On GPUs, the memory
+operations from global memory are not only very time consuming but also power
+consuming. 
+
+GPU uses a single SM, the power should remain the same, and power scales with 
+respect to the number of SMs used. <BR> <BR>
+
+Global memory is used to allocate or copy data between the host and device
+(GPU). Bandwidth between host and device memory is very low compared to data
+transfer within the GPU, therefore communication between host and device should
+be minimized. There is an overhead per communication, so single large transfers
+are better than many small transfers.
+
+Global memory is located in the main device memory, and data accesses from
+the SM to global memory are high latency (400-800 clock cycle) and low bandwidth
+(compared to on chip memory). <BR> <BR>
+
+The latency can be hidden to some extent if there are a large number of active threads. 
+
+Access to global memory from the SM can be
+improved using coalescing. We use these rules to show power consumed by coalesced
+memory. <BR> <BR>
+
+
+Registers are associated with each SM and give the fastest access. Registers can
+store scalars and built-in vector types. Arrays indexed by constant values known at
+compile time typically reside in registers. 
+
+On CUDA enabled NVIDIA GPUs, the size of the registers do not exceed 32
+K since 32 K is the register space allocated per SM. Register spilling is very costly as
+it may result in data being placed in local memory rather than registers. <BR> <BR>
+
+A floating point benchmark based on Taylor's thorem for Numerical Linear Algebra (NLA) 
+kernel is considered for development of benchmarks.
+<BR> <BR>
+
+
+Shared memory, which is software managed cache, is on chip memory which has high
+bandwidth and low latency. It can be used for thread cooperation as this memory is
+shared between all threads within a block. Shared memory is divided into successive
+equal sized banks, i.e. 32 x 32-bit for C2075, that can be accessed simultaneously.
+<BR> <BR>
+
+Shared memory can be as fast as the registers if bank con
+icts are avoided. Multiple
+requests to the same bank result in serialization unless all threads read the same
+address. <BR> <BR>
+
+Coalesced Memory : Since access to global memory is via 32, 64, or 128 byte accesses, 
+
+the benchmarks can be desined  in such a way each thread can access it in a regular 
+pattern of 128 bytes.
+Coalesced memory accesses are very important for instruction throughput. The local
+and global variables use global memory.
+
+If memory accesses to global memory which are not regular patterns to global memory
+are called noncoalesced accesses.
+
+The Pthread programming on Xeon Host and offload the device query operation 
+ on GPU. The other thread obtains the  power consumption in Milli-watts as per
+ calculations performed using NVML power APIs at periodic intervals of time.
+In implementation,  NVML APIs such as <BR> <BR>
+
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlInit(); </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B>  nvmlDevice_t device; </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlReturn_t result; </B> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetHandleByIndex(GPUDevId , &device); </b> </font> <BR>
+<font face = "verdana" size ="2" color="#FF0011"> <B> nvmlDeviceGetPowerUsage(device, &p ); </b> </font> 
+<BR> <BR>
+
+are used in this code.
+
+
+ </span> </p>
+
+    <a name ="#cuda-globalmemory-nvml-inp-ex-06"> </a>
+       <LI> <B>Input</B></LI>
+        <P>None </p>
+
+    <a name ="#cuda-globalmemory-nvml-out-ex-06"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> <span class = "content">
+               CUDA globalmemory\A0\A0prints\A0performance results.\A0  </span></p>
+        </UL>
+        </UL>
+</TD>
+</TR>
+
+ <TR><TD> <HR> </TD> </TR>
+<TR>
+<TD>
+
+<DIV ALIGN=right>
+  <A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD>
+</TR>
+
+
+<!-- **************  Example 6 Device Query  CUDA - NVML   Ends **************** -->
+
+
+<!-- *************  List of NVIDIA  CUDA - NVML  Ends **************** -->
+
+
+
+<TR>
+<TD>
+<a name = "nvml-cuda-codes"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+  <DIV align=Left><font size="2" Color="black" face= "Verdana">
+  <B> NVML CUDA (Power-aware Computing) Codes  </b> </font>
+  </DIV> 
+</TD> 
+</TR> 
+
+<TR>
+<TD>
+  <font size="2" face="Arial" color="red">
+  <b>Test Programs &amp;  Benchmarks using NVML :  </b> </font> <BR> <BR> 
+
+<ul> 
+
+<li> <p align = "justify"> <span class = "content">
+ Power Watt Consumption : Memory Bandwidth; Asynchronous and Overlapping Transfers with Computation; 
+</span> </p>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+Power Watt Consumption : 
+Global and Shared Memory Implementation - Memory Intensive Benchmark 
+</span> </p>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+Power Watt Consumption : 
+Floating Point Benchmark - Coalesced Access to Global Memory;
+Floating Point Benchmark - Global and Shared Memory using CUBLAS library call - DGEMM;
+User Developed Codes for NLA Kernels 
+</span> </p>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+Power Consumption : Stream Benchmark; Open source software - MAGMA, Apps - String Search 
+Alg.; Poisson Equation Solver
+</span> </p>
+</li> 
+
+</ul>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<ul>    
+ <li> <p align = "Justify") <span class = "content">
+    CUDA Device Query on Single and Multi-GPU : Power Watt Consumption <BR>
+  
+<!-- ************ download  Starts here ************* -->
+(Download source code : <I>
+   <a  href="./gpu-comp-poweraware-comp-cuda-codes/cuda_nvml_power_devquery/cuda_dev_query_nvml_measure_power.cu">
+  <font color ="blue"> device-query-power-measurement.cu </font> </a> </I>) <BR>
+<!-- *********** download Ends here ************* -->
+
+</P> </span> </li>
+  
+ <li> <p align = "Justify") <span class = "content">
+   Power-Watt Consumption : Check for Power Consumption on each device with driver 
+   and without driver
+   
+<!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/device-driver-power-measurement.cu">
+  <font color ="blue"> device-driver-power-measurement.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+ <li> <p align = "Justify") <span class = "content">
+ Power Watt Consumption  :  Memory Check, &amp; Memory Bandwidth
+   
+<!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/device-driver-power-measurement.cu">
+  <font color ="blue"> device-driver-power-measurement.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+
+ <li> <p align = "Justify") <span class = "content">
+ Power Watt Consumption : Asynchronous and Overlapping Transfers with Computation
+
+<!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/power-device-driver-comp-comm-overlap.cu">
+  <font color ="blue"> power-device-driver-comp-comm-overlap.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+
+<li> <p align = "Justify") <span class = "content">
+Global and Shared Memory Implementation - Memory Intensive Benchmark
+
+<!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/power-device-memory-intensive.cu">
+  <font color ="blue"> power-device-memory-intesive.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+<li> <p align = "Justify") <span class = "content">
+Floating Point Benchmark - Coalesced Access to Global Memory
+ </P> </span> </li>
+
+<li> <p align = "Justify") <span class = "content">
+Floating Point Benchmark - Global and Shared Memory using CUBLAS library call - DGEMM
+ </P> </span> </li>
+
+
+<li> <p align = "Justify") <span class = "content">
+Open Source Benchmark Stream Execution  - Performance on each GPU
+ <!-- ************ download  Starts here ************* -->
+(Download source code (WinRAR ZIP Archive): <I>
+   <a  href="./gpu-comp-poweraware-comp-cuda-codes/power-demo-gpu-work-Stream.zip">
+  <font color ="blue"> power-demo-gpu-work-Stream.zip </font> </a> </I>) <BR>
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+
+
+<li> <p align = "Justify") <span class = "content">
+SAXPY implementations in CUDA C and Thrust
+ </P> </span> </li>
+
+
+<li> <p align = "Justify") <span class = "content">
+  Write your own program to measure the total power consumption and performance for 
+  different problem sizes for  implementation of PDE solver using 
+  Finite Difference Method (FDM) based on  MPI &amp; CUDA framework. 
+ <!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/power-measure-app-poisson.cu">
+  <font color ="blue"> power-measure-app-poisson.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+
+<li> <p align = "Justify") <span class = "content">
+Application Kernels : Implementation of Poisson Equation solver - CUDA Implementation
+ </P> </span> </li>
+
+<li> <p align = "Justify") <span class = "content">
+Application Kernels : Implementation of String Search Algorithms - CUDA Implementation 
+ </P> </span> </li>
+
+
+
+<li> <p align = "Justify") <span class = "content">
+ Write your own program for NLA kernel codes and measure the power consumption and performance   
+(turn around time &amp; throughput) of Benchmark.
+ <!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/power-measure-NLA-Kernel.cu">
+  <font color ="blue"> power-measure-NLA-Kernel.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+
+
+<li> <p align = "Justify") <span class = "content">
+ Write your own program for NLA kernel codes and measure the power consumption and performance   
+(turn around time &amp; throughput) of Benchmark using CUBLAS Library.
+ <!-- ************ download  Starts here ************* -->
+<!--(Download source code : <I>
+   <a  href="../gpu-comp-poweraware-comp-cuda-codes/power-measure-NLA-CUBLAS-Kernel.cu">
+  <font color ="blue"> power-measure-NLA-CUBLAS-Kernel.cu </font> </a> </I>) <BR>-->
+<!-- *********** download Ends here ************* -->
+</P> </span> </li>
+
+
+
+</ul>
+</TD>
+</TR>
+
+</tbody>
+</table>
+
+
+<!--  .............********  GPGPU - Important OpenCL  -  References   -->
+
+<TABLE width = 100% cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+<a name = "gpgpu-gpu-comp-nvidia-ref"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+  <DIV align=Left><font size="2" Color="black" face= "Verdana">
+  <B> References  </b> </font>
+  </DIV> 
+
+</TD> 
+</TR> 
+
+<TR>
+<TD>
+</tbody>
+</table>
+
+<!-- ************ Ref Starts ************ -->
+
+  
+
+<TABLE width = 100% cellPadding=3  border=0> 
+<TBODY
+<!-- Reference  1 -->
+    <tr>
+     <td  valign = "top" width="6%"  height="2" align="left"> 
+ 
+          <b> 1. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href =" http://www.nvidia.com/object/nvidia-kepler.html "> 
+      <font color = "blue">  
+         NVIDIA Kepler Architecture
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  2 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 2. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href =" http://developer.nvidia.com/cuda-toolkit "> 
+      <font color = "blue">  
+         NVIDIA CUDA toolkit 5.0 Preview Release April 2012
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  3 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 3. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href =" http://developer.nvidia.com/category/zone/cuda-zone "> 
+      <font color = "blue">  
+         NVIDIA Developer Zone 
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  4 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 4. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a http://developer.nvidia.com/gpudirect "> 
+      <font color = "blue">  
+         RDMA for NVIDIA GPUDirect  coming in CUDA 5.0 Preview Release, April  2012
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  5 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 5. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf "> 
+      <font color = "blue">  
+         NVIDIA CUDA C Programmig Guide Version 4.2  dated 4/16/2012 (April 2012)
+        </font>  
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  6 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 6. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a http://developer.download.nvidia.com/assets/cuda/files/CUDADownloads/TechBrief_Dynamic_Parallelism_in_CUDA.pdf"> 
+      <font color = "blue">  
+         Dynamic Parallelism in CUDA Tesla K20 Kepler GPUs - Prelease of NVIDIA CUDA 5.0
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  7-->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 7. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/cuda-downloads "> 
+      <font color = "blue">  
+         NVIDIA Developer ZONE - CUDA Downloads CUDA TOOLKIT 4.2 
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  8 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 8. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/gpudirect "> 
+      <font color = "blue">  
+         NVIDIA Developer ZONE - GPUDirect
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  9 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 9. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/openacct "> 
+      <font color = "blue">  
+         OpenACC - NVIDIA
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  10 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 10. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a http://developer.nvidia.com/cuda-toolkit "> 
+      <font color = "blue">  
+         Nsight, Eclipse Edition Pre-release of CUDA 5.0, April 2012
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  11 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+           <b> 11. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href =" http://developer.download.nvidia.com/compute/DevZone/docs/html/OpenCL/doc/OpenCL_Programming_Guide.pdf "> 
+       <font color = "blue">  
+         NVIDIA OpenCL Programming Guide for the CUDA Architecture version 4.0 Feb, 2011  (2/14,2011)
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  12-->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 12. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/OpenCL/doc/OpenCL_Best_Practices_Guide.pdf"> 
+      <font color = "blue">  
+        Optmization : NVIDIA OpenCL Best Practices Guide Version 1.0 Feb 2011
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  13 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+           <b> 13. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/OpenCL/NVIDIA_OpenCL_JumpStart_Guide.pdf"> 
+         <font color = "blue">  
+          NVIDIA OpenCL JumpStart  Guide  - Technical Brief 
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  14-->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 14. </b> 
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Best_Practices_Guide.pdf"> 
+       <font color = "blue">  
+          NVIDA CUDA C BEST PRACTICES GUIDE (Design Guide) V4.0, May 2011 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  15 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 15. </b> 
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf"> 
+       <font color = "blue">  
+          NVIDA CUDA C Programming Guide Version  V4.0, May 2011 (5/6/2011)
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  16 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 16. </b> 
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/gpu-computing-sdk"> 
+       <font color = "blue">  
+      NVIDIA GPU Computing SDK
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  17-->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 17. </b> 
+     
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.apple.com/mac/snowleopard/opencl.html"> 
+       <font color = "blue">  
+          Apple :  Snowleopard - OpenCL
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  18 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 18. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <font color = "black">  
+       <B>  The OpenCL Specification, Version 1.1,</B> Published by Khronos OpenCL
+        Working Group, Aaftab Munshi (ed.), 2010. 
+        </font> 
+     
+    </td>
+    </tr>
+
+<!-- Reference  19 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 19. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/opencl" > 
+     <font color = "blue">  
+         The OpenCL Speciifcation Version : v1.0  Khronos OpenCL Working Group
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  20 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 20. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/assets/uploads/developers/library/overview/OpenCL-Overview-Jun10.pdf" > 
+     <font color = "blue">  
+           Khronos V1.0 Introduction and Overview, June 2010
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  21 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 21. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/files/opencl-1-1-quick-reference-card.pdf" > 
+     <font color = "blue">  
+           The OpenCL 1.1 Quick Reference card.
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  22 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+           <b> 22. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/sdks/AMDAPPSDK/assets/opencl-1.2.pdf "> 
+        <font color = "blue">  
+          OpenCL 1.2 (pdf file) 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  23 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 23. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/"> 
+     <font color = "blue">  
+           OpenCL 1.1 Specification (Revision 44) June 1, 2011
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference 24 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 24. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/" > 
+     <font color = "blue">  
+           OpenCL Reference Pages </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+<!-- Reference  25 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 25. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href ="http://www.mathworks.com/products/matlab/" > 
+       <font color = "blue">  
+          MATLAB 
+        </font> 
+  
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  26 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+          <b> 26. </b>  
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/object/matlab_cuda.html" > 
+       <font color = "blue">  
+         NVIDIA - CUDA MATLAB Acceleration 
+        </font>  
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  27 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+         <b> 27. </b>    
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     <B>CUDA BY EXAMPLE - An Introduction to General Purpose GPU Programnming, 
+     </B> <i>
+    Jason Sanders, Edward Kandrot (Foreword by Jack Dongarra)</i>, 
+    Addison Wessely  2011, nvidia
+     </B>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  28 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+         <b> 28. </b>    
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     <B>
+       Programming Massievely Parallel Processors - A Hands-on Approach, </B>
+      <I> David B Kirk, Wen-mei W. Hwu  </i>
+      nvidia corporation, 2010, Elsevier, Morgan Kaufmann Publishers, 2011
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  29 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 29. </b>  
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.mathworks.com/matlabcentral/fileexchange/30109-opencl-toolbox-v0-17l" > 
+       <font color = "blue">  
+       OpenCL Toolbox for MATLAB
+        </font>   </a> 
+    </td>
+    </tr>
+
+<!-- Reference  30 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 30. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     
+      <a href = "http://www.nag.co.uk/" > 
+          <font color = "blue">  
+        NAG
+        </font>
+      
+    </td>
+    </tr>
+
+
+
+<!-- Reference  31-->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+         <b> 31. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+     <B>OpenCL Progrmamin Guide</B>,</i>
+     <I> Aftab Munshi Benedict R Gaster, timothy F Mattson,  James Fung, 
+            Dan Cinsburg</i>, Addision  Wesley, Pearson Education, 2012
+
+    </td>
+    </tr>
+ <!-- **************** Ref Ends  *************** -->
+
+
+<!-- Reference  32 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 32. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+          <a href="http://www.khronos.org/opencl/">
+       <font color = "blue">
+       The OpenCL 1.2 Specification  <I> Khronos OpenCL Working Group </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  33 -->
+    <tr>
+     <td  valign = "top"  width="6%" height="2" align="left"> 
+ 
+       <b> 33. </b> 
+      
+      </td>
+   
+      <td width="80%" height="2" align="left">
+        <a href="http://www.khronos.org/files/opencl-1-2-quick-reference-card.pdf">
+          <font color = "blue">
+       The OpenCL 1.2 Quick-reference-card<I> ; Khronos OpenCL Working Group </i>
+    
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+</TBODY>
+</TABLE>
+
+
+
+</TD>
+</TR>
+ <!--  content of web page End here  --> 
+
+                 
+</TD></TR></TBODY></TABLE>
+
+<TABLE width = 100% cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+<HR>
+<DIV ALIGN=right>
+<A HREF="gpu-comp-poweraware-comp-cuda-overview.html"> 
+      <IMG SRC="./gpu-comp-poweraware-comp-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

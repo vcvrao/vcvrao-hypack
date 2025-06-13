@@ -1,0 +1,2675 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                      
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                   
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+            <A class=menul
+               href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+               <!-- ** -->
+               <A class=menulslct
+                href="./../hypack13-mode01-multicore-pthreads.html">
+                &#149; Pthreads</A>
+                <!-- ** -->
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A>
+            
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+<TR>
+
+<H1> hyPACK-2013 Mode 1 :  POSIX Thread Programming (Pthreads)  </H1> 
+</TR>
+</TBODY>
+ </TABLE> 
+
+<table cellSpacing=0 cellPadding=0  border=0 >
+<tbody>
+  <tr>
+    <td>
+ <P align="justify"> <span class="content" >
+  The software threading model on the computing platform which consists of multi-core processors
+  play an important role to understand and enhance the performance of your application. Several factors such as proper 
+  use of threading, understanding of how threads operate, algorithm used for your application, the
+  threading application programming interface (API), the compiler runtime environment, and the 
+  number of multi-cores used for your application. 
+
+   Example   programs using different APIs. Compilation and execution
+   of Pthread programs, programs numerical and non-numerical computations
+   are discussed using 
+    different thread APIs to understand  Performance issues on mutli-core processors.
+<span> </p>
+</td> </tr> 
+</tbody>
+</table>
+
+<!---------------------- Sub-title Starts topics here-------------------------->
+
+<table  cellSpacing=0 cellPadding=0>
+<tbody>
+  <tr>
+    <td>
+   <p>
+   
+    <a href="#pthread-intro">
+   <font size="2" face="Arial" color="blue"> <B> Introduction </b>  </font> </a> 
+   &nbsp; &nbsp;  &nbsp;  
+
+
+  <a href="#why-pthread">
+  <font size="2" face="Arial" color="blue"> <B> Why Pthreads? </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; 
+
+
+  <a href="#overview-pthread">
+  <font size="2" face="Arial " color="blue"> <B> An Overview of Pthreads </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; 
+
+
+
+  <a href="#pthread-lib-calls">
+  <font size="2" face="Arial" color="blue"> <B> Pthreads Lib. Calls </b>   
+  </font> </a> 
+  <br> <br> 
+  
+
+ <a href="#compile-exe-prog">
+ <font size="2" face="Arial" color="blue"> <B>Compilation &amp; Execution</ b>  
+ </font> </a> 
+   &nbsp; &nbsp; 
+
+ <a href="#errors-in-threads">
+ <font size="2" face="Arial" color="blue"> <B> Errors in threaded Prog. </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; 
+
+
+<!-- .........***  commented ........
+
+ <a href="#threads-tools">
+ <font size="2" face="Arial" color="blue"> <B> Commercial /Open Source Tools Information </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; &nbsp; 
+
+...,...... *** ........... -->
+
+
+ <a href="#Pthread-FAQ">
+ <font size="2" face="Arial" color="blue"> <B> Thread FAQ </b>  </font> </a>  
+
+
+<BR> <BR>
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+<font size="2" face="Arial" color="red"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp;  
+<!-- ************* Reference Ends Here ************************ -->
+
+</td>
+</tr>
+</tbody>
+</table>
+<!-- ******************** List of Programs - simple Thread APIs   Starts [1] here ******************* -->
+
+
+<HR>
+
+<p> <font size="2" face="Arial" color="red"> <b> List of Pthreads Programs </b> </font> </p>
+
+
+
+
+<table cellSpacing=0 cellPadding=0>
+  <tbody> 
+ <tr>
+ <td>
+    
+ <ul>
+ 
+ <li>
+     <p align= "justify"><span class="content" >
+     <a href="./pthread-html/pthread-basic-calls.html">
+          <font color = "blue"> <B> Pthreads programs to illustrate basic Pthread  API library calls :  </b> 
+       </font> </a> <BR>
+         
+    Examples include some introductory programs Creating Threads, Managing Threads. Thread 
+    communications, Thread synchronization, Atomic Operations, Critical section, thread semaphores
+    (mutex),  Stack management, Join Operations and Processor affinity. 
+     Simple programs using  thread APIs are discussed.  <BR> 
+    </span> </p> 
+    
+ </li>
+
+<!-- ******************** List of Programs - simple Thread APIs ends  [1] here ************************* -->
+
+<!-- ***************** List of Programs Numerical  Computations Starts [2] here ********************* -->
+
+     <li>
+        <p align= "justify"><span class="content" >   
+        <a href="./pthread-html/pthread-numerical.html"> 
+       
+      <font color = "blue" > Programs based on Numerical Computations (Dense Matrix Comp.) using thread APIs. : </b> 
+      </font> </a> <BR>
+   
+       Examples programs on  numerical integration of "pi" value by using different algorithms  
+       vector-vector multiplication using block striped partitioning, 
+       matrix-vector multiplication using self scheduling algorithm, and block checkboard
+       partitioning, computation of Infinity norm of the square matrix using block striped partitioning. 
+       The focus is to use
+       different thread APIs and understand  Performance issues on mutli-core processors.  <BR>
+    </span> </p>
+       </li>
+
+<!-- ****************** List of Programs Numerical  Comp.  Ends  [2] here ******************* -->
+
+<!-- **************** List of Programs Non-Numerical  Kernels Starts [3] here ******************* -->
+  <li>
+      <P align= "justify"><span class="content" >
+        <a href="./pthread-html/pthread-non-numerical.html"> 
+   
+       <font color ="blue"> <B>Non-Numerical Comp. (Sorting, Searching, Producer-Consumer) using thread APIs.: </b>
+       </font>  </a> <BR>
+     
+       Example programs on  Sorting, Searching algorithms, Producer Consumer programs & Thread-I/O programs 
+       are discussed. The focus is to use
+       different thread APIs and understand Performance issues on mutli-core processors.</span> </p>
+  
+   </li>
+
+
+<!-- ***************** List of Programs Non-Numerical  Kernels  Ends  [3] here ******************* -->
+
+<!-- ******************** List of Programs Benchmark Kernels Starts [4] here ***************** -->
+  <li>
+  
+    <P align= "justify"><span class="content" >
+        <a href="./pthread-html/pthread-benchmarks-kernels.html"> 
+   
+    <font color = "blue"> <B> Test suite of Programs/Kernels and Benchmarks on Multi-Core Processors  :  </b> 
+        </font></a> <BR>
+     
+    A test suite of pthread programs on selective Dense Matrix computations, and sorting/Searching Algorithms, Thread
+    based I/O are discussed on mutli-core processors. Different thread APIs have been 
+    used to  understand  Performance issues on mutli-core processors. <BR> <BR> </span> </p>
+ 
+ </li> 
+
+
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+
+
+
+
+
+<!-- ******************* List of Programs Benchmark Kernels  Ends  [4] here ************************* -->
+
+
+<!-- ******************** List of Programs Read Write lock Starts [5] here ***************** -->
+  <li>
+  
+    <P align= "justify"><span class="content" >
+        <a href="./pthread-html/pthread-read-write-locks.html"> 
+   
+    <font color = "blue"> <B> Pthreads programs to illustrate read write API library calls   :  </b> 
+        </font></a> <BR>
+     
+    Programs that illustrate the use of Read-Write Lock using different read-write lock APIs are described.Sample demo code that gives basic idea of how to use Read-Write Lock and one sample application using both mutex and Read-Write Lock is described so that one can get better idea of what is exact difference between these synchronization constructs and how to use them.  <BR> <BR> </span> </p>
+ 
+ </li> 
+
+
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+
+
+<!-- ******************* List of Programs read write lock  Ends  [5] here ************************* -->
+
+<!-- ******************** List of Programs on producer / consumer Starts [6] here ***************** -->
+  <li>
+  
+    <P align= "justify"><span class="content" >
+        <a href="./pthread-html/pthread-producer-consumer-large.html"> 
+   
+    <font color = "blue"> <B> Pthreads programs to illustrate producer/consumer program for large no. of threads   :  </b> 
+        </font></a> <BR>
+    Programs that illustrate the application of Pthreads to producer / consumer problem with large number of producers and consumers. It illustrates the usage of Pthreads for
+large no. of threads reading and writing to vectors implemented in 'indexed-access' (or array implementation) and 'sequential-access' (or linked list implementation). It also 
+shows how the problem can be solved using the Mutex objects and condition-variable objects of Pthreads.
+   It also illustrates 'thread-affinity' setting, to bind threads to particular number of cores. For different thread-affinity masks, the performance can be observed.<BR> <BR> </span> </p>
+ 
+ </li> 
+
+<!-- ******************* List of Programs read write lock  Ends  [6] here ************************* -->
+
+<!-- ******************** List of Programs on producer / consumer Starts [7] here ***************** -->
+  <li>
+  
+    <P align= "justify"><span class="content" >
+        <a href="./pthread-html/pthread-streaming-media.html"> 
+   
+    <font color = "blue"> <B> Pthreads programs to illustrate simple media player   :  </b> 
+        </font></a> <BR>
+Pthread program for simple media streaming player, which consists of 
+a thread monitoring a network port for arriving data, a decompressor thread for decompressing packets and generating frames
+in a video sequence, and a rendering thread that displays frames at programmed intervals. <BR> <BR> 
+
+These three threads must communicate via shared buffers - an in-buffer between the network and decompressor, and an out-buffer 
+between the decompressor and renderer. Implement this simple threaded framework. The network thread calls a dummy function 
+listen_to_port to gather data from the network. For the sake of this program, this function generates a random string of bytes 
+of desired length. The decompressor thread calls function decompress, which takes in data from the in-buffer and returns 
+a frame of predetermined size. <BR> <BR>
+
+For this exercise, generate a frame with random bytes. Finally the render thread picks frames from the out buffer and calls the 
+display function. This function takes a frame as an argument, and for this exercise, it does nothing. Implement this threaded 
+framework using condition variables. Note that you can easily change the three dummy functions to make a meaningful streaming 
+media decompressor. <BR> <BR> 
+
+</span> </p>
+ 
+ </li> 
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+</ul>
+
+</td>
+</tr>
+
+
+<!-- ******************** List of Programs on producer / consumer Ends [6] here ***************** -->
+
+
+</tbody>
+</table>
+
+<HR>
+
+<!-- ****************** Introduction to thread starts ************************* -->
+
+<a name="pthread-intro"> </a>
+
+<TABLE cellSpacing=0 cellPadding=0 > 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<p align = "left"> 
+<font size = "2" color ="red" type = "verdana">
+     <b> Introduction to PThreads  </b> </font>
+</p>
+
+</TD>
+ </TR> 
+
+
+
+<TR>
+<TD>
+
+<BR>
+
+ <P align= "justify"><span class="content" >
+
+
+ POSIX threads or Pthreads is a portable threading library, which provides consistent programming interface across 
+ multiple operating systems. Pthreads is emerged as a standard threading interface for Linux and Unix
+ platforms. A number of vendors provide vendor specific thread APIs. More core Pthreads functions on thread
+ creation and destruction, synchronization and other thread features. In shared memory multiprocessor 
+ architectures, such as SMPs, threads can be used to implement parallelism. Historically, hardware vendors
+ have implemented their own proprietary versions of threads, making  portability a concern for 
+ software developers.  <BR> <BR> 
+
+   A Thread is a 'Light Weight Process'. A thread is a stream of instructions that can be  scheduled as an independent unit.
+ A thread exists within a process, and uses the process resources. Since threads are very small compared with processes, 
+thread creation is relatively cheap in terms of CPU costs. As processes require their own resource bundle, 
+and threads share resources, threads are likewise memory frugal. There can be multiple threads within a process. 
+Multithreaded programs may have several threads running through different code 
+paths "simultaneously". <BR> <BR>
+
+  
+The IEEE specifies a standard 1003.1c-1995, POSIX API.
+For UNIX systems, a standardized C language threads programming interface has
+ been specified by the IEEE POSIX 1003.1c standard. Implementations that adhere to this standard are referred to 
+as POSIX threads, or Pthreads. The concepts used in this "Pthreads on Multi-Cores" are largely 
+independent of the API and can be used for programming with other thread APIs (Windows NT threads, 
+Solaris threads, Java threads etc.. ). <BR> <BR>
+
+
+The Pthread module begins with an introduction to concepts, motivations, and design considerations 
+for using Pthreads.
+ Each of the three major classes of routines in the Pthreads API such as <I> Thread Creation, </i> 
+ <I> Thread Termination, </i>
+Thread Management, Mutex Variables, 
+and Condition Variables. Example codes are used throughout to demonstrate how to use most of the Pthreads routines 
+needed by a new Pthreads programmer.  </span> </p>
+
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+
+</TD></TR>
+</TBODY> </TABLE> 
+
+<!-- ******************  Introduction to thread ends here ********************** -->
+
+<!-- ******************  An Overview of Pthreads start here ****************** -->
+
+<a name="overview-pthread">  </a>
+
+<TABLE cellSpacing=0 cellPadding=0 border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889">  </a>
+
+<p align = "left"> 
+<font size = "2" color ="red" type = "verdana">
+     <b> An Overview of Pthreads  </b> </font>
+</p>
+
+</TD>
+ </TR> 
+
+ 
+
+<BR>
+
+<TR>
+<TD>
+
+<BR> 
+ <P align=justify><span class="content" > </a>
+
+The most significant recent trend in mass-market processor sales has been the growth of multi-core
+ processors. Concurrent programming solutions are required to take advantage of this parallel 
+processing capability.  Historically, hardware vendors have implemented their own proprietary 
+versions of threads. These implementations differed substantially from 
+each other making it difficult for programmers to develop portable threaded applications. <BR> <BR>
+
+Several business motives drive the development of dual-core architectures. 
+
+Additionally, for general-purpose processors, much of the motivation for multi-core processors 
+comes from the increasing difficulty of improving processor performance by
+ increasing the operating frequency (frequency-scaling). In order to continue 
+delivering regular performance improvements for general-purpose processors,
+ manufacturers such as Intel and AMD have turned to multi-core designs, sacrificing 
+lower manufacturing costs for higher performance in some applications and systems.
+Multi-core architectures are being developed, but so are the alternatives. 
+An especially strong contender for established markets is to integrate more 
+peripheral functions into the chip. <BR> <BR>
+
+Software benefits from multicore architectures where code can be executed in parallel. 
+Under most common operating systems this requires code to execute in separate threads or
+ processes. Each application running on a system runs in its own process 
+so multiple applications will benefit from multicore architectures. Each application may 
+also have multiple threads but, in most cases, it must be specifically written to utilize
+ multiple threads. Operating system software also tends to run many threads as a part of 
+its normal operation. Running virtual machines will benefit from adoption of multiple core 
+architectures since each virtual machine runs independently of others and can be executed 
+in parallel.
+
+Most application software is not written to use multiple concurrent threads intensively 
+because of the challenge of doing so. A frequent pattern in multithreaded application design 
+is where a single thread does the intensive work while other threads do much less.
+<BR> <BR> 
+
+     In order to take full advantage of the capabilities provided by threads, a standardized programming interface was required. For UNIX systems, this
+ interface has been specified by the IEEE POSIX 1003.1c standard (1995). 
+Implementations,which adhere to this standard are referred to as POSIX threads, or Pthreads. Most hardware vendors now offer Pthreads in addition to 
+their proprietary API's.<BR> <BR>
+
+     Pthreads are defined as a set of C language programming types and procedure calls, implemented with a pthread.h header/include file and a 
+thread library - though the this library may be part of another library, such as libc. <BR> <BR>
+
+    The character P in Pthreads stands for POSIX.It is a set of threading interfaces developed by IEEE Committe in charge of specifying a portable 
+operating system interface(POSIX). POSIX committee defined a basic set of functions and data structures that it hoped would have been used by 
+numerous vendors so that threaded code can be ported easily across operating systems. It specifies API to handle most of actions required by 
+threads.It is a library that has  standardized functions for using threads across different platforms.<br> <BR>
+
+
+In general though, in order for a program to take advantage of Pthreads, it must be able to be organized into discrete, 
+independent tasks which can execute concurrently. For example, if routine1 and routine2 can be interchanged, interleaved and/or overlapped in real time, 
+they are candidates for threading as shown in Figure 1. 
+</span> </p>  <br><br>
+
+
+<div align = "center">
+ <img src="./pthread-images/concurrent.gif" alt="Unix Process" border="0" height="400" width="350" > <BR>
+  Figure 1. concurrent execution of pthreads 
+</div>
+
+<br><br>
+ <P align=justify><span class="content" >
+Programs having the following characteristics may be well suited for pthreads: </span> </p>
+
+<ul>
+<blockquote>
+ <P align=justify><span class="content" >
+ <li>  Work that can be executed, or data that can be operated on, by multiple tasks simultaneously </li>
+  <li>   Block for potentially long I/O waits </li>
+  <li> Use many CPU cycles in some places but not others </li>
+   <li> Must respond to asynchronous events </li>
+  <li>  Some work is more important than other work (priority interrupts) </li> 
+</span> </p>
+</ul>
+
+</blockquote>
+ <P align=justify><span class="content" >
+Pthreads can also be used for serial applications, to emulate parallel execution. A perfect example is the typical web browser, 
+which for most people, runs on a single cpu desktop/laptop machine.  </span> </p>
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+
+</TD>
+</TR>
+</TBODY> 
+</TABLE> 
+
+<BR>
+<!-- *********************  An Overview of Pthreads Ends here **************** -->
+
+<!-- *******************  An Overview of Pthreads : Shared Memory Model Starts ****************** -->
+
+  
+
+<TABLE cellSpacing=0 cellPadding=0  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+
+<p align = "left"> 
+   <font size = "2" color ="red" type = "verdana">
+     <b> Shared Memory Model   </b> </font>
+</p>
+ 
+
+</TD> 
+</TR> 
+
+ 
+
+
+<TR>
+<TD>
+
+ <BR>
+<P align=justify><font class="content" >
+
+
+Symmetric multiprocessing (SMP) designs have been long implemented using discrete CPUs, 
+the issues regarding implementing the architecture and supporting it in software are well known. 
+In addition to operating system (OS) support, adjustments to existing software are required to 
+maximize utilization of the computing resources provided by multi-core processors.
+ Also, the ability of multi-core processors to increase application performance depends 
+on the use of multiple threads within applications. <BR> <BR>
+The most important challenge in shared-address-space programming is the decomposition of a single 
+application into several, dependent and interacting tasks. The efficiency of the parallel program
+ is highly dependent on this decomposition step: it determines the synchronization and 
+communication overhead. 
+
+Other challenges are synchronization and communication between parallel threads. 
+Synchronizing parallel threads is a tedious task: synchronizing too often leads to 
+inefficient program execution but not enough synchronization can lead to incorrect results 
+due to the data races or condition hazards. Faulty synchronization can lead to deadlocks in
+the Shared-address-spcae programming. <BR> <BR>
+
+
+The shared memory model is quite suitable to Pthread Programming and the users should 
+understand concepts of 
+synchronization, critical section and deadlock conditions. 
+Synchronization 
+is an enforcing mechanism used to impose constraints on the order of execution of threads.
+ The features of the Shared 
+memory model : </span> </p>
+
+
+<ul>
+ <P align=justify><span class="content" >
+
+     <li> All threads have access to the same global, shared memory </li>
+
+     <li> Threads also have their own private data </li>
+
+     <li> Programmers are responsible for synchronizing access (protecting) globally shared data.</li>
+</span> </p>
+
+</ul>
+
+<div align ="center">
+
+<img src="./pthread-images/shared-memory-model.gif" alt="Unix Process" border="0" height="350" width="350" > <BR>
+Figure 2. Typical Shared Memory Model Using Threads 
+</div>
+
+</TD></TR>
+
+</TBODY> </TABLE> 
+
+<!-- ****************** An Overview of Pthreads : Shared Memory Model ends ***************** -->
+
+
+
+
+<!-- *****************  An Overview of Pthreads : Thread Safeness  Starts ********************** -->
+
+<TABLE cellSpacing=0 cellPadding=0 > 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<p align = "left"> 
+<font size = "2" color ="red" type = "verdana">
+     <b> Thread Safeness  </b> </font>
+</p>
+
+
+</TD> 
+</TR> 
+
+
+<TR>
+<TD>
+
+
+<BR> 
+ <P align=justify><span class="content" >
+Thread-safeness: in a nutshell, refers an application's ability to execute multiple threads simultaneously 
+without "clobbering" shared data or creating "race" conditions.<br><br>
+
+For example, suppose that your application creates several threads, each of 
+which makes a call to the same library routine: </span> </p>
+
+<br>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 > 
+<TBODY>
+
+  <TR> 
+  <td>   
+ 
+ <ul>
+
+
+   <li> 
+   <P align = "justify"> <span class="content" >
+         
+    This library routine accesses/modifies a global structure or location in memory.
+    </span> </p> 
+    </li>
+
+   
+   <li>
+           <P align=justify><span class="content" >
+      As each thread calls this routine it is possible that they may try to modify this global 
+       structure/memory  location at the same time.  
+       </span> </p> 
+     </li>
+
+   
+
+   
+     <li>
+         <P align = "justify"> <span class="content" >
+      If the routine does not employ some sort of synchronization constructs to prevent data corruption, then it 
+        is not thread-safe.
+        </span> </p> 
+     </li>
+
+</ul>
+
+
+
+
+
+<div align = "center"> 
+  <P align = "center"> <span class="content" >
+
+<img src="./pthread-images/thread-unsafe.gif" alt="Unix Process" border="0" height="350" width="350" ><br>
+Figure 3. Typical situtation for thread-safe  </span> </p>
+
+</div>
+
+<BR> <BR>
+ <P align = "justify"> <span class="content">   
+
+The developer should know about the thread-safety of the external library routines in order to
+ obtain correct results. 
+
+</span> </p>
+
+</TD>
+</TR>
+</TBODY> 
+</TABLE> 
+
+<BR>
+<BR>
+
+<!-- ********************* An Overview of Pthreads : Thread Safeness Ends ********************* -->
+
+
+<!-- ****************************** Why Pthread Starts ************************* -->
+
+
+<a name="why-pthread"> </a>
+
+<TABLE cellSpacing=0 cellPadding=0  border=0> 
+<TBODY>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+
+
+<p align = "left"> 
+   <font size = "2" color ="red" type = "verdana">
+     <b> Why Threads ?  </b> </font>
+</p>
+
+ 
+</TD> 
+</TR> 
+
+
+<TR> 
+<TD>
+
+
+<BR>
+
+<P align = "justify"> <span class="content">  
+
+Threaded
+programming models offer significant advantages over message-passing programming  models along
+with some disadvantages. 
+Several advantages of Pthread programming on Multi-core processors are listed below. 
+</span> </p>
+
+<BR>
+
+<ul>
+
+  
+
+<li> <P align = "justify"> <span class="content"> 
+<I> Software Portability :</i> Pthreaded applications can be developed on serial computing
+    systems and run on Multi-Core as well as Parallel Processing Systems without any changes.
+    This gives significant advantage of threaded APIs on software utilization
+     and application development time.  <BR> </span> </p> 
+</li>
+<li><P align = "justify"> <span class="content"> 
+     The primary motivation for using Pthreads is to realize potential program performance gains
+     while reducing the overheads when multiple threads are used.<br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+
+   <i> Latency Hiding : </i> The major overheads in serial /parallel programs are : access latency for 
+       memory access, I/O, and Communication. By enabling multiple threads to execute on the
+       same processor, threaded APIs enable this latency to be hidden. The concept of masking 
+       associated overhead for threads can be achieved on Multi-Core platforms.<br><br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+
+  When compared to the cost of creating and managing a process, a thread can be created 	 
+  with much less operating system overhead. Managing threads requires fewer 		  		
+  system resources than managing processes.<br><br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+
+  All threads within a process share the same address space. Inter-thread communication is 		
+  more efficient and in many cases, easier to use than inter-process-communication.<br><br>
+</span> </p>
+</li>
+
+
+<li><P align = "justify"> <span class="content"> 
+
+  Threaded applications offer potential performance gains and practical advantages over 	
+  non-threaded applications in several other ways.<br><br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+
+  <i>Overlapping CPU work with I/O:</i> For example, a program may have sections where it is 		
+  performing a long I/O operation. While one thread is waiting for an I/O system call to 	 
+  complete, other threads can perform CPU intensive work.<br><br>
+</span> </p>
+</li>
+
+
+<li><P align = "justify"> <span class="content"> 
+
+  <i>Priority/real-time scheduling:</i> Tasks that are more important can be scheduled to 		
+  supersede or interrupt lower priority tasks.<br><br>
+</span> </p>
+</li>
+
+
+<li><P align = "justify"> <span class="content"> 
+
+   <i>Synchronous event handling:</i> tasks that service events of indeterminate frequency and   	
+   duration can be interleaved. For example, a web server can both transfer data from 		
+    previous requests and manage the arrival of new requests.<br><br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+
+      Threades APIs allow the programmer to specify a large number of concurrent task and support
+      system level dynamic mapping of tasks to the processors with a view to minimizing idling
+      overheads. This provides an opportunity and threaded APIs aide the programmer to free from
+      burden of explicit scheduling and load balancing.<br><br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+   Multi-threaded applications will work on a uni-processor system; yet naturally take 		
+    advantage of a multiprocessor system, without recompiling.<br><br>
+</span> </p>
+</li>
+
+<li><P align = "justify"> <span class="content"> 
+	In a multiprocessor environment, the most important reason for using Pthreads is to take 	
+	advantage of potential parallelism. In order for a program to take advantage of Pthreads, 
+	it must be able to be organized into discrete,independent tasks that can execute concurrently.
+</span> </p>
+
+
+</li>
+
+
+</ul>
+
+  
+</TD>
+</TR>
+
+
+<tr>
+<td>
+
+<P align = "justify"> <span class="content"> 
+
+Due to aforementioned advantages, the Pthreaded programs are significantly easier to write but achieving
+identical levels of performance for the two programs may require additional effort. With Widespread
+acceptance of the POSIX thread  API, development tools for POSIX threads, transform to Multi-Core 
+platforms is easy from the program development and software engineering aspects. The important
+issues such as Decomposition of data, Synchronization, Performance and Scalability 
+require serious attention on Multi-cores. 
+</span> </p>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<!-- ********************  Why Pthread ends ************************ -->
+
+
+<!-- *********************** Basic Pthread Libray calls starts ********************* -->
+
+
+<br><br>
+<a name="pthread-lib-calls"> </a>
+
+
+<TABLE cellSpacing=0 cellPadding=0  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+   <DIV align=Left>
+<font size="2"  Color="red" face= "verdana">
+      <B>  Pthread Library Calls  </> </font></DIV> 
+</TD> 
+</TR> 
+
+<TR>
+<TD>
+
+ <P align = "justify"> <span class="content"> 
+ 
+<BR> <BR>
+
+The  communication is implicit in shared-address-space programming and much of the effort 
+associated with writing correct threaded programs is difficult. The correctness of the 
+programs is spent on synchronizing concurrent  threads and respect to their data accesses
+or scheduling.  The synchronization primitives in Pthreads are mutual exclusion for shared
+variables, overheads of Locking, condition variables for Synchronization, controlling Thread
+and synchronization attributes,  attribute objects for mutexes, thread cancellation,  
+composite synchronization constructs and Barrier construct. The basic library calls used are listed below. 
+</span> </p>
+
+
+
+<!-- ******.....*** No.1 **** -->
+
+   
+  <font color="black" size = "2" > <B> 1.pthread_create: </b> </font> <br><br>
+ 
+ <ul>
+  <li>
+ <font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void*(*start_routine) (void),(void *arg)) ; </i> </font>
+  </li>
+  </ul>
+
+ 
+
+  <P align = "justify"> <span class="content"> 
+
+   Creates a new thread, initializes its attributes, and makes it runable.<br>
+
+    	The pthread_create subroutine creates a new thread and initializes its attributes using the  thread attributes object 
+  specified by the attr parameter. The new thread inherits its 		creating thread's signal mask; but any pending signal 
+  of the creating thread will be 	cleared for the new thread. <br><br>
+   
+    	The new thread is made runnable, and will start executing the start_routine routine, with  the parameter 
+ specified by the arg parameter. The arg parameter is a void pointer; it can  reference any kind of data.
+ It is not recommended to cast this pointer into a scalar data 	  type (int for example), because the casts 
+ may not be portable. <br><br>
+
+    	The pthread_create subroutine returns the new thread identifier via the thread argument.  
+  The caller can use this thread identifier to perform various operations on the thread. 		
+This identifier should be checked to ensure that the thread was successfully  created.
+ <br><br>
+
+ The maximum number of threads that may be created by a process is implementation dependent.  <br><br>
+</span></p>
+
+
+<div align="Center">
+<img src="./pthread-images/peer-threads.gif" alt="Unix Process" border="0" height="350" width="350" ><br><br>
+  Figure 4. Typical flow of number of Threads execution <BR> <BR>
+</diV>
+
+<P align = "justify"> <span class="content"> 
+ Once created, threads are peers, and may create other threads. There is no implied hierarchy or dependency
+ between threads. </span> </p>
+
+  <br><br>
+
+<!-- ******.....*** No.2 **** -->
+
+ <font color="black" size = "2" > 
+ <B> 2.pthread_exit:  </b> </font> <br><br>
+ 
+  
+  <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+ 	void pthread_exit(void *value_ptr)</i> </font>
+  <br><br>
+ </li>
+  </ul>
+
+   <P align = "justify"> <span class="content"> 
+
+    	Terminates the calling thread.<br> <BR>
+    The pthread_exit subroutine terminates the calling thread safely, and stores a termination status for any thread that may join the calling thread. 
+   The termination status is always a void pointer; it can reference any kind of data. It is not recommended to cast this pointer into a
+    scalar data type (int for example), because the casts may not be  portable. 
+    This subroutine never returns.
+ <br><br>
+
+
+   	Unlike the exit subroutine, the pthread_exit subroutine does not close files. Thus any 	
+	file opened and used only by the calling thread must be closed before calling this 
+	subroutine.It is also important to note that the pthread_exit subroutine frees any 
+	thread-	specific data, including the thread's stack. Any data allocated on the stack 
+	becomes invalid identifier, since the stack is freed and the corresponding memory may be 
+	reused by another thread. Therefore, thread synchronization objects (mutexes and condition 
+	variables) allocated on a thread'sstack must be destroyed before the thread calls the 	
+	pthread_exit subroutine.<br><br>
+
+	Returning from the initial routine of a thread implicitly calls the pthread_exit  
+	subroutine, using the return value as parameter. </span> </p> <br><br>
+
+   <!-- ******.....*** No.3 **** -->
+
+
+ <font color="black" size = "2" > <B> 3.pthread_self:  </b> </font> <br><br>
+ 
+  <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+ 	pthread_t pthread_self()</i> </font>
+   <br><br>
+ </li>
+  </ul>
+
+  
+   <P align = "justify"> <span class="content"> 
+
+    	 Returns the calling thread's identifier.<br><br>
+
+   	 The pthread_self subroutine returns the calling thread's identifier. </span> </p> <br><br>
+
+
+ <!-- ******.....*** No.4 **** -->
+
+<font color="black" size = "2" > <B> 4.pthread_join:  </b> </font> <br><br>
+ 
+  <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	int pthread_join(pthread_t thread, void **value_ptr);</i> </font>
+   <br><br>
+ </li>
+  </ul>
+
+    <P align = "justify"> <span class="content"> 
+
+    	The pthread_join subroutine blocks the calling thread until the thread specified in the   call terminates.
+ The target thread's termination status is returned in the status parameter. If the target thread is already terminated, but not yet detached, 
+the subroutine returns 
+ immediately. It is impossible to join a detached thread, even if it is not yet terminated. 		
+The target thread is automatically detached after all joined threads have been woken up. This subroutine does not itself cause a 
+thread to be terminated. It acts like the pthread_cond_wait subroutine to wait for 
+a special condition. "Joining" is one way to accomplish synchronization between threads as shown in the figure 5. </span> </p>
+   <br><br>
+
+	
+ <div align = "Center">
+
+<img src="./pthread-images/joining.gif" alt="Unix Process" border="0" height="350" width="350" > <BR>
+Figure 5. Typical master and worker - Pthread Programming model 
+</div>
+<br><br>
+
+
+ <!-- ******.....*** No.5 **** -->
+
+   <font color="black" size = "2" > <B> 5.pthread_detach: </b> </font> <br><br>
+  <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	 int pthread_detach(pthread_t thread, void **value_ptr);</i> </font>
+   <br><br>
+ </li>
+  </ul>
+
+    <P align = "justify"> <span class="content"> 
+          Detaches the specified thread from the calling thread.<br>
+
+   The pthread_detach subroutine is used to indicate to the implementation that storage for the thread whose thread identifier 
+is in the location thread can be reclaimed When that 
+	thread terminates. This storage shall be reclaimed on process exit, regardless of whether 		
+the thread has been detached or not, and may include storage for thread return value. If  thread has not yet terminated,
+ pthread_detach shall not cause it to terminate. Multiple pthread_detach calls on the same target thread causes an error. <BR> <BR>
+
+  If the target thread is already terminated, but not yet detached, the subroutine returns immediately. 
+It is impossible to join a detached thread, even if it is not yet terminated. The target thread is automatically detached 
+after all joined threads have been woken up.
+
+   This subroutine does not itself cause a thread to be terminated. It acts like the pthread_cond_wait subroutine to wait
+     for a special condition. </span> </p> <br><br>
+
+ <!-- ******.....*** No.6 **** -->
+
+   <font color="black" size = "2" > <B> 6.pthread_mutex_init: </b> </font> <br><br>
+  <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	int pthread_mutex_init (pthread_mutex_t *mutex, pthread_mutexattr_t *attr);</i> </font>
+ <br><br>
+ </li>
+  </ul>
+
+   <P align = "justify"> <span class="content"> 
+
+
+    	Initializes a mutex and sets its attributes.<br>
+
+    	The pthread_mutex_init subroutine initializes a new mutex , and sets its attributes according to the mutex attributes 
+     object attr. The mutex is initially unlocked.<br>
+
+    	After initialization of the mutex, the mutex attributes object can be reused for another  mutex initialization, 
+or deleted. </span> </p>
+
+  <br><br>
+
+
+ <!-- ******.....*** No.7 **** -->
+
+   <font color="black" size = "2" > <B> 7.pthread_mutex_destroy:</b> </font> <br><br>
+
+  <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+        int pthread_mutex_destroy(pthread_mutex_t *mutex);</i> </font>
+  <br><br>
+ </li>
+  </ul>
+
+  <P align = "justify"> <span class="content"> 
+
+    	Deletes a mutex.
+
+    	The pthread_mutex_destroy subroutine deletes the mutex <b>mutex</b>. After deletion of the mutex, the mutex parameter 
+   is not valid identifier until it is initialized again by a call to the 	pthread_mutex_init subroutine. </span> </p> <br><br>
+
+
+
+ <!-- ******.....*** No.8 **** -->
+
+   <font color="black" size = "2" > <B> 8.pthread_mutex_lock:</b> </font> <br><br>
+
+ <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+         int pthread_mutex_lock (pthread_mutex_t *mutex);</i> </font>
+  <br><br>
+ </li>
+  </ul>
+
+    <P align = "justify"> <span class="content"> 
+
+
+    	 Locks a mutex.
+
+    	Calling pthread_mutex_lock locks the mutex object referenced by mutex. If the mutex is already locked,
+ the calling thread blocks until the mutex becomes available. This operation returns with the mutex object 
+referenced by mutex in the locked state with the calling thread as its owner. <span. </p> <br><br>
+
+
+ <!-- ******.....*** No.9 **** -->
+
+   <font color="black" size = "2" > <B> 9.pthread_mutex_trylock:</b> </font> <br><br>
+  <ul>
+  <li> 
+  <font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	int pthread_mutex_trylock (pthread_mutex_t *mutex);</i> </font>
+    <br><br>
+  </li>
+  </ul>
+
+   <P align = "justify"> <span class="content"> 
+
+
+       Tries to lock a Mutex.
+
+   The function pthread_mutex_trylock is identifierentical to pthread_mutex_lock except that if  the mutex object 
+   referenced by mutex is currently locked (by any thread, including the current thread), the call returns 
+   immediately. </font>
+ <br><br>
+  </span> </p>
+
+
+ <!-- ******.....*** No.10 **** -->
+
+   <font color="black" size = "2" > <B> 10.pthread_mutex_unlock: </b> </font> <br><br>
+ <ul>
+  <li>
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	int pthread_mutex_unlock (pthread_mutex_t *mutex); </i> </font>
+  <<br><br>
+ </li>
+  </ul>
+
+ <P align = "justify"> <span class="content"> 
+
+     Unlocks a Mutex.
+    The pthread_mutex_unlock function releases the mutex object referenced by mutex. The manner in which a mutex is released 
+   is dependent upon the mutex's type attribute. If there are threads 	blocked on the mutex object referenced by mutex 
+  when pthread_mutex_unlock is called, resulting in the mutex becoming available, the scheduling policy is used to determine which thread shall 
+acquire the mutex.<br><br>
+
+</span></p> 
+
+</TD> 
+</TR> 
+</TBODY> 
+</TABLE> 
+
+
+<!-- ******************** Basic Pthread Libray calls ends **************** -->
+
+<!-- ********************* Compilation and execution of pthread programs starts ************* -->
+
+
+<a name="compile-exe-prog"> </a>
+<TABLE  cellSpacing=0 cellPadding=0  cellBorder=0>
+<TBODY>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+  <DIV align=Left>
+  <font Color="black" size = "2" face= "Verdana">
+     <B>  Compilation &amp; Execution of Pthread Programs  </B>  </font></DIV> 
+  </TD> 
+  </TR> 
+
+
+<TR>
+<TD>
+
+<BR> 
+
+ <P align = "justify"> <span class="content"> 
+
+   Pthreads code should include the  <font color = "red"> <i> pthread.h </i>  </font> header file. On the compilation 
+   command line, the Pthreads library should be specified to the linker on UNIX
+   and Linux environments using the <font color = "red">  <i> -lpthread </i> </font>  command-line  switch. <BR> <BR>
+
+  
+   The specific files to be used will differ with implementation on various platforms.<br><br>
+
+   There are two ways to compile pthread codes : </span> </p> <br>
+
+<!-- .............Using a Makefile ....... -->
+
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> 1. Using command line arguments: </b> </font> <br><br>
+ 
+  <P align = "justify"> <span class="content"> 
+	The compilation and execution details of Pthreads programs will vary from one system to another. 
+      	The essential steps are common to all the systems.<br><br>
+
+        Use <i> gcc </i> on most of the systems.
+	First   for compiliation, we should  use following statement :  </span> </p>
+	
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+        $ gcc -o  &lt; executable name &gt; &lt; name of source file &gt;  -lpthread  </i> </font>
+         <br><br>
+
+        For example to compile a simple Hello World program,  user should  give : <br><br>
+
+        <font color="red" size = "2", face="TimesNewRoman"> <i>
+           $ gcc -o helloworld  pthread-helloworld.c  -lpthread </i> 
+        </font> <br><br>
+
+<!-- .... Using Makefile ....... -->
+
+
+        <font color="black" size = "2" face ="TimesNewRoman"> 
+           <b> 2. Using a Makefile: </b> 
+         </font> 
+
+ 
+  <P align = "justify"> <span class="content">   
+   For more control over the process of compiling and linking programs for Pthreads, you should use a '<i> Makefile </i> '. You may also use some 
+      commands in <i> Makefile  </i> particularly for programs contained in a large number of files.  The user has to specify the names 
+   of the program and appropriate paths to link some of the libraries required for Pthreads programs in the <i> Makefile. </i> <br>
+
+        To compile and link a Pthreads program, type  the command,  </span> </p> 
+
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+        make </i> </font>  <BR> <BR>
+    
+<!-- ............ Exeucting ...... -->
+
+
+   <font color="black" size = "2" face ="TimesNewRoman"> <b>  Executing a Program: </b> </font> <br><br>
+
+      <P align = "justify"> <span class="content">   
+        To execute a Pthreads Program, give the name of the executable at command prompt. 
+      </span. </p>  <BR> <BR>
+
+      <font color="red" size = "2", face="TimesNewRoman">  <i> $  . / &lt; Name of the Executable &gt; </i> </font>  <br> <br>
+
+         <P align = "justify"> <span class="content">   
+       For example, to execute a simple HelloWorld Program, user must type: </span. </p>
+      <br><br>
+  
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+         $ ./helloworld   </font> <br><br></i>
+
+        <P align = "justify"> <span class="content">   
+           The output must look similar to the following:
+        </span> </p> 
+
+          <font color = "red" >  Hello World!  </font> <br> <br> 
+
+<!-- ......... Benchmarks .......-->
+
+<font color="black" size = "2" face ="TimesNewRoman"> 
+
+  <b>How to compile and  run Benchmark ?</b> </font> <br><br>
+
+  <P align = "justify"> <span class="content">   
+
+ In the  <i> tar </i> file which we have provided on our web-page you will find one <I> README </i>  file. That file contains all 
+information about how to compile and execute benchmark. Here we are providing brief summary of how to
+compile and execute benchmark:  <BR> <BR>
+
+First,  you need to go in the  directory named <i> In-House-Pthreads-Benchmarks  </i> </span> </p> 
+
+<br>
+
+Then you need to give : <br> <br>
+
+<font color ="red">
+<i>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;make &lt;benchmark-name&gt; THREADS=&lt;Number of threads&gt; CLASS=&lt;Class-Name&gt;<br>
+<br></i> </font>
+where<br> <br>
+
+&nbsp;&nbsp;<font color ="red">
+&lt;benchmark-name&gt; </font> is name of benchmark which you want to run,<br>
+&nbsp;&nbsp;<font color ="red">
+
+&lt;Number of threads&gt;  </font> is Number of threads whether 1 / 2 / 4 / 8<br> 
+&nbsp;&nbsp; <font color ="red">
+
+&lt;Class-Name&gt; </font> is Class Name i. e.  A, B or C which is different problem sizes<br><br><br>
+
+
+
+Ex: If you want to run PI benchmark then,<br><br>
+       <font color ="red">
+<i>&nbsp;&nbsp;&nbsp;make pi THREADS=2 CLASS=A <br><br></i> </font>
+
+This statement will compile our benchmark PI.
+After this you need to go in bin directory i.e.<br><br>
+
+<i>&nbsp;&nbsp;&nbsp;$ cd bin <br><br></i>
+
+In bin, an executable  will be created in the form<br><br>
+<font color ="red">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&lt;benchmark-name&gt;.&lt;Number of Threads&gt; . &lt;Class-Name&gt;<br><br></i> </font>
+
+For our example it will be<br><br>
+<font color ="red">
+<i>&nbsp;&nbsp;&nbsp;pi.2.a<br><br></i> </font>
+
+  <P align = "justify"> <span class="content">   
+ In order to execute you should give :  </span> </p> 
+
+ <font color ="red">
+ <i>&nbsp;&nbsp;&nbsp;./ pi.2.A<br><br> <BR> </i>  </font>
+</font> 
+
+
+<!-- *********** executing program on cluster : starts **************** -->
+
+
+
+<font color="black" size = "2" face ="TimesNewRoman"> 
+ 
+<b>3. Executing pthread  program on MPI cluster</b> </font>  <BR>
+
+ <P align = "justify"> <span class="content">   
+
+ To Execute the above Programs on MPI based Cluster (with Job Management sofware), the user should submit job to scheduler. 
+To submit the job use the following command. </span> </p>
+
+         <font color ="red" face="Courier New,Courier">
+bsub -q &lt;queue-name&gt; [options] ./&lt;executable-name&gt; <BR> <BR>
+
+</font> 
+
+
+       
+ <P align = "justify"> <span class="content">   For Example :  </p> <BR> 
+
+  <P align="left"> 
+
+           <font color = red face="Courier New,Courier">
+              bsub -q normal -ext"SULRM[nodes=1]" -o pthread-hello-world.out -e <BR> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      pthread-hello-world.err ./pthread-helloworld 
+          </font></p>
+ 
+
+<P align = "justify"> <span class="content">   
+
+NOTE : <BR> <BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1). 
+ Where "pthread-helloworld"  is binary executable of pthread-helloworld.c program.        
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2). 
+"nodes=1" indicates number of nodes required to run the executable.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3). Refer man pages of "bsub" for options.
+</span> </p>
+
+<BR>
+
+
+<!-- ************************ executing program on cetus cluster : ends *************************** -->
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************ compilation, Linking and execution of Pthread Program ends ******************** --> 
+
+<!-- ******************* Errors in threaded  Program starts ********************* --> 
+  
+<a name="errors-in-threads"> </a>
+<TABLE  cellSpacing=0  cellPadding=0  cellBorder=0>
+<TBODY>
+
+<TR> 
+<TD  bgColor = "#cccdd77889"> 
+
+<DIV align=Left>
+<font size="2"  Color="red" face= "verdana">
+  <B> Errors in threaded Programs </B>  </font> </DIV>
+ </TD> 
+ </TR> 
+
+
+ 
+<TR>
+<TD>
+
+<BR> 
+<P align = "justify"> <span class="content">  
+
+It is important to understand common problem before designing a multi-threaded algorithms on Multi-Core Systems.
+</span> </span> </p>
+
+<BR>
+
+</tD>
+</tR>
+
+
+<tr>
+<td>
+
+<ul>
+
+ <li>
+
+   <P align = "justify"> <span class="content">  
+              Set up all the requirements for a thread before actually creating the thread.
+          This includes initializing  the data, setting  thread attributes, thread priorities, mutex attributes etc 
+          Once you create a thread,it is possible that newly created thread actually runs  for completion before the 
+         creating thread gets scheduled again.
+     </span> </p>
+    
+  </li>
+          
+   <li>
+    <P align = "justify"> <span class="content">  
+              Once you create a thread, it is possible that the newly created thread actually runs to complete before the 
+             creating thread gets scheduled again.
+           </span> </p>
+   </li>
+
+
+  <li>
+    <P align = "justify"> <span class="content">  
+              When there is a relation between two threads : (Producer - Consumer relation ) for certain data items, 
+              make sure that one thread places the data before it is consumed and that intermediate buffers are
+              guaranteed to not overflow.  (Example : Producer - Consumer )
+            </span> </p> 
+     </li>
+
+  <li>
+    <P align = "justify"> <span class="content">  
+         <P align = "justify"> <span class="content">  
+              At the Consumer end, make sure that the data lasts until all potential consumers have consumed the data. 
+            This is particularly relevant for stack variables.
+          </span> </p>
+  </li>
+
+ 
+   <li>
+    <P align = "justify"> <span class="content">  
+          
+              When possible, define and use group synchronization and data replication. This can improve program performance 
+            significantly.
+           </span> </p>
+   </li>
+
+
+   <li>
+    <P align = "justify"> <span class="content">  
+        
+           Extreme causation must be taken to avoid race condition and parallel overheads associated with synchronization. 
+            </span> </p> 
+   </li>
+
+  <li>
+    <P align = "justify"> <span class="content">  
+              Too many threads can seriously degrade program performance. <br>The impact comes in two ways. First partitioning a
+ fixed amount of work among  too many threads and this may give too little work for each thread. This leads to overhead of 
+ starting and terminating threads swamps the useful work. Second, having too many concurrent software threads incurs overheads
+ from having to share fixed hardware resources. 
+             </span> </p>
+     </li>
+
+  <li>
+    <P align = "justify"> <span class="content">  
+   Spawning  application software threads than hardware threads, the OS typically resorts to
+   round robin scheduling.  The scheduler gives each software a short turn, called a time  slice to run on one
+   of the hardware threads. Too many  software threads, thread's time slice, run the hardware thread may incur overhead, 
+   resulting performance degradation. 
+
+            </span> </p>
+    </li>
+
+ <li>
+    <P align = "justify"> <span class="content">  
+       
+With emergence of cache on each core,  the access time from cache memory is 10
+ to 100 times faster than main memory and the data access that hit
+
+ in cache are fast. They do not consume bandwidth of the memory bus.  
+This may lead to conflict of data sharing and the net effect is too many threads hurt 
+performance while they share the data in cache. Thus the time slicing causes 
+threads to fight each other for real memory and thus hurts the performance.
+            </span> </p> 
+     </li>
+
+
+ <li>
+    <P align = "justify"> <span class="content">  
+
+A similar overhead at a different level, is thrashing virtual memory.
+ Most systems use virtual memory, where the processors have 
+an address space bigger than the actual available  memory. 
+Virtual memory resides on disk and the frequently used portions 
+are kept in real memory. For a large problem size, too many threads lead to exceed even virtual memory. 
+           </span> </p> 
+    </li>
+
+ <li>
+    <P align = "justify"> <span class="content">  
+
+Thread lock implementation is another issue in which all
+the threads may wait to acquire a lock and it is closely related
+ to thread time slicing. In some situations,  all the threads
+ waiting for the lock must now wait for the holding thread 
+to wake-up and release the lock.  This leads to an additional overhead as the threads wait behind (blocking effect).
+           </span> </p>  
+    </li>
+
+  <li>
+    <P align = "justify"> <span class="content">  
+Runnable threads, not blocked threads, cause time-slicing,
+ overhead. When a thread is blocked waiting for an external event,
+ such as disk I/O request, the  OS takes it off the round-robin 
+schedule. Here, a blocked thread does not cause time-slicing overhead 
+and a program may have more software threads than hardware threads, and 
+still run efficiently if most of the OS threads are blocked. 
+ The concept of compute threads & I/O threads may help to reduce the overheads.
+ Special care is needed to ensure that the compute threads should match the <br>processor resources.
+          </span> </p> 
+    </li>
+
+   <li>
+    <P align = "justify"> <span class="content">  
+
+Unsynchronized access to shared memory  can introduce race
+ conditions. This may happen due to Data Races, 
+Deadlocks, and Live Locks. Race condition are typically 
+a lock the protects the invariant that might otherwise  be 
+violated by interleaved  operations.  Deadlocks are often
+ associated with locks, it can  happen any time a thread 
+tires to acquire 
+Exclusive  access to two or more shared resources. Proper use of lock avoid race
+ conditions can invite performance problems if the lock becomes highly contended.
+          </span> </p>
+   </li>
+
+ <li>
+    <P align = "justify"> <span class="content">  
+Non-blocking algorithms can address the lock problems partially
+ but it introduces overheads due to <I> atomic operations </I>.
+  For many applications, the non-blocking algorithms cause a lot of traffic 
+on the memory bus as various hardware threads keep trying and retrying to perform
+ operations on the same cache line.
+           </span> </p>
+ </li>
+
+     <li>
+    <P align = "justify"> <span class="content">   
+Thread-safe functions and Libraries: The routines should
+ be thread safe; that is, concurrently, callable by clients.
+ The complete thread safety is not requires and it may introduce 
+additional overheads because every call is forced to some locking,
+ and performance would be not satisfactory. A mechanism is required 
+when the threads are called concurrently to in-corporate thread safety.
+           </span> </p> 
+    </li>
+
+   <li>
+    <P align = "justify"> <span class="content">  
+The other issues such as memory contention and conserver
+ band-width and working in the cache. The memory contention on
+mutli-core processors is difficult to understand. The applications 
+which require to work within cache becomes complex because the data
+ is not only transferred between  a core and memory, but also between 
+cores. The transfer of data aris implicitly from patterns of reads and 
+write by different cores.  The patterns correspond to two types
+ of data-dependencies (Read-write dependency; Write-write dependency). 
+           </span> </p>
+   
+</li>
+   
+     <li>
+    <P align = "justify"> <span class="content">   
+The performance of program depends on processors fetching 
+most of their data from cache instead of main memory.  When two 
+threads increments a different location belonging to the same cache
+ line, the cores must pass the sector back and forth across the memory bus. 
+ The performance merely depends upon the locations whether they are adjacent or
+ not on the same cache line.  Aligning  false sharing is required and it
+ can be done by aligning variables or objects in memory on cache line boundaries. 
+          </span> </p>
+       
+    </li>
+
+
+
+</ul>
+
+</td>
+</tr>
+
+<tr> <td> <BR> </td> </tr>
+
+</TBODY> 
+</TABLE> 
+
+
+<!--  ******************* Errors in threaded Programing on Multi-Core  ends ***************  -->
+  
+<a name = Pthread-FAQ> </a>
+<TABLE cellSpacing=0 cellPadding=0 border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left>
+<font Color="red" face = "Verdana" size ="2"> <B> Thread FAQ     </b> </font> </DIV> 
+</tD>
+</tr> 
+
+
+<TR>
+<TD>
+<BR> <BR>
+
+<b><font color="Black" size = "2" >What is Thread? </font></b> 
+
+<P align = justify> <span class="content" >
+
+	A thread is a stream of instructions that can be scheduled as an independent unit. A thread 
+exists within a process, and uses the process resources. Since threads are very 
+small compared with processes, thread creation is relatively cheap in terms of CPU costs. 
+
+
+<br> <br>
+	A Thread is an encapsulation of the flow of control in a program. Most people are used to
+ writing single-threaded programs - that is,programs that only execute one path through their code "at a time". 
+Multithreaded programs may 
+have several threads running through different code paths "simultaneously". </span> </p>
+
+
+
+ <font color="Black" size = "2"> <b> Why are threads interesting ? </b> </font> <br><br>       
+
+<P align = justify> <span class="content" >
+
+	A context switch between two threads in a single process is considerably cheaper than a context 
+switch between two processes. In addition, the fact that all data except for stack 
+and registers are shared between threads makes them a natural vehicle for expressing tasks 
+that can be broken down into subtasks that can be run cooperatively.
+
+</span> </p>
+
+
+ <font color="Black" size = "2" >  <b> What are Pthreads ? </b> </font> <br><br>
+
+ <P align = justify> <span class="content" >
+
+  Pthreads stands from POSIX Threads. POSIX threads, based on the IEEE POSIX 1003.1c-1995
+  (also known as the ISO/IEC 9945-1:1996) standard, part of the ANSI/IEEE 1003.1, 1996 edition,
+  standard.The Pthreads library is a POSIX C API thread library that has standardized 
+  functions for using threads across different platforms. It is a set of threading interfaces
+  developed by IEEE Committee in charge of specifying a portable operating system interface(POSIX).
+  POSIX committee defined a basic set of functions and data structures that it hoped would have
+  been used by numerous vendors so that threaded code can be ported easily across operating 
+  systems.It specifies API to handle most of actions required by threads.It is a library that has
+  standardized functions for using threads across different platforms.
+ <span> </p>
+
+
+ <b><font color="Black" size = "2" > What is Lightweight process ? </font></b> <br><br>
+
+ <P align = justify> <span class="content" >
+        A lightweight process (also known in some implementations, confusingly, as a kernel thread) is 
+a schedulable entity that the kernel is aware of. On most systems, it consists 	of some execution 
+context and some accounting information (i.e. much less than a 	full-blown process).<br>
+        Several operating systems allow lightweight processes to be "bound" to particular CPUs; this guarantees
+ that those threads will only execute on the specified CPUs.
+ <span. </span> </p> 
+
+ <b><font color="Black" size = "2" > What does MT safety mean? </font></b> <br><br>
+
+ <P align = justify> <span class="content" >
+
+      	If some piece of code is described as MT-safe, this indicates that it can be used safely within a
+ multithreaded program, and that it supports a "reasonable" level of concurrency. This isn't very interesting;
+ what you, as a programmer using threads, need to worry about 	is code that is not MT-safe. MT-unsafe code may use
+ global and/or static data. If you need to call MT-unsafe code from within a multithreaded program, you
+ may need to go to some effort to ensure that only one thread calls that code at any time.
+        Wrapping a global lock around MT-unsafe code will generally let you call it from within a multithreaded 
+program, but since this does not permit concurrent access to that code, it is not considered to make 
+it MT-safe.
+</span> </p>
+
+ <font color="Black" size = "2" > <B> What is thread Scheduling? </b> </font> <br><br>
+
+ <P align = justify> <span class="content" >
+ 
+   Scheduling involves deciding what thread should execute next on a particular CPU. It is usually also 
+   taken as involving the context switch to that thread. 
+ </span> </p> 
+
+
+
+ <font color="Black" size = "2" > <B> What are the different kinds of threads? </b> </font> <br><br>
+
+ <P align = justify> <span class="content" >
+            There are two main kinds of threads implementations:<br><br>
+
+   <li>  User-space threads  </li><br>
+   <li> Kernel-supported threads. </li> <br> <br>
+
+
+      There are several sets of differences between these different threads implementations.
+  </span> </p>
+
+
+
+<font color="Black" size = "2" > <b> Architectural differences: </b>  </font> <br><br>
+     
+<P align = justify> <span class="content" >
+   User-space threads live without any support from the kernel; they maintain all of their state in user space. 
+Since the kernel does not know about them, 
+they cannot be scheduled to run on multiple processors in parallel.
+<br> <br>
+
+                Kernel-supported threads fall into two classes.
+ In a "pure" kernel-supported system, the kernel is responsible for scheduling all threads. Systems 
+in which the kernel cooperates with a user-level library to do scheduling are known as two-level, 
+or hybrid, systems. Typically, the kernel schedules LWPs, and the user-level library schedules threads onto LWPs. 
+Because of its performance problems (caused by the need to cross the user/kernel protection boundary twice 
+for every thread context switch), the former class has fewer members than does the latter (at least on Unix variants).
+ Both classes allow threads to be run across multiple processors in parallel.
+
+</span> </p> 
+  
+
+<font color="Black" size = "2" > <b>Performance differences: </b> </font> <br><br>
+
+
+<P align = justify> <span class="content" >
+                In terms of context switch time, user-space threads are the fastest, with two-level 
+threads coming next (all other things being equal). However, if you have a multiprocessor, user-level 
+threads can only be run on a single CPU, while both two-level and pure kernel-supported threads can be 
+run on multiple CPUs simultaneously.<br><br>
+</span> </p>
+
+<font color="Black" size = "2" > <B> Potential problems with functionality: </b> </font> <br><br>
+
+<P align = justify> <span class="content" >
+                Because the kernel does not know about user threads, there is a danger that ordinary 
+blocking system calls will block the entire process (this is bad) rather than just the calling thread. 
+This means that user-space threads libraries need to jump through hoops in order to provide "blocking" 
+system calls that don't block the entire process. This problem also exists with two-level 
+kernel-supported threads, though it is not as acute as for user-level threads. What usually 
+happens here is that system calls block entire LWPs. This means that if more threads exist 
+than do LWPs and all of the LWPs are blocked in system calls, then other threads that could 
+potentially make forward progress are prevented from doing so.<br> <BR>
+
+                The Solaris threads library provides a reasonable solution to this problem. 
+If the kernel notices that all LWPs in a process are blocked, it sends a signal to the process. 
+This signal is caught by the user-level threads library, which can create another LWP so that 
+the process will continue to make progress.
+
+</span> </p>
+
+<BR> <BR>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--  ***************** Pthread FAQs end ************************ -->
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+ 
+
+         
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+           
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+       
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

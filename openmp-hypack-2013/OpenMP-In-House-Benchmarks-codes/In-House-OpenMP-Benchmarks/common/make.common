@@ -1,0 +1,17 @@
+PROGRAM  = $(BINDIR)/$(BENCHMARK).$(THREADS).$(CLASS)
+CCOMPILE = $(CC)  -c $(C_INC) $(CFLAGS)
+
+default:: ${PROGRAM}
+config:
+	@cd ../common; ${MAKE} 
+	../common/write_params ${BENCHMARK} ${THREADS} ${CLASS}
+
+COMMON=../common
+${COMMON}/print_info.o: ${COMMON}/print_info.c ../config/Make.inc
+	cd ${COMMON}; ${CCOMPILE} print_info.c
+
+
+${BENCHMARK}:  default
+${BENCHMARKU}: default
+
+

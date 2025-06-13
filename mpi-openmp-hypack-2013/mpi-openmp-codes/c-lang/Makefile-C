@@ -1,0 +1,39 @@
+#
+# *******************************************************************
+#	C-DAC Tech Workshop : hyPACK-2013
+#                October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013 
+#
+# *******************************************************************
+#
+#---------------------------------------------------------------------
+#		Compiler 
+#---------------------------------------------------------------------
+
+CC          = mpicc 
+CLINKER     = $(CC) 
+#LINKFLAGS     = -lmpi
+CFLAGS       = -fopenmp
+
+# For more information of Flage please check manual page of mpcc_r
+#---------------------------------------------------------------------
+#
+
+# uncomment one of the below mentioned lines in order to compile an OBJ file
+
+#OBJECTS=mpi-omp-hello-world.o
+#OBJECTS=mpi-omp-pie-calculation.c
+#OBJECTS=mpi-omp-mat-vect-mult-blkstp.o
+OBJECTS=mpi-omp-mat-infnorm-blkstp.o
+ 
+
+run: $(OBJECTS)
+	$(CLINKER) $(CFLAGS) $(LINKFLAGS) -o run $(OBJECTS) -lm
+
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c 
+
+clean:
+	/bin/rm -f *.o *~ run 

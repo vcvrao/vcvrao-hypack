@@ -1,0 +1,14 @@
+make acc_c1.exe
+make acc_c2.exe
+make acc_c2a.exe
+make acc_c2i.exe
+make acc_c3.exe
+make acc_c3a.exe
+make acc_c3i.exe
+make  acc_f1.exe 
+make acc_f2.exe
+make acc_f2a.exe
+make acc_f2i.exe
+make acc_f3.exe
+make acc_f3a.exe
+make xx.uni

@@ -1,0 +1,1647 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../../index.html"><IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-lab-overview.html">
+               Mode-1 Multi-Core  </A>
+                             
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-memory-allocators.html">
+                Memory Allocators</A>
+   	
+	    <A class=menul
+              href="./../../hypack13-mode01-multicore-openmp.html">
+               OpenMP</A>
+		
+	   <A class=menul  
+              href="./../../hypack13-mode01-multicore-intel-tbb.html">
+               Intel TBB </A>
+
+           <A class=menul
+              href="./../../hypack13-mode01-multicore-pthreads.html">
+               Pthreads</A>
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-java-threads.html">
+               Java - Threads</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-charmplusplus.html">
+               Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../../hypack13-mode01-multicore-mpi.html">
+               Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-openmp.html">
+               MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-tbb.html">
+               MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-pthreads.html">
+               MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-compiler-tune-perf.html">
+               Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../../hypack13-mode01-multicore-perf-math-lib.html">
+               Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-software-tools.html">
+               Threads-Prof. &amp; Tools </A>
+  
+               <!-- ** -->
+               <A class=menulslct 
+	       href="./../../hypack13-mode01-multicore-threads-io-perf.html">
+                Threads-I/O Perf. </A>
+               <!-- ** -->
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-pgas-langlib.html">
+               PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-power-perf.html">
+               Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../../index.html">
+               Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+ <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> hyPACK-2013 : Parallel Prog. Using Threaded I/O & MPI I/O </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD> 
+ <p align = "justify"> <span class = "content">
+       Simple programs using MPI 2 I/O library calls and threaded I/O programs  are executed on Message Passing 
+Cluster  or Multi-Core Processor Systems that support MPI library.</span> </span> </p>
+ </TD> </TR> 
+</TBODY> 
+</TABLE>
+
+
+<!-- *************** Table for Listing of Programs Starts **************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<tr>
+<td>
+
+  
+   <!-- ****************** Example 1.1 ************************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#io-mpi-pthread-par-prog-id11">
+         <font size="2" face="Arial" color="blue">
+          <p align = "justify">    <b>  Example 1.1 </b>  </p> </font>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+          <p align = "justify"> <span class = "content">
+          Write  a simple MPI  I/O program performing sequential I/O  to multiple files  
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ******************* Example 1.2 ************************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+      <a href="#io-mpi-pthread-par-prog-id12">
+         <font size="2" face="Arial" color="blue">
+         <p align = "justify">     <b>  Example 1.2 </b> </p> </font>   
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+           <p align = "justify"> <span class = "content">
+        Write  a Pthread I/O program performing each thread writing  to separate file
+      ( <B> Assignment </b> )
+        </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ***************** Example 1.3 *********************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+    <a href="#io-mpi-pthread-par-prog-id13">
+         <font size="2" face="Arial" color="blue">
+          <p align = "justify">    <b>  Example 1.3  </b>  </p> </font>   
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"> <span class = "content">
+         Write an MPI program performing MPI I/O to separate files (Using MPI 2.0) 
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ******************** Example 1.4 ************************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+     <a href="#io-mpi-pthread-par-prog-id14">
+         <font size="2" face="Arial" color="blue">
+          <p align = "justify">    <b>  Example 1.4  </b> </p> </font>   
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+           <p align = "justify"> <span class = "content">
+       Write an MPI program performing MPI I/O to single file (Using MPI 2.0) 
+    </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ******************** Example 1.5 *********************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+    <a href="#io-mpi-pthread-par-prog-id15">
+         <font size="2" face="Arial" color="blue">
+           <p align = "justify">   <b>  Example 1.5  </b> </p> </font>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+           <p align = "justify"> <span class = "content">
+          Write an Pthread I/O program reading the file with different number of threads. 
+   ( <B> Assignment </b> )
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ****************** Example 1.6 ********************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+   <a href="#io-mpi-pthread-par-prog-id16">
+         <font size="2" face="Arial" color="blue">
+           <p align = "justify">   <b>  Example 1.6  </b> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+          Write a MPI I/O program to read the file with different number of processes. (Using MPI 2.0) 
+       </span> </p>
+     </td>
+
+   </tr>
+
+</TBODY> 
+</TABLE> 
+</p>
+
+<!-- ****************** Table for Listing of Programs Ends ***************** -->
+
+
+
+<!-- ***************** Table for Description of  Programs Starts *************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+        <DIV align=Left><font size="2"  Color="black" face= "verdana">
+    <B> Description of Threaded &amp; MPI 2.0  I/O Programs on Multi-Core Processors</b> </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+
+
+
+<br>
+
+<!-- ************************* Example 1.1 starts ************************* -->
+
+
+<!-- ******************** Title for Example 1.1 Starts ******************* -->
+
+<a name="io-mpi-pthread-par-prog-id11"> </a> 
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+<BR>
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.1 :   </b> </font> 
+
+   Write a simple MPI I/O program performing sequential I/O to multiple files <br>
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code : 
+   <a href ="../ioperf-threads-codes/non-mpi-par-io-multiple-files.c"> 
+         <I> <FONT COLOR = "blue"> non-mpi-par-io-multiple-files.c</FONT></I> </a>) <BR> <BR>
+
+  </span> </p> 
+
+    
+<!-- ************Download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+
+<!-- ******************** Title for Example 1.1 ends ******************* -->
+
+</tbody>
+</table>
+
+
+
+<table>
+<tbody>
+<tr> 
+
+<td>
+<LI><B> Objective </B> </li> 
+
+<ul>
+<p align = "justify"> <span class = "content">   
+Write a simple MPI  I/O program performing sequential I/O to multiple files <br>
+
+
+</span> </p>
+</ul>
+
+
+
+<LI><B> Description </B> </li>
+										
+
+<ul>
+<p align = "justify"> <span class = "content">
+
+This is a very simple program to get the feel of how threads perform sequential I/O. 
+
+For simplicity,we use MPI Basic library calls. 
+we assume the each process  has set of <I> n </i> integers of the array with total length depends 
+upon on how many processes  there are. Each process has block of integers in each process's memory and 
+each process writes to an appropriate location of global array. 
+The program begins with each process initializing its portion of the array. All process except first 
+process  writes data. The first process  writes its data and reads  all the data form other process 
+and first process write the data to file. 
+
+</span> </p>
+</ul>
+
+
+<LI><B>Input</B> </LI>
+
+<ul>
+<p align = "justify"> <span class = "content"> None </span> </p>  </ul>
+
+
+
+<Li> 
+
+ <B>Output</B> </li>
+
+<ul>	
+<p align = "justify"> <span class = "content"> Output file data  </span> </p>
+</ul>
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- **************************** Example 1.1 ends ******************************** -->
+
+
+
+<!-- ************************* Example 1.2 starts ************************* -->
+
+
+<!-- ******************** Title for Example 1.2 Starts ******************* -->
+
+<a name="io-mpi-pthread-par-prog-id12"> </a> 
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+<BR>
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.2 :   </b> </font> 
+
+   Write  a Pthread I/O program performing each thread writing  to separate file <br> <BR>
+
+
+
+<!-- ************download start here ***************--> 
+
+ 
+<!-- ************Download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+
+<!-- ******************** Title for Example 1.2 ends ******************* -->
+
+</tbody>
+</table>
+
+
+<table>
+<tbody>
+<tr> 
+<td>
+
+
+<LI><B> Objective </B> </li>
+
+<ul>
+<p align = "justify"> <span class = "content">
+
+Write  a Pthread I/O program performing each thread writing  to separate file
+</P>
+</ul>
+
+
+<LI><B> Description </B> </li>
+
+<ul>										
+<p align = "justify"> <span class = "content">
+In this example, thread parallelism is introduced.  Each thread writes to separate file thus, enabling parallel
+data transfer.. For simplicity,
+we assume the each thread  has set of <I> n </i> integers of the array with total length depends 
+upon on how many threads there are. Each thread has block of integers in each thread's memory and 
+each thread writes to separate file. Each thread opens file, writes to it, and closes it. Written files 
+are separated by appending each thread <i> id </i>  to the name of its output file. Here, the I/O 
+operations can take place in parallel but set of files are in use instead of a single file. <BR> <BR>
+
+The flow of writing data files have advantages and dis-advantages which merely depends upon 
+nature of application. The application requirements such as (a). need of one file in which all the 
+files may have to be joined together in specific order, (b). All the threads may concurrently read these
+files, and (c). Keep track of number of files as a group for moving them, or copying them or sending
+them across a network.
+
+</span> </p> </ul>
+
+
+
+<LI><B>Input</B> </LI>
+
+<ul>
+<p align = "justify"> <span class = "content"> None </span> </p> </ul>
+
+
+
+<Li> <B>Output</B>  </li>
+	
+<ul>
+<p align = "justify"> <span class = "content"> Set of output files </span> </p> </ul>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ********************** Example 1.2 ends ******************** -->
+
+
+
+<!-- ********************** Example 1.3 starts ******************** -->
+
+<!-- ******************** Title for Example 1.3 Starts ******************* -->
+
+<a name="io-mpi-pthread-par-prog-id13"> </a> 
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+<BR>
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.3 :   </b> </font> 
+
+  Write an MPI program performing MPI I/O (Writing) to separate files (Using MPI 2.0) <br>
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code : 
+   <a href ="../ioperf-threads-codes/mpi-io-multiple-files.c"> 
+         <I> <FONT COLOR = "blue"> mpi-io-multiple-files.c</FONT></I> </a>) <BR> <BR>
+
+  </span> </p> 
+
+    
+<!-- ************Download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+
+<!-- ******************** Title for Example 1.3 ends ******************* -->
+
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr> 
+<td>
+
+
+<LI><B> Objective </B>
+
+<ul>
+<p align = "justify"> <span class = "content"> Write an MPI program performing MPI I/O to separate files (Using MPI 2.0) 
+</span> </p> 
+</ul>
+
+
+<LI><B> Description </B>
+
+
+<ul>										
+<p align = "justify"> <span class = "content">
+
+This example show how familiar I/O operations look in MPI 2.0. 
+MPI 2.0 I/O Library calls is used in this example.   Each process writes to separate files in parallel
+using MPI 2.0 library calls. thus, enabling parallel
+data transfer.. For simplicity,
+we assume the each process  has set of <I> n </i> integers of the array with total length depends 
+upon on how many process <i> p </i> there are. Each process has block of integers in each process
+ memory and 
+each process writes to separate file. Each process  opens file, writes to it, and closes it. 
+Written files 
+are separated by appending each process's <i> rank </i>  to the name of its output file. Here, the I/O 
+operations can take place in parallel but set of files are in use instead of a single file. 
+The declaration of <font face = "Courier New " size ="2"> FILE, open, close, write </font>is done using
+MPI functions. 
+<BR> <BR>
+
+The flow of writing data files have advantages and dis-advantages which merely depends upon 
+nature of application. The application requirements such as (a). need of one file in which all the 
+files may have to be joined together in specific order, (b). All the threads may concurrently read these
+files, and (c). Keep track of number of files as a group for moving them, or copying them or sending
+them across a network. The MPI  program is easy to understand and from performance point of view,
+the quantification of MPI I/O overheads is required. <font face = "Courier New " size ="2"> 
+MPI_COMM_SELF  </font> library call is used and it indicates that only one process is involved
+while opening the file. 
+</span> </p> 
+</ul>
+
+<LI><B>Input</B>  </LI>
+
+<ul>
+<p align = "justify"> <span class = "content"> The input file holding the square matrix </span> </p> 
+</ul>
+
+
+ <LI><B>Output</B> </LI>
+
+<ul>	
+<p align = "justify"> <span class = "content"> Set of Output files </span> </p> 
+</ul>
+
+</font>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ****************** Example 1.3 ends **************************** -->
+
+
+<!-- ********************** Example 1.4 starts ******************** -->
+
+
+<!-- ******************** Title for Example 1.4 Starts ******************* -->
+
+<a name="io-mpi-pthread-par-prog-id14"> </a> 
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+<BR>
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.4 :   </b> </font> 
+
+  Write an MPI program performing MPI I/O to single file (Using MPI 2.0). <br>
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code : 
+   <a href ="../ioperf-threads-codes/mpi-io-write-single-file.c"> 
+         <I> <FONT COLOR = "blue"> mpi-io-write-single-file.c</FONT></I> </a>) <BR> <BR>
+
+  </span> </p> 
+
+    
+<!-- ************Download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+
+<!-- ******************** Title for Example 1.4 ends ******************* -->
+
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr> 
+<td>
+
+
+<LI><B> Objective </B>
+
+<ul>
+<p align = "justify"> <span class = "content">
+ Write an MPI program performing MPI I/O (Writing) to single file (Using MPI 2.0). 
+</span> </p>
+</ul>
+
+
+<LI><B> Description </B>
+
+
+<ul>										
+<p align = "justify"> <span class = "content">
+ 
+MPI process share a single file instead of the writing to separate files, thus avoiding the
+having multiple files as discussed on example 1.3. This shows performance advantages of parallelism adopted using MPI. 
+The new library calls of MPI are used to sharing a a file among processes. Here, 
+<font face = "Courier New " size ="2"> 
+MPI_COMM_WORLD  </font> library call is used instead of 
+<font face = "Courier New " size ="2"> 
+MPI_COMM_SELF  </font> library call. This indicates that all the processes are opening a
+ single file together and it is a collective operations on the communicator, on all 
+participating process. 
+ 
+</span> </p>
+</ul>
+
+<LI><B>Input</B>  </LI>
+
+<ul>
+<p align = "justify"> <span class = "content">
+The input file holding the square matrix (Number of Rows, Columns of the matrix) </span> </p> 
+</ul>
+
+
+ <LI><B>Output</B> </LI>
+
+<ul>	
+<p align = "justify"> <span class = "content">
+Single Output file </span> </p> 
+</ul>
+
+
+</td>
+</tr>
+</tbody>
+
+
+<!-- ********************* Example 1.4 ends **************************** -->
+
+
+<!-- ********************** Example 1.5 starts ******************** -->
+
+
+<!-- ******************** Title for Example 1.5 Starts ******************* -->
+
+<a name="io-mpi-pthread-par-prog-id15"> </a> 
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+<BR>
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.5 :   </b> </font> 
+
+ Write an Pthread I/O program reading the file with different number of threads <br> <BR>
+
+
+<!-- ************Download start here ***************--> 
+
+    
+<!-- ************Download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+
+<!-- ******************** Title for Example 1.5 ends ******************* -->
+
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr> 
+<td>
+
+
+
+<LI><B> Objective </B>
+
+<ul>
+<p align = "justify"> <span class = "content">
+ Write an Pthread I/O program reading the file with different number of threads. 
+</span> </p>
+</ul>
+
+
+<LI><B> Description </B>
+
+
+<ul>										
+<p align = "justify"> <span class = "content">
+
+This example demonstrates how to read a file involving all the threads. 
+All the participating threads globally share the input data file and all the threads concurrently
+read a portion of the data file.
+We assume the each thread  read set of <I> n/p </i> integers of the array in which the input data
+file size is of <i> n </i> is globally accessible by all </i> p </i>  threads. We assume that 
+<I> n </i> is divisible by <I> p </i> 
+ Each thread writes the output data which consists of  block of integers  Here, the I/O 
+operations can take place in parallel but set of files written by each thread. <BR> <BR>
+
+
+</span> </p>
+</ul>
+
+<LI><B>Input</B>  </LI>
+
+<ul>
+<p align = "justify"> <span class = "content">
+None </span> </p>
+</ul>
+
+
+ <LI><B>Output</B> </LI>
+
+<ul>	
+<p align = "justify"> <span class = "content">
+Output file for each thread </span> </p> 
+</ul>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************** Example 1.5 ends ******************* -->
+
+
+<!-- ********************** Example 1.6 starts ******************** -->
+
+
+<!-- ******************** Title for Example 1.6 Starts ******************* -->
+
+<a name="io-mpi-pthread-par-prog-id16"> </a> 
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+<BR>
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.6 :   </b> </font> 
+
+ Write a MPI I/O program to read a file with different no. of processes (Using MPI 2.0) <br>
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code : 
+   <a href ="../ioperf-threads-codes/mpi-io-par-read-multiple-files.c"> 
+         <I> <FONT COLOR = "blue"> mpi-io-multiple-files.c</FONT></I> </a>) <BR> <BR>
+
+  </span> </p> 
+
+    
+<!-- ************Download Ends  here *************** --> 
+ </td>
+ </tr> 
+
+
+<!-- ******************** Title for Example 1.6 ends ******************* -->
+
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr> 
+<td>
+
+
+<LI><B> Objective </B>
+
+<ul>
+<p align = "justify"> <span class = "content">
+ Write a MPI I/O program to read the file with different no.  of processes (Using MPI 2.0). 
+</span> </p>
+</ul>
+
+
+<LI><B> Description </B>
+
+
+<ul>										
+<p align = "justify"> <span class = "content">
+ This example program demonstrates reading of a file involving all the MPI process. The
+program is independent of the number of processes that run it.
+The new MPI library call  
+<font face = "Courier New " size ="2"> 
+MPI_File_get_size </font> library call is used to know about the size of the file which is stored
+in bytes. MPI defines a type   
+<font face = "Courier New " size ="2"> 
+MPI_Offset  </font>, that is large enough to contain a file size. Each process writes the contents
+of reading file. 
+
+</span> </p>
+</ul>
+
+<LI><B>Input</B>  </LI>
+
+<ul>
+<p align = "justify"> <span class = "content"> None </span> </p> 
+</ul>
+
+
+ <LI><B> Each Process Output file. </B> </LI>
+
+<ul>	
+<p align = "justify"> <span class = "content"> Output  </span> </p> 
+</ul>
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ******************* Example 1.6 ends ****************** -->
+
+       
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

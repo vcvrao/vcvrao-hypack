@@ -1,0 +1,4442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+              	
+               <A class=menul
+		  href="./../../hypack13-mode04-gpgpu-lab-overview.html">
+                   Mode-4 GPGPUs </A>
+                  
+	       <A class=menul
+                  href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                    NVIDIA - CUDA/OpenCL</A>
+              
+                   <!-- ** -->
+	           <A class=menulslct  
+                    href="./../../hypack13-mode04-gpgpu-amd-opencl.html">
+                      AMD APP  OpenCL </A>
+                    <!-- ** -->
+                             
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-opencl.html">
+                    GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-power-perf.html">
+                    GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../../index.html">
+                    Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+  <td height="24" align="left" >
+
+
+<H1> hyPACK-2013 : GPGPU  OpenCL Prog. using AMD-APP </u></H1>
+
+
+ <P align=justify><span  class="content" >
+
+
+AMD Accelerated Parallel Processing (AMD APP) SOftware  harnesses the tremendous processing power of GPUs for high-performance,
+data-parallel computing in a wide range of applications. The AMD Accelerated Parallel Processing system 
+includes a software stack and the AMD GPUs. 
+ AMD-APP SDK provides complete heterogeneous 
+OpenCL development platform for both the CPU and GPU. 
+AMD-APP OpenCL software development platform is available for x86-based CPUs and it provides complete heterogeneous
+OpenCL development platform for both the CPU and GPU. Please refer to AMD APP Programming Guide OpenCL to 
+understand the relationship of the AMD Accelerated Parallel Processing components.
+The techncial contents  are developed using several technical reports, &amp; Books and other 
+web sites as given in the References.
+</span> </p>
+</td>
+ </tr> 
+</tbody>
+</table>
+
+	
+<!-- *************** Table for Listing of Programs Starts  ****************** -->
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+
+<p> <font size="2" face="Arial" color="red"> <b> List of  Programs </b> </font> </p> 
+
+<div align = "left"> <p align = "justify"> The 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> CLinfo </b>  </font>
+program uses the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> clgetPlatformInfo() </b>  </font>
+and 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> clgetDeviceInfo() </b>  </font>
+
+commands print the detailed information about the OpenCL supported platforms and devices
+in a system. Hardware details such as memory sizes and bus widts are available using these 
+commands.  A snippet of the output from the CLinfo program is obtained using the command
+ <a href="#hetr-opencl-prog-device-info">
+         <font size="2" face="Arial" color="blue">
+            <b> $ ./CLInfo </b> </font>  </a> <BR> 
+
+<HR> <BR>
+
+
+ <!-- ............. Single -GPU Starts ************ -->
+
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+   <font size="2" face="Arial" color="red"> <B>     Programs on Single GPU   </b>
+</font>
+</DIV> 
+
+<BR>
+ <!--************* Example 1.1 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id11">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+      <span class = "content">
+        Write a simple OpenCL Program for multiplication of scalar value and a vector using global memory
+         (Using the keyword <I>__global </i>)      
+
+      </span> 
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.1 : ends ***************** -->
+
+ <!--************* Example 1.2 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id12">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+        <span class = "content">
+        Write a simple OpenCL Program for multiplication of scalar value and a Matrix using global memory
+   (Using the keyword <I>__global </i>)     
+
+      </span> 
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.2 : ends ***************** -->
+
+ <!--************* Example 1.3 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id13">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+        <span class = "content">
+            Write a OpenCL Program to compute vector vector addition using global memory 
+      </span>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.3 : ends ***************** -->
+
+
+
+ <!--************* Example 1.4 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id14">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+    <span class = "content">
+            Write a OpenCL Program to compute matrix matrix addition using global memory 
+      </span> 
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.4 : ends ***************** -->
+
+
+ <!--************* Example 1.5 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id15">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+
+       Write a  OpencL program to find the total number of work-items in the x- and y-dimension of the 
+       <B> NDRanges </B> (Assume that OpenCL kernel is launched with a two-dimensional (2D) <B> NDRange. </B> 
+         Use  API <font size = 2, face = " Courier New " color ="#FF00FF" >  <B> get_global_size(0)</B></font>, 
+  <font size = 2, face = " Courier New " color ="#FF00FF" >  <B> get_global_size(1)</B></font>)
+
+      </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.5 : ends ***************** -->
+
+
+ <!--************* Example 1.6 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id16">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+Write a OpenCL program to device a query that returns  the constant memory size  supported by the device
+</span> 
+
+      </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.6 : ends ***************** -->
+
+
+
+ <!--************* Example 1.7 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id17">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.7 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+Write a OpenCL program to get unique global index of each work item that calls the function 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  get_global_id(0) </B></font>
+ of 
+ OpenCL API.
+</span> 
+
+      </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.7 : ends ***************** -->
+
+
+ <!--************* Example 1.8 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id18">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.8 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+Write  OpenCL program to compute the  value of <i> pie </i>
+     
+</span> 
+
+      </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.8 : ends ***************** -->
+
+ <!--************* Example 1.9 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id19">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.9 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+  Write a OpenCL Program to find prefix sum of an array  using global memory 
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.9 : ends ***************** -->
+
+
+ <!--************* Example 1.10 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id110">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.10 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+ Write a OpenCL Program to perform vector - vector multiplication using global memory 
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.10 : ends ***************** -->
+
+<!--************* Example 1.11 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id111">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.11 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+  Write a OpenCL Program to compute infinity norm of a real squre matrix using global memory
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.11 : ends ***************** -->
+
+
+ <!--************* Example 1.12 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id112">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.12 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+ Write a OpenCL Program  to compute tranpose of a square matrix using global memory &amp; local memory
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.12 : ends ***************** -->
+
+
+<!--************* Example 1.13 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id113">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.13 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+   Write a OpenCL Program to compute matrix into vector multiplication using global  &amp; local memory
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.13 : ends ***************** -->
+
+
+ <!--************* Example 1.14 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id114">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.14</b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+ Write a OpenCL Program to compute matrix into matrix multiplication using global  &amp; local memory
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.14 : ends ***************** -->
+
+
+<!--************* Example 1.15 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id115">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.15 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+   Write a OpenCL program to compute   solve Ax=b Matrix System of linear equations based on 
+  Jacobi method  on Multi-GPUs using OpenCL. 
+ (<font color = "red" > Assignment </font>)
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.15 : ends ***************** -->
+
+
+<!--************* Example 1.16 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id116">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.16 </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+  Write  OpenCL program to implement the  solution of Matrix system of Linear Equations 
+  <B>[A]{x}={b} </b>  
+       by Conjugate Gradient (Iterative) Method).  (<font color = "red" > Assignment </font> )
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.16 : ends ***************** -->
+
+ <!--************* Example 1.17 : starts ***************** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id117">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.17</b> </font>   
+       </a>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+       <span class = "content">
+ Write a OpenCL program to compute sparse Matrix into vector multiplication  
+ (<font color = "red" > Assignment </font>)
+  </span> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.17 : ends ***************** -->
+
+<TR>
+<TD> </TD>
+<TD>
+
+ <DIV ALIGN=right>
+        <A href ="gpgpu-comp-amd-app-opencl-num-comp.html"> 
+      <IMG SRC="./../../hypack13_images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+        </DIV><br>
+</td>
+</tr>
+<!--************** bullet for going to top of the page : ends *****************-->
+
+</TBODY> 
+</TABLE> 
+
+ <!-- ............. Multi-GPU Starts ************ -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+<p align= "left"> <span class = "content">  
+<tr>
+
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+   <font size="2" face="Arial" color="red"> <B>     Programs on Multipe GPU   </b> 
+</font>
+</DIV> 
+
+
+
+ <!--************* Example 1.18 : starts ******************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#hetr-opencl-prog-id118">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.18 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write a CUDA Program to compute vector - vector multiplication on Multi-GPU 
+       </span> 
+     </td>
+
+   </tr>
+ <!--************ Example 1.18 : ends ***************** -->
+
+</TBODY> 
+</TABLE> 
+
+
+<BR> <BR>
+
+  <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+  <BR> <BR>
+
+
+<HR>
+
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<BR> <BR>
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+
+<DIV align=Left>
+ <font size="2"  Color="black" face= "verdana">
+    <B>  Brief description of OpenCL  Programs for  Numerical (Matrix)  Computations  </b> </font></DIV> 
+</TD> 
+</TR> 
+</TBODY>
+ </TABLE> 
+
+
+<!-- ********************** readme and makefile starts *********************** -->
+
+
+<BR>
+
+<table border="0" width = 100% height="6">
+<tbody>
+
+    <tr>
+   
+    <td width="70%" height="2" valign="top">
+    
+ <!-- **************** download  Starts here **************** -->
+
+(Download Readme &amp; Makefile  
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/readme">
+       <font color = "blue"> README </font> </a> &nbsp; &nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/Makefile">
+     <font color = "blue"> Makefile</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- *********** readme and makefile ends ***** -->
+
+
+
+<!-- ********************** example 1.1 starts *********************** -->
+
+<a name="hetr-opencl-prog-id11"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.1:  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b> Write OpenCL program to calculate  multiplication of scalar value and vector </b>
+
+ 
+ <!-- **************** download  Starts here **************** -->
+<BR> 
+(Download source code - <I> Double Precision- Real</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/ScalarVectGlobalMemDP_kernel.cl">
+       <font color = "blue"> ScalarVectGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/ScalarVectGlobalMemDP.c">
+     <font color = "blue">  ScalarVectGlobalMemDP.c</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- *********** Ex 1.1 Obj - Des-input-output  starts ***** -->
+
+<table  height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+
+<LI><B> Objective </B>
+
+<P>  Write OpenCL program to calculate  multiplication of scalar value and vector<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on vector.
+The input vector using Single Precision/Double Precision input data are generated on 
+host-CPU and transfer the vector to device-GPU for scalar-vector multiplication. 
+In global memory,a  simple kernel based on the 1- dimension indexspace  of 
+<i> workgroups </i> is 
+generated in which <i> work-item  </i> is given a unique ID within its <i> workgroup</i>.
+</li>
+ 
+<!-- ************ Specification of workgroups & workitems ******** -->
+
+<blockquote>
+
+<li> Each <i> work-item </i> performs multiplication of element of a vector with scalar using work item ID.
+</li>
+
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+
+</blockquote>
+<P align="justify">
+The final resultant vector is generated on device and transferred to Host.   <BR> <BR>
+
+This code demonstrates the development of OpencL  Kernel for simple computations. 
+It is to be notes that the performance may increase bu using local memory to cache
+data that will be used multiple times by a <I> work-item </i> or multiple <I> work-items </i> in the 
+same <I> workgroup</i>. It is possible to achiev this with an explicit assignment from a 
+global memory pointer a a local memory pointer. Once a <i> work-item</i> completes its 
+execution, none of its state information or local memory storage is persistent.
+
+Any results that need to be kept must be transferred to global memory. 
+</p>
+
+<BR> <B> Important Steps  (Table 1.1)  : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host and  Input data Generation    </i> <BR>  
+		Do memory allocation on host-CPU  
+               and fill with the single  or double prcesion  data.
+             
+                
+                </font> <BR>
+          </td>
+      </tr>
+    
+       <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Set opencl execution environment : </i> <BR>  
+		Call the function <B> setExeEnv </b> which sets  execution environment for opencl  
+                  which performs the following :<BR> 
+                 <blockquote>
+                 	- Get Platform Information <BR>
+                  	- Get Device Information <BR>
+                        - Create context for GPU-devices to be used <BR>
+                       	- Create program object.<BR>
+                     	- Build  the program executable from the program source. <BR>
+               </blockquote>
+           <I> The function performs <BR><BR> (a). Discover &amp; Initilaise the platforms; <BR>
+ (b). Discoer &amp; Initialie the devices;  <BR>
+ (c). Create a Context; and <BR>
+ (d). Create program object build the program executable </i>
+           
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Create command queue  </i> using 
+ <font size = 2, face = " Courier New " color ="#FF00FF" > Using clCreateCommandQueue(*)
+ </font> and associate it with the device you want to execute on.
+
+                 </i> <BR>
+		 <BR> </font>
+           </td> 
+      </tr>
+
+   <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Create device bufffer </i>  <BR>
+		using  <font size = 2, face = " Courier New " color ="#FF00FF" > 
+     <i>  clCreateBuffer() API </i> 
+      </font>  </i>that will contain the data from  
+                the host-buffer.
+    
+          <BR></font>
+        </td> 
+      </tr>
+
+
+
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black">  
+           <I>  Write host-CPU data to device buffers
+             </i> <BR></font>
+        </td> 
+      </tr>
+
+
+
+
+   <!-- ******* Step 6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Kernel  Launch : </i> <BR>	 <BR> 	
+          (a). Create kernel handle;  <BR>
+         (b).  Set kernel arguments; <BR>
+         (c). Configure work-item strcture (
+ Define global and local worksizes and launch kernel for execution on device-GPU); and <BR>
+      (d). Enqueue the kernel for execution <BR> </font>
+           </td> 
+      </tr>
+  
+     <!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Read the outpur Buffer to the host (Copy result from 
+                Device-GPU to host-CPU :)</i> <BR>		
+          
+            Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+    clEnqueueReadBuffer() API. </font>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 8. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  8. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of result on host-CPU </i> <BR>		
+                  Perform computation on host-CPU and compare CPU and GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 9. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  9. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Release OpenCL resources (Free the memory)  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+             
+           </td> 
+      </tr>
+      
+
+</tbody>
+</table>
+ <br> 
+ 
+<div align = "center"> 
+<b>Table  1.1 </b>
+</div>
+
+<BR> <B> Important Steps  (Table 1.2)  : 
+         Kernels & OpenCL Execution Model :</b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  S.No.  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> <B> Work-item </b>   </i> <BR>  
+		 The unit of concurrent execution in OpenCL C is a <I> work-item</i>. <BR>
+                 (For example, in typical fragment of the code, i.e. <I> for </i> loop data computations
+                  of typical multi-theaded code, a map of a single iteration of the loop to a 
+                  <I> work-item </i> can be done.) <BR> <BR>
+                   OpenCL runtime to generate as  many <i> work-items </i> as elements  in the 
+                   input  and output arrays and allow the runtime to map those work-items to 
+                    the underlying hardware (CPU &amp; GPU). <BR> <BR>
+                    (Conceptually, this is very similar to the parallelism inherent in a functional
+                    <B> map </B>  operation or data parallel in for loop in a model  such as 
+                   OpenMP.) <BR>
+                </font> <BR>
+          </td>
+      </tr>
+    
+  <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> <B> Identification of Work-item  </b>   </i> <BR>  
+                  When a OpenCL device begins executing a kernel, it provides intrinsic
+                  functions that allow a <I> work-item </i> to identify itself. 
+                  This can be achieved by calling 
+                 	<font size = 2, face = " Courier New " color ="#FF00FF" >  
+ get_global_id(0)  </font>  allows  the programmer to make use of position of the current  
+ <i> work-item </i> in the sample case to regain the loop counter. 
+  <BR>
+                </font> <BR>
+          </td>
+      </tr>
+
+ <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> <B> Execution in fine-grained work-items <BR>  (N-dimensional range 
+                 (NDRange)  </B>   </i> <BR>  
+                  OpenCL describes execution in fine-grained <I> workitems </i> and 
+                 can despatch vast number of <I> work-items </> on architecture 
+                 with hardware for fine-grained threading. Scalability can be achieved
+                 due to support of large number of work-items. <BR> 
+                  <blockquote>
+                   <li>
+                    When a kernel is executed, the programmer  specifies the number of 
+                    work-items that should be  created as an <I> n-dimensional range 
+                    (NDRange) </i> <BR> 
+                   </li>
+ 
+                  <li>
+                    An NDRange is one-, two- or three-dimensional index space of
+                   <i>  work-items </i> 
+                    that will often map to the dimensions of either the input or the
+                    output data. 
+                  </li>
+                   <li> 
+                    The dimensions of the NDRange ae specified and an N-element array
+                    of type <font size = 2, face = " Courier New " color ="#FF00FF" >  
+                    size_t, </font> where N represents the number of dimenisons used 
+                    to describe  <I> work-items </i> being created.
+                   </li>
+                   
+       <BR>
+          </td>
+      </tr>
+
+<!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> <B> Example  </b>   </i> <BR>  
+                  Assume that 1024 elements are taken in each vector. The size can
+                  be specified as a <i> one- </i>, <i> two- </i>, or <I> three- </i> dimensional
+                  vector. The host code to specify an ND Range for 1024 elements is follows :
+               
+                  <BR> <BR>
+
+                   <font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t indexSpaceSize[3] = [1024, 1,1];  </b> </font>
+                 <BR> <BR>
+
+                  Most importantly, dividing the <I> work-items </i> of an NDRange into
+                  smaller, equal sized <I> workgroups </i> as shown in Figure 1. 
+                 <blockquote>
+                 <li>
+
+                  An Index
+                  space with N dimensions requires <I> workgroups </i> to be specified using N dimensions,
+                  thus, a threee -dimensional requires three-dimensional workgroups.
+                 </li>
+                 </blockquote>
+         
+       <BR>
+        </font> 
+       </td>
+      </tr>
+
+  <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> <B> Example : <BR>
+                          Perform Barrier Operations &amp; synchronization </b>   </i> <BR>  
+                 <I> work-tems </i> within a <i> workgroup </i> can peform barrier 
+                 operations to synchronize and they have access to a shared memory address space
+                 Because <I> workgroups </i> sizes are fixed, this communication does not have 
+                 have a need  to scale  and hence does not affect scalability  of a large 
+                 concurrent dispatch.
+                 <BR> <BR>
+                  For example 1.3, i.e., Vector Vector Addition, the <I> workgroup </i> 
+                  can be specified as <BR> <BR>
+
+                   <font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t workGroupSize[3] = [64, 1, 1];  </b> </font>
+                 <BR> <BR>
+
+                  If the total number of  <I> work-items </i> per array is 1024, this results 
+                  in creating 16  <I> work-groups </i> (1024 <i> work-items </i> / 64 <work-items </i>
+                   per <I> workgroups</i>. <BR> <BR>
+
+
+                   Most importantly, OpenCL requires that the index space sizes are evenely 
+                  divisible by the <I> work-group </i> sizes in each dimension.  <BR> <BR>
+
+                   For hardware efficiency, the  <I> workgroup </i> size is usually fixed 
+                   to a favourable size, and we round up the index space size in each 
+                    dimension  to satisfy this divisibility requirement. <BR> <BR>
+
+                   <Blockquote>
+                   <LI>
+                   In the kernel code, user can specify that exta <I> work-items </i> in 
+                   each dimension simply return immediately without outputting any data.
+                   </li>
+                   <LI>
+                    Many highly data paralle computations in which access of memory for
+                     arrays that peforms computation (example Vector-Vector Addition), the
+                    OpenCL allows the local <I> workgroup </i> size to be ignoed by 
+                   the programmer and generated automatically by the implementation ; in this 
+                    case; the dveloper will pass NULL instead.
+
+       <BR>
+        </font> 
+          </td>
+      </tr>
+
+</tbody>
+</table>
+ <br> 
+ 
+<div align = "center"> 
+<b>Table  1.2 </b>
+</div>
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+<LI>
+<B>Input</B>
+</LI>
+
+
+<p align = "justity"> Scalar value and size of the vector  </p> 
+
+
+<LI>
+
+<B>Output</B>
+
+</LI>
+
+<p>  Execution time in seconds ,Gflops achieved </p>
+
+</ul>
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+</TD>
+</TD>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.1 ends **************************** -->
+
+
+
+<!-- ********************** example 1.2 starts *********************** -->
+
+<a name="hetr-opencl-prog-id12"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.2:  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b> Write OpenCL program to calculate  multiplication of scalar value and Matrix </b>
+
+ 
+ <!-- **************** download  Starts here **************** -->
+<BR> 
+(Download source code - <I> Double Precision- Real</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/ScalarMatrixGlobalMemDP_kernel.cl">
+       <font color = "blue"> ScalarMatrixGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/ScalarMatrixGlobalMemDP.c">
+     <font color = "blue">  ScalarMatrixGlobalMemDP.c</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- *********** Ex 1.2 Obj - Des-input-output  starts ***** -->
+
+<table  height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+
+<LI><B> Objective </B>
+
+<P>  Write OpenCL program to calculate  multiplication of scalar value and Matrixc<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on matrix. 
+The input matrix using Single Precision/Double Precision input 
+data are generated on Host-CPU and transfer the matrix to device-GPU for 
+scalar-matrix multiplication. In global memory,each work-item is assigned a row from matrix 
+and it will multiply that row with scalar value. Final resultant 
+matrix is generated on device and transferred to Host.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+ </P>
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i>  is assigned a row from matrix and it will multiply that row with scalar value. 
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+<LI>
+<B>Input</B>
+</LI>
+
+
+<p align = "justity"> Scalar value and size of the matrix </p> 
+
+
+<LI>
+
+<B>Output</B>
+
+</LI>
+
+<p>  Execution time in seconds, Gflops achieved   </p>
+
+</ul>
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+</TD>
+</TD>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.2 ends **************************** -->
+
+
+<!-- ********************** example 1.3 starts *********************** -->
+
+<a name="hetr-opencl-prog-id13"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.3:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program to compute  vector-vector addition </b>
+
+ 
+ <!-- **************** download  Starts here **************** -->
+<BR> 
+(Download source code - <I> Double Precision- Real</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/VectVectAddGlobalMemDP_kernel.cl">
+       <font color = "blue"> VectVectAddGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/VectVectAddGlobalMemDP.c">
+     <font color = "blue">  VectVectAddGlobalMemDP.c</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- *********** Ex 1.3 Obj - Des-input-output  starts ***** -->
+
+<table  height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+
+<LI><B> Objective </B>
+
+<P>  Write OpenCL program to compute addition of two vectors <br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on vector.
+The input vectors using Single Precision/Double Precision input data 
+are generated on Host and transfer the vectors to device for vector 
+addition. In global memory,a simple  kernel based on the N- dimension 
+grid  of work groups is generated in which work item is given a unique 
+ID within its work group. Each work item performs addition of two vectors 
+using work item ID and the final resultant vector is generated on device
+ and transferred to Host.  
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P>
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+
+<p align = "justity"> Two vectors of same size </p> 
+
+
+<LI>
+
+<B>Output</B>
+
+</LI>
+
+<p> Execution time in seconds ,Gflops achieved </p>
+
+</ul>
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+</TD>
+</TD>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.3 ends **************************** -->
+
+
+
+<!-- ********************** example 1.4 starts *********************** -->
+
+<a name="hetr-opencl-prog-id14"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.4:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program to compute  Matrix-Matrix addition </b>
+
+ 
+ <!-- **************** download  Starts here **************** -->
+<BR> 
+(Download source code - <I> Double Precision- Real</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatMatAddGlobalMemDP_kernel.cl">
+       <font color = "blue"> MatMatAddGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatMatAddGlobalMemDP.c">
+     <font color = "blue">  MatMatAddGlobalMemDP.c</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- *********** Ex 1.4 Obj - Des-input-output  starts ***** -->
+
+<table  height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+
+<LI><B> Objective </B>
+
+<P>  Write OpenCL program to compute addition of two Matrices <br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+
+We create a two-dimensional globalWorkSize array that is overlaid on matrices.
+The input matrices using Single Precision/Double Precision input data
+are generated on Host-CPU and transfer the matrices to devic-GPUe for matrix 
+addition. In global memory,a  simple kernel based on the 2- dimension 
+indexspace of work groups is generated in which work item is given a unique
+ID within its work group. Each work item performs addition of two matrices 
+using work item ID and the final resultant matrix is generated on device 
+and transferred to Host.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+ </P>
+</LI>
+
+
+<blockquote>
+
+<li> Each <i> work-item </i>  using its work item ID performs addition using one element from each matrix.  
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 128,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+<LI>
+<B>Input</B>
+</LI>
+
+
+<p align = "justity"> Matrix Size</p> 
+
+
+<LI>
+
+<B>Output</B>
+
+</LI>
+
+<p>  Execution time in seconds ,Gflops achieved </p>
+
+</ul>
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+</TD>
+</TD>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.4 ends **************************** -->
+
+
+<!-- ********************** example 1.5 starts *********************** -->
+
+<a name="hetr-opencl-prog-id15"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.5:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+     <b>     Write a  OpencL program to find the total number of work-items in the x- and y-dimension of the 
+       <B> NDRanges </B> (Assume that OpenCL kernel is launched with a two-dimensional (2D) <B> NDRange. </B> 
+         Use  API <font size = 2, face = " Courier New " color ="#FF00FF" >  <B> get_global_size(0)</B></font>, 
+  <font size = 2, face = " Courier New " color ="#FF00FF" >  <B> get_global_size(1)</B></font>) </b>
+ <BR>  <font color ="red"> (Assignment - To be discussed in Lab. Session)  </font> <BR>
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+<!-- ********************** example 1.5 ends *********************** -->
+
+<!-- ********************** example 1.6 starts *********************** -->
+
+<a name="hetr-opencl-prog-id16"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.6:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+  
+       <B> Write a OpenCL program to device a query that returns  the constant memory size  supported by the device </b>
+  <BR>  <font color ="red"> (Assignment - To be discussed in Lab. Session)  </font> <BR>
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+
+<!-- ********************** example 1.6 ends *********************** -->
+
+<!-- ********************** example 1.7 starts *********************** -->
+
+<a name="hetr-opencl-prog-id17"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.7:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+     <b>   Write a OpenCL program to get unique global index of each work item that calls the function 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B>  get_global_id(0) </B></font>
+ of 
+ OpenCL API. </b>
+  <BR>  <font color ="red"> (Assignment - To be discussed in Lab. Session)  </font> <BR>
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+<!-- ********************** example 1.7 ends *********************** -->
+
+
+
+<!-- ******************** example 1.8 starts ***************************** -->
+
+<a name="hetr-opencl-prog-id18"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+     
+     <b>  Example 1.8:  </b> </td>
+
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program  to calculate the value of PI using numerical integration method  </b>
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download source code : 
+
+<a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/PieCalculationGlobalMemDP_kernel.cl">
+       <font color = "blue"> PieCalculationGlobalMemDP_kernel.cl </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+
+<a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/PieCalculationGlobalMemDP.c">
+       <font color = "blue"> PieCalculationGlobalMemDP.c </font> </a> 
+ <BR>
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ </tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write OpenCL Program to calculate value of PI using numerical integration method.<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+
+
+
+This program computes the value of PI over a given interval using Numerical 
+integration. The main work-item distributes the given interval uniformly over 
+the number of work-item on GPU device. Each work-item calculates its part of the 
+interval and finally work-item 0 will add up all the value calculated by individual 
+work-item. Every work-item do its part of calculation and put the final result in 
+a global array cell , which is allocated to this particular work-item only. 
+After execution of each work-item is over , work-item 0 is assigned the job 
+to gather all values and produce final result.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+
+</P>
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i>  calculates its part of the 
+interval and finally work-item 0 will add up all the value calculated by individual 
+work-item. 
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Number intervals </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>   pie value, Execution time in seconds </p> <br>
+	
+</UL>
+
+   <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</TD>
+
+</tbody>
+</table>
+
+
+<!-- ********************************* example 1.8 ends ********************************* -->
+
+
+
+<!-- ******************** example 1.9 starts ***************************** -->
+
+<a name="hetr-opencl-prog-id19"> </a>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+   
+     <b>  Example 1.9:  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b>  Write OpenCL program to find prefix sum computations.   </b>
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download source code : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/PrefixSumGlobalMemDP_kernel.cl">
+       <font color = "blue"> PrefixSumGlobalMemDP_kernel.cl </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+
+<a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/PrefixSumGlobalMemDP.c">
+       <font color = "blue"> PrefixSumGlobalMemDP.c </font> </a>  <BR>
+ 
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+
+<table>
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write OpenCL program to find prefix sum computations. <br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on vector.
+This is simple program which computes prefix sum of an given array element. 
+Prefix sum of an element of an array is defined by summation of all the 
+element processed this element and the current element. In global memory,
+the input array using Single Precision input data is generated on Host and 
+the prefix sum kernel based on work item ID in a work group and 1-dimensional 
+index space of work groups. The output array is generated on the device and 
+transfer back to Host. 
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b> 
+</P>
+
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i>  performs summation of current element with previous element of an array using its work-item Id.
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+ 
+<LI> <B> Input </B> </LI>
+
+
+<p> Length of Input Array  </p> 
+
+
+
+ <LI> <B> Output </B> </LI>
+
+	
+<p>  Prefix Sum Of elements of Input Array </p> <br>
+	
+</UL>
+
+   <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</Tr>
+
+</tbody>
+</table>
+
+<!-- ********************************* example 1.9 ends ********************************* -->
+
+
+<!-- ******************* example 1.10 starts *********************************** -->
+
+<a name="hetr-opencl-prog-id110"> </a>
+
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+    
+     <b>  Example 1.10:  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b> Write OpencL program to compute vector-vector multiplication  </b>
+
+ 
+
+ <!-- **************** download  Starts here **************** -->
+<BR> 
+(Download source code - <I> Double Precision- Real</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/VectVectMultGlobalMemDP_kernel.cl">
+       <font color = "blue"> VectVectMultGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/VectVectMultGlobalMemDP.c">
+     <font color = "blue">  VectVectMultGlobalMemDP.c</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+
+
+
+</td>
+</tr> 
+</tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write OpenCL program to compute vector-vector multiplication <br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on vector.
+The input vectors using Single Precision/Double Precision input data are 
+generated on Host-CPU and transfer the vectors to device-GPU for vector multiplication.
+ In global memory, a simple  kernel based on the 1- dimension index space  of work 
+groups is generated in which work item is given a unique ID within its 
+work group. Each work item performs partial multiplication of two
+ vectors and the final resultant value is generated on device 
+and transferred to Host-CPU.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P>
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i>  calculates its part of the multiplication and finally work-item 0 will add up all the value calculated by individual work-item.  
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Size of Input vectors </p> 
+
+
+<LI><B>Output</B> </LI>
+
+	
+<p>  Execution time in seconds ,Gflops achieved </p>
+
+</UL>
+
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************** example 1.10 ends ********************************** -->
+
+
+<!-- *********************** example 1.11 starts *********************************** -->
+<a name="hetr-opencl-prog-id111"> </a>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      
+     <b>  Example 1.11:  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b>  Write OpenCL program to find infinity norm of a square matrix.   </b>
+
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download source code - <I> Double Precision- Real</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatInfinityNormGlobalMemDP_kernel.cl">
+       <font color = "blue"> MatInfinityNormGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatInfinityNormGlobalMemDP.c">
+     <font color = "blue">  MatInfinityNormGlobalMemDP.c</font></a>) <BR>
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ 
+</tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write OpenCL Program to find Infinity Norm of a matrix <br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on matrices.
+ Infinity Norm of a Matrix: The row-Wise infinity norm of a matrix is defined 
+to be the maximum of sums of absolute values of elements in a row, over all rows.
+ The input matrix using Single Precision/Double Precision input data are generated 
+on Host and transfer the matrix to device for calculating infinity norm of
+ matrix. After the initial validity checks, each work-item is assigned a row 
+using its id and it will calculate sum of its assigned row. After all 
+calculations ,The work-item 0 will find out maximum sum among all sum of 
+all element of every row.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P>
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i>  is assigned a row 
+using its id and it will calculate sum of its assigned row. After all 
+calculations ,The thread 0 will find out maximum sum among all sum of 
+all element of every row.  
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Size of the input Matrix
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  Execution time in seconds ,Gflops achieved </p>
+
+<br>
+
+</UL>
+
+
+<a href="#top">
+ <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+ <BR> <BR>
+
+
+</TD>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ********************** example 1.11 ends ***************************** -->
+
+
+<!-- ******************** example 1.12 starts ***************************** -->
+
+<a name="hetr-opencl-prog-id112"> </a>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+    
+     <b>  Example 1.12:  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b>  Write OpenCL program to compute transpose of a matrix using row-wise distribution.  </b>
+
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download source code - <I> Double Precision- Real - Global Memory</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatTransposeGlobalMemDP_kernel.cl">
+       <font color = "blue"> MatTransposeGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatTransposeGlobalMemDP.c">
+     <font color = "blue">MatTransposeGlobalMemDP.c</font></a>) <BR>
+
+<BR> 
+(Download source code - <I> Double Precision- Real - Local Memory </i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatTransposeLocalMemDP_kernel.cl">
+       <font color = "blue"> MatTransposeLocalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatTransposelocalMemDP.c">
+     <font color = "blue">MatTransposeLocalMemDP.c</font></a>) <BR>
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+
+ <table>
+ <tbody>
+
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write OpenCL program to compute transpose of a matrix using row-wise distribution. <br>
+
+</P>
+</LI>
+
+
+
+<LI><B> Description </B>										
+<P align="justify">
+
+We create a two-dimensional globalWorkSize array that is overlaid on matrices.
+The input matrix using Single Precision input data is generated on the Host-CPU 
+and transfer to device-GPU. In global memory implementation,a simple kernel 
+function is written on device-GPU which generates the output matrix on the device-GPU 
+and transfer back to Host-CPU. In local memory implementation , the kernel
+ computes the resulting matrix using multiple iterations. In each iteration,
+ one workgroup is loads one tile of both matrices from global memory to 
+local memory. After all iterations is done, the work group stores the 
+transposed matrix  tile into the global resultant matrix. The resultant 
+matrix is transferred to Host-CPU.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P>
+
+</LI>
+
+<blockquote>
+
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 128,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+ 
+<LI> <B> Input </B> </LI>
+
+
+<p> Size of matrix </p> 
+
+
+
+ <LI> <B> Output </B> </LI>
+
+	
+<p>  Execution time in seconds </p> <br>
+	
+</UL>
+
+   <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</Tr>
+
+
+</tbody>
+</table>
+
+<!-- ********************************* example 1.12 ends ********************************* -->
+
+
+
+<!-- ********************* example 1.13 starts ***************************** -->
+
+<a name="hetr-opencl-prog-id113"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+   
+     <b>  Example 1.13:  </b> </td>
+
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program  for  Matrix and Vector multiplication.  </b>
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download source code - <I> Double Precision- Real - Global Memory</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatVectMultGlobalMemDP_kernel.cl">
+       <font color = "blue"> MatVectMultGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatVectMultGlobalMemDP.c">
+     <font color = "blue">MatVectMultGlobalMemDP.c</font></a>) <BR>
+
+<BR> 
+(Download source code - <I> Double Precision- Real - Local Memory </i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatVectMultLocalMemDP_kernel.cl">
+       <font color = "blue"> MatVectMultLocalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatVectMultLocalMemDP.c">
+     <font color = "blue">MatVectMultLocalMemDP.c</font></a>) <BR>
+
+
+<!-- *************** download  Ends here ************* -->
+
+
+ </td>
+ </tr> 
+ </tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a OpenCL Program to perform  Matrix into Vector multiplication.<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on matrice and vector.
+Input matrix and the vector using Single Precision/Double Precision input data are
+generated on the Host-CPU. A simple kernel based on the 1-dimension indexspace of work 
+groups is generated in which work item is given a unique ID within its work 
+group. In global memory each work item reads one row of the matrix and performs
+computation with column of the vector to obtain resultant vector on device-GPU. 
+While in local memory, the resultant vector is calculated in multiple iterations.
+ In each iteration , one workgroup handles some rows of the matrix and each work 
+item from work group reads the row of matrix and perform computation with vector 
+and calculate the partial dot product..This partial dot product is stored into 
+local memory. The first work item with in workgroup computes the final result 
+by adding up all the partial dot products.  The resultant vector is transferred
+ back to Host-CPU. 
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P>
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i> reads the row of matrix and perform computation with vector element 
+and calculate the partial dot product. Work-item 0  computes the final result 
+by adding up all the partial dot products.
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+<LI><B>Input</B>
+</LI>
+
+
+<p> Matrix Size
+ </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<p> Execution time in seconds ,Gflops achieved  </p> <br>
+	
+</UL>
+
+   <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</TD>
+
+</tbody>
+</table>
+
+<!-- ********************************* example 1.13 ends ********************************* -->
+
+
+
+
+<!-- ************************ example 1.14 starts ***************  -->
+
+<a name="hetr-opencl-prog-id114"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+    
+     <b>  Example 1.14:  </b> </td>
+
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program  for  Matrix into Matrix  multiplication.  </b>
+
+ <!-- **************** download  Starts here **************** -->
+
+
+ <!-- **************** download  Starts here **************** -->
+
+<BR> 
+(Download source code - <I> Double Precision- Real - Global Memory</i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatMatMultGlobalMemDP_kernel.cl">
+       <font color = "blue"> MatMatMultGlobalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatMatMultGlobalMemDP.c">
+     <font color = "blue">MatMAtMultGlobalMemDP.c</font></a>) <BR>
+
+<BR> 
+(Download source code - <I> Double Precision- Real - Local Memory </i> : 
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatMatMultLocalMemDP_kernel.cl">
+       <font color = "blue"> MatMatMultLocalMemDP_kernel.cl  </font> </a> &nbsp;&nbsp; and &nbsp;&nbsp;
+ 
+ <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/MatVectMultLocalMemDP.c">
+     <font color = "blue">MatMatMultLocalMemDP.c</font></a>) <BR>
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+ </tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a OpenCL Program to perform Matrix Matrix multiplication. <br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify"> <span class ="content">
+
+
+We create a two-dimensional globalWorkSize array that is overlaid on matrices. In the global memory implementation, 
+each work item reads one row from matrix and perform computation with one column of another matrix and compute the 
+corresponding element of resultant matrix.  While in local memory implementation, Matrices have been divided into
+ work-groups of 16 x 16  sizes. One work-group loads one tile of both matrices from global memory to shared memory. 
+Each work-item with in work-group calculate temporal resultant in the local memory. After all work-items within work-group completed their part of computation, the work-group stores the resultant tile into the global resultant matrix. 
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P> 
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i> reads one row from matrix and perform computation with one column of another matrix and compute the corresponding element of resultant matrix.
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 128,1];  </b> </font> <BR>
+&amp;  for generalisation, refer 
+ table 1.2 <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+
+
+<!-- ************** Input ************** -->
+
+<LI><B>Input</B>
+</LI>
+
+
+
+
+<p> Matrix Size
+ </p> 
+
+
+
+
+<LI><B>Output</B> </LI>
+
+	
+<p>  Execution time in seconds ,Gflops achieved </p> <br>
+	
+</UL>
+
+  <a href="#top">
+  <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</TD>
+
+</tbody>
+</table>
+
+
+<!-- ********************* example 1.14 ends ************************* -->
+
+<HR>
+
+<!-- ************************ example 1.15 starts ***************  -->
+
+<a name="hetr-opencl-prog-id115"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <tr>
+     <td width="18%" height="2" valign="top">
+   
+     <b>  Example 1.15:  <BR>  <BR>  </b> </td>
+    <td width="80%" height="2" valign="top">
+     <b> Write a OpenCL  Program for  implement solution of matrix system of linear equations
+       <B> [A]{x} = {b} </b> by Jacobi method. 
+ </b>
+
+ 
+ <!-- **************** download  Starts here **************
+
+<BR> 
+(Download source code :  <BR>
+
+ <a href="../heter-comp-opencl-codes/src/MatrixSystemJacobi_kernel.cl">
+       <font color = "blue"> MatrixSystemJacobi_kernel.cl </font> </a> &nbsp;&nbsp; and &nbsp; 
+  <a href="../heter-comp-opencl-codes/src/MatrixSystemJacobi.cpp">
+      <font color = "blue"> MatrixSystemJacobi.cpp </font></a>) <BR>
+   &nbsp;  &nbsp;
+
+
+ **************** download  Ends here **************** -->
+
+   </td>
+  </tr> 
+ </tbody>
+ </table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a  OpenCL program, for solving system of linear equations <B> [A]{x} = {b} </b> using Jacobi method <br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+ The Jacobi iterative method is one of the simplest iterative techniques to solve system of linear equations.
+    The <I>i<SUP>th</SUP></I> equation of a system of linear equations [A]{x}={b} is  </span> </p> <BR> <BR>
+ 
+
+<div align =  "center"> <IMG SRC="../gpgpu-comp-amd-app-opencl-images/jacobi-sum13.gif" HEIGHT = 70 WIDTH = 350> </div> <BR>
+
+<P align="justify"> <span class = "content">
+  If all the diagonal elements of <B>A</B> are nonzero (or are made nonzero
+     by permuting the rows and columns of <B>A</B>), we can rewrite equation (1)  </span> </p> <BR>
+
+ <div align =  "center"> <IMG SRC="../gpgpu-comp-amd-app-opencl-images/jacobi-sum14.gif" HEIGHT=84 WIDTH=350> <BR> <BR>
+
+<P align="justify"> <span class = "content">
+  The Jacobi method starts with an initial guess <I>x</I><SUB>0</SUB> for
+  the solution vector <I>x</I>. This initial vector <I>x</I><SUB>0</SUB>
+  is used in the right-hand side of equation (2) to arrive at the next approximation
+  <I>x</I><SUB>1</SUB> to the solution vector. The vector <I>x</I><SUB>1</SUB>
+  is then used in the right hand side of equation (2), and the process continues
+  until a close enough approximation to the actual solution is found. A typical
+  iteration step in the Jacobi method is </span> </p> <br> <BR>
+
+<div align="Center"> <IMG SRC="../gpgpu-comp-amd-app-opencl-images/jacobi-sum15.gif" HEIGHT=86 WIDTH=350> </div> <br>
+
+<P align="justify"> <span class = "content"> 
+  We now express the iteration step of equation 3 in terms of residual <I>r<SUB>k</SUB></I>. 
+  Equation (3) can be rewritten as  </span> </p> </div> <br>
+
+<div align = "Center" > <IMG SRC="../gpgpu-comp-amd-app-opencl-images/jacobi-sum16.gif" HEIGHT=86 WIDTH=350> </div>  <br> 
+
+<P align="justify"> <span class = "content">
+ Each process computes <I>n/p </I>values of the vector x in each iteration. These values are 
+     gathered by all the processes and each  process tests for convergence. If the values have been 
+    computed up-to a certain accuracy the iterations are stopped otherwise the processes use 
+    these values in the next iterations to compute a new set of values. </span> </p>
+</p>
+
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Input Matrix <B> A </B> and Initial Solution  Vector <B> x </b>
+ </p> 
+
+</ul>
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  solution  of matrix system <B> Ax = b </B> </p>
+<br>
+
+  <a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ******************* example 1.15 ends *************************** -->
+
+
+<!-- ******************* example 1.16 starts ***************  -->
+
+<a name="hetr-opencl-prog-id116"> </a>
+
+<table border="0"  height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+    
+     <b>  Example 1.16:  <BR>  <BR>  </b> </td>
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL  Program for  implement solution of matrix system of linear equations
+       <B> [A]{x} = {b} </b> by Conjugate Gradient method. 
+ </b>
+
+ 
+ <!-- **************** download  Starts here ************
+
+  <BR> 
+  (Download source code :  <BR>
+ 
+ <a href="../heter-comp-opencl-codes/src/MatrixSystemConjGrad_kernel.cl">
+       <font color = "blue"> MatrixSystemConjGrad_kernel.cl </font> </a> &nbsp;&nbsp; and &nbsp; 
+  <a href="../heter-comp-opencl-codes/src/MatrixSystemConjGrad.cpp">
+      <font color = "blue"> MatrixSystemConjGrad.cpp </font></a>) <BR>
+   &nbsp;  &nbsp;
+
+
+   *************** download  Ends here **************** -->
+
+   </td>
+  </tr> 
+ </tbody>
+ </table>
+
+
+ 
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+
+<p align = "justify"> <span class = "content">
+
+ OpenCLimplementation for Conjugate Gradient Method to solve the system of 
+linear equations [A]{x}={b}. Assume that A is symmetric positive definite matrix.    <br>
+
+</span> </p>
+</LI>
+
+
+<LI><B> Description </B>
+										
+
+<p align = "justify"> <span class = "content">
+
+<B>Description of  conjugate gradient method :</B> <BR> <BR>
+
+
+ The conjugate gradient (<I>CG</I>) method is an example of minimizing
+ method. A real n x n matrix A is positive definite if <I>x<SUP>T </SUP></I><B>A</B><I> x &gt; </I>{0} 
+ for any <I>n</I> x 1 real, nonzero vector <I>x. </I>For a symmetric positive definite matrix <B>A</B>, 
+ the unique vector <I>x</I> that minimizes the quadratic functional <BR> <BR>
+
+  <FONT COLOR="#ff00ff"> 
+ f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x-x<SUP>T</SUP>b</I>&nbsp;  </FONT> <BR> <BR>
+
+
+   is the solution to the system <B>A<I>x</I></B><I> </I>= <B>b</B>, here <I>x </I>and b 
+   are <I>n </I>x 1 vectors. It is not particularly relevant
+   when <I> n </i>  is very large, since the conjugating time for that number of iterations
+   is usually prohibitive and the property does not hold in presence of rounding
+   errors. The reason is that the gradient of functional f (<I>x</I>)<I> </I>is
+   <B>A<I>x</I></B><I> - <B>b</B></I>, which is zero when f (<I>x</I>) is
+    minimum. The gradient of a function is a <I>n</I> x 1 vector. We explain
+   some important steps in the algorithm. An iteration of a minimization method
+   is of the form </span> </p>
+
+        <DIR>  <FONT COLOR="#ff00ff"> 
+         <I>x<SUB>k+</SUB></I><SUB>1</SUB><I> </I>= <I>x<SUB>k</SUB>&nbsp;
+             +<SUB> </SUB></I>tau<I><SUB>k</SUB></I>d<I><SUB>k</SUB></I> &nbsp; &nbsp;  </FONT>         
+           (1)&nbsp;
+           <BR>&nbsp;
+        </DIR>
+<BR>
+
+<p align = "justify"> <span class = "content">
+
+     where  tau<I><SUB>k</SUB></I> is a scalar step size and d<I><SUB>k</SUB></I>is
+     the direction vector, d<I><SUB>k </SUB></I>is a descent direction for f
+     at <I>x</I>.&nbsp; We now consider the problem of determining tau<I><SUB>k</SUB></I>,
+     given <I>x<SUB>k</SUB></I> and d<I><SUB>k</SUB></I>, so that f(<I>x</I>)
+     is minimized on the line <I>x<SUB> </SUB></I>= <I>x<SUB>k</SUB></I> + tau<I><SUB>k</SUB></I>
+     d<I><SUB>k</SUB></I>, for tau<I><SUB>k</SUB></I>. The function f(<I>x<SUB>k</SUB></I>+
+     tau<I> </I>d<I><SUB>k</SUB></I>) is quadratic in tau, and its minimization
+     leads to the condition </span> </p>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+         tau<I><SUB> k </SUB></I>=&nbsp; g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k
+     </SUB>/</I> d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB> </i>,  </FONT>                                
+         &nbsp;&nbsp; (2)&nbsp;
+ </DIR>
+ <BR>
+
+<p align = "justify"> <span class = "content">
+    where g<I><SUB>k</SUB>=</I><B>A</B><I>x<SUB>k </SUB>- </I><B>b</B><I> </I>is
+    the gradient (residue)&nbsp; vector after <I>k</I> iterations. The residual
+    need not be computed explicitly in each iteration because it can be computed
+    incrementally by using its value from the previous iteration. In the (<I>k+</I>1)<I><SUP>th
+   </SUP></I>iteration, the residual g<SUB><I>k+</I>1</SUB> can be expressed
+    as follows:&nbsp; </span> </p>
+
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <FONT COLOR="#ff00ff"> 
+    g<SUB><I>k+</I>1</SUB><I>&nbsp; </I>=<I> </I><B>A</B><I>x<SUB>k+</SUB></I><SUB>1</SUB><I>
+    -</I> <I>b&nbsp;</I>&nbsp; </FONT>
+
+    <DIR>  <FONT COLOR="#ff00ff"> 
+          &nbsp;&nbsp;&nbsp;&nbsp; =<I> </I><B>A</B>(<I>x<SUB>k</SUB></I>+ tau<I><SUB>k
+         </SUB></I>d<I><SUB>k</SUB></I>) <I>- b</I>&nbsp; 
+   <BR>
+   
+          &nbsp;&nbsp;&nbsp;&nbsp; = <B>A</B><I>x<SUB>k</SUB>- b + </I>tau<I><SUB>k
+         </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp;
+   <BR> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp; 
+       = g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k </sub> 
+                                </i> &nbsp; &nbsp; 
+ </FONT>  (3) 
+   </DIR> <BR> <BR>
+
+
+<p align = "justify"> <span class = "content">
+
+
+
+   Thus, the only matrix-vector product computed in each iteration is <B>A</B>d<I><SUB>k</SUB></I>,
+   which is already required to compute tau<I><SUB>k&nbsp; </SUB></I>in the
+   equation (2). If <B>A </B>is a symmetric positive definite matrix and d<SUB>1</SUB><I>,
+   </I>d<SUB>2<I>,</I>..., </SUB>d<I><SUB>n</SUB></I> are direction vectors
+   that are conjugate with respect to <B>A </B>(that is, d<I><SUB>i</SUB><SUP>T
+   </SUP></I><B>A</B>d<I><SUB>j</SUB>=</I>0 for all 0<I>&lt;n, j&lt;=n</I>,<I> i</I>!=<I>j</I>), 
+   then <I>x<SUB>k+</SUB></I><SUB>1</SUB> in the Equation (1) converges to the solution 
+   of <B>A</B><I>x = </I>bin at most <I>n</I>
+   iterations, assuming no rounding errors. <Br> <BR>
+
+
+   In practice, however, the number of iterations that yields an acceptable approximation to the solution is
+   much smaller than <I>n</I>.&nbsp; It&nbsp; also&nbsp; makes the gradient
+   at <I>x<SUB>k+</SUB>1</I> orthogonal to search direction, i.e&nbsp; d<SUB>k</SUB><I><SUP>T
+   </SUP></I>g<SUB><I>k+</I>1</SUB><I>&nbsp; = </I>0.&nbsp; Now we suppose that the search directions
+   are determined by an iteration of the form&nbsp; </span> </p>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    d<SUB><I>k+</I>1</SUB><I> </I>=<I> -</I>g<SUB><I>k+</I>1</SUB>+ beta<I><SUB>k
+    </SUB></I>d<I><SUB>k&nbsp;</SUB> </i> &nbsp; &nbsp; </FONT> (4) 
+  </DIR> <BR> <BR>
+
+ <p align = "justify"> <span class ="content"> 
+
+    where d<SUB>0<I> </I></SUB>=<I> -</I>g<SUB>0</SUB><I>&nbsp;</I> and beta<SUB>0</SUB>,
+    beta<SUB>1</SUB> , ...... remain to be determined. We find the new search
+    direction in the&nbsp; plane spanned by the gradient at the most recent
+    point and previous search direction. The parameter beta<SUB><I>k+</I>1</SUB>i<I>s </I> determined by following       
+   equation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    Beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>Ad<I><SUB>k</SUB></I>/
+    d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>k</SUB></i> &nbsp; &nbsp; </FONT> (5) 
+  </DIR> 
+  <BR>
+
+
+  and, one can derive orthogonality relations<BR>&nbsp;
+</span> </p>
+
+   <DIR>  <FONT COLOR="#ff00ff"> 
+      g<I><SUP>T</SUP><SUB>k</SUB></I>g <I><SUB>l</SUB></I>= 0 (<I>l </I>!=
+      <I>k</I>); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>l </SUB></I>= 0 (<I>l </I>!=<I>k</I>) </FONT>
+   </DIR>
+ <BR> <BR>
+
+ <p align = "justify"> <span class ="content"> 
+      The derivation of the above equation (5)&nbsp; and orthogonality relations
+      is beyond the scope of this document. For details please refer [ ]. Using
+      equation (3) and orthogonality relations, the equation (5)&nbsp; can be
+      further reduced to <BR> <BR>
+
+  <DIR>
+ <FONT COLOR="#ff00ff"> 
+   Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB><</i> &nbsp; &nbsp; </FONT>  (6) 
+ </DIR> <BR>
+
+</span> </p>
+
+
+<p align = "justify"> <span class = "content">
+   The above equations (1) to (6) lead to <I>CG</I> algorithm. The algorithm
+   terminates when the square of the Euclidean vector norm of gradient (residual)
+   falls below a predetermined tolerance value.&nbsp; Although all of the
+   versions of the conjugate gradient method obtained by combining the formulas
+   for g<I><SUB>k</SUB></I>, Beta<I><SUB>k</SUB></I>, and tau<I><SUB>k</SUB></I>
+   in various ways are mathematically equivalent, their computer implementation
+   is not. The following version is compared with respect to computational
+   labor, storage requirements, and accuracy. The following sequence of steps
+   are widely accepted.
+ </span> </p>
+
+
+
+ <DIR>  <FONT COLOR="#ff00ff"> 
+      1. tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+         g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k </SUB>/</I>        
+        d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+
+      2. <i> x<SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>= 
+         <I>x<SUB>k</SUB>&nbsp; +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      3. g<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I> 
+          g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+      4. Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+         g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      5. d<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I> -</I>g<I><SUB>k+</SUB>1 </I>+          
+         Beta<I><SUB>k </SUB></I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+</FONT>
+
+  </DIR> <BR>
+
+   where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+        calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b , and put d<SUB>0</SUB>= -g<SUB>0</SUB>.&nbsp;
+
+
+<!-- ***********  Conjugate Gradient  Method   implementation  Algorithm  ************* -->
+
+<BR> 
+
+  The computer implementation of this algorithm is explained as follows : <BR> <BR>
+
+   <FONT COLOR="#ff00ff"> 
+
+    void CongugateGradient(float
+
+   <I> x<SUB>0</SUB> </I>[ ],  <i> float b [ ], float d)&nbsp;  </i> <BR>
+
+ <i>  &nbsp; &nbsp; {&nbsp;  </i> <BR>
+
+ <i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      float &nbsp;&nbsp; g, Delta0, Delta1, beta;&nbsp; </i> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  float &nbsp;&nbsp; temp, tau;&nbsp;  </i> <BR>
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  int &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration;  </i> <BR>
+
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration = 0; </i><BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x &nbsp; =  <I>x<SUB>0</SUB></I><SUB>;&nbsp;</SUB>&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  g = b;&nbsp;  </i><BR>
+
+<i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g = A <I>x - </I>g;&nbsp;<BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Delta0 = g<SUP>T </SUP>* g;&nbsp; &nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( Delta0 &lt;= EPSILON)&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return; &nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = -g;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do {&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   iteration = iteration + 1;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   temp = A * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   tau = Delta0 / d<I><SUP>T&nbsp;</SUP></I> * temp;&nbsp;&nbsp; <BR>
+
+<I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  x</I> = <I>x</I> + tau * d;&nbsp;&nbsp;  </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   g = g + tau * temp;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Delta1 = g<I><SUP>T&nbsp;</SUP></I> * g; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  if ( Delta1 &lt;= EPSILON )&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;&nbsp;</i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   beta = Delta1 / Delta0;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Delta0 = Delta1;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   d = -g + beta * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+ while(Delta0 &gt; EPSILON &amp;&amp; Iteration &lt; MAX_ITERATIONS); </i><BR>
+
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return; </i><BR>
+
+ </i> </FONT>&nbsp;
+
+</span> </p>
+
+ <p align = "justify"> <span class ="content"> 
+
+
+   Regarding one-dimensional arrays of size <I>n </I>x 1 are required for
+   temp, g, <I>x, </I>d. The storage requirement for matrix. A is depends upon the structure 
+   ( dense, band, sparse )  of the matrix.The two dimensional <I>n</I> x <I>n</I> array is the 
+   simplest structure to store  matrix A. For large sparse matrix A this structure wastes a large amount 
+    of storage space, for such matrix A suitable storage scheme should be 
+    used.
+</span> </p>
+
+
+<!-- ****************** Example 1.16 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] Ends ********** -->
+
+
+<!-- ************* Example 1.16 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] 
+                         Pre - conditioned CG method Starts ************ -->
+
+
+<LI>
+  <B>The preconditioned conjugate gradient algorithm&nbsp;</B>&nbsp;  </LI>
+
+<p align = "justify"> <span class = "content">
+ 
+    Let C be a positive definite matrix factored in the form C = E E<I><SUP>T</SUP></I>, 
+    and let the quadratic functional&nbsp;  </FONT>
+  
+ <BR> 
+<DIR>
+   <FONT COLOR="#ff00ff"> 
+    f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x - x<SUP>T</SUP>b + C </I>,&nbsp;
+</FONT>
+</DIR>
+ <BR>
+
+  We define second quadratic functional g(y) by the transformation y = E<I><SUP>T</SUP>x</I>,<BR> <BR>
+
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+     g(<I>x</I>) = g(E<SUP>-T</SUP>y) = (1<I>/</I>2)<I>y<SUP>T</SUP></I><B>A<SUP>*</SUP></B><I>y
+    - y<SUP>T</SUP>b <SUP>*</SUP> + C<SUP>*</SUP>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>where A <SUP>*</SUP> = E<SUP>-1</SUP>AE<SUP>-<I>T</I></SUP>, b<SUP>*</SUP> = 
+         E<SUP>-1</SUP>b, C<SUP>*</SUP> = C.&nbsp; </FONT>
+</DIR>
+<BR>
+  Here, A<SUP>*</SUP> is symmetric and positive definite. The similarity transformation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+
+    E<SUP>-<I>T</I></SUP>A<SUP>*</SUP>E<I><SUP>T</SUP> </I>= E<SUP>-<I>T</I></SUP>E<SUP>-1</SUP>A
+    = C<SUP>-1</SUP>A&nbsp; </FONT>
+
+  </DIR>
+<BR>
+</span> </p>
+
+<p align = "justify"> <span class = "content">
+
+   reveals that A<SUP>*</SUP> and A have same eigen values. If C can be found
+   such that the condition number of the matrix A<SUP>*</SUP> is less than
+   the condition number of the matrix A, then the rate of convergence of the
+   preconditioned method is better than that of conjugate gradient method.
+   We call C the <I>preconditioning </I>matrix, A<SUP>*</SUP> the <I>preconditioned</I>
+   matrix, We assume that the matrix C = EE<SUP>T</SUP> is positive definite,
+   since E is nonsingular by assumption. If the coefficient matrix A has <I>l</I>
+   distinct eigen values, the CG algorithm  converges to the solution
+   of the system <B>A<I>x</I> </B>=<B> b </B>in at most <I>l</I> iterations
+   (assuming no rounding errors). Therefore, if A has many distinct eigen
+   values that vary widely in magnitude, the CG algorithm may require a large
+   number of iterations to converge to an acceptable approximation to the
+   solution. <BR> <BR>
+
+
+
+  The speed of convergence of the <I>CG</I> algorithm can be increased
+  by preconditioning <B>A</B> with the congruence transformation <B>A*</B><I>
+    = </I>E<SUP>-1</SUP>AE<SUP>-<I>T</I> </SUP> where E is a nonsingular
+  matrix. E is chosen such that <B>A*</B> has fewer distinct eigen values
+  than <B>A</B>. The <I>CG</I> algorithm is then used to solve <B>A* y <I>=</I>b<I>*</I></B>,
+  where <I>x =</I>(E<I><SUP>T</SUP></I>)<I><SUP>-</SUP>1y</I> . The resulting
+  algorithm is called the <I>preconditioned conjugate gradient</I> (<I>PCG</I>)
+  algorithm. The step performed in each iteration of the preconditioned
+ conjugate gradient algorithm are as follows <BR> <BR>
+
+<DIR>  <FONT COLOR="#ff00ff"> 
+ 
+ 1. &nbsp; tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+     g<I><SUB>k</SUB><SUP>T</SUP></I>h<I><SUB>k </SUB>/</I>        
+     d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 2. &nbsp; <i> x<SUB>k+</SUB></I><SUB>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>= <I>x<SUB>k</SUB> +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 3.&nbsp;  g<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I>
+    g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+ 4. &nbsp; h<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=&nbsp;
+    C<SUP>-1</SUP>g<SUB><I>k+</I>1</SUB>&nbsp; <BR>
+
+ 5. &nsbp;  beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>h<SUB><I>k+</I>1</SUB>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>h<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 6. &nbsp;  d<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>
+    -</I>h<SUB><I>k+</I>1</SUB><I> </I>+ beta<SUB><I>k+</I>1</SUB>d<I><SUB>k</SUB></I>
+</FONT>
+</DIR>
+
+</span> </p>
+
+<p align = "justify"> <span class = "content">
+
+  where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+  calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b, h<SUB>0</SUB>= 
+  C<SUP>-1</SUP>g<SUB>0</SUB> and d<SUB>0</SUB> = -h<SUB>0</SUB>. 
+
+  The multiplication by C<SUP>-1</SUP> in step (4) is to be interpreted as solving a system of equations  
+  with coefficient matrix C. A source of preconditioning matrices is the class
+  of stationary iterative methods for solving the system 
+ 
+  <B>A<I>x</I><SUP>*</SUP></B> = <B>b</B>.&nbsp;</DIR> 
+
+</span> </p>
+
+<!-- ******** Example 1.16 : Conjugate Gradient  Method  Parallel implementation of PCG Starts ********* -->
+
+
+<LI> <B> Parallel implementations of the PCG algorithm </B> </li>
+
+
+<p align = "justify"> <span class = "content">
+The parallel conjugate gradient algorithm involves the following&nbsp;
+   type of computations and communications <BR> <BR>
+
+Partitioning of a matrix : The matrix A is obtained by discretization
+of partial differential equations by finite element, or finite difference
+method. In such cases, the matrix is either sparse or banded. Consequently,
+the partition&nbsp; of the matrix onto <I>p</I> processes play a vital
+role for performance. For, simplicity , we assume that <B>A </B>is symmetric
+positive definite and  is<I> row-wise</I> block-striped partitioned.<BR> <BR>
+
+
+<B>Scalar Multiplication of a vector and addition of vectors : </B>  <BR>
+
+Each of these computations  can be performed sequentially regardless
+of the preconditioner and the type of coefficient matrix. If all vectors
+are distributed identically among the processes, these steps require no
+communication in a parallel implementation. <BR> <BR>
+
+<B>Vector inner products :</B>  <BR>
+
+In some situations, partial vectors are available on each&nbsp; processes.&nbsp;
+MPI Collective library calls are necessary to perform vector inner products&nbsp;
+If the parallel computer supports fast reduction operations, such as optimized
+MPI, then the communication time for the inner-product calculations can
+be made minimum. <BR> <BR>
+
+<B>Matrix-vector multiplication :</B>
+
+The computation and the communication cost of the matrix-vector
+multiplication;  depends on the structure of the matrix A. The
+parallel implementation of the PCG algorithm for three cases one
+in which A is a block-tridiagonal matrix of the  type, two in
+which it is banded unstructured sparse matrix, and three in which the matrix
+is sparse give different performance on parallel computers. Various
+parts of the algorithm in each of the three cases dominate in terms of
+communication overheads.<BR> <BR>
+
+<B>Solving the preconditioned system :</B> <BR>
+
+The PCG algorithm solves  system of linear equations in each
+iteration The preconditioner C is chosen so that solving the system modified
+system is in expensive compared to solving the original system of
+equations <B>A<I>x </I></B>=  <B>b</B>. Nevertheless, preconditioning increases
+the  amount of computation in each iteration. For good preconditioners,
+however, the increase is compensated by a reduction in the number of iterations
+required to achieve acceptable convergence. The computation and the
+communication requirements of this step depends on the type
+of preconditioner used. preconditioning method such as diagonal preconditioning,
+in which the preconditioning matrix C has nonzero elements only
+along the principle diagonal does not involve any communication Also,
+Incomplete Cholesky (IC) preconditioning, in which C is based on incomplete
+Cholesky factorization of A and it may involve different computations and
+communications in parallel implementation. <BR> <BR>
+
+
+The convergence of CG method iterations performed by checking the error
+criteria i.e. euclidean norm of the residual vector should be less than
+prescribed tolerance. This convergence check involves gathering of real
+value from all processes, which may be very costly operation. <BR> <BR>
+
+We consider parallel implementations of the PCG algorithm using
+diagonal preconditioner for dense coefficient matrix type. As we
+will see, if C is a diagonal preconditioner, then solving the modified
+system does not require any interprocessor communication. Hence,
+the communication time in a CG iteration with diagonal preconditioning
+is the same as that in an iteration of the unpreconditioned algorithm. <BR> <BR>
+
+Thus the operations that involve any 
+   communication overheads are computation of inner products, matrix-vector 
+   multiplication and, in case of IC preconditioner solving the 
+   system.
+</span> </p>
+
+</LI>
+
+<!-- ************** Example  1.16: Conjugate Gradient  Method  Parallel implementation of PCG Ends ************* -->
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p align = "justify"> <span class = "content">Row and Column in input Matrix
+</span> </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p align = "justify"> <span class = "content">
+ prints the results of the solution x of linear system of matrix equations Ax = b 
+</span> </p>
+<br>
+
+</ul>
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.16 ends ***************************** -->
+
+
+
+
+<!-- ********************** example 1.17 starts *********************** -->
+
+<a name="hetr-opencl-prog-id117"> </a>
+<BR>
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.17:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+     <b>   Write a OpenCL program to perform sparse matrix into vector multiplication </b>
+  <BR>  <font color ="red"> (Assignment - To be discussed in Lab. Session)  </font> <BR>
+
+
+ </td>
+ </tr> 
+ </tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+
+<font size="2" face="verdana">
+<P> To write a CUDA program on sparse matrix multiplication of size n x n and vector of size n.<br>
+
+</P>
+</LI>
+</A>
+
+<LI>
+<B>  Efficient storage format for sparse matrix </B>										
+<P align="justify">
+Dense matrices are stored in the computer memory by using two-dimensional arrays. For example,
+ a matrix with n rows and m columns, is stored using a n x m array of real numbers. However, using the same two-dimensional 
+array to store sparse matrices has two very important drawbacks. First, since most of the entries in the sparse matrix 
+are zero, this storage scheme wastes a lot of memory. Second, computations involving sparse matrices often need to operate only 
+on the non-zero entries of the matrix. Use of dense storage format makes it harder to locate these non-zero entries. For these 
+reasons sparse matrices are stored using different data structures. 
+
+The Compressed Row Storage format (CRS) is a widely used scheme for storing sparse matrices. In the CRS format, a 
+sparse matrix A with n rows having k non-zero entries is stored using three arrays: two integer arrays rowptr and colind, 
+and one array of real entries values. The array rowptr is of size n+1, and the other two arrays are each of size k. The 
+array colind stores the column indices of the non-zero entries in A, and the array values stores the corresponding non-zero 
+entries. In particular, the array colind stores the column-indices of the first row followed by the column-indices of the 
+second row followed by the column-indices of the third row, and so on. The array rowptr is used to determine where the storage of the 
+different rows starts and ends in the array colind and values. In particular, the column-indices of row i are stored starting at colind [rowptr[i]]
+ and ending at (but not including) colind [rowptr[i+1] ]. Similarly, the values of the non-zero entries of row i are stored at values [rowptr[i] ] 
+and ending at (but not including) values [rowptr[i+1] ]. 
+Also note that the number of non-zero entries of row i is simply rowptr[i+1]-rowptr[i]. </P>
+</LI>
+
+<LI> 
+<b> Serial sparse matrix vector multiplication </b>
+<P align="justify">
+The following function performs a sparse matrix-vector multiplication [y]={A} {b} 
+where the sparse matrix A is of size n x m, the vector b is of size m and the vector 
+y is of size n. Note that the number of columns of A (i.e., m ) is not explicitly 
+specified as part of the input unless it is required.  </P>
+
+
+ void SerialSparseMatVec(int <I>n</I>, int *<I>rowptr</I>, int *<I>colind</I>, double *<I>values</I> <BR>
+
+    double *<I>b</I>, double&nbsp; *<I>y</I>)&nbsp; &nbsp; <BR>
+
+    {&nbsp;<BR>
+     &nbsp; &nbsp; &nbsp; int <I>i</I>, <I>j</I>, <I> count </i>; &nbsp;<BR>
+ 
+    &nbsp; &nbsp; &nbsp; count = 0; <BR>
+    &nbsp; &nbsp; &nbsp; for(<I>i</I>=0;  <I>i</I>&lt;<I>n</I>; <I>i</I>++) <BR>
+
+
+    &nbsp; &nbsp; &nbsp; { <BR>
+
+    &nbsp; &nbsp; &nbsp; &nbsp; <I>y</I>[<I>i</I>] = 0.0; <BR>
+  
+
+
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+    for (<I>j</I>=<I>rowptr</I>[<I>i</I>]; <I>j</I>&lt;<I>rowptr</I>[<I>i+</I>1]; &nbsp; </I>j</I>++) <BR>
+
+
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <I>y</I>[<I>i</I>] += value [count] * b [<I>colind</I>[<I>j</I>]];  <BR>
+    &nbsp; &nbsp; &nbsp; &nbsp; count ++;  <BR> 
+     &nbsp; &nbsp; &nbsp;  } <Br> 
+    } <BR> </font> <BR>
+ 
+   </P>
+
+</LI>
+
+<LI><b> Description of parallel algorithm</b>
+<P align="justify">
+
+In the parallel 
+
+implementation, each thread picks a row from the 
+matrix and multiplies it with the vector. Thus computation of all threads
+ is carried out in parallel.
+</P>
+</LI>
+
+
+<LI> 
+<b>Implementation</b>
+<P align="justify">
+
+There are two implementations, one using OpenCL kernels and the other using BLAS library.<br><br>
+<b>OpenCL implementation</b><br><br>
+
+<b>Step 1:</b> The matrix size(no. of  rows) and sparsity(percentage of non-zero) are provided by the user in the cmd line.<br><br>
+<b>Step 2:</b> A sparse matrix and a vector of the given size are allocated and initialized. Also the row_ptr and 
+col_idx vectors are created and assigned their appropriate based on the sparse matrix<br><br>
+<b>Step 3:</b>  The above vectors are also created and initialized on the device (GPU).<br><br>
+<b>Step 4:</b>  The sparse_matrix and vector are multiplied in the GPU to obtain the result.<br>
+
+
+
+
+
+</P>
+</LI>
+
+
+
+<LI><B>Performance:</B>
+<P align="justify">
+The gettimeofday() function which is part of <I> sys/time.h  </i> is used to measure the time taken for computation.
+</LI>
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<P align="justify"> The input to the problem is given as arguments in the command line. It should be given in the following format ;
+Suppose that the number of rows of the sparse matrix is n (only square matrices are considered) and 
+the sparsity i.e. the percentage of number of zero's (given in the range 0 to 1) is m, then the  program must be run as,<br><br>
+    <b> ./program_name n m </b><br><br>
+CPU generates the sparse matrix, the vector to be multiplied using random values and the row_ptr and col_idx vectors based on the sparse matrix.
+
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  The CPU prints the time taken for the computation.
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-opencl-hetrg-num-comp.html"> 
+      <IMG SRC="./../../hypack13_images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<BR>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************** example 1.17 ends *********************** -->
+
+<!-- ********************** example 1.18 starts *********************** -->
+
+<a name="hetr-opencl-prog-id118"> </a>
+<BR>
+
+<table width = "100%" border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+      <b>  Example 1.18:  </b> </td>
+
+    <td width="70%" height="2" valign="top">
+     <b> Write a OpenCL program to compute  vector-vector addition on Multi-GPU.</b>
+
+ 
+ <!-- **************** download  Starts here ********** -->
+<BR> 
+(Download source code - :  
+
+  <a href="../gpgpu-comp-amd-app-opencl-num-comp-codes/clMultiGPU-VectVectAdd.c">
+       <font color = "blue"> clMultiGPU-VectVectAdd.c  </font> </a> &nbsp;
+ 
+ ) <BR>
+
+  <!-- *************** download  Ends here ********** -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- *********** Ex 1.18 Obj - Des-input-output  starts ***** -->
+
+<table width = "100%" border="0" height="6">
+<tbody>
+
+<tr> 
+<TD>
+<UL>
+
+<LI><B> Objective </B>
+
+<P>  Write OpenCL program to compute addition of two vectors <br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+We create a one-dimensional globalWorkSize array that is overlaid on vector.
+The input vectors using Single Precision/Double Precision input data 
+are generated on Host and transfer the vectors to device for vector 
+addition.  Each GPU computes addition of its own elements of two vectors and 
+accumalates partial sum.  
+In global memory,a simple  kernel based on the 1- dimension 
+indexspace  of work groups is generated in which work item is given a unique 
+ID within its work group. Each work item performs addition of two vectors 
+using work item ID and the final resultant vector is generated on device
+ and transferred to Host.
+<br><br><b> Refer Table 1.1 for OpenCL Important implementation Steps </b>
+</P>
+</LI>
+
+<blockquote>
+
+<li> Each <i> work-item </i>  using its work item ID performs addition using one element from each vector.  
+</li>
+<li>
+ The choice of <i> work-items </i> in the code are given as <BR>
+<font size = 2, face = " Courier New " color ="#FF00FF" >  
+                   <B>  size_t globalWorkSize[3] = [128, 1,1];  </b> </font> <BR>
+&amp;  for generalisation, refer table 1.2 
+
+The number of work-items of workgroup on each GPU are specified.
+
+ <BR> <BR>
+                 <BR> 
+</li>
+
+</blockquote>
+
+<LI>
+<B>Input</B>
+</LI>
+
+
+<p align = "justity"> Two vectors of same size </p> 
+
+
+<LI>
+
+<B>Output</B>
+
+</LI>
+
+<p> Execution time in seconds, Gflops achieved </p>
+
+</ul>
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+
+</TD>
+</TD>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.18 ends **************************** -->
+
+
+<!-- *************************  Table for codes ends ********************** -->
+
+
+<!-- ************************ OpenCL Device Info Starts ***************** -->
+
+
+ <a name="hetr-opencl-prog-device-info"> </a>
+       
+<BR> <B> OpenCL CLInfo Program print-out :</b> <BR> <BR>
+
+<TABLE cellPadding=0 width =100% border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  width = "40%" height="2%" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Feature  </b> </font>
+           </td>
+         
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+
+     
+       <tr bgcolor="#FFFFFF">
+  	   <td  width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Number of Platforms :  
+          </font> 
+           </td>
+ 
+              <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		1
+                </font> <BR>
+          </td>
+      </tr>
+    
+      
+        
+       <tr bgcolor="#FFFFFF">
+  	   <td  width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Platform Profile  :  
+          </font> 
+           </td>
+ 
+            <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		FULL_PROFILE
+                </font> <BR>
+          </td>
+
+       </tr>
+       <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Platform Version   :  
+          </font> 
+           </td>
+ 
+            <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		OpenCL 1.1 AMD-APP SDK-v2.4
+                </font> <BR>
+          </td>
+       </tr>
+
+
+ 
+       <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Platform Name   :  
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		AMD Aceelerated Parallel Processing
+                </font> <BR>
+          </td>
+       </tr>
+
+     <tr bgcolor="#FFFFFF">
+  	   <td   width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Platform Vendor  :  
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		Advanced Micro Devices, In., 
+                </font> <BR>
+          </td>
+       </tr>
+
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             No. of devices :  
+          </font> 
+           </td>
+
+             <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		2
+                </font> <BR>
+          </td>
+       </tr>
+
+ 
+     <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Device Type :  
+          </font> 
+           </td>
+ 
+             <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		CL_DEVICE_TYPE_GPU
+                </font> <BR>
+          </td>
+       </tr>
+
+ 
+     <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Name :  
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		Cypress
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Max compute units :  
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		20
+                </font> <BR>
+          </td>
+       </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             Address bits :  
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		32
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            Max Memory allocations :   
+          </font> 
+           </td>
+
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		268435456
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Global  Memory size :   
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		1073741824
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          Constant buffer size :   
+          </font> 
+           </td>
+
+          <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		65536
+                </font> <BR>
+          </td>
+       </tr>
+
+
+  <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          Local Memory type :   
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		Scaratchpad
+                </font> <BR>
+          </td>
+       </tr>
+
+
+   <tr bgcolor="#FFFFFF">
+  	   <td   width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          Local Memory size :   
+          </font> 
+           </td>
+ 
+     <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		32768
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td   width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          Device endianess:   
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		Little
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             
+          </font> 
+           </td>
+ 
+          <td  height="2%"  width = "60%" valign="top">
+       		<BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td   height="2%"  width = "40%" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Device Type : 
+          </font> 
+           </td>
+ 
+         <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		CL_DEVICE_TYPE_CPU 
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Max Compute units : 
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		16
+                </font> <BR>
+          </td>
+       </tr>
+
+
+    <tr bgcolor="#FFFFFF">
+  	   <td    width = "40%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Max Compute units : 
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		16
+                </font> <BR>
+          </td>
+       </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td    width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Name :  
+          </font> 
+           </td>
+ 
+           <td  height="2%"  width = "60%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		AMd Phenom (tm) 11 X4 X4 946 Processor
+                </font> <BR>
+          </td>
+       </tr>
+</tbody>
+</table>
+ <br> 
+
+
+<!-- *************** IMPORTANT STEPS OpenCL Device Info ************ -->
+
+
+<!-- ************************ OpenCL Device Info Ends ***************** -->
+
+
+
+<!--  .............********  GPGPU - Mutli-Core - hybrid -  References   -->
+
+
+<HR>
+
+
+
+<div align = "right">
+<a href="#top">
+   <img src="./../../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a> 
+</div>
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+
+
+ 
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

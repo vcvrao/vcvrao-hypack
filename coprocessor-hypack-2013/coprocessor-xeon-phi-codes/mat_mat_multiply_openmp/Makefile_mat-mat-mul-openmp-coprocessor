@@ -1,0 +1,28 @@
+CC=icc
+CFLAGS=-openmp -std=c99 -O3
+
+all: mat-mat-mul-openmp-coprocessor_offload.out mat-mat-mul-openmp-coprocessor_native.out mat-mat-mul-openmp-coprocessor_native1.out
+
+#offload separate file compilation
+mat-mat-mul-openmp-coprocessor_offload.out: mat-mat-mul-openmp-coprocessor_offload.o
+	$(CC) -o $@ $< 
+	        
+mat-mat-mul-openmp-coprocessor_offload.o: mat-mat-mul-openmp-coprocessor.c
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+
+#native single file compilation
+mat-mat-mul-openmp-coprocessor_native.out: mat-mat-mul-openmp-coprocessor.c
+	$(CC) -o $@ $< $(CFLAGS) -mmic
+
+
+#native separate file compilation
+mat-mat-mul-openmp-coprocessor_native1.out: mat-mat-mul-openmp-coprocessor_native1.o
+	$(CC) -o $@ $< $(CFLAGS) -mmic -L/opt/intel/lib/mic -I/opt/intel/composer_xe_2013.5.192/compiler/include/
+
+mat-mat-mul-openmp-coprocessor_native1.o: mat-mat-mul-openmp-coprocessor.c
+	$(CC) -c -o $@ $< $(CFLAGS) -mmic
+
+clean:
+	rm -rf *.o *.out
+

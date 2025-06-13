@@ -1,0 +1,20 @@
+
+
+CC	= icc
+
+CFLAGS	= -mmic  -o
+
+LIB	= -ltbb  -ltbbmalloc -lpthread -lrt
+
+#SRC	= vect-vect-multiplication-intel-tbb-native.cpp
+SRC	= vect-vect-addition-intel-tbb-native.cpp
+#SRC	= matrix-matrix-multiply-intel-tbb-native.cpp
+
+OBJ     = ${SRC:.c=.o}
+all	:run
+
+run	:$(SRC)
+	$(CC) $(CFLAGS) $@ $< $(LIB)
+
+clean	:
+	rm -f *.o *.out run *.dat	

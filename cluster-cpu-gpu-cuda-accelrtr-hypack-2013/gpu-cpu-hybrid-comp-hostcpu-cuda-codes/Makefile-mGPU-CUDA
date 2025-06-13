@@ -1,0 +1,35 @@
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+#Makefile for running cuda practice programs
+#---------------------------------------------------------------------
+#               Machines Architecture :
+#---------------------------------------------------------------------
+CC = nvcc
+CCFLAGS = -arch sm_20
+MPICC=mpicc
+
+
+
+# Names of set of example programs
+
+OBJECT=Vect_Vect_Mult_mpi_CUDA_mGPU_device
+
+
+run:
+
+	@$(CC) $(CCFLAGS) -c $(OBJECT).cu; 
+	@$(MPICC) -o $@  Vect_Vect_Mult_mpi_mGPU_hostcpu.c $(OBJECT).o -lcudart -L/usr/local/cuda/lib64 -I/usr/local/cuda/include; 
+
+
+clean:
+	rm -f *.o run 
+

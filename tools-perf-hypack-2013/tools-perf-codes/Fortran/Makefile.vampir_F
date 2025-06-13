@@ -1,0 +1,46 @@
+#
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+# *******************************************************************
+
+ALL: default
+##### User configurable options #####
+
+F77        = mpxlf_r -qalign=packed
+V_PATH    = /home/betatest/betatest/Tools/vampir
+FLINKER   = $(F77)  
+LIBS      = -L$(V_PATH)/lib -lVT -lld -lm -lpthread -lc_r
+FFLAGS    = -I$(V_PATH)/include
+
+### End User configurable options ###
+
+default: all
+
+all     : run
+
+OBJECTS = Tools_Hello_World.o
+#OBJECTS = Tools_Pi_Pt_to_Pt.o
+#OBJECTS = Tools_Pi_Collective.o
+#OBJECTS = Tools_Pi_Idleness.o
+#OBJECTS = Tools_MM_Mult_Master_Slave.o
+#OBJECTS = Tools_MM_Mult_Cartesian.o
+
+run:clean $(OBJECTS)
+	$(FLINKER) -o run $(OBJECTS) $(LIBS) 
+
+.f.o:
+	$(F77) -c $<
+
+	
+clean: 
+	\rm -f *.o run
+

@@ -1,0 +1,35 @@
+#
+#       C-DAC Tech Workshop : hyPACK-2013
+#              October 15-18, 2013
+#
+#   Created   : August 2013 
+#
+#   E-mail    : hpcfte@cdac.in
+#
+
+CC         = icc 
+
+CCFLAGS    = -mmic -std=c99 -vec-report=3 
+OPTFLAGS   = -O3
+
+LIBS       = -L/opt/intel/lib/mic -Wno-unknown-pragmas 
+EXECS      = run
+
+#----------------------------------------------------------------
+#		Object files ...
+#----------------------------------------------------------------
+#
+
+OBJECTS = vect-vect-addition-sequential-native
+
+#----------------------------------------------------------------
+
+run : $(OBJECTS).c
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS).c $(CCFLAGS) $(LIBS) 
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run
+

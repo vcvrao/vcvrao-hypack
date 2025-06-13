@@ -1,0 +1,16 @@
+GCC=icc
+CUDAPATH=/usr/local/cuda
+NVCC=$(CUDAPATH)/bin/nvcc
+NVCCFLAGS:=-lcuda -lcudart -O3
+
+EXE=*.out
+FILES:=*.o  *.r $(EXE)
+
+ALL: fire 
+
+fire : gpgpu_mat-mat-Mul-Perf.cu 
+	$(NVCC) -o $@ $< -arch=sm_35 -I$(CUDAPATH)/include $(NVCCFLAGS) #--ptxas-options=-v
+
+clean:
+	rm -rf $(FILES)
+

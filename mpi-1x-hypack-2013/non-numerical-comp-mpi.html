@@ -1,0 +1,2074 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+               Mode-1 Multi-Core  </A>
+                      
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+                Memory Allocators</A>
+   
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+               Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+               Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+               Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+               Charm++ Prog.</A>
+ 
+              <!-- ** -->
+	      <A class=menulslct 
+               href="./../hypack13-mode01-multicore-mpi.html">
+                Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+               MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+               MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+               MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+               Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+               Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+               Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+               Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+               PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+               Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+               Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013  Mode 1 :Non-Numerical  Computations MPI Lib. Calls</H1> 
+</TR>
+  
+   
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD> 
+ <DIV align=left><font size="2"  Color="black" face= "Arial">
+
+  <B> Module 7 : </b> MPI programs on   Dense  Matrix Computations  -
+  Parallel Programs on simple algorithms for Graph theory computations, Coloring a graph, 
+   and sorting 
+  and execute on Message Passing Cluster  or Multi-Core Systems that support 
+  MPI library.</DIV> </TD> </TR> 
+</TBODY> 
+</TABLE>
+
+
+
+<!-- *************** Table List of programs : start ******************* -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+   <!-- ************** Example 7.1 *************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="non-numerical-comp-mpi.html#mpi-sort">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 7.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Write  MPI program for implementation of Sample Sorting Algorithm  
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ************ Example 7.2 **************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="non-numerical-comp-mpi.html#mpi-color-graph-01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 7.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+         Write Simple  MPI program for implementation of coloring a sparse graph.<b>(Assignment)</b>
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ************** Example 7.3 *************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="non-numerical-comp-mpi.html#mpi-color-graph-02">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 7.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+         Write an efficient MPI program  for implementation of coloring a sparse graph.<b>(Assignment)</b>
+       </span> </p>
+     </td>
+
+   </tr>
+
+  <!-- ************ Example 7.4 ************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="non-numerical-comp-mpi.html#mpi-color-shortest-path-01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 7.4 </b> </font> <BR><BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+         Efficient Parallel formulation  for implementation Dijkstra's Single source   shortest path Algorithm .<b>(Assignment)</b>
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+<tr>
+<td> </td>
+<td>
+<DIV ALIGN="right">
+       <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</TD> 
+</tr>
+
+
+</tbody>
+</table>
+<BR>
+<!-- ************* Table List of programs : end **************** -->
+
+<!-- *******************  Reference Starts Here ******************** -->
+<TABLE cellPadding=3 border=0> 
+<TBODY>
+<TR>
+<tD>
+
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+  &nbsp; &nbsp;    - 
+[MC-MPI-02], [MCMPI-06], [MCMPI-07], [MCMPI-09], [MC-MPI10], [MCMPI-11], 
+  [MCMTh-12],[MCBW-44], [MCOMP-01])
+ <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *******************  Reference Ends  Here ******************** -->
+
+
+<!-- ************ Example 7.1 : Parallel sorting Algorithm  (Sample Sort)  [ Objective and Description ] *********** -->
+
+
+
+ <A NAME="mpi-sort"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+     
+     <b>  Example 7.1:  <BR> <BR> </b> </td>
+    <td width="800" height="2" align="left">
+     <b>  Write  MPI program to implement Sample Sorting Algorithm  <BR> </b>
+
+ <!-- ************** download  Starts here **************** -->
+ (Download source code : 
+<I>
+ <font color ="#CC66CC">
+  <a href="./non-numerical-comp-codes/mpic-samplesort.c">mpic-samplesort.c </a>)
+  </font></I>
+
+
+ <!-- ************* download  Ends here ***************** -->
+
+ 
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+ 
+<table  border="0" ><tbody>
+  <tr>
+<td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+
+<LI> <B>Objective</B> </li>
+
+
+<p align = "justify">
+   Write a MPI program to sort <I>n</I> integers, using <I>sample sort
+   </I>algorithm on a <I>p </I>processor of MPI cluster. Assume <I>n </I>is
+   multiple of <I>p</I>.
+</P>
+
+ <LI>  <B>Description</B> </li>
+
+
+  <P>
+   There are many sorting algorithms which can be parallelised on various
+   architectures. Some sorting algorithms (bitonic sort, bubble sort, odd-even
+   transposition algorithm, shellsort, quicksort) are based on compare-exchange
+   operations. There are other sorting algorithms such as enumeration sort,
+   bucket sort, sample sort that are important both practically and theoretically.
+    First, we explain <I>bucket sort </I>algorithm and we use concepts of <I>bucket sort </I>
+    in <I>sample sort </I>algorithm. </P> <BR>
+
+
+<!-- ***************** Example 7.1 : Sequential and Parallel sorting Algorithm  (Bucket) ************ -->
+
+<li> 
+<B>Sequential and parallel bucket sort algorithms&nbsp;</B>&nbsp; </li> 
+
+<p align = "justify">
+  <I>Bucket</I> <I>sort</I> assumes that <I>n</I> elements to be sorted
+   are uniformly distributed over an interval (<I>a</I>, <I>b</I>). This algorithm
+   is usually called <I>bucket sort </I>and operates as below. <BR> <BR>
+
+   The interval (<I>a,b</I>) is divided into <I>m</I> equal sized subintervals
+   referred to as <I>buckets </I>. Each element is placed in the appropriate
+    bucket. Since the <I>n</I> elements are uniformly distributed over the
+   interval (<I>a,b)</I>, the number of elements in each bucket is roughly
+   <I>n/m</I>. The algorithm then sorts the elements in each buckets, yielding
+    a sorted sequence. <BR> <BR>
+
+  Parallelizing <I>bucket sort </I>is straightforward. Let <I>n</I> be
+  the number of elements to be sorted and <I>p</I> be the number of processes.
+  Initially, each process is assigned a block of <I>n/p</I> elements, and
+  the number of <I>buckets </I>is selected to be <I>m=p</I>. The parallel
+  formulation of <I>bucket sort </I>consists of three steps. <BR> <BR>
+
+  In the <I>first </I>step, each process partitions its block of <I>n/p</I>
+  elements into <I>p</I> subblocks on for each of the <I>p </I>buckets. This
+  is possible because each process knows the interval [<I>a,b</I>] and
+  thus the interval for each bucket. <BR> <BR>
+
+  In the <I>second </I>step, each process sends subblocks to the appropriate
+   processes. After this step, each process has only the elements belonging
+   to the bucket assigned to it. <BR> <BR>
+
+   In the <I>third </I>step, each process sorts its bucket internally
+   by using an optimal sequential sorting algorithm.  <BR> <BR>
+
+   The performance of <I>bucket sort </I>is better than most of the 
+   algorithms and it is a good choice if input elements are uniformly 
+   distributed over a known interval.</P>
+
+
+<!-- ************ Example 7.1 : Sequential and Parallel sorting Algorithm  (Sample sort ) *********** -->
+
+
+<LI> <B>Sequential and parallel sample sort algorithms</B> </li>
+
+
+<p align = "justify">
+  <I>Sample sort </I>algorithm is an improvement over the basic <I>bucket</I>
+  <I>sort</I> algorithm. The <I>bucket sort </I>algorithm presented above
+   requires the input to be uniformly distributed over an interval [<I>a,b</I>].
+   However, in many cases, the input may not have such a distribution or its
+   distribution may be unknown. Thus, using bucket sort may result in buckets
+   that have a significantly different number of elements, thereby degrading
+   performance. In such situations, an algorithm called <I>sample sort </I>will
+   yield significantly better performance. <BR> <BR>
+
+
+  The idea behind <I>sample sort </I>is simple. A sample of size <I>s</I>
+  is selected from the <I>n-element </I>sequence, and the range of the <I>buckets
+  </I>is determined by sorting the sample and choosing<I> m-</I>1 elements
+  from the results. These elements (called splitters) divide the sample into
+  <I>m </I>equal sized buckets. After defining the buckets, the algorithm
+  proceeds in the same way as <I>bucket sort </I>. The performance of <I>sample
+  sort </I>depends on the sample size <I>s</I> and the way it is selected
+  from the <I>n-element</I> sequence. <BR>
+
+
+   How can we parallelize the splitter selection scheme? Let <I>p</I> be
+   the number of processes. As in <I>bucket sort </I>, set <I>m =p</I>; thus,
+   at the end of the algorithm, each process contains only the elements
+   belonging to a single bucket. Each process is assigned a block of <I>n/p</I>
+   elements, which it sorts sequentially. It then chooses <I>p-</I>1 evenly
+   spaced elements from the sorted block. Each process sends its <I>p-</I>1
+   sample elements to one process say <I>P</I><SUB>o</SUB>. Process <I>P</I><SUB>o</SUB>
+   then sequentially sorts the <I>p</I>(<I>p-</I>1) sample elements and selects
+   the <I>p-</I>1 splitters. Finally, process <I>P</I><SUB>o </SUB>broadcasts
+   the <I>p-</I>1 splitters to all the other processes. Now the algorithm
+  proceeds in a manner identical to that of <I>bucket sort </I>. The sample
+  sort algorithm has got three main phases. These are: <BR> <BR>
+
+
+
+  <I>1. Partitioning of the input data and local sort :&nbsp;</I>&nbsp;<BR><BR>
+  The <I>first </I>step of sample sort is to partition the data. Initially,
+  each one of the <I>p </I>processes stores <I>n/p </I>elements of the sequence
+  of the elements to be sorted. Let A<I>i</I> be the sequence stored at process
+  P<I><SUB>i</SUB></I>. In the first phase each process sorts the local
+  <I>n/p </I>elements using a serial sorting algorithm. (You can use <I>C</I>
+  library <I>qsort</I>() for performing this local sort).  <BR> <BR>
+
+
+  <I>2. Choosing the Splitters :&nbsp;</I>&nbsp; <BR> <BR>
+  The <I>second </I>phase of the algorithm determines the <I>p-</I>1<I>
+  </I>splitter elements <I>S</I>. This is done as follows. Each process
+  <I>P<SUB>i </SUB></I>selects <I>p-</I>1 equally spaced elements from the
+  locally sorted sequence <I>A<SUB>i</SUB></I>. These <I>p-</I>1 elements
+  from these <I>p(p-</I>1<I>) </I>elements are selected to be the splitters.&nbsp; <BR> <BR>
+
+
+  <I>3.Completing the sort :&nbsp;</I>&nbsp;<BR> <BR>
+
+  In the <I>third </I>phase, each process <I>P<SUB>i</SUB></I> uses
+  the splitters to partition the local sequence <I>A<SUB>i</SUB> </I>into
+  <I>p</I> subsequences <I>A<SUB>i,j</SUB></I> such that for <I>0 &lt;=j
+  &lt; p-</I>1<I> </I>all the elements in <I>A<SUB>i,j</SUB> </I>are smaller
+  than <I>S<SUB>j</SUB> </I>, and for <I>j=p-</I>1<I> </I>(i.e., the last
+  element) <I>A<SUB>i,j</SUB> </I>contains the rest elements. Then each process
+  <I>i</I> sends the sub-sequence <I>A<SUB>i,j</SUB> </I>to process <I>P<SUB>j</SUB> </I>. 
+      
+  Finally, each process sorts the received sub-sequences using merge-sort 
+  and complete the sorting algorithm.&nbsp;  <BR> <BR>
+
+</P>
+
+ <!-- **************** Example 7.1: Parallel Sample sorting Algorithm [input & Output ] *************** -->
+
+  <LI> <B>Input</B> </li>
+
+
+
+<p align = "justify">
+Process with rank <I>0</I> generates unsorted integers using <I>C</I> library call <I>rand</I>() </P>
+
+<LI> <B>Output</B> </li>
+
+
+ <P> Process with rank <I>0</I> stores the sorted elements in the file <I>sorted_data_out</I>.</p>
+
+</font>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</BLOCKQUOTE></TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ***************** Example 7.1: Parallel Sample sorting Algorithm Ends ********************* -->
+
+
+<!-- ******** Example 7.2 : Parallel program for implementation of Coloring a sparse a graph ********* -->
+
+
+
+ <A NAME="mpi-color-graph-01"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+   
+     <b>  Example 7.2:  </b> </td>
+    <td width="800" height="2" align="left">
+     <b>  Write  simple MPI program to implement Coloring a Sparse Graph </b>
+     </td>
+    </tr>
+    </tbody> 
+    </table> </p>
+ 
+<table  border="0" ><tbody>
+  <tr>
+<td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+<LI> <B>Objective</B> </LI>
+
+<p align = "justify">
+ <B> Parallel program for Implementation of  Coloring a Sparse Graph  </B>  <BR>
+
+   You will develop MPI program to color sparse graph <I>G</I>(<I>V,E</I>)
+   with <I>n</I> vertices on <I>p </I>processors of message passing cluster </p>
+
+<!-- ******** Example 7.2 : Parallel program for implementation of Coloring a sparse a graph : Definitions ********* -->
+
+<LI> <B>Definitions</B> </LI>
+
+
+<p align = "justify">
+  A <I>directed graph G</I>(<I>V,E</I>)<I> </I>(or <I>a digraph </I>)
+  consists of a set of vertices <I>V=</I>{<I>v<SUB>1</SUB>,v<SUB>2</SUB>,...</I>},
+  a set of edges <I>E=</I>{<I>e<SUB>1</SUB>,e<SUB>2</SUB>,...</I>}, and a
+  mapping <B>F </B>that maps every edge onto some ordered pair of vertices
+  (<I>v<SUB>i</SUB>,v<SUB>j</SUB></I>). As in the case of <I>undirected </I>graphs,
+  a vertex is represented by a point and edge by a line segment between <I>v<SUB>i</SUB>
+  </I>and <I>v<SUB>j</SUB></I> with an arrow directed from <I>v<SUB>i</SUB></I>
+  to <I>v<SUB>j</SUB></I>. <BR> <BR>
+
+  Suppose that you are given a graph <I>G</I>(<I>V,E</I>)<I> </I>with
+  <I>n</I> vertices and are asked to paint its vertices such that no two
+  adjacent vertices have the same color. <I>What is the minimum number of
+  colors that you would require ? </I>This constitutes a <I>coloring </I>problem. <BR> <BR>
+
+  Having painted the vertices, you can group them into different sets.
+  One set consisting of all red vertices, another of blue, and so forth.
+  This is a <I>partitioning </I>problem. The <I>coloring </I>and <I>partitioning
+ </I>can of course, be performed on edges or vertices of a graph. <BR> <BR>
+
+  Painting all the vertices of a graph with colors such that no two adjacent
+  vertices have the same color is called the <I>proper coloring </I>(or sometimes
+  simply <I>coloring</I>) of a graph. A graph in which every vertex has been
+  assigned a color according to a <I>proper coloring </I>is called a <I>properly
+  colored graph</I>. Usually a given graph can be properly colored in many
+  different ways. The <I>proper coloring </I>which is of interest to us is
+  one that requires the <I>minimum </I>number of colors. <BR> <BR>
+
+  <I>Proper coloring </I>of a given graph is simple enough, but a <I>proper
+  coloring </I>with the <I>minimum </I>number of colors is, in general, a
+  difficult task. <BR> <BR>
+
+  A proper coloring of a graph naturally induces a <I>partitioning </I>of
+  the vertices into different subsets. A set of vertices in a graph is said
+  to be an <I>independent set </I>of vertices or simply an <I>independent
+  set</I> if no two vertices in the set are adjacent. A single vertex in
+  any graph constitutes an <I>independent set</I>. A <I>maximal independent
+  set</I> (or <I>maximal internally stable set</I>) is an independent set
+  to which no other vertex can be added without destroying its independence
+  property. It is well known that some graphs in general, have many <I>maximal
+  independent sets</I>; and they may be of different sizes. Among all <I>maximal
+  independent sets</I>, one with the largest number of vertices is often
+  of particular interest. <BR> <BR>
+
+  Finding <I>a maximal independent set </I>: A reasonable method of finding
+  a <I>maximal independent set </I>in a graph <I>G</I>(<I>V,E</I>) will be
+  to start with any vertex <I>v</I> of <I>G</I>(<I>V,E</I>) in the set. Add
+  more vertices to the set, selecting at each stage a vertex that is not
+  adjacent to any of those already selected. This procedure will ultimately
+  produce <I>a maximal independent set </I>with a largest number of vertices.
+  The following figures explain the coloring of sparse graph using 3 processors
+  with 3 and 4 colors. <BR> 
+ 
+<DIV align="center">
+   <IMG SRC="./non-numerical-comp-images/efficient-twingrf.gif"  HEIGHT=350 WIDTH=360> 
+<BR>
+
+
+     Figure 7.2 (a). Coloring a Grpah using 3 processors &nbsp; &nbsp; &nbsp;
+  
+ 
+     Figure 7.2(b). Coloring a Grpah using 4 processors &nbsp; &nbsp;  
+
+  </Div>
+
+</p>
+
+<!-- *********** Example 7.2 : Parallel program for implementation of Coloring a sparse a graph : Serial Algorithm ******* -->
+ <LI>
+  <B>Serial algorithm </B>
+ </LI>
+
+
+<p align = "justify">
+  Consider the problem of finding a minimal coloring of an undirected
+  graph <I>G =</I>(<I>V,E</I>) in which each vertex is connected to only
+  few other vertices. Serial graph coloring algorithms are often based on
+  graph traversals. Other class of graph coloring algorithms require independent
+  set of computations.<BR> <BR>
+
+<!-- ********* Example 7.2 : Parallel program for implementation of Coloring a sparse a graph : Parallel Algorithm ******* -->
+
+<LI>
+  <B>Parallel algorithm </B>
+</LI>
+
+<p align = "justify">
+  Serial graph coloring algorithms are often based on graph traversals,
+  whereas parallel coloring algorithms are often based on iteratively computing
+  independent set of vertices. Luby's algorithm uses <I>independent </I>set
+  computations to derive message passing programs that performs graph coloring
+  program. <BR> <BR>
+
+  The following figure explains the partition of graph G(V,E) into three
+  subgraphs such that each process has equal number of vertices. We will
+  present one message-passing graph coloring program.&nbsp; Luby's algorithm
+  consists of a number of steps. During the <I>j<SUP>th</SUP></I> steps,
+  the algorithm selects <I>a maximal independent </I>set <I>I<SUB>j</SUB></I>
+  of vertices from the uncolored vertices of <I>G</I>. It then, assigns the
+  color <I>j</I> to the vertices in <I>I<SUB>j </SUB></I>and proceeds to
+  the next phase. Luby's algorithm selects each maximal independent set <I>I<SUB>j</SUB>
+  </I>incrementally by using a randomized algorithm as follows.<BR> <BR>
+</p>
+
+<P align = "Center">
+  <IMG SRC="./non-numerical-comp-images/efficient-cpgrfclr1.gif"  HEIGHT=350 WIDTH=360>
+</p>
+<P align = "Center">
+  <IMG SRC="./non-numerical-comp-images/efficient-cpgrfclro.gif"  HEIGHT=415 WIDTH=360>
+</p>
+
+<p align = "justify">
+  A random number is assigned to each uncolored vertex of <I>G</I>. Now
+   if an uncolored vertices has a random number that is smaller than all of
+  the random numbers of its adjacent uncolored vertices, it is then included
+  in <I>I<SUB>j</SUB></I>. This process is repeated for the vertices of <I>G</I>
+  that are uncolored and not in <I>I<SUB>j</SUB></I> nor adjacent to vertices
+  in <I>I<SUB>j</SUB></I>, <I>I<SUB>j</SUB></I> is augmented similarly. This
+  incremental augmentation of <I>I<SUB>j</SUB></I> ends when no more vertices
+  can be inserted in <I>I<SUB>j.</SUB></I>&nbsp; In particular, the algorithm
+  developed by Luby&nbsp; is often used to drive message-passing programs
+  that perform graph coloring. <BR> <BR>
+
+  The critical step in Luby's algorithm is the one that computes a maximal
+  independent subset of the uncolored vertices. If we develop a message-passing
+  program for this step, then we can just use it repeatedly to obtain the
+  coloring of the graph. Developing such a message-passing program is quite
+  straight-forward. Consider the graph <I>G =</I>(<I>V,E</I>) with <I>n </I>vertices.
+  The graph is distributed among the<I> p</I> processors such that each processor
+  stores <I>n/p </I>vertices and the corresponding adjacency lists. Let us
+  assume that we are in the<I> j<SUP>th </SUP></I>phase of Luby's algorithm
+  and we seek to compute <I>I<SUB>j</SUB></I>. Initially, each processor
+  generates a random number for each locally stored uncolored vertex <I>v</I>.
+  Next, every processor needs to check each such vertex<I> v</I> to determine
+  if its random number is the maximum over the uncolored vertices adjacent
+  to <I>v</I>. This can be done easily if the uncolored vertices are assigned
+  to other processors, then these random numbers need to be communicated.
+  Thus, the message-passing program, before proceeding to determine which
+  vertices can be inserted in the independent set <I>I<SUB>j</SUB></I>, they
+  need to receive the random numbers for all the non-local uncolored vertices
+  that are adjacent subsets of the maximal independent set algorithm.
+</p>
+
+<LI> <B>Remarks</B></LI>
+
+
+<p align = "justify">
+
+  However, even though we can develop a message-passing program that exactly
+  implements Luby's algorithm, this program may not necessarily achieve very
+  high performance. One reason is that this program will perform a lot of
+  communication. In particular, a every time we need to find an <I>independent</I>
+  subset of the uncolored vertices we need to perform multiple incremental
+  augmentations. Every such augmentation sub-step leads to communication
+  for the exchange of the generated random numbers. However, each successive
+  augmentation subsets increases the size of the independent subset only
+  by a small factor. <BR> <BR>
+
+  Experiments with Luby's algorithm has shown that if for example 10%
+  of the vertices are included in <I>I<SUB>j</SUB></I> during the first subsets,
+  a much smaller fraction of the vertices are included in the second subsets,
+  and the number of vertices that are included in subsequent substeps is
+  even smaller. One possible solution is to perform only a single sub-step
+  of the randomized independent subsets algorithm. However, this will undoubtedly
+  increase the number of steps (i.e., independent subsets) required to color
+  the graph; thus, increasing the number of colors. In many applications
+  a coloring with the least number of colors is required making this approach
+  undesirable. <BR> <BR>
+
+  Another limitation of Luby's coloring algorithm compared to serial coloring
+  algorithm is that it requires multiple traversals of the graph. The number
+  of traversals are on the average half the number of colors in the graph. 
+  Thus, even if communication overheads are zero, the speedup achieved
+  by Luby's will be quite poor when compared to serial coloring algorithm
+  that require a single traversal of the graph making this approach undesirable.
+
+</p>
+
+
+<LI> <B> Input </B></LI>
+
+
+<p align = "justify">
+  You are given a graph <I>G</I>(<I>V,E</I>) with<I>V</I> vertices and
+  <I>E </I>edges on processor with <I>task id </I>0. Maximum number of colors
+  available is 16. <BR>
+</p>
+
+<LI> <B>Output </B></LI>
+
+
+<P>
+
+  You should print given graph <I>G</I>(<I>V,E</I>), maximum number of
+  colors required to paint (color) the vertices of graph <I>G</I>, and respective
+  colors for all vertices in the graph G on processor with <I>task id </I>0.</p>
+
+</font>
+
+
+
+<DIV align="right"><a href="non-numerical-comp-mpi.html"><IMG src="../hypack13_images/top.gif" border="0" width="13" height="13"></a></DIV>
+</BLOCKQUOTE></TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ******** Example 7.2 : Parallel program for implementation of Coloring a sparse a graph Ends ********* -->
+
+
+
+<!-- ******* Example 7.3 : Efficient Parallel program for implementation of Coloring a sparse a graph : Starts ***** -->
+
+
+ <A NAME="mpi-color-graph-02""></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+     
+     <b>  Example 7.3:  </b> </td>
+    <td width="800" height="2" align="left">
+     <b>  Write  an  efficient MPI Parallel program for implementation of Coloring a sparse a graph   </b>
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+<table  border="0" >
+<tbody>
+  <tr>
+<td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+<LI> <B>Objective</B> </li>
+
+
+<p align = "justify">
+  You will develop efficient MPI program to color sparse graph <I>G</I>(<I>V</I>,<I>E</I>)
+  with <i> n </i>  vertices on <I>p </I>processors of message passing cluster
+  </p>
+
+<!-- ********* Example 7.3 : MPI program for implementation of Coloring a sparse a graph : Sequential Alg Starts ****** -->
+
+<LI> <B>Sequential algorithm </B> </LI>
+
+
+<p align = "justify">
+  Consider the problem of finding a minimal coloring of an undirected
+  graph <I>G =</I>(<I>V,E</I>)<I> </I>in which each vertex is connected to
+  only few other vertices. <BR> <BR>
+
+<p align = "justify">
+  Serial graph coloring algorithms are often based on graph traversals,
+  whereas parallel coloring algorithms are often based on iteratively computing
+  <I>independent </I>set of vertices.<BR> <BR>
+
+
+   Luby's algorithm uses <I>independent </I>set computations to derive
+   message passing programs that performs graph coloring program. We will
+   present one message-passing graph coloring program.&nbsp; The following
+   figure explains the partition of graph <I>G</I>(<I>V</I>,<I>E</I>) into
+   three subgraphs mapped onto three processors such that each processor has
+   equal number of vertices, using three colors to color the graph. Luby's
+   algorithm consists of a number of steps. During the <I>j<SUP>th</SUP></I>
+   steps, the algorithm selects <I>a maximal independent </I>set <I>I<SUB>j</SUB></I>
+   of vertices from the uncolored vertices of <I>G</I>. It then, assigns the
+   color <I>j</I> to the vertices in <I>I<SUB>j </SUB></I>and proceeds to
+   the next phase. Luby's algorithm selects each <I>maximal independent </I>set
+   <I>I<SUB>j</SUB> </I>incrementally by using a <I>randomized </I>algorithm.
+   The details are explained in    <a href="./non-numerical-comp-mpi.html#mpi-color-graph-01">
+
+<font size =2 type = "verdana" color = "blue"> previous algorithm. </font> </A>
+</p>
+
+<!-- ***** Example 7.3 : Efficient Parallel program for implementation of Coloring a sparse a graph : Parallel  Alg Starts ***** -->
+
+<LI> <B>Efficient parallel algorithm </B></LI>
+
+
+<p align = "justify">
+  We can develop a coloring algorithm that uses some of the ideas in Luby's
+  algorithm, but can achieve high performance and is particularly suited
+  for message-passing programming. Consider the graph <I>G =</I>(<I>V,E</I>)<I>
+  </I>with <I>n</I> vertices. The graph is distributed among the<I> p</I>
+  processors such that each processor stores <I>n/p </I>vertices and the
+  corresponding adjacency lists. <BR> <BR>
+
+  Let us assume that we are in the<I> j<SUP>th </SUP></I>phase of Luby's
+  algorithm and we seek to compute <I>I<SUB>j</SUB></I>. Initially, each
+  processor generates a random number for each locally stored uncolored vertex
+  <I>v</I>. Next, every processor needs to check each such vertex<I> v</I>
+  to determine if its random number is the maximum over the uncolored vertices
+  adjacent to <I>v</I>. This can be done easily if the uncolored vertices
+  are assigned to other processors, then these random numbers need to be
+  communicated. Thus, the message-passing program, before proceeding to determine
+  which vertices can be inserted in the <I>independent set I<SUB>j</SUB></I>,
+  they need to receive the random numbers for all the non-local uncolored
+  vertices that are adjacent to locally stored vertices. This exchange of
+  random numbers must happen in every iterative argumentation substep of
+  the maximal independent serial algorithm.<BR><BR>
+
+  Let <I>V<SUB>i</SUB> </I>be the set of vertices assigned to processor
+  <I>P<SUB>i</SUB></I>. A vertex <I>v = V<SUB>i</SUB></I> is called an <I>interior
+  </I>vertex if all the vertices adjacent to <I>v</I> are also stored in
+  processor <I>P<SUB>i</SUB></I>. A vertex <I>v = V<SUB>i</SUB></I> is called
+  an <I>boundary vertex</I> if at least one of its adjacent vertices is stored
+  in a different processor. Let<I>V<SUB>i</SUB><SUP>I</SUP></I>be the subset
+  of <I>V<SUB>i </SUB></I>that contain all the <I>interior&nbsp; </I>vertices
+  and let <I>V<SUB>i</SUB><SUP>B </SUP></I>be the subset of <I>V<SUB>i </SUB></I>that
+  contain all the <I>boundary</I> vertices. The new coloring algorithm consists
+  of two phases. In the first phase, we compute a coloring of all the <I>interior&nbsp;
+  </I>vertices and a coloring of the <I>boundary vertices</I> in the second phase. <BR> <BR>
+
+
+<p align = "justify">
+  During the first phase, since none of the <I>interior </I>vertices stored
+  at different processors are connected together (by definition of&nbsp;
+  the <I>interior </I>vertices), each processor can color its interior vertices
+  <I>independent</I> of the other processors. This can be done by using an
+  efficient serial coloring algorithm. During the second phase, the <I>boundary
+  </I>vertices are colored using ideas borrowed from Luby's algorithm. In
+  particular, this coloring is done in a number of steps. In each step we
+  select an independent subset of vertices by performing a single substep
+  of Luby's <I>randomized </I>algorithm. Let <I>I<SUB>j</SUB> </I>be the
+  <I>independent </I>subset of vertices selected in the <I>j<SUP>th</SUP></I>
+  step. The vertices in <I>I<SUB>j</SUB></I> are colored by assigning to
+  each vertex the smallest consistent color. That is, for each vertex <I>v
+ 
+  &nbsp;<IMG SRC="./non-numerical-comp-images/dijkstra-epsilon10.gif" HEIGHT=14 WIDTH=13>
+
+  I<SUB>j</SUB></I> we determined the smallest color that is not used by
+  any of the vertices adjacent to <I>v </I>that are already colored and assign
+  this color to <I>v</I>. Thus, unlike Luby's algorithm, vertices in <I>I<SUB>j</SUB></I>
+  can be potentially assigned different colors. The number of communication
+  steps in this algorithm is smaller than those in Luby's algorithm because
+  we do not compute <I>maximal independent </I>subsets. However, the number
+  of distinct colors in the graph is not necessarily greater, because we
+  color the <I>interior </I>vertices using a serial algorithm, the new algorithm
+  needs to perform multiple traversals of only the <I>boundary </I>vertices.
+  This improves the overall performance of the parallel coloring algorithm. <BR> <BR>
+
+
+  A message-passing program for this new algorithm needs to perform communication
+  during the coloring of the <I>boundary </I>vertices. In particular, every
+  processor needs to <I>receive </I>the random numbers of the vertices that
+  are adjacent to its <I>boundary </I>vertices, and to <I>send </I>the random
+  numbers of its <I>boundary </I>vertices to the required processors. The
+  exact communication pattern of this data exchange depends on how the graph
+  is distributed among the processors. As it was the case with the sparse
+  matrix-vector multiplication program this requires a communication setup
+  phase, in which each processor determines where and what random numbers
+  it needs to <I>send </I>and to <I>receive </I> <BR> <BR>
+
+<!-- ******** Example 7.3 : Efficient Parallel program for implementation of Coloring a sparse a graph : Data Structure ******* -->
+
+<li> <B>Details of CommInfoType data structure</B> </li>
+
+<p align = "justify">
+  In our message passing graph coloring program we use a data structure
+  <I>CommInfoType </I>similar to the one used by the 
+
+  <A HREF = "./matrix-vector-matrix-comp-mpi.html#matcomp-id13"> 
+
+<font size =2 type = "verdana" color = "blue"> 
+sparse matrix-vector multiplication algorithm  </font></A>
+
+  to store this communication pattern. Like the
+  structure of the sparse matrix which differs from instance to instance,
+  the structure of the sparse graph also differs and its pattern of data
+  transfer among processors has to be determined during the execution of
+  the program. For such programs, each processor first determines with which
+  processors it needs to communicate and what elements it needs to <I>send</I>
+  and <I>receive</I>. It then uses this information to perform the actual
+  data transfers and finally proceeds to compute the matrix-vector product
+  corresponding to the locally stored rows of the matrix. Here, we
+  develop <I>CommInterfaceValues </I>a communication module which performs
+  the required communication, so that each processor has the entries of the
+  that are needed to perform graph coloring algorithm. Each processor uses
+  the 
+<A HREF = "./matrix-vector-matrix-comp-mpi.html#matcomp-id13"> 
+<I>
+
+<font size =2 type = "verdana" color = "blue"> 
+CommInfoType  </font> </I> </A>
+  data structure to store information about its communication
+  pattern explained below. <BR> <BR>
+
+</p>
+<p align = "justify">
+
+   &nbsp;&nbsp; typedef struct&nbsp;
+
+  <BR>&nbsp;&nbsp; { int nsnbrs, *spes;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int nrnbrs, *rpes;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *sendptr, *recvptr;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *sendind, *recvind;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double *sendbuf, *recvbuf&nbsp;
+  <BR>&nbsp;&nbsp; } <I>CommInfoType;</I>&nbsp;
+</p>
+
+<p align = "justify">
+  The variable nsnbrs and <I>nrnbrs</I> store the number of processors
+  that this processor needs to <I>send</I> and to <I>receive</I> data, respectively.We
+  can think of these processors as being the neighboring processors. The
+  actual ranks of these processors is stored in the arrays <I>spes</I> and
+  <I>rpes</I> for the sendind and receiving processors, respectively. The
+  array <I>spes</I> is of the size <I>nsnbrs</I>, and the array <I>rpes</I>
+  is of size <I>nrnbrs</I>. The array <I>sendptr</I> and <I>sendind</I> store
+  the elements of the <I>b</I> vector to be sent to each processor. In particular,
+  the indices of the elements that are sent to the i<SUP>th</SUP> neighboring
+  are stored in sendind starting at location <I>sendptr</I> [<I> I </I>]
+  and ending at location <I>sendptr</I> [<I>I+</I>1] - 1. The array <I>sendptr
+  </I>is of size (<I>nsnbrs+</I>1), and the size of the array <I>sendind</I>
+  is equal to the sum of the number of elements that are sent to all the
+  neighboring processors. The array <I>recvptr</I> and <I>recvind </I>store
+  the elements of the <I>b</I> vector that are received from the neighboring
+  processors. In particular, the indices of the elements that are received
+  from the <I>i<SUP>th</SUP></I> neighboring are stored in <I>recvind</I>
+  starting at location <I>recvptr</I> [<I> I</I>] and ending at location
+  <I>recvptr</I>[<I> I+</I>1]-1.The array <I>recvptr</I> is of size (<I>nrnbrs+</I>1),
+  and the size of the array <I>recvind</I> is equal to the sum of the number
+  of elements that are received from all the neighboring processors. Finally,
+  the array <I>sendbuf</I> and <I>recvbuf</I> are used as buffer to store
+  the element of the <I>b</I> vector that are sent and received. These arrays
+  are of the same size as the corresponding <I>sendid</I> and <I>recvind
+ </I>arrays, respectively. <BR> <BR>
+
+
+  The graph is distributed among the processors such that each processor
+  gets <I>n/p</I> consecutive vertices. In particular, processor <I>P<SUB>i&nbsp;
+  </SUB></I>stores the vertices starting with vertex <I>i * n/p</I> up to
+  (but not including) vertex <I>(i+</I>1<I>)n/p</I>. Each processor stores
+  its local portion of the graph by using two arrays <I>xadj</I> and <I>adjacency</I>.
+  These arrays are similar to corresponding the <I>rowptr</I> and <I>colind</I>
+  arrays, used in the 
+
+ <A HREF = "./matrix-vector-matrix-comp-mpi.html#matcomp-id13">
+<font size =2 type = "verdana" color = "blue"> 
+ compressed storage scheme (CRS  scheme).  </font> </A> 
+
+
+
+That is, the
+  vertices adjacent to vertex <I>i </I>are stored in array <I>adjancy </I>starting
+  at position <I>xadj </I>[<I>i</I>] up to position (but not including) <I>xadj
+  </I>[<I>i+</I>1].&nbsp; By using this storage format we are able to use
+  the same communication setup routine 
+
+ <A HREF = "./matrix-vector-matrix-comp-mpi.html#matcomp-id13">
+  <font size =2 type = "verdana" color = "blue">
+ <I>SetUpCommInfo </I> </font> </A> used by the sparse matrix-vector program.
+</p>
+
+
+<LI> <B>Input </B></LI>
+
+<p align = "justify">
+
+  You are given a graph <I>G</I>(<I>V,E</I>) with <I>V</I> vertices and
+  <I>E</I> edges on processor with process <I>id</I> 0<I> </I>. Maximum number
+  of colors available is 16.&nbsp;</p>
+
+<LI>
+<B> Output </B></LI>
+
+<p align = "justify">
+
+  You should print given graph <I>G</I>(<I>V,E</I>), maximum number of
+  colors required to paint (color) the vertices of graph <I>G</I>(<I>V,E</I>),
+  and respective colors for all vertices in the graph <I>G</I>(<I>V,E</I>)<I>
+  </I>on processor with task<I> id</I> 0<I> </I>.
+</p>
+</font>
+
+<DIV align="right"><a href="non-numerical-comp-mpi.html"><IMG src="./top.gif" border="0" width="13" height="13"></a></DIV>
+</BLOCKQUOTE></TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+
+<!-- ********** Example 7.3 : Efficient Parallel program for implementation of Coloring a sparse a graph :Ends  ******** -->
+
+
+
+<!-- **** Example 7.4 : Parallel program- implementation of  Dijkstra's Single source shortest path Alg :Starts **** -->
+
+
+
+ <A NAME="mpi-color-shortest-path-01""></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+    
+     <b>  Example 7.4:  <BR>   <BR> </b> </td>
+    <td width="800" height="2" align="left">
+     <b>  Write  an  efficient Parallel program for implementation of  Dijkstra's Single source 
+           shortest path Algorithm   </b>
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+ 
+<table  border="0" ><tbody>
+  <tr>
+<td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+<LI> <B>Objective</B> </li>
+
+
+<p align = "justify">
+
+  Parallel Dijkstra's single-source shortest path algorithm <BR> <BR>
+
+  You will develop MPI program to compute the shortest path from a source
+  vertex <I>s </I>to all the other vertices in the graph <I>G=</I>(<I>V,E</I>)
+  using <I>Dijkstra's single-source shortest path </I>algorithm on <I>p </I>processors
+  of message passing clusters.
+</p>
+
+<!-- ***** Example 7.4 : Parallel program- implementation of  Dijkstra's Single source shortest path Alg :Basics ***** -->
+
+<LI> <B>Basics : Minimum Spanning Tree (MST) </B></LI>
+
+<p align = "justify">
+   A <B><I>spanning tree</I></B> of an undirected graph <I>G</I> is a subgraph
+   of <I>G</I> that is a tree containing all the vertices of <I>G</I>. In
+   a weighted graph, the weight of a sub graph is the sum of the weights of
+   the edges in the subgraph. A <B><I>minimum spanning tree</I></B> <B>(MST)</B>  
+   for a weighted undirected graph is a spanning tree with minimum weight.
+   Many problems require finding an <B>MST</B> of an undirected graph. For
+   example, the minimum length of cable necessary to connect a set of computers
+   in a network can be determined by finding the <B>MST</B> of the undirected
+   graph containing all the possible connections. If <I>G</I> is not connected,
+   it cannot have a spanning forest. For simplicity in describing the <B>MST</B>
+   algorithm, we assume that <I>G</I> is connected. If <I>G</I> is not connected,
+   we can find its connected components and apply the <B>MST</B> algorithm
+   on them. Alternatively, we can modify the <B>MST</B> algorithm to output
+   a <I>minimum spanning forest.</I> <BR> <BR>
+</p>
+
+  <p algin = "Center">
+   <IMG SRC="./non-numerical-comp-images/dijkstra-sptree.gif" HEIGHT=465 WIDTH=360> </p>
+
+<LI> <B>Description of algorithm </B> </LI>
+
+
+<p align = "justify">
+
+  Various algorithms to develop MPI program to compute the shortest path 
+  from a source-vertex <I>s</I> to all the other vertices in the graph <I>G=(V,E)</I>.
+  We describe <I>Prim's algorithm</I> for finding an <B>MST </B>and <I>Dijkstra's
+  single-source shortest path </I>algorithm. 
+</p>
+
+<!-- ********* Example 7.4 : Parallel program-implementation of Dijkstra's Single source shortest path ; Prim's Algorithm **** -->
+
+<LI> <B>Prim's algorithm </b>  </LI>
+
+
+<p align = "justify">
+  <I>Prim's algorithm</I> for finding an <B>MST </B>is a greedy algorithm.
+   The algorithm begins by selecting an arbitrary starting vertex. It then
+   grows the minimum spanning tree by choosing a new vertex and edge that
+  are guaranteed to be in the minimum spanning tree. The algorithm continues
+  until all the vertices have been selected. <BR> <BR>
+
+   Let <I>G=(V,E,w)</I> be the weighted undirected graph for which the
+   minimum spanning tree is to be found, and let <I>A=(a<SUB>i,j</SUB>)</I>
+   be its weighted adjacency matrix. The algorithm uses the set <I>V<SUB>T</SUB></I>
+   to hold the vertices of the minimum spanning tree during its construction.
+   It also uses an array <I>d</I>[1,....,<I>n</I>] in which, for each vertex
+  <I>v=</I>(<I>V-V<SUB>T</SUB></I>), <I>d</I>[<I>v</I>] holds the weight
+   of the edge with the least weight from any vertex in <I>V<SUB>T </SUB></I>to
+   vertex <I>v</I>. Initially, <I>V<SUB>T</SUB></I> contains an arbitrary
+   vertex <I>r</I> that becomes the <B>root </B>of the <B>MST</B>. Furthermore,
+   <I>d</I>[<I>r</I>]<I>=</I>0, and for all <I>v</I> such that <I>v=</I>(<I>V-V<SUB>T</SUB></I>)<I>,</I>
+   <I>d</I>[<I>v</I>]<I> = w</I>(<I>r,v</I>) if such an edge exists; otherwise
+   <I>d</I>[<I>v</I>]=
+   
+    &nbsp;<IMG SRC="./non-numerical-comp-images/dijkstra-infinity.gif" HEIGHT=10 WIDTH=20>. <BR> <BR>
+
+
+   During each iteration of the algorithm, a new vertex <I>u</I> is added
+   to <I>V<SUB>T&nbsp;</SUB></I>&nbsp; such that <I>d</I>[<I>u</I>]<I>=min</I>{<I>d</I>[<I>v</I>]<I>/v
+   = </I>(<I>V-V<SUB>T</SUB></I>)}. After this vertex is added, all the values
+   of <I>d</I>[<I>v</I>] such that <I>v=</I>(<I>V-V<SUB>T</SUB></I>)<I> </I>are
+   updated because there may now be an edge with a smaller weight between
+   vertex <I>v</I> and the newly added vertex <I>u</I>. The algorithm terminates
+   when <I>V<SUB>T</SUB>=V</I>. The Figure 1. above illustrates the algorithm.
+   Upon termination of <I>Prim's algorithm</I>, the cost of the minimum spanning
+   tree is <I>E<SUB>v=V</SUB>d</I>[<I>v</I>]. In program the body of the while
+   loop (lines 10-13) is executed <I>n-</I>1 times. Both the computation of
+   <I>min</I>{<I>d</I>[<I>v</I>]<I>/v
+
+    &nbsp; =&nbsp; </I>(<I>V-V<SUB>T</SUB></I>)}
+   (line 10), and for loop (lines 12 and 13) execute in&nbsp;
+
+    <IMG SRC="./non-numerical-comp-images/dijkstra-ddelt.gif" HEIGHT=17 WIDTH=19>(<I>n</I>)
+    steps. Thus, the overall complexity of <I>Prim's algorithm</I> is&nbsp;
+   
+    <IMG SRC="./non-numerical-comp-images/dijkstra-ddelt.gif" HEIGHT=17 WIDTH=19>(<I>n<SUP>2</SUP></I>).
+</p>
+
+
+<!-- ******* Example 7.4 : Parallel program- implementation of  Dijkstra's Single source shortest path ; Dijkstra's Algorithm ****** -->
+
+<LI> <B>Single-Source Shortest Paths: Dijkstra's Algorithm</B> </LI>
+
+
+
+<p align = "justify">
+
+  1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>procedure </B>DIJKSTRA_SINGLE_SOURCE_SP(<I>V</I>,
+    <I>E</I>, <I>w</I>, <I>s</I>)&nbsp; <BR>
+
+
+  2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>begin</B>&nbsp; <BR>
+
+
+ 3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>
+   V<SUB>T</SUB></I>:= (<I>s</I>);&nbsp; <BR>
+
+
+ 4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    for all <I>v&nbsp;<IMG SRC="./non-numerical-comp-images/epsilon10.gif" HEIGHT=14 WIDTH=13></I> (<I>V</I>
+   - <I>V<SUB>T</SUB></I>) <B>do</B>&nbsp; <BR>
+
+
+ 5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <B>if</B> (<I>s</I>,<I> v</I>) exists set <I>l</I>[<I>v</I>]:= <I>w</I>(<I>s</I>,
+   <I>v</I>);&nbsp; <BR>
+
+
+ 6. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <B>else</B> set<I> l</I>[<I>v</I>] =&nbsp;<IMG SRC="./non-numerical-comp-images/dijkstra-infinity.gif" HEIGHT=10 WIDTH=20>;&nbsp; <BR>
+
+
+ 7.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <B>while</B> <I>V<SUB>T</SUB></I>&nbsp;<IMG SRC="./non-numerical-comp-images/notequal.gif" HEIGHT=15 WIDTH=20>V
+   <B>do</B>&nbsp; <BR>
+
+
+ 8. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <B>begin&nbsp;</B>&nbsp; <BR>
+
+ 9. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    find a vertex <I>u</I> such that <I>l</I>[<I>u</I>] = min{<I>l</I>[<I>v</I>]|<I>
+    v</I>&nbsp;<IMG SRC="./non-numerical-comp-images/epsilon10.gif" HEIGHT=14 WIDTH=13> (<I>V</I> - <I>V<SUB>T</SUB></I>)};&nbsp; <BR>
+
+ 10. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <I>V<SUB>T</SUB></I>:= <I>V<SUB>T</SUB></I>&nbsp;<IMG SRC="./non-numerical-comp-images/union.gif" HEIGHT=16 WIDTH=13>
+    {<I>u</I>};&nbsp; <BR>
+
+ 11.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <B>for</B> all <I>v</I>&nbsp;<IMG SRC="./non-numerical-comp-images/dijkstra-epsilon10.gif" HEIGHT=14 WIDTH=13>
+    (<I>V</I> - <I>V<SUB>T</SUB></I>) <B>do</B>&nbsp; <BR>
+
+ 12. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <I>l</I>[<I>u</I>] = min{<I>l</I>[<I>v</I>],<I> l</I>[<I>u</I>] + <I>w</I>(<I>u</I>,
+    <I>v</I>)};&nbsp; <BR>
+
+ 13. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <B>endwhile</B>&nbsp;<BR>
+
+ 14. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>end</B> DIJKSTRA_SINGLE_SOURCE_SP
+
+</p>
+
+<p align = "justify">
+   For a weighed graph <I>G=</I>(<I>V,E,w</I>), the <B>single-source shortest
+     paths </B>problem is to find the <B>shortest paths </B>from a vertex <I>v=V</I>
+     to all other vertices in <I>V</I>. A <B>shortest path </B>from <I>u</I>
+    to <I>v</I> is a mimimum-weight path. Depending on the application, edge
+    weights may represent time,&nbsp; cost,&nbsp; penalty,&nbsp; loss, or any
+    other quantity that accumulates additively along a path to be minimized.
+    In the following section, we present <I>Dijkstra's algorithm</I>, which
+     solves the single-source shortest-paths problem on directed graphs with
+    non-negative weights. <BR> <BR>
+
+
+   <I>Dijkstra's algorithm</I>, which finds the shortest paths from a single
+    vertex <I>s</I>, is similar to <I>Prim's minimum spanning tree</I> <I>algorithm</I>.
+    Like <I>Prim's algorithm</I>, it incrementally finds the shortest paths
+    from <I>s</I> to the other vertices of <I>G</I>. It is also greedy, that
+    is, it always chooses an edge to a vertex that appears closest. Comparing
+    this algorithm with <I>Prim's minimum spanning tree algorithm</I>, we see
+    that the two are almost identical. The main difference is that, for each
+   vertex <I>u=</I>(<I>V-V<SUB>T</SUB></I>), <I>Dijkstra's algorithm</I> stores
+   <I>l[u]</I>, the minimum cost to reach vertex <I>u</I> from vertex <I>s
+   </I>by means of vertex in <I>V<SUB>T</SUB></I>; Prim's algorithm stores
+   <I>d</I>[<I>u</I>], the cost of the minimum-cost edge connecting a vertex
+   in <I>V<SUB>T</SUB></I> to <I>u</I>. The run time of <I>Dijkstra's algorithm</I>
+   is
+    &nbsp;<IMG SRC="./non-numerical-comp-images/dijkstra-ddelt.gif" HEIGHT=17 WIDTH=19>(<I>n<SUP>2</SUP></I>).
+</p>
+
+
+<!-- ******** Example 7.4 :  implementation of  Dijkstra's Single source shortest path ; Parallel formulation - Dijkstra's Algorithm ****** -->
+
+<LI> <B>Parallel formulation </B></LI>
+
+
+<p align = "justify">
+  The parallel formulation of <I>Dijkstra's </I>single-source shortest
+   paths algorithm is very similar to the parallel formulation of <I>Prim's
+   algorithm</I> <I>for minimum spanning trees</I>. The weighted adjacency
+   matrix is partitioned using the block- striped mapping. Each of the <I>p</I>
+   processors is assigned <I>n/p</I> consecutive columns of the weighted adjacency
+   matrix, and computes <I>n/p</I> values of the array l.&nbsp; During each
+   iteration, all processors perform computation and communication of <I>Prim's
+   algorithm</I>. <BR> <BR>
+
+   In this, message-passing program uses collective communication operations
+   will compute the shortest paths from a source-vertex s to all the other
+   vertices in the graph, using <I>Dijkstra's </I>single-source shortest-path
+   algorithm. <I>Dijkstra's algorithm</I> incrementally finds the shortest
+   paths from <I>s </I>to the other vertices inthe graph <I>G=</I>(<I>V,E</I>).
+   At any given time, the vertices <I>V</I> of the graph are partitioned into
+   two sets <I>V<SUB>c </SUB></I>and <I>V<SUB>o</SUB></I>. The set <I>V<SUB>c</SUB>
+   </I>contains the vertices whose shortest path from <I>s </I>has already
+   been computed (closed set) and the set <I>V<SUB>o </SUB></I>contains the
+   remaining vertices (open set). For each vertex<I> v</I> in <I>V<SUB>o</SUB></I>,
+   the algorithm stores the cost of shortest path <I>d</I>[<I>v</I>] from<I>
+   s</I> to <I>v</I> via only the vertices in <I>V<SUB>c.</SUB></I> In each
+   iteration of the algorithm, vertex <I>v</I> from <I>V<SUB>o</SUB></I> is
+   selected such that it has the smallest <I>d</I>[<I>v</I>] value, and is
+   moved to <I>V<SUB>c</SUB></I>. Then, the shortest-path of the remaining
+   vertices in <I>V<SUB>o</SUB></I> are updated to reflect the inclusion of
+   <I>v</I> in <I>V<SUB>c</SUB></I>. At the beginning of the computation,
+   only vertex<I> s</I> belongs in <I>V<SUB>c </SUB></I>, and the algorithm
+   requires a total of <I>V</I>-1 iterations to compute all the shortest paths. <BR> <BR>
+
+
+   A parallel version of <I>Dijkstra's algorithm</I> can be devised by
+   performing in parallel both the selection of the vertex to be included
+   in <I>V<SUB>c </SUB></I>as well as the update of the shortest paths. On
+   a disributed-memory parallel computer, the weighted adjacency-matrix of
+   the graph <I>W</I> is distributed among the processor using a one-dimensional
+   distribution along the columns. That is,&nbsp; each one of the <I>p</I>
+   processors gets <I>n/p</I> columns of <I>G</I> where <I>n</I> is the number
+   of vertices. Also, every processor stores the corresponding part of the
+   distance array<I> d</I>. That is,&nbsp; if a processor stores the columns
+   ranging from <I>W</I>(<I>*, i</I>) <I>to W</I>(<I>*,&nbsp; j</I>), it will
+   also store the distances for the vertices in the range of <I>v<SUB>i</SUB></I>
+   to <I>v<SUB>j</SUB></I>. Our MPI program for <I>Dijkstra's</I> <I>algorithm</I>
+   assigns <I>n/p</I> consecutive columns of <I>W</I> to each processor. Note
+    though that in each iteration, it uses the <I>MPI_MINLOC</I> reduction
+   operation to select the vetex <I>v</I> to be included in <I>V<SUB>c</SUB></I>.
+</p>
+
+
+<LI> <B>Remarks</B></LI>
+
+
+<p align = "justify">
+  Recall that the <I>MPI_MINLOC</I> operation, for the pairs (<I>a, i</I>)
+  and (<I>a, j</I>) it will return the one that has the smaller index (since
+  both of them have the same value). Consequently, among the vertices that
+  are equal close to the source vertex, it favors the smaller vertices. This
+  may lead to load imbalance problems, especially when a lot of vertices
+  in <I>V<SUB>o</SUB></I> are at the same minimum distance from the source.
+  In particular, vertices stored in lower-ranked processes will tend to be
+  moved in <I>V<SUB>c </SUB></I>, as opposed to those stored in higher-ranked
+  processes. Since, both finding the minimum-distance vertex as well as computing
+  the updated distances involve only vertices in <I>V<SUB>o </SUB></I>, the
+  higher-ranked processes may end-up having more vertices in <I>V<SUB>o </SUB></I>than
+  the lower-ranked vertices. <BR> <BR>
+
+  One way of correcting this problem is to distribute the columns of <I>w</I>
+  in a <I>cyclic distribution</I>. In this distribution process <I>i</I>
+  gets every <I>p<SUP>th</SUP></I> vertex starting from vertex <I>i</I>.
+  This scheme also assigns <I>n/p</I> vertices to each process but these
+  vertices have indices that span almost the entore graph. Consequently,
+  the preference given to lower-numbered vertices by <I>MPI_MINLOC</I> does
+  not lead to load-imbalance problems.
+</p>
+
+
+<LI> <B>Input </B></LI>
+
+
+<p align = "justify">
+   You are given a graph <I>G</I>(<I>V,E,w</I>)<I> </I>with <I>n </I>(<I>=V</I>)
+   vertices, and <I>E </I>edges with suitable weights <I>w</I> on processor
+  with task<I>id</I> 0 and source-vertex <I>s</I>.
+</p>
+
+
+<LI> <B>Output </B></LI>
+
+
+<p align = "justify">
+
+  You should print given graph <I>G</I>(<I>V,E,w</I>) , and the cost of
+  the shortest path from a source-vertex <I>s </I>to all other vertices in
+  the graph <I>G = </I>(<I>V,E</I>)<I> </I>on processor with task <I>id</I>  0. </p>
+
+</font>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+</TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ********** Example 7.4 : Parallel program- implementation of  Dijkstra's Single source shortest path ; Dijkstra's Algorithm Ends ****** -->
+
+
+
+
+
+</TD></TR>
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+   
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

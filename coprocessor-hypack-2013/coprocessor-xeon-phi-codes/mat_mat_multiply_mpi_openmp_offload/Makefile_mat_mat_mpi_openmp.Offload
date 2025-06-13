@@ -1,0 +1,37 @@
+#
+#               C-DAC Tech Workshop : hyPACK-2013
+#                        October 15-18, 2013
+#
+#   Created   : August 2013 
+#
+#   E-mail    : hpcfte@cdac.in
+#
+#
+
+CC   = mpiicc
+
+CCFLAGS    = -openmp -offload-build -std=c99 -vec-report3 -Wno-unknown-pragmas 
+OPTFLAGS   = -O3
+
+#LIBS       = -L/opt/intel/lib/mic 
+LIBS       = 
+EXECS      = run
+#---------------------------------------------------------------------
+#               Object files ...
+#---------------------------------------------------------------------
+
+
+OBJECTS = matrix-matrix-multiply-mpi-openmp-offload.c
+#OBJECTS = matrix-matrix-multiply-mic-mpi-openmp-clang.c
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl 
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run
+
+

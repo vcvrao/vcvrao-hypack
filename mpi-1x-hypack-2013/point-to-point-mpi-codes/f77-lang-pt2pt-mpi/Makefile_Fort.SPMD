@@ -1,0 +1,53 @@
+#
+# *******************************************************************
+#
+#	C-DAC Tech Workshop : hyPACK-2013
+#              October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+# *******************************************************************
+#
+ALL: default
+##### User configurable options #####
+
+SHELL     = /bin/sh
+ARCH      = 
+COMM      = 
+
+F77        = mpif77
+
+OPTFLAGS   =
+
+### End User configurable options ###
+
+default: all
+
+all     : run
+
+#For DAY-1 examples only 
+#OBJECTS = hello_world.o
+#OBJECTS = sum_pt_to_pt.o
+#OBJECTS =  sum_linear_array_topology.o 
+#OBJECTS = sum_ring_topology.o
+#OBJECTS = sum_associative_fanin_blocking_tree.o
+#OBJECTS = sum_associative_fanin_nonblocking_tree.o
+#OBJECTS = pie_pt_to_pt.o
+#OBJECTS = reduce.o
+#OBJECTS = scatter.o
+#OBJECTS = allgather.o
+#OBJECTS = pie_collective.o
+#OBJECTS = diag_comm.o
+OBJECTS = prefix_sum.o
+
+run:clean $(OBJECTS)
+	$(F77) -o run $(OBJECTS) 
+
+.f.o:
+	$(F77) -c $<
+
+	
+clean: 
+	\rm -f *.o run
+

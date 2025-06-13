@@ -1,0 +1,4603 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../../hypack13-mode04-gpgpu-lab-overview.html">
+                  &#149; Mode-4 GPGPUs </A>
+                  
+	          <!-- ** -->
+                  <A class=menulslct
+                    href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                    &#149;  NVIDIA - CUDA/OpenCL</A>
+                  <!-- ** -->
+              
+	       <A class=menul  
+                  href="./../../hypack13-mode04-gpgpu-amd-opencl.html">
+                  &#149; AMD APP  OpenCL </A>
+                             
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-opencl.html">
+                   &#149; GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-power-perf.html">
+                   &#149; GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../../index.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>     hyPACK-2013 Mode-2 : GPU Comp. CUDA enabled NVIDIA GPU Prog.  </b> </font></DIV> </TD> </TR> 
+
+
+
+  <tr>
+  <td height="24" align="left" >
+ <P align=justify><span  class="content">
+
+NVIDIA's
+Compute Unified Device Architecture (CUDA) is a soft-
+ware platform for massively parallel high-performance
+computing on the company's powerful GPUs.  NVIDIA's  software 
+
+CUDA Programming model automatically manages the threads and it is significantly differs from single 
+threaded CPU code and to some extent even the parallel code.  Efficient CUDA programs exploit both 
+thread parallelism within a thread block and coarser block parallelism across thread blocks. Because only 
+threads within the same block can cooperate via shared memory and thread synchronization, programmers 
+must partition computation into multiple blocks. <BR> <BR>
+
+
+An easy interface to determine the information <I>  such as to find mechanism for determining 
+which devices (if any) are present and what capabilities  each device supports  </i>is provided.
+
+
+
+First, to get count of how many CUDA devices in the system are built on CUDA Architectture
+call the API 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>.
+
+After calling  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>,
+then iterate through the  devices  and query relevant  information about each device.
+
+The CUDA runtime returns device properties  in a structure of type 
+ 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>.
+As of CUDA 3.0 &amp; CUDA 4.0, the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+structure contains the necessary  information and
+
+most of the information in  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+is self explanatory and commonly used CUDA device properties.  
+ </p></span>
+
+
+<div align = "center">
+<I> struct </i> 
+ <a href="#hetr-cuda-prog-device-structure">
+    <font size="2" face="Arial" color="blue">
+       <b>   cudaDeviceProp </b> 
+    </font> 
+ </a> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<a href="#hetr-cuda-prog-device-properties">
+         <font size="2" face="Arial" color="blue"> <b> CUDA Device Properies</b></font> </a>
+</div>
+
+
+
+ <P align=justify><span  class="content">
+In all the programs, 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> CUDA_SAFE_CALL() </b></font>
+that surrounds CUDA API calls is a utility macro that we have provided as part of  
+Hands-on codes. It simply detects that the call has retuned an error,  prints the associated
+error message, and exists the appliation with  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> ERROR FAILURE</b></font>
+code.
+
+
+
+</span> </p>
+</td>
+ </tr> 
+</tbody>
+</table>
+
+	<!-- *************** Table for Listing of Programs Starts  ****************** -->
+
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+<p align= "left"> <span class = "content">  
+
+<font size="2" face="Arial" color="red"> <b> List of  Programs </b> </font>  </span> </p>
+
+
+ 
+
+ <!-- ............. Single -GPU Starts ************ -->
+
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+   <font size="2" face="Arial" color="red"> <B>     Programs on Single GPU   </b>
+</font>
+</DIV> 
+
+<BR>
+
+
+ <!--************* Example 1.1 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id11">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      
+         Write a CUDA program to compute  Vector - Vector addition
+      
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.1 : ends ***************** -->
+
+
+ <!--************* Example 1.2 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id12">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      
+         Write a CUDA program to compute  Matrix - Matrix addition
+      
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.2 : ends ***************** -->
+
+
+
+
+ <!--************* Example 1.3 : starts ******************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id13">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write a CUDA Program to compute vector - Vector multiplication. 
+       </span> 
+     </td>
+
+   </tr>
+ <!--************ Example 1.3 : ends ***************** -->
+
+
+
+ <!-- ************* Example 1.4 : starts ************ -->
+    <tr>
+     
+<td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id14">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 </b> </font> <BR>  
+       </a>  
+      </td>
+ 
+      <td width="700" height="2" valign="top">
+     
+         Write a CUDA Program to find prefix sum of a given array. 
+   
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.4 : ends **************** -->
+
+
+ <!--************* Example 1.5 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id15">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      
+         Write a CUDA program to find transpose of a matrix.
+      
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.5: ends ***************** -->
+
+ <!--*********** Example 1.6 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id16">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write a CUDA Program to calculate value of PI using numerical integration method.
+       </span> 
+     </td>
+
+   </tr>
+ <!-- **************** Example 1.6 : ends ****************** -->
+
+
+
+
+ <!-- **************** Example 1.7 : starts ************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id17">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.7 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      
+         Write a CUDA Program to find infinity norm of a matrix.
+       
+     </td>
+
+   </tr>
+ <!--************ Example 1.7 : ends ************* -->
+
+
+
+
+ <!-- ************ Example 1.8 : starts ************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id18">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.8 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+         <span class = "content">
+         Write a CUDA Program for Matrix Vector multiplication   
+      </span> 
+     </td>
+
+   </tr>
+ <!-- *************** Example 1.8 : ends ***************** -->
+
+<!-- *************** Example 1.9 : starts ****************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id19">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.9 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write a CUDA Program for Matrix Matrix multiplicationbased on tiling Partitioning
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 1.9 : ends ************ -->
+
+
+
+ 
+<!--*********** Example 1.110 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id110">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.10 </b> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top"> 
+         <span class = "content">
+         Write a  CUDA Program for  implement solution of matrix system of linear 
+      equations Ax=b by Jacobi method.
+
+       </span> 
+     </td>
+
+   </tr>
+ <!-- **************** Example 1.10 : ends ****************** -->
+
+<!-- *************** Example 1.11 : starts ****************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id111">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.11 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top"> 
+       <span class = "content">
+         Write a CUDA program to implement the  soluiton of Matrix system of Linear Equations 
+            <B> AX=b </b>  by Conjugate Gradient method (Iterative Method). 
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 1.11 : ends ************ -->
+
+
+<!-- *************** Example 1.12: starts ****************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id112">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.12 </b> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <span class = "content">
+         Write a  CUDA program on sparse matrix multiplication of size n x n and vector of size n.(Assignment)
+        </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 1.12 : ends ************ -->
+
+<TR>
+<TD> </TD>
+<TD>
+
+ <DIV ALIGN=right>
+        <A href ="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+        </DIV>
+        </DIV><br>
+</td>
+</tr>
+ <!--************** bullet for going to top of the page : ends *****************-->
+
+
+
+</TBODY> 
+</TABLE> 
+
+
+ <!-- ............. Multi-GPU Starts ************ -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+<p align= "left"> <span class = "content">  
+<tr>
+
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+   <font size="2" face="Arial" color="red"> <B>     Programs on Multipe GPU   </b> 
+</font>
+</DIV> 
+
+
+ <!--************* Example 1.13 : starts ******************* -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id113">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.13 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write a CUDA Program to compute vector - vector multiplication on Multi-GPU 
+       </span> 
+     </td>
+
+   </tr>
+ <!--************ Example 1.13 : ends ***************** -->
+
+
+<!-- *************** Example 1.14 : starts ****************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id114">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.14 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+   
+   Write a CUDA Program for Matrix Matrix multiplication on   Multi-GPU
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 1.14 : ends ************ -->
+
+
+
+<!-- *************** Example 1.15 : starts ****************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id115">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.15 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+   
+   Write a CUDA Program for Vector Vector  multiplication using CUBLAS Libraries on Multi-GPU
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 1.15 : ends ************ -->
+
+
+<!-- *************** Example 1.16 : starts ****************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id116">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.16 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+   
+   Write a CUDA Program for Matrix Matrix multiplication using CUBLAS Libraries on Multi-GPU
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 1.16 : ends ************ -->
+
+
+<!-- ************ bullet for going to top of the page : starts *************** -->
+
+<TR>
+<TD> </TD>
+<TD>
+
+ <DIV ALIGN=right>
+        <A href ="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+        </DIV>
+        </DIV><br>
+</td>
+</tr>
+ 
+
+<BR>
+
+</TBODY> 
+</TABLE> 
+
+<HR>
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<TABLE cellPadding=3 width = " 100% "  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+  <DIV align=Left>
+ <font size="2"  Color="black" face= "verdana">
+    <B>   CUDA  Programs for Numerical  Computaions  </b> </font></DIV> 
+</TD> 
+</TR> 
+</TBODY>
+ </TABLE> 
+
+<BR>
+
+
+<!-- ********************** Make file  starts *********************** -->
+
+
+<table border="0" height="6">
+<tbody>
+
+<Br>
+
+    <tr>
+     <td width="15%" height="2" align="left">
+     
+      <b>  <font color = "red"> Makefile  </font>  </b> </td>
+  
+    <td width="85%" height="2" align="left">
+      To Compile the program 
+
+ 
+
+ <!-- **************** download  Starts here **************** -->
+(Download source code : 
+<I>
+ 
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/Makefile">
+  <font color ="blue">Makefile</font> </a> </i>)
+
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+<br>
+<!-- ********************** Make file  ends *********************** -->
+
+
+
+<!-- **************************** example 1.1 starts ******************************** -->
+
+<a name="cuda-prog-number-id11"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+      <tr>
+     <td width="15%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.1:  </font>  </b> </td>
+    <td width="85%" height="2" valign="top">
+    Write a CUDA Program to Compute  Vector Vector Addition based on global /shared memory. 
+
+ 
+ <!-- **************** download  Starts here ******************* -->
+<BR> 
+(Download source code : <BR> 
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-vector-vector-addition_GlobalMemory.cu">
+  <font color ="blue">cuda-vector-vector-addition_GlobalMemory.cu </font> </a> </I>) <BR>
+
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-vector-vector-addition_SharedMemory.cu">
+  <font color ="blue">cuda-vector-vector-addition_SharedMemory.cu </font> </a> </I>) <BR>
+
+
+ <BR>
+
+
+
+
+<!-- ******************** download  Ends here ****************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to Compute Vector Vector Addition<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+The input vectors are generated on host-CPU and transfer the vectors to device-GPU for vector 
+vector vector addition. 
+A simple kernel based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+Each thread performs partial  addition  of two vectors and the 
+final  resultant  value is generated on <B> device-GPU </b> and transfered to  <b> host-CPU</b>.
+</P>
+</LI>
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+ <B> Important Steps   : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+    
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host-CPU and device-GPU  : </i> <BR>  
+		Allocate memory for  two input vectors and  resultant vector  on
+               host-CPU &amp;  device-GPU <BR> 
+               Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+              <I> cudaMalloc(void** array, int size)  </font>  </i> 
+                
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Input data Generation : </i> <BR>
+		Fill the input vector with single/double precision real values using 
+                randomized data as per input specification<BR>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer  data from host-CPU to device-GPU: </i> <BR>
+		Transfer  the host-CPU vector to device-GPU to perform computation  <BR> 
+           Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+      <I> cudaMemcpy((void*)device_array, (void*)host_array, size , cudaMemcpyHostToDevice )  </font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+   <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Launch Kernel : </i> <BR>		
+                  Define the dimensions for Grid and Block on host-CPU and launch the kernel for execution 
+                  on device-GPU. <BR>
+                  Computation on device is performed for vector vector addition </font>
+           </td> 
+      </tr>
+  
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer the result from device-GPU to host-CPU : </i> <BR>		
+                  Copy resultant vector to host-CPU from device-GPU. <BR> 
+            Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+  <I> cudaMemcpy((void*)host_array, (void*)device_array, size , cudaMemcpyDeviceToHost)</font> </i> <BR>
+              </font>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of the result on host-CPU </i> <BR>		
+                  Compute vector-vector addition on host-CPU and Compare CPU &amp; GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Free the memory  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+              Use  <font size = 2, face = " Courier New " color ="#FF00FF" > 
+                 <I>  cudaFree(void* array</font>)  </i> <BR> </font>
+           </td> 
+      </tr>
+</tbody>
+</table>
+
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> vector size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+ </p>
+<br>
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- *********************************** example 1.1 ends ***************************** -->
+
+
+
+<!-- **************************** example 1.2 starts ******************************** -->
+
+<a name="cuda-prog-number-id12"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+      <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.2:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+    Write a CUDA Program to Compute  Matrix Matrix  Addition based on global /shared memory. 
+
+ 
+ <!-- **************** download  Starts here ******************* -->
+<BR> 
+(Download source code : <BR> 
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-matrix-matrix-addition.cu">
+  <font color ="blue">cuda-matrix-matrix-addition.cu </font> </a> </I>) <BR>
+
+ <BR>
+
+
+<!-- ******************** download  Ends here ****************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to compute Matrix Matrix Addition.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+The input matices are generated on host-CPU and transfer the matrices to device-GPU to perform
+matrix matrix  multiplication. 
+A simple kernel based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+Each thread using its threadId performs addition using one element from each matrix and the 
+final  resultant  value is generated on <B> device-GPU </b> and transfered to  <b> host-GPU</b>.
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> matrix size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved </p>
+<br>
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- *********************************** example 1.2 ends ***************************** -->
+
+
+
+
+<!-- **************************** example 1.3 starts ******************************** -->
+
+<a name="cuda-prog-number-id13"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+      <tr>
+     <td width="15%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.3:  </font>  </b> </td>
+    <td width="85%" height="2" valign="top">
+    Write a CUDA Program to Compute  Vector Vector Multiplication based on global /shared memory. 
+
+ 
+ <!-- **************** download  Starts here ******************* -->
+<BR> 
+(Download source code : <BR> 
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-vector-vector-multiplication_GlobalMemory.cu">
+  <font color ="blue">cuda-vector-vector-multiplication_GlobalMemory.cu </font> </a> </I>) <BR>
+
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-vector-vector-multiplication_SharedMemory.cu">
+  <font color ="blue">cuda-vector-vector-multiplication_SharedMemory.cu </font> </a> </I>) <BR>
+
+ <BR>
+
+
+<!-- ******************** download  Ends here ****************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to compute Vector Vector Multiplication.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+The input vectors are generated on host-CPU and transfer the vectors to device-GPU for vector 
+vector vector multiplication. 
+A simple kernel based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+Each thread performs partial  multiplication  of two vectors and the 
+final  resultant  value is generated on <B> device-GPU </b> and transfered to  <b> host-GPU</b>.
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Vector Size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+</p>
+<br>
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- *********************************** example 1.4 ends ***************************** -->
+
+
+<!-- ******************* example 1.4 starts *********************************** -->
+
+<a name="cuda-prog-number-id14"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+       <tr>
+     <td width="20%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.4:  </font>  </b> </td>
+    <td width="80%" height="2" valign="top">
+      Write a CUDA Program to find prefix sum of an given array 
+
+ 
+ <!-- *************** download  Starts here ****************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-prefix-sum.cu">
+ <font color ="blue">
+  cuda-prefix-sum.cu) </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!-- ********************* download  Ends here ***************** -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA program to find prefix sum of an given array.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+This is simple program which  computes prefix sum of an given array element.
+Prefix sum of an element of an array is defined by summation of all the element processed this element and the current element. The input array is generated on <B> host-CPU </b> and the 
+Each  thread  performs summation of current element with previous element of an array.
+. The output array is 
+generated on the <B> device-GPU</b> and transfer back to <B> host-CPU</b>
+
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Vector Size </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+
+
+</p>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************** example 1.4 ends ********************************** -->
+
+
+<!-- ********************** example 1.5 starts *********************** -->
+
+<a name="cuda-prog-number-id15"> </a>
+<BR> 
+
+
+<table border="0" height="6">
+<tbody>
+
+   
+   <tr>
+     <td width="20%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.5:</font>  </b> </td>
+    <td width="80%" height="2" valign="top">
+      Write CUDA a program to find transpose of a matrix. 
+
+ 
+ <!-- **************** download  Starts here **************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-transpose-matrix.cu">
+  <font color ="blue"> cuda-transpose-matrix.cu </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<P>  Write a program using CUDA to find out transpose of matrix.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+The input matrix is generated on the <b> Host-CPU </b> and  transfer to <B> Device-GPU</b>. A 
+simple kernel function is written on GPU which generates the out-put matrix on the <B> Device-GPU</b>
+and transfer back to <B> Host-CPU </b>. The <i> maxNumThread </i> is used for computations.
+ 
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> matrix size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+
+<p> execution time in seconds
+
+
+</p>
+
+
+<p>
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<br></p>
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* example 1.5 ends **************************** -->
+
+
+<!-- ******************** example 1.6 starts ***************************** -->
+
+<a name="cuda-prog-number-id16"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+       <tr>
+     <td width="15%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.6:  </font>  </b> </td>
+    <td width="85%" height="2" valign="top">
+     Write a CUDA Program to calculate value of PI using numerical integration method
+
+ 
+ <!-- ********************* download  Starts here *********** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-PI-computation.cu">
+  <font color ="blue"> cuda-PI-computation.cu)
+  </font>
+  </a>
+  </I>)
+&nbsp;  &nbsp;
+
+
+<!-- *************** download  Ends here *************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to calculate value of PI using numerical integration method.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+This program computes the value of PI over a given interval using Numerical integration. 
+The main thread distributes the given interval uniformly over the number of threads on CUDA device. 
+Each thread calculates its part of the interval and finally thread 0 will add up all the value 
+claculated by indivitual thread.
+
+Apart from the conventional threading model, in case of cuda program no lock mechanisim is used.
+In place of lock , every thread do its part of calculation and put the final result in a global array 
+cell , which is allocated to this perticular thread only.
+
+After execution of each thread is over , thread 0 is assigned the job to gather all values and produce 
+final result. <BR> <BR>
+
+The Grid of Thread Blocks and a unique thread ID is used to ditribute the required number of 
+intervals for computation of PI value.
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Number intervals
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  Value of PI
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</UL>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************************* example 1.6 ends ********************************* -->
+
+
+<!-- *********************** example 1.7 starts *********************************** -->
+
+<a name="cuda-prog-number-id17"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+      <tr>
+     <td width="20%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.7:</font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+      Write a CUDA program to find infinity norm of a given Matrix 
+
+ 
+ <!-- ***************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-infinity-norm.cu">
+<font color ="blue">
+cuda-infinity-norm.cu </font>
+  </a>
+  </I>)
+&nbsp;  &nbsp;
+
+
+<!-- ******************* download  Ends here ******************** -->
+
+ </td>
+ </tr> 
+ 
+</tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA program to find infinity norm of given matrix.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+Infinity Norm of a Matrix: The Row-Wise infinity norm of a matrix is defined to be the maximum of sums
+ of absolute values of elements in a row, over all rows. After the initial validity checks,
+each thread is assigned a row using its id. If a thread completes its work, and if still there is some 
+row to be operated, that will be assigned to this thread. The process continue till no row left to be
+operated. 
+The thread 0 will find out maximum sum among all sum of all element of every row. <BR> <BR>
+
+The input matrix is generated on the <b> Host-CPU </b> and kernel is executed on Device-GPU in which 
+Grid of thread blocks is used to accumulate the partial sum in an array. The infinity norm is 
+computed using <I> _synchreads()</i>
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> matrix size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************** example 1.7 ends ***************************** -->
+
+
+
+
+
+<!-- ********************* example 1.8 starts ***************************** -->
+
+<a name="cuda-prog-number-id18"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+     <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.8:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+     Write a CUDA Program for  Matrix Vector multiplication. 
+
+ 
+ <!-- ******************* download  Starts here ******************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-matrix-vector-multiplication.cu">
+ <font color ="blue"> cuda-matrix-vector-multiplication.cu) </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!-- ******************** download  Ends here ************** -->
+
+ </td>
+ </tr> 
+ <tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to perform  Matrix Vector multiplication.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+Input matrix and the vector are generated on the <B> Host-CPU</b>. A simple kernel based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+
+Each thread reads one row of the matrix  and performs
+computation with column of the vector to obtain resultant vector on <b> Device-GPU</b>. The resultant
+solution vector is transferred back to <b> Host-CPU</b>. 
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Matrix Size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+
+
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<br>
+</UL>
+
+</TD>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ************************* example 1.8 ends ****************************** -->
+
+
+<!-- ************************ example 1.9 starts ***************  -->
+
+<a name="cuda-prog-number-id19"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.9:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+     Write a CUDA Program for Matrix Matrix multiplication based on tiling (Shared Memory) 
+
+ <!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-matrix-matrix-multiplication.cu">
+ <font color ="blue"> cuda-matrix-matrix-multiplication.cu) </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!--***************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to perform Matrix Matrix multiplication.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+Two input matrices  are generated on the <B> Host-CPU.</b> In simple algorithm, the input matrix is 
+partitoned as per Grid of thread blocks. In Global memory implementation,Each thread reads one row of the matrix  and performs
+computation with one column of the another matrix  and compute the correspodning  elements of resultant marix on <b> Device-GPU</b>. The resultant
+matrix  is transferred back to <b> Host-CPU</b>.While in local memory implementation, Matrices have been divided into BLOCKS of 16 x 16 sizes.
+ One BLOCK loads one tile of both matrices from global memory to shared memory. Each thread with in BLOCK calculate temporal resultant 
+in the local memory. After all threads within BLOCK completed their part of computation, the BLOCK stores the resultant tile into the 
+global resultant matrix. 
+ 
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Matrix Size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<br>
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.9 ends ***************************** -->
+
+
+
+
+<!-- ************************ example 1.10 starts ***************  -->
+
+<a name="cuda-prog-number-id110"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+   <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.10:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+     Write a  CUDA Program for  implement solution of matrix system of linear 
+equations Ax=b by Jacobi method 
+
+
+ 
+ <!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-jacobi.cu">
+  <font color ="blue"> cuda-jacobi.cu
+
+  </font></a> </I>)
+&nbsp;  &nbsp;
+
+
+
+<!--***************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUBLAS CUDA program, for solving system of linear equations [A]{x} = {b} on  CUDA 
+enabled NVIDIA  programming environment using Jacobi method<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+<p> The Jacobi iterative method is one of the simplest iterative techniques to solve system of 
+linear equations.
+    The <I>i<SUP>th</SUP></I> equation of a system of linear equations [A]{x}={b} is  <BR> </p>
+ 
+
+<p align ="center"> <IMG SRC="../gpu-comp-nvidia-cuda-images/jacobi-sum13.gif" HEIGHT = 70 WIDTH = 350> </p> <BR>
+
+ <p> If all the diagonal elements of <B>A</B> are nonzero (or are made nonzero
+     by permuting the rows and columns of <B>A</B>), we can rewrite equation (1) </p> <BR>
+
+ <p align ="center"> <IMG SRC="../gpu-comp-nvidia-cuda-images/jacobi-sum14.gif" HEIGHT=84 WIDTH=350> </p> <BR>
+
+<P>
+  The Jacobi method starts with an initial guess <I>x</I><SUB>0</SUB> for
+  the solution vector <I>x</I>. This initial vector <I>x</I><SUB>0</SUB>
+  is used in the right-hand side of equation (2) to arrive at the next approximation
+  <I>x</I><SUB>1</SUB> to the solution vector. The vector <I>x</I><SUB>1</SUB>
+  is then used in the right hand side of equation (2), and the process continues
+  until a close enough approximation to the actual solution is found. A typical
+  iteration step in the Jacobi method is </p>
+
+<p align="Center"> <IMG SRC="../gpu-comp-nvidia-cuda-images/jacobi-sum15.gif" HEIGHT=86 WIDTH=350> </p> <br>
+
+ 
+  We now express the iteration step of equation 3 in terms of residual <I>r<SUB>k</SUB></I>. 
+  Equation (3) can be rewritten as  <br>
+
+<p align = "Center" > <IMG SRC="../gpu-comp-nvidia-cuda-images/jacobi-sum16.gif" HEIGHT=86 WIDTH=350> </p>  <br> 
+
+<P>  Each process computes <I>n/p </I>values of the vector x in each iteration. These values are 
+     gathered by all the processes and each  process tests for convergence. If the values have been 
+    computed upto a certain accuracy the iterations are stopped otherwise the processes use 
+    these values in the next iterations to compute a new set of values. </p></P>
+</LI>
+
+<LI><B> Implementation </B>
+  The input matrix and the right hand-side vector, intial soultion vector is generated on <B> Host-CPU </b> and transferred to <b> Device-GPU</b>. In simple algorithm, the input matrix is 
+partitoned as per Grid of thread blocks. Each thread reads one row of the matrix A and performs
+computation with vector and  update the solution vector. Convergence of the solution is checked 
+and the 
+solution vector is transferred back to <b> Host-CPU</b>.   <Br> <BR>
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Size of Input Matrix and  the Vector 
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  The solution  of matrix system of linear equations <B>Ax = b </B>
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+<A HREF="gpu-comp-nvidia-cuda-num-library.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.10 ends ***************************** -->
+
+<!-- ************************ example 1.11 starts ***************  -->
+
+<a name="cuda-prog-number-id111"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+   <tr>
+     <td width="15%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.10:  </font>  </b> </td>
+    <td width="85%" height="2" valign="top">
+    Write a CUDA program to implement the  solution of Matrix system of Linear Equations  AX=b  by Conjugate 
+        Gradient method (Iterative Method).  
+
+<!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/CudaConjugateGradient.cu">
+  <font color ="blue"> CudaConjugateGradient.cu) </font>
+  </a>
+  </I>
+&nbsp;  &nbsp;
+
+
+<!--***************** download  Ends here **************** -->
+
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<P align = "justify"> 
+<span class = "content">
+CUDA implementaiton for Conjugate Gradient Method to solve the system of 
+linear equations [A]{x}={b}. Assume that A is symmetric positive definite matrix.    
+</span> </p>
+
+
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align = "justify"> 
+<span class = "content">
+<B>Description of  conjugate gradient method :</B> <BR> <BR>
+
+
+ The conjugate gradient (<I>CG</I>) method is an example of minimizing
+ method. A real n x n matrix A is positive definite if <I>x<SUP>T </SUP></I><B>A</B><I> x &gt; </I>{0} 
+ for any <I>n</I> x 1 real, nonzero vector <I>x. </I>For a symmetric positive definite matrix <B>A</B>, 
+ the unique vector <I>x</I> that minimizes the quadratic functional <BR> <BR>
+
+  <FONT COLOR="#ff00ff"> 
+ f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x-x<SUP>T</SUP>b</I>&nbsp;  </FONT> <BR> <BR>
+
+
+   is the solution to the system <B>A<I>x</I></B><I> </I>= <B>b</B>, here <I>x </I>and b 
+   are <I>n </I>x 1 vectors. It is not particularly relevant
+   when <I> n </i>  is very large, since the conjugating time for that number of iterations
+   is usually prohibitive and the property does not hold in presence of rounding
+   errors. The reason is that the gradient of functional f (<I>x</I>)<I> </I>is
+   <B>A<I>x</I></B><I> - <B>b</B></I>, which is zero when f (<I>x</I>) is
+    minimum. The gradient of a function is a <I>n</I> x 1 vector. We explain
+   some important steps in the algorithm. An iteration of a minimization method
+   is of the form <BR> <BR>
+
+        <DIR>  <FONT COLOR="#ff00ff"> 
+         <I>x<SUB>k+</SUB></I><SUB>1</SUB><I> </I>= <I>x<SUB>k</SUB>&nbsp;
+             +<SUB> </SUB></I>tau<I><SUB>k</SUB></I>d<I><SUB>k</SUB></I> &nbsp; &nbsp;  </FONT>         
+           (1)&nbsp;
+           <BR>&nbsp;
+        </DIR>
+<BR>
+
+     where  tau<I><SUB>k</SUB></I> is a scalar step size and d<I><SUB>k</SUB></I>is
+     the direction vector, d<I><SUB>k </SUB></I>is a descent direction for f
+     at <I>x</I>.&nbsp; We now consider the problem of determining tau<I><SUB>k</SUB></I>,
+     given <I>x<SUB>k</SUB></I> and d<I><SUB>k</SUB></I>, so that f(<I>x</I>)
+     is minimized on the line <I>x<SUB> </SUB></I>= <I>x<SUB>k</SUB></I> + tau<I><SUB>k</SUB></I>
+     d<I><SUB>k</SUB></I>, for tau<I><SUB>k</SUB></I>. The function f(<I>x<SUB>k</SUB></I>+
+     tau<I> </I>d<I><SUB>k</SUB></I>) is quadratic in tau, and its minimization
+     leads to the condition <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+         tau<I><SUB> k </SUB></I>=&nbsp; g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k
+     </SUB>/</I> d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB> </i>,  </FONT>                                
+         &nbsp;&nbsp; (2)&nbsp;
+ </DIR>
+ <BR>
+
+    where g<I><SUB>k</SUB>=</I><B>A</B><I>x<SUB>k </SUB>- </I><B>b</B><I> </I>is
+    the gradient (residue)&nbsp; vector after <I>k</I> iterations. The residual
+    need not be computed explicitly in each iteration because it can be computed
+    incrementally by using its value from the previous iteration. In the (<I>k+</I>1)<I><SUP>th
+   </SUP></I>iteration, the residual g<SUB><I>k+</I>1</SUB> can be expressed
+    as follows:&nbsp; <BR> <BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <FONT COLOR="#ff00ff"> 
+    g<SUB><I>k+</I>1</SUB><I>&nbsp; </I>=<I> </I><B>A</B><I>x<SUB>k+</SUB></I><SUB>1</SUB><I>
+    -</I> <I>b&nbsp;</I>&nbsp; </FONT>
+
+    <DIR>  <FONT COLOR="#ff00ff"> 
+          &nbsp;&nbsp;&nbsp;&nbsp; =<I> </I><B>A</B>(<I>x<SUB>k</SUB></I>+ tau<I><SUB>k
+         </SUB></I>d<I><SUB>k</SUB></I>) <I>- b</I>&nbsp; 
+   <BR>
+   
+          &nbsp;&nbsp;&nbsp;&nbsp; = <B>A</B><I>x<SUB>k</SUB>- b + </I>tau<I><SUB>k
+         </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp;
+   <BR> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp; 
+       = g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k </sub> 
+                                </i> &nbsp; &nbsp; 
+ </FONT>  (3) 
+   </DIR> <BR> <BR>
+
+</span> </p>
+<P align = "justify"> 
+<span class = "content">
+
+   Thus, the only matrix-vector product computed in each iteration is <B>A</B>d<I><SUB>k</SUB></I>,
+   which is already required to compute tau<I><SUB>k&nbsp; </SUB></I>in the
+   equation (2). If <B>A </B>is a symmetric positive definite matrix and d<SUB>1</SUB><I>,
+   </I>d<SUB>2<I>,</I>..., </SUB>d<I><SUB>n</SUB></I> are direction vectors
+   that are conjugate with respect to <B>A </B>(that is, d<I><SUB>i</SUB><SUP>T
+   </SUP></I><B>A</B>d<I><SUB>j</SUB>=</I>0 for all 0<I>&lt;n, j&lt;=n</I>,<I> i</I>!=<I>j</I>), 
+   then <I>x<SUB>k+</SUB></I><SUB>1</SUB> in the Equation (1) converges to the solution 
+   of <B>A</B><I>x = </I>bin at most <I>n</I>
+   iterations, assuming no rounding errors. <br> <BR>
+
+
+   In practice, however, the number of iterations that yields an acceptable approximation to the solution is
+   much smaller than <I>n</I>.&nbsp; It&nbsp; also&nbsp; makes the gradient
+   at <I>x<SUB>k+</SUB>1</I> orthogonal to search direction, i.e&nbsp; d<SUB>k</SUB><I><SUP>T
+   </SUP></I>g<SUB><I>k+</I>1</SUB><I>&nbsp; = </I>0.&nbsp; Now we suppose that the search directions
+   are determined by an iteration of the form&nbsp; <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    d<SUB><I>k+</I>1</SUB><I> </I>=<I> -</I>g<SUB><I>k+</I>1</SUB>+ beta<I><SUB>k
+    </SUB></I>d<I><SUB>k&nbsp;</SUB> </i> &nbsp; &nbsp; </FONT> (4) 
+  </DIR> <BR> <BR>
+
+</span> </p>
+<P align = "justify"> 
+<span class = "content">
+
+    where d<SUB>0<I> </I></SUB>=<I> -</I>g<SUB>0</SUB><I>&nbsp;</I> and beta<SUB>0</SUB>,
+    beta<SUB>1</SUB> , ...... remain to be determined. We find the new search
+    direction in the&nbsp; plane spanned by the gradient at the most recent
+    point and previous search direction. The parameter beta<SUB><I>k+</I>1</SUB>i<I>s </I> determined by following       
+   equation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    Beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>Ad<I><SUB>k</SUB></I>/
+    d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>k</SUB></i> &nbsp; &nbsp; </FONT> (5) 
+  </DIR> 
+  <BR>
+
+
+  And, one can derive orthogonality relations<BR>&nbsp;
+
+   <DIR>  <FONT COLOR="#ff00ff"> 
+      g<I><SUP>T</SUP><SUB>k</SUB></I>g <I><SUB>l</SUB></I>= 0 (<I>l </I>!=
+      <I>k</I>); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>l </SUB></I>= 0 (<I>l </I>!=<I>k</I>) </FONT>
+   </DIR>
+ <BR>
+
+ <BR>
+      The derivation of the above equation (5)&nbsp; and orthogonality relations
+      is beyond the scope of this document. For details please refer [ ]. Using
+      equation (3) and orthogonality relations, the equation (5)&nbsp; can be
+      further reduced to <BR> <BR>
+  <DIR>
+ <FONT COLOR="#ff00ff"> 
+   Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB><</i> &nbsp; &nbsp; </FONT>  (6) 
+ </DIR> <BR> <BR>
+
+</span> </p>
+<P align = "justify"> 
+<span class = "content">
+
+   The above equations (1) to (6) lead to <I>CG</I> algorithm. The algorithm
+   terminates when the square of the Euclidean vector norm of gradient (residual)
+   falls below a predetermined tolerance value.&nbsp; Although all of the
+   versions of the conjugate gradient method obtained by combining the formulas
+   for g<I><SUB>k</SUB></I>, Beta<I><SUB>k</SUB></I>, and tau<I><SUB>k</SUB></I>
+   in various ways are mathematically equivalent, their computer implementation
+   is not. The following version is compared with respect to computational
+   labor, storage requirements, and accuracy. The following sequence of steps
+   are widely accepted.
+  <BR>
+
+
+
+ <DIR>  <FONT COLOR="#ff00ff"> 
+      1. tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+         g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k </SUB>/</I>        
+        d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+
+      2. <i> x<SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>= 
+         <I>x<SUB>k</SUB>&nbsp; +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      3. g<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I> 
+          g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+      4. Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+         g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      5. d<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I> -</I>g<I><SUB>k+</SUB>1 </I>+          
+         Beta<I><SUB>k </SUB></I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+</FONT>
+
+  </DIR> <BR>
+
+   where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+        calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b , and put d<SUB>0</SUB>= -g<SUB>0</SUB>&nbsp;
+
+
+<!-- ****** Example 2.6: Conjugate Gradient  Method   implementation  Algorithm  ********* -->
+
+<BR> <BR>
+
+  The computer implementation of this algorithm is explained as follows : <BR> <BR>
+
+   <FONT COLOR="#ff00ff"> 
+
+    void CongugateGradient(float
+
+   <I> x<SUB>0</SUB> </I>[ ],  <i> float b [ ], float d)&nbsp;  </i> <BR>
+
+ <i>  &nbsp; &nbsp; {&nbsp;  </i> <BR>
+
+ <i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      float &nbsp;&nbsp; g, Delta0, Delta1, beta;&nbsp; </i> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  float &nbsp;&nbsp; temp, tau;&nbsp;  </i> <BR>
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  int &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration;  </i> <BR>
+
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration = 0; </i><BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x &nbsp; =  <I>x<SUB>0</SUB></I><SUB>;&nbsp;</SUB>&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  g = b;&nbsp;  </i><BR>
+
+<i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g = A <I>x - </I>g;&nbsp;<BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Delta0 = g<SUP>T </SUP>* g;&nbsp; &nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( Delta0 &lt;= EPSILON)&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return; &nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = -g;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do {&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   iteration = iteration + 1;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   temp = A * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   tau = Delta0 / d<I><SUP>T&nbsp;</SUP></I> * temp;&nbsp;&nbsp; <BR>
+
+<I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  x</I> = <I>x</I> + tau * d;&nbsp;&nbsp;  </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   g = g + tau * temp;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Delta1 = g<I><SUP>T&nbsp;</SUP></I> * g; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  if ( Delta1 &lt;= EPSILON )&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;&nbsp;</i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   beta = Delta1 / Delta0;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Delta0 = Delta1;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   d = -g + beta * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+ while(Delta0 &gt; EPSILON &amp;&amp; Iteration &lt; MAX_ITERATIONS); </i><BR>
+
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return; </i><BR>
+
+ </i> </FONT>&nbsp;
+
+</span> </p>
+<P align = "justify"> 
+<span class = "content">
+
+   Regarding one-dimensional arrays of size <I>n </I>x 1 are required for
+   temp, g, <I>x, </I>d. The storage requirement for matrix. A is depends upon the structure 
+   ( dense, band, sparse )  of the matrix.The two dimensional <I>n</I> x <I>n</I> array is the 
+   simplest structure to store  matrix A. For large sparse matrix A this structure wastes a large amount 
+    of storage space, for such matrix A suitable storage scheme should be 
+    used.
+<BR> <BR>
+
+
+<!-- ****************** Example 1.11 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] Ends ********** -->
+
+
+<!-- ************* Example 1.11 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] 
+                         Pre-condicitoned CG method Starts ************ -->
+</span> </p>
+</li>
+
+<LI>
+  <B>The preconditioned conjugate gradient algorithm&nbsp;</B>&nbsp;  </LI> <Br> <BR>
+
+<P align = "justify"> 
+<span class = "content">
+ 
+    Let C be a positive definite matrix factored in the form C = E E<I><SUP>T</SUP></I>, 
+    and let the quadratic functional&nbsp;  </FONT>
+ 
+ <BR> 
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x - x<SUP>T</SUP>b + C </I>,&nbsp;
+</FONT>
+  </DIR>
+ <BR>
+
+  We define second quadratic functional g(y) by the transformation y = E<I><SUP>T</SUP>x</I>,<BR> <BR>
+
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+     g(<I>x</I>) = g(E<SUP>-T</SUP>y) = (1<I>/</I>2)<I>y<SUP>T</SUP></I><B>A<SUP>*</SUP></B><I>y
+    - y<SUP>T</SUP>b <SUP>*</SUP> + C<SUP>*</SUP>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>where A <SUP>*</SUP> = E<SUP>-1</SUP>AE<SUP>-<I>T</I></SUP>, b<SUP>*</SUP> = 
+         E<SUP>-1</SUP>b, C<SUP>*</SUP> = C.&nbsp; </FONT>
+</DIR>
+<BR>
+  Here, A<SUP>*</SUP> is symmetric and positive definite. The similarity transformation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+
+    E<SUP>-<I>T</I></SUP>A<SUP>*</SUP>E<I><SUP>T</SUP> </I>= E<SUP>-<I>T</I></SUP>E<SUP>-1</SUP>A
+    = C<SUP>-1</SUP>A&nbsp; </FONT>
+
+  </DIR>
+
+
+</span> </p>
+<P align = "justify"> 
+<span class = "content">
+
+   reveals that A<SUP>*</SUP> and A have same eigen values. If C can be found
+   such that the condition number of the matrix A<SUP>*</SUP> is less than
+   the condition number of the matrix A, then the rate of convergence of the
+   preconditioned method is better than that of conjugate gradient method.
+   We call C the <I>preconditioning </I>matrix, A<SUP>*</SUP> the <I>preconditioned</I>
+   matrix, We assume that the matrix C = EE<SUP>T</SUP> is positive definite,
+   since E is nonsingular by assumption. If the coefficient matrix A has <I>l</I>
+   distinct eigen values, the CG algorithm  converges to the solution
+   of the system <B>A<I>x</I> </B>=<B> b </B>in at most <I>l</I> iterations
+   (assuming no rounding errors). Therefore, if A has many distinct eigen
+   values that vary widely in magnitude, the CG algorithm may require a large
+   number of iterations to converge to an acceptable approximation to the
+   solution. <BR> <BR>
+
+
+
+  The speed of convergence of the <I>CG</I> algorithm can be increased
+  by preconditioning <B>A</B> with the congruence transformation <B>A*</B><I>
+    = </I>E<SUP>-1</SUP>AE<SUP>-<I>T</I> </SUP> where E is a nonsingular
+  matrix. E is chosen such that <B>A*</B> has fewer distinct eigen values
+  than <B>A</B>. The <I>CG</I> algorithm is then used to solve <B>A* y <I>=</I>b<I>*</I></B>,
+  where <I>x =</I>(E<I><SUP>T</SUP></I>)<I><SUP>-</SUP>1y</I> . The resulting
+  algorithm is called the <I>preconditioned conjugate gradient</I> (<I>PCG</I>)
+  algorithm. The step performed in each iteration of the preconditioned
+ conjugate gradient algorithm are as follows <BR> <BR>
+
+<DIR>  <FONT COLOR="#ff00ff"> 
+ 
+ 1. &nbsp; tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+     g<I><SUB>k</SUB><SUP>T</SUP></I>h<I><SUB>k </SUB>/</I>        
+     d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 2. &nbsp; <i> x<SUB>k+</SUB></I><SUB>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>= <I>x<SUB>k</SUB> +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 3.&nbsp;  g<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I>
+    g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+ 4. &nbsp; h<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=&nbsp;
+    C<SUP>-1</SUP>g<SUB><I>k+</I>1</SUB>&nbsp; <BR>
+
+ 5. &nsbp;  beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>h<SUB><I>k+</I>1</SUB>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>h<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 6. &nbsp;  d<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>
+    -</I>h<SUB><I>k+</I>1</SUB><I> </I>+ beta<SUB><I>k+</I>1</SUB>d<I><SUB>k</SUB></I>
+</FONT>
+</DIR>
+
+
+
+<Br> <BR>
+  where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+  calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b, h<SUB>0</SUB>= 
+  C<SUP>-1</SUP>g<SUB>0</SUB> and d<SUB>0</SUB> = -h<SUB>0</SUB>. 
+
+  The multiplication by C<SUP>-1</SUP> in step (4) is to be interpreted as solving a system of equations  
+  with coefficient matrix C. A source of preconditioning matrices is the class
+  of stationary iterative methods for solving the system 
+ 
+  <B>A<I>x</I><SUP>*</SUP></B> = <B>b</B>.&nbsp;</DIR> 
+</span> </p>
+
+<!-- *************** Example 1.11 : Conjugate Gradient  Method  Parallel implementation of PCG Starts ************* -->
+</li>
+
+<LI> <B>Parallel implementations of the PCG algorithm</B> </li>
+
+
+<P align = "justify"> 
+<span class = "content">
+
+The parallel conjugate gradient algorithm involves the following&nbsp;
+   type of computations and communications <Br> <BR>
+
+Partitioning of a matrix : The matrix A is obtained by discretization
+of partial differential equations by finite element, or finite difference
+method. In such cases, the matrix is either sparse or banded. Consequently,
+the partition&nbsp; of the matrix onto <I>p</I> processes play a vital
+role for performance. For, simplicity , we assume that <B>A </B>is symmetric
+positive definite and  is<I> rowwise</I> block-striped partitioned.&nbsp;
+<BR> <Br>
+
+<BR><B>Scalar Multiplication of a vector and addition of vectors : </B> 
+<BR>Each of these computations  can be performed sequentially regardless
+of the preconditioner and the type of coefficient matrix. If all vectors
+are distributed identically among the processes, these steps require no
+communication in a parallel implementation. <Br> <BR>
+
+<B>Vector inner products :</B> 
+
+<BR>In some situations, partial vectors are available on each&nbsp; processes.&nbsp;
+MPI Collective library calls are necessary to perform vector inner products&nbsp;
+If the parallel computer supports fast reduction operations, such as optimized
+MPI, then the communication time for the inner-product calculations can
+be made minimum. <Br> <BR>
+
+<B>Matrix-vector multiplication :</B>
+
+<BR>The computation and the communication cost of the matrix-vector
+multiplication;  depends on the structure of the matrix A. The
+parallel implementation of the PCG algorithm for three cases one
+in which A is a block-tridiagonal matrix of the  type, two in
+which it is banded unstructured sparse matrix, and three in which the matrix
+is sparse give different performance on parallel computers. Various
+parts of the algorithm in each of the three cases dominate in terms of
+communication overheads.<BR> <BR>
+
+<B>Solving the preconditioned system :</B>
+<BR>The PCG algorithm solves  system of linear equations in each
+iteration The preconditioner C is chosen so that solving the system modified
+system is in expensive compared to solving the original system of
+equations <B>A<I>x </I></B>=  <B>b</B>. Nevertheless, preconditioning increases
+the  amount of computation in each iteration. For good preconditioners,
+however, the increase is compensated by a reduction in the number of iterations
+required to achieve acceptable convergence. The computation and the
+communication requirements of this step depends on the type
+of preconditioner used. preconditioning method such as diagonal preconditioning,
+in which the preconditioning matrix C has nonzero elements only
+along the principle diagonal does not involve any communication Also,
+Incomplete Cholesky (IC) preconditioning, in which C is based on incomplete
+Cholesky factorization of A and it may involve different computations and
+communications in parallel implementation. <br> <BR>
+
+The convergence of CG method iterations performed by checking the error
+criteria i.e. eulicidean norm of the residual vector should be less than
+prescribed tolerance. This convergence check involves gathering of real
+value from all processes, which may be very costly operation. <Br> <BR>
+
+We consider parallel implementations of the PCG algorithm using
+diagonal preconditioner for dense coefficient matrix type. As we
+will see, if C is a diagonal preconditioner, then solving the modified
+system does not require any interprocessor communication. Hence,
+the communication time in a CG iteration with diagonal preconditioning
+is the same as that in an iteration of the unpreconditioned algorithm. <Br> <BR> 
+
+Thus the operations that involve any 
+   communication overheads are computation of inner products, matrix-vector 
+   multiplication and, in case of IC preconditioner solving the 
+   system.
+</span></p>
+
+</LI>
+
+<!-- ************** Example  1.11: Conjugate Gradient  Method  Parallel implementation of PCG Ends ************* -->
+
+
+
+
+<LI><B>Input</B>
+
+
+<P align = "justify"> 
+<span class = "content">
+ Input Matrix and Right Hand side Vector
+</span> </p>
+</li>
+
+
+ <LI><B>Output</B>
+
+
+<P align = "justify"> 
+<span class = "content">	
+  Solution x of linear system of matrix equations Ax = b
+
+</span> </p>
+</li>
+
+<DIV ALIGN=right>
+<A HREF="gpu-comp-nvidia-cuda-num-library.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.11 ends ***************************** -->
+
+
+
+
+<!-- ************************ example 1.12 starts ***************  -->
+
+<a name="cuda-prog-number-id112"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <tr>
+     <td width="18%" height="2" valign="top">
+    
+     <b>  Example 1.12:    </b> </td>
+    <td width="82%" height="2" valign="top">
+     <b> Write a CUDA program on sparse matrix multiplication of size n x n and vector of size n. </b>
+
+ 
+ <!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/SPmv_GPU.cu">
+ <font color ="blue"> SPmv_GPU.cu) </font>
+  </a> || <a href="../gpu-comp-nvidia-cuda-num-comp-codes/SPmv_cudpp.cu"> 
+<font color ="blue"> SPmv_cudpp.cu </font> </a>)
+  
+</I>
+
+<BR> 
+(Download Make File : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/Makefile-sparse">
+  <font color = "blue"> Makefile-sparse </font>
+  </a>)
+  </font></I>
+&nbsp;  &nbsp
+
+
+<!--***************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<LI><B> Objective </B>
+
+<font size="2" face="verdana">
+<P> To write a CUDA program on sparse matrix multiplication of size n x n and vector of size n.<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B>  Efficient storage format for sparse matrix </B>										
+<P align="justify">
+Dense matrices are stored in the computer memory by using two-dimensional arrays. For example,
+ a matrix with n rows and m columns, is stored using a n x m array of real numbers. However, using the same two-dimensional 
+array to store sparse matrices has two very important drawbacks. First, since most of the entries in the sparse matrix 
+are zero, this storage scheme wastes a lot of memory. Second, computations involving sparse matrices often need to operate only 
+on the non-zero entries of the matrix. Use of dense storage format makes it harder to locate these non-zero entries. For these 
+reasons sparse matrices are stored using different data structures. 
+
+The Compressed Row Storage format (CRS) is a widely used scheme for storing sparse matrices. In the CRS format, a 
+sparse matrix A with n rows having k non-zero entries is stored using three arrays: two integer arrays rowptr and colind, 
+and one array of real entries values. The array rowptr is of size n+1, and the other two arrays are each of size k. The 
+array colind stores the column indices of the non-zero entries in A, and the array values stores the corresponding non-zero 
+entries. In particular, the array colind stores the column-indices of the first row followed by the column-indices of the 
+second row followed by the column-indices of the third row, and so on. The array rowptr is used to determine where the storage of the 
+different rows starts and ends in the array colind and values. In particular, the column-indices of row i are stored starting at colind [rowptr[i]]
+ and ending at (but not including) colind [rowptr[i+1] ]. Similarly, the values of the non-zero entries of row i are stored at values [rowptr[i] ] 
+and ending at (but not including) values [rowptr[i+1] ]. 
+Also note that the number of non-zero entries of row i is simply rowptr[i+1]-rowptr[i]. </P>
+</LI>
+
+<LI> <b> Serial sparse matrix vector multiplication </b>
+<P align="justify">
+The following function performs a sparse matrix-vector multiplication [y]={A} {b} 
+where the sparse matrix A is of size n x m, the vector b is of size m and the vector 
+y is of size n. Note that the number of columns of A (i.e., m ) is not explicitly 
+specified as part of the input unless it is required.  </P>
+
+
+ void SerialSparseMatVec(int <I>n</I>, int *<I>rowptr</I>, int *<I>colind</I>, double *<I>values</I> <BR>
+
+    double *<I>b</I>, double&nbsp; *<I>y</I>)&nbsp; &nbsp; <BR>
+
+    {&nbsp;<BR>
+     &nbsp; &nbsp; &nbsp; int <I>i</I>, <I>j</I>, <I> count </i>; &nbsp;<BR>
+ 
+    &nbsp; &nbsp; &nbsp; count = 0; <BR>
+    &nbsp; &nbsp; &nbsp; for(<I>i</I>=0;  <I>i</I>&lt;<I>n</I>; <I>i</I>++) <BR>
+
+
+    &nbsp; &nbsp; &nbsp; { <BR>
+
+    &nbsp; &nbsp; &nbsp; &nbsp; <I>y</I>[<I>i</I>] = 0.0; <BR>
+  
+
+
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+    for (<I>j</I>=<I>rowptr</I>[<I>i</I>]; <I>j</I>&lt;<I>rowptr</I>[<I>i+</I>1]; &nbsp; </I>j</I>++) <BR>
+
+
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <I>y</I>[<I>i</I>] += value [count] * b [<I>colind</I>[<I>j</I>]];  <BR>
+    &nbsp; &nbsp; &nbsp; &nbsp; count ++;  <BR> 
+     &nbsp; &nbsp; &nbsp;  } <Br> 
+    } <BR> </font> <BR>
+ 
+   </P>
+
+</LI>
+<LI><b> Description of parallel algorithm</b>
+<P align="justify">
+
+In the parallel 
+
+implementation, each thread picks a row from the 
+matrix and multiplies it with the vector. Thus computation of all threads
+ is carried out in parallel.
+</P>
+</LI>
+
+
+<LI> <b>Implementation</b>
+<P align="justify">
+
+There are two implementations, one using CUDA kernels and the other using CUDPP library.<br><br>
+<b>CUDA implementation</b><br><br>
+
+<b>Step 1:</b> The matrix size(no. of  rows) and sparsity(percentage of non-zero) are provided by the user in the cmd line.<br><br>
+<b>Step 2:</b> A sparse matrix and a vector of the given size are allocated and initialized. Also the row_ptr and 
+col_idx vectors are created and assigned their appropriate based on the sparse matrix<br><br>
+<b>Step 3:</b>  The above vectors are also created and initialized on the device (GPU).<br><br>
+<b>Step 4:</b>  The sparse_matrix and vector are multiplied in the GPU to obtain the result.<br>
+
+<b>CUDPP implementation</b><br><br>
+
+<b>Steps 1 and 2 are same as above</b><br><br>
+<b>Step 3:</b> Only two vectors are allocated on the device, the vector to be multiplied and a vector to store the result.<br><br>
+<b>Step 4:</b> A sparse matrix object is created using CUDPPHandle (object pointer) and a CUDPPConfiguration 
+(a structure containing the specifications of the algorithm, in this case sparse_matrix vector multiplication).<br><br>
+<b>Step 5:</b> The multiplication of sparse matrix and vector are performed calling the CUDPP library procedure  
+cudppSparseMatrixVectorMultiply() which perfroms the mulitiplication in the GPU.
+
+
+</P>
+</LI>
+<LI> <b>CUDA API used:</b>
+<P align="lecft">
+
+<b> cudaMalloc(void** array, int size<i>)</i></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //allocates memory on device <br><br>
+
+<b> cudaFree(void* array )</b>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		//frees memory allocated on device<br><br>
+
+<b> cudaMemcpy((void*)device_array, (void*)host_array, size , cudaMemcpyHostToDevice )</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //copies from host to device<br><br>
+<b> cudaMemcpy((void*)host_array, (void*)device_array, size , cudaMemcpyDeviceToHost )</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   //copies from device to host<br><br>
+
+</P>
+</LI>
+
+<LI> <b>CUDPP API used:</b>
+<P align="justify">
+
+<b> cudppSparseMatrix(&sparseMatrixHandle, config, no_of_non_zero,  no_of_rows, (void *) matrix, (unsigned int *) row_ptr, (unsigned int *)col_idx);</b>	
+<br>
+&nbsp;&nbsp;&nbsp;//this fucntion creates a sparse matrix object assigned to the  sparseMatrixHandle.<br><br>
+
+<b> cudppSparseMatrixVectorMultiply(sparseMatrixHandle, result, vector); </b>	&nbsp;&nbsp;&nbsp;	//performs the multiplication
+
+</P>
+</LI>
+
+<LI><B>Performance:</B>
+<P align="justify">
+The gettimeofday() function which is part of sys/time.h is used to measure the time taken for computation.
+</LI>
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<P align="justify"> The input to the problem is given as arguments in the command line. It should be given in the following format ;
+Suppose that the number of rows of the sparse matrix is n (only square matrices are considered) and 
+the sparsity i.e. the percentage of number of zero's (given in the range 0 to 1) is m, then the  program must be run as,<br><br>
+    <b> ./program_name n m </b><br><br>
+CPU generates the sparse matrix, the vector to be multiplied using random values and the row_ptr and col_idx vectors based on the sparse matrix.
+
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  The CPU prints the time taken for the computation.
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<BR>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.12 ends ***************************** -->
+
+
+
+<!-- **************************** example 1.13 starts ******************************** -->
+
+<a name="cuda-prog-number-id113"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+      <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.13:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+    Write a CUDA Program to Compute  Vector Vector Multiplication based on Multi-GPU. 
+
+ 
+ <!-- **************** download  Starts here ******************* -->
+<BR> 
+(Download source code : <BR> 
+
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-vector-vector-multiplication-mGPU.cu">
+  <font color ="blue">cuda-vector-vector-multiplication-mGPU.cu </font> </a> </I>) <BR>
+
+ <BR>
+
+
+<!-- ******************** download  Ends here ****************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to compute Vector Vector Multiplication using multi-GPU<br>
+
+</P>
+</LI>
+</A>
+
+<LI><B> Description </B>										
+<P align="justify">
+
+The input vectors are generated on host-CPU and transfer partial  vector elements to each  device-GPU for vector 
+vector vector multiplication. 
+A simple kernel based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+Each thread performs partial  multiplication  of two vectors on device-GPU and the 
+accumulate the partial result on <B> device-GPU </b> and transfered to  <b> Host-CPU-GPU</b>.
+</P>
+</LI>
+
+<LI><B>Input</B>
+</LI>
+
+
+<p>  Vector Size 
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  execution time in seconds,Gflops achieved
+</p>
+<br>
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- *********************************** example 1.13 ends ***************************** -->
+
+
+
+<!-- ************************ example 1.14 starts ***************  -->
+
+<a name="cuda-prog-number-id114"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.14:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+     Write a CUDA Program for Matrix Matrix multiplication using Multi-GPU
+
+ <!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-matrix-matrix-multiplication-mGPU.cu">
+ <font color ="blue"> cuda-matrix-matrix-multiplication-mGPU.cu) </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!--***************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to perform Matrix Matrix multiplication on multi-GPU <br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+Two input matrices are generated on the  <b>Host-CPU</b> and divided among multiple <b>GPU-devices</b> for computations. 
+We create a two-dimensional grid that is overlaid on matrices. Matrices have been divided into
+ thread blocks of 16 x 16  sizes. One BLOCK loads one tile of both matrices from global memory to
+ shared memory. Each thread with in BLOCK calculate temporal resultant in the register. 
+After all threads within block completed their part of computation, the BLOCK stores the resultant 
+tile into the global resultant matrix. The resultant matrix is transferred back to Host-CPU. 
+Timing has been recorded for the kernel launch using Cuda Events. Matrix Multiplication  
+has been also computed on Host-CPU and after that both Host-CPU result and device-GPU result has
+been compared to check correctness of result. <BR>
+</P>
+</LI>
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+<BR> <B> Important Steps   : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+    
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host-CPU and device-GPU  : </i> <BR>  
+		Allocate memory for  two input matrices and  resultant matrix  on
+               host-CPU &amp;  device-GPU <BR> 
+               Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+              <I> cudaMalloc(void** array, int size)  </font>  </i> 
+                
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Input data Generation : </i> <BR>
+		Fill the input matrices with single/double precision real values using 
+                randomized data as per input specification<BR>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer  data from host-CPU to device-GPU: </i> <BR>
+		Transfer  the host-CPU matrices to device-GPU to perform computation  <BR> 
+           Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+      <I> cudaMemcpy((void*)device_array, (void*)host_array, size , cudaMemcpyHostToDevice )  </font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+   <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Launch Kernel : </i> <BR>		
+                  Define the dimensions for Grid and Block on host-CPU and launch the kernel for execution 
+                  on device-GPU. <BR> </font>
+           </td> 
+      </tr>
+  
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer the result from device-GPU to host-CPU : </i> <BR>		
+                  Copy resultant matrix to host-CPU from device-GPU. <BR> 
+            Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+  <I> cudaMemcpy((void*)host_array, (void*)device_array, size , cudaMemcpyDeviceToHost)</font> </i> <BR>
+              </font>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of the result on host-CPU </i> <BR>		
+                  Compute matrix-matrix multiplication on host-CPU;  Compare CPU and GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Free the memory  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+              Use  <font size = 2, face = " Courier New " color ="#FF00FF" > 
+                 <I>  cudaFree(void* array</font>)  </i> <BR> </font>
+           </td> 
+      </tr>
+</tbody>
+</table>
+
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<p>Matrix Size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p> execution time in seconds,Gflops achieved.
+
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<br>
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.14 ends ***************************** -->
+
+
+
+<!-- ************************ example 1.15 starts ***************  -->
+
+<a name="cuda-prog-number-id115"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="18%" height="2" valign="top">
+ 
+     <b>  <font color = "red"> Example 1.15:  </font>  </b> </td>
+    <td width="82%" height="2" valign="top">
+     Write a CUDA Program for Vector Vector multiplication using CULBAS on  Multi-GPU
+
+ <!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-vector-vector-multiplication-cublas-mGPU.cu">
+ <font color ="blue"> cuda-vector-vector-multiplication-cublas-mGPU.cu) </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!--***************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to perform Vector Vector  multiplication on multi-GPU <br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify">
+The input vectors are generated on  <b>host-CPU</b> divided among multiple GPU-devices for computations.
+Transfer the vectors to  available <b>device_GPUs</b> 
+for vector multiplication using  CUBLAS1  library call. The final output value is transferred back to  Host-CPU.  <BR> <BR>
+
+Computation on device is performed by CULBAS routines </font>
+
+
+</P>
+</LI>
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+ <B> Important Steps   : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+    
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host-CPU and device-GPU  : </i> <BR>  
+		Allocate memory for  two input vectors  on
+               host-CPU &amp;  device-GPU <BR> 
+               Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+              <I> cublasAlloc()  </font>  </i> 
+                
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td   width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Input data Generation : </i> <BR>
+		Fill the input vectors with single/double precision real values using 
+                randomized data as per input specification<BR>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td    width = "10% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           
+           <td  height="2%" width = "80%" valign="top">>
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer  data from host-CPU to device-GPU: </i> <BR>
+		Use cublasSetVector()</font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+ <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td   width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+          
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Perform computation using  cublasDdot() CUBLAS library call</font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+  
+       
+  
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td    width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+          
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer the result from device-GPU to host-CPU : </i> <BR>		
+                  </i> <BR>
+              </font>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of the result on host-CPU </i> <BR>		
+                  Compute vector-vector multiplication on host-CPU;  Compare CPU and GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+      
+           <td  height="2%" width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Free the memory  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+              </i> <BR> </font>
+           </td> 
+      </tr>
+</tbody>
+</table>
+
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Vector Size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  Execution time in seconds, Gflops acheived
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<br>
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.15 ends ***************************** -->
+
+
+
+
+<!-- ************************ example 1.16 starts ***************  -->
+
+<a name="cuda-prog-number-id116"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+
+     <td width="18%" height="2" valign="top"> 
+     <b>  <font color = "red"> Example 1.16:  </font>  </b> </td>
+
+    <td width="82%" height="2" valign="top">
+     Write a CUDA Program for Matrix Matrix multiplication using Multi-GPU
+
+ <!-- **************** download  Starts here *************** -->
+<BR> 
+(Download source code : 
+<I>
+
+  <a href="../gpu-comp-nvidia-cuda-num-comp-codes/cuda-matrix-matrix-multiplication-cublas-mgpu.cu">
+ <font color ="blue"> cuda-matrix-matrix-multiplication-cublas-mgpu.cu) </font>
+  </a>
+</I>
+&nbsp;  &nbsp;
+
+
+<!--***************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+
+</table>
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+
+<UL>
+<LI><B> Objective </B>
+
+<font size="2">
+<P>  Write a CUDA Program to perform Matrix Matrix multiplication on multi-GPU using CUBLAS Libraries<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+Two input matrices  are generated on the <B> Host-CPU</b> In simple algorithm, the input matrix is 
+partitoned as per Grid of thread blocks. Each thread reads one row of the matrix  and performs
+computation with one column of the another matrix  and compute the correspodning  elements of 
+resultant marix on <b> device-GPU</b>. The resultant
+matrix  is transferred back to <b> Host-CPU</b>. <BR> <BR>
+
+We create a two-dimensional grid that is overlaid on matrices. Matrices have been divided into
+ thread blocks of 16 x 16  sizes. One BLOCK loads one tile of both matrices from global memory to
+ shared memory. Each thread with in BLOCK calculate temporal resultant in the register. 
+After all threads within block completed their part of computation, the BLOCK stores the resultant 
+tile into the global resultant matrix. The resultant matrix is transferred back to Host-CPU. 
+Timing has been recorded for the kernel launch using Cuda Events. Matrix Multiplication  
+has been also computed on Host-CPU and after that both Host-CPU result and device-GPU result has
+been compared to check correctness of result.  
+Computation on device is performed for CULBAS routines </font>
+
+</span> </P>
+</LI>
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+ <B> Important Steps   : </b> 
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2%" width = "80 % "  valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+    
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2%"  width = "80% " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host-CPU and device-GPU  : </i> <BR>  
+		Allocate memory for  two input matrices  on
+               host-CPU &amp;  device-GPU <BR> 
+               Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+              <I> cublasAlloc()  </font>  </i> 
+                
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2%"  width = "80 %" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Input data Generation : </i> <BR>
+		Fill the input vectors with single/double precision real values using 
+                randomized data as per input specification<BR>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2%"  width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer  data from host-CPU to device-GPU: </i> <BR>
+		Use cublasSetVector()</font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+ <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2%" width = "80 %" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Perform computation using  cublasDgemm() CUBLAS library call</font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+  
+       
+  
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2" width = "80 %" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer the result from device-GPU to host-CPU : </i> <BR>		
+                  </i> <BR>
+              </font>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2%"  width = "80% "  valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of the result on host-CPU </i> <BR>		
+                  Compute matrix-matrix multiplication on host-CPU;  Compare CPU and GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10%" height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2%"  width = "80%" valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Free the memory  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+              </i> <BR> </font>
+           </td> 
+      </tr>
+</tbody>
+</table>
+
+
+<!-- *************** IMPORTANT STEPS ************ -->
+
+
+
+<LI><B>Input</B>
+</LI>
+
+
+<p> Matrix Size
+ </p> 
+
+
+
+ <LI><B>Output</B>
+</LI>
+
+	
+<p>  Execution time in seconds , Gflops acheived
+</font>
+</p>
+<br>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<br>
+</UL>
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* example 1.16 ends ***************************** -->
+
+
+<!-- ***************** CUDA Device Strcture ends ******************* -->
+
+<HR>
+
+<B>   CUDA Device Structure </b> 
+<a name ="hetr-cuda-prog-device-structure"> </a>
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+<tr>
+<td>
+
+&nbsp; <font size = 2 face = Verdana color ="red"> <B>  struct  </b></font> cudaDevice Prop { <BR>
+ 
+<blockquote>
+ <font size = 2 face = Verdana color ="red">  <b>char </b>  </font> name[256]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t </b>  </font> totalGlobalMem; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t </b>  </font> sharedMemBlock; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int </b>  </font> regPerBlock; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int </b>  </font> warpSize; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t  </b>  </font> memPitch; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxThreadsPerBlock; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxThreadsDim[1]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxGridSize[3]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t    </b>  </font> totalConstMem; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> major;<BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> minor; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> clockRate; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t  </b>  </font> texturealignment; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> deviceOverlap; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> multiProcessorcount; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> KerneExecutionTimeoutEnabled; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> integrated; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> canMapHostMemory; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> computeMode; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture1D; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture2d[2]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture3d[3]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture2dArray[3]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> concurrentKernels; 
+</blockquote>     
+&nbsp; } <BR>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<HR>
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<!-- *************** CUDA Device Structure Ends ************ -->
+
+<!-- ***************** CUDA  Device Properties Starts ************** -->
+
+<BR> 
+<BR>
+
+<B>  CUDA Device Properties  </b> (Refer NVIDIA CUDA Programming Guide) <BR>
+
+<a name ="hetr-cuda-prog-device-properties"> </a>
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Device Property  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+
+     
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             char name [256];  
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		An ASCII string indentifying the device [e.g., GeForce GTX 280"]
+                </font> <BR>
+          </td>
+      </tr>
+    
+      
+        
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            size_t totalGlobalMem
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The amount of global memory on the devices in bytes
+                </font> <BR>
+          </td>
+
+       </tr>
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             size_t shareMemPerBlock 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum amount of shared memory a single block may use
+                in bytes 
+                </font> <BR>
+          </td>
+       </tr>
+ 
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            int regsPerBlock   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of 32-bit registers  available per block
+                </font> <BR>
+          </td>
+       </tr>
+
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            int warpSize 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of threads in a warp 
+                </font> <BR>
+          </td>
+       </tr>
+
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             size_t memPitch 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum pitch allowed for memory copies in bytes.
+                </font> <BR>
+          </td>
+       </tr>
+
+ 
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             int maxThreadsPerBlock 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maxmum number of threads that a block may contain
+                </font> <BR>
+          </td>
+       </tr>
+
+ 
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            int maxThreadsDim[3]
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of blocks allowed along  each dimneison of a grid
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             size_t totalConstMem 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The amount of avialable constant memory
+                </font> <BR>
+          </td>
+       </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             int  major  
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The major revision of the device's compute  capability
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int minor 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The minor revision of the device's compute  capability
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Global  Memory size :   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		1073741824
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+         size_t textureAlignment  
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The device's requirement for texture  alignment
+                </font> <BR>
+          </td>
+       </tr>
+
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+         int deviceOverlap 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		 A bollean value  representing  whether  the device  can 
+         simultaneously perform a cudaMemcpy() and kernel execution
+                </font> <BR>
+          </td>
+       </tr>
+
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          int multiProcessorCount   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of multiprocessors on the device
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+         int kernelExecTimeoutEnabled 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A bollean value representing whether there is a runtime limit 
+                for kernels  executed on this device
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             int integrated
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		A bollean value representing whether the device  is an integrated 
+                GPI (i.e., part of the chipset and not a discrete GPU)
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int canMapHostMemory 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A bollean value repesenting whether the device can map host 
+                memory into the CUDA device addres space.
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          int computeMode
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A vlaue representing the device's computing mode  default, exclusive
+               or, prohibited
+                </font> <BR>
+          </td>
+       </tr>
+
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTexture1D
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum size supported for 1D textures
+                </font> <BR>
+          </td>
+       </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTextture2D[2]   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum dimensions  supported for 2D textures
+                </font> <BR>
+          </td>
+    </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTextture3D[3]   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum dimensions  supported for 3D textures
+                </font> <BR>
+          </td>
+    </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTextture2DArray[3]   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum dimensions  supported for 2D texture arrays
+                </font> <BR>
+          </td>
+    </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int concurrentKernels 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A bollean value repesenting whether the device supports
+                executing multiple kernels within the same context 
+                simultaneously.
+                </font> <BR>
+          </td>
+    </tr>
+
+
+</tbody>
+</table>
+ <br> 
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<!-- *************** IMPORTANT STEPS OpenCL Device Info ************ -->
+
+
+<!-- ************************ OpenCL Device Info Ends ***************** -->
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+
+ 
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

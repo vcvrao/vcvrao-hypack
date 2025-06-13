@@ -1,0 +1,3293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from Octobe6 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,
+ C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css"    type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css"    type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript 
+       src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013
+               src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+    
+           <A class=menul
+	      href="./../hypack13-mode03-coprocessor-lab-overview.html">
+              &#149; Mode-3 Coprocessors  </A>   
+      
+	   <A class=menul
+	       href="./../hypack13-mode03-coprocessor-arch-software.html">
+               &#149; Arch. Software </A>
+            
+	   <A class=menul  
+              href="./../hypack13-mode03-coprocessor-compiler-vect.html">
+              &#149; Compiler &amp;  Vect.</A>
+		 <!-- ** -->
+	   <A class=menulslct 
+              href="./../hypack13-mode03-coprocessor-prog-env.html">
+              &#149; Prog. Env. </A>
+			<!-- ** -->
+               
+                <A class=menul
+                 href="./../hypack13-mode03-coprocessor-benchmarks.html">
+                 &#149; Benchmarks </A>
+                
+              
+            <A class=menul
+	     href="./../hypack13-mode03-coprocessor-power-perf.html">
+             &#149; Power-Perf. </A>
+
+           <A class=menul 
+	     href="./../index.html">
+             &#149; Home</A>
+
+	
+<!-- *********** left section code for about link End  here *********** -->
+	
+         <BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+         </DIV><BR><BR><BR><BR></TD>
+                
+ <TD class=rightctnt> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+<DIV align=left> <font size="3"  Color="black" face= "Arial">
+    <B>  Prog. on Multi-Core Processors with Intel Xeon Phi  : Intel TBB </b> </font> 
+</DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+   <P align=justify><span class="content"> 
+The Intel TBB library is a template based runtime library for C++ code using threads and supporting task oriented load balancing. Intel TBB is open source and available on many different platforms with most 
+operating systems and processors.
+   Example   programs using 
+   compiler pragmas, directives, function calls, and environment variables, Compilation and execution
+   of Intel TBB programs, programs numerical and non-numerical computations
+   are discussed. </font>
+  </span> </p>
+
+  <a name ="xeon-phi-mat-mat-multiply-intel-tbb"> </a>
+
+
+  <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>  Compilation : </B><font>  </span> &nbsp; &nbsp; 
+
+  <a href= "#coproc-compilation-vectorization-no-vectorization">
+  <font size="2" face="Arial" color="blue"> <B>Intel TBB and Vectorization / Not to Vectorization 
+ </b>  </font> </a> &nbsp; &nbsp;  
+
+
+  <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>  Execution  : </B><font>  </span> &nbsp; &nbsp;
+
+<a href= "#coproc-runtime-prog-env-execution">
+  <font size="2" face="Arial" color="blue"> <B> 
+    Set Up Run time Prog.  Env. </b>  </font> </a>
+&nbsp; &nbsp; 
+
+<a href= "#coproc-intel-tbb-execution">
+  <font size="2" face="Arial" color="blue"> <B> 
+   Execution   </b>  </font> </a> &nbsp; &nbsp; 
+
+<a href = "#coproc-intel-tbb-execution-with-script">  
+  <font size="2" face="Arial" color="blue"> <B> 
+   Intel TBB Script   </b>  </font> </a> &nbsp; &nbsp; 
+<BR>
+
+  <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>   Offload Information : </B><font>  </span> 
+
+   <a href= "#coproc-compiler-offload-pragmas-report">
+  <font size="2" face="Arial" color="blue"> <B> 
+    Compiler Offload Pragma &amp; Report   </b>  </font> </a>
+&nbsp; &nbsp;
+
+<a href = "#coproc-offload-pragmas-clauses"> 
+<font size="2" face="Arial" color="blue"> <B> 
+    Compiler Offload Clauses   </b>  </font> </a> 
+<BR> 
+
+
+ <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>   Tuning &amp; Performance : </B><font>  </span> 
+
+   <a href= "#coproc-kmp-thead-affinity">
+  <font size="2" face="Arial" color="blue"> <B> 
+   KMP Thread Affinity   </b>  </font> </a>
+&nbsp; &nbsp;
+
+<a href = "#coproc-memory-alignment"> 
+<font size="2" face="Arial" color="blue"> <B> 
+    Memory Alignment     </b>  </font> </a> 
+&nbsp; &nbsp; 
+
+
+<a href = "#coproc-kmp-thread-affinity-script">  
+  <font size="2" face="Arial" color="blue"> <B> 
+   KMP-Script   </b>  </font> </a> 
+</p>
+
+
+
+ <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>   Intel TBB  : </B><font>  </span> 
+
+ <a href = "#coproc-intel-tbb-background"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  Background     </b> </font> </a>
+
+&nbsp; &nbsp; 
+
+ <a href = "#coproc-intel-tbb-overview"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  Overview     </b> </font> </a>
+&nbsp; &nbsp; 
+
+ <a href = "#coproc-intel-tbb-lib-calls"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  TBB Library API Calss   </b> </font> </a>
+&nbsp; &nbsp;
+
+ <a href = "#coproc-intel-tbb-memory-allocation"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  TBB Memory Allocators   </b> </font> </a>
+<BR> <BR>
+
+<a href  = "#coproc-intel-tbb-native"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  Using TBB Natively  </b> </font>  </a>
+&nbsp; &nbsp; 
+
+<a href  = "#coproc-intel-tbb-offload"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  Offloading  TBB   </b> </font>  </a>
+
+<HR> 
+
+<BR> 
+
+ <font size="2" face="Arial" color="red"> <B> Matrix - Computation Codes </b>  </font> 
+ <BR> <BR>
+
+<!-- **************** Example 1 *********** -->
+    <a href="#coproc-intel-tbb-vectorvector-addition-example-01">
+   <font size="2" face="Arial" color="blue"> <B> Example 1 : Vector-Vector Addition  using Intel TBB Framework  </b>  </font> </a>  <BR> <BR>
+
+<!-- **************** Example 2 *********** -->
+    <a href="#coproc-intel-tbb-vectorvector-mult-example-02">
+   <font size="2" face="Arial" color="blue"> <B> Example 2 : Vector-Vector Multiplication  using Intel TBB Framework  </b>  </font> </a>  <BR> <BR>
+
+<!-- **************** Example 3 *********** -->
+  <a href="#coproc-intel-tbb-mat-mat-multiply-example-03">
+   
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 3  : Matrix - Matrix Multiply  using Intel TBB Framework </b>  </font> </a>
+   <BR>  <BR>
+
+
+<!-- **************** Example 4 *********** 
+ <a href="#coproc-intel-tbb-mat-mat-multiply-example-04">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 4.  Matrix - Matrix Multiply  - Intel TBB (Offload &amp; KMP_AFFINITY scheme) </b>  </font> </a> 
+
+ <BR> <BR>
+
+<!-- **************** Example 5 *********** -->
+ <a href="#coproc-intel-tbb-pie-comp-example-05">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 4 : Pie Computation - Intel TBB Framework </b>  </font> </a> 
+  
+ <BR> <BR>
+
+
+<!-- **************** Example 6 *********** -->
+ <a href="#coproc-intel-tbb-poisson-eq-example-06">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 5 : Poisson Solver  using Intel TBB Framework </b>  </font> </a> 
+  
+ <BR> <BR>
+
+
+<!-- **************** References  *********** -->
+  <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>  References : </B><font>  </span> &nbsp; &nbsp; 
+
+  <a href="../reference-hypack-2013/reference-overview-hypack13-mode03-xeon-phi-coproc.html"> 
+  <font size="2" face="Arial" color="blue"><B> Xeon Phi Coprocessor </b>  </font> </a> 
+<BR>
+
+<HR>
+
+
+</td>
+</tr>
+
+
+<!-- ********************** Sub-title topics Ends here *************************** -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> The key specifications of Intel Xeon Coprocessor </b> </font> </font></DIV>
+
+</TD> 
+</tr>
+
+<Tr>
+<td>
+
+<!-- ****************** table for loop ************************* -->
+    <TABLE align = "center" cellPadding=3 width="450"  border=1>
+     <tbody>
+     <P align="justify"><span class = "content">
+         <tr><B>
+           <td><b> Specification </b> </td>
+           <td><b> Feature</b> </td>
+         </B></tr>
+         <tr>
+           <td> Clock Frequency </td>
+           <td> 1.091 GHz</td> 
+	</tr>
+         <tr>
+           <td> No. of Cores </td>
+           <td> 61 </td> 
+	</tr>
+        <tr>
+           <td> Memory Size / Type </td>
+           <td> 8 GB/GDDR5 </td> 
+	</tr>
+
+         <tr>
+           <td> Memory Speed  </td>
+           <td> 5.5 GT/sec</td> 
+	</tr>
+
+            <tr>
+           <td> Peak DP/SP </td>
+           <td> 1.065/2.130 teraFLOP/s</td> 
+	</tr>
+	<tr>
+           <td> Peak Memory Bandwdith </td>
+           <td> 352 GB/s</td> 
+	</tr>
+       </span> </p> 
+
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+ <BR> 
+  <!-- *********************** table for loop  Ends ************************** -->
+
+
+ <!-- *********** Intel Xeon-Phi  Compilation and No Vectorization starts  ******** -->
+<TR>
+<TD>
+ <a name = "coproc-compilation-vectorization-no-vectorization"> </a>
+</TD>
+</tR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Compilation  of Sequential Programs : Compiler to Vectorize / NoVectorize</b> </font> </font></DIV>
+
+</TD>
+</TR>
+
+
+
+
+<TR>
+<TD>
+ <P align="justify">
+
+    <!-- ***************** Using command line ************************ -->
+       
+   <font color="#FF0011"> 
+          <B>  Using command  line arguments  (Vectorization &amp; No Vectorization )</b> </font> 
+          </p>
+
+          <P align ="justify"><span class = "content">
+
+The compilation and execution of a program for an Intel Many Integrated Core (MIC) 
+architecture coprocessor <font size = 2, face = " Courier New " color ="#FF00FF" > <B> (-mmic) </b> </font>
+also known as Intel Xeon Phi Coprocessor are given below. <BR> <BR>
+
+          <font size =2  color="red"> <B> Compilation  : </b> </font></b> <BR> <BR>
+          
+<B> To compile the program :  Using Intel C Compiler with Vectorization </B>
+</span> </p>
+
+ 
+<P align="center"><span class = "content">
+
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mmic&nbsp;  -vec&nbsp; -report=3 &nbsp;  -O3&nbsp; &lt;program name&gt;  -O&nbsp; 
+       &lt;Name of executable&gt; </b>
+   </FONT>&nbsp;</I>  
+
+  </p>
+   
+For example to compile a simple <I> <FONT COLOR="#FF00FF"> seq-matrix-matrix-multiply.c </font></i> program user can type on the command line <BR> <BR>
+ 
+         
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mmic&nbsp;  -vec&nbsp; -report=3 &nbsp;  -O3&nbsp; &lt;seq-matrix-matrix-multiply.c &gt;  -O&nbsp; 
+       &lt;seq-matrix-matrix-multiply&gt; </b>
+   </FONT>&nbsp;</I>  <br> <BR>
+
+<B> To compile the program :  Using Intel C Compiler without  Vectorization </B> <BR> <BR>
+
+User can ask the complier not to vectorze the code  with 
+<I><FONT COLOR="#FF00FF"> <B>
+     &nbsp; -no -vec&nbsp;</b> </font> </i> option and execute the code. It is possible to get less 
+performance. <BR> <BR>
+         
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mmic&nbsp;  -no-vec&nbsp; -vec -report=3 &nbsp;  -O3&nbsp; &lt;seq-matrix-matrix-multiply.c &gt;  -O&nbsp; 
+       &lt;seq-matrix-matrix-multiply&gt; </b>
+   </FONT> </I>  <BR>  <BR>
+
+ </span> </p>
+
+<P align="justify"> <span class = "content">       
+<B> To compile the program using Makefile Utility,   Using Intel C Compiler with Vectorization </B>
+</span> </p>         
+
+          <P align="center"> <FONT COLOR="#FF00FF"><i> <B> make </b> </i></font>  </p> 
+          <P align="left"> Note: If the Makefile has 
+          some extension like <font color="#FF00FF"> <B> Makefile_C </B>  </font>
+          then user is required to type
+            </p>
+
+          <P align="center"> <font color="#FF00FF"><i><B> make -f Makefile_C  </b> </font>
+          (instead of simply typing make)</i><CENTER>  </p>
+
+      <P align="center"> <font color="#FF00FF"><i><B> make -f make -f Makefile.OFFLOAD </b> </font>
+          (Compile using OFFLOAD mode)</i><CENTER>  </p>
+
+      <P align="center"> <font color="#FF00FF"><i><B> make -f make -f Makefile.NATIVE </b> </font>
+          (Compile using NATIVE mode)</i><CENTER>  </p>
+
+      <P align="center"> <font color="#FF00FF"><i><B> make -f Makefile.OFFLOAD clean </b> </font>
+          (Clean the Object files &amp; Binaries )</i><CENTER>  </p>
+
+<HR>
+<!-- ........... *** Compiler Flags ***** ........ -->
+</TD>
+</TR>
+
+
+<TR> 
+<TD> 
+
+ <DIV align=Left><font size="2" color ="black" > 
+When compiling programs that employ TBB constructs, be sure to link in the Intel TBB shared library
+ with 
+<font size = 2, face = " Courier New " color ="#FF00FF"><B> -ltbb </b> </font>  If you don't undefined references will occur. <BR> <BR>
+ <font size = 2, face = " Courier New " color ="#FF00FF"><B> icc -mmic -ltbb foo.cpp </b> </font>
+<BR> <BR>
+</div>
+
+
+<P align="justify"><span class = "content">
+
+ The details of syntax of the command to compile the program on Intel Xeon Phi are given in the 
+ following table. 
+</span> </p>
+</TD>
+</TR> 
+
+
+
+
+<TR><TD><HR></TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+<!-- ************** Run time : Set Up Programming Environment Starts *********** -->
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+<a name = "coproc-runtime-prog-env-execution"> </a>
+ <DIV align=Left><font size="2" color ="black" > 
+<B>   Set Up Run time Prog.  Env.</b> </font> </font></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<p align = "justify">
+
+  <font size="2" face="Arial" color="red"> <B> 
+ Setting Up the Prog. Environment :  Clik Plus  programs to  Scale upto 60 Cores </b>  </font> </a>
+ <BR> 
+   
+        <P align="justify"><span class = "content">
+
+     User can set the number of  threads  and the affinity using environment variables <BR> <BR>
+
+     <blockquote>
+       <FONT COLOR="#FF00FF"> <B>  omp_set_num_threads(32); </b></font>  <BR>
+       <FONT COLOR="#FF00FF"> <B>  kmp_set_defaults("KMP_AFFINITY = compact");  </b> </font>
+    </blockquote>
+
+   <BR> <BR>
+
+
+   in the coprocessor's Linux Operating environment. That is <BR> <BR>
+
+
+   <blockquote>
+    export <FONT COLOR="#FF00FF"> <B>  OMP_SET_THREADS=32 </b></font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  KMP_AFFINITY = compact </b></font>  <BR> 
+    </blockquote>
+
+
+    Below given enviornment varaibles should be declared before execution of the program 
+    as per application requirements. <BR> <BR>
+
+ # set environment variables  <BR>
+
+
+    <blockquote>
+    export <FONT COLOR="#FF00FF"> <B>  MKL_NUM_THREADS=32 </b></font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  KMP_AFFINITY = granularity=fine,compact </b></font>  <BR>
+    export <FONT COLOR="#FF00FF"> <B>  MIC_ENV_PREFIX=PHI </b></font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  PHI_MKL_NUM_THREADS=236 </b></font>  <BR> 
+    export <FONT COLOR="#FF00FF"> <B>  PHI_KMP_AFFINITY=granularity=fine,compact </b></font>  <BR>
+    export <FONT COLOR="#FF00FF"> <B>  OFFLOAD_REPORT=2 </b> </font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  MKL_MIC_ENABLE=0 </b> </font> <BR> <BR>
+     </blockquote>
+
+
+ <font size="2" face="Arial" color="red"> <B> 
+   Un-setting Up the Prog. Environment :   </b>  </font> </a>
+ <BR> <BR>
+#unset env variables <BR>
+
+   <blockquote>
+    unset <FONT COLOR="#FF00FF"> <B>  MKL_NUM_THREADS</b></font> <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  KMP_AFFINITY </b></font>  <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  MIC_ENV_PREFIX</b></font> <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  PHI_MKL_NUM_THREADS </b></font>  <BR> 
+    unset <FONT COLOR="#FF00FF"> <B>  PHI_KMP_AFFINITY </b></font>  <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  MKL_MIC_ENABLE</b> </font> <BR> <BR>
+  </blockquote>
+
+   </font> 
+
+   </span> </p>
+
+</TD>
+</TR>
+<TR><TD><HR></TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ***************** Execution Starts ************** -->
+<TR>
+<TD>
+<a name= "coproc-intel-tbb-execution"> </a> 
+</TD>
+</TR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Execution of  Programs : Sequential &amp; Clik Plus   </b>
+ </font></DIV>
+</TD>
+</TR> 
+
+<TR>
+<TD>  
+<P align="justify"> <span class = "content">       
+<B> To execute the  applicaiton on coprocessor : Log-in to Xeon-Phi Coprocessor  </B>
+</span> </p>
+
+  <P align="left">To execute the  program on coprocessor, the user Log-in to the
+   coprocessor,  then simply type the name of executable 
+   on command line.&nbsp; </p>
+
+  <P align="center"><I><FONT COLOR="#FF00FF">
+      ./&lt;&nbsp;Name of executable&gt;</FONT></I> </p>
+
+  <P align="left">For example to execute a simple 
+  <I> <FONT COLOR="#FF00FF"> <B> seq-matrix-matrix-multiply.c </b></font></i>  application, user 
+            types the command &nbsp; </p>
+
+  <P align="center"> <I><FONT COLOR="#FF00FF">./seq-matrix-matrix-multiply</FONT></I>&nbsp; </p>
+     
+ 
+      <P align="left">For example to execute a simple 
+       <I> <FONT COLOR="#FF00FF"> <B> openmp-matrix-matrix-multiply.c </b></font></i>  OpenMP application,  user types&nbsp; </p>
+
+             <P align="center"> <I><FONT COLOR="#FF00FF"><B> ./openmp-matrix-matrix-multiply </B></FONT></I>&nbsp; </p>
+     
+ 
+           The expected output: 
+          <P align="left"><FONT SIZE = "2"  COLOR="#FF00FF">
+         <blockquote> 
+          <blockquote>
+            Initializing the Vectors <BR>
+            Computation startd <BR>
+            gigaFLOPs = **** <BR>
+            Time = **** <BR>
+            gigaFLOPs per Sec = ***** <BR>
+         </FONT> </p>
+     </blockquote>
+     </blockquote>
+ 
+ </TD>
+</TR> 
+
+<TR> <TD> <HR> </TD></TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- *************** Script Starts **************** -->
+
+<TR>
+<TD>
+<a name= "coproc-intel-tbb-execution-with-script"> </a>
+</TD>
+</TR>
+ 
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Execution - Script </b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+
+<TR>
+<TD>
+
+<P align="left">
+<font size = 2 color="red"> <B> Script to run on Xeon Phi in Native Mode   : </b> </font></b>
+<BR> <BR>
+
+ <font face="Verdana" size="2">
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> MKL_MIC_ENABLE=0 <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> KMP_AFFINITY=
+         <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;granularity=thread,balanced&quot; </b> </font> <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> LD_LIBRARY_PATH=/tmp <BR>
+ &nbsp; nThreads=240  <BR>
+ &nbsp; i=200  <BR>
+ &nbsp; &nbsp; while[ $i -le 1000 ]  <BR>
+ &nbsp; &nbsp; do <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>echo</b></font>-n 
+          <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;mic&quot;  </b> </font> <BR>
+ &nbsp; &nbsp; &nbsp; ./openmp_matrix_matrix_multiply $i $nThreads 8  <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>let </b> </font> i+=100  <BR> 
+
+ &nbsp;  done <BR>
+</FONT> </P>
+
+</TD>
+</TR>
+
+<!-- ******* Script   ends **************  -->
+
+<TR> <TD> <HR> </TD></TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+<!-- ***************** Compiler Ofload Prama Report ********** -->
+
+<TR>
+<TD>
+<a name = "coproc-compiler-offload-pragmas-report"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Compiler Offload Pragma &amp; Report  </b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+
+
+<!-- .........  Compile & Execute : Compiler to Vectorize  Starts ............ -->
+<TR>
+<TD>
+<BR> <BR>
+
+ <font color="#FF0011" face="Verdana" size="2">  <B>Details of Code : Intel compiler's offload pragmas :  </B>  
+</font> 
+
+ <P align="justify"> <span class = "content">
+
+ On Xeon-host, the code to transfer the data to the Xeon Phi coprocessor  is automatically 
+created by the Intel complier.  When the code is written using  OpenMP pragmas to C/CC+ Fortran 
+code,  the Intel complier encounters an offload pragma, it generates code for both the coprocessor
+ and the host.
+The programmer responsibility is to include appropriate offload pragmas by adding data clauses.
+ Details can be found under &quot;Offload Using a Pragma&quot; in the Intel compiler documentation as 
+given in the references. </span> </p>
+
+<ul>
+
+<LI>  <P align="justify"> <span class = "content">
+<B> Using #pragma offload taret(mic) : </b>
+ In this example, how to offload the matrix computation to the Intel Xeon Phi
+ coprocessor using <FONT COLOR="#FF00FF"> <B>#pragma offload target(mic) </b> </FONT> 
+is shown 
+</span> </p> </LI>
+
+
+<LI> <P align="justify"> <span class = "content"> 
+<B> Choose the target MIC out of Multiple Coprocessors : </B> 
+The user could also specify the Intel Xeon-Phi Coprocessor <FONT COLOR="#FF00FF"> 
+<B> Number_Id </b> </FONT> in a system with multiple coprocessors (Ex. <B> PARAM YUVA 
+Compute Nodes </b> ) by using 
+<FONT COLOR="#FF00FF"> <B> #pragma offload target(mic:Number_Id). </B> </FONT>
+</span> </p> </LI>
+</ul>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+ <font color="#FF0011" face="Verdana" size="2">  <B> Other Information about  Intel compiler's offload  :  </B>  
+</font>
+
+
+<UL>
+<LI> <P align="justify"> <span class = "content"> 
+<B> Use -no-offload : </b> 
+Offloading is enabled per default for the Intel compiler. Use <FONT COLOR="#FF00FF"> <B>
+-no-offload </b> </font> to 
+disable the generation of offload code.
+
+</span> </p> </LI>
+
+
+
+<LI> <P align="justify"> <span class = "content">
+<B> Vec Report : </b> 
+Using the compiler option <FONT COLOR="#FF00FF"> <B> -vec-report2 </b> </font>  one can see which loops have been vectorized 
+on the host and the MIC coprocessor:
+</span> </p> </LI>
+
+<LI> <P align="justify"> <span class = "content">
+<B> Printing Data transfer (OFFLOAD_REPORT) : </b> 
+  By setting the environment variable <FONT COLOR="#FF00FF"> <B> OFFLOAD_REPORT </b> </font> 
+  one can obtain information about 
+  performance and
+  data transfers at runtime:
+
+
+<blockquote> <font size = 2> 
+   <B> hypack-01: ~offload_c> </b> </font>
+ <FONT COLOR="#FF00FF"> <B>
+  export OFFLOAD_REPORT=2
+  </b> </font>
+</blockquote>
+
+</font> </p> 
+
+</LI>
+</UL>
+
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!--  *****************  More about Offload clauses ********************* -->
+<TR>
+<TD>
+<a name = "coproc-offload-pragmas-clauses"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   Intel Xeon Phi Coprocessor Compiler Offload Clauses </b> </font> </DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+ 
+
+<ul>
+<LI>  <P align="justify"> <span class = "content">
+<B> Using #pragma offload taret(mic) : </b>
+ In all the examples given below,  the important information related to offload the matrix computations to the Intel Xeon Phi
+ coprocessor using <FONT COLOR="#FF00FF"> <B>#pragma offload target(mic) </b> </FONT> 
+is discussed.
+</span> </p> </LI>
+</ul>
+
+<P align="justify"> <span class = "content">
+ The Intel Xeon-Phi coprocessor programming environment provides &quot; offload pragma&quot;  which 
+provides additional annotation so the compiler can correctly move data to and from 
+the external Xeon Phi Card. Note that single or multiple OpenMP loops can be contained 
+within the scope of the offload directive. The clauses are interpreted as follows:
+</span> </p>
+
+<p align = "justify"> <span class= "content">
+ <font color= "red"><B> Offload: </b> </font> The offload pragma keyword specifies different  clauses that contain
+ information relevant to offloading to the target device. <BR> <BR>
+
+ <font color= "red"> <B> target(mic:MIC_DEV)  </b> </font>
+is the target clause that tells the compiler to generate code for both the host 
+processor and the specified offload device i.e., Xeon Phi Coprocessor. 
+The constant parameter MIC_DEV is an an integer associated with Xeon-Phi device.
+ Note that the offload performs different operations as per requirement. <BR> <BR>
+</span> </p> 
+
+<ul>
+<LI>  
+<p align = "justify"> 
+The offload runtime will schedule offload work within a single application in 
+a round-robin fashion, which can be useful to share the workload amongst 
+multiple devices. 
+</span> </p> </li>
+
+<LI>  <P align="justify"> 
+<p align = "justify"> <span class= "content">
+The offload runtime will utilize the host processor when no coprocessors are present
+and no device number is specified (for example, target(mic)).
+</span> </p> </LI>
+
+<LI>  <P align="justify"> 
+<p align = "justify"> <span class= "content">
+programmers can  use <font color= "red"> <b> _Offload_to </B> </font> to specify a device in their code. 
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+It is the responsibility of the programmer to ensure that any persistent 
+data resides on all the devices.
+
+During the  round-robin scheduling, the persistent data resides on all the devices 
+is important from performance point  of view and to avoid PCIe bottlenecks. In general, 
+only use persistent data when the device number is specified. 
+</span> </p> </LI>
+
+<LI> <P align="justify"> <span class= "content"> 
+<B> Choose the target MIC out of Multiple Coprocessors : </B> 
+The user could also specify the Intel Xeon-Phi Coprocessor <FONT COLOR="#FF00FF"> 
+<B> MIC_DEV</b> </FONT> in a system with multiple coprocessors (Ex. <B> PARAM YUVA 
+Compute Nodes </b> ) by using 
+<FONT COLOR="#FF00FF"> <B> #pragma offload target(mic:MIC_DEV). </B> </FONT>
+</span> </p> </LI>
+</ul>
+
+
+<ul>
+<LI>  <P align="justify"> <span class = "content">
+<B> Using #pragma offload taret(mic) : </b>
+ To Offload the matrix computation to the Intel Xeon Phi
+ coprocessor using <FONT COLOR="#FF00FF"> <B>#pragma offload target(mic) </b> </FONT> 
+the following clauses are required. 
+</span> </p> </LI>
+</ul>
+
+ 
+<!-- ..................  in(Matrix_A: length....) ............. ********* -->
+
+ <P align="justify"> <span class= "content">
+<font color ="red"> <B> in(Matrix_A:length(size*size)): </b> </font> 
+The <font color ="red"> <B>in</font></b>(var-list modifiersopt) clause explicitly copies 
+data from  the host to the coprocessor. Note that:
+</span> </p>
+
+
+<ul>
+<blockquote>
+
+<LI>  <P align="justify"> <span class= "content">
+The <font color ="red"> <B> length(element-count-expr) </b> </font> specifies the number of elements to be transferred. The compiler will perform the conversion to bytes based on the type of the elements. 
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+By default, memory will be allocated on the device and deallocated on exiting the scope of the directive.
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+The  
+<font color ="red"> <B>alloc_if(condition) </b> </font> and 
+<font color ="red"> <B>free_if(condition) </b> </font> modifiers can change the default behavior. 
+</span> </p></LI>
+</blockquote>
+</ul>
+
+<!-- ............. in(Matrix_A: length....) Ends ................. -->
+
+
+<P align="justify"> <span class= "content">
+<font color ="red"> <B> out(Matrix_A:length(size*size)): </b> </font> 
+The <font color ="red"> <B>in</font></b>(var-list modifiersopt) clause explicitly clause explicitly copies data from the coprocessor to the host. Note that:
+</span> </p>
+
+<ul>
+<blockquote>
+
+<LI>  <P align="justify"> <span class= "content">
+The <font color ="red"> <B> length(element-count-expr) </b> </font> specifies the number of elements 
+to be transferred. The compiler will perform the conversion to bytes based on the type of the elements. By default, memory will be deallocated on exiting the scope of the directive.  
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+The   
+<font color ="red"> <B>free_if(condition) </b> </font> modifier can change the default behavior. 
+</span> </p> </LI>
+</blockquote>
+</ul>
+
+<!-- ************** Out(Matrix_A: length....) ends ********* -->
+
+</TD>
+</TR>
+
+
+<!-- ***************** Tuning & Perf. KMP Thread Starts  ********** -->
+
+<TR>
+<TD>
+<a name = "coproc-kmp-thead-affinity"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Tuning &amp; Performancre : KMP Thread Affinity   </b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+<TR>
+<TD>
+    
+   <UL>
+          
+     <LI>
+       <P align="justify"><span class = "content">
+      
+         On Single a core, we can employ four threads. To ensure maximum performance, core needs to execute FMA calculations on evey 
+       clock cycle. To do this,  core must be running more thatn one thread. i.e., two or three or four threads.  The code is re-written
+       to execute on multiple threads, and eventually multiple cores.
+     </span> </p> 
+    </LI>
+ 
+     <LI>
+       <P align="justify"><span class = "content">
+      
+   OpenMP Framework, a widley used standard support by compilers for Intel Xeon Phi
+   coprocessors with
+         standard API and programming model for shared memory multiprocessing  for HPC. OpenMP 
+  <FONT COLOR="#FF00FF"><B> parallel for</b></font>) directive to enable the desired threading is used 
+    and the loop iteratons are divided among the available threads and run in parallel. 
+      </span> </p> 
+    </LI>
+
+   <LI> 
+   <P align="justify"><span class = "content">
+       
+     In OpenMP implementation, each thread will work on a separate set of row array elements of Matrix and 
+   offset variables are included in the code.
+     To achieve performance close to theoretical peak performance, two openMP calls are used : <BR> <BR>
+
+       <FONT COLOR="#FF00FF"> <B>  omp_set_num_threads(32); </b></font>  <BR>
+       <FONT COLOR="#FF00FF"> <B>  kmp_set_defaults("KMP_AFFINITY = compact"); </b> </font> <BR> <BR>
+
+    The first OpeMP call  sets the number of threads to use while running the code and the second one 
+    setting  <FONT COLOR="#FF00FF"> <B> AFFINITY</b></font> to 
+    <FONT COLOR="#FF00FF"> <B> compact</b></font>  will ensure that thirty two requested OpenMP 
+   threads execute 
+    on different  cores.
+  </span> </p>  
+ </LI>
+  
+   <LI> 
+   <P align="justify"><span class = "content">
+     
+     A subset of main memory is available to an application and main memory is organised into pages. 
+   The two dimensional array Matrix_A and Matrix_B are accessed 
+   along the rows.  On a system that supports virtual memory, the memory addresses for different 
+  applications
+  are virtualised : they are given logical addresses, assigned into virutal pages. A typical page 
+  size is 4 or 8 Kbytes, but laret ones exist. 
+  In fact, the physical pages that are available to program may be spread out in memory, and so the 
+  virtual 
+   pages must be mapped to physical ones. The page addresses are stored in page table and 
+  translation-lookside buffer (TLB) a spcial cache  that 
+  stores the recently accessed entries in page table. TLB is crticial to performance and in this
+  exmaple cache reloads plus a large number of 
+  TLB misses may not result. 
+ </span> </p>  
+ </LI>
+     
+ <LI> 
+  <P align="justify"><span class = "content">
+     
+     Loop Optimisation can give sinificant improvement in performance and loop unrolling can 
+     help to improve cache line utilization by improving data reuse. Inner loop unrolling with 
+     approriate OpenMP pragmas may further improve the performance. Loop unrolling can also 
+     help to increase  the instruction-level parallelism, or ILP. The compiler switches can 
+     help to perform loop unrolling.
+   </span> </p>  
+  </LI>
+
+   <LI> 
+   <P align="justify"><span class = "content">
+     
+     Use of Pointers and Contiuous Memory in C Lanuguage : The <I> pointer aliasing problem </I>
+exists in many application codes and it prevents a compiler from performing many progrm optmizations
+since it can nto determine that they are safe. It is assumed that all pointers may reference any 
+memory address. The performance can be obtained, if pointers are guaranteed to point to portions 
+of nonoverlapping  memory. The <FONT COLOR="#FF00FF"> <B> restrict </b></font> key-word is a feature 
+of the C99 Standard which is supported by compiler and it may improve the performance. 
+   </span> </p>  
+  </LI> 
+
+  <li> <p align = "Justify") <span class = "content">
+The number of threads in an OpenMP enviornment and the mapping of cores on Intel Xeon-Phi Coprocessor 
+play an important role to achieve maximum performance of developer code. 
+The  <FONT COLOR="#FF00FF">  <B> KMP_AFFINITY  </b> </font> environment variable specifies the thread-to-core affinity. 
+
+There are three preset schemes: <i> compact</i>, <i>scatter</i>, and <i>balanced</i>
+and  the user explicitly define the affinity that works best for their application. The choice 
+of affinity schemes depends upon the memory access, data sharing and work-load for each thread,
+affinte to core. The default runtime thread affinity can also be used and it may change 
+between software releases. For consistent application performance across software releases, 
+do not rely on the default affinity scheme.
+ </span> </p> </li>
+</ul>
+
+<blockquote>
+<ul>
+  <li> <p align = "Justify") <span class = "content">
+<font color= "red"> <i> <B> Compact </b> </i>  </font> tries to use minimum number of cores by pinning four threads to a 
+core before filling the next core 
+ </span> </p> </li>
+
+  <li> <p align = "Justify") <span class = "content">	
+<font color= "red"> <i> <b>  Scatter  </b> </i> </font>tries to evenly distribute threads across all cores 
+ </span> </p> </li>
+  <li> <p align = "Justify") <span class = "content">
+<font color= "red"> <i> <b> Balanced  </b>  </i>  </font> tries to equally scatter threads across all cores such that adjacent threads (sequential thread numbers) are pinned to the same core. One caveat being that all cores refers to the total number of cores -1 because one core is reserved for the operating system during an offload 
+Interested readers can find more about the affinitization schemes 
+ </span> </p> </li>
+</blockquote>
+       
+</ul>
+            
+</TD>
+</TR>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ********************* KMP Thread Affinity Script Starts ********* -->
+
+<TR>
+<TD>
+<a name = "coproc-kmp-thread-affinity-script"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Script : Using KMP Thread Affinity </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+<P align="left">
+<font color="red"> <B> Script to run on Xeon Phi in Native Mode   : </b> </font></b>
+<BR> <BR>
+
+ <font face="Verdana" size="2">
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> MKL_MIC_ENABLE=0 <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> KMP_AFFINITY=
+         <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;granularity=thread,balanced&quot; </b> </font> <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> LD_LIBRARY_PATH=/tmp <BR>
+ &nbsp; nThreads=240  <BR>
+ &nbsp; i=1  <BR>
+ &nbsp; &nbsp; while[ $i -lt 100 ]  <BR>
+ &nbsp; &nbsp; do <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>echo</b></font>-n 
+          <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;mic&quot;  </b> </font> <BR>
+ &nbsp; &nbsp; &nbsp; ./matrix_matrix_executable 1000 $i  10  <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>let</b></font>i++  <BR> 
+
+ &nbsp;  done <BR>
+</FONT> </P>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ***************** Memory Aligment Starts ************ -->
+
+
+<TR>
+<TD>
+<a name = "coproc-memory-alignment"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Tuning &amp; Performance : Memory Alignment for Vectorization  </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+
+<ul>
+
+ 
+<LI> <P align="justify"> <font face="Verdana" size="2"> 
+<B> Memory Alignment for Vectorization : </b>
+The matrices size is dynamically allocated using <B> posix_memalign(), </b> and their sizes
+ must be specified via the <FONT COLOR="#FF00FF"> <b> length() </b> </font> clause. Using in, out and inout one can specify 
+which data has to be copied in on Intel Xeon-Phi Coprocessor from host.
+
+</font> </p> </LI> 
+
+<LI> <P align="justify"> <font face="Verdana" size="2"> <FONT COLOR="#FF00FF"> 
+<B> Data alignment - 64-Byte : </b> </font> It is recommended that for Intel Xeon Phi data is 64-byte (512 Bits) aligned as 
+given in the MIC architecture.
+</font> </p> </LI>
+
+<LI> <P align="justify"> <font face="Verdana" size="2"> 
+<B> Alignment using #pragma vector alignment : </b>
+For proper alignment of data to get performance using Intel compiler vectorization, 
+ <FONT COLOR="#FF00FF">  <B> #pragma vector aligned </B> </font> is used. This tells the compiler that all array data accessed 
+in the loop is properly aligned.
+</font> </p> </LI>
+
+ <LI> 
+   <P align="justify"><span class = "content">
+   <span class ="content"> 
+  In addition, the <FONT COLOR="#FF00FF"><B>-std=c99 </b> </font>directive command-line option tells the compiler to allow use 
+  of the restrict keyword and C99 VLAs. Note that C99 restrict keyword that specifies that 
+  the vectors do not overlap. (Compile with <FONT COLOR="#FF00FF"><B>-std=c99  </b> </font> is required for efficient   vectorization)
+  </span> </p>  
+  </li>
+
+   <LI>
+    <P align="justify"><span class = "content">
+        
+   For SSE, the data is aligned to 32 Bytes (256 Bits) for AVX and 16 Bytes (128 Bits) for
+   SSE and for MIC architecture, data should be aligned to 64 Bytes (512 Bits) for the
+   MIC architecture. <BR> <BR>
+   </span> </p>  </Li>
+
+</ul>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+<!-- ***************** Intel TBB  Background   Starts ************* -->
+
+
+<TR>
+<TD>
+<a name = "coproc-intel-tbb-background"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Intel TBB  : Introduction  &amp; Background  </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+<P align="justify"><span class = "content">
+        
+Using Intel TBB, it is possible that data parallel application can scale well past one hundred threads 
+on Intel Xeon Coprocessors utilizing the highly parallel capabilities of the MIC architecture. 
+TBB offers programming methods that support creating this many threads in a program. In the easiest 
+way the one main production loop is transformed by adding a single directive or pragma enabling the 
+code for many threads. The chunk size used is chosen automatically. <BR> <BR>
+
+Intel TBB uses tasks instead of threads and automatically produce
+more portable code which emphasizes scalable, data parallel programming.
+
+With the higher level of data-parallel programming in applications, multiple threads of TBB can work 
+  on smaller chunks of computations and leading to scalability and portability. <BR> <BR>
+
+
+
+Intel Threading Building Blocks (<B> TBB </b>) is a powerful solution for C++ programmers to address 
+tasking in general, and a number of
+related C++ issues like thread-aware memory allocation, thread safe versions of key STL con-tainer 
+classes, portable locks and atomics, and timing solutions.
+
+<B> Intel TBB  </b> can use components of
+TBB include the scalable memory allocator and <I> tick_count </i>timing facility. 
+Some portions of TBB concepts can be used.
+</span> </p>
+
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+  <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+  </DIV>
+</TD>
+</TR>
+
+<!-- ******************** Intel TBB Backround Ends ***************** -->
+
+<!-- ******************** Intel TBB Overview Starts ****************** -->
+<TR>
+<TD>
+<a name = "coproc-intel-tbb-overview"> </a>
+</TD>
+</TR>
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Intel TBB  : Overview  </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<P align="justify"><span class = "content">
+Intel Threading Building Blocks (TBB) offers a rich and complete approach to expressing parallelism 
+in a C++ program. It is a library that helps you take advantage of multi-core processor performance without having to be a threading expert. Threading Building Blocks is not just a threads-replacement library.
+ It represents a higher-level, task-based parallelism that abstracts platform details and threading mechanism for performance and scalability and performance.
+<BR> <BR>
+
+TBB implements "task stealing" to balance a parallel workload across available processing cores in 
+order to increase core utilization and therefore scaling. Initially, the workload is evenly divided 
+among the available processor cores. If one core completes its work while other cores still have a 
+significant amount of work in their queue, TBB reassigns some of the work from one of the busy 
+cores to the idle core. This dynamic capability decouples the programmer from the machine, 
+allowing applications written using the library to scale to utilize the available processing cores 
+with no changes to the source code or the executable program file.<BR> <BR>
+
+Using TBB, it is possible to create applications that take advantage of new processors with more
+ and more cores as they become available and achieve scalability in performance with respect to 
+increase in problem size. Threading Building Blocks is a library that supports scalable parallel 
+programming using standard C++ code. It does not require special languages or compilers.
+
+The advantage of TBB is that it works at a higher level than raw threads.
+</span> </p>
+   
+</TD>
+</TR>
+  
+<!-- ******************** More TBB Overview  Ends *************************** -->
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<a name="coproc-intel-tbb-lib-calls"> 
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+   <DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+    <B>   Basic TBB Library Templates  </B> </font> </font></DIV> 
+</TD> 
+</TR> 
+
+
+<TR>
+<TD>
+ <P align="justify"> <span class= "content">
+
+  TBB Template devide in Three parts.<br><br>
+
+<font color="black" size = "2" > <B> Basic algorithms: </b> </font> <br><br>
+
+ <font color="black" size = "2" > <B> 1.parallel_for: </b> </font> <br><br>
+
+<font color="red" size = "2"> <i>
+ 	parallel_for(blocked_range&lt;T&gt;(begin,end,grainsize),body object) </i> </font>
+  <br> <BR>
+
+A <i>parallel_for&lt;Range,Body&gt;</i> represents parallel execution of Body over each value in Range. This  template function tbb::parallel_for recursively splits the iteration space into chunks and runs each chunk on a separate thread. A blocked_range&lt;T&gt; is a template class provided by the library. It describes a one-dimensional iteration space over type T. begin and end are the limits of the iteration space. grainsize refers to size of each chunk. Body object is an loop body object, in which operator() process a chunk. <Br> <BR>
+
+
+<font color="black" size = "2" > <B> 2.parallel_reduce: </b> </font> <br> <BR>
+
+<font color="red" size = "2"> <i>
+ 	parallel_reduce(blocked_range&lt;T&gt;(begin,end,grainsize),body object) </i> </font>
+  <br> <BR>
+
+A <i>parallel_reduce&lt;Range,Body&gt;</i> performs parallel reduction of Body over each value in Range. This template function can parallelize the loop if iterations are independent. TBB defines parallel_reduce similar to the parallel_for. <BR> <BR>
+
+<font color="black" size = "2" > <B> 3.parallel_scan: </b> </font> <br><br>
+
+
+<font color="red" size = "2"> <i>
+ 	parallel_scan(blocked_range&lt;T&gt;(begin,end,grainsize),body object) </i> </font>
+  <br>
+
+A<i> parallel_scan&lt;Range,Body&gt;</i> computes a parallel prefix or parallel scan. The template function parallel_scan decides whether and when to generate parallel work. parallel_scan better suited for future systems with more than two cores.<BR> <BR>
+
+<font color="black" size = "2" > <B> Advanced algorithms:  </b> </font> <br> <br>
+
+<font color="black" size = "2" > <B> 1.parallel_while: </b> </font> <br> <br>
+
+
+<font color="red" size = "2"> <i>
+ 	parallel_while&lt;Body&gt; </i> </font>
+  <br> <br>
+
+A<i> parallel_while&lt;Body&gt;</i> performs parallel iteration over items. The processing to be performed on each item is defined by a function object of type Body. The template class tbb::parallel_while can be used if the end of the iteration space is not known in advance, or the loop body may add more iterations to do before the loop exits. <BR> <BR>
+
+
+<font color="black" size = "2" > <B> 2.parallel_sort: </b> </font> <br><br>
+
+
+<font color="red" size = "2"> <i>
+ 	void parallel_sort(RandomAccessIterator begin,RandomAccessIterator end,const Compare& comp );
+ </i> </font>
+  <br> <br>
+
+A call to<i> parallel_sort(i,j,comp)</i> sorts the sequence [i,j) using the third argument comp to determine relative orderings.<br><BR>
+
+
+<font color="red" size = "2",> <i>
+ 	void parallel_sort(RandomAccessIterator begin,RandomAccessIterator end,const Compare& comp );
+ </i> </font>
+  <br> <br>
+
+A call to <i>parallel_sort(i,j)</i> is equivalent to parallel_sort(i,j,std::less&lt;T&gt;).
+
+parallel_sort provides an unstable sort of the sequence [begin1,end1). This sort is a comparison sort with an average time complexity O(n log n).
+
+<BR> <BR>
+
+<font color="black" size = "2" > <B> 3.Pipeline: </b> </font> <br><br>
+
+<font color="red" size = "2",> <i>
+ 	class pipeline; </i> </font>
+  <br> <br>
+
+A <i>pipeline </i> represents the pipelined application of a series of filters to a stream of items. Each filter is parallel or serial. <Br><BR>
+
+	class filter; <BR> <BR>
+
+A filter represents a filter in a pipeline. A filter is parallel or serial. A parallel filter can process multiple items in parallel and possibly out of order. A serial filter processes items one at a time in the original stream order. 
+</span> </p>
+
+<!-- ************** Containers *************** -->
+ <P align="justify"> <span class= "content">
+
+<font color="black" size = "2" > <B> Containers: </b> </font> <br><br>
+
+
+<font color="black" size = "2" > <B> 1.concurrent_queue: </b> </font> <br><br>
+
+
+<font color="red" size = "2"> <i>
+ 	concurrent_queue&lt;T&gt; </i> </font>
+  <BR> <BR>
+
+The template class <i>concurrent_queue&lt;T&gt;</i> implements a concurrent queue with values of type T.  This is bounded data structure, that permits multiple threads to concurrently push and pop item from the queue. <br> <br>
+
+Pushing is provided by the <b> push </b> method.
+
+<b>Pop</b> is carried by blocking and nonblocking methods.<br> <BR>
+
+<b>pop_if_present</b><br>
+
+    It is nonblocking, if the queue is empty, it returns anyway.<br> <br>
+
+<b>Pop</b><br>
+    This method blocks until it pops a value.
+
+<font color="black" size = "2" > <B> 2.concurrent_vector: </b> </font> <br><br>
+
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	concurrent_vector&lt;T&gt; </i> </font>
+  <br>
+
+A <i>concurrent_vector&lt;T&gt;</i> is a dynamically grow able array of items of type T for which it is safe to simultaneously access elements in the vector while growing it. 
+
+<font color="black" size = "2" > <B> 3.concurrent_hash_map: </b> </font> <br><br>
+
+<font color="red" size = "2"> <i>
+ 	concurrent_hash_map&lt;Key,T,HashCompare&gt; </i> </font>
+  <br> <BR>
+
+A <i>concurrent_hash_map&lt;Key,T,HashCompare&gt;</i> is a hash table that permits concurrent accesses. The table is a map from a key to a type T. The HashCompare traits type defines how to hash a key and how to compare two keys.  A concurrent_hash_map maps keys to values in a way that permits multiple threads to concurrently access values. 
+</span> </p>
+
+<TR>
+<TD>
+<HR>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ******************************* Basic Tbb Libray calls ends ************************* -->
+
+<!-- ****************************** memory allocation start here *********************** -->
+<TR>
+<TD>
+<a name="coproc-intel-tbb-memory-allocation"> </a>
+</TD>
+</TR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+       <B>  Memory Allocation in Multi-Threaded Prog.  </b>      </font> </font></DIV>
+ </TD> </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+<p align ="justify"> <span class = "content"> 
+
+ <b> Scalable Memory Allocators :  </b> </font> 
+<br><br>
+ 
+ 
+ Threading Building Blocks comes with a scalable 
+allocator that supports the same signatures as std::allocator. 
+The solution to the challenges of concurrent memory allocation is to use a scalable memory allocator, 
+either in Intel Threading Building Blocks or in another third-party solution. The TBB  scalable memory allocator utilizes a memory management algorithm divided on a per-thread basis 
+to minimize contention associated with allocation from a single global heap.<BR><BR>
+
+In the TBB scalable memory allocator, each thread uses its own memory heap for object allocation. There is no global lock, the allocation is fast and in most cases does not require any lock to be acquired. However there is no guarantee of non-blocking behavior, as from time to time the allocator needs to access the global memory pool to request a new big piece of memory. Eventually, every allocator uses system calls such as mmap or VirtualAlloc to request memory from an operating system, which also somehow protects consistency.
+
+
+Threading Building Blocks offers two choices : <br><br>
+
+<font color="black" size = "2"> <b> scalable_allocator  </b> </font> 
+<br><br>
+
+This template offers just scalability, but it does not completely protect against false sharing. Memory is returned to each thread from a separate pool, which helps protect against false sharing if the memory is not shared with other threads.<BR><BR>
+	
+<font color="black" size = "2" > <b> cache_aligned_allocator </b> </font> 
+<br><br>
+
+    This template offers both scalability and protection against false sharing. It
+    addresses false sharing by making sure each allocation is done on a cache line.<br><br>
+
+<!-- ************ MMAP ************** -->
+
+<font color="black" size = "2"> <b> mmap  </b> </font> 
+<br><br>
+
+Memory-mapped I/O lets us map a file on disk into a buffer in memory so that, when we fetch bytes from the buffer, the corresponding bytes of the file are read. Similarly, when we store data in the buffer, the corresponding bytes are automatically written to the file.<br><br>
+
+The <i> mmap() </i> function establishes a mapping between a process' address space 
+and a file or shared memory object. The format of the call is as follows <br><br>
+
+  <B> void* mmap(void *start,size_t length,int prot,int flags,int fd,off_t offset); </b> <br><br>
+
+The <B>  mmap()  </b> function  asks to map length bytes starting at offset offset from the file (or other object)
+specified by the file descriptor fd into memory, preferably at address start.  This latter address  is  a
+hint  only,  and  is  usually specified as 0.  The actual place where the object is mapped is returned by
+<B> mmap().</b><br><br>
+
+The parameter prot determines whether read, write, execute, or some combination of accesses are permitted to the data being mapped. The prot should be either PROT_NONE or the bitwise inclusive OR of one or more of the other flags in the following table, defined in the header &lt;sys/mman.h&gt;. <br><br>
+
+<!-- ***************** Hoard ********** -->
+
+<font color="black" size = "2" > <b> Hoard </b> </font> 
+<br><br>
+
+The Hoard memory allocator is a fast, scalable, and memory-efficient memory allocator. It runs on a variety of platforms, including Linux, Solaris, and Windows. Hoard is a drop-in replacement for malloc() that can <b>dramatically improve application performance, especially for multithreaded programs running on multiprocessors.</b><br><br>
+
+Using Hoard is easy. On UNIX-based platforms, all you have to do is set one environment variable. You do not need to change any source code. You can use the LD_PRELOAD variable to use Hoard instead of the system allocator                 for any program not linked with the "static option" (that's most programs). <br><br>
+
+<b>	LD_PRELOAD="/path/libhoard.so" </b>
+</span> 
+</p>
+</td>
+</tr>
+
+
+<TR>
+<TD>
+<HR>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+<!-- **************** More about Native TBB Starts ********************** -->
+
+<TR>
+<TD>
+<a name = "coproc-intel-tbb-native"> </a>
+</TD>
+</TR>
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   Using TBB Natively  </b> </font> </DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+<P align="justify"> <span class = "content">     
+
+TBB parallel programming model codes  run natively on the Intel Xeon Phi coprocessor 
+and can scale upto  larger number of threads. 
+
+In order to initialize your compiler environment 
+variables needed to set up TBB correctly, typically the 
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+/opt/intel/composerxe/tbb/bin/tbbvars.csh </font> </b>
+or 
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B> tbbvars.sh </font> </b> 
+script with intel64 as the argument is
+called by the 
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+/opt/intel/composerxe/bin/compilervars.csh </b> </font>
+or 
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+ compilervars.sh </b> </font>
+
+script with
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+intel64 </b> </font> as argument. (e.g.  source /opt/intel/composerxe/bin/compilervars.sh intel64)  
+</font> 
+
+</span> </p>
+
+<blockquote>
+<P align="justify"><span class = "content">
+
+<font face="Verdana" size="2" color = "red"> 
+
+  A minimal C++ TBB example looks as follows: <BR> <BR>
+
+  #include &quot;tbb/task_scheduler_init.h&quot; <BR> 
+#include &quot;tbb/parallel_for.h&quot; <BR> 
+#include &quot;tbb/blocked_range.h&quot; <BR> <BR>
+using namespace tbb; <BR> <BR>
+int main() { <BR> <BR>
+task_scheduler_init init; <BR> <BR>
+return 0; <BR> 
+} <BR> 
+
+</font> 
+</span> </p>
+</blockquote>
+
+<P align="justify"><span class = "content">
+The <font size = 2, face = " Courier New " color ="#FF00FF"> <B> using </b> </font> directive imports 
+the namespace <font size = 2, face = " Courier New " color ="#FF00FF"> <B> tbb </b> </font>
+ where all of the library's classes and functions are found. The
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B> namespace </b> </font> is explicit in the 
+first mention of a component, but implicit afterwards. So with the 
+using <font size = 2, face = " Courier New " color ="#FF00FF"> <B> namespace </b> </font>
+ statement present you can use the library component identifiers without having to write out 
+the namespace
+prefix <font size = 2, face = " Courier New " color ="#FF00FF"> <B> tbb </b> </font> before each of them.
+<BR> <BR>
+
+The task scheduler is initialized by instantiating a  
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+task_scheduler_init </b> </font>  object in the main function. 
+
+The definition for the  <font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+task_scheduler_init </b> </font> class is included from the corresponding header
+file. Actually any thread using one of the provided TBB template algorithms must have such an 
+initialized
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+task_scheduler_init </b> </font> object. The default constructor for the 
+<font size = 2, face = " Courier New " color ="#FF00FF"> <B>
+task_scheduler_init </b> </font> object informs
+the task scheduler that the thread is participating in task execution, and the destructor informs 
+the scheduler that
+the thread no longer needs the scheduler. 
+<BR> <BR>
+
+
+With the newer versions of Intel TBB as used in a MIC environment the
+task scheduler is automatically initialized, so there is no need to explicitely initialize it 
+In the simplest form scalable parallelism can be achieved by parallelizing a loop of iterations 
+that can each run
+independently from each other. <BR> <BR>
+
+The <font size = 2, face = " Courier New " color ="#FF00FF"> <B> parallel_for </b> </font> template 
+function replaces a serial loop where it is safe to process each element 
+concurrently.
+
+The template function <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B> tbb::parallel_for </b> </font> 
+breaks the iteration space into chunks, and runs each chunk on a separate thread. 
+
+The first parameter of template function call  <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B>  parallel_for </b> </font> is a <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B> blocked_range </b> </font>  object that describes the entire iteration 
+space
+from 0 to n-1. The  <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B>  parallel_for </font> </b> divides the iteration space into subspaces for each of the 
+over 200 hard-ware threads.  <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B> blocked_range&lt;T&gt;</b></font> is a template class provided by the TBB library describing a 
+one-dimensional <font size = 2, face = " Courier New " color ="#FF00FF"><B> T</b></font>.
+ The  <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B>  parallel_for </b> </font>  class works just as well with other kinds
+of iteration spaces. The library provides  <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B>  blocked_range2d </b> </font> for two-dimensional spaces. <BR> <BR>
+
+There exists also the possibility to define own spaces. The general constructor of the  
+ <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B>  blocked_range </b> </font> template class is
+   <font size = 2, face = " Courier New " color ="#FF00FF"> 
+<B>  blocked_range<T>(begin,end,grainsize)</b> </font>. The  
+<font size = 2, face = " Courier New " color ="#FF00FF"><B> T</b></font>. 
+
+specifies the value type.  <B> begin </b>  represents the
+lower bound of the half-open range interval <B> [begin,end) </b> representing the iteration space.
+<B>  end </b> represents the
+excluded upper bound of this range. The <B> grainsize </b> is the approximate number of elements 
+per sub-range.  The default <B> grainsize </b> is 1. <BR> <BR>
+
+A parallel loop construct introduces overhead cost for every chunk of work that it schedules. 
+
+The MIC adapted
+<B> Intel TBB </b> library chooses chunk sizes automatically, depending upon load balancing needs. 
+The heuristic normally works well with the default <B> grainsize</B>. It attempts to limit overhead 
+cost while still 
+providing ample
+opportunities for load balancing. For most use cases automatic chunking is the recommended choice. 
+There might
+be situations though where controlling the chunk size more precisely might yield better performance.
+
+</span> </p>
+  
+</TD>
+</TR>
+<!-- **************** More about Native TBB ends ********************** -->
+
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ********************* Offloading TBB ******************* Ends -->
+
+<TR>
+<TD>
+<a name = "coproc-intel-tbb-offload"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   Offloading  TBB   </b> </font> </DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+<P align="justify"> <span class = "content">  
+The Intel TBB header files are not available on the Intel MIC target environment by default 
+(the same is also
+true for Intel Cilk Plus). To make them available on the coprocessor the header files have to 
+be wrapped with #pragma offload directives as demonstrated in the example below: <BR> <BR>
+
+</span> </p>
+
+<blockquote>
+<P align="justify"><span class = "content">
+
+<font face="Verdana" size="2" color = "red"> 
+
+#pragma offload_attribute (push,target(mic)) <BR>
+#include  &quot; tbb/task_scheduler_init.h &quot; <BR>
+#include  &quot; tbb/parallel_for.h &quot; <BR>
+#include  &quot; tbb/blocked_range.h &quot; <BR>
+#pragma offload_attribute (pop) <BR> <BR>
+</font>
+</blockquote>
+
+<BR> <BR>
+Functions called from within the offloaded construct and global data required on the Intel
+ Xeon Phi coprocessor
+should be appended by the special function attribute 
+
+<font face="Verdana" size="2" color = "red"> <B>
+__attribute__((target(mic))) </B></font>.
+
+<BR> <BR>
+
+Codes using Intel TBB with an offload should be compiled with <B> -tbbflag </b>
+instead of <B> -ltbb</b> <BR> <BR>
+
+On the coprocessor you can then export the library path and run the application.
+</span> </p>
+  
+</TD>
+</TR>
+<!-- **************** Offload TBB  ********************** -->
+
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ****************** PRAGMA SIMD Starts ******************* -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   PRAGMA SIMD    </b> </font> </DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+<P align="justify"><span class = "content">
+<font color ="red"> <B> #pragma simd : </b> </font> This pragma gives the compiler permission to vectorize a loop even in cases where auto-vectorization might fail. It is the simplest way to manually apply vectorization. 
+</span> </p> 
+
+<P align="justify"><span class = "content">
+ Along with these keywords, you can use #pragma SIMD directives to communicate loop information to the vectorizer so it can generate better vectorized code. The five #pragma SIMD directives are: vectorlength, private, linear, reduction, and assert. The list below summarizes the five directives. For a detailed explanation please refer to the &quot;<B> Intel TBB  Specification</b>&quot;. 
+</span> </p>
+
+<P align="justify"><span class = "content">
+1.<font size = 2, face = " Courier New " color ="#FF00FF"> <B> #pragma simd vectorlength (n1, n2 ...): 
+</b> </font> Specify a choice vector width that the back-end may use to vectorize the loop. </span> </p>
+
+<P align="justify"><span class = "content">
+2.<font size = 2, face = " Courier New " color ="#FF00FF"> <B> #pragma SIMD private (var1, var2, ...):
+</b> </font> Specify a set of variables for which each loop iteration is independent of each other iterations. </span> </p>
+
+<P align="justify"><span class = "content">
+3.<font size = 2, face = " Courier New " color ="#FF00FF"> <B> #pragma SIMD linear (var1:stride1, var2:stride2, ...): </b> </font> Specify a set of variables that increase monotonically in each iteration of the loop. </span> </p>
+
+
+<P align="justify"><span class = "content">
+4.<font size = 2, face = " Courier New " color ="#FF00FF"> <B> #pragma SIMD reduction (operator: var1, var2...): </b> </font> Specify a set of variables whose value is computed by vector reduction using the specified operator. </span> </p>
+
+<P align="justify"><span class = "content">
+5.<font size = 2, face = " Courier New " color ="#FF00FF"> <B> #pragma SIMD assert: </b> </font> Directs the compiler to halt if the vectorizer is unable to vectorize the loop. </span> </p>
+
+ </li>
+</ul>
+  
+ 
+<P align="justify"><span class = "content">
+The Intel compiler was able to auto-vectorize the loops in the original application 
+after we have added the #pragma ivdep directive before each loop. Note that the 
+functions inside the loops use transcendental operations. The Intel compiler uses the 
+Short Vector Math Library (SVML) library to vectorize in this case. As an alternative to 
+#pragma ivdep  directive,  we can use the  Intel <B> Intel TBB </b> Array Notation for 
+replacing the loops, which gives a very clear way to express loop vectorization
+ </span> </p>   
+
+</TD>
+</TR>
+  <!-- ******************** More about PRAGMA SIMD  ends *************************** -->
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ****************** Example Programs Starts  ******************** -->
+
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   EXample Programs on Vector Vector Addition and Multiplication   </b> </font> </DIV>
+</TD>
+</TR>
+
+
+ <!-- ********************* Example 1 : Vector-Vector Addition Prog Starts ************************ -->
+ 
+  <table border="0"  height="6">
+
+   <tbody>
+ <a name ="coproc-intel-tbb-vectorvector-addition-example-01"> </a>
+
+   <TR ALIGN=LEFT> 
+    <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example  1 :</B></FONT>
+  <font face="Verdana" size="2"> 
+    Vector - Vector Addition on  Xeon-Phi using Intel TBB framework    </font>
+     <BR> <BR>
+
+   <blockquote> 
+
+    <a href="#coproc-vectorvector-add-obj">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;     
+
+   <a href="#coproc-vectorvector-add-inp">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;  
+
+   <a href="#coproc-vectorvector-add-des">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp; 
+
+   <a href= "#coproc-vectorvector-add-out">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+  </blockquote>
+
+         
+<!-- ************download start here ***************--> 
+
+        (Download source code : <BR>
+
+    
+    <fONT size = 2 Face = "verdana" >
+   
+
+ <a href ="./coprocessor-xeon-phi-codes/vect_vect_add_intel_tbb/vect-vect-addition-intel-tbb-native.cpp">
+         <I><FONT COLOR = "blue"><B> vect-vect-addition-intel-tbb-native.cpp</b></FONT></I></a>;
+  <BR>
+    <a href ="./coprocessor-xeon-phi-codes/vect_vect_add_intel_tbb/Makefile_intel_tbb.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.NATIVE </b> </FONT>  </I> </a></font>;
+
+  <BR> 
+   <a href ="./coprocessor-xeon-phi-codes/vect_vect_add_intel_tbb/env_var_setup_intel_tbb.txt">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_intel_tbb.sh</b></FONT></I></a></font>;
+ <BR>
+
+<!-- ************download End  here ***************--> 
+  </TD> 
+  </TR> 
+ 
+ <TR>
+ <TD>
+   <UL>
+      
+            <a name ="coproc-vectorvector-add-obj"> </a>
+            <font face="Verdana" size="2">
+            <LI> <B>Objective</B></LI>
+
+           <p align = "justiyf">
+            Extract performance in G/flops for Matrix Matrix addition 
+            and analyze the performance on Intel Xeon-Phi coprocessor  </p>
+
+            <a name ="coproc-vectorvector-add-des"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align = "justify"> 
+
+             Two input vectros are filled with real data and Vector-Vector addition is performed 
+             using compiler &amp; vectorization features, OpenMP, OpenMP thread affinity, &amp; 
+             KMP_thread affinity.  
+             It is assumed that both vectros are of same size.  This example demonstrates the use of
+             Intel Xeon-Phi Programming features to obtaine  the maximum achievable  performance. <BR> 
+             The key computation of the code is  inner & outer loop i.e., <BR> <BR>
+  
+	     <blockquote> <blockquote>
+
+               for(i=0; i< n; i++) = 0.0; <BR>
+               { <BR>
+                  &nbsp; &nbsp; Vector_C[i] = Vector_A[i] +  Vector_B[i]; <BR>
+               } <BR>
+
+             </blockquote> </blockquote>
+   
+  
+             <a name ="coproc-vectorvector-add-inp"> </a>
+              <LI> <B>Input</B></LI>
+            <P>Number of threads, Size of  the Matrices. </p>
+
+            <a name ="coproc-vectorvector-add-obj"> </a>
+             <LI> <B>Output</B></LI>
+            <p align = "justify"> 
+              Prints the time taken for the computation and G/flops and the number of threads.</p>
+          </UL>
+
+<TR> <TD> <HR> </TD></TR>
+<TR>
+<TD>
+    <DIV ALIGN=right>
+         <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TR>
+   </TD>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+ 
+<! -- *********************** Exmaple 1 Ends ************** -->
+  
+<!-- ************ Example 2 : Vector-Vector Multiplication  Starts ************* -->
+
+ <table width = "100%" border="0"  height="6">
+ <tbody>
+  <TR ALIGN=LEFT> 
+  <TD height="90%"> <font face="Verdana" size="2"> 
+   <a name ="coproc-intel-tbb-vectorvector-mult-example-02"> </a>   
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example  2 :</B></FONT>
+    <font face="Verdana" size="2"> <B>
+        Vector - Vector Multiplication  on  Xeon-Phi using Intel TBB framework  </b>  </font>
+     <BR> <BR>
+              
+    
+         
+<!-- ************download start here ***************--> 
+
+        (Download source code : <BR>
+
+    
+    <fONT size = 2 Face = "verdana" >
+   <a href ="./coprocessor-xeon-phi-codes/vect_vect_mult_intel_tbb/vect-vect-multiplication-intel-tbb-native.cpp">
+         <I><FONT COLOR = "blue"><B> vect-vect-multiplication-intel-tbb-native.cpp</b></FONT></I></a>;
+  <!-- &nbsp; 
+ <a href ="./coprocessor-xeon-phi-codes/vect_vect_mult_intel_tbb/vect-vect-multiplication-intel-tbb-offload.cpp">
+         <I><FONT COLOR = "blue"><B> vect-vect-multiplication-intel-tbb-offload.cpp</b></FONT></I></a>;-->
+<BR>
+    
+    <a href ="./coprocessor-xeon-phi-codes/vect_vect_mult_intel_tbb/Makefile_intel_tbb.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.NATIVE </b> </FONT>  </I> </a></font>;
+ <!--&nbsp;
+   <a href ="./coprocessor-xeon-phi-codes/vect_vect_mult_intel_tbb/Makefile_intel_tbb.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.OFFLOAD </b> </FONT>  </I> </a>)</font>-->
+ &nbsp; 
+ <a href ="./coprocessor-xeon-phi-codes/vect_vect_mult_intel_tbb/env_var_setup_intel_tbb.txt">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_intel_tbb.sh</b></FONT></I></a></font>;
+</p>
+
+<!-- ************download End  here ***************--> 
+  </TD> 
+  </TR> 
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<TR> <TD> <HR> </TD></TR>
+
+</tbody>
+</table>
+        
+
+<!-- ************************** Example 2  Ends *************************** -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   EXample Programs on Matrix Matrix Multiplication  </b> </font> </DIV>
+</TD>
+</TR>
+
+
+
+</tbody>
+</table>
+        
+
+ <!-- ***************** Example 3 : Matrix-Matrix  Multiply Prog Starts **************** -->
+
+  <a name ="coproc-intel-tbb-mat-mat-multiply-example-03"> </a>
+  <table border="0"  height="6">
+  <tbody>
+    
+   <TR ALIGN=LEFT> 
+   <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example.  3  </B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+    Matrix - Matrix Multiply  on  Xeon Host using Intel TBB framework </b> </font>
+   <BR> <BR>
+       
+<!-- ************download start here ***************--> 
+        (Download source code : <BR>
+ 
+    <fONT size = 2 Face = "verdana" >
+<a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/matrix-matrix-multiply-intel-tbb-native.cpp">
+         <I><FONT COLOR = "blue">matrix-matrix-multiply-intel-tbb-native.cpp</FONT>  </I> </a></font>
+
+<!-- &nbsp;
+<a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/matrix-matrix-multiply-intel-tbb-offload.cpp">
+         <I><FONT COLOR = "blue">matrix-matrix-multiply-intel-tbb-offload.cpp</FONT>  </I> </a></font>-->
+
+<BR> 
+   <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/Makefile_intel_tbb.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.NATIVE</b> </FONT>  </I> </a></font>
+<!-- &nbsp; 
+   <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/Makefile_intel_tbb.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.OFFLOAD</b> </FONT>  </I> </a>)</font>-->
+<BR>
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/env_var_setup_intel_tbb.txt">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_intel_tbb.sh</b></FONT></I></a></font>;)
+</p>
+
+<!-- ************download End  here ***************--> 
+
+
+
+<blockquote> 
+
+    <a href="#coproc-mat-mat-multiply-obj">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;    
+
+
+   <a href="#coproc-mat-mat-multiply-inp">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;   &nbsp;  
+
+
+   <a href="#coproc-mat-mat-multiply-des">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp;   &nbsp;   
+
+
+   <a href= "#coproc-mat-mat-multiply-out">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+   &nbsp; &nbsp;   &nbsp;  
+
+   <a href="#coproc-mat-mat-multiply-sum">
+   <font size="2" face="Arial " color="blue"> <B> Summary  </b>  </font> </a> 
+  </font> </a> 
+  </blockquote>
+
+  </TD> 
+  </TR> 
+ 
+  <TR>
+  <TD>
+            <a name ="coproc-mat-mat-multiply-obj"> </a>
+            <font face="Verdana" size="2">
+            <LI> <B>Objective</B></LI>
+
+           <p align = "justiy">
+            Extract performance in G/flops for Matrix Matrix Multiply 
+            and analyze the performance on Intel Xeon based on OpenMP.  </p>
+
+            <a name ="coproc-mat-mat-multiply-des"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align = "justify"> 
+
+             Two input matrices are filled with real data and matrix-matrix Multiply is performed 
+             using compiler &amp; vectorization features.  
+             It is assumed that both matrices are of same size.  This example demonstrates the use of
+            Intel TBB Programming features to obtain  the maximum achievable  performance.
+             The key computation of the code is  two inner loops  & an  outer loop i.e., <BR> <BR>
+
+   </ul>
+  </TD>
+   </TR>
+
+ <TR>
+ <TD>
+             <!-- *************** table for loop  ***************** -->
+      <TABLE align = center cellPadding=3  bgcolor=#EBDDE2 border=1>
+      <tbody>
+         <tr>
+         <td>
+       
+          <font face="CourierNew" color ="black" size="3">
+           
+               // Zero the Matrix_C matrix <BR>
+              
+  <!-- #pragma omp parallel for default(none) shared(Matrix_C,size) <BR>  -->
+              <font color ="red"> <B> for </b> </font> (int i = 0; i < size; ++i)  <BR>    
+	       &nbsp; &nbsp;  <font color ="red"> <B> for </b> </font>(int j = 0; j < size; ++j) <BR>       
+		  &nbsp; &nbsp; &nbsp; &nbsp;  Matrix_C[i][j] = 0.f;  <BR> <BR>
+    
+             // Compute matrix multiplication. <BR>
+   <!--    #pragma omp parallel for default(none) shared(Matrix_A,Matrix_B,Matrix_C,size) <BR>
+              -->
+
+             <font color ="red"> <B> for </b> </font> (int i = 0; i < size; ++i)   <BR> 
+             &nbsp; &nbsp; <font color ="red"> <B> for </b> </font> (int k = 0; k < size; ++k)   <BR>   
+            &nbsp; &nbsp; &nbsp; &nbsp;  <font color ="red"> <B> for </b> </font> (int j = 0; j < size; ++j)    <BR>    
+          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;   Matrix_C[i][j] += Matrix_A[i][k] * Matrix_B[k][j];  <BR> 
+          &nbsp; &nbsp;&nbsp; &nbsp;  } <BR>
+         } <BR> 
+            
+       </td>
+      </tr>
+   </tbody>
+  </table>
+  
+  </TD>
+  </TR>
+
+
+
+<TR> <TD>
+
+ <p align = "justify">
+In implementation, every thread  will work its own row array section of input Matrix_A and multiply with 
+each column of Matrix_B, resulting to give an output array of resulting matrix Matrix_C. It is 
+assumed that the size of the two input square matrices is divisible by number of threads. 
+For convenience sake, we use one core and 2 or 4 four Intel TBB threads for Matrix-Matrix 
+Multiply algorithm.  
+</TD> </TR>
+
+
+<TR>
+<TD>
+    <a name ="coproc-mat-mat-multiply-inp"> </a>
+       <LI> <B>Input</B></LI>
+        <P>Number of threads , Size of  the Matrices. </p>
+
+    <a name ="coproc-mat-mat-multiply-obj"> </a>
+         <LI> <B>Output</B></LI>
+          <p align = "justify"> 
+              Prints the time taken for the computation and G/flops and the number of threads.</p>
+        </UL>
+
+
+    <DIV ALIGN=right>
+         <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+<HR>
+ </TR>
+ </TD>
+
+</tbody>
+</table>
+
+<!-- **************   Example 3  Matrix-Matrix  Multiply Ends **************** -->
+
+
+
+ <!-- ***************** Example 4 : Matrix-Matrix  Multiply Prog KMP AFFNITY Starts **************** 
+
+  <a name ="coproc-intel-tbb-mat-mat-multiply-example-04"> </a>
+  <table border="0"  height="6">
+  <tbody>
+    
+   <TR ALIGN=LEFT> 
+   <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example.  4  : </B></FONT>
+
+  <font face="Verdana" size="2"> <B>
+    Matrix - Matrix Multiply  on  Xeon Host using Intel TBB framework (KMP_AFFINITY)</b> </font>
+   <BR> <BR>
+       
+<!-- ************download start here *************** 
+        (Download source code : <BR>
+ 
+    <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/matrix-matrix-multiply-intel-tbb-native.cpp">
+         <I><FONT COLOR = "blue">matrix-matrix-multiply-intel-tbb-native.cpp</FONT>  </I> </a>)</font>
+    &nbsp; 
+  <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/matrix-matrix-multiply-intel-tbb-offload.cpp">
+         <I><FONT COLOR = "blue">matrix-matrix-multiply-intel-tbb-offload.cpp</FONT>  </I> </a>)</font>
+<BR>
+    <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/env_var_setup_intel_tbb_KMP.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_intel_tbb_KMP.sh</b></FONT></I></a></font>;
+&nbsp;  
+ <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/Makefile_intel_tbb_KMP.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb_KMP.NATIVE</b> </FONT>  </I> </a>)</font>
+<BR>
+ <a href ="./coprocessor-xeon-phi-codes/mat_mat_multiply_intel_tbb/Makefile_intel_tbb_KMP.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb_KMP.OFFLOAD</b> </FONT>  </I> </a>)</font>
+</p>
+
+<!-- ************download End  here *************** 
+
+    <DIV ALIGN=right>
+         <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+<HR>
+ </TR>
+ </TD>
+
+</tbody>
+</table>
+
+<!-- **************   Example 4  Matrix-Matrix  Multiply (KMP_AFFINITY) Ends **************** -->
+
+ <!-- ********************* Example 5 : Pie Computation Prog Starts ************************ -->
+ 
+  <table border="0"  height="6">
+
+   <tbody>
+ <a name ="coproc-intel-tbb-pie-comp-example-05"> </a>
+
+   <TR ALIGN=LEFT> 
+    <TD height="90%"> <font face="Verdana" size="2"> 
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example  4 :</B></FONT>
+  <font face="Verdana" size="2"> <B>
+    Pie Computation on  Xeon-Phi using Intel TBB framework  </B>   </font>
+     <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">(Assignment)</font>
+
+   <blockquote> 
+
+    <a href="#coproc-intel-tbb-pie-comp-obj">
+   <font size="2" face="Arial" color="blue"> <B>  Objective   </b>  </font> </a> 
+   &nbsp; &nbsp;     
+
+   <a href="#coproc-intel-tbb-pie-comp-inp">
+   <font size="2" face="Arial" color="blue"> <B> Input  </b>  </font> </a> 
+    &nbsp; &nbsp;  
+
+   <a href="#coproc-intel-tbb-pie-comp-des">
+   <font size="2" face="Arial" color="blue"> <B> Description </b>  </font> </a> 
+   &nbsp; &nbsp; 
+
+   <a href= "#coproc-intel-tbb-pie-comp-out">
+   <font size="2" face="Arial " color="blue"> <B> Output  </b>  </font> </a>
+  </blockquote>
+
+         
+<!-- ************download start here *************** 
+
+        (Download source code : <BR>
+
+    
+    <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/pie_comp_intel_tbb/pie-comp-intel-tbb-native.cpp">
+         <I><FONT COLOR = "blue"><B> pie-comp-intel-tbb-native.cpp</b></FONT></I></a>;
+   &nbsp; 
+  <a href ="./coprocessor-xeon-phi-codes/pie_comp_intel_tbb/pie-comp-intel-tbb-offload.c">
+         <I><FONT COLOR = "blue"><B> pie-comp-intel-tbb-offload.cpp</b></FONT></I></a>;
+
+ <BR>
+    <a href ="./coprocessor-xeon-phi-codes/pie_comp_intel_tbb/Makefile_intel_tbb.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.NATIVE </b> </FONT>  </I> </a></font>;
+   &nbsp; 
+   <a href ="./coprocessor-xeon-phi-codes/pie_comp_intel_tbb/Makefile_intel_tbb.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.OFFLOAD </b> </FONT>  </I> </a>)</font>
+  <BR>
+   <a href ="./coprocessor-xeon-phi-codes/pie_comp_intel_tbb/env_var_setup_intel_tbb.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_intel_tbb.sh</b></FONT></I></a></font>;
+</p>
+
+<!-- ************download End  here ***************--> 
+  </TD> 
+  </TR> 
+ 
+ <TR>
+ <TD>
+  <UL>
+        <a name ="coproc-intel-tbb-pie-comp-obj"> </a>
+            <LI> <B>Objective</B></LI>
+
+           <p align = "justify">
+            Write a Intel TBB program to compute the value of <I>pi</I> function by numerical integration of    
+    a function <I>f</I>(<I>x</I>) = 4/(1+<I>x <SUP>2</SUP> </I>) between the limits 0 and 1.  </p>
+
+            <a name ="coproc-intel-tbb-pie-comp-des"> </a>
+            <LI> <B>Description</B></LI>
+
+            <p align ="justify"> <span class = "content"> There are several approaches to parallelizing a serial program. One approach is 
+    to partition the data among the processes. That is we partition the interval of 
+    integration [0,1] among the processes, and each process estimates local integral over
+    its own subinterval. The local calculations produced by the individual  
+    processes are combined to produce the final result. Each process sends its integral to process 0,
+   which adds them and prints the result.</span> </p>
+
+
+<p align ="justify"> <span class = "content">To perform this integration numerically, divide the interval from 0 to 1 into <I>n</I>
+   subintervals and add up the areas of the rectangles as shown in the Figure 3 (<I>n</I>
+   = 5). Large values of <I>n</I> give more accurate approximations of <I>pi</I>. </span> </p>
+<P align="center"><IMG SRC="./coprocessor-xeon-phi-images/pie-comp.gif" HEIGHT="345" WIDTH="360" ALIGN="center"> </span> </p>
+
+     <div align ="CENTER"> Figure Numerical integration of <i> pie </i> function </div>
+
+<p align ="justify"> <span class = "content"> We assume that <i>n</i> is total number of subintervals, <I>p</I> is the number 
+    of processes and <I>p</I> &lt; <I>n</I>. One simple way to distribute the total 
+    number of subintervals to each process is to divide<I>n</I> by <I>p</I>. There 
+    are two kinds of mappings that balance the load. One is a <I>block mapping</I>, 
+    partitions the array elements into blocks of consecutive entries and assigns 
+    the block to the processes. The other mapping is a <I>cyclic mapping</I>. It 
+    assigns the first element to the first process, the second element to the 
+    second, and so on. If <I>n</I> &gt; <I>p</I>, we get back to the first process, 
+    and repeat the assignment process for remaining elements. This process is 
+    repeated until all the elements are assigned. We have used a <I>cyclic mapping</I>
+    for partition of interval [0,1] onto <I>p</I> processes. </span> </p>
+   
+  
+             <a name ="coproc-intel-tbb-pie-comp-inp"> </a>
+              <LI> <B>Input</B></LI>
+            <P>Number of threads, Number of Intervals </p>
+
+            <a name ="coproc-intel-tbb-pie-comp-out"> </a>
+             <LI> <B>Output</B></LI>
+            <p align = "justify"> 
+              Prints the time taken for the computation of Pie Value and  the number of threads.</p>
+          </UL>
+
+<TR> <TD> <HR> </TD></TR>
+<TR>
+<TD>
+    <DIV ALIGN=right>
+         <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+   </TR>
+   </TD>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************* Example 5 Pie Computation  Ends *************** -->
+ 
+<!-- ************ Example 6 : Poisson Equation   Starts ************* -->
+
+ <table width = "100%" border="0"  height="6">
+ <tbody>
+  <TR ALIGN=LEFT> 
+  <TD height="90%"> <font face="Verdana" size="2"> 
+   <a name ="coproc-intel-tbb-poisson-eq-example-06"> </a>   
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example  5 :</B></FONT>
+    <font face="Verdana" size="2"> <B>
+        Poisson Equation Solver   on  Xeon-Phi using Intel TBB framework  </b>  </font>
+     <BR> 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">(Assignment)</font>
+    
+         
+<!-- ************download start here ***************
+
+        (Download source code : <BR>
+
+    
+    <fONT size = 2 Face = "verdana" >
+   <a href ="./coprocessor-xeon-phi-codes/poisson_solver_intel_tbb/poisson_solver-intel-tbb-native.cpp">
+         <I><FONT COLOR = "blue"><B> poisson_solver-intel-tbb-native.c</b></FONT></I></a>;
+   &nbsp; 
+
+  <fONT size = 2 Face = "verdana" >
+   <a href ="./coprocessor-xeon-phi-codes/poisson_solver_intel_tbb/poisson_solver-intel-tbb-offload.cpp">
+         <I><FONT COLOR = "blue"><B> poisson_solver-intel-tbb-offload.cpp</b></FONT></I></a>;
+   <BR>
+
+  
+    <a href ="./coprocessor-xeon-phi-codes/poisson_solver_intel_tbb/Makefile_intel_tbb.NATIVE">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.NATIVE </b> </FONT>  </I> </a></font>;
+ &nbsp; &nbsp;
+   <a href ="./coprocessor-xeon-phi-codes/poisson_solver_intel_tbb/Makefile_intel_tbb.OFFLOAD">
+         <I><FONT COLOR = "blue"> <B> Makefile_intel_tbb.OFFLOAD </b> </FONT>  </I> </a>)</font>
+
+    <BR>
+    <a href ="./coprocessor-xeon-phi-codes/vpoisson_solver_intel_tbb/env_var_setup_intel_tbb.sh">
+         <I><FONT COLOR = "blue"> <B> env_var_setup_intel_tbb.sh</b></FONT></I></a></font>;
+
+</p>
+
+<!-- ************download End  here ***************--> 
+  </TD> 
+  </TR> 
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-numerical-non-numerical-comp-intel-tbb.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<TR> <TD> <HR> </TD></TR>
+
+</tbody>
+</table>
+        
+
+<!-- ************************** Example 6  Ends *************************** -->
+
+</TD>
+</TR>
+
+ 
+
+
+<!--  content of web page End here  --> 
+      
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+    
+        </TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

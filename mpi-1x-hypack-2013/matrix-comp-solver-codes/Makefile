@@ -1,0 +1,50 @@
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013 
+#
+# *******************************************************************
+
+##### User configurable options #####
+
+MPIR_HOME  = 
+
+#Comment the following line for compiling sum_rma.f
+F77        = mpif77
+
+#Uncomment the following line for compiling sum_rma.f
+#F77        = mpxlf_r
+
+OPTFLAGS   = 
+
+MPILIB     =
+LIBS       = 
+
+### End User configurable options ###
+
+default: run
+
+#For DAY-3 examples only 
+
+OBJECTS=conjugate-gradient-mpi-code-flang.o
+#OBJECTS=gauss-elmn-mpi-code-flang.o
+#OBJECTS=jacobi-mpi-code-flang.o
+
+#For following program, you have to comment F77=mpxlf and uncomment 
+#F77=mpxlf_r as the following programs use MPI-2 standard calls
+#OBJECTS=sum_rma.o
+
+run:$(OBJECTS)
+	$(F77) -o run $(OBJECTS) $(LIBS) $(MPILIB) 
+	
+.f.o:
+	$(F77) -c $<
+
+	
+clean: 
+	\rm -f *.o run
+

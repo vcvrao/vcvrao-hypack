@@ -1,0 +1,41 @@
+#
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013 
+#
+#
+##########################################################################
+##  			Makefile for MPI + OpenMP Fortran programs 
+##########################################################################
+
+CC          = mpif90 
+INCLS       = 
+FFLAGS      = -fopenmp  
+OPTFLAGS    = 
+#LIBS        = -brtl
+
+# For more information on the options of the compiler like qsmp,qmaxmem, etc.. refer manual page of mpxlf_r
+
+default : run
+
+# Uncomment one of the below mentioned OBJ file in order to compile a program
+
+#OBJECTS=mpi-omp-hello-world.o
+OBJECTS=mpi-omp-pie-calculation.o
+#OBJECTS=mpi-omp-mat-vect-mult-blkstp.o
+#OBJECTS=mpi-omp-mat-infnorm-blkstp.o
+
+
+run : $(OBJECTS)
+	$(CC) -o run $(OBJECTS) $(FFLAGS) $(LIBS) -lm
+
+.f.o : 
+	$(CC) -c $(FFLAGS) $<
+
+clean:
+	/bin/rm -rf *.o run

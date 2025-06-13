@@ -1,0 +1,4531 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                            
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+	    <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+                 <!-- ** -->
+                <A class=menulslct
+	         href="./../hypack13-mode01-multicore-mpi-openmp.html">
+                 &#149; MPI - OpenMP</A>
+                 <!-- ** -->
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+
+
+<H1> HeGaPa Mode 1 :  Mixed Mode of Programming Using MPI & OpenMP </H1> 
+</TR>
+</TBODY>
+ </TABLE> 
+
+
+
+<table cellPadding=3  border=0>  	
+  <tbody>	   
+     <tr>
+     <td>
+      <p align = "justify"> <span class = "content">
+
+		 Examples using a mixed(hybrid) mode-programming model such as MPI-OpenMP have been discussed.
+		By utilizing the mixed(hybrid) mode-programming model (MPI-OpenMP) ,we should be able to take
+		advantage of the benefits of both models. The majority of mixed mode applications involve a hierarchical model, 
+		MPI parallelisation occurring at the top level, and OpenMP parallelisation occurring below .Compiling and linking 
+		of mixed mode-programming MPI-OpenMP programs are explained in detail.Examples include numerical integration,infinity 
+		norms computation, matrix-vectore multiplication. 
+   </span> </p>
+       </td>
+	 </tr>
+   </tbody>
+</table>
+
+
+	<!--**********  Table for title of subsection starts here ************* -->
+
+<table width = "100%" border="0"  height="28">
+  <tbody>
+    <tr>
+      <td height="24" align="left" > <p align = "left" >
+         
+	
+     <!-- *****
+	<a href="#mpi-openmp-oview"><font size="2" face="Arial" color="blue"> <B> An Overview of MPI & OpenMP  </b>  </font> </a> 
+	 &nbsp; &nbsp; 
+      ***** -->
+
+	<a href="#mixed-mode-mpi-openmp">
+         <font size="2" face="Arial" color="blue"> <B>  MPI-OpenMP Overview
+	</b></font> </a> &nbsp; &nbsp; 
+
+	
+	<a href="#mpi-lib-calls"><font size="2" face="Arial" color="blue"> <B> Basic MPI Library Calls  </b>  </font> </a> 
+ 	&nbsp; &nbsp; 
+
+	<a href="#openmp-lib-calls"> <font size="2" face="Arial" color="blue"> <B> Basic OpenMP Library Calls  </b>  </font> </a> 
+ 	<BR> <BR> 
+
+
+	<a href="#MPI-OpenMP-Perf"> 
+        <font size="2" face="Arial" color="blue"> <B> MPI-OpenMP Perf. Tools </b>  </font> </a> 
+	 &nbsp; &nbsp;
+
+
+	<a href="#mpi-openmp-comp-exec"><font size="2" face="Arial" color="blue"> <B> Compilation &amp; 
+               Execution of MPI-OpenMP Programs </b> </font> </a>   <BR> <BR>
+ 
+	
+
+
+   	<font size="2" face="Arial" color="black">  
+ 	<B>  Example   Program : &nbsp; &nbsp;  </font>
+
+    	<a href="#mpi-openmp-example-fortran"> <font size="2" face="Arial" color="blue"> MPI-OpenMP-Fortran   </a>  
+        &nbsp; &nbsp;&nbsp; </font> 
+
+    	<a href="#mpi-openmp-example-c-lang"> <font size="2" face="Arial" color="blue"> MPI-OpenMP-C </a>  &nbsp; &nbsp; &nbsp;</font> 
+           
+  	</B> <BR> <BR>
+
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+<font size="2" face="Arial" color="red"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp;  
+<!-- ************* Reference Ends Here ************************ -->
+
+</td>
+    </tr>
+ </tbody>
+</table>
+
+<!--**********  Table for title of subsection Ends here ************* -->
+<HR> 
+
+<!-- ***************** Table for Listing of Programs Starts  ******************** -->
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr>
+<td>
+
+
+   <!-- ************** Example 1.1 ********************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-openmp-html/mpi-openmp-programs.html#mpi-openmp-par-prog-id11">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b>  <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+          Write an MPI-OpenMP program to print <I> Hello World" </i>. You have to use 
+        MPI Basic Library Calls and OpenMP PARALLEL For Directive. 
+
+
+       </span> </p>
+     </td>     </tr>
+
+ <!-- ****************** Example 1.2 *********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-openmp-html/mpi-openmp-programs.html#mpi-openmp-par-prog-id12">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 <BR>  <BR> </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+        Write an MPI-OpenMP program to compute the value of PI <I> pie </i> function by numerical integration of 
+        a function f(x) = 4/(1+x<sup>2</sup>) between the limits 0 and 1. You have to use 
+          MPI Collective Communication and Computation Library Calls and OpenMP PARALLEL For
+         Directive and CRITICAL section. 
+
+
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ****************** Example 1.3 ********************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-openmp-html/mpi-openmp-programs.html#mpi-openmp-par-prog-id13">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3 <BR>  <BR> </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+         Write an MPI-OpenMP program to calculate Infinity norm of a matrix using block striped 
+         partitioning with row wise data distribution.  
+       You have to use  MPI Collective Communication and OpenMP Parallel For Directive and PRIVATE, SHARED Clauses. 
+         </span> </p>
+     </td>
+     </tr>
+
+ <!-- ***************** Example 1.4 *********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-openmp-html/mpi-openmp-programs.html#mpi-openmp-par-prog-id14">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 <BR><BR>  </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+       Write a MPI-OpenMP program to compute the matrix-vector multiplication using self scheduling algorithm. 
+       You have to use  MPI Collective Communication and OpenMP <I> Parallel For Directive and PRIVATE, SHARED Clauses.
+
+         </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ****************** Example 1.5 ********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-openmp-html/mpi-openmp-programs.html#mpi-openmp-par-prog-id15">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5 <BR> </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+          Write a MPI-OpenMP program to compute the matrix into matrix Multiplication 
+         using Checker-Board  Partitoning of input Matrices (Assignment). 
+
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- *************** Example 1.6 ******************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-openmp-html/mpi-openmp-programs.html#mpi-openmp-par-prog-id16">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6 <BR></b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+          Write a MPI-openmp program to solve a system of linear equations Ax=b using Conjugate Gradient Method. (Assignment). 
+        </span> </p>
+     </td>
+   </tr>
+
+
+</td>
+</tr>
+
+</TBODY> 
+</TABLE> 
+<br><br>
+
+<!-- *********** Table for Listing of Programs Ends ****************** -->
+
+
+<!-- **************** Introduction to MPI-OpenMP Starts ****************** -->
+
+
+<a name="mixed-mode-mpi-openmp"> </a>
+
+ <TABLE width = "100%" cellPadding=3  border=0> 
+    <TBODY> <TR> 
+      <TD bgColor = #cccdd77889>  
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <p  align="justify">
+	  <b><font face="Verdana" color="black">
+          	  An Overview of MPI-OpenMP   
+	  </b> </p>
+      </font></DIV> 
+     </TD> 
+   </TR> 
+
+<!--  ******** Mixed Mode MPI-OpenMP starts here ******* -->
+<TR>
+<TD>
+
+<B> <font color ="red"> MPI - OpenMP </font> </B>  <BR> <BR>
+
+
+
+<p align = "justify"> <span class ="content">
+
+Message passing programs written in MPI are portable and should transfer easily to cluster of  Multi-Core processor Systems.
+  Message passing is required to communicate between nodes (boxes)  using different networks,and message passing
+  in node (Multi-core processors) require communication within node. Performance depends upon the 
+efficient implementation within a node.  <BR> <BR>
+
+OpenMP is an Application Program Interface (API) that may be used to explicitly direct multi-threaded, shared memory 
+parallelism. It is a specification for a set of compiler directives, library routines and environment variables 
+that can be used to specify shared memory parallelism in Fortran and C/C++ programs. 
+The OpenMP is a shared memory standard supported by most of the   hardware and software vendors. 
+OpenMP is comprised of three primary API components such as   Compiler Directives, 
+Runtime Library Routines, and  Environment Variables 
+OpenMP is portable and the API is specified for C/C++ and Fortran. 
+Multiple platforms have been implemented including most Unix platforms and Windows NT. Efforts are going on 
+to implement on Multi-Core processors to enhance the performance. The available programming environment on most 
+of the Multi-Core processors will address the thread affinity to core and overheads in OpenMP programming environment.
+<BR> <BR>
+
+A combination of shared memory and message 
+passing parallelisation paradigms within the same application (mixed mode programming) may provide a more efficient
+ parallelisation strategy than pure MPI.
+
+While mixed code may involve other programming languages such as High Performance Fortran (HPF) and POSIX threads.
+ Mixed MPI and OpenMP codes are likely to represent the most widespread use of mixed mode programming on SMP 
+cluster due to their portability and the fact that they represent industry standards for distributed and shared 
+memory systems respectively.
+
+While SMP clusters offer the greatest reason for developing mixed mode code, both the OpenMP and MPI paradigms 
+have different advantages and disadvantages and by developing such a model these characteristics might even be 
+exploited to give the best performance on a single SMP system. </span> </p>
+
+
+
+ <P align = "justify"> <span class = "content">
+   <font color = "black"> <strong> Thread Safety in MPI-OpenMP </STRONG> </font> </span> : 
+  						
+Although a large number of MPI implementations are thread-safe, mixed mode programming cannot be 
+guaranteed. To ensure the code is portable all	MPI calls should be made within thread sequential 
+regions of the code. This often creates little problem as the majority of codes involve the OpenMP 
+parallelisation occurring beneath the MPI parallelisation and hence the majority of MPI 			
+calls occur outside the OpenMP parallel regions. When MPI calls occur within an 
+OpenMP <B> parallel </b> region,
+ the 
+calls should be placed 	inside a <I> CRITICAL </i> , <i>MASTER </i> or <I> SINGLE REGION </I>,depending on the nature of the code. 
+Care should be taken with <I> SINGLE </i> regions, as different threads can execute the code. 
+Ideally the number of threads should be set from within each MPI process using 				
+<i> OMP_SET_NUM_THEREADS(n) </i>  as this is more portable than the <I> OMP_NUM_THREADS </i> environment
+ variable.
+ </span> </p>
+
+<p align=justify> <span class = "contents">
+
+In mixed mode-programming model, the advantage of the benefits of MPI & OpenMP  models can be taken in which,  a mixed mode 
+program make use of the explicit control data placement policies of MPI with the finer grain 	parallelism of OpenMP. 
+ The majority of mixed mode applications involve a hierarchical model, MPI parallelisation occurring at the top level, 
+and OpenMP parallelisation occurring below. For example, Figure 1 shows a two-dimensional grid, which has been 
+divided between four MPI processes. </span> </p>
+
+
+     <div align = "center">
+        <IMG SRC= "./mpi-openmp-images/mixedmode-mpi-openmp.gif"  align = "center"
+        width = "250"  height = "300" border=0>  
+      </div>
+
+	
+   <p align="center"> <span class = "contents">
+      <B>Figure 1:</B> Schematic representation of a hierarchical mixed mode progamming model for     a  two-dimensional grid array.
+     </span ></p>
+ 
+<p align=justify> <span class = "contents">
+
+In figure 1, the sub-arrays  have then been further divided between three OpenMP threads. This model closely maps to the 
+architecture of an SMP cluster,the MPI parallelisation occurring between the SMP boxes and the OpenMP parallelisation
+ within the boxes. Message passing could be used within a code when this is relatively simple to implement and 
+shared memory parallelism used where message passing is difficult. Most of the manufacturers provide extended 
+versions of their communication library for clusters of multiprocessors; existing MPI codes can be directly used 
+with a unified MPI model. The alternative is mixing MPI with a shared memory model such as OpenMP. In that case, 
+different possibilities exist, which must be compared according to the performance and programming effort tradeoff.
+<BR> <BR>
+
+
+In the mixed mode programming concept, MPI should be thread safe. If MPI is not thread safe, the program which is having
+non-blocking MPI library calls and OpenMP in certain order may give wrong results.
+Special care is needed while 
+using specific MPI library calls in mixed mode programming with OpenMP to avoid race conditions or to get correct results.
+<BR> <BR>
+
+</span> </p>
+
+
+	
+ <span class = "contents">
+
+<strong> <font color = "black"> (A) Fine-grain parallelisation  : </font> </strong> <BR> 
+
+
+<p align=justify> <span class ="content">
+    From an existing MPI code, the simplest approach is the incremental one:
+    It consists of OpenMP parallelisation of the loop nests in the computation part of the MPI code. 
+    This approach is also called OpenMP fine-grain or loop level parallelisation.
+    Several options can be used according to  </span>  </p>  
+
+    <UL>
+   	<LI> The programming effort  </li>
+   	<LI> The choice of the loop nests to parallelise</li>
+    </UL>
+
+<p align=justify> <span class ="content"> 
+ Several levels of programming effort are required. First possibility consists in parallelising loop nests
+ in the computation part of the MPI code without any manual optimization. Only the correctness of the parallel
+ version versus the sequential version 	semantic is checked. But the incremental approach can be
+ significantly improved by applying several manual optimizations (loop 	permutation, loop exchange,use of 
+ temporary variables). These optimizations are required  </spna> </p> 
+
+
+    <UL>
+   	<LI> To transform non parallel loop nests into parallel ones.  </li>
+   	<LI> <p align ="justify"> <span class ="content">
+    To improve the parallel efficiency by avoiding false sharing or reducing the number of 	  
+        synchronization points (critical sections, barriers).
+ </span> </p>
+</li>
+    </UL>
+
+
+<p align ="justify"> <span class ="content">
+	Another issue is the choice of the loop nests to parallelise. One option is to parallelise all loop nests. </span> </p>
+ 
+        <BR> 
+   
+    <UL>
+   	<LI> It increases the programming effort. </li>
+   	<LI> <p align ="justify"> <span class ="content">
+
+    The parallelisation loop nests that do not contribute significantly to the global 
+    execution time  can be counter-productive.
+   </span> </p>
+
+</li>
+    </UL>
+
+
+
+    The alternative option consists in selecting by profiling the loop nests that contribute significantly 
+    to the global execution time.
+
+    </span> </p>
+
+
+	<p align= "justify" > <span class = "contents">
+
+       <strong> <font color = "black"> (B) Coarse-grain parallelisation  : </font> </strong> 
+
+<BR> <BR>
+
+    
+      Instead of applying a two level parallelisation (process level and loop level), another currently 
+      investigated approach is the coarse-grain OpenMP SPMD parallelisation. In this approach, OpenMP
+      is still used to take advantage of the shared memory inside the SMP nodes or Multi-Core Processors  but a SPMD 
+      programming style is used instead of the traditional shared memory multi-thread approach.
+
+     In this mode, OpenMP is used to spawn <i> N </i> threads in the main program, having each thread act similarly to
+     a MPI process. 
+     The OpenMP PARALLEL directive is used at the outermost level of the program. The principle is to spawn 
+     the threads just after the spawn of the MPI processes (some initializations may separate the two spawns). As
+     for the message passing SPMD approach, the programmer must take care of several issues: </span> </p>
+
+<UL>
+   	<LI> Array distribution among threads </li>
+   	<LI> Work distribution among threads</li>
+   	<LI> Coordination between threads</li>
+</UL>
+
+	
+	<p align= "justify" > <span class = "contents">
+	Since the array distribution is done assuming a shared memory, the distribution of the array only concerns
+the attribution of different array regions to the different running threads. 
+For maximum performance, these regions should not overlap for write references. 
+The work distribution is made according to the array distribution. Typically, the OpenMP <i>DO directive</i> 
+is not 	used for distributing the loop iterations among threads. Instead, the programmer 
+inserts some calculations of the loop boundaries that 	depend 	on the thread number. 
+Co-ordinating the threads involves managing critical sections (I/O, MPI calls) 	using 	either OpenMP 	
+directives like <i>MASTER</i> or thread library calls like <i>OMP_GET_THREAD_NUM()</i> to guard 	
+conditional statements.<BR> <BR>
+
+On Multi-Core processors, the implementation of MPI and OpenMP give insight into the estimation of overheads
+and the use of OpenMP may alleviate some of the overheads from data movement, false sharing, and contention.
+The overheads associated with automated generation of threaded code from directives have been shown 
+minimal in the context of variety of applications on dual/quad core processors. <BR> <BR>
+
+A programmer must weigh all above considerations before deciding on an API (MPI &amp;  OpenMP) for programming 
+and performance point of view. 
+
+    </span> </p>
+
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0" width="13"height="13"></a>
+</div>  
+
+<BR> <BR>
+<!--  ******** Mixed Mode MPI-OpenMP Ends here ******* -->
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<!-- *************  BAsic MPI library Calls ********************* -->
+
+<a name="mpi-lib-calls"> </a>
+
+ <TABLE width = "100%" cellPadding=3 border=0> 
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <p  align="justify"><b><font face="Verdana" color="black">
+ Basic MPI 1.X library Calls 
+    </b> </p>
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+ <TR>
+<TD>
+<br><br>
+
+<p align = "justify">
+<span class = "content">
+
+<B>Brief Introduction to MPI 1.X  Library  Calls</B> : <BR> <BR>
+
+Most commonly used MPI Library calls in FORTRAN/C -Language
+have been explained below. <BR> <BR>
+
+
+<!-- ***** MPI Init Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B>MPI_Init<I>(int *argc, char **argv</I>);</B> <BR> <BR>
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B>MPI_Init</B>(ierror)  <BR> 
+<I> Integer </i> ierror <BR> <BR>
+
+<FONT COLOR="red"><I> Initializes the MPI execution environment  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This call is required in every MPI program and must be the first MPI call. It 
+establishes the MPI "environment". Only one invocation of MPI_Init can occur in each 
+program execution. It takes the command line arguments as parameters. In a FORTRAN call to
+ MPI_Init the only argument is the error code. Every Fortran MPI subroutine returns an error 
+code in its last argument, which is either MPI_SUCCESS or an implementation-defined error code. 
+It allows the system to do any special setup so that the MPI library can be used.  					
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Init Libray call ends ***** -->
+
+
+<!-- ***** MPI Comm Rank  Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Comm_rank (<I>MPI_Comm</I> </B>comm<B>,&nbsp; <I>int</I> </B>rank<B>); </B> <BR> <BR>
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B>MPI_Comm_rank</B> (comm, rank, ierror) <BR> 
+ 
+
+<I>integer</I></B> comm, rank, ierror <BR> <BR>
+
+
+<FONT COLOR="red"><I> Determines the rank of the calling process in the communicator   
+   </i> </FONT> 
+
+<p align = "justify">
+<span class = "content">
+The first argument to the call is a communicator and the rank of the process is returned 
+in the second argument. Essentially a communicator is a collection of processes 
+that can send messages to each other. The only communicator needed for basic programs
+ is MPI_COMM_WORLD and is predefined in MPI and consists of the processees running 
+when program execution begins.  
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Comm Rank Libray call ends ***** -->
+
+
+<!-- ***** MPI Comm Size  Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Comm_size (<I>MPI_Comm</I></B> comm, <B><I>int</I></B> num_of_processes); </B> <BR> <BR>
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> MPI_Comm_size</B> (comm, size, ierror)<BR> 
+ 
+
+<I>integer</I></B> comm, size, ierror <BR> <BR>
+
+
+<FONT COLOR="red"><I> Determines the size of the group associated with a communicator     
+  </i> </FONT>  
+
+<p align = "justify">
+<span class = "content">
+This function determines the number of processes executing the program. Its first argument 
+is the communicator and it returns the number of processes in the communicator in its second
+ argument.   
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Comm Size  Libray call ends ***** -->
+
+
+<!-- ***** MPI Finalize   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Finalize() </B>
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Finazlise</B>(ierror) <BR>
+<B><I>integer</I></B>  ierror <BR> <BR>
+
+<FONT COLOR="red"><I> Terminates MPI execution environment  </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+This call must be made by every process in a MPI computation. It terminates the MPI "environment", 
+<B> no </b>  MPI calls my be made by a process after its call to <B> MPI_Finalize. </B>
+ 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Finalize   Libray call ends ***** -->
+
+
+
+
+<!-- ***** MPI Send   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>MPI_Send (<I>void </I></B>*message<B>,<I>&nbsp; int</I> </B>count<B>,&nbsp; <I>MPI_Datatype</I>
+</B>datatype<B>,&nbsp; <I>int</I> </B>destination<B>,&nbsp; <I>int</I> </B>tag<B>,&nbsp;
+<I>MPI_Comm</I> </B>comm<B>);</B> <BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> MPI_Send</B>(buf, count, datatype, dest, tag, comm, ierror)<BR> 
+
+ &lt;type&gt; buf (*) <BR>
+ <B><I>integer</I></B> count, datatype, dest, tag, comm, ierror <BR> <BR>
+
+
+
+
+<FONT COLOR="red"><I> Basic send (It is a blocking send call)   </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+The first three arguments descibe the message as the address,count and the datatype. 
+The content of the message are stored in the block of memory refrenced by the address. 
+The count specifies the number of elements contained in the message which are of 
+a MPI type MPI_DATATYPE. The next argument is the destination, an integer specifying 
+the rank of the destination process. 
+The tag argument helps identify messages.    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Send  Libray call ends ***** -->
+
+
+<!-- ***** MPI Recv   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>MPI_Recv (<I>void</I> </B>*message<B>,&nbsp; <I>int</I> </B>count<B>,&nbsp; <I>MPI_Datatype</I>
+</B>datatype<B>,&nbsp; <I>int</I> </B>source<B>,&nbsp; <I>int</I> </B>tag<B>,&nbsp; <I>MPI_Comm</I>
+</B>comm<B>,&nbsp; <I>MPI_Status</I> </B>*status<B>)&nbsp;</B> <BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B>MPI_Recv</B>(buf, count, datatype, source, tag, comm, status, ierror)<BR>
+&lt;type&gt; buf (*)&nbsp;
+<BR><B><I>integer</I></B>
+count, datatype, source, tag, comm, status, ierror&nbsp; <BR> <BR>
+
+
+
+<FONT COLOR="red"><I> Basic receive ( It is a blocking receive call)  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+The first three arguments descibe the message as the address,count and the datatype. 
+The content of the message are stored in the block of memory referenced by the address. 
+The count specifies the number of elements contained in the message which are of a MPI 
+type MPI_DATATYPE. The next argument is the source which specifies the rank of the sending 
+process. MPI allows the source to be a "wild card". There is a predefined constant
+ MPI_ANY_SOURCE that can be used if a process is ready to receive a message from any 
+sending process rather than a particular sending process. The tag argument helps identify 
+messages. The last argument returns information on the data that was actually received. 
+It references a record with two fields - one for the source and the other for the tag.  
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Recv  Libray call ends ***** -->
+
+<!-- **** ..........MPI Advanced Point-to-Point Library Calls Starts.........******* -->
+
+
+<!-- ***** MPI Sendrecv   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Sendrecv</B> (<B><I>void</I></B> *sendbuf, <B><I>int</I></B> sendcount, <B><I>MPI</I></B>_<B><I>Datatype</I></B>
+sendtype, <B><I>int</I></B> dest, <B><I>int</I></B> sendtag, <B><I>void</I></B> 
+*recvbuf , <B><I>int</I></B> recvcount, <B><I>MPI_Datatype</I></B> recvtype, <B><I>int</I></B>
+source, <B><I>int</I></B> recvtag, <B><I>MPI_Comm</I></B> comm, <B><I>MPI_Status</I></B>
+*status); 
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Sendrecv</B> (sendbuf, sendcount, sendtype, dest, sendtag, recvbuf, 
+recvcount, recvtype, source, recvtag, comm, status, ierror)
+<BR> <BR>
+&lt;type&gt; sendbuf (*), recvbuf (*)&nbsp; <BR>
+
+<B><I>integer </I></B>
+sendcount, sendtype, dest, sendtag, recvcount, recvtype, source, recvtag <BR>
+
+<B><I>integer </I></B>
+comm,  status(*), ierror
+<BR> <BR>
+
+<FONT COLOR="red"><I> Sends and recevies a message  </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+The function MPI_Sendrecv, as its name implies, performs both a send ana a 
+receive. The parameter list is basically just a concatenation of the parameter 
+lists for the MPI_Send and MPI_Recv. The only difference is that the 
+communicator parameter is not repeated. The destination and the source 
+parameters can be the same. The "send" in an MPI_Sendrecv can be matched by an 
+ordinary MPI_Recv, and the "receive" can be matched by and ordinary MPI_Send. 
+The basic difference between a call to this function and MPI_Send followed by 
+MPI_Recv (or vice versa) is that MPI can try to arrange that no deadlock occurs 
+since it knows that the sends and receives will be paired.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Sendrecv Library Call Ends **** -->
+
+
+<!-- ***** MPI Sendrecv_replace   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Sendrecv_replace </B>(<B><I>void</I></B>* buf, <B><I>int</I></B> count, <B><I>MPI_Datatype</I></B>
+datatype, <B><I>int</I></B> dest, <B><I>int</I></B> sendtag, <B><I>int</I></B> source,
+<B><I>int</I></B> recvtag, <B><I>MPI_Comm</I></B> comm, <B><I>MPI_Status</I></B>
+*status)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Sendrecv_replace</B> (buf, count, datatype, dest, sendtag, source, 
+recvtag, comm, status, ierror)
+<BR>
+&lt;type&gt; buf (*)
+<BR>
+<B><I>integer</I></B>
+count, datatype, dest, sendtag, source, recvtag <BR>
+
+<B><I>integer </I></B> 
+comm,  status(*), ierror
+<BR> <BR>
+
+<FONT COLOR="red"><I> Sends and receives using a single buffer  </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Sendrecv_replace sends and receives using a single buffer.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Sendrecv_replace Library Call Ends **** -->
+
+
+<!-- ***** MPI Bsend   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Bsend</B> (<B><I>void</I></B> *buf, <B><I>int</I></B> count, <B><I>MPI_Datatype</I></B>
+datatype, <B><I>int</I></B> dest, <B><I>int</I></B> tag, <B><I>MPI_Comm</I></B> 
+comm)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Bsend</B> (buf, count, datatype, dest, tag, comm, ierror)
+<BR>
+&lt;type&gt; buf (*)
+<BR>
+<B><I>integer</I></B>
+count, datatype, dest, tag, comm, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Basic send with user specified buffering </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Bsend copies the data into a buffer and transfers the complete buffer to the 
+user.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Bsend Library Call Ends **** -->
+
+
+<!-- ***** MPI Isend   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B>MPI_Isend</B> (<B><I>void</I></B>* buf, <B><I>int</I></B> count, <B><I>MPI_Datatype</I></B>
+datatype, <B><I>int</I></B> dest, <B><I>int</I></B> tag, <B><I>MPI_Comm</I></B> 
+comm, <B><I>MPI_Request</I></B> *request)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Isend</B> (buf, count, datatype, dest, tag, comm, request, ierror)
+<BR>
+&lt;type&gt; buf (*)
+<BR>
+<B><I>integer</I></B>
+count, datatype, dest, tag, comm, request, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Begins a nonblocking send </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Isend is a nonblocking send. The basic functions in MPI for starting 
+non-blocking communications are MPI_Isend. The "I" stands for "immediate," 
+i.e., they return (more or less) immediately.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Isend Library Call Ends **** -->
+
+
+<!-- ***** MPI Irecv   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B>MPI_Irecv</B> (<B><I>void</I></B>* buf, <B><I>int</I></B> count, <B><I>MPI_Datatype</I></B>
+datatype, <B><I>int</I></B> source, <B><I>int</I></B> tag, <B><I>MPI_Comm</I></B>
+comm, <B><I>MPI_Request</I></B> *request)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Irecv</B> (buf, count, datatype, source, tag, comm, request, 
+ierror)&nbsp;
+<BR>
+&lt;type&gt; buf (*)&nbsp;
+<BR>
+<B><I>integer</I></B>
+count, datatype, source, tag, comm, request, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Begins a nonblocking send </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Irecv begins a nonblocking receive. The basic functions in MPI for starting 
+non-blocking communications are MPI_Irecv. The "I" stands for "immediate," 
+i.e., they return (more or less) immediately.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Irecv Library Call Ends **** -->
+
+
+
+<!-- ***** MPI Wait   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B> MPI_Wait</B> (<B><I>MPI_Reques</I></B>t *request, <B><I>MPI_Status</I></B> *status);
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Wait</B> (request, status, ierror)&nbsp;
+<BR>
+<B><I>integer</I></B> request, status (*), ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Waits for a MPI send or receive to complete </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Wait waits for an MPI send or receive to complete. There are variety of functions 
+that MPI uses to complete nonblocking operations. The simplest of these is 
+MPI_Wait. It can be used to complete any nonblocking operation. The request 
+parameter corresponds to the request parameter returned by MPI_Isend or 
+MPI_Irecv.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Wait Library Call Ends **** -->
+
+
+<!-- ***** MPI Ssend   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Ssend</B> (<B><I>void</I></B>* buf, <B><I>int</I></B> count, <B><I>MPI_Datatype</I></B>
+datatype, <B><I>int</I></B> dest, <B><I>int</I></B> tag, <B><I>MPI_Comm</I></B> 
+comm)&nbsp
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Ssend</B> (buf, count, datatype, dest, tag, comm, ierror)&nbsp;
+<BR>
+&lt;type&gt; buf (*)&nbsp;
+<BR>
+<B><I>integer</I></B> count, datatype, dest, tag, comm, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Builds a handle for a synchronous send </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Ssend is one of the synchronous mode send operations 
+provided by MPI.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Ssend Library Call Ends **** -->
+
+
+<!-- **** ..........MPI Advanced Point-to-Point Library Calls Ends.........******* -->
+
+
+
+<!-- **** ..........MPI Collective Comm. & Comp.  Library Calls Starts........******* -->
+
+
+<!-- ***** MPI Broadcast   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>MPI_Bcast (<I>void</I> </B>*message<B>,&nbsp; <I>int</I> </B>count<B>,&nbsp; 
+<I>MPI_Datatype</I>
+</B>datatype<B>,<I>&nbsp; int</I></B> root<B>,&nbsp; <I>MPI_Comm</I> </B>comm<B>)</B> 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B>MPI_Bcast</B>(buffer, count, datatype, root, comm, ierror)<BR>
+&lt;type&gt; buffer (*)<BR>
+<I>integer</I> count, datatype, root, comm, ierror&nbsp; <BR> <BR>
+
+
+
+<FONT COLOR="red"><I> Broadcast a message from the 
+    process with rank "root" to all other processes of the group   </I> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+It is a collective communication call in which a single process sends same data 
+to every process. It sends a copy of the data in <B>message</B> on process <B>root</B>
+to each process in the communicator <B>comm</B>. It should be called by all 
+processors in the communicator with the same arguments for root and comm.;
+<BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI BroadCast  Libray call ends ***** -->
+
+<!-- ***** MPI Scatter   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Scatter ((<I>void</I> <I>*</I></B>send_buffer<B>,&nbsp; <I>int</I> </B>send_count<B>,&nbsp;
+<I>MPI_DATATYPE </I></B><I>send_type</I><B>,&nbsp; <I>void</I> *</B>recv_buffer<B>,&nbsp;&nbsp;
+<I>int</I> </B>recv_count<B>, <I>MPI_DATATYPE</I> </B>recv_type<B><I>,&nbsp; int</I></B>
+root<B>,&nbsp; <I>MPI_Comm</I> </B>comm<B>);</B>
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Scatter</B>(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, 
+root , comm, ierror)<BR>
+&lt;type&gt; sendbuf (*), recvbuf (*)
+<BR>
+<B><I>integer</I></B>
+sendcount, sendtype, recvcount, recvtype, root , comm, ierror <BR> <BR>
+
+
+<FONT COLOR="red"><I> Sends data from one process to all other processes in a group   
+
+ </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+The process with rank <B><I>root</I></B> distributes the contents of <B><I>send_buffer</I></B>
+among the processes. The contents of send_buffer are split into <B><I>p</I></B> 
+segments each consisting of <B><I>send_count</I></B> elements. The first 
+segment goes to process 0, the second to process 1 ,etc. The send arguments are 
+significant only on process root.
+<BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Scatter  Libray call ends ***** -->
+
+
+
+<!-- ***** MPI Scatterv   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Scatterv</B> (<B><I>void</I></B>* sendbuf, <B><I>int</I></B> *sendcounts,
+<B><I>int</I></B> *displs, <B>MPI_Datatype</B> sendtype, <B><I>void</I></B>* 
+recvbuf, <B><I>int</I></B> recvcount, <B><I>MPI_Datatype</I></B> recvtype, <B><I>int</I></B>
+root, <B><I>MPI_Comm</I></B> comm)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Scatterv</B> (sendbuf, sendcounts, displs, sendtype, recvbuf, recvcount, 
+recvtype, root, comm, ierror)
+<BR>
+
+&lt;type&gt; sendbuf (*), recvbuf (*)&nbsp;
+<BR>
+<B><I>integer</I></B>
+sendcounts (*), displs (*), sendtype, recvcount, recvtype, root, comm, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Scatters a buffer in different/same  size of parts to all processes 
+in a group    
+
+ </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+A simple extension to MPI_Scatter is MPI_Scatterv. 
+MPI_Scatterv allows the size 
+of the data being sent by each process to vary.<BR> <BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Scatterv  Libray call ends ***** -->
+
+
+<!-- ***** MPI Gather   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Gather (<I>void</I> <I>*</I></B>send_buffer<B>, <I>int</I> </B>send_count<B>,
+<I>MPI_DATATYPE </I></B><I>send_type</I><B>, <I>void</I> *</B>recv_buffer<B>,&nbsp;
+<I>int</I> </B>recv_count<B>, <I>MPI_DATATYPE</I> </B>recv_type<B><I>,&nbsp; int</I></B>
+root<B>,&nbsp; <I>MPI_Comm</I> </B>comm<B>)</B>
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Gather</B>(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, 
+root, comm, ierror)
+<BR>
+&lt;type&gt; sendbuf (*), recvbuf (*)
+<BR>
+<B><I>integer</I></B>
+sendcount, sendtype, recvcount, recvtype, root, comm, ierror&nbsp; <BR> <BR>
+
+<FONT COLOR="red"><I> Process gathers together values from a group of tasks    
+
+ </i> </FONT>
+
+
+<p align = "justify">
+<span class = "content">
+Each process in comm sends the contents of <B><I>send_buffer</I></B> to the 
+process with rank <B><I>root</I></B>. The process root concatenates the 
+received data in the process rank order in <B><I>recv_buffer</I></B>. The 
+receive arguments are significant only on the process with rank root. The 
+argument <B><I>recv_count</I></B> indicates the number of items received from 
+each process - not the total number received.<BR> <BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Gather  Libray call ends ***** -->
+
+
+
+<!-- ***** MPI Gatherv   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Gatherv</B> (<B><I>void</I></B>* sendbuf, <B><I>int</I></B> sendcount, <B><I>MPI_Datatype</I></B>
+sendtype, <B><I>void</I></B> *recvbuf, <B><I>int</I></B> *recvcounts, <B><I>int</I></B>
+*displs, <B><I>MPI_Datatype</I></B> recvtype, <B><I>int</I></B> root, <B><I>MPI_Comm</I></B>
+comm)</B>
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Gatherv</B> (sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs, 
+recvtype, root, comm, ierror)
+<BR>
+&lt;type&gt; sendbuf (*), recvbuf (*)&nbsp;
+<BR>
+<B><I>integer</I></B>
+sendcount, sendtype, recvcounts (*), displs (*), recvtype, root, comm, 
+ierror
+<BR> <BR>
+
+<FONT COLOR="red"><I> Gathers into specified locations from all processes 
+in a group    </i> </FONT>
+
+<p align = "justify">
+<span class = "content">
+A simple extension to MPI_Gather is MPI_Gatherv. MPI_Gatherv 
+allows the size of 
+the data being sent by each process to vary.<BR> <BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Gatherv  Libray call ends ***** -->
+
+
+
+<!-- ***** MPI Barrier   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Barrier</B> (<B><I>MPI_Comm</I></B> comm)
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Barrier</B> (comm, ierror)
+
+<BR>
+<B><I>integer</I></B> comm, ierror 
+<BR> <BR>
+
+
+
+<FONT COLOR="red"><I> Blocks until all process have reached this routine  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Barrier blocks the calling process until all processes 
+in comm have entered 
+the function.
+<BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<HR>
+
+</span> 
+</p>
+
+<!-- ******** MPI Barrier Libray call ends ***** -->
+
+
+
+<!-- ***** MPI Reduce   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Reduce (<I>void</I> </B>*operand<B>,&nbsp; <I>void</I> </B>*result<B>,&nbsp; <I>int</I>
+</B>count<B>,&nbsp; <I>MPI_Datatype</I> </B>datatype<B>,&nbsp; <I>MPI_Operator</I> </B>
+op<B>,&nbsp; <I>int</I> </B>root<B>, <I>MPI_Comm</I> </B>comm<B>);</B>
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Reduce</B>(sendbuf, recvbuf, count, datatype, op, root, comm,ierror)
+<BR>
+&lt;type&gt; sendbuf (*), recvbuf (*)
+<BR>
+<B><I>integer</I></B> count, datatype, op, root, comm, ierror <BR> <BR>
+
+
+
+<FONT COLOR="red"><I> Reduce values on all processes to a single value  </i> </FONT>
+
+<p align = "justify">
+<span class = "content">
+MPI_Reduce combines the operands stored in *operand using operation <B>op</B> and 
+stores the result on <B>*result</B> on the <B>root</B>. Both operand and result 
+refer <B>count</B> memory locations with type <B>datatype</B>. MPI_Reduce must 
+be called by all the process in the communicator comm, and count, datatype 
+and op must be same on each process.
+<BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Reduce  Libray call ends ***** -->
+
+
+<!-- ***** MPI All Reduce   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Allreduce</B> (<B><I>void</I></B>* sendbuf, <B><I>void</I></B>* recvbuf, <B><I>int</I></B>
+count, <B><I>MPI</I></B>_<B><I>Datatype</I></B> datatype, <B><I>MPI_Op</I></B> op,
+<B><I>MPI_Comm</I></B> comm)&nbsp;
+
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Allreduce</B> (sendbuf, recvbuf, count, datatype, op, comm, ierror)
+<BR>
+
+&lt;type&gt; sendbuf (*), recvbuf (*)
+<BR>
+<B><I>integer</I></B>
+count, datatype, op, comm, ierror <BR> <BR>
+
+
+<FONT COLOR="red"><I> Combines values from all processes and 
+distribute the result to all process.  </i> </FONT>
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Allreduce combines values form all processes and 
+distribute the result back 
+to all processes.
+<BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI All Reduce  Libray call ends ***** -->
+
+
+
+
+
+
+<!-- ***** MPI AllGather   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Allgather (<I>void</I> *</B>send_buffer<B>, <I>int</I> </B>send_count<B>, 
+<I>MPI_DATATYPE</I>
+</B>send_type<B>, <I>void</I> *</B>recv_buffer<B>, <I>int</I> </B>recv_count<B>,
+<I>MPI_Datatype</I> </B>recv_type<B>, <I>MPI_Comm</I> </B>comm<B>)</B>
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Allgather</B>(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, 
+comm, ierror)
+<BR>
+&lt;type&gt; sendbuf(*), recvbuf(*)
+<BR>
+<B><I>integer</I></B>
+sendcount, sendtype, recvcount, recvtype, comm, ierror <BR> <BR>
+
+<FONT COLOR="red"><I> Gathers data from all processes and distribute it to all       
+  </i> </FONT>
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Allgather gathers the contents of each <B><I>send_buffer</I></B> on each process. 
+Its <I>effect</I> is the same as if there were a sequence of <B><I>p </I></B>
+calls to MPI_Gather, each of which has a different process acting as a <B><I>root</I>.&nbsp;
+</B><BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI AllGather  Libray call ends ***** -->
+
+
+
+<!-- ***** MPI AlltoAll   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Alltoall</B> (<B><I>void</I></B>* sendbuf, <B><I>int</I></B> sendcount, 
+<B><I>MPI_Datatype</I></B>
+sendtype, <B><I>void</I></B>* recvbuf, <B><I>int</I></B> recvcount, <B><I>MPI_Datatype</I></B>
+recvtype, <B><I>MPI_Comm</I></B> comm)
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Alltoal<U>l</U></B> (sendbuf, sendcount, sendtype, recvbuf, recvcount, 
+recvtype, comm, ierror)
+<BR>
+
+&lt;type&gt; sendbuf (*), recvbuf (*)
+<BR>
+
+<B><I>integer</I></B>
+sendcount, sendtype, recvcount, recvtype, comm, ierror
+ <BR> <BR>
+
+<FONT COLOR="red"><I> Sends distinct collection of data from all to all processes       
+  </i> </FONT>
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Alltoall is a collective communication operation 
+in which every process 
+sends distinct collection of data to every other process. This is an extension 
+of gather and scatter operation also called as total-exchange.
+</B>
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI AlltoAll Libray call ends ***** -->
+
+
+<!-- **** ..........MPI Colelctive Comm. & Comp.  Library Calls Ends........******* -->
+
+
+
+
+<!-- ***** MPI Wtime    Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>Double</B>&nbsp;</I> <B>MPI_Wtime</B></B>( )
+ 
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+double precision</I></B> <B>MPI_Wtime</B>
+<BR> <BR>
+
+<FONT COLOR="red"><I> Returns an ellapsed time on the calling processes      
+  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+MPI provides a simple routine MPI_Wtime( ) that can be used to time programs or 
+section of programs. MPI_Wtime( ) returns a double precision floating point 
+number of seconds, since some arbitrary point of time in the past. The time 
+interval can be measured by calling this routine at the beginning and at the 
+end of program segment and subtracting the values returned.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** MPI Wtime Libray call ends ***** -->
+
+
+
+<!-- *** ....MPI Group Communicators; Derive Data Types & Cartesison Topologies starts...****** -->
+
+
+<!-- ***** MPI Comm_split   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Comm_split ( <I>MPI_Comm</I> </B>old_comm, <B><I>int</I></B> split_key, <B><I>int
+</I></B>rank_key, <B><I>MPI_Comm*</I></B> new_comm); 
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Comm_split </B>( comm, size, ierror)
+<BR>
+<B><I>integer</I></B>comm, size, ierror<BR> <BR>
+
+<FONT COLOR="red"><I> Creates new communicator based on the colors and keys </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+The single call to MPI_Comm_split creates<B><I> q</I></B> new
+ communicators, all 
+of them having the same name, *new_comm. It creates a new communicator for each 
+value of the <B><I>split_key</I></B>. Process with the same value of split_key 
+form a new group. The rank in the new group is determined by the value of <B><I>rank_key</I></B>. 
+If process A and process B call MPI_Comm split with the same value of 
+split_key, and the rank_key argument passed by process A is less than that 
+passed by process B, then the rank of A in underlying group&nbsp; new_comm will 
+be less than the rank of process B. It is a collective call, and it must be 
+called by all the processes in old_comm.&nbsp;
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Comm_split   Library Call Ends **** -->
+
+
+
+<!-- ***** MPI Comm_group   Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Comm_group ( <I>MPI_Comm</I></B> comm, <B><I>MPI_Group</I></B> *group); 
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Comm_group</B> (comm, group, ierror);
+<BR>
+<B><I>integer</I></B>
+comm, group, ierror&nbsp;</font> <BR> <BR>
+
+<FONT COLOR="red"><I> Accesses the group associated 
+with the given communicator </i> </FONT>  
+
+
+
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Comm_group   Library Call Ends **** -->
+
+
+<!-- ***** MPI Comm_Group_include  Library Call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Group_incl ( <I>MPI_Group </I></B>old_group, <B><I>int</I></B> new_group_size,
+	<B><I>int*</I></B> ranks_in_old_group, <B><I>MPI_Group</I></B>* 
+new_group) 
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Group_incl </B>(old_group, new_group_size, ranks_in_old_group , 
+new_group, ierror)
+<BR>
+<B><I>integer</I></B>
+old_group, new_group_size, ranks_in_old_group (*), new_group, ierror<BR> <BR>
+
+<FONT COLOR="red"><I> Produces a group by reordering an existing group and taking 
+only unlisted members </i> </FONT>  
+
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Comm_Group_incl   Library call Ends **** -->
+
+
+<!-- ***** MPI Comm_create   Library call Starts **** -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Comm_create(<I>MPI_Comm</I></B> old_comm, <B><I>MPI_Group </I></B>new_group,
+<B><I>MPI_Comm</I></B> * new_comm); 
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Comm_create</B>(old_comm, new_group, new_comm, ierror); 
+<BR>
+<B><I>integer</I></B>
+old_comm, new_group, new_comm, ierror<BR> <BR>
+
+<FONT COLOR="red"><I> Creates a new communicator </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+Groups and communicators are opaque objects. From a parctical standpoint, this 
+means that the details of their internal representation depend on the 
+particular implementation of MPI, and, as a consequence, they cannot be 
+directly accessed by the user. Rather the user access a handle that refrences 
+the opaque object, and the objects are manipulated by special MPI functions 
+MPI_Comm_create, MPI_Group_incl and MPI_Comm_group. Contexts are not explicitly 
+used in any MPI functions. MPI_Comm_group simply returns the group underlying 
+the communicator comm. MPI_Group_incl creates a new group from the list of 
+process in the existing group old_group. The number of process in he new group 
+is the new_group _size, and the processes to be included are listed in ranks_in 
+_old_group. MPI_Comm_create associates a context with the group new_group and 
+creates the communicator new_comm. All of the process in new_group belong to 
+the group underlying old_comm. MPI_Comm_create is a collective operation. All 
+the processes in old_comm must call MPI_Comm_create with the same 
+arguments.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Comm_split   Library call Ends **** -->
+
+
+
+<!-- ***** MPI Comm_create   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Comm_create(<I>MPI_Comm</I></B> old_comm, <B><I>MPI_Group </I></B>new_group,
+<B><I>MPI_Comm</I></B> * new_comm); 
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+<B>MPI_Comm_create</B>(old_comm, new_group, new_comm, ierror); 
+<BR>
+<B><I>integer</I></B>
+old_comm, new_group, new_comm, ierror<BR> <BR>
+
+<FONT COLOR="red"><I> Creates a new communicator </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+Groups and communicators are opaque objects. From a parctical standpoint, this 
+means that the details of their internal representation depend on the 
+particular implementation of MPI, and, as a consequence, they cannot be 
+directly accessed by the user. Rather the user access a handle that refrences 
+the opaque object, and the objects are manipulated by special MPI functions 
+MPI_Comm_create, MPI_Group_incl and MPI_Comm_group. Contexts are not explicitly 
+used in any MPI functions. MPI_Comm_group simply returns the group underlying 
+the communicator comm. MPI_Group_incl creates a new group from the list of 
+process in the existing group old_group. The number of process in he new group 
+is the new_group _size, and the processes to be included are listed in ranks_in 
+_old_group. MPI_Comm_create associates a context with the group new_group and 
+creates the communicator new_comm. All of the process in new_group belong to 
+the group underlying old_comm. MPI_Comm_create is a collective operation. All 
+the processes in old_comm must call MPI_Comm_create with the same 
+arguments.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Comm_split   Library call Ends **** -->
+
+
+<!-- ***** MPI Cart_create   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Cart_create</B> (<B><I>MPI_Comm</I></B> comm_old, <B><I>int</I></B>
+ndims, <B><I>int</I></B> *dims, <B><I>int</I></B> *periods, <B><I>int</I></B> reorder,
+<B><I>MPI_Comm</I></B> *comm_cart)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Cart_create</B> (comm_old, ndims, dims, periods, reorder, comm_cart, 
+ierror) 
+<BR>
+
+<B><I>integer</I></B>
+comm_old, ndims, dims(*), comm_cart, ierror logical periods(*), reorder<BR> <BR>
+
+<FONT COLOR="red"><I> Makes a new communicator to which 
+topology information has been given in the form of Cartesian Coodinates </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Cart_create creates a Cartersian decomposition of 
+the processes, with the 
+number of dimensions given by the number_of_dimensions argument. The user can 
+specify the number of processes in any direction by giving a positive value to 
+the corresponding element of dimensions_sizes.
+arguments.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Cart_create   Library call Ends **** -->
+
+
+<!-- ***** MPI Cart_rank   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B>MPI_Cart_rank</B> (<B><I>MPI_Comm</I></B> comm, <B><I>int</I></B> *coords, <B><I>int</I></B>
+*rank)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Cart_rank</B> (comm, coords, rank, ierror)&nbsp;
+<BR>
+<B><I>integer</I></B> comm, coords (*), rank, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Determines process rank in communicator 
+given Cartesian location </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Cart_rank returns the rank in the Cartesian communicator 
+comm of the process 
+with Cartesian coordinates. So coordinates is an array with order equal to the 
+number of dimensions in the Cartesian topology associated with comm.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Cart_rank   Library call Ends **** -->
+
+
+<!-- ***** MPI Cart_coords   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B>MPI_Cart_coords</B> (MPI_Comm comm, <B><I>int</I></B> rank, <B><I>int</I></B>
+maxdims, <B><I>int</I></B> *coords)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Cart_coords</B> (comm, rank, maxdims, coords, ierror)&nbsp;
+<BR>
+<B><I>integer</I></B>
+comm, rank, maxdims, coords (*), ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Determines process coords in Cartesian 
+topology given ranks in  new Commincator </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Cart_coords takes input as a rank in a communicator, 
+returns the coordinates 
+of the process with that rank. MPI_Cart_coords is the inverse to MPI_Cart_Rank; 
+it returns the coordinates of the processes with rank rank in the Cartesian 
+communicator comm. Note that both of these functions are local.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Cart_coords   Library call Ends **** -->
+
+
+<!-- ***** MPI Cart_get   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Cart_get</B> (<B><I>MPI_Comm</I></B> comm, <B><I>int</I></B> maxdims, <B><I>int</I></B>
+*dims, <B><I>int</I></B> *periods, <B><I>int</I></B> *coords)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Cart_get</B> (comm, maxdims, dims, periods, cords, ierror)&nbsp;
+<BR>
+<B><I>integer</I></B>
+comm, maxdims, dims (*), coords (*), ierror, logical periods (*)
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Retrieve  Cartesian topology information
+ associated with a communicator </i> </FONT> 
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Cart_get retrieves the coordinates of the calling process in 
+communicator.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Cart_get   Library call Ends **** -->
+
+
+
+<!-- ***** MPI Cart_shift   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Cart_shift</B> (<B><I>MPI_Comm</I></B> comm, <B><I>int</I></B> direction,
+<B><I>int</I></B> disp, <B><I>int</I></B> *rank_source, <B><I>int</I></B> *rank_dest)
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Cart_shift</B> (comm, direction, disp, rank_source, rank_dest, ierror)
+<BR>
+
+<B><I>integer</I></B> comm, direction, disp, rank_source, rank_dest, ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Returns the  shifted source and destination 
+ranks given a shift direction and amount </i> </FONT>  
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Cart_shift returns rank of source and destination 
+processes in arguments  rank_source and rank_dest respectively.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Cart_shift   Library call Ends **** -->
+
+
+
+<!-- ***** MPI Cart_sub   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Cart_sub</B> (MPI_Comm comm, <B><I>int</I></B> *remain_dims, <B><I>MPI_Comm</I></B>
+*newcomm)&nbsp;
+
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Cart_sub</B> (old_comm, remain_dims, new_comm, ierror)&nbsp;
+<BR>
+<B><I>integer</I></B> old_comm, newcomm, ierror 
+
+<B><I>logical</I></B> remain_dims(*)
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Partitions a communicator into subgroups that from 
+													
+lower-dimensional cartesian subgrids </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Cart_sub partitions the processes in cart_comm into a 
+collection of disjoint 
+communicators whose union is cart_comm. Both cart_comm and each new_comm have 
+associated Cartesian topologies.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Cart_sub   Library call Ends **** -->
+
+
+
+<!-- ***** MPI Cart_Dims_create   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+<B>MPI_Dims_create</B> (<B><I>int</I></B> nnodes, <B><I>int</I></B> ndims, <B><I>int</I></B>
+*dims)
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Dims_create</B> (nnodes, ndims, dims, ierror)&nbsp;
+<BR>
+<B><I>integer</I></B> nnodes, ndims, dims(*), ierror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Create a division of processes in the 
+Cartesian grid </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Dims_create creates a division of processes in a 
+Cartesian grid. It is 
+useful to choose dimension sizes for a Cartesian coordinate system.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Dims_create   Library call Ends **** -->
+
+
+<!-- *** ....MPI Group Communicators; Derive Data Types & Cartesison Topologies ends...****** -->
+
+<!-- ***** MPI Waitall   Library call Starts **** -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+<B>MPI_Waitall</B>(<B><I>int</I></B> count, <B><I>MPI_Request</I></B> *array_of_requests,
+<B><I>MPI_Status </I></B>*array_of_statuses)
+<BR> <BR>
+
+
+</li>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+
+
+
+<B>MPI_Waitall</B>(count, array_of_requests, array_of_statuses, ierror)
+<BR>
+<B><I>integer</I></B>
+count, array_of_requests (*), array_of_statuses (MPI_status_size, *), ierrror
+
+<BR> <BR>
+
+<FONT COLOR="red"><I> Waits for all given communications to 
+complete </i> </FONT>  
+
+
+
+<p align = "justify">
+<span class = "content">
+MPI_Waitall waits for all given communications to 
+complete and to test all or 
+any of the collection of nonblocking operations.
+<BR><BR> 
+    
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ***** MPI Waitall   Library call Ends **** -->
+
+
+
+<!-- *********************** About Basic MPI-1.X library Calls  Ends ******************** -->
+
+
+																	
+<DIV align="right"><a href="mpi-openmp-overview.html" ><IMG src="./mpi-openmp-images/top.gif" border="0" width="13" 	height="13"</a></DIV>
+<BR> 
+
+
+</TD>
+</TR>
+</TBODY> 
+</TABLE> 
+<!-- *************  BAsic MPI library Calls Ends Here  ********************* -->
+
+
+
+	
+<!-- ********************** Basic OpenMP Pragmas  Starts  **************************************** -->
+<a name="openmp-lib-calls"> </a>
+  
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<font Color="black" face= "verdana" size="2"> 
+  <B> Basic OpenMP Library Calls  </b> </font> </DIV> 
+ 
+ </TD>
+ </TR> 
+
+
+<TR>
+<TD>
+
+<BR> 
+
+
+ <p align="justify">  <span class = "content">
+
+
+  Most commonly used OpenMP Run time pragmas  in FORTRAN/C -Language 
+  are explained below.<br> <br>
+
+
+
+<!-- ***** OMP_SET_NUM_THREADS Pragma  Starts **** ....... -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_set_num_threads</b>(<i>int num_threads</i>) <BR> <BR>
+
+
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE </b>OMP_SET_NUM_THREADS (<I> scalar_integer_expression </i> )</B> <BR> <BR>
+
+
+
+
+<FONT COLOR="red"><I> sets the number of threads to use in a team   </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine sets the number of threads that will be used in the 
+next parallel region. The dynamic threads mechanism modifies the effect 
+of this routine. If enabled, specifies the maximum number of threads 
+that can be used for any parallel region. If disabled, specifies exact 
+number of threads to use until next call to this routine. This routine 
+can only be called from the serial portions of the code. This call has 
+precedence over the OMP_NUM_THREADS environment variable.   
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_SET_NUM_THREADS Pragma  ends *****........ -->
+
+
+
+<!-- ***** OMP_GET_NUM_THREAD Pragma  Starts **** ....... -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>int omp_get_num_threads</b>(<i>void</i>) <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> INTEGER FUNCTION OMP_GET_NUM_THREADS() </B> <BR> <BR>
+
+
+<FONT COLOR="red"><I> 
+returns the number of threads in the currently executing parallel region.  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine/function returns the number of threads that are currently 
+in the team executing the parallel region from which it is called. If 
+this call is made from a serial portion of the program, or a nested 
+parallel region that is serialized, it will return 1. The default number 
+of threads is implementation dependent.  
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_GET_NUM_THREAD Pragma  ends *****........ -->
+
+
+
+<!-- ***** OMP_GET_MAX_THREAD Pragma  Starts **** ....... -->
+
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>int omp_get_max_threads</b>(<i>void</i>)  <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> INTEGER FUNCTION OMP_GET_MAX_THREADS() </B> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+returns the maximum value that can be returned 
+   by a call to the  <B> OMP_GET_NUM_THREADS </b> function.  </i> </FONT> 
+
+<p align = "justify">
+<span class = "content">
+Generally reflects the number of threads as set by the OMP_NUM_THREADS 
+environment variable or the <B> OMP_SET_NUM_THREADS() </b> library routine. This 
+function can be called from both serial and parallel regions of code.  
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_GET_MAX_THREAD Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_GET_THREAD_NUM Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>int omp_get_thread_num</b>(<i>void</i>) <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> INTEGER FUNCTION OMP_GET_THREAD_NUM()</B> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+returns the thread number within the team  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This function returns the thread number of the thread, within the team, 
+making this call. This function returns the thread number. This number 
+will be between 0 and OMP_GET_NUM_THREADS-1. The master thread of the 
+team is thread 0. If called from a nested parallel region, or a serial 
+region, this function will return 0.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_GET_THREAD_NUM Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_GET_NUM_PROCS Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>int omp_get_num_procs</b>(<i>void</i>)  <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> INTEGER FUNCTION OMP_GET_NUM_PROCS<()</B> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+returns the number of processors that are 
+available to the program.  </i> </FONT> 
+				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_GET_NUM_PROCS Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_IN_PARALLEL Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>int omp_in_parallel</b>(<i>void</i>) <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> LOGICAL FUNCTION OMP_IN_PARALLEL()</B> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+returns .TRUE. for calls within a parallel region, .FALSE. otherwise.  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This function/subroutine is called to determine if the section of code 
+which is executing is parallel or not. For Fortran, this function returns
+.TRUE. if it is called from the dynamic extent of a region executing 
+in parallel, and .FALSE. otherwise. For C/C++, it will return a non-zero
+integer if parallel, and zero otherwise.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_IN_PARALLEL Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_SET_DYNAMIC Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_set_dynamic</b>(<i>int dynamic_threads</i>) <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_SET_DYNAMIC</b>(<i>scalar_logical_expression</i>)</B> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+control the dynamic adjustment of the number 
+          	of parallel threads.  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine enables or disables dynamic adjustment (by the run 
+time system) of the number of threads available for execution of parallel
+regions. For Fortran, if called with .TRUE. then the number of threads 
+available for subsequent parallel regions can be adjusted automatically 
+by the run-time environment. If called with .FALSE., dynamic adjustment 
+is disabled. For C/C++, if dynamic_threads evaluates to non-zero, then 
+the mechanism is enabled, otherwise it is disabled. The OMP_SET_DYNAMIC 
+subroutine has precedence over the OMP_DYNAMIC environment variable. 
+The default setting is implementation dependent. Must be called from 
+a serial section of the program.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_SET_DYNAMIC Pragma  ends *****........ -->
+
+
+
+
+
+<!-- ***** OMP_GET_DYNAMIC Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>int omp_get_dynamic</b>(<i>void</i>)  <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> LOGICAL FUNCTION OMP_GET_DYNAMIC</B> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+returns .TRUE. if dynamic threads is enabled, 
+.FALSE. otherwise.  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This function is used to determine if dynamic thread adjustment is 
+enabled or not. For Fortran, this function returns .TRUE. if dynamic 
+thread adjustment is enabled, and .FALSE. otherwise. For C/C++, non-zero will 
+be returned if dynamic thread adjustment is enabled, and zero 		
+otherwise.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_GET_DYNAMIC Pragma  ends *****........ -->
+
+
+
+
+
+<!-- ***** OMP_SET_NESTED Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_set_nested</b>(<i>int nested</i>)   <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_SET_NESTED</b>(<i>scalar_logical_expression</i>) <BR> <BR>
+
+<FONT COLOR="red"><I> 
+enable or disable nested parallelism.  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine is used to enable or disable nested parallelism. For 
+Fortran, calling this function with .FALSE. will disable nested parallelism, and calling 
+with .TRUE. will enable it. For C/C++, if nested evaluates to non-zero, nested 	 
+parallelism is enabled; otherwise it is disabled. The default is for nested parallelism 
+to be disabled. This call has precedence over the OMP_NESTED environment variable.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_SET_NESTED Pragma  ends *****........ -->
+
+
+
+
+
+<!-- ***** OMP_GET_NESTED Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_get_nested  </b>  <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> LOGICAL FUNCTION OMP_GET_NESTED </b> <BR> <BR>
+
+<FONT COLOR="red"><I> 
+returns .TRUE. if nested parallelism is enabled, 
+          	.FALSE. otherwise.  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This function/subroutine is used to determine if nested parallelism 
+is enabled or not. For Fortran, this function returns .TRUE. if nested
+parallelism is enabled, and .FALSE. otherwise. For C/C++, non-zero will 
+be returned if nested parallelism is enabled, and zero otherwise.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_GET_NESTED Pragma  ends *****........ -->
+
+
+
+
+
+<!-- ***** OMP_INIT_LOCK Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_init_lock</b>(<i>omp_lock_t *lock</i>) <BR> <BR>
+<B>void omp_nest_init_lock</b>(<i>omp_nest_lock_t *lock</i>) <BR> <BR>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_INIT_LOCK</b>(<i>var</i>)  <BR> <BR>
+
+<FONT COLOR="red"><I> 
+allocate and initialise the lock  </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine / function initializes a lock associated with the lock 
+variable. The initial state is unlocked.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_INIT_LOCK Pragma  ends *****........ -->
+
+
+
+
+
+<!-- ***** OMP_DESTROY_LOCK Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_destroy_lock</b>(<i>omp_lock_t *lock</i>)  <BR> <BR>
+<B>void omp_destroy_nest_lock</b>(<i>omp_nest_lock_t *lock</i>) <BR> <BR>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_DESTROY_LOCK</b>(<i>var</i>)   <BR> <BR>
+
+<FONT COLOR="red"><I> 
+deallocate and free the lock </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine/function disassociates the given lock variable from 
+any locks. It is illegal to call this routine with a lock variable that 
+is not initialized.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_DESTROY_LOCK Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_SET_LOCK Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_set_lock</b>(<i>omp_lock_t *lock</i>)  <BR> <BR>
+<B>void omp_set_nest__lock</b>(<i>omp_nest_lock_t *lock</i>) <BR> <BR>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_SET_LOCK</b>(<i>var</i>)   <BR> <BR>
+
+<FONT COLOR="red"><I> 
+Acquire the lock, waiting until it becomes 
+available, if necessary. </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine forces the executing thread to wait until the specified 
+lock is available. A thread is granted ownership of a lock when it becomes 
+available. It is illegal to call this routine with a lock variable that 
+is not initialized.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_SET_LOCK Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_UNSET_LOCK Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_unset_lock</b>(<i>omp_lock_t *lock</i>)  <BR> <BR>
+<B>void omp_unset_nest__lock</b>(<i>omp_nest_lock_t *lock</i>) <BR> <BR>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_UNSET_LOCK</b>(<i>var</i>)   <BR> <BR>
+
+<FONT COLOR="red"><I> 
+release the lock, resuming a waiting thread if any. </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine releases the lock from the executing subroutine. It 
+is illegal to call this routine with a lock variable that is not 		
+initialized.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_UNSET_LOCK Pragma  ends *****........ -->
+
+
+<!-- ***** OMP_TEST_LOCK Pragma  Starts **** ....... -->
+
+<ul>
+
+<li>
+<font size = 2, face = " Courier New " color ="#FF00FF">  Syntax : C  </font> <BR>
+
+
+<B>void omp_test_lock</b>(<i>omp_lock_t *lock</i>)  <BR> <BR>
+<B>void omp_test_nest__lock</b>(<i>omp_nest_lock_t *lock</i>) <BR> <BR>
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> Syntax : Fortran  </font> <BR>
+<B> SUBROUTINE OMP_TEST_LOCK</b>(<i>var</i>)   <BR> <BR>
+
+<FONT COLOR="red"><I> 
+try to acquire the lock, return success or failure </i> </FONT> 
+
+
+<p align = "justify">
+<span class = "content">
+This subroutine attempts to set a lock, but does not block if the lock 
+is unavailable. For Fortran, .TRUE. is returned if the lock was set 
+successfully, otherwise .FALSE. is returned. For C/C++, non-zero is 
+returned if the lock was set successfully, otherwise zero is returned. 
+It is illegal to call this routine with a lock variable that is not 
+initialized.
+</span> </p>				
+
+</li>
+</ul>
+
+<blockquote> <HR> </blockquote>
+
+</span> 
+</p>
+
+<!-- ******** OMP_TEST_LOCK Pragma  ends *****........ -->
+
+
+<!--********************  Basic OpenMP Library Calls Ends ************************ -->
+<DIV ALIGN=right>
+ <A HREF="openmp-overview.html"> 
+   <IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></A>
+     </DIV>
+</TBODY> 
+</TABLE> 
+
+<!-- **********************  Basic OpenMP Pragmas  ends  ************************* -->
+
+
+
+
+
+<!-- ************  MPI-OpenMP Peformance Visulization Tools Starts ******************** --> 
+
+<a name="MPI-OpenMP-Perf"> </a>
+
+ <TABLE  width = "100%" cellPadding=3  border=0> 
+    <TBODY> <TR> 
+     <TD bgColor = #cccdd77889>  
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <p  align="justify"><b><font face="Verdana" color="black">
+        MPI-OpenMP Performance tools</b> </p>
+      </font></font></DIV> 
+     </TD> 
+    </TR> </TBODY> 
+  </TABLE> <br>
+
+
+<TABLE cellPadding=3 border=0> 
+    <TBODY> 
+	<TR>
+      <TD>
+	<font face="Verdana" size="2">
+
+
+ 	<p><b> <font color = red > Tools available in MPI or OpenMP :   </font></b></p>
+
+ 	
+           <p align ="let"> <font size ="2"  color = "black"> <B> Intel Thread Checker </B></p>
+           <p align ="let"> <font size ="2"  color = "black"> <B> Intel Vtune Performance analyzer </B></p>
+         <p align ="let"> <font size ="2"  color = "black"> <B> Intel Thread Profiler </B></p>
+           <p align ="let"> <font size ="2"  color = "black"> <B> Sun Studio  </B></p>
+          <p align ="let"> <font size ="2"  color = "black"> <B> IBM Tools </B></p>
+          <p align ="let"> <font size ="2"  color = "black"> <B> Etnus totalview Debugger  </B></p>
+          <p align ="let"> <font size ="2"  color = "black"> <B> MPI- Upshot, Jumpshot </B></p>
+         <p align ="let"> <font size ="2"  color = "black"> <B>PAPI (Public domain tools) </B></p>
+         <p align ="let"> <font size ="2"  color = "black"> <B> Google Perf Tool  </B></p>
+<HR>
+       <p ><b>Vampir/GuideView(VGV)&nbsp;</b></p>
+
+ 	<p align=justify>
+	      Pallas GmbH and KAI Software have partnered with
+              the Department of Energy through an ASCI Pathforward contract to
+              develop a tool called Vampir/GuideView, or VGV.
+              This tool combines the richness of the existing tools, Vampir for
+              MPI, and GuideView for OpenMP, into a single, tightly-integrated
+              performance analysis tool. From the outset, its design targets
+              performance analysis on systems with thousands of processors.</p>
+
+  	<p ><b>Performance</b> <b>Analyzers</b> : Paraver from the Paraver project</p>
+        
+  	<p align=justify>
+	     <b>Paraver</b> is a flexible performance 
+              visualization and analysis tool that can be used to analyze MPI, 
+              OpenMP, MPI+OpenMP, Java, Hardware counters profile etc..</p>
+
+            <!--  <p ><a href="http://www.cepba.upc.es/paraver/">
+                  http://www.cepba.upc.es/paraver/</a></p> -->
+
+   	<p align=justify><b>TotalView</b></p>
+              <p align=justify>TotalView is the debugger 
+              for complex code. TotalView is far and away the best choice for 
+              those working with parallelism or large amounts of data because it 
+              scales transparently to support the big code and data sets running 
+              on anywhere from one to thousands of processes or processors. It's 
+              been proven in the world's toughest debugging environments.
+              </p>
+
+ 	<p>It is available at</p>
+
+ 	<p align=justify>
+	<a href="http://www.etnus.com/Products/TotalView">
+        http://www.etnus.com/Products/TotalView</a></p>
+              
+	<p align=justify>
+	TotalView's support for OpenMP debugging lets you view the state of your program as 
+	if it were a non-parallel code. With TotalView, you can
+    	</p>
+
+      
+
+     <UL>
+   	<li> Debug threaded codes whether OpenMP directives are present or not. </li>
+   	<li> Understanding OpenMP code execution</li>
+	<li> Access private and shared variables as well as threadprivate variables.</li>
+ 
+
+	<DIV align="right"><a href="mpi-openmp-overview.html" ><IMG src="./mpi-openmp-images/top.gif" border="0" width="13" 	height="13"</a></DIV>
+	</UL>
+	
+
+	</font>
+      </TD>
+     </TR> 
+   </TBODY> 
+ </TABLE> 
+
+
+<BR>
+<!-- *********** MPI-OpenMP Peformance Visulization Tools Ends **************** -->
+
+
+<!-- *************  MPI-OpenMP compilation & Execution starts ******************** -->
+
+<a name="mpi-openmp-comp-exec"> </A>
+
+ <TABLE width = "100%" cellPadding=3  border=0> 
+    <TBODY> <TR> 
+     <TD bgColor = #cccdd77889>  
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <p  align="justify"><b><font face="Verdana" color="black">
+         Compilation and Execution of MPI-OpenMP programs</b> </p>
+      </font></DIV></font> 
+     </TD> 
+    </TR> </TBODY> 
+  </TABLE> 
+
+<BR>
+
+
+
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+    <TBODY> 
+	<TR> <td>
+	<font face="Verdana" size="2">
+
+	<b><font color="red"> Compilation,Linking and Execution of MPI-OpenMP programs </font></b>&nbsp;
+
+	<P><b><font color="red">Compilation : Using mpicc and mpif90</font></b>
+	&nbsp;
+
+	<p align=justify><font color="#000000">
+	The compilation and execution details of a parallel program that 
+        uses MPI and OpenMP may vary on different 
+         parallel computers. The essential steps of 
+        common to all parallel systems are same, 
+        provided we execute two or three or many&nbsp; 
+        process on each processor. The three important 
+        steps are described below :&nbsp;</font></p>
+	
+ 
+	<p align=justify>   The following lines show sample compilation and execution using MPICH2. 
+      You should use commands that&nbsp; MPICH2&nbsp;provides for compiling and linking programs.&nbsp; For compilation following commands are 
+      used depending on the C or Fortran (mpicc/mpif90) program.&nbsp; <br>
+      &nbsp; </p>
+
+      <center>
+      <p><font color="#ff00ff"><i>mpicc -o hello_world hello_world.c -fopenmp </i>&nbsp;</font></p>
+      </center><center>
+      <p><font color="#ff00ff"><i>mpif90 -o hello_world hello_world.f -fopenmp </i>&nbsp;</font></p>
+      </center>
+
+	<p align=justify>   Commands for linker may include additional libraries.&nbsp; For example, to 
+      use some routines from the <b>MPI</b> library and math library , one can use the following command&nbsp; <br>
+      &nbsp;</p>
+      
+      <center>
+      <p><font color="#ff00ff"><i>mpicc&nbsp; -o &lt;Name of executable&gt;&nbsp; 
+      hello_world.c&nbsp;-fopenmp -lm</i>&nbsp;</font></p>
+      </center>
+      
+         	
+	<a name="COMPILE_LINK_EXECT_MAKE"></a><B><FONT color="red">Compilation
+      : Using&nbsp;Makefile</FONT></B><p align=justify>For more control over the process of 
+      compiling and linking programs for <i>mpich2</i>, you should use a '<i>Makefile</i>'. 
+      You may also use these commands in <i>Makefile</i> particularly for 
+      programs contained in a large number of files. The user has to specify the 
+      names of the program (s) and appropriate paths to link <b>MPI and system 
+      specific (like lm etc..)</b> libraries in the <i>
+
+      Makefile</i>. To compile and link a <b>MPI+OpenMP</b> program in C or 
+      Fortran, you can use the command&nbsp; <br>
+      &nbsp; </p>
+
+      <center>
+      <p><i><font color="#ff00ff">make -f Makefile-C (or) Makefile-Fortran</font></i></p>
+      <p>&nbsp;</p>
+
+      <p><font color="#FF00FF"><i>For MPI+OpenMP C Programs use
+      <a href="./mpi-openmp-codes/c-lang/Makefile-C">Makefile-C</a> 
+      &amp; for Fortran Programs use <a href="./mpi-openmp-codes/f-lang/Makefile-Fortran">Makefile-Fortran
+      </a></i></font></p>
+      </center>
+	
+							
+	<a name="COMPILE_LINK_EXECT_RUN"></a><B><FONT color=red>Execution
+      of a Program</FONT></B> <b><font color="red">: Using mpiexec</font></b>
+
+	<p align=justify>
+      To run an <b>MPI+OpenMP</b> program, use the&nbsp; <i>mpiexec</i> command.&nbsp; <br>
+      &nbsp; </p>
+
+  	
+      <p><font color="#000000">For execution set the following environment 
+      variables in respective users shells</font></p>
+<center>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <font color="#ff00ff"><i>export&nbsp; OMP_NUM_THREADS = 2&nbsp;&nbsp; 
+      (bash/ksh shells)</i></font></p>
+
+      <p><font color="#ff00ff"><i>set OMP_NUM_THREADS 2 (csh/tcsh shells)</i></font></p>
+      <p><font color="#FF00FF"><i>then execute </i></font></p>
+      </center>
+  
+  	<center>
+      <p><i><font color="#ff00ff">mpiexec&nbsp;-n &nbsp; &lt;number of 
+      processes&gt;&nbsp; ./run&nbsp;&nbsp;</font></i></p>
+      </center><center>
+      <p>&nbsp;</p>
+
+      </center><font color="red">
+      <div align="left">
+        <font color="#000000">The argument -n&nbsp; gives the number of processes 
+        that will be associated with the MPI_COMM_WORLD communicator run is the 
+        executable running on all processors. 
+	</font></div>
+
+      <div align="left"> &nbsp;</div>
+      <div align="left"> &nbsp;</div>
+      <div align="left"> <font color="#000000">Consider a sample command</font></div>
+       
+ 	<font color="#FF00FF">
+        <div align="center">
+        <i>mpiexec -n&nbsp;4&nbsp;&nbsp;./run&nbsp;</i></div>
+      	<div align="left">
+        &nbsp;</div></font>
+
+      	
+
+
+	<p align=justify> <font color="#000000">
+            Execution of <em>mpiexex </em>command as shown above will execute 4 
+            processes of<em> run </em> respectively creating the number of threads depending on the environment variable set in their 
+            respective shells or in the program itself.</font></p><BR>
+
+
+
+
+<!-- ************** executing program on cetus cluster : starts ********************* -->
+
+<font color="red" size = "2" face ="TimesNewRoman"><b> Executing MPI-OpenMP program on Cetus cluster</b> </font> <br><br>
+
+<font color="#000000" size = "2" face ="TimesNewRoman"> To Execute the above Programs on IUCAA Cluster (Cetus Cluster) , the user should submit job to scheduler. To submit the job use the following command. </font>
+
+          <FONT COLOR="#FF00FF"><I></I><font face="Courier New,Courier"><br><br>
+bsub -q &lt;queue-name&gt; -n[numberof processor] [options] mpirun -srun ./&lt;executablename&gt;</font></FONT>  </p>
+       
+For Example :
+
+  <P >
+     <FONT COLOR="#FF00FF" face="Courier New,Courier">
+       </I>
+              bsub -q normal -n4 -ext"SULRM[nodes=4]" -o hello-world.out -e hello-world.err mpirun -srun ./helloworld 
+          </FONT>
+  </p>
+
+<font color="#000000" size = "2" face ="TimesNewRoman">
+NOTE : 1) Where "helloworld"  is binary executable of helloworld.c program.        
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) "nodes=1" indicates number of nodes required to run the executable.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Refer man pages of "bsub" for options.
+</font>
+<br><br>
+
+<!-- ********************* executing program on cetus cluster : ends ************************ -->
+</td>
+</TR> 
+  </TBODY> 
+</TABLE> 	
+					
+<!-- ****************  MPI-OpenMP Compilation & Execution Ends **************** -->
+
+
+
+<!-- *******************  MPI-OpenMP Example programs starts ************** -->
+
+<!-- ************** MPI-OpenMP Fortran Program Starts *************** -->
+
+<div align=left>
+
+<a name="mpi-openmp-example-fortran"> </a>
+ 
+ <TABLE width = "100%"  cellPadding=3  border=0> 
+    <TBODY> <TR> 
+     <TD bgColor = #cccdd77889>  
+      <font size="2"  color = "Blue" face = "Arial"> <div align=left>
+        <p  align="justify"><b><font face="Verdana" color="black">
+         Example Program : MPI-OpenMP & Fortran</b> </p>
+      </font></DIV> 
+     </TD> 
+    </TR> 
+  </TBODY> 
+</TABLE><br> 
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY>
+       <TR>  
+       <TD>              
+    	  <font face="Verdana" size="2">
+      
+              <p align=justify>The simple MPI-OpenMP program is <i>&quot;Hello
+              World&quot;</i> program, in which threads created by each process
+              simply prints the message <i>&quot;Hello World&quot;</i>. In this
+              example, threads with identifier 0, 1, 2, ......, <i>n</i>-1 of
+              each processes will print the message <i>&quot;Hello World&quot;,
+              Rank</i> of the process and thread identifier of each thread
+              created by the process.<br>
+
+              <br>
+              The simple MPI-OpenMP program in Fortran language in which each
+              thread from each processor prints <i>&quot;Hello World&quot;</i>
+              message is explained below. We describe the features of the entire
+              program and describe the program in details. First few lines of
+              the program explain variable definitions, and constants. Followed
+              by these declarations, MPI library calls for initialization of MPI
+              environment, and MPI communication associated with a communicator
+              are declared in the program. The communication describes the
+              communication context and an associated group of processes. The
+              calls <i>MPI_Comm_Size</i> returns <i>Numprocs,</i> the number of
+              processes that the user has started for this program. Each process
+              finds out its rank in the group associated with a communicator by
+              calling <i>MPI_Comm_rank</i>. Followed by these, OpenMP library
+              calls are declared in the program. The library call <i>OMP_GET_THREAD_NUM</i>
+
+              returns <i>ThreadID,</i> the identifier of each thread.
+	     </p>
+
+              <p align="left">The following segment of the program explains
+              these features. The description of program is as follows:
+              <div align="left">
+                <p align="left"><font face="Courier New, Courier, mono" size="2" color="#000000">
+	
+		<blockquote>
+			program HelloWorld</font></div>
+		</blockquote>              
+	 	<blockquote>
+                	<div align="left">
+                  	<p align="left"><font face="Courier New, Courier, mono" size="2" color="#000000">
+		  	include &quot;mpif.h&quot;<br>
+                  	integer MyRank, Numprocs<br>
+                  	integer status(MPI_STATUS_SIZE)<br>
+                  	integer ThreadID, OMP_GET_THREAD_NUM</font>
+                	</div>
+              	</blockquote>
+
+              <p align="left"><i>MyRank</i> is the rank of process and <i>Numprocs</i>
+              is the number of processes in the communicator <i>MPI_COMM_WORLD</i>.&nbsp;</p>
+
+              <div align="left">
+               <p align="left">
+		<blockquote>
+                	<font face="Courier New, Courier, mono" size="2" color="#000000">
+			call MPI_INIT(ierror)<br> 
+			call MPI_COMM_SIZE(MPI_COMM_WORLD,Numprocs, ierror)<br>      	
+		 	call MPI_COMM_RANK(MPI_COMM_WORLD, MyRank, ierror)
+                	</font></p>
+		</blockquote>
+
+                <p align="left">The subroutine <i>OMP_SET_NUM_THREADS</i> sets
+                the number of threads to <i>two</i>, that will be used in the
+                next parallel region. This call has precedence over the <i>OMP_NUM_THREADS</i>
+                environment variable
+
+		<blockquote>
+                 	<font face="Courier New, Courier, mono" color="#000000" size="2">
+			call OMP_SET_NUM_THREADS(2)</font>
+ 		</blockquote>  
+
+             	<p align="left">Starting of OpenMP PARALLEL directive and
+                PRIVATE clause.<br>
+                <br>
+
+		<blockquote>
+
+                	<font color="#000000" size="2">!$OMP PARALLEL PRIVATE	
+			(ThreadID)</font>
+		</blockquote>
+                
+                <i>ThreadID</i> is the identifier of each thread. <i>ThreadID</i>
+                is private to each thread. Each thread obtains its own
+                identifier and then prints the message <i>&quot;Hello
+                World&quot;</i> in parallel. Each thread gets its own copies of
+                identifier and prints it.<br>
+
+                <blockquote>
+                  <div align="left">
+                    <p align="left"><font face="Courier New, Courier, mono" size="2"  
+		       color="#000000"> ThreadID = OMP_GET_THREAD_NUM()<br>
+                       print*,&quot;Hello World From Processor&quot;,
+                       MyRank,&quot;Thread&quot;, ThreadID<br>
+                    </font>
+                  </div>
+                </blockquote>
+
+                <p align="left">Ending of OpenMP PARALLEL directive. All threads
+                join master thread and disband.<br>
+                <br>
+
+                <font face="Courier New, Courier, mono" color="#000000" size="2">
+		!$OMP END PARALLEL</font><br>
+                <br>
+                After, this <i>MPI_Finalize</i> is called to terminate the
+                program. Every process in MPI computation must make this call.
+                It terminates the MPI &quot;environment&quot;.<br>
+
+                <font color="#FF8000">&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+                <br>
+                <font color="#000000" size="2" face="Courier New, Courier, mono">!
+                ....Finalizing the MPI....</font><br>
+                </p>
+                <blockquote>
+                  <p align="left"><font face="Courier New, Courier, mono" size="2" 
+		  color="#000000">call MPI_FINALIZE( ierror )<br>
+                  stop<br>
+                  end</font></p>
+                </blockquote>
+
+                <p align="justify">The above few segments of program shows a simple
+                mixed mode <i>Hello World</i> program, to demonstrate how a
+                mixed mode program is implemented. MPI is initialized and
+                finalized in the usual way, using the <i>MPI_INIT</i> and <i>MPI_FINALIZE</i>
+                calls. An OpenMP <i>PARALLEL</i> region occurs between these
+                calls, spawning a number of threads on each process. If, for
+                example the program was executed using <i>four</i> MPI processes
+                and <i>two</i> OpenMP threads the flow of execution in Figure 2
+                would be observed.</p>
+
+                <div align="center">
+                  <p align="left">
+                  <br>
+                  <img src="./mpi-openmp-images/Flow.gif" width="350" height="331"><br>
+                  
+              </div>
+
+           
+	<DIV align="right"><a href="mpi-openmp-overview.html" ><IMG src="./mpi-openmp-images/top.gif" border="0" width="13" 	height="13"</a></DIV>
+	</font>
+       </TD>
+       </TR> 
+    </TBODY> 
+  </TABLE> 
+<!-- ************** MPI-OpenMP Fortran Program Ends *************** -->
+
+<!-- *************  MPI-OpenMP & C-Language ********************** -->
+
+<a name="mpi-openmp-example-c-lang"> </a>
+
+ <TABLE width = "100%" cellPadding=3  border=0> 
+    <TBODY> <TR> 
+     <TD bgColor = #cccdd77889>  
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <p  align="justify"><b><font face="Verdana" color="black">
+         Example Program : MPI-OpenMP & C-language </b> </p>
+      </font></DIV> 
+     </TD> 
+    </TR> </TBODY> 
+  </TABLE> <br>
+
+
+<TABLE cellPadding=3 border=0> 
+    <TBODY> 
+	<TR> 
+      <TD>
+	  <font face="Verdana" size="2">
+
+		<p align="left"> Simple MPI-OpenMP program to print "Hello World"
+	
+		<p align="left"><FONT Color="red"> #include &lt;stdio.h&gt;<br>
+	 	#include &lt;omp.h&gt;<br>
+	 	#include &lt;mpi.h&gt;<br>
+
+	 	/* Main Program */<br>
+	 	 main()<br>
+	 	{ <br>
+	  
+		<blockquota>
+                <ul>	
+				int Numprocs, MyRank, iam;<br><br>
+				
+				
+				/* MPI - Initialization */<br>
+				MPI_Init(&argc, &argv);<br>
+				MPI_Comm_rank(MPI_COMM_WORLD, &MyRank);<br>
+				MPI_Comm_size(MPI_COMM_WORLD, &Numprocs);<br><br>
+							
+				/* OpenMP Parallel Directive */<br>
+				omp_set_num_threads(4);<br>
+				#pragma omp parallel private(threadid)<br>
+				{<br>
+						
+				iam = omp_get_thread_num();<br>
+        			printf("Hello World is Printed By Process %d and Threadid %d\n",MyRank, iam);<br>
+				}<br><br>
+			
+				
+				/* MPI - Termination */<br>
+				MPI_Finalize();<br>
+		</blockquota>
+                </ul>
+
+			}<br>
+
+        
+	<DIV align="right"><a href="mpi-openmp-overview.html" ><IMG src="./mpi-openmp-images/top.gif" border="0" width="13" 	height="13"</a></DIV>
+
+          </font>
+      </TD>
+ 	</TR> 
+    </TBODY> 
+  </TABLE> 
+<BR>
+
+<!-- ***************** MPI-OpenMP Example programs Ends ************************* -->
+            
+
+<!-- *****************  MPI-OpenMP Refrences starts *********************** -->
+<a name="MPI-OpenMP-Reference"> </a>
+
+ <TABLE width = "100%" cellPadding=3 border=0> 
+    <TBODY> <TR> 
+     <TD bgColor = #cccdd77889F>  
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <p  align="justify"><b><font face="Verdana" color="black">
+          MPI-OpenMP Web Sites </b> </p>
+      </font></DIV> 
+     </TD> 
+    </TR> </TBODY> 
+  </TABLE> </br>
+
+<TABLE cellPadding=3 border=0> 
+    <TBODY> 
+	<TR>
+      <TD>
+	  <font face="Verdana" size="2">
+
+  		<!--<p  align=Left>1. Mixed Mode MPI/OpenMP Programming</p>
+     	
+       		<p  align=Left> 
+  <a href="http://www.ukhec.ac.uk/publications/tw/mixed.pdf">http://www.ukhec.ac.uk/publications/tw/mixed.pdf</a>&nbsp;</p> -->
+      		
+
+  		<p  align=Left>1. MPI versus MPI+OpenMP on the IBM SP for the NAS Benchmarks</p>
+      	
+         	<p  align=Left> <a 												       
+  href="http://www.sc2000.org/techpapr/papers/pap.pap214.pdf">
+		http://www.sc2000.org/techpapr/papers/pap.pap214.pdf</a></p>
+       		
+
+
+  		<p  align=Left>2. Hybrid Programming (MPI/OpenMP)</p>
+                <p  align=Left> <a href="http://www.linux-mag.com/id/1631">
+               http://www.linux-mag.com/id/1631</a></p>
+               
+
+
+             <!--  <p  align=Left>4. Hybrid MPI/OpenMP programming for the SDSC teraflop system; <i>
+          National Partnership for Advanced <BR> &nbsp; &nbsp; &nbsp;
+  Computational Infrastructure: Archives  </i> &nbsp; &nbsp; </p>
+              <p  align=Left> <a href="http://www.npaci.edu/online/v3.14/SCAN.html">  
+                     http://www.npaci.edu/online/v3.14/SCAN.html</a></p> -->
+
+
+
+  <DIV align="right"><a href="mpi-openmp-overview.html" ><IMG src="./mpi-openmp-images/top.gif" border="0" width="13" height="13"</a></DIV>
+
+		</font>
+            </TD>
+	       </TR> 
+	   </TBODY> 
+      </TABLE> 
+<!-- *****************  MPI-OpenMP Refrences Ends ************************** -->
+
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+   
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

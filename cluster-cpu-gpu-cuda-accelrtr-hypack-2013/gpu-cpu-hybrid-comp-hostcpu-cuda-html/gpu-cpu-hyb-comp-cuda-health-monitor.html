@@ -1,0 +1,2826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>    
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+         
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B> Threads-Prof. &amp; Tools</B> </A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+	       <A class=menul 
+                    href="./../../hypack13-mode05-hpc-cluster-lab-overview.html">
+                     Mode-5 HPC  Cluster</A>
+                   
+	       <A class=menul
+                   href="./../../hypack13-mode05-hpc-message-passing-cluster.html">
+                   Cluster : Multi-Core - MPI </A>
+
+                    <!-- ** -->
+                    <A class=menulslct  
+                     href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html">
+                      Cluster : GPU - NVIDIA CUDA/OpenCL </A>
+                     <!-- ** -->
+                
+	       <A class=menul  
+                   href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html">
+                    Cluster : GPU - AMD OpenCL</A>
+
+               <A class=menul  
+                   href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html">
+                    Cluster : Coprocessors -Intel Xeon Phi</A>
+
+               <A class=menul  
+                   href="./../../hypack13-mode05-hpc-cluster-power-perf.html">
+                    Cluster:Power &amp; Perf.</A>
+
+               <A class=menul 
+	           href="./../../ndex.html">
+                    Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+<a name="top"> </a> 
+ 
+<TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD>
+
+<TABLE cellPadding = 3  width = "100%"  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2" color ="black">
+<B>  hyPACK-2013 : HPC GPU Cluster  : NVIDIA CUDA - Health Monitoring </b>  </font></DIV>
+ </TD> </TR> 
+</TBODY>
+ </TABLE> 
+
+<table  border="0" width="100%"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align=justify><span class="content" >
+
+The research  efforts on HPC GPU Cluster are aimed to address some of the challenges with building 
+and running GPU clusters in Parallel computing environments. The focus is on cluster
+ architecture, power consumption on each nodes for various work-loads, resource 
+allocation and sharing as part of management software, health monitoring and data 
+security, Programming models and applications. 
+</span> </p> 
+
+<div align = "center">
+
+
+<p align = "left"> <span class ="content">
+
+ <a href = " #gpu-cpu-mpicuda-health-monitor-resources">
+<font size="2" face="Arial" color="blue"> 
+    <B> GPU (NVIDIA CUDA) Cluster Test Suites - Health Monitoring - Resources  </B> </font> <BR><BR>
+</a>
+ 
+  
+
+ <a href = " #gpu-cpu-mpicuda-health-app-mat">
+<font size="2" face="Arial" color="blue"> 
+    <B> GPU (NVIDIA CUDA) Application Kernels &amp; Matrix computations - Benchmarks </B> </font> 
+</a> <BR>
+  </span> </p> 
+  
+</div>
+
+<P align=justify><span class="content" >
+A prototype ideal HPC GPU Cluster should support diffrent heterogeneous programming 
+features on CPU-GPU acclerators is used for laboratory sessions. The cluster can   be 
+made \93adaptive\94 to the application it is running, assigning 
+the most effective resources in real-time as per application demands, without requiring 
+modifications to the 
+application that is written using different progrmaming is used.
+
+</span> </p>
+</td> </tr> 
+</tbody>
+</table>
+
+	<!-- *************** Table for Listing of Programs Starts  ****************** -->
+
+<TABLE cellPadding=3 width = "100%"  border=0> 
+<TBODY>
+<a name = "gpu-cpu-mpicuda-health-monitor-resources"> </a>
+ 
+ <!--************* Example 1.1 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id01">
+         <font size="2" face="Arial" color="blue">
+            <b> <p align = "justify"> <span class ="content"> <b> Example 1.1 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"> <span class ="content">
+         Write MPI \96 CUDA  program to perform device query operation on each GPU of  a node 
+         in a   HPC GPU Cluster
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.1 : ends ***************** -->
+
+<!-- ************* Example 1.2 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id02">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.2 </B> </span> </p> </font> 
+      </a> 
+      </td>
+   
+      <td width="680" height="2" valign="top">
+        <p align = "justify"> <span class ="content">
+        Write MPI \96 CUDA  program to measure the host-to device bandwidth on each node 
+     with single &amp; mutliple CUDA enabled NVIDIA  HPC GPU Cluster   
+       </span>  </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.2: ends **************** -->
+
+
+ <!--************* Example 1.3 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+      <a href="#gpu-cpu-mpicuda-health-id03">
+         <font size="2" face="Arial" color="blue">
+            <b> <p align = "justify"> <span class ="content"> <b> Example 1.3 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"> <span class ="content">
+         Write MPI \96 CUDA  program to measure the host-to device bandwidth on each node 
+         with single or  multiple CUDA enabled NVIDIA  HPC GPU Cluster
+          <font color="red">(Assignment)</font>
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.3 : ends ***************** -->
+
+
+<!-- ************* Example 1.4 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id04"> 
+
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.4 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"><span class ="content">
+         Write MPI CUDA test program to perform synchronous and
+           asynchronous APIs for performing host-GPU I/O, 
+    overlapping GPU computation and I/O from independent execution streams kernels
+    in a GPU cluster environment for Matrix-matrix Computations
+     <font color = "red"> (Assignment) </font>
+       </span>  </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.4 : ends **************** -->
+
+ 
+
+<!-- ************* Example 1.5 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id05">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.5 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"><span class ="content">
+         Write a test suite based on GPU device virtualization to execute few 
+         hundred CUDA kernels on HPC GPU Cluster using CUDA wrapper test
+   <font color="red">(Assignment)</font>  
+       </span>  </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.5 : ends **************** -->
+
+
+
+
+<!-- ************* Example 1.6 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id06">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.6 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"><span class ="content">
+         Write MPI-Pthread-CUDA test Program to perform thread affinity mapping, 
+        to ensure an optimal mapping of GPU to CPU cores in a HPC GPU Cluster
+        environment   <font color="red">(Assignment)</font>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.6 : ends **************** -->
+
+<!-- ************* Example 1.7 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id07">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.7 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"><span class ="content">
+         Write MPI-Pthread-CUDA test Program to demonstrate compute-</i>exclusive mode</i> and
+         normal mode features in a HPC GPU Cluster environment
+         <font color="red">(Assignment)</font>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.7 : ends **************** -->
+
+
+
+<!-- ************* Example 1.8 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+     <a href ="#gpu-cpu-mpicuda-health-id08"> 
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.8 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"><span class ="content">
+         <p align = "justify"><span class ="content">
+         Write MPI-Pthread-CUDA test Program to demonstrate list of pre-node job allocation 
+         features in a HPC GPU Cluster environment
+           <font color="red">(Assignment)</font>
+       </span>  </p>
+     </td>
+   </tr>
+ <!-- ***************** Example 1.8 : ends **************** -->
+
+<!-- ************* Example 1.9 : starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id09">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.9 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"><span class ="content">
+         Write MPI-Pthread-CUDA test Program to demonstrate list of post-job de-allocation  features in a HPC GPU Cluster environment
+           <font color="red">(Assignment)</font>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.9 : ends **************** -->
+
+
+</tbody>
+</table>
+
+<TABLE cellPadding=3 width = "100%"  border=0> 
+<TBODY>
+
+<HR>
+<DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+ <tr> <td width="120" height="2" valign="top">  </td>
+ 
+   <td width="680" height="2" valign="top">
+      <p align = "left"> <span class ="content">
+          <a name ="gpu-cpu-mpicuda-health-app-mat">
+         <font size="2" face="Arial" color="blue"> 
+         <B> Application Kernels &amp; Matrix computations - Benchmarks </B> </font> <BR>
+             </a>
+        </span> </p> 
+  </td>
+  </tr>
+
+
+ <!-- ************* Example 1.10: starts ************ -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+     <a href="#gpu-cpu-mpicuda-health-id010">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.10 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+         <p align = "justify"> <span class ="content">
+         Write MPI \96 CUDA program to demonstrate maximum achieved performance of DGEMM using 
+        CUBLAS libraries 
+        on each GPU of HPC GPU Cluster
+<font color="red">(Assignment)</font>
+       </span> </p> 
+     </td>
+   </tr>
+ <!-- ***************** Example 1.10 : ends **************** -->
+
+<!--************* Example 1.11 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+       <a href="#gpu-cpu-mpicuda-health-id011">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.11 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+       <p align = "justify"> <span class ="content">
+         Write MPI \96 CUDA program to calculate maximum achieved performance of
+    DGEMM on each node of HPC GPU Cluster using ATALS on host-cpu and CUBLAS 
+     libraries on GPUs  
+<font color="red">(Assignment)</font> 
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.11 : ends ***************** -->
+
+
+<!--************* Example 1.12 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+      <a href="#gpu-cpu-mpicuda-health-id012">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.12 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+       <p align = "justify"> <span class ="content">
+         Write MPI \96 CUDA  program to perform GPU-to-GPU Communication using GPUDirect of NVIDIA
+         in  a HPC GPU Cluster environment for Solution of PDEs by Finite Difference Method 
+        <font color="red">(Assignment)</font> 
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.12 : ends ***************** -->
+
+
+<!--************* Example 1.13 : starts ***************** -->
+    <tr>
+     <td width="120" height="2" valign="top"> 
+      <a href="#gpu-cpu-mpicuda-health-id13">
+         <font size="2" face="Arial" color="blue">
+            <p align = "justify"> <span class ="content"> <b> Example 1.13 </B> </span> </p> </font> 
+       </a>  
+      </td>
+   
+      <td width="680" height="2" valign="top">
+       <p align = "justify"> <span class ="content">
+         Write MPI \96 CUDA  program to perform communication among MPI processes  using 
+          CUDA 5.0 features 
+         in  a HPC GPU Cluster environment for Solution of PDEs by Finite Difference Method  
+        <font color="red">(Assignment)</font>
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 1.13 : ends ***************** -->
+
+
+</td> 
+</tr> 
+</tbody>
+</table>
+
+<HR> 
+
+<!-- ************** commented ************* --
+</TBODY> 
+</TABLE>
+
+
+<TABLE cellPadding=3 width = "100%"  border=4> 
+<tbody>
+  <tr>
+<TD bgColor = "#cccdd77889"> 
+
+   <P align=justify> <span class="content">
+  
+ <BR> <BR>
+</span> 
+</p>
+</td> 
+</tr> 
+</tbody>
+</table>
+ 
+  ************ -->
+
+
+ 
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<TABLE cellPadding=3 width = " 100% "  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+       <DIV align=Left><font size="2"  Color="black" face= "verdana">
+    <B>  Description of  Programs </b> </font></DIV> 
+</TD> </TR> 
+</TBODY>
+ </TABLE> 
+
+<BR>
+  <a name ="gpu-cpu-mpicuda-health-id11"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Make File :   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     
+
+
+   <!-- **************** make download  Starts here **************** -->
+    
+    (Download Make File : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/Makefile-GPUCluster-health-check">
+      <font color ="blue">  <I> Makefile-GPUCluster-health-check</font></i>
+      </font></I></a>)
+
+
+<!-- *************** Make download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+<BR> <BR>
+
+<HR>
+
+
+<!-- ********************** Example 1.1 starts *********************** -->
+
+
+ <a name ="gpu-cpu-mpicuda-health-id01"> </a>
+
+<!-- ******** example 1.1.in brief and download  starts ********* -->
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.1:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b> 
+          Write MPI-CUDA Program to demonstrate device query operation on each node with
+     single CUDA enabled NVIDIA GPU in an HPC GPU Cluster environment. 
+    </b>
+
+
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/ClusterHomogenity-devicequery.zip">
+      <font color ="blue">  <I> ClusterHomogenity-devicequery.zip </font></i>
+      </font></I></a>) <BR> 
+
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.1 in brief and download  ends ********* -->
+
+ <!-- ********  Complete Example 1.1 Summary starts *************** -->
+
+
+
+<UL>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+        
+
+       Write a MPI-CUDA program, to demonstrate device query operation on each node with single CUDA enabled
+       NVIDIA GPU in an HPC GPU Cluster.       
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+
+<font size="2" face="Arial" color="red"> <b> Querying Devices </b> </font>  <BR> <BR>
+
+
+An easy interface to determine the information <I>  such as to find mechanism for 
+determining 
+which devices (if any) are present and what capabilities  each device supports  </i>is
+ provided.
+
+First, to get count of how many CUDA devices in the system are built on CUDA Architecture
+call the API 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>.
+
+After calling  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>,
+then iterate through the  devices  and query relevant  information about each device.
+
+The CUDA runtime returns device properties  in a structure of type 
+ 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>.
+As of CUDA 4.1 &amp; CUDA 5.0, the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+structure contains the necessary  information and
+
+most of the information in  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+is self explanatory and commonly used CUDA device properties. 
+<BR> <BR>
+
+
+The description of this example rogram (MPI-CUDA) gathers important parameters from each 
+GPU of a node in a HPC GPU Cluster.
+
+In MPI  environment each MPI process initiates device query. Master process with rank 0 gathers 
+important parameters CUDA device query from each GPU device on each node of HPC GPU Cluster. 
+The important parameters are printed 
+
+</span> </p>
+
+</li>
+
+
+<!-- ************ Input ********** -->
+
+  <P align="justify"> <span class = "content">
+
+  <lI>
+  <font size="2" color ="red"> <B> Input </B> </font>  <br> <BR>
+ </li> None <br> <br>
+
+</span> 
+</p> 
+
+
+<!-- ************ Output ********** -->
+
+
+
+<li>
+<font size="2" color ="red"> <B> Output </B> </font> <BR>
+</li>
+
+<P align="justify"> <span class = "content">
+	
+Process 0  prints the maximum achieved bandwidth on each H2D, D2H
+D2D on each GPU of a each node in HPC GPU Cluster. </span> </p>
+
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-mpi-prog.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</Ul>
+<!-- ************************* Example 1.1 ends **************************** -->
+
+<HR>
+
+
+<!-- ********************** Example 1.2 starts *********************** -->
+
+ <a name ="gpu-cpu-mpicuda-health-id02"> </a>
+
+
+
+<!-- ******** example 1.2.in brief and download  starts ********* -->
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.2:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b> 
+       Write MPI - CUDA Program to measure maximum achieved Host-to-Device bandwidth on
+       each node with single CUDA enabled HPC-GPU-Cluster environment .
+          
+    </b>
+
+
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-max-bandwidth.zip">
+      <font color ="blue">  <I> GPUCluster-max-bandwidth.zip</font></i>
+      </font></I></a>) <BR> 
+
+
+
+<!-- *************** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.2 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.2 Summary starts *************** -->
+
+
+
+<UL>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+       
+
+      Write a MPI-CUDA Program to demonstrate HPC-GPU-Cluster homogenity and measure maximum achieved host to device band width
+      on GPUs of HPC-GPU-Cluster .
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+The sustainable bandwidth from the host to device (and vice versa) plays a key role in the
+ acceleration of single DGEMM  calls. CUDA offers a fast transfer mode that is 
+enabled when page-locked host memory (sometimes called pinned host-memory) is used. 
+A PCI-e transfer from page-able host-memory incurs in an extra copy on the CPU before it 
+transfers via DMA to the GPU. By using a special memory region, this extra copy can be 
+eliminated. This special allocation is done using the function cudaMallocHost instead 
+of a regular malloc.  <BR> <BR>
+The bandwidth increases for pageable host-memory low and it creases for pinned memory 
+on most of the systems.  For most of the computations, an asymmetry in the H2D (host to device)
+ and D2H (device to host) bandwidth exists. The sustained bandwidth is related to the CPU,
+ motherboard chipset, BIOS setting and the OS. The only way to get reliable transfer speed 
+is to measure it. <BR> <BR>
+CUDA 5.0 supports  regular (pageble) and page-locked host memory  and this program performs a 
+comparison between regular malloc/free calls and page-locked versions
+
+In MPI environment each MPI process initiates query. Master process with rank 0 gathers 
+important parameters CUDA device query from each GPU device on each node of GPU Cluster. 
+ The maximum sustainable bandwidth values from  H2D and D2H on each GPU to respective node 
+are printed on master process with rank 0. The program uses <B> MPI poit-to-point </b>
+communication library calls.
+
+</span> </p>
+
+</li>
+
+
+<!-- ************ Input ********** -->
+
+  <P align="justify"> <span class = "content">
+
+  <lI>
+  <font size="2" color ="red"> <B> Input </B> </font>  <br> <BR>
+ </li>
+
+None  <br> <br>
+
+</span> 
+</p> 
+
+
+<!-- ************ Output ********** -->
+
+
+
+<li>
+<font size="2" color ="red"> <B> Output </B> </font> <BR>
+</li>
+
+<P align="justify"> <span class = "content">
+	
+Process 0  prints the maximum achieved bandwidth on each H2D, D2H
+D2D on each GPU of a each node in HPC GPU Cluster. </span> </p>
+
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</Ul>
+<!-- ************************* Example 1.2 ends **************************** -->
+
+<HR>
+
+
+<!-- ********************** Example 1.3 starts *********************** -->
+
+ <a name ="gpu-cpu-mpicuda-health-id03"> </a>
+
+
+
+<!-- ******** example 1.3.in brief and download  starts ********* -->
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.3:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b> Write MPI \96 CUDA  program to measure the host-to device bandwidth on each node 
+     with single &amp; mutliple CUDA enabled NVIDIA  HPC GPU Cluster 
+    </b>
+
+
+   <!-- **************** download  Starts here ****** 
+   <BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+
+
+           download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.3 in brief and download  ends ********* -->
+
+ <!-- ********  Complete Example 1.3 Summary starts *************** -->
+
+
+
+<UL>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write a MPI \96 CUDA program, to demonstrate health monitoring of a large homogeneous HPC GPU Cluster using device 
+query and check GPU memory on GPUs of HPC GPU Cluster
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+The sustainable bandwidth from the host to device (and vice versa) plays a key role in the
+ acceleration of single DGEMM  calls. CUDA offers a fast transfer mode that is 
+enabled when page-locked host memory (sometimes called pinned host-memory) is used. 
+A PCI-e transfer from page-able host-memory incurs in an extra copy on the CPU before it 
+transfers via DMA to the GPU. By using a special memory region, this extra copy can be 
+eliminated. This special allocation is done using the function cudaMallocHost instead 
+of a regular malloc.  
+<BR> <BR>
+
+The bandwidth  for pageable host-memory is low and it increases for pinned memory 
+on most of the systems.  For most of the computations, an asymmetry in the H2D (host to device)
+ and D2H (device to host) bandwidth exists. The sustained bandwidth is related to the CPU,
+ motherboard chipset, BIOS setting and the OS. The only way to get reliable transfer speed 
+is to measure it. <BR> <BR>
+CUDA 5.0 supports regular (pageble) and page-locked host memory  and this program performs a 
+comparison between regular malloc/free calls and page-locked versions
+
+In MPI environment each MPI process initiates query. Master process with rank 0 gathers 
+important parameters CUDA device query from each GPU device on each node of GPU Cluster. 
+ The maximum sustainable bandwidth values from  H2D and D2H on each GPU to respective node 
+are printed on master process with rank 0. The program uses <B> MPI poit-to-point </b>
+communication library calls.
+
+</span> </p>
+
+</li>
+
+
+<!-- ************ Input ********** -->
+
+  <P align="justify"> <span class = "content">
+
+  <lI>
+  <font size="2" color ="red"> <B> Input </B> </font>  <br> <BR>
+ </li>
+
+The input to the problem transfer message size  <br> <br>
+
+</span> 
+</p> 
+
+
+<!-- ************ Output ********** -->
+
+
+
+<li>
+<font size="2" color ="red"> <B> Output </B> </font> <BR>
+</li>
+
+<P align="justify"> <span class = "content">
+	
+Process 0  prints the maximum achieved bandwidth on each H2D, D2H
+D2D on each GPU of a each node in HPC GPU Cluster. </span> </p>
+
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</TR>
+
+</tbody>
+</table>
+</Ul>
+<!-- ************************* Example 1.3 ends **************************** -->
+
+<HR>
+
+
+
+
+
+<!-- ********************** Example 1.4 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id04"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.4:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b> Write MPI CUDA test program to perform synchronous and
+           asynchronous APIs for performing host-GPU I/O, 
+    overlapping GPU computation and I/O from independent execution streams kernels
+    in a GPU cluster environment for Matrix-matrix Computations
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.4 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.4 Summary starts *************** -->
+
+
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+<ul>
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write MPI CUDA test program to perform synchronous and
+           asynchronous APIs for performing host-GPU I/O, 
+    overlapping GPU computation and I/O from independent execution streams kernels
+    in a GPU cluster environment for Matrix-Matrix Computations
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description : CUDA Asynchronous Concurrent Execution </font> </B>
+										
+<P align="justify"> <span class = "content">
+CUDA Runtime supports asynchronous function calls which facilitate concurrent execution
+between host and device, some function calls. In execution of these function calls,
+the  control is returned to the host thread before the device
+ has completed the requested task. Some of these are: <BR> <BR>
+
+<ul>
+<li> <p align= "justify"> <span class = "content">
+Kernel launches; 
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Memory copies between two addresses to the same device memory;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Memory copies from host to device of a memory block of 64 KB or less;
+</li> </span> </p>
+
+<li><p align= "justify"> <span class = "content">
+ Memory copies performed by functions that are suffixed with Async;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Memory set function calls.
+</li> </span> </p>
+</ul>
+
+<p align= "justify"> <span class = "content">
+Asynchronous function calls 
+
+A stream is a sequence 
+of commands (possibly issued by different host threads) that execute 
+in order. A CUDA represents a queue of GPU operations that get executed 
+in a specific order. Several operations can be included into a stream 
+and the order in which operations are added  to the stream 
+specifies the order in which they will be executed.  Some of Stream 
+features are:
+</span> </p>
+
+
+<ul>
+<li> <p align= "justify"> <span class = "content">
+Creation and Destruction; 
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Default Stream;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Explicit Synchronization;
+</li> </span> </p>
+
+<li><p align= "justify"> <span class = "content">
+ Implicit Synchronization;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Overlapping Behavior.
+</li> </span> </p>
+</ul>
+
+<ul>
+<p align= "justify"> <span class = "content">
+
+Streams and Async functions provide memocopies (D2H, H2D) asynchronous with CPU
+and ability to concurrently execute a kernel and a memcopy.
+Application employ single or multiple CUDA Streams. When we use single stream,
+at the beginning of application, the computations are divided into chunks and 
+each chunked computation and the overlap of memory copies with kernel execution.
+On multiple streams, different streams will perform CUDA operations as per 
+application requirements. 
+</span> </p>
+</li>
+</ul>
+
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description : Implementation of Matrix-Matrix Multiplication 
+</font> </B>
+										
+<P align="justify"> <span class = "content">
+CUDA Runtime supports asynchronous function calls which facilitate concurrent execution
+between host and device, some function calls. In execution of these function calls,
+the  control is returned to the host thread before the device
+ has completed the requested task.  
+</span> </p>
+
+
+<p align = "justify"> <span class ="content">
+  In this MPI-CUDA program, for computing the matrix-matrix multiplication
+  on <I>p </I>processors of IBM AIX cluster using block checkerboard partitioning
+  of the matrices . Special <B>MPI </B> routines on cartesian topology can
+  be used for checkerboard partitioning of matrices. <BR> <BR>
+
+  Assume that <I> p=  q<SUP>2&nbsp; </SUP></I>and the size of square
+  matrices <B>A</B> and <B>B</B> is evenly divisible by <I>q</I>.
+  Assume that <B>A</B> and <B>B</B> are square matrices of size
+  <I>n</I> and <B>C</B> be the output&nbsp; matrix. These matrices are dived into blocks or submatrices 
+  to perform matrix-matrix operations in parallel.
+<BR> <BR>
+
+  For example, an <I>n </I>x<I> n </I>matrix <B>A </B>can be regarded as
+  <I>q </I>x<I> q </I>array of blocks <B>A</B><I><SUB>i, j</SUB></I> (0<I>&lt;=i
+  &lt;q</I>, 0<I>&lt;= j &lt; q</I>) such that each block is an (<I>n/q)
+  </I>x<I> (n/q</I>) submatrix. We use <I>p </I> kernels to implement the
+  block version of matrix multiplication in parallel on GPU by choosing <I>q</I>
+  as a square root of&nbsp; <I>p&nbsp;</I> and each kernel computes a distinct block <B>C</B><I><SUB>i,
+  j</SUB></I>. <I>Block&nbsp; </I>and<I> cyclic checkerboard</I> partitioning of 
+  a 8 x 8 matrix on a square grid (4&nbsp; x 4)  is shown in diffrent way to take 
+  advantage of coalescing and tile partitioning cocepts  of CUDA from performance point of 
+  view.
+</span> </p>
+
+
+<p align = "center"> <span class ="content">
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/matmat-check.gif" HEIGHT=300 WIDTH= 400> &nbsp; <BR> <BR>
+   Figure. Checkerboard & Cyclic checker-baord partitioning of 8 x 8 matrices on 
+  16 processes </B>
+</span> </p>
+
+<p align = "justify"> <span class ="content">
+   The matrices <B>A </B>and<B> B </B>are<B> </B>partitioned into <I>p&nbsp;
+   </I>blocks, <B>A<I><SUB> </SUB></I></B><I><SUB>i, j<B> </B></SUB></I>and
+   <B>B </B><SUB><I>i, j</I><B> </B></SUB>
+    (0&lt;=<I>i &lt; q</I>, 0&lt;=<I>j &lt; q</I>) of size&nbsp;
+     (<I>n/q </I>x <I>n/q</I>)&nbsp;&nbsp;  on GPU. 
+
+   These blocks are mapped onto a <I>q </I>x <I>q&nbsp; </I> GPU 
+   mesh of kernels. These kernels are labeled from P<SUB>0,0</SUB> 
+   to P<SUB>q<I>-</I>1,q-1</SUB>.  
+
+   These kernels are launched using Streams and Async function calls.
+   <BR> <BR>
+
+</span> </p>
+</li>
+</ul>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.4 ends **************************** -->
+
+<HR>
+<!-- ********************** Example 1.5 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id05"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.5:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <B>
+         Write a test suite based on GPU device virtualization to execute few 
+         hundred CUDA kernels on HPC GPU Cluster using CUDA wrapper test
+   <font color="red">(Assignment)</font>  
+       </b>  
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.5 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.5 Summary starts *************** -->
+
+<UL>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write a test suite based on GPU device virtualization to execute few 
+         hundred CUDA kernels on HPC GPU Cluster using CUDA wrapper test
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+In virtualization, software framework that will allow a single GPU on a "server" system to 
+serve many clients simultaneously, and each of those clients can have
+its own, independent GPU workload. In a simple situation, on one GPU System, 
+many kernels are allowed to execute on GPU using  
+ GPU device virtualization. The user\92s application sees only
+the virtual GPU devices, where one device (ex. device0) is rotated to a
+different physical GPU after any GPU device open call. This
+is implemented by shifting the virtual GPU to physical GPU
+mapping by one each time a process is launched. The
+CUDA/MPI cand be used and checker-board paritioning of matrix into matrix 
+ comptuations can be taken to demonstrate the performance. <BR> <BR>
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</Ul>
+<!-- ************************* Example 1.5 ends **************************** -->
+
+<HR>
+
+
+<!-- ********************** Example 1.6 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id06"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.6:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <B>  
+         Write MPI-Pthread-CUDA test Program to perform thread affinity mapping, 
+        to ensure an optimal mapping of GPU to CPU cores in a HPC GPU Cluster
+        environment   <font color="red">(Assignment)</font>
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.6 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.6 Summary starts *************** -->
+
+<UL>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         <p align = "justify"><span class ="content">
+         Write MPI-Pthread-CUDA test Program to perform thread affinity mapping, 
+        to ensure an optimal mapping of GPU to CPU cores in a HPC GPU Cluster
+        environment   <font color="red">(Assignment)</font>
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+On Host-CPU, assinging host-threads to unque GPU, which
+is implemented in CUDA Wrapper library. With multi-GPUs,
+node containing the optimal mapping of GPU to CPU cores
+is important. Also, set process affinity
+for the CPU cores \93closer\94 to the GPU being allocated
+which can be done using CUDAC wrapper library. In typical 
+message passing cluster with each node having single or 
+multiple GPUs, the sustained bandwidth 
+from the host to device (and vice versa) plays a key role in the
+ acceleration of computations. The performance depends upon
+the  host  CPU  process is running on to achive optimal mapping.
+<BR> <BR>
+Demonstrate the performance of with and witout proper affinity 
+mapping to solve Solution of matrix system of linear equations
+using POSIX threads and CUDA APIs in MPI environment
+  <BR> <BR>
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</Ul>
+<!-- ************************* Example 1.6 ends **************************** -->
+
+<HR>
+
+<!-- ********************** Example 1.7 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id07"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.7:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b> Write MPI-Pthread-CUDA test Program to demonstrate compute-</i>exclusive mode</i> and
+         normal mode features in a HPC GPU Cluster environment  <font color="red">(Assignment)</font>
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.7 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.7 Summary starts *************** -->
+
+<UL>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write MPI-Pthread-CUDA test Program to demonstrate compute-</i>exclusive mode</i> and
+         normal mode features in a HPC GPU Cluster environment  for 
+Solution of matrix system of linear equations
+using POSIX threads and CUDA APs 
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+CUDA support normal and the  compute-exclusive mode in a typical multi-threaded
+environment. In compute-exclusive mode, a given
+thread will own a GPU at first use. Additionally, this mode
+includes the capability to fall back to the next device available.   <BR> <BR>
+
+Develop a MPi-CUDA program using <I> normal </i> and <i> compute-exclusive </i>
+ mode for 
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</ul>
+<!-- ************************* Example 1.7 ends **************************** -->
+
+<HR>
+
+<!-- ********************** Example 1.8 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id08"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.8:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b> Write MPI-Pthread-CUDA test Program to demonstrate list of pre-node job allocation 
+         features in a HPC GPU Cluster environment
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.8 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.8 Summary starts *************** -->
+
+<ul>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+          Write MPI-Pthread-CUDA test Program to demonstrate list of pre-node job allocation 
+         features in a HPC GPU Cluster environment
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+Write a MPI-CUDA test suite to perform the following operations in a 
+HPC GPU Cluster. </span> </p>
+
+<ul>
+<li> <P align="justify"> <span class = "content">
+ Detects GPU devices on the allocated node(s)
+of HPC GPU Cluster
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Generate total device list file for HPC GPU Cluster
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Checkout requested GPU devices from the total device file
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Test Device Query on each device and check for 
+homogeneity of HPC GPU Cluster 
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Display of 
+allocated GPUs on HPC GPU Cluster  and integration 
+with Resource Job Management software
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Check the available memory on each GPU and match 
+with resource required for job submission
+</li>
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</ul>
+<!-- ************************* Example 1.8 ends **************************** -->
+
+<HR>
+
+
+
+<!-- ********************** Example 1.9 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id09"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="15%" height="2" valign="top">
+          <b>  Example 1.9:   </b> </td>
+
+    <td width="85%" height="2" align="left">
+     <b>  Write MPI-Pthread-CUDA test Program to demonstrate list of post-job de-allocation  
+         features in a HPC GPU Cluster environment
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.9 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.9 Summary starts *************** -->
+
+<ul>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+     Write MPI-Pthread-CUDA test Program to demonstrate list of post-job de-allocation 
+    features in a HPC GPU Cluster environment
+  <br>
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+
+<P align="justify"> <span class = "content">
+Write a MPI-CUDA test suite to perform the following operations in a 
+HPC GPU Cluster. </span> </p>
+
+<ul>
+<li> <P align="justify"> <span class = "content">
+ Detects status of GPU devices on the allocated node(s)
+of HPC GPU Cluster
+</span> </p> 
+</li>
+
+
+<li> <P align="justify"> <span class = "content">
+Run GPU memory test utility against job\92s allocated
+GPU device(s) to verify healthy GPU state <BR> <BR>
+<blockquote>
+
+ If bad state is detected, mark the node <B> offline</b>, 
+ if other jobs present on it.
+<BR> <BR>
+
+ If no other jobs present, reload the kernel module to
+ recover the node and mark it on-line again 
+</blockquote>
+</span> </p> 
+</li>
+
+
+<li> <P align="justify"> <span class = "content">
+Run the memory scrubber to clear GPU device memory
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Notify on any failure events with job details
+</span> </p> 
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Clear CUDA wrapper shared memory segment  
+</span> </p>
+</li>
+
+<li> <P align="justify"> <span class = "content">
+Check-in GPUs back to the device file
+</span> </p>
+</li>
+
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</Ul>
+<!-- ************************* Example 1.9 ends **************************** -->
+
+<HR>
+
+
+
+<!-- ********************** Example 1.10 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id010"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="16%" height="2" valign="top">
+          <b>  Example 1.10:   </b> </td>
+
+    <td width="84%" height="2" align="left">
+     <b> Write MPI \96 CUDA program to demonstrate maximum achieved performance 
+   of DGEMM using CUBLAS libraries on each GPU of HPC GPU Cluster
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.10 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.10 Summary starts *************** -->
+
+<ul>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write MPI \96 CUDA program to demonstrate maximum achieved performance 
+   of DGEMM using CUBLAS libraries on each GPU of HPC GPU Cluster
+ 
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+      Write MPI \96 CUDA program to calculate maximum achieved performance of
+    DGEMM on each GPU of each node of HPC GPU Cluster and master process with 
+    rank 0 prints the final value.
+  <br>  
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</ul>
+<!-- ************************* Example 1.10 ends **************************** -->
+
+<HR>
+
+
+<!-- ********************** Example 1.11 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id011"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="16%" height="2" valign="top">
+          <b>  Example 1.11:   </b> </td>
+
+    <td width="84%" height="2" align="left">
+     <b> Write MPI \96 CUDA program to calculate maximum achieved performance of
+    DGEMM on each node of HPC GPU Cluster using ATLAS on host-cpu and CUBLAS 
+ libraries on GPUs  
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+</ul>
+<!-- ******** Example 1.11 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.11 Summary starts *************** -->
+
+<ul>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write MPI \96 CUDA program to calculate maximum achieved performance of
+    DGEMM on each node of HPC GPU Cluster using ATLAS on host-cpu and CUBLAS 
+ libraries on GPUs 
+ 
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+Demonstrate the  performance of DGEMM on a node with single GPU using 
+sing ATLAS on host-cpu and CUBLAS libraries on GPUs  <BR> <BR>
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+</ul>
+<!-- ************************* Example 1.11 ends **************************** -->
+
+<HR>
+
+
+<!-- ********************** Example 1.12 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id012"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="16%" height="2" valign="top">
+          <b>  Example 1.12:   </b> </td>
+
+    <td width="84%" height="2" align="left">
+     <b> Write MPI \96 CUDA  program to perform GPU-to-GPU Communication 
+   using GPUDirect of NVIDIA in  a HPC GPU Cluster environment for Solution 
+  of PDEs by Finite Difference Method
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.12 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.12 Summary starts *************** -->
+
+<ul>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+   Write MPI \96 CUDA  program to perform GPU-to-GPU Communication 
+   using GPUDirect of NVIDIA
+   in  a HPC GPU Cluster environment for Solution of PDEs by Finite 
+Difference Method  
+
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+The MPI implementation of solution of PDEs on parallel computers,  the one-dimensional paritioning is performed
+and each parition is assigned to a unique MPI process. 
+Using CUDA-5.0, you've to demonstrate the time taken for  communication of ghost-points 
+information from one GPU  another GPU on the same node in HPC Cluster.  <BR> <BR>
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+</TD>
+</TR>
+</tbody>
+</table>
+</ul>
+<!-- ************************* Example 1.12 ends **************************** -->
+
+<HR>
+
+
+<!-- ********************** Example 1.13 starts *********************** -->
+
+<a name ="gpu-cpu-mpicuda-health-id13"> </a>
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+     <td width="16%" height="2" valign="top">
+          <b>  Example 1.13:   </b> </td>
+
+    <td width="84%" height="2" align="left">
+     <b> Write MPI \96 CUDA  program to perform communication among MPI processes  using 
+          CUDA 5.0 features 
+         in  a HPC GPU Cluster environment for Solution of PDEs by Finite Difference Method 
+    </b>
+
+
+<!-- *************** download  Start here *** commented 
+<BR> 
+    (Download source code : 
+ 
+    <a href="../gpu-cpu-hyb-comp-cuda-health-monitor-codes/GPUCluster-health-check-DeviceQuery.cu">
+      <font color ="blue">  <I> GPUCluster-health-check-DeviceQuery.cu</font></i>
+      </font></I></a>) <BR> 
+
+  ********* commneted **** download  Ends here ************* -->
+
+ </td>
+ </tr> 
+</tbody>
+</table>
+
+<!-- ******** Example 1.13 in brief and download  ends ********* -->
+
+ <!-- ******** Complete Example 1.13 Summary starts *************** -->
+
+<ul>
+<table  height="6">
+<tbody>
+<tr> 
+<TD>
+
+<!-- *********** Objective Starts *********** -->
+
+<LI><B> <font color = "red"> Objective  </font> </B>
+
+<font size="2">
+<P align="justify"> 
+         Write MPI \96 CUDA  program to perform communication among MPI processes  using 
+          CUDA 5.0 features 
+         in  a HPC GPU Cluster environment for Solution of PDEs by Finite Difference Method 
+
+
+</P>
+</LI>
+</A>
+
+<!-- ************ Description ******** -->
+
+
+<LI><B> <font color = "red"> Description  </font> </B>
+										
+<P align="justify"> <span class = "content">
+The MPI implementation of solution of PDEs on parallel computers,  the one-dimensional paritioning is performed
+and each parition is assigned to a unique MPI process. 
+Using CUDA-5.0, you've to demonstrate the time taken for  communication of ghost-points 
+information from one GPU on a node to another GPU on diffrent node. A comparative analysis
+of results using single GPU, multi-gpu, differnt types of gpu-gpu communication  should
+be carried out.  <BR> <BR>
+
+</span> </p>
+
+</li>
+
+  <DIV align = "right">
+  <A href ="gpu-cpu-hyb-comp-cuda-health-monitor.html"> 
+  <IMG SRC="../gpu-cpu-hybrid-comp-images/up.gif" border=0 width="13" height="13"></A>
+  </DIV>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 1.13 ends **************************** -->
+
+<HR>
+
+
+
+</TD></TR>
+ 
+<!--  content of web page End here  --> 
+ 
+          
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+          </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

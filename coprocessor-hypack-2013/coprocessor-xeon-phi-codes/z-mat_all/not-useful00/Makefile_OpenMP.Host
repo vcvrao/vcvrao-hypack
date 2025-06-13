@@ -1,0 +1,25 @@
+
+CC   = icc 
+
+CCFLAGS    = -openmp -std=c99 
+OPTFLAGS   =  -O3
+
+LIBS       = 
+EXECS      =  run
+#---------------------------------------------------------------------
+#		Object files ...
+#---------------------------------------------------------------------
+#
+OBJECTS = matrix-matrix-multiply-openmp-clang.c
+
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+    $(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl
+
+.c.o:
+    $(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+    \rm -rf *.o run
+

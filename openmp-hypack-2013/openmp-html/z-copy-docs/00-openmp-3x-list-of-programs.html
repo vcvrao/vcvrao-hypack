@@ -1,0 +1,2044 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML><HEAD><TITLE>:C-DAC PEMG-2010 tech. workshop - OpenMP - C-DAC ECity-Bengalore June 21-24,2010</TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=Content-Language content=en-us>
+<META id=ROBOTS content=ALL name=ROBOTS>
+
+<META id=Copyright content="Copyright (c) 2010, C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<META id=keywords content=HDF name=keywords><LINK href="../../pemg10-files/pemg-main.css" 
+type=text/css rel=stylesheet><LINK href="../../pemg10-files/pemg-home.css" type=text/css 
+rel=stylesheet><LINK href="../../pemg10-files/pemg-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="../../pemg10-files/pemg-main.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo><A 
+            href="http://www.cdac.in/pemg2010/"><IMG alt=PEMG-2010
+            src="../../pemg10-files/PEMG-2010-header.jpg" border=0></A></TD>
+
+        
+
+</TR></TBODY></TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+
+      <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+            
+
+		  <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:pemgShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('1', 1)" 
+       		href="../../pemg10-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:pemgShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('2', 1)" 
+                  href="../../pemg10-topics-of-interest-mode01-multicore.html">Topics</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:pemgShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('3', 1)" 
+                  href="../../pemg10-tech-prog-overview.html">Tech. Prog.</A></TD>
+
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:pemgShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('4', 1)" 
+                  href="../../pemg10-complab-overview.html">Comp. Lab.</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:pemgShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('5', 1)" 
+                  href="../../pemg10-mode01-multicore-lab-overview.html"> Mode-1 (Multi-Cores)</A></TD>
+		<TD class=menusep></TD>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow6 
+                  onmouseover="javascript:pemgShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('6', 1)" 
+                  href="../../pemg10-mode02-gpgpu-lab-overview.html"> Mode-2 (GPGPUs)</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+                  href="../../pemg10-reg-private-sector.html">Registration 
+                  </A></TD>
+                <TD class=menusep></TD>
+		
+                <TD class=menu1><A class=menu1 id=mainmenurow8
+                  onmouseover="javascript:pemgShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('8', 1)" 
+                  href="../../pemg10-contact-address.html">Contact
+                 </A></TD>
+
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+       <TABLE id=submenutab1 onmouseover="javascript:pemgShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:pemgHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+        <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-overview.html"><B> 
+            PEMG-2010 Overview</B></A>
+
+        <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-venue.html"><B>
+            Venue : ECity, Bengaluru </B></A>
+
+        <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-faculty.html"><B>
+            Faculty Members</B></A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B> </A>
+
+
+	<A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-audience.html"><B>
+            Target Audience / Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-proceedings.html"><B>
+            PEMG-2010 Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-download-software.html"><B> 
+              Download Software </B> </A>
+
+
+	<A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-sponsors.html"><B>
+            PEMG-2010 Sponsors</B></A>
+                  
+	<A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-past-workshops.html"><B> 
+             Past Tech. Workshops </B></A>
+   
+        <A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-accommodation.html"><B>
+             Accommodation </B></A>
+
+       
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-local-travel.html"><B>
+            Local Travel</B></A>
+    
+
+	<A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-organisers.html"><B> 
+             Organisers</B> </A>
+
+        <A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-feedback.html"><B>
+             Feedback </B></A>
+
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-acknowledgements.html"><B> 
+             Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-contact-address.html"><B>Contact</B></A>
+ 
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onmouseover="javascript:pemgShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores </B></A>
+
+         <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+
+         <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-handson.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+         <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+
+<!--   Sub menu for **** Row-3-Technical program  **** start here -->
+
+
+      <TABLE id=submenutab3 onmouseover="javascript:pemgShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 152px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-overview.html"><B> 
+            Tech. Prog. Overview</B></A>
+
+    
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-at-glance-poster.html"><B> 
+            Prog. at Glance / Poster</B></A>
+
+
+	<A class=menu2 id=submenurow3s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores</B></A>
+
+	 <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+	
+
+         <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B></A>
+
+	<A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-demonstration.html"><B> 
+            Demonstration</B></A>
+
+        <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-handson-overview.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+        <A class=menu2 id=submenurow3s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-3-TechnicalProgram **** End here -->
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory **** start  here -->
+
+      <TABLE id=submenutab4 onmouseover="javascript:pemgShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 247px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	    <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-overview.html"><B> Comp. Lab. Overview </B></A>
+
+	<A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-access.html"><B> Comp. Lab. Access </B></A>
+
+           <A class=menu2 id=submenurow4s3
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode01-multicore.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+		
+	<A class=menu2 id=submenurow4s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode02-gpgpu.html"><B> Mode-2  (GPGPU ) Lab. </B></A>
+
+        <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> <A/>
+
+	</TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory ****  End  here -->
+
+
+<!--   Sub menu for **** Row-5-Mode 1 : Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onmouseover="javascript:pemgShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 350px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-lab-overview.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+
+	<A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-pthreads.html"><B>  Pthreads</B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+
+	<A class=menu2 id=submenurow5s4
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow5s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi.html"><B>MPI 1.0 / MPI 2.0</B></A>
+ 
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-openmp.html"><B>
+            MPI-OpenMP</B></A>
+ 
+      <A class=menu2 id=submenurow5s7
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-pthreads.html"><B>
+            MPI-Pthreads </B></A>
+
+      <A class=menu2 id=submenurow5s8
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-tbb.html"><B>
+            MPI-TBB </B></A>
+ 
+      <A class=menu2 id=submenurow5s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-java-threads.html"><B> Java Prog. - Threads</B></A>
+
+	<A class=menu2 id=submenurow5s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-software-tools.html"><B> Software threads- tools</B></A>
+
+        <A class=menu2 id=submenurow5s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Tuning / Perf. </B></A>
+
+        <A class=menu2 id=submenurow5s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-perf-math-lib.html"><B> Threads- Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow5s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+
+       <A class=menu2 id=submenurow5s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Performance </B></A>
+
+
+       <A class=menu2 id=submenurow5s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5-Mode 1 : Hands-on ****  End here  -->
+
+
+<!--   Sub menu for **** Row-6-Mode 2 : Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onmouseover="javascript:pemgShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 465px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-lab-overview.html"><B> Mode-2  (GPGPU ) Lab.   </B></A>
+
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-nvidia-gpu-cuda.html"><B>CUDA enabled NVIDIA GPUs </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-amd-stream-comp.html"><B>AMD-ATI Stream Comp.-SDK</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-opencl-opengl.html"><B> GPU Programming - OpenCL    </B></A>
+
+
+	<A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-hybrid-comp.html"><B>Hybrid Comp. (CPUs/GPUs)</B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6-Mode 2 : Hands-on **** End here  -->
+
+
+
+<!--  Sub menu for **** Row-7-Registration **** Start here  -->
+
+      <TABLE id=submenutab7 onmouseover="javascript:pemgShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-private-sector.html"><B>Private Sector</B></A>
+
+      <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-public-sector.html"><B>Public Sector/ Govt.  Org.</B></A>
+
+      <A class=menu2 id=submenurow7s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-academic-staff.html"><B>Govt. Academic Staff </B></A>
+
+      <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-students.html"><B>Students</B></A>
+
+      <A class=menu2 id=submenurow7s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-online-registration.html"><B>Online Registration</B></A>
+ 
+      <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+             href="../../pemg10-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-7-Registration **** End here  -->
+
+
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** Start here  -->
+
+      <TABLE id=submenutab8 onmouseover="javascript:pemgShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+
+      <TD class=menu2>
+
+     <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-address.html"><B>Contact</B></A>
+
+
+     <A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-accommodation.html"><B>Accommodation </B></A>
+
+        
+     <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+  </TD> </TR></TBODY> </TABLE>
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** End here  -->
+
+  </DIV>
+
+
+<!-- **************** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+
+	       
+           <A class=menul
+	       href="../../pemg10-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 (Multi-Cores) Lab. </A>
+                
+               
+             
+           <A class=menul
+               href="../../pemg10-mode01-multicore-pthreads.html">
+               &#149; Pthreads</A>
+           	
+	
+	   <A class=menul  
+              href="../../pemg10-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+               <!-- *** -->
+	       <A class=menulslct  
+                href="../../pemg10-mode01-multicore-openmp.html">
+                &#149; OpenMP</A>
+	       <!-- *** -->
+              
+	   <A class=menul
+              href="../../pemg10-mode01-multicore-mpi.html">
+              &#149; MPI 1.0 / MPI 2.0</A>
+              
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-openmp.html">
+              &#149;  MPI-OpenMP</A>
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-pthreads.html">
+              &#149;  MPI-Pthreads</A> 
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-tbb.html">
+              &#149;  MPI-TBB</A>  
+   
+          
+           <A class=menul
+	      href="../../pemg10-mode01-multicore-java-threads.html">
+              &#149;  Java Prog.-Threads</A>
+          
+
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-software-tools.html">
+              &#149;  Software threads - Tools</A>
+
+           
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-compiler-tune-perf.html">
+              &#149;  Compilers - Tuning /Perf.</A>
+             
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-perf-math-lib.html">
+              &#149; Threads - Perf.  Math. Lib. </A>
+
+           
+	   <A class=menul
+	      href="../../pemg10-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators </A>
+            
+
+	   <A class=menul
+	      href="../../pemg10-mode01-multicore-threads-io-perf.html">
+              &#149;  Threads-I/O Performance </A>
+        
+
+          <A class=menul 
+	     href="../../index.html">
+             &#149;  Home </A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+           <BR>
+            <DIV 
+            style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"></DIV><BR><BR><BR><BR></TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt >
+          
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+
+ <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  
+   <TR>
+   <TD bgColor = "cccdd77889">
+
+     <DIV align=left><font size="3"  Color="black" face= "Arial">
+       <B> Prog. on Multi-Core Processors Using OpenMP 3.0 APIs </b> </font>
+      </DIV> 
+    </TD>
+    </TR>
+
+
+
+   <TR>
+  <TD>
+
+<BR> 
+<p align="justify"><span class = "content">  
+OpenMP 3.0 is a shared-memory model.
+The  changes between the OpenMP API Version 2.5 specification and the 
+OpenMP API Version 3.0 specification are given below. For more details, 
+Please visit <A href ="www.openmp.org"> <font Color = "blue"> OpenMP </font> </a> API 
+specification.
+In OpenMP 3.0, features such as, 
+the concept of tasks, atomicity of memory accesses. Internal control variables 
+for each task and whole program, modificaition of parallel region, rules for 
+determination of number of threads, runtime libraries have been included. 
+
+</span> </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+<HR> 
+
+ <!-- ************************ Table for Listing of Programs Starts  *********************** -->
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+   <!-- ************************ Example 1 ************************* -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+           <font size="2" face="Arial" color="black">
+            <b>  1. </b></font> <BR>  
+      </td>
+   
+      <td width="600" height="2" valign="top">
+        <a href="#openmp-3x-multicore-prog-id01">
+          <font size="2" face="Arial" color="blue">
+          Memory Consistenccy Model with respect to flush operations
+       </font>
+      </a>
+     </td>
+     </tr>
+
+ <!-- ************************ Example 2 *********************** -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b> 2. </b> </font> <BR>  
+      </td>
+   
+      <td width="500" height="2" valign="top">
+     <a href="#openmp-3x-multicore-prog-id02">       
+      <font size="2" face="Arial" color="blue">
+          Program illustrating the use of OpenMP Conditional Compilation 
+       </font>
+      </a>
+     </td>
+   </tr>
+
+
+   <!-- ****************** Example 3 ************************* -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+     
+         <font size="2" face="Arial" color="black">
+            <b> 3. </b></font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="500" height="2" align="top">
+         <a href="#openmp-3x-multicore-prog-id03">
+          <font size="2" face="Arial" color="blue">
+         Illustrate how  Internal Control Variables (ICVs) control behaviour of program
+       </font>
+      </a>
+     </td>
+     </tr>
+
+ <!-- ************************* Example 4 ************************ -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b>  4. </b> </font> <BR>  
+      </td>
+   
+      <td width="500" height="2" align="top">
+        <a href="#openmp-3x-multicore-prog-id04">
+          <font size="2" face="Arial" color="blue">
+       Illustrate the use of parallel Construct  for coarse grain parallel program. 
+
+       </font>
+     </a>
+     </td>
+     </tr>
+
+
+   <!-- *********************** Example 5 **************************** -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b>   5. </b> </font> <BR>   
+      </td>
+   
+     <td width="500" height="2" valign="top">
+      <a href="#openmp-3x-multicore-prog-id05">
+       <font size="2" face="Arial" color="blue">
+       Illustrate the use of Loop Construct (collapse clause) by a team of threads. 
+       </font>
+       </a>
+     </td>
+     </tr>
+
+ <!-- ************************ Example 6  *************************** -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b>  6. </b> </font> <BR>    
+      </td>
+   
+      <td width="500" height="2" valign="top">
+       <a href="#openmp-3x-multicore-prog-id06"> 
+       <font size="2" face="Arial" color="blue">
+     Illustrate the use of Loop Construct to compute the matrix-vector multiplication 
+       </font>
+      </a>
+     </td>
+     </tr>
+
+
+   <!-- ************************ Example 7  ************************** -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b>   7. <BR> </b> </font>  
+      </td>
+      <td width="500" height="2" valign="top">
+      <a href="#openmp-3x-multicore-prog-id07"> 
+       <font size="2" face="Arial" color="blue">
+   Illustrate the use of task Construct for an recursive algorithm.   
+       </font>
+      </a>
+     </td>
+     </tr>
+
+ 
+   <!-- ******************** Example 8 ************************** -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b>   8. <BR> </b> </font>   
+      </td>
+   
+      <td width="500" height="2" valign="top">
+       <a href="#openmp-3x-multicore-prog-id08">
+        <font size="2" face="Arial" color="blue">
+        Illustrate the use of task Construct for an link list traversal. 
+       </font>
+       </a>
+     </td>
+     </tr>
+
+
+   <!-- ******************** Example 9 ************************** -->
+    <tr>
+     <td width="015" height="2" valign="top"> 
+         <font size="2" face="Arial" color="black">
+            <b>   9. <BR> </b> </font>  
+      </td>
+   
+      <td width="500" height="2" valign="top">
+       <a href="#openmp-3x-multicore-prog-id09">
+        <font size="2" face="Arial" color="blue">
+        Illustrate the use of task Construct for inorder tree traverse algorithm. 
+       </font>
+       </a>
+     </td>
+     </tr>
+
+</TBODY> 
+</TABLE> 
+
+
+<!-- ******************** Table for Listing of Programs Ends  ********************* -->
+
+
+<HR>
+        
+<BR>
+
+
+<!-- **************** Table for reference Start here *********************** -->
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+ <p align="justify"><span class = "content"> 
+
+    <font size="2" face = "Arial" color="red"> <B>Source - References :</b>  </font>
+   
+<a href="../../reference-pemg-2010/reference-overview-mode01.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-pemg-2010/reference-overview-mode01.html#multicore-threads-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi Threading </b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-pemg-2010/reference-overview-mode01.html#multicore-prog-openmp-ref"> 
+
+ <font size="2" face="Arial" color="blue"><B> OpenMP </b>  </font> </a>  <BR>  <BR>
+  </font>
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- **************** Table for reference Ends  here *********************** -->
+
+<!-- ****************Table for Description of Pthread Programs Starts *************** -->
+
+<HR> 
+<BR> <BR>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+
+  <DIV align = "left">
+   <font Color="black" face= "verdana" size ="2" >
+     <B> Description of OpenMP 3.0 Programs </b> 
+   </font>
+  </DIV> 
+</TD>
+</TR> 
+
+<TR> <TD> <BR> </TD> </TR>
+
+<!-- **************** Example 1 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id01"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+
+    
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 1 : Memory Consistenccy Model with respect to flush operations 
+        </b> </font> 
+       <BR>
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/mem-consistency-openmp3x.c">
+            <font color = "blue"> <I> mem-consistency-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/mem-consistency-openmp3x.f">
+
+            <font color = "blue"> <I> mem-consistency-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+
+    </TD>  
+    </TR> 
+ 
+    <TR>
+    <TD>
+
+     <BR> 
+
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Example program illustrating the  memory consistency model provided by OpenMP. 
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+
+           The program demonstrates how the OpenMP implicit flush (barrier) operation enforces 
+           consistency between temporary view and memory. The barrier contains implicit flushes
+           on all threads, as well as thread synchronization.
+           
+           In this example program, at Print 1, the value of <B> x </b>  could be 
+		either 2 or 5, depending on the timing of the threads, and the 
+		implementation of the assignment to <B> x</b>. There are two reasons 
+      		that the value at Print 1 might not be 5. First, Print 1 might 
+		be executed before the assignment to <B> x </b> is executed. Second, even 
+		if Print 1 is executed after the assignment, the value 5 is not 
+		guaranteed to be seen by thread 1 because a flush may not have 
+		been executed by thread 0 since the assignment.
+
+		The barrier after Print 1 contains implicit flushes on all 
+		thread as well as a thread synchronization, so the programmer
+ 		is guaranteed that the value 5 will be printed by both Print 2
+ 		and Print 3.
+            </span> </p>
+
+
+               <p align = "justify"> <span class = "content">
+
+                     
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Value of the variable  <B> x </b> 
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+    
+      
+
+<!-- *******************  Example 1 Ends ************************ -->
+
+<!-- **************** Example 2 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id02"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+
+    
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 2 :  Program illustrating the use of openmp conditional compilation 
+        </b> </font> 
+       <BR>
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/mem-cond-compile-openmp3x.c">
+            <font color = "blue"> <I> mem-cond-compile-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/mem-cond-compile-openmp3x.f">
+
+            <font color = "blue"> <I> mem-cond-compile-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Write an OpenMP program to illustrate the condtional compilation
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+           The OpenMP macro <B> _OPENMP </B> is used with the OpenMP compilation
+            </span> </p>
+           
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None.
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Print statement will be printed if the macro				
+		<B> _OPENMP </B> is defined.
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+  
+      
+
+<!-- *******************  Example 2 Ends ************************ -->
+
+<!-- **************** Example 3 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id03"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+
+    
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 3 : Illustrate how ICVs control the behaviour of the  OpenMP program. 
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/icv-threads-openmp3x.c">
+            <font color = "blue"> <I> icv-threads-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/icv-threads-openmp3x.f">
+
+            <font color = "blue"> <I> icv-threads-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Write an OpenMP program to how Internal Control Variables (ICVs) control the 
+             behaviour of the program
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+               Demonstrate the use of 
+                OpenMP Library calls to change the default values  
+                of the internal control variables (ICVs). <BR>
+
+                 The value of the <I> nthreads-var-ICV</i> is changed via  a call to 
+             <font size = "2" face = "Courier New"  color = "black"> <B> omp_set_num_threads  </B></font> 
+              for the next parallel region. <BR> 
+
+                 The value of the <I> dyn-vars-ICV </i> is changed via  a call to 
+             <font size = "2" face = "Courier New"  color = "black"> <B> omp_set_dynamic() </B></font> 
+              for enable or disable the dynamic adjustment of the number of threads vailable for the 
+		  execution of subsequent parallel region. <BR> 
+
+             The value of the <I> nest-vars -ICV </i> is changed via  a call to 
+             <font size = "2" face = "Courier New"  color = "black"> <B> omp_set_nested() </B></font> 
+              to enable  or disable the nested parallelism 
+
+            The value of the <I> max_active-levels-var-ICV </i> is changed via  a call to 
+        <font size = "2" face = "Courier New"  color = "black">
+          <B> omp_set_max_active_levels() </B></font> to control the  the number of nested 
+         active parallel regions.
+
+
+            </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Values of the ICVs
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+    
+      
+
+<!-- *******************  Example 3 Ends ************************ -->
+
+<!-- **************** Example 4 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id04"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 4 : Illustrate the use of 
+       <font size = "2" face = "Courier New"  color = "black"> <B> parallel </B> </font> Construct 
+        program. 
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/parallel-construct-openmp3x.c">
+            <font color = "blue"> <I> parallel-construct-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/parallel-construct-openmp3x.f">
+
+            <font color = "blue"> <I> parallel-construct-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            OpenMP program to illustrate the use of 
+       <font size = "2" face = "Courier New"  color = "black"> <B> parallel </B> </font> Construct in
+        coarse-grain parallel  program.
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+               Demonstrate the use of 
+                OpenMP pragma 
+           <font size = "2" face = "Courier New"  color = "black"> <B> parallel </B> </font> Construct
+            for coarse-gain parallelism, i.e each thread in the parallel region decide which part 
+		of the global vector to work on based on the thread ID.
+
+            </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             Output Vector after scaling 
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+         
+
+<!-- *******************  Example 4 Ends ************************ -->
+
+<!-- **************** Example 5 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id05"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 5 : Illustrate the use of Loop Construct (collapse clause) by a team of threads.
+        
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/loop-construct-openmp3x.c">
+            <font color = "blue"> <I> loop-construct-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/loop-construct-openmp3x.f">
+
+            <font color = "blue"> <I> loop-construct-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            OpenMP program to illustrate the use of 
+        <B> loop construct </B> using the 
+        <font size = "2" face = "Courier New"  color = "black"> <B> collapse </B> </font>
+         clause to distribue the loops to all the threads in the team.
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+               Demonstrate the use of 
+                <B> loop construct </b> based on 
+           <font size = "2" face = "Courier New"  color = "black"> <B> collapse </B> </font> clause. The 
+           one or more associated loops will be  exected in parallel by threads in the team. The iteration
+           is distributed across all the threads. The loops over multiple indexes (example <i> k </i> or 
+           <i> j </i> are collapsed and teir iteration space is executed by all threads of the current 
+           team.
+            </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            time taken to execute the program &amp; vlaue of collapse clause
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+         
+
+<!-- *******************  Example 5 Ends ************************ -->
+
+
+<!-- **************** Example 6 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id06"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 6 : Illustrate the use of Loop Construct to compute the 
+         matrix-vector multiplication 
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/loop-construct-matvect-openmp3x.c">
+            <font color = "blue"> <I> loop-construct-matvect-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/loop-construct-matvect-openmp3x.f">
+
+            <font color = "blue"> <I> loop-construct-matvect-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            OpenMP program to illustrate the use of 
+        <B> loop construct </B> using the 
+        <font size = "2" face = "Courier New"  color = "black"> <B> collapse </B> </font>
+         clause to distribue the loops to all the threads in the team.
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+               Demonstrate the use of 
+                <B> loop construct </b> based on 
+           <font size = "2" face = "Courier New"  color = "black"> <B> collapse </B> </font> clause. The 
+           one or more associated loops will be  exected in parallel by threads in the team. The iteration
+           is distributed across all the threads. The loops over multiple indexes (example <i> k </i> or 
+           <i> j </i> are collapsed and teir iteration space is executed by all threads of the current 
+           team.
+            </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+             None
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Time taken to execute the program &amp; vlaue of collapse clause
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+         
+
+<!-- *******************  Example 6 Ends ************************ -->
+
+
+
+<!-- **************** Example 7 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id07"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 7 : Illustrate the use of task Construct for an recursive algorithm  
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/task-construct-alg-openmp3x.c">
+            <font color = "blue"> <I> task-construct-alg-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/task-construct-alg-openmp3x.c">
+
+            <font color = "blue"> <I> task-construct-alg-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            OpenMP program to illustrate the use of 
+  
+        <font size = "2" face = "Courier New"  color = "black"> <B> task  </B> </font> construct
+         and
+           <font size = "2" face = "Courier New"  color = "black"> <B> task wait </B> </font>
+         for recursive algorithm - (Sum of the Fibnacci numbers.)
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+           In OpenMP program, a task is geenrated from the code for associated structured block when the
+           thread encounters a <B> task  construct</b>.  The recursive algorithm (sum of Fibnacci numbers 
+           generation) is considered to demonstrate the use of 
+               <font size = "2" face = "Courier New"  color = "black"> <B> task </B> </font> construct.
+         and
+           <font size = "2" face = "Courier New"  color = "black"> <B> task wait</B></font>. 
+        The data environment of the task is created according to data attribute clauses on the 
+              <font size = "2" face = "Courier New"  color = "black"> <B> task</B></font> construct. <BR> <BR>
+         (The <B> Fibonacci numbers </b> are defined by the following recurrence :  
+          <I><font size = 2 >F</font><subscript>o</subscript></i> = 0, 
+          <I><font size = 2 >F</font><subscript>1</subscript></i> = 1, <BR>
+
+         <I><font size = 2 >F</font><subscripti</subscript></i> =
+         <I><font size = 2 >F</font><subscript>i-1</subscript></i> + 
+         <I><font size = 2 >F</font><subscript>i-2</subscript></i>, 
+       for i &ge; 2. 
+          Each <B> Fibonacci number </b>  is the sum of the two previous numbers.)
+            </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Number of threads to use and the input for  recursive algorithm - 
+		  fibnacci number generation - range of values ) 
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Time taken to execute the program &amp; sum of the Fibnacci numbers in the specified range
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+         
+
+<!-- *******************  Example 7 Ends ************************ -->
+
+
+
+<!-- **************** Example 8 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id08"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 8 : Illustrate the use of task Construct for an link list traversal.  
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/link-list-alg-openmp3x.c">
+            <font color = "blue"> <I> link-list-alg-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/link-list-alg-openmp3x.c">
+
+            <font color = "blue"> <I>link-list-alg-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+  <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            OpenMP program to illustrate the use of 
+            <font size = "2" face = "Courier New"  color = "black"> <B> task  </B> </font> construct
+             for list traversal(irregular parallelism) and analyze the program performance using 
+             OpenMP 2.5 pragmas. 
+     
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+           In OpenMP program, a task is geenrated from the code for associated structured block when the
+           thread encounters a <B> task  construct</b>.  The linsk list traversal algorithm  
+           generation) is considered to demonstrate the use of 
+               <font size = "2" face = "Courier New"  color = "black"> <B> task </B> </font> construct.
+            The OpenMP 2.5 pragmas are used to compare the program performance.
+        The data environment of the task is created according to data attribute clauses on the 
+              <font size = "2" face = "Courier New"  color = "black"> <B> task </B> </font> construct. 
+          <BR> <BR>
+
+        </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Number of threads to use and the number of nodes in the linked list.) 
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Time taken to execute the program &amp;based on OpenMP 2.5 &amp; OpenMP 3.X pragmas.
+ 
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+         
+<!-- *******************  Example 8 Ends ************************ -->
+
+
+
+<!-- **************** Example 9 starts ******************* -->
+
+
+<a name ="openmp-3x-multicore-prog-id09"></A> 
+    
+  <TR ALIGN=LEFT> 
+      <TD bgColor=#CEEFEE  border = "1"  height="90%"> 
+  
+       <p align = "justify"> <span class = "content">
+       <font  COLOR="red"> <B>
+         Example 9 : Illustrate the use of task Construct for inorder tree traverse algorithm.  
+        </b> </font> 
+       <BR>
+     
+     
+ <!-- ******* Download Source code start here ************ -->
+          
+           <B> Source code :  </B></font>
+        
+          <a HREF="../openmp-3x-codes-c-lang/tree-traverse-alg-openmp3x.c">
+            <font color = "blue"> <I> tree-traverse-alg-openmp3x.c </i> </FONT>
+          </a>
+         
+          <fONT COLOR="black"> <b> &nbsp; / &nbsp; </b></FONT>
+                 
+           <a HREF="../openmp-3x-codes-f-lang/tree-traverse-alg-openmp3x.c">
+
+            <font color = "blue"> <I>tree-traverse-alg-openmp3x.f</i></FONT>
+           </a> 
+           </span> </p>
+              
+  <!-- ******* Download Source code Ends here ************ -->
+        </TD>  
+        </TR> 
+ 
+      <TR>
+      <TD>
+
+   <BR> 
+      <UL>
+
+        <!-- .... Objective ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Objective</B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            OpenMP program to illustrate the use of 
+            <font size = "2" face = "Courier New"  color = "black"> <B> task  </B> </font> construct
+             for  inorder tree traverse algorithm and analyze the program performance using 
+             OpenMP 2.5 pragmas. 
+     
+           </span> </p>
+
+         <!-- .... Description ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Description</B>
+               </span> </p>
+          </LI>
+
+          <p align = "justify"> <span class = "content">
+            The  inorder tree traverse algorithm  
+           generation) is considered to demonstrate the use of 
+               <font size = "2" face = "Courier New"  color = "black"> <B> task </B> </font> construct.
+           The OpenMP 2.5 pragmas are used to compare the program performance.
+           The data environment of the task is created according to data attribute clauses on the 
+              <font size = "2" face = "Courier New"  color = "black"> <B> task </B> </font> construct.
+           <BR> <BR>
+
+
+          <I> inorderTraverse_Task() : </i> uses OpenMP-3.0 Task Construct. 
+                    Whenever a thread encounters a task construct, 
+		   a new explicit task, An explicit task may be executed by any thread 
+		   in the current team, in parallel with other tasks. In this approach the 
+		   several task can be executed in parallel. <BR> <BR>
+
+         <I> inorderTraverse_Wtask() : </i> Uses OpenMP-2.5 parallel - section  directive.
+	           whenever a thread encounter the <B> parallel </b> region it creates the team of 
+		   threads. When the thread in a team encounter the section directive it 
+		   execute the section region.  <BR> <BR>
+
+            </span> </p>
+
+     
+     <!-- .... Input ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Input </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Number of threads to use and the number of nodes in the tree. ) 
+           </span> </p>
+
+      
+     <!-- .... Output ....... -->
+           <LI> <B> <p align = "justify">
+               <span class = "content">
+                Output </B>
+              </span> </p>
+           </LI>
+
+           <p align = "justify"> <span class = "content">
+            Time taken to execute the program &amp;based on OpenMP 2.5 &amp; OpenMP 3.X pragmas.
+   
+           </span> </p>
+       
+      </ul>
+
+   <a href="#top">
+   <img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13"></a>
+    </TD> 
+    </TR> 
+         
+<!-- *******************  Example 9 Ends ************************ -->
+
+
+
+</tbody>
+</table>
+
+
+
+</td> 
+</tr>
+</tbody>
+</table>
+
+<!-- ****************** OpenP 3.0 Execution Model  Ends ************************* -->
+
+
+<!--  content of web page End here  --> 
+       
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

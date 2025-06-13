@@ -1,0 +1,37 @@
+
+#**********************************************************************
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# Created       :	 August-2013
+# 
+#       
+#************************************************************************/
+
+
+
+CC   = icc
+ 
+CCFLAGS    = -mmic -std=c99  -vec-report3 -Wno-unknown-pragmas
+OPTFLAGS   = -O3
+
+#LIBS       = -L/opt/intel/lib/mic 
+LIBS       =
+EXECS      = run
+#---------------------------------------------------------------------
+#OBJECTS=matmat_mult_native.cpp
+
+OBJECTS=vect_vect_add.cpp
+
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl 
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run *.out
+
+

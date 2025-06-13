@@ -1,0 +1,1758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML><HEAD><TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop HeMPa-2011 (October 10-14), 2011 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+University of Hyderabad, Hyderabad 
+
+ are jointly organizing five days technology workshop on " Heterogeneous Computing -  Many Cores/ Multi-GPUs -
+Performance of Algorithms Application Kernels  (HeMPa - 2011)
+ " which is scheduled from October 17-21, 2011 at CMSD, High-Performance Computing (HPC) Facility
+University of Hyderabad, Hyderabad. The HeMPa-2011 is designed two days for Mode-1 on Multi-Cores & three days for Mode-2 on GPUs."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing, Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing,C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming,Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2011, C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hempa11-files/hempa-main.css" 
+type=text/css rel=stylesheet><LINK href="./../../hempa11-files/hempa-home.css" type=text/css 
+rel=stylesheet><LINK href="./../hempa11-files/hempa-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hempa11-files/hempa-main.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="http://www.cdac.in/hempa2011/"><IMG alt=hempa-2010
+            src="./../../hempa11-files/hempa-2011-header.jpg" border=0></A></TD>
+
+</TR></TBODY></TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+      <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+            
+
+		  <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hempaShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('1', 1)" 
+       		  href="./../../hempa11-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hempaShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('2', 1)" 
+                  href="./../../hempa11-topics-of-interest-overview.html">Topics </A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hempaShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('3', 1)" 
+                  href="./../../hempa11-tech-prog-overview.html">Tech. Prog.</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hempaShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('4', 1)" 
+                  href="./../../hempa11-mode01-multicore-lab-overview.html"> Mode 1: Multi-Cores </A></TD>
+		               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hempaShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('5', 1)" 
+                  href="./../../hempa11-mode01-pgas-lab-overview.html"> Mode 1: PGAS</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6 
+                  onmouseover="javascript:hempaShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('6', 1)" 
+                  href="./../../hempa11-mode02-gpgpu-lab-overview.html"> Mode 2 : GPGPU </A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+                  href="./../../hempa11-reg-mode01-02-overview.html"> Registration</A></TD>
+                <TD class=menusep></TD>
+		
+                <TD class=menu1><A class=menu1 id=mainmenurow8
+                  onmouseover="javascript:hempaShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hempaHideSubMenuDelay('8', 1)" 
+                  href="./../../hempa11-contact-address.html"> Contact </A> </TD>
+
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+       <TABLE id=submenutab1 onmouseover="javascript:hempaShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hempaHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-overview.html"><B>   Overview</B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-venue.html"><B>  Venue:CMSD,UofHyderabad </B></A>
+
+      <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-audience.html"><B> Target Audience/Benefits</B></A>
+
+       <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks</B> </A>
+
+        <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-faculty.html"><B>  Faculty </B></A>
+
+        <A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-accommodation.html"><B>  Accommodation </B></A>
+
+	<A class=menu2 id=submenurow1s7 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-proceedings.html"><B>   Proceedings </B></A>
+
+        <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-contact-address.html"><B>Contact</B></A>
+
+        <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-local-travel.html"><B> Local Travel</B></A>
+    
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-download-software.html"><B>  Downloads  </B> </A>
+
+	<A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-sponsors.html"><B>  Sponsors</B></A>
+                  
+	<A class=menu2 id=submenurow1s12
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+   
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-organisers.html"><B>  Organisers</B> </A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onmouseover="javascript:hempaShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-topics-of-interest-overview.html"><B>   Topics Overview </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-topics-of-interest-mode01-multicore.html"><B>   Mode 1 Multi-Cores </B></A>
+
+         <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-topics-of-interest-mode01-pgas.html"><B>  Mode 1 PGAS  </B></A>
+
+        <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-topics-of-interest-mode02-gpgpu.html"><B> Mode 2 GPGPU </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-topics-of-interest-handson.html"><B>  Lab.  Overview </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+<!--   Sub menu for **** Row-3-Technical program  **** start here -->
+
+
+      <TABLE id=submenutab3 onmouseover="javascript:hempaShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 152px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-tech-prog-overview.html"><B> Tech. Prog. Overview</B></A>
+
+	<A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-tech-prog-mode01-multicore.html"><B>  Mode 1 Multi-Cores</B></A>
+
+	<A class=menu2 id=submenurow3s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-tech-prog-mode01-pgas.html"><B>  Mode 1 PGAS </B></A>
+
+	 <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../hempa11-tech-prog-mode02-gpgpu.html"><B>  Mode 2 GPGPU </B></A>
+	
+         <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-tech-prog-keynote-invited-talks.html"><B> Key-Note/Invited Talks</B> </A>
+
+        <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-tech-prog-handson-overview.html"><B> Lab. Overview </B></A>
+
+	<A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-tech-prog-demonstration.html"><B>  Demonstration</B></A>
+
+        <A class=menu2 id=submenurow3s8 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-3-TechnicalProgram **** End here -->
+
+
+
+<!--   Sub menu for **** Row-4-Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onmouseover="javascript:hempaShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 247px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-lab-overview.html"><B>   Mode 1 Multi-Cores </B></A>
+
+        <A class=menu2 id=submenurow4s12 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow4s3
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow4s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow4s6 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+        <A class=menu2 id=submenurow4s7
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-mpi.html"><B>MPI </B></A>
+ 
+        <A class=menu2 id=submenurow4s8
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow4s9
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./.././hempa11-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow4s10
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow4s11 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-compiler-tune-perf.html"><B> Compilers-Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow4s12 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow4s13 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-software-tools.html"><B>  Threads- Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow4s14 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+
+       <A class=menu2 id=submenurow4s15 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4-Mode 1 (Multi-Cores) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-5-Mode-1 (PGAS): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab5 onmouseover="javascript:hempaShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 350px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-lab-overview.html"><B>  Mode 1 PGAS  </B></A>
+
+	<A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-upc-overview.html"><B> UPC  </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-titanium-overview.html"><B> Titanium  </B></A>
+
+	<A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-caf-overview.html"><B> CAF </B></A>
+
+	<A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-ga-overview.html"><B> Global Arrays </B></A>
+
+         <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-X10-overview.html"><B> X10  (IBM) </B></A>
+		
+	<A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-Chp-overview.html"><B> Chapel (Cray) </B></A>
+
+	<A class=menu2 id=submenurow5s8 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode01-pgas-otherproglib-overview.html"><B> Other Prog. Models/Lib.  </B></A>      
+
+        <A class=menu2 id=submenurow5s9 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-5- MODe-1 (PGAS) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-6-Mode 2 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onmouseover="javascript:hempaShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 465px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode02-gpgpu-lab-overview.html"><B> Mode 2 GPGPU  </B></A>
+
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode02-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA -CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode02-gpgpu-amd-app-comp.html"><B>AMD - APP Tech. OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode02-gpgpu-opencl-opengl.html"><B> GPGPU - OpenCL    </B></A>
+
+
+	<A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-mode02-gpgpu-hybrid-comp.html"><B>Hybrid Comp.-CPU/GPU</B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6-Mode 2 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--  Sub menu for **** Row-7-Registration **** Start here  -->
+
+      <TABLE id=submenutab7 onmouseover="javascript:hempaShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-reg-mode01-02-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-reg-private-sector.html"><B>Private Sector</B></A>
+
+      <A class=menu2 id=submenurow7s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-reg-govt-public-sector.html"><B>Pub. Sector/Govt. Org.</B></A>
+
+      <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-reg-govt-academic-staff.html"><B>Govt. Academic Staff </B></A>
+
+      <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow7s6
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-reg-online-registration.html"><B>On-line Registration</B></A>
+ 
+      <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+             href="./../../hempa11-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow7s8 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-7-Registration **** End here  -->
+
+
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** Start here  -->
+
+      <TABLE id=submenutab8 onmouseover="javascript:hempaShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:hempaHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+
+      <TD class=menu2>
+
+     <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-contact-address.html"><B>Contact</B></A>
+
+
+     <A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../hempa11-contact-accommodation.html"><B>Accommodation </B></A>
+
+        
+     <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hempaShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hempaHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+  </TD> </TR></TBODY> </TABLE>
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** End here  -->
+
+  </DIV>
+
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+            
+             
+            <A class=menul
+	      href="./../../hempa11-mode01-pgas-lab-overview.html">
+              &#149; Mode 1 PGAS  </A>
+            
+                <!-- ** -->  
+                <A class=menulslct 
+	         href="./../../hempa11-mode01-pgas-upc-overview.html">
+                &#149; UPC</A>   
+                <!-- ** -->       
+  
+           <A class=menul
+	      href="./../../hempa11-mode01-pgas-titanium-overview.html">
+               &#149; Titanium</A>  
+ 
+           <A class=menul
+               href="./../../hempa11-mode01-pgas-caf-overview.html">
+               &#149; CAF</A>
+              
+           <A class=menul  
+               href="./../../hempa11-mode01-pgas-ga-overview.html">
+               &#149; Global Arrays </A>
+             
+	   <A class=menul  
+              href="./../../hempa11-mode01-pgas-x10-overview.html">
+              &#149; X10 (IBM)</A>
+	
+           <A class=menul
+	       href="./../hempa11-mode01-pgas-Chp-overview.html">
+               &#149; Chapel (Cray)</A>
+              
+	   <A class=menul
+                href="./../../hempa11-mode01-pgas-otherproglib-overview.html">
+               &#149; Other Prog. Models/Lib.</A>
+            
+           <A class=menul 
+	       href="./../../index.html">
+               &#149;  Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* 		
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+<TABLE cellPadding=0 width = "100%" border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Programming on Multi-Core Processors Using Pthreads (POSIX Threads)  </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+<BR>
+
+<table cellPadding=0   border="0" >
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align=justify> <span class="content">
+   Pthreads are defined as a set of C-language programming types and procedure calls,
+ implemented with a <I> pthread.h </i> <i> header/include  </i> file and a thread library.
+
+ Solaris threads are easily
+ understood by someone familiar with POSIX threads, and while Java threads and the 
+multi-threading in the Win32 and OS/2 APIs are a little different . The subroutines, 
+which comprise the Pthreads APIs, can be formally grouped into three classes such as 
+<I> Thread Management, Mutex Variables </I> and  <I> Condition Variables. </i> Threaded applications offer
+ potential performance gains and practical advantages over non-threaded applications 
+in several other ways as we can observe from the different programs. <BR> <BR>
+
+ Example   programs using different APIs. Compilation and execution
+   of Pthread programs, programs numerical and non-numerical computations
+   are discussed using 
+    different thread APIs to understand  Performance issues on mutli-core processors. <BR> <BR>
+</span> </p>
+</td> 
+</tr> 
+</tbody>
+</table>
+
+
+<!-- *************** Table for Listing of Programs Starts  **************** -->
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr>
+<td>
+
+
+
+<!-- *************** Table for Listing of Programs Starts  *************** -->
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+    <!-- example 1.1 start here-->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id11">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         Write a Pthread program to print <I> Hello World </i>. 
+       </font>
+     </td>
+     </tr>
+
+ <!-- example 1.2 start here-->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id12">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a Pthread program to find Sum of first  <I> n </i>  Natural Numbers.
+       </font>
+     </td>
+
+   </tr>
+
+
+  <!-- example 1.3 start here-->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id13">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a Pthread program to illustrate pthread join operation.
+       </font>
+     </td>
+     </tr>
+
+ <!-- example 1.4 start here-->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id14">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a Pthread program to illustrate basic stack management.
+       </font>
+     </td>
+
+   </tr>
+
+
+  <!-- example 1.5 start here -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id15">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a Pthread program to illustrate basic mutex operation.   
+       </font>
+     </td>
+     </tr>
+
+ <!-- example 1.6 start here -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id16">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a Pthread program to explain condition variables. 
+       </font>
+     </td>
+   </tr>
+
+<!-- example 1.7 start here -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-par-prog-id17">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.7 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="690" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          Write a Pthread program to find the minimum of an array. 
+       </font>
+     </td>
+   </tr>
+
+
+</TBODY> 
+</TABLE> 
+
+
+   
+
+<!-- ************* Table for Listing of Programs Ends ************** -->
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<TR>
+<tD>
+
+<BR> 
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+
+
+<a href="../../reference-hempa-2011/reference-overview-hempa11-mode01-pgas.html#mode01-pgas-upc-ref"> 
+ <font size="2" face="Arial" color="blue"><B> PGAS UPC  </b>  </font> </a> 
+       -[UPC-01], [UPC-09], [UPC-I2] )  <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<TR>
+<td width=600></td>
+<tD>
+
+ <DIV>
+         <A HREF="upc-basic-basic-calls.html"> <IMG SRC="../upc-pgas-images/up.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</td>
+</tr>
+
+</TBODY> 
+</TABLE> 
+
+
+
+<!-- **************** Table for Description of Pthread Programs Starts ************ -->
+
+<TABLE cellPadding=0  width = "100%" border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+        <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+   <b> Description of Pthread Programs </b> </font> </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+
+
+
+
+<!-- ******************** Example 1.1 starts ****************** -->
+
+
+<a name="pthread-par-prog-id11"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+      <TD height="90%">
+<BR>
+
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.1 :   </b> </font> 
+
+  
+      Write a Pthread program to print "Hello World" using <I> pthread_join </i>  Lib. Call<BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-helloworld.c">
+         <I> <FONT COLOR = "blue"> pthread-helloworld.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+   Write a Pthread program to print "Hello World" using <I> pthread_join </i>  Lib. Call<br>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+This is a very simple program to get the feel of threads and to get a view of how threads actually work.
+ The implementation is as follows: The main thread creates two child threads. These threads print the words "Hello" and 
+"World!" individually. Though there is no actual parallelism involved, this is just to demonstrate the working of threads.
+ It is to be however noted that depending on the system load and the implementation of Pthreads Standard, the message may
+ not always be "Hello World!". It can be "World! Hello" depending on which thread is scheduled to execute first. This also
+ demonstrates the use of "Pthread_join". 
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<p> None  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> Hello World! or World! Hello </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+
+<!--********************* Example 1.1 ends ************************-->
+
+
+<!-- *********************** Example 1.2 starts ********************* -->
+
+<a name="pthread-par-prog-id12"> </a>
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+     <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.2 :   </b> </font> 
+
+  
+      Write a Pthread program to compute  sum of first <i> n </i>  natural numbers <BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-sumn.c">
+         <I> <FONT COLOR = "blue"> pthread-sumn.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+   Write a Pthread program to print sum of first <i>  n </i>  natural numbers, 
+  based on <i> mutual Exclusion </i>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+This program prints the sum of first n natural numbers. This introduces the concept of a Mutex or a 
+"Mutual Exclusion". Each thread adds its assigned number to a global variable. When all the threads are 
+done, the global 
+variable will contain the result. It uses a mutex variable to make sure that only one thread is updating 
+the variable at 
+any given time. 
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<p> Number of threads  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> The sum of <i> n </i> natural numbers &amp; the number of threads used  </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+
+<!--********************* Example 1.2 ends ************************-->
+
+
+
+<!-- ******************* Example 1.3 starts ********************** -->
+
+
+
+<a name="pthread-par-prog-id13"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+     <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.3 :   </b> </font> 
+
+  
+      Write a program to illustrate thread-join operation. <BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-join.c">
+         <I> <FONT COLOR = "blue"> pthread-join.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+    Write a program to illustrate thread-join operation. </i>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+This example demonstrates how to "wait" for thread completions by using the Pthread join routine.
+ Since some implementations of Pthreads may not create threads in a joinable state, the threads in this example are 
+explicitly created in a joinable state so that they can be joined later.
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<p> None  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> The number of threads used  </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+
+<!--********************* Example 1.3 ends ************************-->
+
+
+
+<!-- ********************** Example 1.4 starts ************************* -->
+
+
+<a name="pthread-par-prog-id14"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+     <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.4 :   </b> </font> 
+
+  
+     Write a Pthread program to illustrate basic stack management. <BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-stack.c">
+         <I> <FONT COLOR = "blue">pthread-stack.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+    Write a Pthread program to illustrate basic stack management. </i>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+
+   
+ <font color="red">
+  <b> pthread_attr_getstacksize(attr,stacksize);</b>
+<br> <b>pthread_attr_getstacksize(attr,stacksize);</b>
+</font>
+
+<br>
+    The pthread_attr_getstacksize() and pthread_attr_setstacksize() functions, respectively, 
+	 shall  get  and  set  the thread creation stacksize attribute in the attr
+       object.
+
+       The stacksize attribute shall define the minimum stack size (in  bytes)  allocated
+       for the created threads stack. <BR>
+
+       Upon successful completion, pthread_attr_getstacksize() and pthread_attr_setstack-
+       size() shall return a value of 0; otherwise, an error number shall be returned  to
+       indicate the error. <BR>
+
+       The  pthread_attr_getstacksize()  function stores the stacksize attribute value in
+       stacksize if successful.  <BR>
+
+<br> <font color="red">
+   <b>  pthread_attr_getstackaddr(attr,stackaddr);</b><br>
+   <b>pthread_attr_setstackaddr(attr,stackaddr);</b> </font>
+
+    The pthread_attr_getstackaddr() and pthread_attr_setstackaddr() functions, 
+	respectively,  shall  get  and  set  the thread creation stackaddr attribute in the attr
+       object. <BR>
+
+       The stackaddr attribute specifies the location of storage to be used for the created thread's stack.   
+        <BR>
+
+	Upon successful completion, pthread_attr_getstackaddr() and pthread_attr_setstack-
+       addr()  shall return a value of 0; otherwise, an error number shall be returned to
+       indicate the error. <BR>
+
+       The pthread_attr_getstackaddr() function stores the stackaddr attribute  value  in
+       stackaddr if successful.<br>
+
+
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<p> None  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> The number of threads used &amp; print the stack size  </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+
+<!--********************* Example 1.4 ends ************************-->
+
+
+
+<!-- ******************* Example 1.5 starts  ************************ -->
+
+
+<a name="pthread-par-prog-id15"> </a>
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+     <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.5 :   </b> </font> 
+
+  
+     Write a Pthread program to illustrate mutex operation. <BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-mutex.c">
+         <I> <FONT COLOR = "blue">pthread-mutex.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+    Write a Pthread program to illustrate mutex operation to computer dot product of vectors. </i>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+
+This example program illustrates the use of mutex variables in a threads program
+ that performs a dot product. The main data is made available to all threads through a globally accessible structure. 
+Each thread works on a different part of the data. The main thread waits for all the threads to complete their computations, 
+and then it prints the resulting sum.
+
+</P>
+ <P align="justify">
+<b> <font color="red">pthread_mutex_lock(mutex) </font>  </b> <BR>
+
+
+The pthread_mutex_lock() routine is used by a thread to acquire a lock on the specified mutex variable. 
+If the mutex is already locked by another thread, this call will block the calling thread until the mutex is unlocked.
+<BR>
+
+
+<br>
+<b> <font color="red"> pthread_mutex_trylock(mutex)  </font> </b> <BR>
+
+
+pthread_mutex_trylock() will attempt to lock a mutex. However, if the mutex is already locked, 
+the routine will return immediately with a "busy" error code. This routine may be useful in preventing deadlock conditions, 
+as in a priority-inversion situation.
+<BR>
+
+<br>
+<b><font color="red"> pthread_mutex_unlock(mutex) </font>  </b> <BR>
+
+<BR> 
+pthread_mutex_unlock() will unlock a mutex if called by the owning thread. Calling this routine is 
+required after a thread has completed its use of protected data if other threads are to acquire the mutex 
+for their work with the protected data. An error will be returned if:<br> <BR>
+
+     If the mutex was already unlocked<br>
+     If the mutex is owned by another thread  <BR>
+
+
+</P>
+
+<LI><B>Input</B> </LI>
+
+
+<p> Two input vector arrays of equal dimension  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> The number of threads used &amp; print the dot product of the vectors.  </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ******************** Example 1.6 starts ************************* -->
+
+<a name="pthread-par-prog-id16"></a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+     <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.6 :   </b> </font> 
+
+  
+     Write a Pthread program to illustrate condition variables. <BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-conditionvariable.c">
+         <I> <FONT COLOR = "blue">pthread-conditionvariable.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+   Write a Pthread program to illustrate condition variable </i>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+
+This simple example code demonstrates the use of several Pthread condition variable routines. 
+ The main routine creates three threads. Two of the threads perform work and update a "count" variable. 
+The third thread waits until the count variable reaches a specified value. 
+</br>
+
+
+<b> <font color="red">
+    pthread_cond_init (condition,attr) <br>
+    pthread_cond_destroy (condition)<br>
+    pthread_condattr_init (attr)<br>
+    pthread_condattr_destroy (attr)<br> </font>
+</b>
+<BR> <BR>
+
+	Condition variables must be declared with type pthread_cond_t, and must be initialized 		
+    before they can be used. There are two ways to initialize a condition variable:
+</p>
+
+<blockquote>
+
+<li>
+<P align="justify">
+ Statically, when it is declared. For example:
+		 		pthread_cond_t myconvar = PTHREAD_COND_INITIALIZER; </p>
+</li>
+
+<li>
+<P align="justify">
+Dynamically, with the pthread_cond_init() routine,the ID of the
+created condition variable is returned to the calling thread through the condition parameter. 
+This method permits setting condition variable object attributes attr. </p>
+</li>
+
+</blockquote>
+
+<br>
+
+
+
+<P align="justify">
+
+	The optional attr object is used to set condition variable attributes. There is only one 
+ attribute defined for condition variables: process-shared, which allows the condition 		
+variable to be seen by threads in other processes. The attribute object, if used, must be 		
+of type pthread_condattr_t (may be specified as NULL to accept defaults).<br><br>
+
+        Note that not all implementations may provide the process-shared attribute.<br><br>
+
+        The pthread_condattr_init() and pthread_condattr_destroy() routines are used to create 		
+     and destroy condition variable attribute objects.<br><br>
+
+        pthread_cond_destroy() should be used to free a condition variable that is no longer 	
+	needed. <br><br>
+
+
+
+
+<b> <font color="red">
+	pthread_cond_wait (condition,mutex)<br>
+
+	pthread_cond_signal (condition)<br>
+
+	pthread_cond_broadcast (condition) <br> 
+</font>
+</b>
+
+<BR> <BR>
+
+	pthread_cond_wait() blocks the calling thread until the specified condition is signaled. 		
+      This routine should be called while mutex is locked, and it will automatically release the 		
+      mutex while it waits. After signal is received and thread is awakened, mutex will be 		
+      automatically locked for use by the thread. The programmer is then responsible for 		
+       unlocking mutex when the thread is finished with it.<br><br>
+
+	The pthread_cond_signal() routine is used to signal (or wake up) another thread which is 	
+        waiting on the condition variable. It should be called after mutex is locked, and must 		
+       unlock mutex in order for pthread_cond_wait() routine to complete.<br><br>
+
+	The pthread_cond_broadcast() routine should be used instead of pthread_cond_signal() if 	
+         more than one thread is in a blocking wait state.<br><br>
+
+        It is a logical error to call pthread_cond_signal() before calling pthread_cond_wait()
+</p>
+
+
+
+<LI><B>Input</B> </LI>
+
+
+<p> Two input vector arrays of equal dimension  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> The number of threads used &amp; print the dot product of the vectors.  </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ******************** Example 1.6 Ends ************************* -->
+
+<!-- ******************** Example 1.7 starts ************************* -->
+
+<a name="pthread-par-prog-id17"></a>
+
+
+<table border="0"  height="6">
+<tbody>
+
+    <TR ALIGN=LEFT> 
+     <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 1.7 :   </b> </font> 
+
+  
+     Write a Pthread program to find minimum of an array. <BR> 
+
+
+
+<!-- ************download start here ***************--> 
+
+     ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread_findmin.c">
+         <I> <FONT COLOR = "blue">pthread_findmin.c</FONT>  </I>
+       </a>
+      )
+
+    </Font>
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<tD>
+
+<ul>
+
+ <BR>
+
+ <LI> <B> Objective </B> </li>
+
+ 
+   <p align = "justify">
+       Write a Pthread program to find minimum of an array </i>
+
+   </P>
+  
+
+
+ <LI> <B> Description </B> </li>
+
+										
+  <P align="justify">
+
+This simple example code demonstrates the use of several Pthread mutex objects routines.      It finds minimum of an array.
+</br>
+
+
+
+
+<LI><B>Input</B> </LI>
+
+
+<p> Number of threads (Max of 8)  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+    <p> Timetaken , minimum value  </p>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- ******************** Example 1.7 Ends ************************* -->
+
+
+
+<!-- ************** Table for Listing of Programs Ends ************** -->
+
+
+</TD> </TR>
+
+</TBODY></TABLE>
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+</TD> </TR>
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

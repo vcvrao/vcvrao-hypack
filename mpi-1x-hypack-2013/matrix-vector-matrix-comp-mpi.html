@@ -1,0 +1,4655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                      
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+             &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+ 
+              <!-- ** -->
+	      <A class=menulslct 
+               href="./../hypack13-mode01-multicore-mpi.html">
+               &#149; Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013  Mode 1 : MPI 1.X - Matrix Computations MPI Lib. Calls</H1> 
+
+  
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD> 
+
+<font space = Verdana size = 2 >
+
+  <p align = "justify"> <span class ="content">
+  <B> Module 5 : </b> MPI programs on   Dense & Sparse Matrix Computations  -
+  Vector - Vector, Matrix -Vector,  Matrix -Matrix  Multiplication & Sparse Matrix 
+into Vector Multiplication Algorithms  
+  and execute on Message Passing Cluster  or Multi Core Systems that support 
+  MPI library. </b> </span> </p> </TD> </TR> 
+</TBODY> 
+</TABLE>
+
+
+
+<!-- ***************** Table List of programs : start ***************** -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+   <!-- **************** Example 5.1 ****************** -->
+
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id01">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.1 </b> </font> <BR>  
+
+       </a>  
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+       <p align = "justify"> <span class ="content">
+
+         Write MPI program to compute dot product of two vectros using block-striped partittioning
+
+    wit uniform data distribuion .  
+
+      </span> </p>
+     </td>
+     </tr>
+
+
+
+ <!-- **************** Example 5.2 ********************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id02">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.2 </b> </font> <BR>  
+       </a>  
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+       <p align = "justify"> <span class ="content">
+
+         Write MPI program to compute dot product of two vectros 
+
+    using block-striped partitioning with non-uniform data distribution.
+</span> </p>
+     </td>
+
+   </tr>
+
+ <!-- *********************** Example 5.3 ******************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id03">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.3 </b> </font> <BR>  
+
+       </a>  
+
+      </td>
+
+
+
+      <td width="680" height="2" align="left">
+
+        <p align = "justify"> <span class ="content">
+
+       Write MPI program to compute dot product of two vectros using block-striped 
+
+     partitioning with cyclic uniform data distribution .
+
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+
+<!-- ***************** Example 5.4 ******************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id04">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.4 </b> </font> <BR>  
+
+       </a>  
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+        <p align = "justify"> <span class ="content">
+
+        Write MPI program for  implementation of  infinity norm of a square matrix .
+
+       </span> </p>
+
+     </td>
+
+   </tr>
+
+
+
+<!-- ******************* Example 5.5 ******************* -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id05">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.5 </b> </font> <BR> <BR>
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="700" height="2" align="left">
+
+        <p align = "justify"> <span class ="content">
+
+       Write  MPI program for implementation of  Matrix and Vector Mulltiplication using <i>self-scheduling  algorithm</i>.
+
+     </span> </p>
+
+     </td>
+
+   </tr>
+
+<!-- ***************** Example 5.6 ******************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id06">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.6 </b> </font> <BR> <BR> 
+
+       </a>  
+
+      </td>
+
+  
+      <td width="680" height="2" align="left">
+
+       <p align = "justify"> <span class ="content">
+       Write  MPI program for computation of the matrix -vector multiplication
+
+     on <I>p </I>processors of message passing cluster using <I> block striped partitioning </i> of a matrix.
+
+       </span> </p>
+
+     </td>
+
+   </tr>
+
+
+
+<!-- ******************* Example 5.7 ***************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id07">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.7</b> </font> <BR> <BR>  
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+        <p align = "justify"> <span class ="content">
+
+       Write a parallel MPI program, for computing the matrix -vector multiplication
+
+      on <I>p </I>processor of message passing cluster using <I>block</I>-<I>checkerboard
+
+      partitioning </I>.  
+
+       </span> </p>
+
+     </td>
+
+
+
+   </tr>
+
+
+
+<!-- **************** Example 5.8 ********************* -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id08">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.8 </b> </font> <BR>  <BR>
+
+       </a> 
+      </td>
+
+ 
+      <td width="680" height="2" align="left">
+
+       <p align = "justify"> <span class ="content">
+
+        Write  MPI program for implementation of  Matrix and Matrix  Mulltiplication using <i>self-scheduling  algorithm</i> .
+
+      </span> </p>
+
+     </td>
+
+
+
+   </tr>
+
+
+
+<!-- ******************* Example 5.9 ********************* -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id09">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.9 </b> </font> <BR>  <BR>
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+         <p align = "justify"> <span class ="content">
+
+        Description for implementation of MPI program to compute the Matrix Matrix Multiplication using block checkerboard partitioning and MPI Cartesian topology </i> .
+</span> </p>
+
+     </td>
+
+
+
+   </tr>
+
+
+
+<!-- *************** Example 5.10 ********************* -->
+
+    <tr>
+
+     <td width="140" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id10">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.10 </b> </font> <BR>  <BR>
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+        <p align = "justify"> <span class ="content">
+
+     Description for implementation of MPI program to compute the Matrix Matrix Multiplication using             
+
+           block checkerboard partitioning and Cannon's Algorithm and MPI Cartesian topology   .
+
+     </span> </p>
+
+     </td>
+
+
+
+   </tr>
+
+<!-- **************** Example 5.11 ********************* -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id11">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.11 </b> </font> <BR>  <BR>
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+         <p align = "justify"> <span class ="content">
+
+       Description for implementation of MPI program to compute the Matrix Matrix Multiplication using    
+
+                    block checkerboard partitioning and Fox's Algorithm and MPI Cartesian topology 
+
+       </span> </p>
+
+     </td>
+
+
+
+   </tr>
+
+<!-- ****************** Example 5.12 ******************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id12">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.12 </b> </font> <BR>  <BR>
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+         <p align = "justify"> <span class ="content">
+
+        Description for implementation of MPI program for sparse matrix and vector 
+
+     Multiplication using <i>block-striped partitioning </i>.
+
+      </span> </p>
+
+     </td>
+
+
+
+   </tr>
+
+<!-- ******************* Example 5.13 ******************** -->
+
+    <tr>
+
+     <td width="120" height="2" align="left"> 
+
+       <a href="matrix-vector-matrix-comp-mpi.html#matcomp-id13">
+
+         <font size="2" face="Arial" color="blue">
+
+            <b>  Example 5.13</b> </font> <BR>  <BR>
+
+       </a>  
+
+      </td>
+
+   
+
+      <td width="680" height="2" align="left">
+
+        <p align = "justify"> <span class ="content">
+       Efficient Parallel formulation for implementation of MPI program for sparse matrix and vector 
+
+     Multiplication using <i>block-striped partitioning </i>.<B>(Assignment Question)</B>
+
+      </span> </p>
+
+     </td>
+
+  </tr>
+
+
+
+<tr>
+
+<td> </td>
+
+<td>
+
+<DIV align="right">
+
+ <DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</DIV>
+
+</td></tr>
+
+
+
+</td></tr></tbody>
+</table>
+
+<BR>
+
+<!-- ************* Table List of programs : end **************** -->
+
+
+<!-- *******************  Reference Starts Here ******************** -->
+<TABLE cellPadding=3 border=0> 
+<TBODY>
+<TR>
+<tD>
+
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+  &nbsp; &nbsp;    - 
+[MC-MPI-02], [MCMPI-06], [MCMPI-07], [MCMPI-09], [MC-MPI10], [MCMPI-11], 
+  [MCMTh-12],[MCBW-44], [MCOMP-01])
+ <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *******************  Reference Ends  Here ******************** -->
+
+
+<!-- *************** An overview of Sequential programs **************** -->
+
+
+
+<A NAME="matcomp-summary"></A> 
+
+<TABLE cellPadding=3  border=0> 
+
+<TBODY>
+
+<TR> 
+
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+
+<font Color="black" face= "verdana"> <B>
+
+     An overview  of Sequential programs on Vector - Vector, Matrix -Vector,  Matrix -Matrix  
+
+        Multiplication Algorithms </b> </font> </font></DIV> </TD> </TR> 
+
+</TBODY>
+ </TABLE> 
+
+
+<TABLE cellPadding=3  border=0> 
+    <TBODY><tr><td>
+
+<font size="2" face="verdana " color="black">
+<p align = "justify">
+The MPI based parallel programs on dense matrix computations play an important role for performance of 
+several scientific and engineering applications on message passing clusters. Simple sequential programs on vector-vector
+mulitplicaiton, Matrix Vector multiplcation,Matrix - Matrix Multiplciation and selected parallel algrotims and programs  
+on dense marix computations are given below.
+are described below. </p> </font>
+
+<BR> 
+
+
+<!-- ************ Vector - Vector, Matrix -Vector,  Matrix -Matrix  Multiplication Algorithms *********** -->
+
+      <!-- *************** Vector -Vector Multiplication Starts  **************** -->
+
+  <font COLOR="red"  face ="Courier" size = "3"> <B> Vector- Vector Mutliplicatin </b> : </font>
+ 
+<p align = "justify">
+<font size="2" face="verdana ">
+
+Vectors can be partitioned in different ways and the partitions can be assigned to different process. 
+We briefly explain some well known partitioning techniques to write parallel programs. 
+In the striped partitioning
+of a vector, the vector is divided into groups of contiguous elements and each process is assigned one such group.
+A serial algorithm for vector-vector multiplication requires <i> n </i> multiplications and  <i> (n-1)  </i> additions.
+The serial program is given below :  </p> </font>
+
+
+<p align = "justify">
+   <font COLOR="#ff00ff"  face ="Courier" size = "3"> &nbsp; 
+    float Vect_vect (int n, float <i>x</i>[ ], float <i>y</i>[ ]) </font> <br>
+
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp; { </font> <br> 
+
+    <font color="#ff00ff" face=" COurier"size = "3">&nbsp; &nbsp;  int i; </font> <br> 
+
+
+    <font color="#ff00ff" face=" COurier"size = "3">&nbsp; &nbsp; float dot_product; </font> <br> 
+
+
+    <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        for(i=0; i < n; i++) = 0.0; </font> <br> 
+
+
+    <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+    dot_product = dot_product + (<I>x</I>[<I>i</I>] * <I>y</I>[<I>i</I>]); </font> <br> 
+
+    <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp; return(dot_product); </font> <br>
+
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp; } </font> <br> 
+</P>
+
+
+<!-- ***************** Vector-Vector Multiplication Ends ****************** -->
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+<!-- *************** Matrix -Vector Multiplication Starts ***************** -->
+
+
+<font COLOR="red"  face ="Courier" size = "3"> <B> Matrix - Vector Mutliplicatin </b> : </font>
+
+<p align = "justify">
+
+<font size="2" face="verdana ">
+
+Matrices can be classified&nbsp; into two broad categories, <I> dense matrices</I> and <I> sparse matrices.</I> 
+<i>Dense</i> or <i>full matrices&nbsp; </I>have few or no zero elements. <i>Sparse matrices</i>&nbsp;
+have a majority of zero elements. In order to process a matrix input
+in parallel, we must partition it so that the partitions can be assigned
+to different processes.&nbsp; If we assume that an addition and multiplication
+pair takes unit time, then the sequential run time of algorithm is <i>n<sup>2</sup></i>.
+
+For multiplying a dense matrix <b>A </b>of size <i>m </i>x <i>n</i> and a vector<b> x &nbsp; </b>of size<I> n</I>. 
+Atleast, three distinct parallel formulations of matrix-vector multiplication's are possible.
+It depends on <i>row-wise striping</i>, <i>column-wise</i> <i>striping</i>,
+or <i>checkerboard striping </i>of  the matrix. The following examples
+discuss common ways to partition matrices among processes to perform matrix-vector
+multiplication.&nbsp; Serial algorithm of matrix vector multiplication
+is explained below:  </p> </font>
+
+<p align = "justify">
+   <font COLOR="#ff00ff"  face ="Courier" size = "3"> &nbsp; 
+    float MAT_VECT(int n, int m, float A[&nbsp;] [&nbsp; ], float <i>x</i>[ ], float <i>y</i>[ ]) </font> <br>
+
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp; { </font> <br> 
+
+    <font color="#ff00ff" face=" COurier"size = "3">&nbsp; &nbsp;  int i, j; </font> <br> 
+
+
+    <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        for(i=0; i < m; i++) = 0.0; </font> <br> 
+
+      <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        &nbsp; &nbsp; {  </font> <br> 
+
+     <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        &nbsp &nbsp; &nbsp;  y[i] = 0.0;  </font> <br> 
+
+<font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        for(j=0; j < n; i++) = 0.0;  &nbsp; &nbsp; 
+    y [i] =  y [i] +  A [i ][j]* x[j]); </font> <br> 
+
+
+   <font color="#ff00ff" face=" COurier"size = "3">  &nbsp; &nbsp; &nbsp;  &nbsp; } </font> <br> 
+     
+
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp;   } </font> <br> 
+</P>
+
+
+<!-- **************** Matrix-Vector Multiplication Ends ******************* -->
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+<!-- ****************** Matrix-Matrix  Multiplication Starts  **************** -->
+
+
+
+<font COLOR="red"  face ="Courier" size = "3"> <B> Matrix - Matrix  Mutliplicatin </b> : </font>
+ 
+<p align = "justify">
+ <font size="2" face="verdana ">
+
+We discuss parallel algorithms for multiplying two dense, square
+matrices <b>A </b>and <b>B </b>of size <i>n </i>to yield the product matrix.
+All parallel matrix multiplication algorithms involves the scalar algebraic
+operations performed on the blocks or submatrices of the original matrix
+.&nbsp; Such algebraic operations on the submatrices are called <i>block
+matrix operations </i>. If we assume that an addition and multiplication
+pair takes unit time, then the sequential run time of conventional algorithm
+is <i>n <sup>3 </sup> </i>.
+
+ For multiplying a dense matrix <b>A </b>of size <i>n </i> and 
+dense matrix <b>B </b>of size <i>n </i>  atleast, three distinct
+parallel formulations of matrix-matrix  multiplication's are possible.
+It depends on <i>row-wise striping</i>, <i>column-wise</i> <i>striping</i>,
+or <i>checkerboard striping </i>of  the matrices <b>A</b>, &nbsp; <b>B </b>. The following examples
+discuss common ways to partition matrices among processes to perform matrix-matrix
+multiplication. </p>  </font>
+
+
+<p align = "justify">
+   <font COLOR="#ff00ff"  face ="Courier" size = "3"> &nbsp; 
+    float Block_MAT_MULT(int <i>n</i>, int <i> m </i>, float A[&nbsp;] [&nbsp;], float B[&nbsp;] [&nbsp;], float C[&nbsp;] [&nbsp;])
+    </font> <br> 
+
+
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp; { </font> <br> 
+
+    <font color="#ff00ff" face=" COurier"size = "3">&nbsp; &nbsp;  int i, j, k; </font> <br> 
+
+
+    <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        for(i=0; i< n; i++) = 0.0; </font> <br> 
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp; &nbsp; &nbsp; { </font> <br> 
+
+         <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp; &nbsp; &nbsp; 
+         for(j=0; j< n; j++) = 0.0; </font> <br> 
+
+      <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; {  </font> <br> 
+
+     <font color="#ff00ff" face=" COurier"size = "3">   &nbsp; &nbsp;
+        &nbsp &nbsp; &nbsp; &nbsp;  C[i][k] =0.0;  </font> <br> 
+
+
+        <font color="#ff00ff" face=" COurier"size = "3">  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+         for(j=0; k< n; k++) &nbsp;  
+  
+          C[i][k] = C[i][k] + &nbsp; A[i][k] * B[k][j]; 
+    </font> <br> 
+
+
+   <font color="#ff00ff" face=" COurier"size = "3">  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;} </font> <br> 
+     
+
+    <font color="#ff00ff" face=" COurier"size = "3"> &nbsp;  &nbsp; &nbsp;  } </font> <br>
+
+    <font color="#ff00ff" face=" COurier"size = "3">  &nbsp;  } </font> <br>  
+</P>
+</ul>
+
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</TD> 
+     </TR> </TBODY> 
+   </TABLE>  
+
+<!-- *************** Matrix  Multiplication Ends ***************** -->
+
+<!-- *************** An overview of Sequential programs  Ends **************** -->
+
+<TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color="red" face = "Arial"> 
+        <p  align="justify"><b> Description of Programs - Dense/Sparse Matrix Comptuations   </b> </p>
+      </font></DIV> 
+       </TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ***********  Example 5.1 Vector Vector Multiplicaiton   starts  **************** -->
+
+
+
+ <A NAME="matcomp-id01"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+   
+     <b>  Example 5.1:   <BR> <BR> <BR> <BR> <BR> </b> </td>
+    <td width="675" height="2" align="left">
+     <b>  Write  MPI program to compute dot product of two vectros using <I>block-striped partitioning
+    </I> with uniform data distribution. <BR>  </b>
+</I> 
+
+<!-- *************** Download starts Here **************** -->
+ <font>
+  (Download source code : <I><FONT COLOR="#cc66cc">
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/vv_mult_blkstp_unf.c"> vv_mult_blkstp_unf.c </A>
+  </FONT>
+ </I>
+&nbsp; &nbsp; &nbsp; 
+  <I>
+   <FONT COLOR="#33cc00" Size="+1" >
+     <A href="./matrix-vector-matrix-comp-codes/f77-lang-matvect/vv_mult_blkstp_unf.f"> vv_mult_blkstp_unf.f  </A>
+  </FONT> 
+  </I>
+ &nbsp;
+						
+ <BR>
+<font>						
+ (Download input files : <I><FONT COLOR="#993399">
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata1.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+ and &nbsp; &nbsp;  <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata2.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+
+<!-- ************** Download Ends Here **************** -->
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+<table border="0"  height="6">
+<tbody>
+    <tr>
+     <td>
+<BLOCKQUOTE><font size="2" face="verdana ">
+  <LI> <B>Objective</B> </li>
+<p align = "justify"> Write a MPI program, to compute the vector-vector multiplication on
+    <I>p </I>processors of message passing cluster using <I>block-striped partitioning
+    </I> with uniform data distribution. Assume that the vectors
+     are of size <I>n </I> and <I>p</I> is number of processes used and <I>n</I> 
+     is divisible <I>p.</I>
+ </P>
+
+<LI> <B> Description</B> </li>
+
+<p align = "justify"> The partitioning is called block-striped if each process is assigned
+    contiguous elements. The process P<SUB>0</SUB> gets the first <I>n</I>/<I>p</I>
+    elements, P<SUB>1</SUB> gets the next <I>n</I>/<I>p</I> elements and so
+    on. The distribution of 16 elements of vector <B><I>a</I></B> on 4 processes is shown in Figure 7. <BR> <BR>
+
+ <div align = "center"> 
+<IMG height=306 src="./matrix-vector-matrix-comp-images/matvect-striped.gif" width=360 > <BR>
+ Figure 7.  A Typical block-striped partitioning of a vector of size 16 on 4 processes
+ </div>
+  <BR> 
+<p align = "justify">
+   Initially process with rank <I>0</I> distributes the input vectors using
+   <B>MPI_Scatter</B> on <I>p</I> processes. Each process will perform local
+   dot product of the vectors and accumulate the partial dot product. Now
+   the process with rank <I>0</I> performs global reduction using <B>MPI_Reduce</B> to get the 
+   final dot product of two vectros 
+</p> 
+
+<LI> <B>Input </b> </li>
+
+          
+
+<p align = "justify"> Process with rank <I>0</I> reads a real vectors of size <I>n</I>. Assume
+that the number of elements <I>n</I> are greater than or equal to number
+of processes <I>p.</I> You have to adhere strictly to the following format for the input files. </p>
+
+<P>
+#Line 1 : Number of Elements (<I>n</I>)&nbsp;<BR>
+#Line 2 : List of Elements (<I>data</I>).&nbsp;
+
+<P>A sample input file for the vector <I>A </I>is given below : <BR>
+
+    24 <BR>
+
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp;
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; <BR>
+
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp;
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 
+
+</p>
+
+
+<LI>
+<B>Output&nbsp;</B> </li>
+
+
+<P>Process with rank <I>0</I><B> </B>prints the final dot product of two
+vectors. </P> </font>
+
+
+</UL>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE></TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+<!-- ***************  Example 5.1 Vector Vector Multiplicaiton Ends  ****************** -->
+
+
+<!-- ****************** Example 5.2 Matrix Vector Multiplicaiton starts **************** -->
+
+
+
+ <A NAME="matcomp-id02"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+    
+     <b>  Example 5.2: <BR> <BR> <BR>  <BR>   </b> </td>
+    <td width="675" height="2" align="left">
+       <b>  Write  MPI program to compute dot product of two vectros using <I>block-striped partitioning
+    </I> with non-uniform data distribution. <BR>   </b>
+
+<!-- *************** Download starts Here ***************** -->
+ <font>
+  (Download source code : <I><FONT COLOR="#cc66cc">
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/vv_mult_blkstp_nonunf.c"> vv_mult_blkstp_nonunf.c </A>
+  </FONT>
+ </I>
+&nbsp; &nbsp; &nbsp; 
+  <I>
+   <FONT COLOR="#33cc00" Size="+1" >
+     <A href="./matrix-vector-matrix-comp-codes/f77-lang-matvect/vv_mult_blkstp_nonunf.f"> vv_mult_blkstp_nonunf.f  </A>
+  </FONT> 
+  </I>
+ &nbsp;
+						
+ <BR>
+<font>						
+ (Download input files : <I><FONT COLOR="#993399">
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata1.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata2.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- ************** Download Ends here *************** -->
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td>
+<BLOCKQUOTE><font size="2" face="verdana ">
+  <LI> <B>Objective</B> </LI>
+
+
+  <P>Write a MPI program, to compute the dot product of two vectors on <I>p </I>processors of cluster using
+     <I>block-striped partitioning </I>with  non-uniform distribution<I> </I>of data<I> .&nbsp;</I>
+   </P>
+
+<LI> <B>Description</B> </li>
+        
+<p align = "justify">
+
+  If <I>p</I> divides <I>n</I> evenly, processes P<SUB>0</SUB> gets the
+  first <I>n</I>/<I>p</I> elements, P<SUB>1</SUB> the next <I>n</I>/<I>p</I>
+  elements and so on. If <I>p</I> does not divide <I>n</I> evenly, and&nbsp;
+  <I>r</I> be the remainder, then first <I>r</I> processes get (<I>n</I>/<I>p</I>)+1
+  elements and remaining<I> p</I>-<I>r </I>processes get <I>n/p </I>elements<I>.</I>&nbsp;
+  The program described in Example 14 uses <B>MPI_Scatter</B> and <B>MPI_Reduce</B>
+  because the vector is equally distributed on <I>p</I> processes. Here,
+  we use <B>MPI_Scatterv</B> call, which distributes the  vectors non-uniformly on all 
+  processes.
+
+</P>
+
+<LI> <B>Input </b> </li>        
+
+<p align = "justify">
+Process with rank <I>0</I> reads a real vectors of size <I>n</I>. Assume
+that the number of elements <I>n</I> are greater than or equal to number
+of processes <I>p</I>. You have to adhere strictly to the following format for the input files. </p>
+
+<P>
+#Line 1 : Number of Elements (<I>n</I>)&nbsp;<BR>
+#Line 2 : List of Elements (<I>data</I>).&nbsp;
+
+<P>A sample input file for the vector <I>A </I>is given below : <BR>
+
+    18 <BR>
+
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp; <BR> 
+ 
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;  
+
+</p>
+
+ 
+<LI> <B>Output</B> </li>
+
+
+ <P>
+  Process with rank 0 prints the final dot product of two vectors
+ </P></font>
+
+
+<DIV align="right">   
+ <A href ="#top">
+<IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+</TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ****************  Example 5.2 Matrix Vector Multiplicaiton Ends ****************** -->
+
+
+
+<!-- **************** Example 5.3 Matrix Vector Multiplicaiton Starts ****************** -->
+
+
+
+ <A NAME="matcomp-id03"></A> 
+  <table border="0"  height="6">
+ <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+    
+     <b>  Example 5.3: <BR> <BR> <BR> <BR>  <BR> </b> </td>
+    <td width="675" height="2" align="left">
+       <b>  Write  MPI program to compute dot product of two vectros using <I>block-striped partitioning
+    </I> with cyclic uniform data distribution.  <BR> </b>
+
+<!-- ***************** Download starts Here ************ -->
+
+ <font>
+  (Download source code : <I><FONT COLOR="#cc66cc">
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/vv_mult_blk_cyclic.c"> vv_mult_blk_cyclic.c </A>
+  </FONT>
+ </I>
+&nbsp; &nbsp; &nbsp; 
+  <I>
+   <FONT COLOR="#33cc00" Size="+1" >
+     <A href="./matrix-vector-matrix-comp-codes/f77-lang-matvect/vv_mult_blk_cyclic.f"> vv_mult_blk_cyclic.f  </A>
+  </FONT> 
+  </I>
+ &nbsp;
+						
+ <BR>
+<font>						
+ (Download input files : <I><FONT COLOR="#993399">
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata1.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata2.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- *************** Download Ends here ****************** -->
+ 
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+<table border="0">
+<tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE>
+
+<font size="2" face="verdana ">
+ <LI>
+   <B>Objective</B> 
+<p align = "justify">
+   Write a MPI program, to compute the dot product of two vectors on <I>p
+   </I>processors of message passing cluster using <I> block-striped partitioning
+   </I> with cyclic uniform data distribution. </I>Assume
+   that the vectors are of size <I>n </I>and <I>p</I> is number of processors
+   used and <I>n</I>&nbsp; is a multiple of<I> p.&nbsp;</I></P></li>
+
+
+ <LI>
+  <B>Description </b> 
+          
+
+
+ <p align = "justify">
+ In the <I>Cyclic data partitioning </I>process P<SUB>0</SUB> gets
+   the first element, process P<SUB>1 </SUB>gets the next and so on. The
+   process P<SUB><I>p</I>-1</SUB> gets (<I>p</I>-1)<SUP>th</SUP> element.
+   If the number of elements <I>n</I> is more than the number processes <I>p</I>,
+   then&nbsp; process P<SUB>0</SUB> gets <I>p</I><SUP>th</SUP> element,
+   process P<SUB>1</SUB> gets (<I>p</I>+1)<SUP>th</SUP> element and so on.
+   The process is repeated till all the elements are assigned. If <I>n</I>
+   is not a multiple of <I>p</I>, then first <I>r</I> (<I>r</I> = <I>n</I>/<I>p</I>)
+   processes will get <I>n</I>/<I>p</I> +1 elements and remaining <I>p</I>-<I>r</I>
+   processes will get <I>n</I>/<I>p</I> elements, in <I>cyclic</I> fashion.
+   The Figure 8 illustrates the example for&nbsp; <I>p</I> = 4 and <I>n</I> = 16 <br> <BR></li>
+</p>
+ 
+<div align = "CENTER"><IMG height=306 src="./matrix-vector-matrix-comp-images/matvect-cyclic.gif" width=250>
+<BR>
+ Figure 8.  Cyclic data partitioning of a vectorof size 16  on 4 processes
+  </div>
+
+
+<P>
+#Line 1 : Number of Elements (<I>n</I>)&nbsp;<BR>
+#Line 2 : List of Elements (<I>data</I>).&nbsp;
+
+<P>A sample input file for the vector <I>A </I>is given below : <BR>
+
+    16 <BR>
+
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 
+    5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp; 7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; <BR>
+
+    1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 3.0&nbsp;&nbsp; 4.0&nbsp;&nbsp; 5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp;
+    7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 9.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 2.0&nbsp;&nbsp; 
+    5.0&nbsp;&nbsp; 6.0&nbsp;&nbsp; 7.0&nbsp;&nbsp; 8.0&nbsp;&nbsp; 
+
+</p>
+
+<LI> <B>Output</B> </LI>
+
+
+  <P> Process with rank 0 prints the final dot product of two vectors  </p> </font>
+
+</UL>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+
+</DIV>
+</BLOCKQUOTE>
+
+ </td>
+ </tr> 
+ </table> 
+<!-- ******************* Example 5.3 Matrix Vector Multiplicaiton Ends ********************* -->
+
+
+<!-- ************* Example 5.4  Infinity Norm  of a Matrix  Starts ************** -->
+
+
+ <A NAME="matcomp-id04"></A> 
+  <table border="0" height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+   
+     <b>  Example 5.4: <BR> <BR>     <BR> </b> </td>
+    <td width="675" height="2" align="left">
+       <b>  Description for implementation of  infinity norm of a square matrix  <BR>  </b>
+
+<!-------------Download starts Here --------->
+<font>
+  (Download source code : <I><FONT COLOR="#cc66cc">
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mat_infnorm_blkstrip.c"> mat_infnorm_blkstrip.c </A>
+  </FONT>
+ </I>
+&nbsp; &nbsp; &nbsp; 
+  <I>
+   <FONT COLOR="#33cc00" Size="+1" >
+     <A href="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mat_infnorm_blkstrip.f"> mat_infnorm_blkstrip.f  </A>
+  </FONT> 
+  </I>
+ &nbsp;
+						
+ <BR>
+<font>						
+ (Download input files : <I><FONT COLOR="#993399">
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/infndata.inp"> infndata.inp </A> ) 
+ </FONT>
+ </I>
+
+<!-- ************** Download Ends here ****************** -->
+ 
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+  <LI> <B>Objective&nbsp;</B>
+
+
+ <p align = "justify"> Write a <B>MPI</B> program to calculates <I>infinity norm </I>of a matrix
+    using <I>row wise block-striped partitioning </I>.&nbsp; 
+  </P>
+
+
+  <LI> <B>Description&nbsp;</B> 
+
+<p align = "justify">
+ The <I>infinity norm </I>of a square matrix is defined to be the maximum of sums of absolute 
+     values of elements in a row, over all rows. Row-wise block
+     partitioning, is used and the idea is that the matrix <I>m </I>x <I>n </I>is striped 
+     among <I>p </I>processors so that each processors stores <I>m/p
+     rows</I> of the matrix. A typical <I>column-wise</I> and <I>row-wise</I>
+     partitioning of the matrix is shown in the Figure 9. <BR> <BR>
+    </P>
+
+<div align = "CENTER">
+    <IMG SRC="./matrix-vector-matrix-comp-images/matvect-onedblk.gif" HEIGHT=200 WIDTH=400> <BR>
+
+     Figure 9. &nbsp; Uniform column-wise and row-wise striped partitioning of 16 x 16 matrix on 
+               4 processors of a cluster</B>.<BR>  <BR> 
+ </div>
+<p align = "justify">  If a <I>m</I> x <I>n</I> matrix is partitioned on <I>p </I>processes (labeled
+     <I>p</I><SUB>0</SUB><I> </I>, <I>p</I><SUB>1</SUB>, <I>p</I><SUB>2</SUB>,...,<I>
+     p<SUB>p-</SUB></I><SUB>1</SUB>), then process <I>p<SUB>i</SUB></I> contains
+     rows with indices (<I>m/p</I>)<I>i, </I>(<I>m/p</I>)<I>i+</I>1<I>, </I>(<I>m/p</I>)<I>i+</I>2<I>,
+    </I>(<I>m/p</I>)<I>i+</I>3<I>,........, </I>(<I>m/p</I>)(<I>i+</I>1)<I>-</I>1.&nbsp;
+</p>
+</LI>
+
+<LI> <B>Input</B> <li>
+
+
+<p align = "justify">
+  Assume <B> A </B>is a real matrix of size <I>m x n.</I>&nbsp; Also the
+  number of rows <I>m</I> should be greater than or equal to number of processes
+  <I> p </I>. Process with rank <I>0</I> reads input data.&nbsp; Format for
+  the input file is given below.&nbsp; </p> <BR>
+<p align = "justify">You have to adhere strictly the following format for the input files.&nbsp; </p>
+
+<P>&nbsp;
+#Line 1 : Number of Rows (<I>m</I>)&nbsp; Number of columns(<I>n</I>).&nbsp; <BR> &nbsp; 
+#Line 2 : (data) (in row-major order. This means that the data of second row follows that of the 
+         first &nbsp; &nbsp; &nbsp;and so on.) <BR>
+</P>
+
+<LI>
+<B>Input file&nbsp;</B> </LI>
+
+<BR>&nbsp;
+<BR>A sample input file for the matrix A (8 x 8) is given below :&nbsp;
+<BR>8&nbsp; 8&nbsp; <BR>
+
+ -1.0&nbsp;&nbsp;  2.0&nbsp;&nbsp;&nbsp;  3.0&nbsp;&nbsp;&nbsp; &nbsp;  4.0&nbsp;&nbsp;&nbsp;
+  5.0&nbsp;&nbsp;&nbsp;  6.0&nbsp;&nbsp;&nbsp;  7.0&nbsp;&nbsp;&nbsp;   8.0&nbsp;&nbsp;&nbsp;  <BR>
+
+  2.0&nbsp;&nbsp;&nbsp;  3.0&nbsp;&nbsp;&nbsp;  4.0&nbsp;&nbsp;&nbsp;  &nbsp; 5.0&nbsp;&nbsp;&nbsp;
+  6.0&nbsp;&nbsp;&nbsp;  7.0&nbsp;&nbsp;&nbsp;  8.0&nbsp;&nbsp;&nbsp;   9.0&nbsp;&nbsp;&nbsp;  <BR>
+
+  3.0&nbsp;&nbsp;&nbsp;  4.0&nbsp;&nbsp;&nbsp;  5.0&nbsp;&nbsp;&nbsp; &nbsp;  6.0&nbsp;&nbsp;&nbsp;  
+  7.0&nbsp;&nbsp;&nbsp;  8.0&nbsp;&nbsp;&nbsp;  9.0&nbsp;&nbsp;&nbsp;   10.0&nbsp;&nbsp;  <BR>
+
+  4.0&nbsp;&nbsp;&nbsp;  5.0&nbsp;&nbsp;&nbsp;  6.0&nbsp;&nbsp;&nbsp;  &nbsp;  7.0&nbsp;&nbsp;&nbsp;   
+  8.0&nbsp;&nbsp;&nbsp;  9.0&nbsp;&nbsp;        10.0&nbsp;&nbsp;         11.0&nbsp;&nbsp;    <BR>
+
+  5.0&nbsp;&nbsp;&nbsp;  6.0&nbsp;&nbsp;&nbsp;  7.0&nbsp;&nbsp;&nbsp; &nbsp;  8.0&nbsp;&nbsp;&nbsp;
+  9.0&nbsp;&nbsp;       10.0&nbsp;&nbsp;       11.0&nbsp;&nbsp;      12.0&nbsp;&nbsp;   <BR>
+
+  6.0&nbsp;&nbsp;&nbsp;  7.0&nbsp;&nbsp;&nbsp;  8.0&nbsp;&nbsp;&nbsp;  &nbsp; 9.0&nbsp;&nbsp; 
+ 10.0&nbsp;&nbsp;        11.0&nbsp;&nbsp;       12.0&nbsp;&nbsp;     13.0&nbsp; &nbsp; <BR>
+
+  7.0&nbsp;&nbsp;&nbsp;  8.0&nbsp;&nbsp;&nbsp;  8.0&nbsp;&nbsp;&nbsp;  10.0&nbsp;&nbsp;&nbsp; 
+ 11.0&nbsp; 12.0&nbsp; 13.0&nbsp; 14.0&nbsp;&nbsp;  <BR>
+
+  8.0&nbsp;&nbsp;  -9.0&nbsp;&nbsp; 10.0&nbsp;&nbsp; 11.0&nbsp;&nbsp;
+ 12.0&nbsp;&nbsp;  13.0&nbsp;&nbsp; 14.0&nbsp; 15.0&nbsp;&nbsp; <BR>
+
+
+<LI> <B>Output</B> </LI>
+
+
+<P>Process with rank <I>0</I> prints the infinity norm value as given below <BR> 
+
+ 92.0 </p> </font>
+
+
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+<!-- *****************  Example 5.4  Infinity Norm  of a Matrix  Ends  ******************** -->
+
+
+<!-- ************* Example 5.5 Matrix -Vector Computation Self Scheduling Algorithm Starts ************** -->
+
+
+ <A NAME="matcomp-id05"></A> 
+  <table border="0" height="6">
+    <tr>
+     <td width="125" height="2" align="left">
+    
+     <b>  Example 5.5: <BR> <BR> <BR><BR><BR><BR><BR><BR><BR> </b> </td>
+    <td width="675" height="2" align="left">
+       <b>  Description for implementation of <i> MPMD </i> MPI program to compute the Matrix and Vector Multiplication using            
+      <i>self-scheduling  algorithm</i></B> <BR>  </b>
+
+
+<!-- ************** Download starts Here ************* -->
+
+  (Download MPI - C Language source codes : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mv_mult_master_sschd.c"> mv_mult_master_sschd.c </A>
+   &nbsp; &nbsp; &nbsp;  
+
+<A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mv_mult_slave_sschd.c"> mv_mult_slave_sschd.c </A>) 
+  </FONT>
+ </I> <BR>
+
+(Download MPI - Fortran 77 language source codes : <I><FONT COLOR="#cc66cc" Size="+1">
+ <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mv_mult_master_sschd.f"> mv_mult_master_sschd.f</A>
+   &nbsp; &nbsp; &nbsp;  
+
+<A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mv_mult_slave_sschd.f"> mv_mult_slave_sschd.f </A>) 
+  </FONT>
+ </I> <BR>
+
+ 						
+<font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- **************** Download Ends here ***************** -->
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+  <li> <b> Objective</b> </li>
+
+
+<p align="justify"> Write <i> MPMD </i> MPI program  for computing the matrix-vector multiplication on <I>p </I>processors of 
+    message passing cluster  using <I>Self Scheduling </I>algorithm.</P>
+
+
+<LI> <B>Description&nbsp;</B> </li>
+
+<p align = "justify"> This example illustrates , one of the most common parallel algorithm
+    prototype , the <I>Self-Scheduling&nbsp; </I>or <I>Master-Slave </I>algorithm.
+    This example is chosen not because it illustrates the best way to parallelize
+    this particular numerical computation (it doesn't), but it illustrates
+    the basic MPI <I>send</I><I> </I> and MPI <I> receive </I> operations in the context of 
+    fundamental type of parallel algorithm
+     applicable in many situations. </p>
+
+
+<div align="center">
+  <IMG src="./matrix-vector-matrix-comp-images/matmat-selfsch.gif"  height=200 width=360> <BR>
+   Figure 10&nbsp; Communication pattern among <I>master </I>and  <I>slaves </I>in self scheduling paradigm.
+ </div
+
+<p align = "justify">
+ We assume that the matrix <B>A</B> of size <I>n</I> <I>x</I> <I>n</I> is available with <I>master</I> 
+     process of rank 0 and the vector <B>x</B> of size<I> n </I>is available on all the <I>slave</I> processes, 
+     whose rank start from 1 onwards .The idea is that one process, which we call
+     the <I>master </I>process,&nbsp; distributes the work load to <I>slave</I>
+     processes. When the slave finishes its workload, it informs the <I>master</I>
+     which assigns a new workload to the <I>slave</I>. This communication between
+     the <I>master</I> and <I>slave</I> is shown in Figure 10. This is very
+     simple paradigm where the co-ordination is done by <I>master</I>. Here,&nbsp;
+     the <I>slave</I> processes do not have to communicate with one another. </p>
+
+<p align = "justify">
+     The <I>master </I>begins by broadcasting vector <B>x</B> to each <I>slave</I>.
+     It then <I>sends </I>one row of the matrix <B>A </B>to each <I>slave </I>.&nbsp;
+     At this point, the master begins a loop, terminated when it has received all of the entries 
+     in the product. The body of the loop consists of receiving one entry in the product vector 
+     from any <I>slave</I> , and sending the next task (<I>row</I> of matrix <B>A</B>)&nbsp; 
+     to that <I>slave</I>. In other words, completion of one task by a <I>slave</I> is considered 
+     to be a request for the next task. Once all the tasks have been handed out, termination messages 
+     are sent. </p>
+<p align = "justify">
+     After receiving the broadcast value of vector <B>x </B>, each <I>slave</I>
+     also enters in a loop to compute the product of a matrix row with vector.
+     Each <I>slave</I> computation is terminated by the receipt of the termination
+      message from <I>master</I>. The body of the loop consists of receiving
+      a <I>row </I>of matrix <B>A</B>,&nbsp; performing the dot product with
+      vector <B>x</B>, and sending the answer back to the <I>master</I>.&nbsp;
+      <BR>&nbsp;</P>
+
+<LI> <B>Input&nbsp;</B> </li> 
+
+          
+<p align = "justify">
+ The input should be in following format.&nbsp;
+
+<p align = "justify">    Assume that the real matrix is&nbsp; of size <I>m</I> x<I> n</I>&nbsp;
+       and the real vector is of size <I>n </I>.&nbsp; Also the number of <I>rows</I>
+      <I>m</I> should be greater than or equal to number of processes <I>p.</I>
+      Process with rank <I>0 </I>reads the input matrix <B>A</B>&nbsp; and the
+      vector <B>x</B> .&nbsp; Format for the input files are given below. </p>
+
+<p align = "justify"><B>Input file 1</B> &nbsp; <BR> <BR>
+
+The input file for the matrix should strictly adhere to the following format.&nbsp;
+
+<P>
+#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns (<I>n</I>).<I>&nbsp;</I>&nbsp;<BR>
+
+#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means that the data of second row 
+         follows that of the first and so on.) </p>
+
+<p align = "justify">A sample input file for the matrix (8 x 8) is given below : &nbsp;
+
+<p align = "justify"> 8 &nbsp;&nbsp; 8 &nbsp; <BR> <BR>
+
+  1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+  3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+  4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+  3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; <BR>
+
+  4.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; <BR>
+
+</p>
+
+<p align = "justify">  <B>Input file 2</B> <BR> 
+
+ The input file<B> </B>for the vector should strictly adhere to the following format.&nbsp;
+
+<P>
+  #Line 1 : Size of the vector (<I>n</I>)&nbsp; <BR>
+  #Line 2 : <I>(data)&nbsp;</I> &nbsp;
+</p>
+
+<p align = "justify">A sample input file for the vector (8 x 1) is given below  </p>
+<p align = "justify">
+  #line 1 :  8 &nbsp; <BR>
+  #Line 2 :  1.0&nbsp; 1.0&nbsp; 1.0 &nbsp;  1.0  &nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp;<BR>
+</P>
+
+
+<LI>
+ <B>Output&nbsp;</B> </LI>
+
+
+<p align = "justify"> Process with rank 0 prints the final matrix vector product result is given below. <BR>
+
+ <P>
+  18.0&nbsp; 18.0&nbsp; 17.0&nbsp; 19.0&nbsp; 17.0&nbsp;&nbsp; 12.0&nbsp; 19.0&nbsp; 20.0&nbsp;
+ </P>
+
+</font>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+
+<!-- ************* Example 5.5 Matrix -Vector Computation Self Scheduling Algorithm Ends ******** -->
+
+
+
+<!-- *************  Example 5.6 Matrix -Vector Multiplicaiton Block striped Part-Uniform data Distribution *********** -->
+
+<A NAME="matcomp-id06"></A> 
+   <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+   
+     <b>  Example 5.6: <BR> <BR> <BR> <BR><BR><BR> </b> </td>
+    <td width="675" height="2" align="left">
+      <b> Description for implementation of MPI program to compute the Matrix and Vector Multiplication using         
+    <i>block-striped row-wise partitioning</i> with <i>uniform data distribution</i>  <BR> </b>
+
+
+<!-- ************** Download starts Here ************* -->
+
+ (Download  source code : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mv_mult_mult_blkstrip.c"> mv_mult_mult_blkstrip.c </A>
+   &nbsp; &nbsp;
+
+<A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mv_mult_blkstrip.f"> mv_mult_mult_blkstrip.f </A>) 
+  </FONT>
+ </I> <BR>
+
+ 						
+<font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  
+<A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- ************** Download Ends here **************** -->
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+  </p>
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+<LI> <B>Objective&nbsp;</B> </LI>
+
+
+<p align = "justify">
+   Write  a MPI program, for computing the matrix -vector multiplication
+   on <I>p </I>processor of message passing cluster using <I>block striped partitioning
+  </I>of a matrix.</P>
+
+
+<LI> <B>Description&nbsp;</B> </li>
+
+<p align = "justify">
+
+   In the <I>striped partitioning </I>of a matrix, the matrix is divided
+   into groups of contiguous complete <I>rows</I> or <I>columns</I>, and each
+   processor is assigned one such group. The partitioning is called <I>block-striped
+   </I>if each processor is assigned contiguous <I>rows</I> or <I>columns.</I>
+   <I>Striped partitioning</I> can be <I>block</I> or <I>cyclic</I>.
+
+    In a
+   <I> row-wise</I> <I>block striping</I> of an <I>n</I>x<I>n</I> matrix on
+   <I> p </I>processors (labeled P<SUB>0</SUB><I> </I>, P<SUB>1</SUB>, P<SUB>2</SUB>,...,<I>
+   </I> P <SUB> <I>p-1 </i></SUB>),&nbsp; processor P<I><SUB>i</SUB></I> contains
+   <I>rows</I> with indices (<I>n/p</I>)<I>i, </I>(<I>n/p</I>)<I>i+</I>1<I>,
+   </I>(<I>n/p</I>)<I>i+</I>2<I>, </I>(<I>n/p</I>)<I>i+</I>3<I>,........,
+   </I>(<I>n/p</I>)(<I>i+</I>1)<I>-1</I>. 
+
+   A typical <I>column-wise</I> or <I>row-wise partitioning</I> of 16 x 16 matrix on 4 processors is 
+   shown in the Figure 11 &nbsp;
+
+
+<div align="center">&nbsp;
+
+<IMG height=300 src="./matrix-vector-matrix-comp-images/matvect-onedblk.gif"  width=300> <BR>
+ <B>Figure 11. &nbsp; Uniform block-striped partitioning of 16 x
+    16 matrix on 4 processors.</B>
+</div>
+
+<p align = "justify">
+   The matrix <B>A</B> of size <I>n </I>x <I>n </I>is striped row-wise
+   among <I>p </I>processes so that each process stores <I>n/p </I>rows
+   of the matrix.&nbsp; We assume that the vector <B>x</B> of size <I>n </I>x
+   1 is available on each process . Now, process&nbsp; P<I><SUB>i</SUB>
+   </I> computes the dot product of the corresponding <I>rows</I> of the matrix
+   <B>A</B>[*]<B> </B>with the vector <B>x</B>[ * ]<B>&nbsp;</B>
+   and accumulate the partial result in the array <B>y</B>[ * ]. Finally, process 
+   P<SUB>0</SUB><I> </I>collects the dot product of different 
+  <I>rows</I> of the matrix with the vector from all the processes.
+  <BR>
+</P>
+
+
+<LI> <B>Input&nbsp;</B></LI> 
+
+      Format for the input files are given below. </p>
+
+<P><B>Input file 1</B> &nbsp; <BR> <BR>
+
+The input file for the matrix should strictly adhere to the following format. <BR>
+
+
+#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns (<I>n</I>).<I>&nbsp;</I>&nbsp;<BR>
+
+#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means that the data of second row 
+         follows that of the first and so on.) </p>
+
+<P>A sample input file for the matrix (16 x 16) is given below : &nbsp;
+
+<P> 16 &nbsp;&nbsp; 16 &nbsp; <BR> <BR>
+
+  1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; &nbsp;
+
+  4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;  
+
+                                      <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; &nbsp;
+
+
+  6.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp;
+  9.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;
+
+                                        <BR>
+
+  3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp; &nbsp;
+
+  2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp;
+  8.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  7.0&nbsp;&nbsp;&nbsp;&nbsp; 15.0&nbsp; 
+
+                                        <BR>
+
+  4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; &nbsp;
+
+  3.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  8.0&nbsp;&nbsp;&nbsp;&nbsp; 14.0&nbsp; 
+
+                                        <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  6.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; &nbsp;
+
+  8.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  7.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 17.0&nbsp; &nbsp;
+
+                                           <BR>
+
+  8.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp;
+  6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  7.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; &nbsp;
+
+  3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 10.0&nbsp; 
+
+                                            <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; &nbsp;
+
+  7.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 
+
+                                             <BR>
+
+  4.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; &nbsp;
+
+
+  6.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  8.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 31.0&nbsp;
+ 
+                                <BR>
+
+</p>
+
+<P>  <B>Input file 2</B> <BR> 
+
+ The input file<B> </B>for the vector should strictly adhere to the following format.&nbsp;
+
+<P>
+  #Line 1 : Size of the vector (<I>n</I>)&nbsp; <BR>
+  #Line 2 : <I>(data)&nbsp;</I> &nbsp;
+</p>
+
+<P>A sample input file for the vector (8 x 1) is given below  <BR> 
+
+
+  #line 1 :  16 &nbsp; <BR>
+  #Line 2 :  1.0&nbsp; 1.0&nbsp; 1.0 &nbsp;  1.0  &nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp;
+             1.0&nbsp; 1.0&nbsp; 1.0 &nbsp;  1.0  &nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp;
+
+</P>
+
+
+<LI>
+ <B>Output&nbsp;</B> </LI>
+
+
+ <P> Process with rank 0 prints the final matrix vector product  <BR>
+
+ 
+
+</font>
+
+<DIV align="right">
+ <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+
+</DIV>
+</BLOCKQUOTE>
+
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+
+<!-- ***************** Example 5.6 Matrix -Vector Multiplication Block striped Part-Uniform data Distribution Ends *************** -->
+
+
+
+<!-- ************** Example 5.7 Matrix -Vector Multiplicaiton Block Checkerboard  Partition ************ -->
+
+
+ <A NAME="matcomp-id07"></A> 
+   <table border="0"  height="6">
+   <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+   
+     <b>  Example 5.7: <BR> <BR> <BR><BR><BR><BR>  </b> </td>
+    <td width="675" height="2" align="left">
+      <b> Description for implementation of MPI program to compute Matrix and Vector 
+                                Multiplication using block checkerboard partitioning  <BR></b>
+   
+
+<!-- *********** Download starts Here **************** -->
+
+ (Download  source code : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mv_mult_mult_checkerboard.c"> mv_mult_mult_checkerboard.c </A>
+   &nbsp; &nbsp; &nbsp;  
+
+<A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mv_mult_checkerboard.f"> mv_mult_checkerboard.f </A>) 
+  </FONT>
+ </I> <BR>
+
+ 						
+<font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1"> 
+ <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/vdata.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- ********** Download Ends here *************** -->
+
+  </td>
+    </tr> 
+    </tbody>
+    </table> 
+  </p>
+
+
+<table border="0">
+<tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+
+ <LI> <B>Objective&nbsp;</B> </LI>
+
+<p align = "justify"> Write a parallel MPI program, for computing the matrix -vector multiplication
+      on <I>p </I>processor of message passing cluster using <I>block</I>-<I>checkerboard
+      partitioning </I>. Assume that <I> p </I> is a perfect square number. </p>
+
+  <P> Special MPI routines can be used to arrange the processors in a square grid of<I> q x q</I> processors
+      where, <I>q<SUP>2</SUP>=p</I>.&nbsp; Also, assume that the size of the matrix is evenly divisible by <I>q</I>.</P>
+
+
+<LI> <B>Description</B> </LI>
+
+<p align = "justify">
+ In <I>checkerboard partitioning</I>, the matrix is divided into smaller
+    <I>square</I> or <I>rectangular</I> blocks (<I>submatrices) </I>that are
+     distributed among processes. A <I>checkerboard </I>partitioning splits
+     both the <I>rows</I> and the <I>columns </I>of the matrix, so no process
+     is assigned any complete <I>row</I> or <I>column . </I>Like <I>striping
+     partitioning</I>, <I>checkerboard partitioning </I>can be block or cyclic.
+     The Figure 12&nbsp; explains how a 8 x 8 matrix is distributed on 16 processors
+    using <I>block checkerboard </I>and <I>cyclic checkerboard </I>partitioning </p>
+
+
+
+  <div align="center"><IMG SRC="./matrix-vector-matrix-comp-images/matmat-check.gif" HEIGHT=385 WIDTH=360>&nbsp; <BR> <BR>
+ Figure 12. Checkerboard partitioning of 8 x 8 matrices on 16 processors
+</div>
+
+
+<p align = "justify">
+   We assume that processes are arranged in <I>q</I> x <I>q</I>&nbsp;<I>
+   </I>matrix and processes are stored in row major order. As shown in Figure 12 for square 
+   grid of 4 x 4 processors the matrix <B>A</B> of size <I>m
+   </I>x <I>n&nbsp;</I> is partitioned among <I>p&nbsp; </I>processes using
+   <I>block checkerboard partitioning , </I>such that each process stores
+   <I>m/q </I>x <I>n/q </I>block of the matrix <B>A</B>. The vector <B>x</B>
+   is distributed in portions of <I>n/q </I>elements to the first process
+   in each columns of<I> q </I>processes . For example, the&nbsp; processes P<SUB>00</SUB>, P<SUB>10</SUB>,
+   P<SUB>20</SUB> and P<SUB>30</SUB> get the <I>n/q</I> elements of the vector <B>x</B>. 
+   Each process in the first column of each row in square grid of <I>q</I> x <I>q</I> processes, 
+   possesses <i> n/q  </i> elements of the vector. 
+
+   Processes P<SUB>00</SUB>, P<SUB>10</SUB>, P<SUB>20</SUB>, P<SUB>30</SUB> broadcast elements of the
+   vector to the other processes in the respective <I>rows</I> of the grid.&nbsp; Each process now stores
+   <I>m/q </I>x <I>n/q&nbsp;</I> blocks of the matrix <B>A</B> and 
+   <I>n/q </I>elements of the vector <B>x</B>
+</p>
+
+<p align = "justify">
+  Each process then performs multiplication of its block matrix with local vector elements and stores 
+  the partial result in the vector <B>y</B>[* ]. Now, each process has resultant vector <i> y </i>  of size 
+ <I>m/q </I>and the first process in each row of square grid processes <I>q x q</I> will accumulate
+  the<I> </I>partial sum in the same row involving other processes in the same row of square grid of processes. 
+  Finally, process P<SUB>0</SUB> gathers accumulated partial sum on each process to obtain the resultant
+  vector <I>y</I>. <BR> 
+</P>
+
+
+<LI> <B>Input&nbsp;</B></LI> 
+
+      Format for the input files are given below. </p>
+
+<P><B>Input file 1</B> &nbsp; <BR> <BR>
+
+The input file for the matrix should strictly adhere to the following format.&nbsp;
+
+<P>
+#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns (<I>n</I>).<I>&nbsp;</I>&nbsp;<BR>
+
+#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means that the data of second row 
+         follows that of the first and so on.) </p>
+
+<P>A sample input file for the matrix (16 x 16) is given below : &nbsp;
+
+<P> 16 &nbsp;&nbsp; 16 &nbsp; <BR> <BR>
+
+  1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; &nbsp;
+
+  4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;  
+
+                                      <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; &nbsp;
+
+
+  6.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp;
+  9.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;
+
+                                        <BR>
+
+  3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp; &nbsp;
+
+  2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp;
+  8.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  7.0&nbsp;&nbsp;&nbsp;&nbsp; 15.0&nbsp; 
+
+                                        <BR>
+
+  4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; &nbsp;
+
+  3.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  8.0&nbsp;&nbsp;&nbsp;&nbsp; 14.0&nbsp; 
+                                        <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  6.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; &nbsp;
+
+  8.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  7.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 17.0&nbsp; &nbsp;
+                                           <BR>
+
+  8.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp;
+  6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  7.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; &nbsp;
+
+  3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 10.0&nbsp; 
+                                            <BR>
+
+  2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+  3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; &nbsp;
+
+  7.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 
+
+                                             <BR>
+
+  4.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+  4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; &nbsp;
+
+
+  6.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+  8.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;
+  1.0&nbsp;&nbsp;&nbsp;&nbsp; 31.0&nbsp;
+                                <BR>
+</p>
+
+
+<LI>
+ <B>Output&nbsp;</B> </LI>
+
+<P> Process with rank 0 prints the final matrix vector product  <BR>
+
+ 
+</font>
+
+<DIV align="right">
+ <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+
+</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- ************* Example 5.7 Matrix -Vector Multiplicaiton Block checkerboard data Partition ***************** -->
+
+
+
+<!-- ******************** Example 5.8 Matrix -Matrix Computation Self Scheduling Algorithm Starts *************** -->
+
+
+
+
+ <A NAME="matcomp-id08"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+    
+     <b>  Example 5.8: <BR> <BR> <BR> <BR><BR><BR><BR><BR> </b> </td>
+    <td width="675" height="2" align="left">
+       <b>  Description for implementation of MPI program to compute the Matrix Matrix Multiplication using <i>self-scheduling 
+    algorithm</i></B>   <BR> </b>
+
+<!-- ************ Download starts Here ************** --> 
+    (Download MPI - C Language source codes : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mm_mult_master_self_schd.c"> mm_mult_master_self_schd.c </A>
+   &nbsp; &nbsp; &nbsp;  
+
+<A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mm_mult_slave_self_schd.c"> mm_mult_slave_self_schd.c </A>) 
+  </FONT>
+ </I> <BR>
+
+(Download MPI - Fortran 77 language source codes : <I><FONT COLOR="#cc66cc" Size="+1">
+ <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mm_mult_master_self_schd.f"> mm_mult_master_self_schd.f</A>
+   &nbsp; &nbsp; &nbsp;  
+
+<A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mm_mult_slave_self_schd.f"> mm_mult_slave_self_schd.f </A>) 
+  </FONT>
+ </I> <BR>
+
+ 						
+<font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata1.inp"> vdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1"> 
+ <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata2.inp" > vdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- ************** Download Ends here **************** -->
+
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+ 
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td>
+<BLOCKQUOTE><font size="2" face="verdana ">
+ <LI> <B>Objective </B> </LI>
+
+<p align = "justify">  Write a MPI program, for computing the matrix-matrix multiplication
+     on <I>p </I>processors of message passing cluster using <I>Self-Scheduling </I>algorithm.&nbsp;</P>
+
+
+<LI> <B>Description </B> </LI>
+
+
+<p align = "justify"> This example illustrates , one of the most common parallel algorithm
+    prototype , the <I>Self-Scheduling </I>or <I>Master-Slave </I>algorithm.
+    This example is chosen not because it illustrates the best way to parallelize
+    this particular numerical computation (it doesn't), but it illustrates the basic MPI 
+    library calls like, <B>MPI send</B><I> </I>and <B>MPI</B> <B>receive</B>
+    in the context of fundamental type of parallel algorithm applicable in many situations. </p>
+
+<p align = "justify"> We assume that a square matrix <B>A</B> of size <I>n</I> is available
+    on the master process with rank 0 and another square matrix <B>B</B>
+    of size <I>n </I>is available on all the <I> slave  </i> processes ,whose
+    rank starts from 1 onwards. The idea is that  the <i> master </i>  process,
+    distributes the work load to <I> slave  </i> processes. When the <I> slave  </i> finishes
+    its workload, it informs the <i> master </i>, about the completion of the task assigned
+    and then <i> master </i> assigns a new workload to the <I> slave  </i>. This is very simple
+    paradigm where  the coordination is done by master. Here, the
+    <I> slave  </i> processes do not have to communicate with one another. This communication
+   among the <i> master </i> and the <I> slaves  </i> is shown in Figure 13.
+</p> 
+<BR> <BR>
+
+<p ALIGN=center> <IMG height=200 src="./matrix-vector-matrix-comp-images/matmat-selfsch.gif" width=360 >  <BR> 
+    Figure 13. Communication pattern among <i> master </i> and <i> slave  </i> in self 
+  scheduling paradigm. </p>
+
+<p align = "justify">
+  The <i> master </i> process with rank 0 stores the final output square matrix
+  <B> C </B>  of size n . The <i> master </i> process receives whole <I>row</I> of the
+  product matrix <B>C </B>from <I>any slave, </I>and sends the next task
+  (<I>row</I> of matrix <B>A)</B> to that <I>slave </I>processes. In other
+  words, completion of one task by a <I>slave</I> is considered to be a request
+  for the next task. Once all the tasks have been handed out, termination
+  messages are sent. 
+
+</p>
+<p align = "justify">
+  Each <I>slave </I>process, after receiving matrix <B>B</B>,&nbsp;
+  enters a loop which is terminated after receiving the termination message
+  from <I>master</I>. The body of the loop consists of receiving the <I>row</I>
+  of the matrix <B>A,</B> forming the entries <B>C</B><SUB>i, j</SUB> of
+  required row by doing computation with the received row of the matrix <B>A
+  </B>with the available matrix <B>B </B>, and sending the computed
+  row of the product matrix. <BR> </p>
+
+
+
+<LI> <B>Input </B> </LI>
+
+
+<P>Assume <B>A </B>and <B>B </B>are real square matrices of size <I>n </I>and
+the number of <I>rows</I> <I>n</I> should be greater than or equal to number
+of processes <I>p</I>. Process 0<I></I> reads the input matrices
+<B>A</B> and <B>B</B>. Format for the input file is given below.
+
+<P>The input file for the matrices<B> A</B> and <B> B</B> 
+    should strictly adhere to the following format. <BR> 
+
+ 
+ #Line 1 : Number of Rows (<I>n</I>); &nbsp;  Number of columns(<I>n</I>).&nbsp;<BR>
+ #Line 2 : (data) (in row-major order. This means that the data of second row follows that of 
+  the first and so on.) </P>
+
+
+<LI>
+<B>Input file & </B> </LI>
+
+<P> Input file 1 <BR>
+
+ A sample input file for the matrix <B>A</B> (8 x 8) is given below&nbsp; <BR> <BR>
+
+ 8 &nbsp;&nbsp; 8 &nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; <BR>
+
+4.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;
+
+
+</P>
+
+<p>
+<B>Input file 2</B> </p>
+
+
+<BR>A sample input file for the matrix <B>B</B> (8 x 8) is given below&nbsp;
+
+<P> 8&nbsp;&nbsp; 8 &nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;<BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+</P>
+
+<LI>
+<B>Output&nbsp;</B>
+
+
+<p align = "justify">
+  Process 0 prints final matrix-matrix product matrix <B>C</B>.
+  The output of the matrix - matrix multiplication is given below : <BR> <BR>
+
+18.0&nbsp;&nbsp; 36.0&nbsp;&nbsp; 54.0&nbsp;&nbsp; 72.0&nbsp;&nbsp;
+36.0&nbsp;&nbsp; 18.0&nbsp;&nbsp;&nbsp; 36.0&nbsp;&nbsp; 18.0&nbsp; <BR>
+
+18.0&nbsp;&nbsp; 36.0&nbsp;&nbsp; 54.0&nbsp;&nbsp; 72.0&nbsp;&nbsp;
+36.0&nbsp;&nbsp; 18.0&nbsp;&nbsp;&nbsp; 36.0&nbsp;&nbsp; 18.0&nbsp; <BR>
+
+17.0&nbsp;&nbsp; 34.0&nbsp;&nbsp; 51.0&nbsp;&nbsp; 68.0&nbsp;&nbsp;
+34.0&nbsp;&nbsp; 17.0&nbsp;&nbsp;&nbsp; 34.0&nbsp;&nbsp; 17.0&nbsp; <BR>
+
+19.0&nbsp;&nbsp; 38.0&nbsp;&nbsp; 57.0&nbsp;&nbsp; 76.0&nbsp;&nbsp;
+38.0&nbsp;&nbsp; 19.0&nbsp;&nbsp;&nbsp; 38.0&nbsp;&nbsp; 19.0&nbsp; <BR>
+
+17.0&nbsp;&nbsp; 34.0&nbsp;&nbsp; 51.0&nbsp;&nbsp; 68.0&nbsp;&nbsp;
+34.0&nbsp;&nbsp; 17.0&nbsp;&nbsp;&nbsp; 34.0&nbsp;&nbsp; 17.0&nbsp; <BR>
+
+12.0&nbsp;&nbsp; 24.0&nbsp;&nbsp; 36.0&nbsp;&nbsp; 48.0&nbsp;&nbsp;
+24.0&nbsp;&nbsp; 12.0&nbsp;&nbsp;&nbsp; 24.0&nbsp;&nbsp; 12.0&nbsp; <BR>
+
+19.0&nbsp;&nbsp; 38.0&nbsp;&nbsp; 57.0&nbsp;&nbsp; 76.0&nbsp;&nbsp;
+38.0&nbsp;&nbsp; 19.0&nbsp;&nbsp;&nbsp; 38.0&nbsp;&nbsp; 19.0&nbsp; <BR>
+
+20.0&nbsp;&nbsp; 40.0&nbsp;&nbsp; 60.0&nbsp;&nbsp; 80.0&nbsp;&nbsp;
+40.0&nbsp;&nbsp; 20.0&nbsp;&nbsp;&nbsp; 40.0&nbsp;&nbsp; 20.0&nbsp;
+</P>
+
+</font>
+</DIV>
+<A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+</td></tr>
+</tbody></table>
+
+    
+
+<!-- **************  Example 5.8 Matrix -Matrix Computation Self Scheduling Algorithm Ends ************** -->
+
+
+
+<!-- *********** Example 5.9 Matrix -Matrix Computation Checkerboard Partitioning Algorithm Starts *********** -->
+
+
+ <A NAME="matcomp-id09"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="1" align="left">
+   
+     <b>  Example 5.9: <BR> <BR> <BR> <BR> </b> </td>
+       <td width="675" height="1" align="left">
+        <b>  Description for implementation of MPI program to compute the Matrix Matrix Multiplication using 
+     <i> block checkerboard partitioning</i> and MPI Cartesian topology </B>  <BR> </b>
+
+
+<!-- ************** Download starts Here ************* -->
+
+ (Download  source codes : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mm_mult_cartesian.c"> mm_mult_cartesian.c </A>
+   &nbsp; &nbsp; / &nbsp;  &nbsp;
+
+<A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/mm_mult_cartesian.f"> mm_mult_cartesian.f</A>) 
+  </FONT>
+ </I> <BR>
+
+						
+<font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata1.inp"> mdata1.inp </A> &nbsp; &nbsp; 
+ </FONT>
+ </I>
+
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata2.inp" > mdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- ********** Download Ends here ************** -->
+
+
+
+     </td>
+    </tr> 
+     </tbody>
+    </table> 
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+  <LI> <B>Objective </B> </LI>
+
+
+<p align="justify">
+  Write a MPI program, for computing the matrix-matrix multiplication
+  on <I>p </I>processors of IBM AIX cluster using block checkerboard partitioning
+  of the matrices . Special <B>MPI </B> routines on cartesian topology can
+  be used for checkerboard partitioning of matrices.
+
+<BR> <BR>
+  Assume that <I> p=  q<SUP>2&nbsp; </SUP></I>and the size of square
+  matrices <B>A</B> and <B>B</B> is evenly divisible by <I>q</I>.
+</P>
+
+
+<LI> <B>Description&nbsp;</B> </LI>
+
+<p align="justify">
+
+  Assume that <B>A</B> and <B>B</B> are square matrices of size
+  <I>n</I> and <B>C</B> be the output&nbsp; matrix. These matrices are dived into blocks or submatrices 
+  to perform matrix-matrix operations in parallel.
+
+  For example, an <I>n </I>x<I> n </I>matrix <B>A </B>can be regarded as
+  <I>q </I>x<I> q </I>array of blocks <B>A</B><I><SUB>i, j</SUB></I> (0<I>&lt;=i
+  &lt;q</I>, 0<I>&lt;= j &lt; q</I>) such that each block is an (<I>n/q)
+  </I>x<I> (n/q</I>) submatrix. We use <I>p </I>processors to implement the
+  block version of matrix multiplication in parallel by choosing <I>q</I>
+  as a square root of&nbsp; <I>p&nbsp;</I> and compute a distinct block <B>C</B><I><SUB>i,
+  j</SUB></I> on each processor. <I>Block&nbsp; </I>and<I> cyclic checkerboard</I> partitioning of 
+  a 8 x 8 matrix on a square grid (4&nbsp; x 4) of processors is shown in the Figure 14.
+</p>
+
+
+ <div align="center">
+  <IMG SRC="./matrix-vector-matrix-comp-images/matmat-check.gif" HEIGHT=385 WIDTH=360>&nbsp; <BR> <BR>
+   Figure 14. Checkerboard partitioning of 8 x 8 matrices on 16 processors</B>
+ </div>
+
+<p align="justify">
+
+   The matrices <B>A </B>and<B> B </B>are<B> </B>partitioned into <I>p&nbsp;
+   </I>blocks, <B>A<I><SUB> </SUB></I></B><I><SUB>i, j<B> </B></SUB></I>and
+   <B>B </B><SUB><I>i, j</I><B> </B></SUB>
+    (0&lt;=<I>i &lt; q</I>, 0&lt;=<I>j &lt; q</I>) of size&nbsp;
+     (<I>n/q </I>x <I>n/q</I>)&nbsp;&nbsp;  on each process. 
+
+   These blocks are mapped onto a <I>q </I>x <I>q&nbsp; </I>logical
+   mesh of processes. The processes are labeled from P<SUB>0,0</SUB> 
+   to P<SUB>q<I>-</I>1,q-1</SUB>. An example of of this situation is shown in
+   Figure 14. 
+
+
+   Process P<I><SUB>i, j</SUB></I> initially store block matrices <B>A</B><I><SUB>i, j </SUB></I>
+   and <B>B</B><I><SUB>i, j </SUB></I>and computes block <B>C</B><I><SUB>i, j </SUB></I>of result matrix.
+
+   To compute submatrix <B>C</B><I><SUB>i, j</SUB></I>, we need all submatrices, <B>A</B><I><SUB>i,
+   k</SUB></I> and&nbsp; B<I><SUB>k, j</SUB></I> ( 0<I> </I>&lt;=<I> k </I>&lt;<I> q </I>). 
+
+   To acquire all the required blocks, an all-to-all broadcast of matrix <B>A</B><I><SUB>i, j </SUB></I>'s&nbsp; 
+   is performed in each <I>row</I> and similarly in each <I>column</I> of matrix <B>B</B><I><SUB>i, j</SUB></I>'s.
+  <B>MPI</B> collective communication is used to perform this operations.
+</p>
+<p align="justify">
+   After P<I><SUB>i, j</SUB></I> acquires, <B>A </B><SUB><I>i,</I>0 </SUB>,
+   <B>A</B><SUB><I> i,</I>1 </SUB>, <B>A </B><SUB><I>i,</I>2<I> </I></SUB>,
+   <B>A </B><SUB><I>i, q-</I>1 </SUB>and <B>B</B><SUB>0<I>, j</I> </SUB>,
+   <B>B</B><SUB>1<I>, j</I> </SUB>, <B>B</B><SUB>2<I>, j</I> </SUB>, 
+   <B>B<I><SUB>q</SUB></I></B><SUB><I>-</I>1,
+   <I>j</I> </SUB>, it performs the serial block matrix to matrix multiplication
+   and accumulates the partial block  matrix <B>C</B><I><SUB>i, j</SUB></I>
+   of matrix <B>C</B> . To obtain the resultant product matrix <B>C</B>, processes
+   with rank <I>0</I> gathers all the block matrices by using <B>MPI_Gather</B>
+   collective communication operation.
+</p>
+<p align="justify">
+  <B>MPI</B> provides a set of special routines to <I>virtual </I> topologies. 
+  An important <I>virtual </I>topology is the <I>Cartesian topology </I>. 
+  This is simply a decomposition in the natural co-ordinate
+  (<I>e.g., x,y,z </I>) directions.
+</P>
+
+
+<LI> <B>Input</B> </LI>
+
+
+<p align="justify">
+  The input is given in the same format as explained in 
+<A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08"> <font color="blue">
+ Example 5.8 algorithm </font> </A>.
+  </FONT>. 
+
+  Assume that the number of processes is a perfect square.  
+ </P>
+
+<li>  <B>Output </B> </li>
+
+<p align="justify">
+  Process with rank 0 prints the&nbsp; final matrix-matrix multiplication results 
+ <A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08"><font color ="blue"> 
+Example 5.8 algorithm </font> </A>.
+</P>
+
+</font>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+</td></tr></tbody></table>
+
+
+<!-- ************** Example 5.9 Matrix -Matrix Computation Checkerboard Partitioning Algorithm Ends **************** -->
+
+
+
+<!-- ************ Example 5.10 Matrix -Matrix Computation Cannon's algorithm  Starts  ******** -->
+
+<A NAME="matcomp-id10"></A> 
+  <table border="0"  height="6">
+   <tbody>
+    <tr>
+     <td width="125" height="1" align="left">
+ 
+     <b>  Example 5.10:  <BR> <BR> <BR><BR><BR><BR></b> </td>
+       <td width="675" height="1" align="left">
+        <b>  Description for implementation of MPI program to compute the Matrix Matrix Multiplication using             
+          <i> block checkerboard partitioning and Cannon's Algorithm</i> and MPI Cartesian topology <BR></B>  
+
+
+<!-- *************** Download starts Here ******************** -->
+
+   (Download  source codes : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mm_mult_cannon.c"> mm_mult_cannon.c </A> )
+   &nbsp; &nbsp;  &nbsp;
+ </I> <BR></font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata1.inp"> mdata1.inp </A> </I> &nbsp; &nbsp; 
+ </FONT>
+
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata2.inp" > mdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+<!-- ************** Download Ends here **************** --> 
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td>
+<BLOCKQUOTE><font size="2" face="verdana ">
+<LI> <B>Objective </B> </li>
+
+
+<p align="justify"> Write a MPI program, for computing the matrix-matrix multiplication
+    on <I>p </I>processors of message passing cluster implementing block checkerboard partitioning 
+    of matrices using Cannon's algorithm. Use  MPI cartesian toplogy library calls.
+   Assume that&nbsp;<I> p=  q<SUP>2 </SUP></I>and the size of square matrices <B>A</B> and <B>B</B> is 
+          evenly divisible by </i>
+</P>
+
+<LI> <B>Description</B> </LI>
+
+<p align="justify">
+   Cannon's algorithm is based on <I>cartesian virtual</I> topology. As
+   discussed in <U>
+
+<A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08">
+<font color ="blue"> Example 5.8 algorithm </font> </A> </u>
+
+   there are <I>p</I> processors arranged in <I>q</I> x <I>q</I> square grid
+   of processors and the input matrices, <B>A</B> and <B>B</B> are distributed
+   among the processes in checkerboard fashion. It results in constructing
+   <I>p</I> block matrices of <B>A</B> and <B>B</B>. It uses only <I>point-to-point
+   communication</I> for circularly shifting blocks of matrix <B>A</B> and
+   matrix <B>B</B> among <I>p</I> processes. </p>
+
+<p align="justify">
+  The algorithm proceeds in <I>q</I> stages. The first step in this algorithm
+  is to perform initial allignment of the block matrix <B>A</B> and block
+   matrix <B>B</B>. The blocks of matrix <B>A</B> are circularly shifted to
+   the <I>i</I> positions to left in the <I>row</I> of the square grid of processes, 
+   where <I>i</I>&nbsp; is the <I>row</I> <I>number</I> of the
+   process in the mesh. Similarly, blocks of matrix <B>B </B>are circularly
+    shifted <I>j</I> positions upwards, where <I>j</I> is the<I> column</I>
+  <I>number</I> of the process in the processes mesh.&nbsp; This operation
+  is performed by using <B>MPI_Sendrecv_replace </B>.&nbsp; <B>MPI_Send</B>
+  and <B>MPI_Recv</B> is not used for point-to-point communication, because
+  if all the processes call <B>MPI_Send</B> or <B>MPI_Recv<I> </I></B>in
+  different order the deadlocked situation may arise. </p>
+
+ The algorithm performs the following steps in each stage  <BR>
+
+<p align="justify">
+ 1. Multiply the block of matrix <B>A</B> and matrix <B>B </B> and add
+    the resultant matrix to get the block matrix <B>C</B>, which is initially set to zero. <BR>
+
+ 2. Circularly shift the blocks of matrix <B>A</B> to left in the rows of the processes and the blocks 
+    of  matrix<B> B</B> upwards in the columns of the square grid of processes in a 
+    <I>wrap around </I>manner.  <BR> <BR>
+
+   The communication steps for 4 x 4 square grid of processors mesh are explained in the Figure 15. <BR>
+
+
+<div align="center">&nbsp;<IMG SRC="./matrix-vector-matrix-comp-images/matmat-cannon1.gif" HEIGHT = 319 WIDTH=360> 
+
+  <IMG SRC = "matrix-vector-matrix-comp-images/matmat-cannon2.gif" HEIGHT = 373 WIDTH=360> <BR> 
+
+ <B>Figure 15. The communication steps in Cannon's Algorithm on 16 processors</B> </div>
+
+<LI> <B>Input </B> </LI>
+
+<p align="justify">
+ The input is given in the same format as explained in <FONT COLOR="#990000">
+    <A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08">
+<font Color ="blue" > Example 5.8 algorithm  </font> </A>. </font>
+</P>
+
+
+<LI> <B> Output </b> </LI>
+
+
+<p align="justify">
+  Process with rank 0  prints the final&nbsp; product matrix and the results are given as in 
+ <A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08">
+ <font color="blue"> Example 5.8 algorithm </font> </A>. 
+
+</P>
+
+</font>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- **************  Example 5.10 Matrix -Matrix Computation Cannon's algorithm  Ends ******************* -->
+
+
+
+<!-- ****************  Example 5.11 Matrix-Matrix Computation Fox's algorithm  Starts  *************** -->
+
+
+
+
+ <A NAME="matcomp-id11"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+   
+  <td width="125" height="1" align="left">
+    
+     <b>  Example 5.11:  <BR> <BR> <BR> <BR> <BR> <BR></b> </td>
+       <td width="675" height="1" align="left">
+       Description for implementation of MPI program to compute the Matrix Matrix Multiplication using             
+          <i> block checkerboard partitioning and Fox's Algorithm</i> and MPI Cartesian topology  <BR> 
+
+<!-- ************* Download starts Here ******************* -->
+
+ (Download  source codes : <FONT COLOR="#cc66cc" Size="+1">
+   <I>
+    <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/mm_mult_fox.c"> mm_mult_fox.c </A> )
+   &nbsp; &nbsp;  &nbsp;
+ </I> <BR>
+
+						
+</font>						
+ (Download input files : <FONT COLOR="#993399"> <i>
+ <A href ="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata1.inp"> mdata1.inp </A>  </I> &nbsp; &nbsp; 
+ </FONT>
+
+
+ and  &nbsp; &nbsp; <I><FONT COLOR="#993399" SIZE="+1">  <A HREF="./matrix-vector-matrix-comp-codes/c-lang-matvect/data/mdata2.inp" > mdata2.inp </A>) 
+
+</FONT>
+</I>
+
+
+
+<!-- ************ Download Ends here ***************** --> 
+     </td>
+
+
+    </tr> 
+    </tbody>
+    </table> 
+
+
+
+<table border="0"  height="6"><tbody>
+    <tr>
+     <td>
+<BLOCKQUOTE><font size="2" face="verdana ">
+ <LI> <B> Objective </B> </LI>
+
+
+<p align="justify">
+    Write a MPI program, for computing the matrix-matrix multiplication
+    on <I> p </I> processors of message passing cluster. Use a special MPI routines on cartesian
+    topology for block checkerboard partitioning of the matrices, Fox's Algorithm. <BR> <BR>
+
+  
+    Assume that <I> p = q <SUP>2 </SUP></I> and the size of square matrices <B>A</B> and <B>B</B> is 
+    evenly divisible by  <i> q </i> 
+  </P>
+
+<LI> <B>Description&nbsp;</B> </LI>
+
+<p align="justify">
+
+   This algorithm is based on cartesian virtual topology. As discussed
+   in <U>
+<A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08">
+<font color="blue"> Example 5.8 algorithm </font> </A>, </u>
+
+ there
+   are <I>p</I> processes arranged in <I>q </I>x <I>q</I> mesh and the input
+   matrices are distributed among the processes in checkerboard fashion. It
+   results in constructing <I>p</I> block matrices of <B>A</B> and <B>B</B>.
+   The algorithm uses two types of communication, firstly it uses one-to-all
+   broadcast for blocks of matrix <B>A</B> in processes <I>rows</I>. Similarly
+   blocks of matrix<B> B</B> are circularly shifted <I>j</I> positions upwards,
+   where <I>j</I> is the <I>column</I> of the process in the processes mesh&nbsp;
+   using <B>MPI_Sendrecv_replace.</B> In this case <B>MPI_Send</B> and <B>MPI_Recv</B>
+   is not used for point-point communication because if all the processes
+   call <B>MPI_Send</B> or<B> MPI_Recv<I> </I></B>in different order the deadlocked
+  situation may arise.
+
+</p>
+
+<p align="justify">
+The algorithm proceeds in <I> n = </I> <I>q</I> stages and it performs the following step 
+   in each stages. <BR>
+
+ 1. Broadcast the block of matrix <B>A </B>on the diagonal process
+   of a particular row in the square grid of  processes to other processes in the same row. <BR>
+
+ 2. Multiply the block of matrix<B> A </B>and matrix <B> B </B> and add the resultant matrix
+    to get the block matrix <B> C </B> which is initially set to zero. <BR>
+
+ 3. Circularly shift the blocks of matrix <B>B</B> upwards in the processes <I>columns</I> 
+   and receives a fresh block of matrix B from the process below it. This selection is done 
+   in <I>wrap around</I> manner. <BR>
+
+ 4.Select the  block of matrix <B>A</B> for the next <I>row </I> broadcast. 
+   If <B>A</B><I><SUB>i, j</SUB></I> was broadcast in the current step  then 
+   select <B>A</B><I><SUB>i,(j+1)mod q <sup> th </sup> </SUB></I>  block for the next broadcast. 
+   This selection is also done in <I>  wrap around</I> manner. 
+</p>
+<BR>
+
+<p align="justify">
+The communication steps for 4 x 4 square grid of processors are explained  in the Figure 16. <BR>
+
+<div align="center"> 
+ <IMG SRC ="matrix-vector-matrix-comp-images/matmat-fox.gif" HEIGHT = 350 WIDTH =250> <BR> <BR>
+ Figure 16. The communication steps in Fox's Algorithm on 16 processors
+</div>
+
+
+<LI> <B>Input </B> </li>
+
+
+<p align="justify"> The input is given in the same format as explained in <FONT COLOR="#990000">
+ <A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08"><font color ="blue"> Example 5.8 algorithm  </font> </A>. </font> <Br>
+
+<LI> <B>Output </B> </LI>
+
+
+<p align="justify"> Process with rank 0 prints the final matrix-matrix product and the result are given as in 
+   <FONT COLOR="#990000"> 
+<A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id08">
+<font color ="blue"> Example 5.8 algorithm  </font> </A>. </font>
+
+</P>
+
+</font>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ***************  Example 5.11 Matrix-Matrix Computation Fox's algorithm  Ends  ***************** -->
+
+
+<!-- ************** Example 5.12 : MPI program for Mulitplication of Sparse Matrix and Vector Starts  ************** -->
+
+
+ <A NAME="matcomp-id12"></A> 
+   <table border="0"  height="6">
+   <tbody>
+    <tr>
+     <td width="135" height="2" align="left">
+     
+     <b>  Example 5.12: <BR> <BR>  <BR>  </b> </td>
+    <td width="675" height="2" align="left">
+     <b>  MPI program for implementation of  sparse matrix and Vector Multiplicaiton 
+         using <i>block-striped partitioning  <BR> </b>
+
+
+<!-- ************ Download starts Here **************** -->
+
+(Download source code : <I><FONT COLOR="#cc66cc">
+  
+<A HREF="./matrix-vector-matrix-comp-codes/f77-lang-matvect/sparse_matvect_fort.tar"> 
+ sparse_matvect_fort.tar</A>
+  </FONT>
+ </I>)
+
+
+
+<!-- ************** Download Ends here *************** --> 
+
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+    </p>
+
+  
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+
+ <LI>  <B>Objective </B>&nbsp;  </Li>
+        
+
+
+<P align="justify">
+   Write a MPI program on sparse matrix multiplication of size <I>n </I>x
+   <I>n </I>and vector of size <I>n </I>on <I> p </I>processors of Parallel Processing Platform
+    Assume that <I>n </I>is evenly divisible by <I>p </I>.
+</P>
+
+
+<LI> <B>Efficient storage format for sparse matrix</B>  </LI>
+        
+
+
+<P align="justify">
+  Dense matrices are stored in the computer memory by using two-dimensional
+  arrays. For example, a matrix with <I>n</I> rows and <I>m</I> columns,
+  is stored using a <I>n x m </I>array of real numbers. However, using the
+  same two-dimensional array to store sparse matrices has two very important
+  drawbacks. First, since most of the entries in the sparse matrix are zero,
+  this storage scheme wastes a lot of memory. Second, computations involving
+  sparse matrices often need to operate only on the non-zero entries of the
+  matrix. Use of dense storage format makes it harder to locate these non-zero
+  entries. For these reasons sparse matrices are stored using different data
+  structures. 
+</p> 
+
+<P align="justify">
+  The <I>Compressed Row Storage format </I>(<B><I>CRS</I></B>) is a widely
+  used scheme for storing sparse matrices. In the <B><I>CRS </I></B>format,
+  a sparse matrix <B>A</B> with <I>n</I> rows having <I>k</I> non-zero entries
+  is stored using three arrays: two integer arrays <I>rowptr</I> and <I>colind</I>,
+  and one array of real entries <I>values</I>. The array<I> rowptr </I>is
+  of size<I> n+</I>1, and the other two arrays are each of size<I> k</I>.
+  The array <I>colind</I> stores the column indices of the non-zero entries
+   in <B>A</B>, and the array <I>values</I> stores the corresponding non-zero
+  entries. In particular, the array <I>colind s</I>tores the column-indices
+  of the first row followed by the column-indices of the second row followed
+  by the column-indices of the third row, and so on. The array <I>rowptr
+  </I>is used to determine where the storage of the different rows starts
+  and ends in the array <I>colind</I> and <I>values</I>. In particular, the
+  column-indices of row<I> i</I> are stored starting at <I>colind </I>
+  [<I>rowptr</I>[<I>i</I>]] and ending at (but not including) 
+  <I>colind </I>[<I>rowptr</I>[<I>i+</I>1] ]. Similarly, the values of the non-zero 
+   entries of row <I>i</I> are stored at values [<I>rowptr</I>[<I>i</I>] ] and ending at 
+  (but not including)  values [<I>rowptr</I>[<I>i+</I>1]<I> </I>]. Also note that the number of
+   non-zero entries of row <I>i</I> is simply <I>rowptr</I>[<I>i+</I>1]<I>-rowptr</I>[<I>i</I>]. 
+
+</p></font>
+</BLOCKQUOTE>
+
+</td></tr></tbody></table>
+
+
+
+<table border="0"  ><tbody>
+    <tr>
+     <td>
+ <div align="center">
+
+ <IMG SRC="./matrix-vector-matrix-comp-images/sparse-formatcsr.gif" HEIGHT=300 WIDTH=250 > <BR> 
+
+ 
+  Figure 19 &nbsp; Representation of Sparse Matrix in Compressed Row Storage ( <B> CRS </B> ) format </div>
+
+  <BR><BR>
+
+<!-- ************  Sparse Matrix and  Vector Multiplication Algorithm  ************ -->
+
+
+<BLOCKQUOTE><font size="2" face="verdana ">
+
+<LI> <B>Serial sparse matrix vector multiplication </B>  </LI>
+        
+
+<P align="justify">
+   The following function performs a sparse matrix-vector multiplication
+   [y]={<B>A</B>} {b} where the sparse matrix <B>A</B> is of size <I>n x </I>m,
+   the vector <I>b </I>is of size <I>m </I>and the vector <I>y </I>is of size
+   <I>n</I>. Note that the number of columns of <B>A</B> (i.e., <I>m </I>)
+   is not explicitly specified as part of the input unless it is required.&nbsp; <BR> <BR>
+
+   <FONT COLOR="#ff00ff" FACE="Courier New,Courier">
+
+ void SerialSparseMatVec(int <I>n</I>, int *<I>rowptr</I>, int *<I>colind</I>, double *<I>values</I> <BR>
+
+    double *<I>b</I>, double&nbsp; *<I>y</I>)&nbsp; &nbsp; <BR>
+
+    {&nbsp;<BR>
+     &nbsp; &nbsp; &nbsp; int <I>i</I>, <I>j</I>, <I> count </i>; &nbsp;<BR>
+ 
+    &nbsp; &nbsp; &nbsp; count = 0; <BR>
+    &nbsp; &nbsp; &nbsp; for(<I>i</I>=0;  <I>i</I>&lt;<I>n</I>; <I>i</I>++) <BR>
+
+
+    &nbsp; &nbsp; &nbsp; { <BR>
+
+    &nbsp; &nbsp; &nbsp; &nbsp; <I>y</I>[<I>i</I>] = 0.0; <BR>
+  
+
+
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+    for (<I>j</I>=<I>rowptr</I>[<I>i</I>]; <I>j</I>&lt;<I>rowptr</I>[<I>i+</I>1]; &nbsp; </I>j</I>++) <BR>
+
+
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <I>y</I>[<I>i</I>] += value [count] * b [<I>colind</I>[<I>j</I>]];  <BR>
+    &nbsp; &nbsp; &nbsp; &nbsp; count ++;  <BR> 
+     &nbsp; &nbsp; &nbsp;  } <Br> 
+    } <BR> </font> <BR>
+ 
+   </P>
+
+
+<!-- **************  Parallel Sparse Matrix and  Vector Multiplication Algorithm  ************** -->
+
+
+<LI> <B> Description of parallel algorithm </B> </LI>
+        
+
+<P align="justify">
+
+   Consider the problem of computing the sparse matrix-vector product
+   [<I>y</I>]<I> = </I>{<B>A</B>}{<I>b</I>} where <B>A</B> is a sparse matrix of 
+   size <I>m</I> x <I>n</I> and <I>b</I> is a dense vector using <I>block</I> <I>striped
+   partitioning </I>. In the <I> block </I> <I> striped partitioning </I>of a
+   matrix, the matrix is divided into groups of complete rows or columns,
+   and each process is assigned one such group. </p>
+
+
+<div align="center">
+    &nbsp;&nbsp;&nbsp; <IMG SRC="./matrix-vector-matrix-comp-images/sparse-newcpsp.gif" HEIGHT=300 WIDTH=350> <BR>
+ 
+    Figure 20. The data needed by each processor in order to compute
+    the sparse matrix-vector product</B> 
+</div>
+
+<P align="justify">  In Figure 20, a sparse matrix <B>A</B> and the corresponding vector
+    <I>b</I> are distributed among three processors. Note that processor <I>p</I><SUB>o<I>
+    </I></SUB>needs to receive elements {4,5,7} from processor <I>p</I><SUB>1<I>
+    </I></SUB>and elements {8,10} from processor <I>p</I><SUB>2</SUB><I> </I>.
+    However, processor <I>p</I><SUB>2<I> </I></SUB>needs to receive only elements {4,6} from processor       
+      <I>p</I><SUB>1</SUB>. The process <I>p</I><SUB>1</SUB>
+     needs to receive elements {2,3} from process <I>p</I><SUB>0</SUB> and
+     elements {8,9,11} from process <I>p</I><SUB>2</SUB>.
+</p>
+
+<P align="justify">
+
+    Since the exact position of the non-zeros in <B>A </B>is not known a
+    priori, and is usually different for different sparse matrices, we can
+    not write a message-passing program that performs the required data transfers
+    by simply hard coding. The required communication patterns may be different
+    for different processes. That is, one process may need to receive some
+    data from just a few processes whereas another process may need to receive
+   data from almost all processes.
+</p>
+
+<P align="justify">
+
+   The present algorithm partitions the rows of matrix <B>A </B>using <I>block-striped
+    partitioning</I><B> </B>and the corresponding entries of vector<I> b</I>
+   among the processes, so that each of the <I>p</I> processes gets <I>m/p</I>
+   rows of the matrix and <I>n</I>/<I>p</I> elements of the vector. The portion
+   of the matrix <B>A </B>obtained by<B> </B><I>block-striped partitioning,
+   </I>is assigned to each process and the non-zero entries of the sparse
+   matrix <B>A</B> is stored using the compressed storage (<I>CSR</I>) format
+   in the arrays <I>rowptr</I>, <I>colind </I>and <I>values.</I> To obtain
+   the entire vector on all processes, <B>MPI_Allgather </B>collective<B>
+  </B>communication is performed. </p>
+
+<P align="justify">Each process now is responsible for computing the elements of the
+  vector <I>y</I> that correspond to the rows of the matrix that it stores
+  locally. This can be done as soon as each process receives the elements
+  of the vector <I>b</I> that are required in order to compute these serial
+  sparse dot-products. </p>
+
+<P align="justify">
+  This set of <I>b</I> elements depends on the position of the non-zeros
+  in the rows of <B>A</B> assigned to each process. In particular, for
+  each process <I>p<SUB>i</SUB></I>, let <B>C<I><SUB>i </SUB></I></B>be
+  the set of column-indices<I> j</I> that contain non-zero entries overall
+  the rows assigned to this process. Then process <I>p<SUB>i</SUB></I>
+  needs to receive all the entries of the form <I>b<SUB>j</SUB></I> for all
+  <I>j</I> in <B>C</B><I><SUB>i </SUB></I>.
+
+<P align="justify">
+  It is a simple parallel program but <I>inefficient </I>way of solving
+   this problem because to write a message-passing program in which all the
+   processes receive the entire <I>b</I> vector.&nbsp; If each row in the
+  matrix has on the average <I>d </I>non-zero entries, then each process
+  spends (<I>md/p</I>) time in serial algorithm. The program will achieve
+   meaningful speedup only <I>d &gt;= p </I>. That is, the number of non-zero
+  entries at each row must be at least as many as the number of processes.
+  This scheme performs well when the sparse matrices are relatively dense.
+  However, in most interesting applications, the number of non-zero entries
+  per row is small, often in the range of 5 to 50. In such cases, the algorithm
+  spends more communication time relative to computation.</br>
+</P>
+
+
+  This example is chosen <I>not because it illustrates the best way
+  to parallelize </I>this particular sparse numerical computations, because
+  it illustrates the basic <B>MPI_Allgather </B>operations and <I><B>CRS </B>
+  </I>scheme in the context of parallel algorithm, applicable in many situations. <BR> <BR>
+
+<LI> <B>Remark</B>&nbsp;  </LI> 
+        
+
+<P align="justify">
+   One can design efficient algorithm by reducing communication cost by
+   storing the necessary entries of the vector <I>b </I>. In the above algorithm,
+   the overall communication performed by each process can be reduced if
+   each process receives from other processes only those entries of the
+   vector <I>b </I>are needed. In this case, we further reduce the communication
+   cost by assigning only rows of the sparse matrix to processes such that
+   the number of rows required but remotely stored entries of the vector <I>b
+   </I>is minimized. This can be achieved by performing a min-cut partitioning
+   of the graph that corresponds to the sparse matrix. We first construct
+   graph corresponds to sparse matrix and the graph is partitioned among <I>p</I>
+   processes. The off process communication is developed to identify the
+   required values of the vector <I>b </I>residing on neighbouring 
+   processes.
+</p>
+</font>
+</BLOCKQUOTE>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<table border="0"  ><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+
+<LI> <B>Input</B>  </LI> 
+        
+
+
+<P align="justify">The input is available in following format. <BR>
+
+
+   Assume that the sparse square matrix is of size <I>n </I>and is divisible
+   by the number of processes <I>p </I>.&nbsp; Assume that the vector is
+   of size <I>n</I>. For convenience, the <I>sparsity</I> is defined as maximum
+   non-zero elements in a row, over all the rows. In the given example sparsity
+   is 4. All the entries in the sparse matrix are floating point numbers.
+   Process <I>0 </I> reads the data. You have to adhere strictly the
+   following format for the input files. <BR>
+
+ <B>Input file 1</B> <BR> <BR>
+
+# Line 1 : (<I>Sparsity value</I>)&nbsp; <BR>
+# Line 2 : (<I>Size of the sparse matrix</I>)&nbsp; <BR>
+# Line 3 : (<I>data </I>in <I>row-major </I>order) This means that
+        the data of second row follows that of the first and so on. <BR>
+
+<P align="justify">A sample input file for the sparse matrix of size 16 x 16 is given below <BR>
+
+ 4&nbsp; <BR>
+
+16&nbsp; <BR>
+
+5.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;  <BR>
+
+<P align="justify"><B>Input file 2</B>&nbsp; <BR> <BR>
+
+
+  # Line 1 : (<I>Size of the vector</I>)&nbsp; <BR>
+  # Line 2 : (<I>data</I>)&nbsp; <BR>
+
+  A sample input file for the sparse vector of size 16 is given below : <BR>
+
+  16 <BR>
+  1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 
+  1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp;
+
+
+</P>
+
+
+<LI> <B>Output&nbsp;</B>&nbsp;  </li>
+        
+
+
+<P align="justify">      Process with rank <I>0</I><B> </B> prints the final sparse matrix-vector product.&nbsp; <br>
+
+  16.0&nbsp;&nbsp;&nbsp;  14.0&nbsp;&nbsp;&nbsp;  19.0&nbsp;&nbsp;&nbsp;  18.0&nbsp;&nbsp;&nbsp; 
+  20.0&nbsp;&nbsp;&nbsp;  11.0&nbsp;&nbsp;&nbsp;  15.0&nbsp;&nbsp;&nbsp;  12.0&nbsp;&nbsp;&nbsp;
+  16.0&nbsp;&nbsp;&nbsp; 19.0&nbsp;&nbsp;&nbsp;  21.0&nbsp;&nbsp;&nbsp;  22.0&nbsp;&nbsp;&nbsp; 
+  13.0&nbsp;&nbsp;&nbsp; 22.0&nbsp;&nbsp;&nbsp; 16.0&nbsp;&nbsp;&nbsp;
+  9.0&nbsp;
+</p></font>
+
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE>
+</td></tr></tbody></table>
+
+
+<!-- ***************** Sparse Matrix and Vector Multiplication Algorithm  Ends  ************** -->
+
+<!-- ***************** Example 5.12  Ends Here   ************** -->
+
+
+
+
+<!-- **************** Example 5.13 : Efficient Parallel implemenation of  Sparse Matrix and Vector Multiplication Algorithm  Starts ******** -->
+
+
+<P> <A NAME="matcomp-id13"></A> 
+   <table border="0"  height="6">
+   <tbody>
+    <tr>
+     <td width="135" height="2" align="left">
+     
+     <b>  Example 5.13:   <BR> <BR>  </b> </td>
+    <td width="675" height="2" align="left">
+     <b>  Efficient implementation of   sparse matrix and Vector Multiplicaiton 
+         using <i>block-striped partitioning </b>
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE><font size="2" face="verdana ">
+
+ <LI>  <B>Objective </B>&nbsp;  </LI>
+
+
+
+<P align="justify">
+  You have to write an efficient parallel program on sparse matrix
+  of size <I>n </I>and the vector of size <I>n </I>multiplication that executes
+  on <I>p </I>processors of message passing cluster. Assume that <I>n </I>is evenly divisible
+  by <I>p </I>. In order to make your programs more portable, you will be
+  using the MPI (Message Passing Interface).
+
+</p>
+
+
+<LI>  <B>Background </B></LI>
+
+
+<P align="justify">
+
+  We can classify matrices into two broad categories according to the
+  kind of algorithms that are approriate for them. The first category is
+  <I>dense</I><B> </B>or <I>full matrices</I><B> </B>with few or no zero
+  entries. The second category is <I>sparse matrices i</I>n which a majority
+  of the entries are zero. The computation and communication performed by
+  all the message-passing programs presented&nbsp; so far (matrix-vector
+  and matrix-matrix algorithms for dense matrices) are quite structured.
+  In particular, every processor knows with which processors it needs to
+  communicate and what data it needs to <I>send </I>and <I>receive </I>.
+  This information is used to map the computation on to the parallel computer
+  and to program the required data transfer. However, there are problems
+  in which we cannot determine a priori the processors that needs to communciate
+  and what data they need to transfer. These problems often involve operations
+  on irregular grid or unstructured data. Also, the exact communication patterns
+  are specific to each particular problem and it may vary from problem to
+  problem. <BR> <BR>
+
+  Message-passing programs in order to solve these problems efficiently
+  often need to dynamically determine the communication patterns of the algorithm.
+  That is, the parallel program consists of two conceptual steps. The <I>first</I>
+  step is responsible for determining which processors need to communicate
+  with each other and what data they need to send, and the <I>second</I>
+  step is&nbsp; processor that performs the actual computation. The <I>Compressed
+  Row Storage format</I> (<B><I>CRS </I></B>) is  used for storing sparse
+  matrices in the parallel program. The details are given in
+  <A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id12">
+
+<font color ="blue"> Example 5.12 algorithm  </font></A>.
+
+</p>
+
+
+</BLOCKQUOTE>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE>
+<LI> <B> Unstructured Sparse Matrix and its associated Graph representation </b> </LI>
+
+
+<p align="justify">
+
+  Let <B>A </B>be an <I>n x n</I> unstructured sparse matrix that has
+  a symmetric structure. Let <I>G </I>(<B>A</B>) be a graph with <I>n </I>nodes
+  such that there is an edge between the <I>i<SUP>th</SUP></I> and the <I>j<SUP>th</SUP></I>
+  nodes of <I>G</I>(<B>A</B>) if and only if <B>A </B>(<I>i, j</I>) 
+ 
+  <IMG SRC="./matrix-vector-matrix-comp-images/notequal.gif" HEIGHT=12 WIDTH=15>0
+  (or <B>A </B><I>(j,i)&nbsp;
+
+   <IMG SRC="./matrix-vector-matrix-comp-images/notequal.gif" HEIGHT=12 WIDTH=15></I>0).
+
+
+  The matrix <B>A</B> is thus a weighed adjacency matrix of graph <I>G</I>(<B>A</B>)
+  in which each node corresponds to a row of <B>A</B>. A scalable parallel
+  implementation of matrix-vector multiplication exists for a sparse matrix
+  <B>A</B> provided that it is the adjacency matrix of a planar graph <I>G</I>(<B>A</B>).
+  A graph is planar if and only if it can be drawn in plane such that no
+  edges cross each other. Note that planarity of <I>G</I>(<B>A</B>) is a
+  sufficient, but not a necessary condition for the multiplication of matrix
+  <B>A</B> with a vector <I>b </I>to be scalable. <BR> <BR>
+
+
+  If the graph <I>G</I>(<B>A</B>) is planar, it is possible to partition
+  its nodes (and hence, the rows of <B>A</B>) among processors to yield a
+  scalable parallel formulation for sparse matrix-vector multiplication.
+  The amount of computation that a processor performs is proportional to
+  the total number of nodes in that processor's partition. If <I>G</I>(<B>A</B>)
+  is planer, the total number of words that a processor communicates is proportional
+  to the number of nodes lying along the periphery of that processor's partition.
+  Furthermore, if <I>G</I>(<B>A</B>)<I> </I>is planar, the number of processors
+  with whome a given processor communicates is equal to the number of partotions
+  with whom that processor's partition shares its boundaries. Hence, by reducing
+  the number of partitions (thus, increasing the size of partitions) it is
+  possible to increase the computation to communication ratio of the processors. </p> 
+
+<div align = "Center">
+ <IMG SRC="./matrix-vector-matrix-comp-images/sparse-cpsprgrf.gif" HEIGHT=300 WIDTH=350> <BR>
+  Figure 21. Sparse matrix and its associated graph
+ </B></div>
+
+
+<P align="justify">
+
+  Above figure 21 shows a structurally symmetric randomly sparse matrix
+  and its associated graph. The vector is partitioned among the processors
+  such that its <I>i<SUP>th</SUP></I> element resides on the same processor
+  that stores the <I>i<SUP>th</SUP></I> row of the matrix. Figure 21 also
+  shows the partitioning of the graph among processors and the corresponding
+  assignment of the matrix rows to processors. While performing matrix-vector
+  multiplication with this partitioning, the ith row of <B>A</B> requires
+   only those elements of the vector whose indices correspond to the neighbours
+  of the ith node in <I>G</I>(<B>A</B>). The reason is that by the construction
+  of <I>G</I>(<B>A</B>), the <I>i<SUP>th</SUP></I> row has a non-zero element
+  in the <I>j<SUP>th</SUP></I> column if and only if <I>j </I>is connected
+  to <I>i </I>by an edge in <I>G</I>(<B>A</B>). As a result, a processor
+   performs communication for only those rows of <B>A</B> that correspond
+  to the nodes of <I>G</I>(<B>A</B>) lying at the boundary of the processor's
+  partition. If the graph <I>G</I>(<B>A</B>) partitioned properly, the communication
+  cost can be reduced significantly both in terms of the number of messages
+  and the volume of communication. <BR> <BR>
+
+
+  Partitioning an arbitrary graph<I> G</I>(<B>A</B>) to minimize interprocessor
+  communication is a hard combinatorial problem. However, there are several
+  good heuristics for graph partitioning. These partitioning techniques are
+  described in detail. Often, the origin of the unstructured sparse matrix
+  <B>A </B>lies in a finite element problem. In such a case, the graph <I>G</I>(<B>A</B>)<I>
+  </I>can be derived from the finite element graph directly.&nbsp;</p>
+
+</p>
+
+<LI><B> Description of efficient parallel algorithm </B></LI>
+
+
+<P align="justify">
+
+  Consider the problem of computing the sparse matrix-vector product
+  <I>y = </I><B>A</B><I>b</I> where the sparse matrix <B>A </B>is of size <I>n
+  </I>x <I>m </I>, the dense vector <I>b </I>is of size <I>m </I>and the
+  vector <B>y </B>is of size <I>n.&nbsp;</I> For simplicity, we consider
+  <I>m </I>= <I>n </I>. This can be achieved by performing a min-cut partitioing
+  of the graph that correponds to the sparse matrix by designing efficient
+  algorithm by reducing communication cost by storing the necessary entries
+  of the vector <I>b</I>. <BR> <BR>
+
+  In the <A HREF="matrix-vector-matrix-comp-mpi.html#matcomp-id12">
+<font color ="blue"> Example 5.12 algorithm  </font></A>, the overall
+  communication performed by each processor can be reduced if each processor
+  receives from other processors only those entries of the vector <I>b </I>are
+  needed. In this case, we furhter reduce the communication cost by assigning
+  only rows of the sparse matrix to processors such that the number of required
+  but remotely stored entries of the vector <I>b </I>is minimized. For many
+  important problems, it is possible to reduce the communication cost down
+  to 
+    (<IMG SRC="./matrix-vector-matrix-comp-images/sparse-root05.gif" HEIGHT=25 WIDTH=65>) or (n/p)2/3. 
+
+   This can be achieved by performing a min-cut partitioing of the graph that correponds
+  to the sparse matrix. <BR> <BR>
+
+  Since the structure of the sparse marix differs from instance to instance,
+  the pattern of data transfer among processors has to be determined during
+  the execution of the program. For such programs, each processor first determines
+  with which processors it needs to communicate and what elements it needs
+  to <I>send </I>and <I>receive </I>. It then uses this information to perform
+  the actual data transfers and finally proceeds to compute the matrix-vectir
+  product corresponding to the locally stored rows of the matrix.&nbsp; Here,
+  we develop <I>CommInterfaceValues </I>a communication module which performs
+  the required communication, so that each processor has the entries of the
+  <I>b</I> vector that are needed to perform the matrix-vector multiplication
+  of its local rows. Each procesor uses the <I>CommInfoType </I>data structure
+  to store information about its communication pattern and it is explained
+  below. <BR> <BR>
+
+<LI><B>Details of CommInfoType data structure</B> </li>
+
+<P align="justify"> &nbsp;&nbsp; typedef struct {&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int nsnbrs, *spes;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int nrnbrs, *rpes;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *sendptr, *recvptr;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *sendind, *recvind;&nbsp;
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double *sendbuf, *recvbuf&nbsp;
+  <BR>&nbsp;&nbsp; } <I>CommInfoType;</I>&nbsp;
+</p>
+
+<P align="justify">
+
+  The variable <I>nsnbrs </I>and <I>nrnbrs</I> store the number of processors
+  that this processor needs to <I>send</I> and to <I>receive</I> data, respectively.We
+  can think of these processors as being the neighbouring processors. The
+  actual ranks of these processors is stored in the arrays <I>spes</I> and
+  <I>rpes</I> for the <I>sending</I> and <I>receiving</I> processors, respectively.
+  The array <I>spes </I>is of the size <I>nsnbrs</I>, and the array <I>rpes</I>
+  is of size <I>nrnbrs</I>. The array <I>sendptr</I> and <I>sendid</I> store
+  the elements of the <I>b</I> vector to be <I>sent </I>to each processor.
+  In particular, the indices of the elements that are <I>sent</I> to the
+  <I>i <SUP>th </SUP></I>neighboring are stored in <I>sendind </I>starting
+  at location <I>sendptr</I> [<I>I </I>] and ending at location <I>sendptr</I>
+  [<I>I+</I>1] - 1. The array <I>sendptr </I>is of size <I>(nsnbrs+</I>1<I>)</I>,
+  and the size of the array <I>sendind</I> is equal to the sum of the number
+  of elements that are <I>sent </I>to all the neighboring processors. The
+  array <I>recvptr</I> and <I>recvind </I>store the elements of the <I>b</I>
+  vector that are received from the neighboring processors. 
+</p>
+
+</BLOCKQUOTE>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<table border="0"><tbody>
+    <tr>
+     <td>
+
+
+
+<div align = " CENTER">
+<IMG SRC="./matrix-vector-matrix-comp-images/sparse-matrix.gif" HEIGHT=300 WIDTH=400>&nbsp; <BR>
+  <B> Figure 22. The data needed by each processes - to compute the sparse matrix-vector 
+   product
+ </B></div>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE>
+
+<P align="justify">
+
+  In particular, the indices of the elements that are<I> received</I>
+  from the <I>i<SUP>th</SUP></I> neighboring are stored in <I>recvind</I>
+  starting at location <I>recvptr</I> [<I>I </I>] and ending at location
+  <I>recvptr</I>[<I> I+</I>1]-1.The array <I>recvptr</I> is of size <I>(nrnbrs + </I>1<I>)</I>,
+  and the size of the array <I>recvind</I> is equal to the sum of the number
+  of elements that are <I>received</I> from all the neighboring processors.
+  Finally, the array <I>sendbuf</I> and <I>recvbuf</I> are used as buffer
+  to store the element of the <I>b</I> vector that are <I>sent </I>and <I>received</I>.
+  These arrays are of the same size as the corresponding <I>sendid</I> and
+  <I>recvind </I>arrays, respectively. The following Figure 23 shows the values
+  of the <I>CommInfoType</I> data structure for the sparse matrix as shown
+  in the above Figure 22 for each one of the three processors.&nbsp;
+
+</BLOCKQUOTE>
+</td></tr></tbody></table>
+
+<div align = "center">
+<P><IMG SRC="./matrix-vector-matrix-comp-images/sparse-comminfo.gif" HEIGHT=300 WIDTH=400>&nbsp; </p>
+
+<B>
+   Figure 23. The values of the CommInfoType data structure for the sparse matrix
+ </B></div>
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE>
+<LI><B>Details of implementation </B> </lI>
+
+<P align="justify">
+  In the new program, we replace <B>MPI_ALLGATHER </B>communication operation
+  by efficient point-point and global communication functions to perform
+  <I>minimum </I>amount of communication that is needed. It <I>receives</I>
+  from each processor the required elements of vector <I>b</I>, and sends
+  to other processors the locally stored <I>b </I>elements that is needed.
+  If <I>d</I> is the average number of non-zeros on each row, then in the
+  worst case <I>CommInterfaceValues </I>will <I>receive</I> and <I>send</I>
+  max{<I>nd/p,n</I>} elements. However, if the sparse matrix is distributed
+  among the processor so that only a small number of remotely stored entries
+  of <I>b</I> are needed, then <I>CommInterfaceVertices</I> will communicate
+  only this small number of entries. In particular, for sparse matrices arising
+  in numerical simulations on two-dimensional domains, the matrix can be
+  distributed among the processor such that only &nbsp; 
+
+ <IMG SRC="./matrix-vector-matrix-comp-images/sparse-ddelt.gif" HEIGHT=15 WIDTH=20> &nbsp;
+ (<IMG SRC="./matrix-vector-matrix-comp-images/sparse-root05.gif" HEIGHT=25 WIDTH=50>)
+
+  remote entries of <I>b</I> are needed. In this case, each processor will
+  send and receive only&nbsp;
+
+   <IMG SRC="./matrix-vector-matrix-comp-images/sparse-ddelt.gif" HEIGHT=15WIDTH=20>
+    (<IMG SRC="./matrix-vector-matrix-comp-images/sparse-root05.gif" HEIGHT=25 WIDTH=50>)
+
+  elements. The overall amount of time required by the Co<I>mmInterfaceVertices
+  </I>depends not only on how many elements every processor needs to <I>send
+  </I>and <I>receive</I> but also on which processsors and in which order
+  these elements are <I>sent</I>. In particular, if every processor needs
+   to <I>send</I> and <I>receive</I> data from all the processors, then the
+  <I>send</I> and <I>receive </I>operations may lead to contention. This
+  contention can be eliminated if we use a more elaborate communication protocol
+  as discussed. In general, if every processor needs to <I>send</I> and <I>receive</I>
+  from only a small number of processors, contention problems are avoided.
+  The important steps in the algorithm is explained as below. 
+
+</p>
+
+</BLOCKQUOTE>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE>
+
+<P align="justify">
+
+  <I>Step 1 : </I>Determine the entries of the vector <I>b </I>that need
+  to be <I>received</I> from remote processors (This is done by scanning
+  the column indices of the local rows of the matrix. Every time we first
+  encounter column index <I>k </I>outside the range of the local stored entries
+  of <I>b </I>, we insert <I>k </I>into the array <I>rentires </I>entries. The array
+  rentries contains the <I>nrecv </I>entries of vector <I>b </I>that need
+  to be received).
+  The array <I>rentries</I> is dynamically allocated
+  and its purpose is to temporarily store the required remote entries of
+  vector <I>b</I>. 
+</p>
+
+<P align="justify">
+
+  <I> Step 2 : </I> The vector <I>gvec</I> is used to determine whether or not a 
+  given column-index that corresponds to a remotely stored entry has been encoutered before.
+  This is done as follows. We initially set all the entries of vector <I>gvec</I>
+  to zero and then set the entries that correspond to the locally stored
+  entries of <I>b</I> to one. Now as we scan the rows of the local matrix,
+  for each column-index <I>k</I> we check the value of <I>gvec</I> [<I>k</I>].
+  If it is zero, then we set it to one and put <I>k</I> into the <I>rentries</I>
+  array, otherwise we do nothing. This scheme ensures that we place <I>k</I>
+  into <I>rentries</I> only if it is a remotely stored entry and this is
+  the first time we encountered.
+
+</p>
+
+<P align="justify"> 
+ <I> Step 3 : </I> At this point the array <I>rentries</I> contains the <I>nrecv</I> entries
+  of vector <I>b</I> that need to be <I>received</I>. Determine  from which processors these 
+  entries are <I>received</I> and set-up the corresponding data structure in <I>cinfo</I>. 
+  This is done
+  by first sorting in increasing order the remote entries.
+  Next we <I>scan</I> this sorted list and determine the processors that
+  store these elements.In doing so, we use the fact that processor <I>P<SUB>i
+  </SUB></I>stores the entries of the <I>b</I> vector starting at location
+  (<I>i</I>+1)*nlocal - 1, and the fact that the array <I>rentries</I> is
+  now sorted. The computed information is stored temporarily in the arrays
+  <I>pes </I>and <I>ptr</I>, whose function is identical to that of the arrays
+  <I>rpes</I> and <I>recvptr </I>of <I>cinfo</I>, respectively. Finally,
+  appropriate storage is allocated in the <I>cinfo</I> for the relevant fields,
+  and the information is copied there. </p>
+
+<P align="justify">
+  <I> Step 4 : </I> The next step in the <I>SetUpCommInfo</I> function each processor notifies
+  the processor from which it needs to receive <I>b</I>-vecor entries. Since
+  the matrix <B>A</B> can be non-symmetric, the only way for these processors
+  to know that they need to <I>send</I> information is by performing this
+  request. This is done as follows. First, the processors performs an <I>ALLTOALL</I>
+  communication operation in which every processor <I>sends</I> to every
+  to every other processor the number of entries it needs to <I>receive</I>
+  from it. This is done in the following code fragment. Two dynamically allocated
+  arrays <I>receives</I> and <I>sends </I>are used, each of size <I>npes</I>.
+  Each processor puts in <I>receives</I>[<I>i</I>] the amount of entries
+  it needs to <I>receive</I> from processor <I>P<SUB>i</SUB></I>. At the
+  end of the <I>ALLTOALL </I>operation, each processor stores in the array
+  <I>sends </I>the number of elements it needs to <I>send</I>. In particular,
+  <I>sends</I> [<I>i</I>] stores the number of entries that need to be <I>send</I>
+  to processor <I>P<SUB>i</SUB></I>. 
+</p>
+
+<P align="justify">
+
+  <I> Step 5. : </I> Now, each processor <I>scans</I> the array <I>sends</I> and determines
+   how many elements it needs to <I>send </I>and to which processors. This
+   information is initially stored in <I>pes</I> and <I>ptr</I>, but are eventually
+   copied into the <I>spes</I> and <I>sendptr</I> fields of <I>cinfo</I>.
+   Also, every processor allocates space for the <I>sendind</I> and <I>sendbuf
+  </I>fields of <I>cinfo</I>.
+ </p>
+
+<P align="justify">
+  <I> Step 6. :</I> So far, each processor knows how many entries it needs to <I>send</I>,
+  but it does not know exactly which entries to <I>send</I>. This is accomplished
+  by having each processor send the list of entries it needs to <I>receive</I>
+  from the corresponding processors. This list of entries is sent from the
+  array <I>recvind </I>and it is stored in the array <I>sendind </I>of the
+  <I>cinfo</I> data structure. Since each processor knows how many and where
+  it needs to <I>send</I>, it also knows where to place the <I>received</I>
+  indices. This communication is done by using non-blocking <I>SEND</I> and
+  <I>RECEIVE</I> operations as follows. 
+</p>
+
+<P align="justify">
+  <I> Step 7. : </I> The following <I>CommInterfaceValues</I> performs the required communication,
+  so that each processor has the entries of the <I>b</I> vector that are
+  required to perform the matrix-vector multiplication of its local rows.
+  This communication is performed by using point-to-point <I>SEND</I> and
+  <I>RECEIVE </I>operations.
+</p>
+
+<P align="justify">
+  <I> Step 8. : </I> By using the information stored in the <I>cinfo</I> data structure,
+  each processor knows what it needs to <I>receive</I> and from which processors.
+  Thus, it proceeds to issue <I>nrnbrs</I> non-blocking <I>RECEIVE</I> operations.
+  The received elements are stored in the corresponding position of the <I>recvbuf
+  </I>array.
+</p>
+
+<P align="justify">
+
+  Now its processor <I>sends</I> the appropriate local entries of the
+  <I>b</I> vector to processors that need them. This is done in two steps.
+  In the first step, processor gathers all these indices (for all the processors)
+  into the array <I>sendbuf</I>. This is done by simply scanning the entire
+    <I>sendind</I> and storing the entries of the <I>b </I>vector in the corresponding
+  locations of <I>sendbuf</I>. In the second step, each processor issues
+  <I>nsnbrs</I> <I>SEND</I> operations to <I>send</I> these elements of vector
+  <I>b</I>.
+</p>
+
+ <P align="justify">
+
+   <I>Step 9 </I>: Compute serial sparse matrix vector multiplication on
+   every processor. Collect the result on master processor.&nbsp; 
+ </p>
+
+
+
+<LI>  <B>Remarks</B> </LI>
+
+
+<P align="justify">
+
+   Despite the fact that our new program can potentially perform significantly
+   less communication, there may be cases in which our earlier sparse matrix-vector
+   program runs faster. This is because the new program has to <I>spend</I>
+   some time in function <I>SetUPCommInfo</I> determining the communication
+   pattern. If we want to perform a single matrix-vector multiplication involving
+   matrix <B>A</B>, then the time required by <I>SetUpCommInfo</I> may outweigh
+   the time saved in communication. <BR> <BR>
+
+   Fortunately, in most applications we need to multiply <B>A</B> multiple
+   times (each time with a different vector). In such cases, we need to determine
+   the communication pattern only once and then use it for matrix-vector product.
+   Furthermore, we can use the same communication pattern even when the values
+   of <B>A</B> change (but not the position of the non-zeros). Thus, the time
+   required by <I>SetUpCommInfo </I>becomes insignificant compared to the
+   overall savings in communication. Also note that the communication performed
+   in the <I>SetUpCommInfo</I> function can be eliminated when matrix <B>A</B>
+   has a symmetric structure. <BR> <BR>
+
+  Even though our new program scales with an increasing number of processors,
+  its memory requirements does not. This is because , every processor allocates
+   a vector <I>global_b </I>of size <I>n</I> which is used to both determine
+   which remote stored entries of <I>b</I> are needed and also is used to
+   store these received entries. Program can be modified so that it does not
+  need to allocate the vector thereby saving memory of the vector <I>global_b </I>.
+</p>
+
+</BLOCKQUOTE></td></tr></tbody></table>
+
+<table border="0"><tbody>
+    <tr>
+     <td >
+<BLOCKQUOTE>
+
+<LI> <B>Input </B></LI>
+
+
+<P align="justify">Assume that the input is given  in the following format. <BR> <BR>
+
+  Assume that the sparse matrix is square of size <I>n</I> and the vector
+   of size <I>n and 'n'</I> is divided by the number of processors <I>p </I>.
+  All the entries in the sparse matrix are floating point numbers. Process
+  0 should read all the data. You have to adhere strictly the following format
+  for the input file.
+</p>
+
+<P align="justify">
+#Line 1 : <I>(Size of the sparse matrix)&nbsp;</I>&nbsp; <BR>
+
+#Line 2 : <I>(data) </I>(in <I>row-major </I>order. This means that
+    the data of second row follows that of the first and so on.) <BR>
+
+#Line 3 : <I>(Size of the vector)&nbsp;</I>&nbsp;  <BR>
+
+#Line 4 : <I>(data)&nbsp;</I>&nbsp; <BR>
+
+<P align="justify">
+ A sample input file for the sparse matrix (16 x 16) and vector size (16) will look as follows 
+<BR>
+
+
+16&nbsp; <BR>
+
+5.2&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.8&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.3&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.9&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.2&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+9.5&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 7.1&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 2.6&nbsp;&nbsp;&nbsp; 7.9&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.3&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+6.8&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+7.2&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.6&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.7&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+1.8&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.4&nbsp;&nbsp;&nbsp; 1.5&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.9&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.3&nbsp;&nbsp;&nbsp; 1.6&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.6&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;  <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+9.2&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 2.7&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.9&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.4&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.5&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.1&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 8.6&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 9.1&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 7.6&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.7&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.5&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.5&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.6&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 7.2&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+4.8&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.8&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 6.6&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.3&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 6.2&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 1.9&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+4.5&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.3&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 8.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.4&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 9.2&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.2&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.3&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 5.6&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 7.3&nbsp;&nbsp;&nbsp; 0.0&nbsp; <BR>
+
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 3.4&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.2&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 4.6&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.4&nbsp; <BR>
+
+<P align="justify">16&nbsp;<BR>
+
+3.8&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.5&nbsp;&nbsp;&nbsp; 8.2&nbsp;&nbsp;&nbsp;
+1.6&nbsp;&nbsp;&nbsp; 4.3&nbsp;&nbsp;&nbsp; 6.3&nbsp;&nbsp;&nbsp; 9.2&nbsp;&nbsp;&nbsp;
+7.1&nbsp;&nbsp;&nbsp; 1.6&nbsp;&nbsp;&nbsp; 4.2&nbsp;&nbsp;&nbsp; 6.5&nbsp;&nbsp;&nbsp;
+5.0&nbsp;&nbsp;&nbsp; 2.2&nbsp;&nbsp;&nbsp; 2.5&nbsp;&nbsp;&nbsp; 7.0&nbsp;
+
+</p>
+
+<LI> <B>Output</B></LI>
+
+
+<P align="justify"> <B> Process 0</B>should print the final sparse matrix vector product  </p>
+
+</font>
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+
+</DIV>
+
+</BLOCKQUOTE>
+</td></tr>
+</tbody>
+</table>
+
+<!-- ******** Example 5.13 : Efficient Parallel implemenation of  Sparse Matrix and Vector Multiplication Algorithm  Ends ****** -->
+
+
+
+
+</TD></TR>
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

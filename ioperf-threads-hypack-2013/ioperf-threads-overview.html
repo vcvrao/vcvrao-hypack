@@ -1,0 +1,2570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                             
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   	
+	    <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+    
+                 <!-- ** -->
+                 <A class=menulslct 
+	          href="./../hypack13-mode01-multicore-threads-io-perf.html">
+                  &#149; Threads-I/O Perf. </A>
+                 <!-- ** -->
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+
+<a name= "#io-threads-prog">   </a>
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013 Mode 1 : Software Threading :  I/O Perf. Issues </H1> <BR> <BR>
+
+  
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD> 
+ <DIV align=left><font size="2"  Color="black" face= "Arial">
+<p align ="justify"> <span class="content">
+       The I/O on multi-core processors or cluster of Multi Processors 
+  play an important role to understand and enhance the performance of your application. 
+  Large-scale scientific or engineering computations often require larger memory space.
+   In fact, many applications of parallel computes are memory-bound rather than CPU-bound 
+  or I/O bound.  This is especially true in multi computer system using distributed 
+  memory. The local memory attached to each node is relatively small. Therefore, each
+  node can handle only a small problem. In typical large-scale parallel and Cluster 
+ platforms, a system bus provides slots to connect I/O devices, such as disk, drives, 
+ tape drives, and network interfaces cards. Efforts were made in both software 
+ development and hardware design to improve the I/O bandwidth between computational 
+ units and storage systems.  Although most of these works only consider exclusive 
+ file access 
+ among the concurrent I/O requests, more scientific applications require data 
+ partitioning with overlap among the requesting processes. </span>
+ </p> </DIV> 
+
+</TD> </TR> 
+</TBODY> 
+
+</TABLE>
+
+
+
+
+<!-- **************  Sub-title Starts topics here ************************ -->
+
+
+
+<table  width =100% border="0"  height="28">
+  <tr>
+    <td height="24" align="left" >
+   <p align = "left" >
+   
+    <a href="#thread-io-intro">
+   <font size="2" face="Arial" color="blue"> <B> I/O :  Introduction </b>  </font> </a> 
+   &nbsp; &nbsp;  &nbsp;  
+
+
+  <a href="#thread-io-posixthreads">
+  <font size="2" face="Arial" color="blue"> <B> Concurrent I/O : POSIX  Threads</b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp;
+
+
+ <BR> <BR>
+
+
+  <font size="2" face="Arial " color="red"> <B>   MPI 1.X/2.X : </b>  </font> 
+  &nbsp; &nbsp; 
+
+  <a href="#thread-io-non-parallel">
+  <font size="2" face="Arial " color="blue"> <B>   Non Parallel I/O  </b>  </font> </a> 
+  &nbsp; &nbsp;  
+
+
+  <a href="#thread-io-nonmpi-parallel">
+  <font size="2" face="Arial" color="blue"> <B>  Non-MPI  Parallel I/O   </b>   
+  </font> </a> 
+   &nbsp; &nbsp; 
+
+   <a href="#thread-io-mpi-seperate-files">
+ <font size="2" face="Arial" color="blue"> <B> MPI I/O to Seperate files </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; 
+
+ <a href="#thread-io-mpi-single-file">
+ <font size="2" face="Arial" color="blue"> <B> MPI I/O to Single file </ b>  
+ </font> </a> 
+<BR> <BR>
+ 
+<a href="#multi-core-hpc-web-sites"> 
+ <font size="2" face="Arial" color="blue"><B>  Related Links on HPC /Multi Core  </b>  </font> </a> 
+  <BR> <BR>
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+<font size="2" face="Arial" color="red"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp;  
+<!-- ************* Reference Ends Here ************************ -->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *************** Sub-title topics Ends here ***************** -->
+
+
+<BR><BR>
+ <font size="2" face="Arial" color="black"> <b> List of MPI IO & IO Threaded Programs </b> </font> 
+
+
+
+
+<!-------------------Table for Listing of Programs Starts  ------------------>
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+
+
+   <!-- ****************** Example 1.1 ************************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./ioperf-threads-html/iothreads-pthread-mpi-programs.html#io-mpi-pthread-par-prog-id11">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+          <p align = "justify"> <span class = "content">
+          Write  a simple MPI  I/O program performing sequential I/O  to multiple files  
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ******************* Example 1.2 ************************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+      <a href="./ioperf-threads-html/iothreads-pthread-mpi-programs.html#io-mpi-pthread-par-prog-id12">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+           <p align = "justify"> <span class = "content">
+        Write  a Pthread I/O program performing each thread writing  to seperate file
+      ( <B> Assignment </b> )
+        </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ***************** Example 1.3 *********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+    <a href="./ioperf-threads-html/iothreads-pthread-mpi-programs.html#io-mpi-pthread-par-prog-id13">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3  </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Write an MPI program performing MPI I/O to separate files (Using MPI 2.0) 
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ******************** Example 1.4 ************************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+     <a href="./ioperf-threads-html/iothreads-pthread-mpi-programs.html#io-mpi-pthread-par-prog-id14">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4  </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+           <p align = "justify"> <span class = "content">
+       Write an MPI program performing MPI I/O to single file (Using MPI 2.0) 
+    </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ******************** Example 1.5 *********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+    <a href="./ioperf-threads-html/iothreads-pthread-mpi-programs.html#io-mpi-pthread-par-prog-id15">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5  </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+           <p align = "justify"> <span class = "content">
+          Write an Pthread I/O program reading the file with different number of threads. 
+   ( <B> Assignment </b> )
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ****************** Example 1.6 ********************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+   <a href="./ioperf-threads-html/iothreads-pthread-mpi-programs.html#io-mpi-pthread-par-prog-id16">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6  </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+          Write a MPI I/O program to read the file with different number of processes. (Using MPI 2.0) 
+       </span> </p>
+     </td>
+
+   </tr>
+
+</TBODY> 
+</TABLE> 
+
+
+
+
+<!-- ***************** Table for Listing of Programs Ends *************** -->
+
+
+
+
+<TABLE width  ="100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></TR>
+</tbody>
+</table>
+
+<!-- ***************** Introduction to thread starts ************************* -->
+
+<a name="thread-io-intro"> </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+    <B>  Introduction to I/O : Threads </b>   </font> </font></DIV> 
+
+</TD> 
+</TR> 
+
+<BR>
+
+<TR>
+<TD>
+
+  <P align=justify> <span class="content" >
+
+
+
+In Multi Core programming environment, within the same time interval, there may be 
+multiple processes active competing for memory, I/O and CPU resources. Several
+ applications are CPU-bound (computation intensive) and some of I/O bound 
+(input-output intensive).  The execution of various types of programs in 
+the Multi-Core System to balance bandwidth among various function units i
+s a challenging task.  The program interleaving is intended to promote better
+ resource utilization through overlapping I/O and CPU operations on multiple 
+cores. For example, whenever a thread P<sub>1</sub> is tied up with I/O operations, 
+the OS scheduler can switch the CPU to thread P<sub>2</sub>. This allows simultaneous
+ the simultaneous execution of several programs in the system. When P<sub>2</sub> is 
+done, the CPU can be switched to P<sub>3</sub>. Note the Overlapped I/O and CPU 
+operations and the CPU wait time are greatly reduced.  The performance of system
+ can be limited by computer-bound jobs or input-output  (I/O) bound jobs. Various 
+techniques are used to manage I/O data transfer. Techniques used to achieve maximum 
+concurrency of I/O and CPU processing is an important in the Multi-core programming
+environment. <BR> <BR>
+
+In Multi-core environment, too many threads can seriously degrade program performance 
+and the issues of cache, virtual memory, thread locks, and time slicing play a key role 
+for performance degradation. In some situations, all the threads waiting for the lock
+ mus know wait for the holding thread to wake up and release the lock. These problems 
+are addressed and the best approach is to limit the the number of <I> runnable </I> 
+threads to the hardware threads, and possibly limit the number of outer level cached 
+in typical multi-socket multi-core systems. <BR> <BR>
+
+  
+When a thread is blocked waiting for an external event, such as disk I/O request, 
+the  OS takes it off the round-robin schedule. Here, a blocked thread does not cause 
+time-slicing overhead and a program may have more software threads than hardware threads,
+ and still run efficiently if most of the OS threads are blocked.  The concept of 
+compute threads & I/O threads may help to reduce the overheads. Special care is
+ needed to ensure that the compute threads should match the processor resources. 
+Compute threads should be the threads that are runnable most of the time. Ideally, 
+the compute threads should be the threads never block an external events, instead 
+feed from task queues that provide work. The I/O threads are threads that wait on 
+external events most of the time, and thus do not contribute to having too many 
+threads. Too many threads can degrade program performance and the impact comes in 
+two ways. First partitioning a fixed amount of work among  too many threads and this 
+may give too little work for each thread. This leads to overhead of starting and 
+terminating threads swamps the useful work. Second, having too many concurrent 
+software threads incurs overheads from having to share fixed hardware resources.
+<BR> <BR>
+
+
+Much attention has been paid on the implementation issues for concurrent overlapping 
+I/O operations that abide by the atomicity semantics of the Message Passing Interface
+ (MPI) standard. The <I> atomicity  </I> refers as a synchronization operation and
+ it is a process often needs to perform a sequence of operations as a single atomic 
+operation.  An atomic operation is one that is indivisible (Once it starts, 
+it cannot be interrupted in the middle, meaning other processes cannot see an 
+intermediate state.) and finite (once it starts, it will finish in a finite
+ amount of time).  A synchronization operation causes processes to wait for 
+one another, or allows processes that are waiting to resume execution.
+  On Multi-Cores, use of Portable Operating System Interface (POSIX) at
+ granularity level address the concurrent overlapping I/O. The POSIX 
+definition considers atomicity at the granularity of  <I> read () /write ()  </I> 
+
+calls in which only a contiguous file space can be specified in a single I/O request 
+ 
+file regions. 
+</span. ></p>
+
+</td>
+</tr>
+
+</TBODY>
+</TABLE> 
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></TR>
+</tbody>
+</table>
+
+
+<!-- ****************** Introduction to thread ends here ********************** -->
+
+
+
+<!-- ****************** Concurrent Overlapping - POSIX  Threads start here ******************* -->
+
+<a name="thread-io-posixthreads">  </a>
+
+<TABLE width ="100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B> Multi-Cores : Concurrent Overlapping - POSIX  Threads </b>   </font> </font></DIV>
+ </TD> </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+ <P align=justify> <span class="content" >
+
+
+ The concurrent overlapping I/O occurs when I/O requests from multiple processes 
+are issued simultaneously to the file system and overlaps exist among the file regions
+ accessed by these requests. If all requests are read requests, the file system can 
+use the disk cache to duplicate the overlapped data for the requesting processes and
+no conflict will exist when obtaining file data among the processes. However, 
+when one or more I/O requests are write requests, the outcome of the overlapped 
+regions, either in the file or process's memory, can vary depending on the 
+implementation of the file system.  This problem is commonly referred to as
+ I/O atomicity. The POSIX defines atomicity such that all the byte from a 
+single file I/O request that start out together end-up together, without 
+interleaving from other I/O requests. <BR> <BR>
+
+The POSIX definition can be simply interpreted as that either all or none of the data 
+written by a process is visible to other processes. The on-visibility of data to other
+ processes can occur when the write data is cached in a system buffer and has not been 
+flushed to the disk or the data is flushed but overwritten by other processes. Hence, 
+when POSIX semantics are applied to the concurrent I/O operations, resulting data 
+in the overlapped regions in the disk shall consist of data from only one of the 
+write requests. The POSIX read and write calls share a common characteristics such 
+as one I/O request can only access a contiguous file region specified by a file 
+pointer and the amount of data starting from the pointer.  Therefore, the overlapped
+ data written by two or more POSIX I/O calls can only be a contiguous region in the 
+file. Many POSIX file systems implement the atomic I/O by serializing the process of
+requests such that the overlapped regions can only be accessed by one process at any
+ moment. 
+ <br><br>
+
+Programs having the following characteristics may be well suited for pthreads:<br><br>
+</span> </p>
+
+<blockquote>
+<li>  Work that can be executed, or data that can be operated on, by multiple tasks simultaneously </li>
+  <li>   Block for potentially long I/O waits </li>
+  <li> Use many CPU cycles in some places but not others </li>
+   <li> Must respond to asynchronous events </li>
+  <li>  Some work is more important than other work (priority interrupts) </li> 
+</blockquote>
+
+ <P align=justify> <span class="content" >
+Pthreads can also be used for serial applications, to emulate parallel execution. A perfect example is the typical web browser, 
+which for most people, runs on a single cpu desktop/laptop machine. <BR> <BR>
+
+In many applications, 
+a data structure is read frequently but written infrequently. For such scenarios, it is useful 
+to note that multiple reads can proceed without any coherence problems. However, writes
+must be serialized. This points to an alternate structure called a read-write lock.
+
+A thread reading a shared data item acquires a read lock on the variable.  A read lock is 
+granted  when there are other threads that may already have read locks. 
+
+If there is a write lock on the data (or if there are queued write write locks), the 
+thread performs a condition wait.  Using this principle, the authors designed function
+read locks <i> mylib_rwlock_unlock </i>, write locks <I> mylib_rwlock_wlock </I>
+and  unlocking <I> mylib_rwlock_unlock </i>. </span> </p>
+
+</td>
+</tr>
+
+</TBODY> 
+</TABLE> 
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></TR>
+</tbody>
+</table>
+
+<BR>
+
+<!-- *************** An Overview Concurrent Overlapping - POSIX  Threads ends **************** -->
+
+
+
+
+
+<!-- ************* An Overview Concurrent Overlapping - MPI I/O starts ********* -->
+
+<a name="thread-io-non-parallel"> </a>
+
+<TABLE width = "100%" cellPadding = 3  border = 0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size = "2"  Color ="black" face = "verdana">
+     <B> Multi Cores - MPI 1.X : Non Parallel I/O   </b>  </font> 
+  </DIV> 
+  </TD> 
+  </TR> 
+</tbody>
+</table>
+
+
+<BR>
+
+<table width = "100%" border="0"  height="6">
+<tbody>
+<tr>
+<td>
+<BR>
+
+
+<P align=justify> <FONT face="verdana" size=2, class="content" >
+In the past, MPI applications 
+developed using I/O rely   on the features 
+provided by the underlying operating system, typically Unix. 
+MPI-l does not have any explicit support for parallel I/O.
+
+A simple way of doing parallel I/O in MPI is let one process do all I/O. Figure 1.1
+describes typical situation where sequential I/O from a parallel program is 
+discussed. </font> </p>
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************** Non Parallel I/O from an MPI Prog starts ************* -->
+
+<table width = "100%" border="0"  height="6">
+<tbody>
+<tr>
+<td>
+   
+<BR> 
+
+<font face="Arial" color="red" size="3"> 
+   <B>  MPI 1.X : Non Parallel I/O from an MPI Program </b>
+ </font>
+ </td>
+ </tr>
+
+
+</tbody>
+</table> 
+
+ <BR> 
+<TABLE cellPadding = 3  border = 0> 
+<TBODY>
+<TR> 
+<TD>
+
+
+<P align=justify> <FONT face="verdana" size=2, class="content">
+
+
+In the past, MPI applications 
+developed using I/O rely   on the features 
+provided by the underlying operating system, typically Unix. 
+MPI-l does not have any explicit support for parallel I/O.
+
+A simple way of doing parallel I/O in MPI is let one process do all I/O. Figure 1.1
+describes typical situation where sequential I/O from a parallel program is 
+discussed.
+
+
+A simple example code 1.1 is written below in which  the set of processes have a distributed array of
+ integers to be written to a file. <BR> <BR>
+
+<div align="Center"> <font size="2" face = "Verdana"> 
+
+<img src="./ioperf-threads-images/parallel-io-multiple-files.jpg" alt="Unix Process" 
+  border="0" height="200" width="400" ><br><br>
+  Figure 1.1 Sequential I/O from a parallel program </font> </div> 
+
+</diV>
+
+<BR>
+<p align = "left">  <font size="2" face = "Verdana"> 
+ For simplicity, we assume that each process has 100 
+integers of the array, whose total length thus depends on how many processes there are. 
+In the figure, the circles represent processes; the upper rectangles represent the block
+ of 100 integers in each process's memory; and the lower rectangle represents the file 
+to be written. The program begins with each process initializing its portion of the array.
+ All processes but process a send their section to process 0.  Process a first writes its 
+own section and then receives the contributions from the other processes in turn (the rank
+ is specified in MPI_Recv) and writes them to the file. This is often the first way I/O 
+is done in a parallel program that has been converted from a sequential
+ program, since no changes are made to the I/O part of the program. There are a number
+ of other reasons why I/O in a parallel program may be done this way. </font> </p>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+ <TABLE cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td>
+</tr>
+</tbody>
+</table>
+
+<!--- ******************* table start here ************** -->
+
+ <p align = "left" >
+  <table width = "100%" border="0" height="6">
+   <tbody>
+<tr><td>
+      <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet1.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="90%" height="2" align="left">
+       <font face="Verdana" size="2">
+       The parallel machine on which the program is running may support I/O <br>only 
+        from one process.</i>
+        </font>  
+     </td>sk queues that provide work. The I/O threads are threads that wait on 
+external eve
+    </tr> 
+
+    <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet2.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="90%" height="2" align="left">
+       <font face="Verdana" size="2">
+      One can use sophisticated I/O libraries, perhaps written as part of <br>   a high-level data-management layer, that do not have parallel I/O capability.</i>
+        </font>  
+     </td>
+    </tr> 
+
+<tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet3.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="90%" height="2" align="left">
+       <font face="Verdana" size="2">
+       The resulting single file is convenient for handling outside<br> the program 
+      (by mv, cp, or ftp, for example). </i>
+        </font>  
+     </td>
+    </tr> 
+
+   <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet4.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="90%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Performance may be enhanced because the process doing the I/O may be<BR> able
+    to assemble large blocks of data </i>
+        </font>  
+     </td>
+    </tr> 
+
+      <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet5.gif" HEIGHT="15" WIDTH="15">
+        <BR> <BR> </font> 
+      </td>
+
+     <td width="90%" height="2" align="left">
+       <font face="Verdana" size="2">
+      The lack of parallelism limits performance and scalability, particularly if the<BR> 
+underlying file system permits parallel physical I/O. </i>
+        </font>  
+     </td>
+    </tr>     
+
+
+</td></tr>
+</tbody>
+</table>
+
+<!--- ******************* table start here ************** -->
+
+
+
+ <TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></TR>
+</tbody>
+</table>
+
+<!-- **************  PROGRAM START HERE **************** -->
+
+<p align = "left" >
+ <table border="0"  height="6">
+ <tbody>
+
+ <tr>
+ <td>
+
+ <P align ="left"> <font size="2" face = "Courier New" color="#990033">
+
+	
+/* Example of sequential Unix write into a common file */ <BR>
+#include "mpi.h" <BR>
+#include <stdio.h> <BR>
+#define BUFSIZE 100 <BR>
+
+int main (int argc, char *argv []) <BR>
+{ <BR>
+
+
+	int i, myrank, numprocs, buf [BUFSIZE]; <BR>
+	MPI_Status status; <BR>
+	FILE *myfile; <BR> <BR>
+
+	MPI_Init (&argc, &argv); <BR>
+	MPI_Comm_rank(MPI_COMM_WORLD, &myrank); <BR>
+	MPI_Comm_size (MPI_COMM_WORLD, &numprocs); <BR> <BR>
+      
+
+	for (i=0; i < BUFSIZE; i++) <BR>
+	  &nbsp; &nbsp; &nbsp;    buf [i] = myrank * BUFSIZE + i; 
+        <blockquote>
+
+	if (myrank != 0) <BR>
+	   &nbsp; &nbsp;  MPI_Send(buf, BUFSIZE, MPI_INT, 0, 99, MPI_COMM_WORLD); <BR>
+	else <BR>
+   
+        { <BR>
+	    &nbsp; &nbsp;  myfile = fopen ("testfile", "w"); <BR>
+	     &nbsp; &nbsp;   fwrite(buf, sizeof(int), BUFSIZE, myfile); <BR>
+	    &nbsp; &nbsp;    for (i=; i < numprocs; i++) <BR> &nbsp; &nbsp; { <BR>
+		 &nbsp; &nbsp; &nbsp;   MPI_Recv(buf,BUFSIZE,MPI_INT,i,99,MPI_COMM_WORLD,&status); <BR>
+		 &nbsp; &nbsp;  &nbsp;  fwrite(buf, sizeof(int), BUFSIZE, myfile); <BR>
+	  &nbsp; &nbsp; } <BR> 
+          fclose(myfile); <BR>
+	}  <BR>
+ 
+	MPI_Finalize(); <BR> 
+	return 0; <BR>
+</blockquote>
+} 
+
+	
+</font> 
+</p>
+
+
+
+
+<p align = "center">  <font size="2" face = "Verdana"> 
+    Example 1.1 Code for Sequential I/O from a parallel program  <BR>
+
+  <!--  <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">  -->
+ <BR> <BR>
+ </font>
+</p>
+</font> </p>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- **************** Non Parallel I/O from an MPI Prog ** ENDS ** ******************-->
+<BR> 
+
+
+
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></tr>
+</tbody>
+</table>
+
+
+<!-- ***************** Non-MPI Parallel I/O from an MPI Prog ** STARTS ** ******************* -->
+
+
+<a name="thread-io-nonmpi-parallel"> </a>
+<table width = "100%" border="0" height="6">
+<tbody>
+<tr>
+<td>
+   
+<font face="Arial" color="red" size="2"> 
+   <B>  MPI 1.x :  Non-MPI  Parallel I/O  </b>
+ </font>
+ </td>
+ </tr>
+
+</tbody>
+</table>
+
+
+<table border="0"  height="6">
+<tbody>
+<tr>
+<td>
+   
+<p align = "left">  <font size="2" face = "Verdana">
+ The  example 1.1 does not address the parallelism, the next step in the migration of a sequential program to a parallel one is to have each process 
+ write to a separate file, thus enabling parallel data transfer, as shown in Figure 1.2. Here each process functions completely independently of the others with respect 
+ to I/O. Thus, each program is sequential with respect to I/O and can use language
+ I/O. Each process opens its own file, writes to it, and closes it. We have ensured 
+ that the files are separate by appending each process's rank to the name of 
+ its output file. </font> <BR> <BR>
+
+<div align="center">
+<img src="./ioperf-threads-images/parallel-io-single-file.jpg" alt="Unix Process" border="0" height="200" width="400" ><br><br>
+
+<p align = "center">  
+ Figure 1.2 Non-MPI  I/O to multiple files  in a parallel program <BR> <BR>
+ </p>
+</diV>
+
+<p align = "left">  <font size="2" face = "Verdana">
+The advantage of this approach is that the I/O operations can now take place 
+in parallel and can still use sequential I/O  libraries if that is desirable. 
+The program is explained in Example 1.2.
+The primary disadvantage is that the result of running the program is a set of
+ files instead of a single file. This has multiple disadvantages: </font> <BR> <BR>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+ <DIV ALIGN=right>
+         <A HREF="ioperf-threads-peep-2008-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        </DIV><br>
+</tbody>
+</table>
+
+<table width = "100%" border="0"  height="6">
+<tbody>
+<tr>
+<td>
+
+   <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet1.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="97%" height="2" align="left">
+       <font face="Verdana" size="2"> <i>
+       The files may have to be joined together before being used as input to 
+      another application. </i>
+        </font>  
+     </td>
+    </tr> 
+
+  <tr>
+  <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet2.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="97%" height="2" align="left">
+       <font face="Verdana" size="2"> <I>
+      It may be required that the application that reads these files be 
+    a parallel program itself and be started with the exact same 
+   number of processes. </i>
+        </font>  
+     </td>
+    </tr> 
+
+      
+  <tr>
+  <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2">  <i>
+           <IMG SRC="./ioperf-threads-images/bullet3.gif" HEIGHT="15" WIDTH="15">
+        <BR> </font> 
+      </td>
+
+     <td width="97%" height="2" align="left">
+       <font face="Verdana" size="2"> <i>
+      It may be difficult to keep track of this set of files as a group,
+for moving them, copying them, or sending them across a network.
+    </i>
+    </font>  
+     </td>
+    </tr> 
+
+ 
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></tr>
+</tbody>
+</table>
+
+
+ <p align = "left" >
+ <table width = "100%" border="0"  height="6">
+ <tbody>
+
+ <tr>
+ <td>
+
+ <P align ="left"> 
+ <font size="2" face = "Courier New" color="#990033">
+
+
+	
+/* Example of parallel Unix write into a separate files */ <BR>
+#include "mpi.h" <BR>
+#include <stdio.h> <BR>
+#define BUFSIZE 100 <BR>
+
+int main (int argc, char *argv []) <BR>
+{ <BR>
+
+	int i, myrank, numprocs, buf [BUFSIZE]; <BR>
+	char *filename[128]; <BR>
+	FILE *myfile; <BR> <BR>
+
+	MPI_Init (&argc, &argv); <BR>
+	MPI_Comm_rank(MPI_COMM_WORLD, &myrank); <BR>
+	MPI_Comm_size (MPI_COMM_WORLD, &numprocs); <BR> <BR>
+    
+
+	for (i=0; i < BUFSIZE; i++) <BR>
+	  &nbsp; &nbsp; &nbsp;    buf [i] = myrank * BUFSIZE + i; 
+        <blockquote>
+
+	  &nbsp; sprintf(filename, "testfile.%d", myrank); <BR>
+	  &nbsp; myfile = fopen(filename, "w");  <BR>
+	  &nbsp; fwrite(buf, sizeof(int), BUFSIZE, myfile);  <BR> 
+          &nbsp; fclose(myfile); <BR>
+
+	</blockquote>
+	MPI_Finalize(); <BR> 
+	return 0; <BR>
+} 
+
+	
+</font>
+</p>
+
+
+<p align = "center">  <font size="2" face = "Verdana"> 
+    Example 1.2 Code for Non-MPI Parallel  I/O to multiple files  <BR>  
+
+    <font size="2" face = "Arial" color="#990033"> </font>
+    <font size="2" face = "Verdana" color="black">
+  <BR> <BR>
+ </font>
+</p>
+</font> </p>
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+<p align = "left">  <font size="2" face = "Verdana">
+
+The performance may also suffer because individual processes may find their 
+data to be in small contiguous chunks, causing many I/O operations with smaller 
+data items. This may hurt performance more than can be compensated for by the 
+parallelism. </font> </p> 
+
+<BR>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></tr>
+</tbody>
+</table>
+<!-- ************ Parallel IO ends here **************-->
+
+
+
+<!-- ***************  MPI-2.0 MPI I/O to seperate files  *** STARTS *** ***************** -->
+<a name="thread-io-mpi-seperate-files"> </a>
+<table border="0"  height="6">
+<tbody>
+
+<tr>
+<td>
+  <font face="Arial" color="red" size="2"> 
+   <B>  MPI 2.X : MPI I/O to Separate files  </b>
+ </font>
+</td>
+</tr>
+
+
+<tr>
+<td>
+
+<BR>
+<P align = "justify"> <font face ="Verdana" size="2">
+MPI standard 2.0  defines new way of parallel I/O features and the 
+examples 1.1 & 1.2 can be re-written using MPI 2.0 library calls.That is
+all the I/O operations can be done using MPI 2.0 library calls. A detailed
+study is required  to understand the overheads while we use MPI 2.0 library
+calls. The following changes are required from program point of view and it 
+has advantages and disadvantages from performance point of view. 
+</font> </p>
+
+
+</td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+<table width = "100%" border="0"  height="6">
+<tbody>
+<tr>
+<td>
+
+   <!-- **************** first MPI-2.0 lib call ***************** -->
+   <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet1.gif" HEIGHT="15" WIDTH="15">
+        <BR>  </font> 
+      </td>
+
+     <td width="97%" height="2" align="left">
+       <font face="Verdana" size="2"> <i>
+       First, the declaration FILE has been replaced by MPI_File as the 
+       type of myfile.  </i> <BR>
+       </td> 
+       </tr>
+
+   <tr>
+   <td> </td>
+   <td>  
+ <P align = "justify"> <font face ="Veredana" size="2">
+   Note that myfile is now a variable of type MPI_File, 
+   rather than a pointer to an object of type FILE. <BR> <BR>
+
+
+        </font>  </p>
+
+     </td>
+    </tr> 
+
+
+     <!-- ***************  Second  MPI-2.0 lib call ***************** -->
+   <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet3.gif" HEIGHT="15" WIDTH="15">
+        </font> 
+      </td>
+   
+      <td width="97%" height="2" align="left">
+      <font face="Verdana" size="2"> <i>
+       Second, the MPI function corresponding to fopen is called MPI_File_open.
+       </i>  </font>  <BR> 
+      </td> 
+     </tr>
+
+   <tr>
+   <td> </td>
+   <td>  
+    MPI_File_open(MPI_COMM_SELF,filename,MPI_MODE_CREATE | MPI_MODE_WRONGLY,
+ MPI_INFO_NULL, &myfile);
+
+<P align = "justify"> <font face ="Verdana" size="2">
+
+The first argument is a communicator. Files in MPI are opened by a 
+collection of processes identified by an MPI communicator.
+ This ensures that those processes operating on a file together know 
+which other processes are also operating on the file and can communicate 
+with one another. Here, since each process is opening its own file for 
+its own exclusive use, it uses the communicator MPI_COMM_SELF. <BR> 
+
+The second argument is a string representing the name of the file, as in
+ fopen. The third argument is the mode in which the file is opened. Here 
+it is being both created (or overwritten if it exists) and will only be written 
+to by this program. The constants MPI_MODE_CREATE and MP_MODE_WRONLY represent 
+bit flags that are or'd together in C, much as they are in the Unix system call 
+open. The fourth argument, MPI_INFO_NULL here, is a predefined constant 
+representing a dummy value for the info argument to MPI_File_open. As the 
+last argument, we pass the address of the MPI_File variable, which the
+ MPI_File_open will fill in for us. As with all MPI functions in C, 
+MPI_File_open returns as the value of the function a return code, 
+which we hope is MPI_SUCCESS. for simplicity.  </font> </p>
+
+   </i> <BR> 
+      </td> 
+     </tr>
+     
+  <!-- **************** Third  MPI-2.0 lib call ***************** -->
+ <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet4.gif" HEIGHT="15" WIDTH="15">
+        <BR> <BR> </font> 
+      </td>
+
+     <td width="97%" height="2" align="left">
+       <font face="Verdana" size="2"> <i>
+       The  function, 
+ which actually does the I/O in this program, is
+	MPI_File_write(myfile, buf, BUFSIZE, MPI_INT,MPI_STATUS_IGNORE); 
+   </i> 
+   <BR>
+ 
+
+   <tr>
+   <td> </td>
+   <td>  
+   
+<P align = "justify"> <span class ="content">
+
+Here the way of describing a buffer to be written (or read) gives the advantages
+ as it does in message passing: it allows arbitrary distributions of noncontiguous
+ data in memory to be written with a single call, and it expresses the datatype,
+ rather than just the length, of the data to be written, so that meaningful 
+transformations can be done on it as it is read or written, for heterogeneous 
+environments. Here we just have a contiguous buffer of BUFSIZE integers, 
+starting at address buf. The final argument to MPI_File_write is a "status" 
+argument, of the same type as returned by MPI_Recv. MPI-2 specifies that the 
+special value MPI_STATUS_IGNORE can be passed to any MPI function in place of
+ a status argument, to tell the MPI implementation not to bother filling in 
+the status information because the user intends to ignore it. This technique 
+can slightly improve performance when status information is not needed.
+</font> </span> </p>
+
+<BR> 
+        </font>  
+     </td>
+    </tr> 
+
+ <!-- ********************** Fourth  MPI-2.0 lib call ****************** -->
+ <tr>
+     <td width="3%" height="2" align="left">  
+      <font face="Verdana" size="2"> 
+           <IMG SRC="./ioperf-threads-images/bullet5.gif" HEIGHT="15" WIDTH="15">
+         </font> 
+      </td>
+
+     <td width="97%" height="2" align="left">
+       <font face="Verdana" size="2"> <i>
+       Fourth, the MPI function corresponding to close  is called 
+     MPI_File_close(&myfile); </i> <BR>
+
+
+   </i> 
+      </td> 
+      </tr>
+
+   <tr>
+   <td> </td>
+   <td>  
+
+<P align = "justify"> <font face ="Verdana" size="2">
+ The function MPI_File_close(&myfile); 
+
+closes the file. The address of myfile is passed rather than the
+ variable itself because the MPI implementation will replace its value 
+with the constant MPI_FILE_NULL. Thus the user can detect invalid file
+ objects. </font> </p>
+
+<BR> 
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+<tr><td width=600><td><td>
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></td></tr>
+</tbody>
+</table>
+
+
+<table width = "100%" border="0"  height="6">
+<tbody>
+<tr>
+<td>
+
+ <P align ="left"> 
+ <font size="2" face = "Courier New" color="#990033">
+
+
+	
+/* Example of parallel MPI write into a separate files */ <BR>
+#include "mpi.h" <BR>
+#include <stdio.h> <BR>
+#define BUFSIZE 100 <BR>
+
+int main (int argc, char *argv []) <BR>
+{ <BR>
+
+
+	int i, myrank, numprocs, buf [BUFSIZE]; <BR>
+	char *filename[128]; <BR>
+	FILE *myfile; <BR> <BR>
+
+	MPI_Init (&argc, &argv); <BR>
+	MPI_Comm_rank(MPI_COMM_WORLD, &myrank); <BR>
+	MPI_Comm_size (MPI_COMM_WORLD, &numprocs); <BR> <BR>
+    
+
+	for (i=0; i < BUFSIZE; i++) <BR>
+	  &nbsp;    buf [i] = myrank * BUFSIZE + i; <BR>
+      
+
+	  &nbsp; sprintf(filename, "testfile.%d", myrank); <BR> <BR>
+	  &nbsp; MPI_File_open(MPI_COMM_SELF, filename,   MPI_MODE_WRONLY | MPI_MODE_CREATE, <BR>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  MPI_INFO_NULL, &myfile);
+            <BR> <BR>
+           
+	  &nbsp; MPI_File_write(myfile, buf, BUFSIZE, MPI_INT,
+           MPI_STATUS_IGNORE); <BR>  <BR>
+          &nbsp; MPI_File_close(&myfile); <BR> <BR>
+
+	MPI_Finalize(); <BR> 
+	return 0; <BR>
+} 
+
+
+</font>
+</p>
+
+<HR>
+
+<p align = "left">  <font size="2" face = "Verdana"> 
+    Example 1.3 Code for MPI  I/O to separate files in a parallel program <BR>
+
+    <font size="2" face = "Arial" color="#990033">   </font>
+    <font size="2" face = "Verdana" color="black">
+ <BR> <BR>
+ </font>
+</p>
+
+<div align ="right">
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></div>
+
+</td>
+</tr>
+</tbody>
+</table>
+<!-- ****************  MPI I/O to Seperate  file ** ENDS ** ****************** -->
+
+
+
+
+<!-- *************** MPI  I/O to Single file  ** STARTS ** *************** -->
+
+<a name="thread-io-mpi-single-file"> </A>
+
+ <table width = "100%" border="0"  height="6">
+<tbody>
+
+<tr>
+<td>
+  
+ <font face="Arial" color="red" size="2"> 
+   <B>  MPI 2.X : Parallel MPI I/O to a Single File </b>
+ </font>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<BR>
+
+<P align = "justify"> <font face ="Verdana" size="2">
+
+The processes share a single file instead of writing to separate files,
+ thus eliminating the disadvantages of having multiple files while retaining 
+the performance advantages of parallelism. We will still not be doing anything that absolutely cannot be done through language or library I/O on most file systems. The new version of the program is shown.
+
+The first difference between this program and that of Figure 2.5 is in the 
+first argument of the MPI_File_open statement. Here we specify MPI_COMM_WDRLD 
+instead of MPI_COMM_SELF, to indicate that all the processes are opening a 
+single file together. This is a collective operation on the communicator,
+ so all participating processes must make the MPI_File_open call, although only a single file is being opened.
+Our plan for the way this file will be written is to give each process access
+ to a part of it. The part of the file that is seen by a single process is
+ called the file view and is set for each process by a call to MPI_File_set_view. 
+The  call looks like 
+</font> </p> <BR> <BR>
+
+<p align ="center">
+
+                 MPI_File_set_view(thefile, myrank * BUFSIZE * sizeof(int), 	
+                        MPI_INT, MPI_INT, "native", MPI_INFO_NULL);
+</p>
+
+
+<P align = "justify"> <font face ="Verdana" size="2">
+
+The first argument identifies the file. The second argument is the displacement 
+(in bytes) into the file where the process's view of the file is to start. 
+Here we multiply the size of the data to be written (BUFSIZE * sizeof (int))
+ by the rank of the process, so that each process's view starts at the 
+appropriate place in the file. This argument is of a new type MPI_Offset, 
+which on systems that support large files can be expected to be a 64-bit 
+integer. <BR> <BR>
+
+
+The next argument is called the etype of the view; 
+it specifies the unit of data in the file. Here it is MPI_INT, 
+since we will always be writing some number of MPI_INTs to this file. 
+The next argument, called the filetype, is a very flexible way of
+ describing noncontiguous views in the file. In our simple case here,
+ where there are no noncontiguous units to be written, we can just use 
+the etype, MPI_INT. 
+
+The next argument is a character string denoting the data representation to 
+be used in the file. The native representation specifies that data is 
+to be represented in the file exactly as it is in memory. The final 
+argument is an info object as in MPI-File_open. Here again it is to be
+ ignored, as dictated by specifying MPI_INFD_NULL for this argument. 
+Now that each process has its own view, the actual write operation 
+</p> </font>
+
+
+<p align ="center">
+             MPI_File_write(thefile, buf, BUFSIZE, MPI_INT, 	
+                    MPI_STATUS_IGNDRE);
+</p>
+
+<P align = "justify"> <font face ="Verdana" size="2">
+
+is exactly the same as in our previous version of this program. 
+But because the MPI_File_open specified MPI_COMM_WORLD in its communicator
+ argument, and the MPI_File_set_view gave each process a different view 
+of the file, the write operations proceed in parallel and all go into the 
+same file in the appropriate places. </font> </p>
+
+</td>
+</tr>
+
+
+
+</tbody>
+</table>
+
+
+
+
+<table border="0"  height="6">
+<tbody>
+
+<tr>
+<td>
+
+ <P align ="left"> 
+ <font size="2" face = "Courier New" color="#990099">
+
+<BR> 
+
+<div align ="right">
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></div>	
+
+/* Example of parallel MPI write into a separate files */ <BR>
+#include "mpi.h" <BR>
+#include <stdio.h> <BR>
+#define BUFSIZE 100 <BR>
+
+int main (int argc, char *argv []) <BR>
+{ <BR>
+
+
+	int i, myrank, numprocs, buf [BUFSIZE]; <BR>
+	char *filename[128]; <BR>
+	MPI FILE thefile; <BR> <BR>
+
+	MPI_Init (&argc, &argv); <BR>
+	MPI_Comm_rank(MPI_COMM_WORLD, &myrank); <BR>
+	MPI_Comm_size (MPI_COMM_WORLD, &numprocs); <BR> <BR>
+    
+
+	for (i=0; i < BUFSIZE; i++) <BR>
+	  &nbsp;   buf [i] = myrank * BUFSIZE + i; <BR> 
+       
+
+	  &nbsp; sprintf(filename, "testfile.%d", myrank); <BR> <BR>
+	  &nbsp; MPI_File_open(MPI_COMM_SELF, filename, 
+              MPI_MODE_WRONLY | MPI_MODE_CREATE,  <BR> 
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              MPI_INFO_NULL, &myfile); <BR> <BR>
+           
+ &nbsp; MPI_File_set_view(thefile, myrank * BUFSIZE * sizeof(int),
+ <BR> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		    MPI_INT, MPI_INT, "native", MPI_INFO_NULL);
+                       <BR> <BR>
+	  &nbsp; MPI_File_write(thefile, buf, BUFSIZE, MPI_INT,
+           MPI_STATUS_IGNORE); <BR> <BR>
+          &nbsp; MPI_File_close(&thefile); <BR> <BR>
+
+	
+	MPI_Finalize(); <BR> 
+	return 0; <BR>
+
+} 
+
+	
+</font>
+</p>
+
+
+<p align = "center">  <font size="2" face = "Verdana"> 
+    Example 1.4 Code for MPI  I/O to single file in a parallel program  <BR>
+
+
+    <font size="2" face = "Arial" color="#990033">   </font>
+ <BR> <BR>
+ </font>
+</p>
+
+
+
+</font> </p>
+
+<div align ="right">
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></div>
+</td>
+</tr>
+
+</tbody>
+</table>
+<!-- **************** MPI I/O to Seperate  file ** ENDS ** ********************* -->
+
+
+
+
+
+<!-- *************** MPI I/O : compilation and execution of I/O thread & MPI -I/O Program starts *********** --> 
+  
+<a name="compile-exe-prog"> </a>
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+
+ <B> Compilation and Execution of I/O Threaded & MPI-2 I/O Programs </b> </font> </font></DIV>
+ </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<BR>
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+
+<P align=justify> <FONT face="verdana" size=2, class="content" >
+
+
+   You should include pthread.h in the program and use linker flag -lpthread when linking.<br><br>
+
+   The specific files to be used will differ with implementation on various platforms.<br><br>
+
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> (A) Using command line arguments: </b> </font> <br><br>
+   
+	The compilation and execution details of Pthreads programs will vary from a system to another. 
+      The essential steps are common to all the systems.<br><br>
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+        # cc <program name> -o <executable name> -lpthread  </i> </font>
+   <br><br>
+
+        For example to compile a simple Hello World program user can type<br><br>
+
+ 
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+        # cc Pthreads_HelloWorld.c -o Pthreads_HelloWorld -lpthread  </i> </font>
+    <br><br>
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> (B) Using a Makefile: </b> </font> <br><br>
+
+
+
+   
+For more control over the process of compiling and linking programs for Pthreads, you should use a 'Makefile'. You may also use some commands in Makefile particularly for programs contained in a large number of files.  The user has to specify the names of the program and appropriate paths to link some of the libraries required for Pthreads programs in the Makefile<p><br>
+
+        To compile and link a Pthreads program, you can use the command, <BR> <BR>
+
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+        make </i> </font> <BR> <BR>
+    
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> (C) Executing a Program: </b> </font> <br><br>
+
+        To execute a Pthreads Program, type the name of the executable at command prompt.  <BR> <BR>
+
+      <font color="red" size = "2", face="TimesNewRoman">  <i>  Name of the Executable </i> </font>  <br> <br>
+
+        For example, to execute a simple HelloWorld Program, user must type:<br><br>
+  
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+         # HelloWorld   </font> <br><br>
+
+        The output must look similar to the following:<br><br>
+
+            Hello World! <br><br>
+</td>
+</tr>
+
+<div align ="right">
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></div>
+</tbody>
+</table>
+
+
+<!-- *************** compilation and execution of Pthread Program ends ******************** --> 
+
+
+
+
+<!-- **************  List of extended tools available in Pthread starts ******************** -->
+
+<a name = multi-core-hpc-web-sites> </a>
+<TABLE width = 100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left>
+<font Color="black" face= "Verdana" size="2">
+     <B>  Web sites : Multi Core / Parallel Computing  </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+<P align=justify><FONT face="verdana" size=2, class="content" > <BR>
+
+
+Intel Software Web Site <a href ="http://www.intel.com/software"> 
+<font color ="blue">
+     http://www.intel.com/software </font> </a> <BR> <BR>
+
+          Etnus Total View Supports thread debugging.<br>
+
+ <a href="http://www.etnus.com/Products/TotalView/started/threads0.html">
+<font color ="blue">  
+      http://www.etnus.com/Products/TotalView/started/threads0.html </font> </a> <br> <BR>
+       
+	  GDB supports threads minimally <BR> 
+         <A HREF="http://www.delorie.com/gnu/docs/gdb/gdb_25.html">
+<font color ="blue">
+        http://www.delorie.com/gnu/docs/gdb/gdb_25.html</font> </a><br><br>
+        
+	 Smart GDB for Threads Debugging - Concurrent Programming Model:<BR>
+	  <A HREF="www.cse.wustl.edu/~cdgill/RTAS03/published/james_niehaus.pdf">
+<font color ="blue">
+         www.cse.wustl.edu/~cdgill/RTAS03/published/james_niehaus.pdf </font> </a><br>
+
+         <a href="http://www.gnu.org/software/pth/related.html">
+<font color ="blue">
+        http://www.gnu.org/software/pth/related.html</font> </a>          <br><br>        
+
+       Sun Studio 12 C, C++ & Fortran Compilers & Tools   
+     <a href = "http://developers.sun.com/sunstudio/"> 
+<font color ="blue"> 
+       http://developers.sun.com/sunstudio/ </font> </a> <Br> <br>
+
+  <a href="http://www.as400.ibm.com/developer/threads/uguide/document.htm "> 
+<font color ="blue">             
+    http://www.as400.ibm.com/developer/threads/uguide/document.htm</font> </a><br>
+
+	  <a href=" http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html">
+<font color ="blue">
+           http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html </font> </a><br>
+	
+	
+	 <a href="http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html">             <font color ="blue">
+    http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html</font> </a><br><br>
+
+ <a href="http://www-unix.mcs.anl.gov/dbpp/text/book.html">
+<font color ="blue">
+  http://www-unix.mcs.anl.gov/dbpp/text/book.html</font> </a><BR> <BR>
+
+          <a href="http://www-unix.mcs.anl.gov/perfvis/">
+<font color ="blue">
+        http://www-unix.mcs.anl.gov/perfvis/</font> </a> <BR> <BR>
+
+
+          <a href="http://courses.uiuc.edu/cis/schedule/urbana/2008/Fall/CS/498.html">
+<font color ="blue">
+  Fall 2008 CSE Course - CS 498 DP -   Multicore and Cluster Parallel Programming  </font> </a> <BR> <BR>
+          <a href="http://www.nd.edu/~hpcc/solaris/clustertool4.html">
+<font color ="blue">
+          http://www.nd.edu/~hpcc/solaris/clustertool4.html</font> </a><BR> <BR>
+
+          <a href="http://www.cs.wisc.edu/~paradyn/release3.2.html">
+<font color ="blue">
+  http://www.cs.wisc.edu/~paradyn/release3.2.html</font> </a> <BR> <BR>
+
+           <a href="http://www.cs.uoregon.edu/research/paracomp/tau/tautools/">
+<font color ="blue">
+  http://www.acl.lanl.gov/tau/</font> </a> <BR> <BR>
+
+         <a href="http://www.llnl.gov/computing/tutorials/workshops/workshop/">
+<font color ="blue">
+http://www.llnl.gov/computing/tutorials/workshops/workshop/</font> </a> <BR> <BR>
+
+           <a href="http://www.fz-juelich.de/zam/RD/coop/cray/crayperf.html">
+<font color ="blue">
+http://www.fz-juelich.de/zam/RD/coop/cray/crayperf.html</font> </a>  <BR> <BR>
+
+         <a href="http://www-unix.mcs.anl.gov/mpi/mpich/">
+<font color ="blue">
+ http://www-unix.mcs.anl.gov/mpi/mpich/</font> </a><BR> <BR>
+
+          <a href="http://www.csar.uiuc.edu/software/paragraph/">
+<font color ="blue">
+http://www.csar.uiuc.edu/software/paragraph/</font> </a> <BR> <BR>
+
+          <a href="http://wwwbode.cs.tum.edu/Par/tools/Projects/Patop.html">
+<font color ="blue">
+http://wwwbode.cs.tum.edu/Par/tools/Projects/Patop.html</font> </a> <BR> <BR>
+
+            <a href="http://www.sai.msu.su/sal/C/3/PABLO.html"> <font color ="blue">
+http://www.sai.msu.su/sal/C/3/PABLO.html </font> </a>
+ </font> </p>
+
+<div align ="right">
+         <A HREF="ioperf-threads-overview.html"> 
+     <IMG SRC="./ioperf-threads-images/up.gif" border=0 width="13" height="13"></A>
+        <br></div>
+      
+<!-- ************************ List of extended tools  in Pthread ends **************** -->
+
+</td>
+</tr>
+</tbody>
+</table>
+     
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+     
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,2316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+               Mode-1 Multi-Core  </A>
+                      
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+                Memory Allocators</A>
+   
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+               Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+               Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+               Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+               Charm++ Prog.</A>
+ 
+              <!-- ** -->
+	      <A class=menulslct 
+               href="./../hypack13-mode01-multicore-mpi.html">
+                Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+               MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+               MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+               MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+               Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+               Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+               Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+               Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+               PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+               Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+               Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013  Mode 1 : MPI 1.X Derived Datatype; Groups, Topologies-  MPI Lib. Calls</H1> 
+
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+<TD> 
+
+ <p align = "justify"> <span class ="content">
+       <B> Module 4 : </b>  MPI programs using MPI
+ Dervied Data types, Topologies, Group Communicators  Library Calls  and 
+execute on Message Passing 
+Cluster  or Multi Core Systems that support MPI library.</span> </p>
+
+ </TD>
+ </TR> 
+</TBODY> 
+</TABLE>
+
+
+
+<!-- ***************** Table List of programs : start ******************* -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+
+
+   <!-- ****************** Example 4.1 ******************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.1 </b> </font> <BR> <BR> 
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <p align = "justify"> <span class ="content">
+         Write  MPI program to to build a general derived datatypes in which process with rank 0 
+          broadcast <I> struct </i> having two <I> float </i> and an <i>int </i> values.
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ***************** Example 4.2 ***************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id02">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class ="content">
+         Write MPI program to build derived datatype in which process with rank 0 sends one row entries of 
+       a two dimensional  real array, which are contiguous entries of two dimensional real  array to the process 
+       with rank 1.  </span> </p>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 4.3 ******************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id03">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.3 </b> </font> <BR>  <BR> <BR> <BR>
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <p align = "justify"> <span class ="content">
+         Write MPI program to build derived datatype in which process with rank 0 sends 
+     entries of  a two dimensional  real array, which are equally spaced (Non-contiguous) column entries of a 
+     two dimensional real array to the process with rank 1. 
+      Use MPI_Type_Vector, MPI_Type_Commit library calls.
+        </span> </p>
+     </td>
+
+   </tr>
+
+
+
+<!-- ***************** Example 4.4 ********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id04">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.4 </b> </font> <BR> <BR> <BR> 
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class ="content">
+        Write MPI program to build derived datatype in which process with rank 0 sends upper triangular
+       portion of a square ematrix  to the process with rank 1. You have to use MPI_Type_Indexed 
+    library call,  MPI_Type_Commit library calls.
+         </span> </p>
+     </td>
+
+   </tr>
+
+<!-- ******************** Example 4.5 ******************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id05">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.5 </b> </font> <BR>  <BR> <BR>
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <p align = "justify"> <span class ="content">
+       Write MPI program to broadcast the data from the process with rank 0 to the 
+     other process in which elements of noncontiguous data are in structure type.  Use MPI_Pack and MPI_Unpack 
+    ibrary calls.  
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+<!-- **************** Example 4.6 ******************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id06">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.6 </b> </font> <BR>  <BR> 
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+       <p align = "justify"> <span class ="content">
+        Write MPI program to construct a communicator consisting of group of diagonal 
+    processes in a square grid of processes using MPI group communicators.
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- ******************* Example 4.7 ****************** -->
+   
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id07">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.7</b> </font> <BR> <BR> 
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <p align = "justify"> <span class ="content">
+       Write MPI program to construct a distinct communicators from group of square grid of 
+    processes using MPI_Comm_Split library calls
+       </font>
+     </td>
+
+   </tr>
+
+<!-- ************** Example 4.8 ****************** -->
+ <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="ddtypes-group-topology-mpi.html#dd-grp-top-id08">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4.8 </b> </font> <BR>  <BR> <BR>
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class ="content">
+         Write MPI program to construct virtual topology i.e., 
+    Cartesian topology from a group of processes in a square grid of processes and print the rank in the Cartesian communicator.  
+    Use MPI_Cart_create, MPI_Cart_rank, and MPI_Cart_coords library calls.
+        </span> </p>
+     </td>
+
+   </tr>
+
+<!-- *************** Example 4.9 ***************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       
+         <font size="2" face="Arial" color="red">
+            <b>  Example 4.9 </b> </font> <BR>  <BR> <BR> <BR>
+      
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class ="content">
+       Write MPI program to partition   a grid into grids of lower dimension from a group of processes 
+    in a  square grid of processes using MPI Cartesian topology and print the rank in the Cartesian communicator.  
+    Use  MPI_Cart_create, MPI_Cart_rank, MPI_Cart_coords, and MPI_Cart_sub library calls.
+       </font><B><I>(Assignment)</I></B>   </span> </p>
+     </td>
+   </tr>
+
+
+
+</td></tr></tbody>
+</table>
+<BR>
+<!-- ***************** Table List of programs : end **************** -->
+
+
+<!-- *******************  Reference Starts Here ******************** -->
+<TABLE cellPadding=3 border=0> 
+<TBODY>
+<TR>
+<tD>
+
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+  &nbsp; &nbsp;    - 
+[MC-MPI-02], [MCMPI-06], [MCMPI-07], [MCMPI-09], [MC-MPI10], [MCMPI-11], 
+  [MCMTh-12],[MCBW-44], [MCOMP-01])
+ <BR>  <BR>
+  </font>
+
+ <DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *******************  Reference Ends  Here ******************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<BR> 
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                   <p align = "justify"> <span class ="content">
+   <B>  Description of Programs - MPI Dervied Datatypes, Groups & Virtual 
+Topology concepts  </B>     </span> </p>  
+
+ 
+</td></tr>
+ </TBODY>
+</table> 
+
+
+<!-- **************** Example 4.1 Start Here ************* -->
+
+
+
+<A NAME="dd-grp-top-id01"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.1:  <BR>  <BR> <BR> </b> </td>
+    <td width="675" height="2" align="left">
+     <b>  Write  MPI program to to build a general derived datatypes in which process with rank 0 
+          broadcast <I> struct </i> having two <I> float </i> and an <i>int </i> values.   </b>
+
+ 
+ <!-- ************** download  Starts here **************** -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/general-derived-datatype.c">general-derived-datatype.c</A>
+  </FONT></I>)
+  &nbsp;
+
+
+ <!-- ******************* download  Ends here ******************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+
+
+ 
+
+<table  border="0" height="28">
+<tbody> 
+<tr><td>
+<blockquote>
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <p align ="justify">  Write  MPI program to to build a general derived datatypes in which process with rank 0 
+          broadcast <I> struct </i> having two <I> float </i> and an <i>int </i> values.
+</P>
+</LI>
+
+</A>
+<LI><B> Description </B>										
+<p align ="justify"> Given a <I> struct </i> consists of three elements two <I> floats (a,b)</i> and one <i> int (n) </i>
+ variables and this eample explains the transmission of these three elements of <I> struct </i> to other 
+processes. Assume that the these three elements i.e. a = 0.0, b = 1.0; & C = 1024 are assigned with address
+starting from 24, 40, 48 respectively. <BR> <BR>
+
+<B> A general MPI datatype </b> or <b> dervied datatype </B> is a sequence of pairs <BR> <BR>
+
+<div align= "center">
+ <I> 
+
+ {
+     (t<sub>0</sub>, t<sub>0</sub>), &nbsp;
+     (t<sub>1</sub>, t<sub>1</sub>), &nbsp; 
+     (t<sub>2</sub>, t<sub>0</sub>), &nbsp; 
+      &nbsp; &nbsp; &nbsp; ..................&nbsp; 
+      (t<sub>n-1</sub>, t<sub>n-1</sub>), &nbsp;  
+
+</I>
+</div>
+
+<BR> 
+
+Where each t<sub>i</sub> &nbsp; is a basic MPI datatype  and each d<sub>i</sub> is a displacement in 
+bytes.Recall that the basic MPI datatypes are predefined in C : MPI_INT, MPI_CHAR, MPI_FLOAT etc.....
+The MPI derived datatypeis used to incorporate a, b, & c into a single message. 
+
+ You have to use <I> MPI_Type_struct, MPI_Address, and MPI_Type_commit  </I> library calls.
+ to write this program.
+</P>
+</LI>
+
+<LI><B>Input</B><p> None </p> 
+</LI>
+
+
+
+
+
+<Li>
+ <p> <B>Output</B> </p> 
+
+	
+<p> Each Process   prints the elements of <i> struct </i>  
+</p>
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</td></tr>
+</tbody>
+</table>
+
+<!-- ***************** Example 4.1 Ends Here ********************** -->
+
+
+
+<!-- *************** Example 4.2 Start Here **************** -->
+
+
+<A NAME="dd-grp-top-id02"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.2:  <BR>  <BR> <BR> <BR></b> </td>
+    <td width="700" height="2" align="left">
+     <b>  Write MPI program to build derived datatype in which process with rank 0 sends one row entries of 
+       a two dimensional  real array, which are contiguous entries of two dimensional real  array to the 
+       process  with rank 1. </b>
+
+ 
+ <!-- ************** download  Starts here *************** -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/array-contiguous-memory.c">array-contiguous-memory.c</A>
+  </FONT></I>)
+  &nbsp;
+
+
+ <!-- ************* download  Ends here *************** -->
+
+ </td>
+ </tr> 
+</tbody>
+ </table>
+ </p>
+
+ 
+
+<table  border="0" height="28">
+<tbody> 
+<tr><td>
+<blockquote>
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <p align ="justify">  Write MPI program to build derived datatype in which process with rank 0 sends one row entries of 
+       a two dimensional  real array, which are contiguous entries of two dimensional real  array to 
+       the process with rank 1. 
+</P>
+</LI>
+
+</A>
+<LI><B> Description </B>
+										
+<p align ="justify"> Given a Two dimensional real array <I> float A[10][10] </i>, the aim is to send 7<sup>th</sup> row from 
+process with rank 0 to process with rank 1. Assume that the program is written in c-language
+and it is well known that the C-language code stores two-dimensional arrays in <I> row-major </i> order. For example,
+the memory of A[6][2] is preceded by A[6][1] and followed by A[6][3]. The memory locations of
+starting at A[6][0] are A[6][0], A[6][1], A[6][2], A[6][3],.............A[6][9] i.e. the 7<sup>th</sup> row of
+two dimensional array A are stored in contiguous memory locations.
+You have to use <I> MPI_Send,and  MPI_Recv, </I> library calls to write this program.
+</P>
+</LI>
+
+<LI><B>Input</B><p> 
+
+<!-- **************** input starts ******************* -->
+
+<P><B>Input file 1</B> </p> 
+
+<p align ="justify">The<B> </B>input file for Two dimansioanl real array should strictly adhere to the following
+format. </p> 
+
+<BR> <BR>
+
+
+<p align ="justify">#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns(<I>n</I>).<I>&nbsp;</I>&nbsp;
+<BR>#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means
+that the data of second row follows that of the first and so on.) </p>
+
+<p align ="justify">A sample input file for twod-dimensional array (10 x 10) is given below&nbsp; <BR> <BR>
+<font color = "black"> 
+&nbsp; 10&nbsp;&nbsp;&nbsp; 10&nbsp; <BR> <BR>
+
+&nbsp;
+6.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+
+&nbsp; 2.0&nbsp;&nbsp; 84.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+5.0 <BR>
+
+
+&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 68.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+
+&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;
+59.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+
+&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp; 93.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+<BR> </font>
+
+<font color = "red">
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 17.0&nbsp;&nbsp;&nbsp; 13.0&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+ <BR>
+</font>
+
+<font color = "black">
+&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+9.0 <BR>
+
+&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+6.0 <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0 <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+</font>
+
+<BR>
+</p> 
+</LI>
+
+
+<Li>
+ <p> <B>Output</B> </p> 
+
+	
+<p align ="justify"> Process   with Rank 1  prints the elements of the 7<sup>th</sup> row of two dimensional real array </p>
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+
+</tbody></table>
+
+
+<!-- **************** Example 4.2 Ends Here ************************ -->
+
+
+<!-- **************** Example 4.3 Start Here ************** -->
+
+
+ <A NAME="dd-grp-top-id03"></A> 
+  <table border="0"  height="6">
+<tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.3:  <BR>  <BR> <BR> <BR> <BR> </b> </td>
+    <td width="700" height="2" align="left">
+     <b> 
+   Write MPI program to build derived datatype in which process with rank 0 sends entries of a 
+   two dimensional real array, which are equally spaced (Non-contiguous) column entries of a two 
+   dimensional real array to the process with rank 1.
+</b>
+
+ 
+ <!-- ************** download  Starts here *************** -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/array-non-contiguous-memory.c">array-non-contiguous-memory.c</A>
+  </FONT></I>)
+  &nbsp;
+
+ <!-- ************* download  Ends here *************** -->
+
+ </td>
+ </tr> 
+</tbody>
+ </table>
+ </p>
+
+ 
+
+<table  border="0" height="28">
+<tbody> 
+<tr><td>
+<blockquote>
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <p align ="justify">  Write MPI program to build derived datatype in which process with rank 0 sends one row entries of 
+       a two dimensional  real array, which are contiguous entries of two dimensional real  array to 
+       the process with rank 1. 
+</P>
+</LI>
+
+</A>
+<LI><B> Description </B>
+										
+<p align ="justify"> Given a Two dimensional real array <I> float A[10][10] </i>, the aim is to send 7<sup>th</sup> column from 
+process with rank 0 to process with rank 1. Assume that the program is written in c-language. it is well known that the C-language code stores two-dimensional arrays in <I> row-major </i> order. For example,
+the memory of A[6][2] is preceded by A[6][1] and followed by A[6][3]. The memory locations of
+starting at A[6][0] are A[6][0], A[6][1], A[6][2], A[6][3],.............A[6][9] i.e. the 7<sup>th</sup> row of
+two dimensional array A are stored in contiguous memory locations. It is also observed that the displacement
+of A[0][7] to A[1][7], A[1][7] to A[2][7]  is 10 float values. In other words, the entries of 
+the 7<sup>th</sup>  column are equally spaced. The concept of MPI type i.e. ,<i> new_mpi_type </i> MPI_Datatype
+</i> is required and in this case user can define <i> column_mpi_type </i> can be used to send any column of 
+two dimensional Array.
+You have to use <I> MPI_Type_Vector,and  MPI_Type_Commit, </I> library calls to write this program.
+</P>
+</LI>
+
+<LI><B>Input</B>
+
+<!-- ***************** input starts ******************** -->
+
+<P><B>Input file 1</B> </p> 
+
+<p align ="justify">The<B> </B>input file for Two dimansioanl real array should strictly adhere to the following
+format. </p> 
+
+<BR> <BR>
+
+
+<p align ="justify">#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns(<I>n</I>).<I>&nbsp;</I>&nbsp;
+<BR>#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means
+that the data of second row follows that of the first and so on.) </p>
+
+<p align ="justify">A sample input file for twod-dimensional array (10 x 10) is given below&nbsp; <BR> <BR>
+<font color = "black"> 
+&nbsp; 10&nbsp;&nbsp;&nbsp; 10&nbsp; <BR> <BR>
+
+&nbsp;
+6.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+9.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "black">
+7.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;3.0 <BR>
+
+&nbsp; 2.0&nbsp;&nbsp; 84.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+3.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "black">
+ 2.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+5.0 <BR>
+
+
+&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 68.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+7.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "black">
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+
+&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;
+59.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+8.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "black">
+6.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+
+&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp; 93.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "red">
+3.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "black">
+2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+<BR> 
+
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 17.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+ 13.0&nbsp;&nbsp;
+</font> <font color = "black">
+
+8.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+ <BR>
+
+
+
+&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+7.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "black">
+6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+9.0 <BR>
+
+&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+4.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "black">
+8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+6.0 <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+4.0&nbsp;&nbsp;&nbsp;
+ </font> <font color = "black">
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0 <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+</font> <font color = "red">
+9.0&nbsp;&nbsp;&nbsp; 
+</font> <font color = "black">
+5.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+</font>
+
+
+<BR>&nbsp;
+
+</p> 
+</LI>
+
+
+<Li>
+ <p> <B>Output</B> </p> 
+
+	
+<p align ="justify"> Process   with Rank 1  prints the elements of the 7<sup>th</sup> column of two dimensional real array </p> 
+</p>
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</tbody></table>
+
+<!-- **************** Example 4.3 Ends Here *********************** -->
+
+
+<!-- *************** Example 4.4 Start Here ****************** -->
+
+
+ <A NAME="dd-grp-top-id04"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.4:  <BR>  <BR> <BR>  </b> </td>
+    <td width="700" height="2" align="left">
+     <b> 
+     Write MPI program to build derived datatype in which process with rank 0 sends upper triangular
+      portion entries of square matrix  to  the process with rank 1.
+</b>
+
+ 
+ <!-- *************** download  Starts here ******************* -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/upper-traingular-portion-ddtype.c">upper-traingular-portion-ddtype.c</A>
+  </FONT></I>)
+  &nbsp;
+
+ <!-- ************** download  Ends here ******************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ </p>
+
+ 
+
+<table  border="0" height="28">
+<tbody> 
+<tr><td>
+<blockquote>
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <p align ="justify">  Write MPI program to build derived datatype in which process with rank 0 sends upper triangular
+      portion entries of square matrix  to 
+       the process with rank 1. 
+</P>
+</LI>
+
+</A>
+<LI><B> Description </B>
+										
+<p align ="justify"> Given a real square matrix<I> float A[10][10] </i>, the aim is to send upper triangular 
+matrix i.e non-zero entris of each row of the squre matrix  from 
+process with rank 0 to process with rank 1. 
+Assume that the program is written in c-language. it is well known that the C-language code stores two-dimensional arrays in <I> row-major </i> order. For example,
+the memory of A[6][2] is preceded by A[6][1] and followed by A[6][3]. The memory locations of
+starting at A[6][0] are A[6][0], A[6][1], A[6][2], A[6][3],.............A[6][9] i.e. the 7<sup>th</sup> row of
+two dimensional array A are stored in contiguous memory locations. 
+You have to use MPI_Type_Indexed  and  MPI_Type_Commit, </I> library calls to write this program.
+</P>
+</LI>
+
+<LI><B>Input</B> </li>
+
+<!-- *************** input starts ******************* -->
+
+<P><B>Input file 1</B> </p> 
+
+<p align ="justify">The<B> </B>input file for square matrix should strictly adhere to the following
+format. </p> 
+
+<BR> <BR>
+
+
+<P>#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns(<I>n</I>) of square matrix <I>&nbsp;</I>&nbsp;
+<BR>#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means
+that the data of second row of squre matrix follows that of the first and so on.) </p>
+
+<p align ="justify">A sample input file for twod-dimensional array (10 x 10) is given below&nbsp; <BR> <BR>
+<font color = "black"> 
+&nbsp; 10&nbsp;&nbsp;&nbsp; 10&nbsp; <BR> <BR>
+
+</font> <font color = "red">
+&nbsp;
+6.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+5.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+2.0 <BR>
+</font> <font color = "Black">
+
+
+
+&nbsp; 0.0&nbsp;&nbsp; 
+
+
+</font> <font color = "red">
+
+8.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+
+7.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+8.0 <BR>
+
+</font> <font color = "black">
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp; 
+
+</font> <font color = "red">
+
+68.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp;5.0&nbsp;&nbsp;&nbsp;
+7.0 <BR>
+</font> <font color = "black">
+
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;
+</font> <font color = "red">
+59.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+6.0 <BR>
+</font> <font color = "black">
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp; 
+</font> <font color = "red">
+
+12.0&nbsp;&nbsp;&nbsp;&nbsp;4.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+<BR> 
+</font> <font color = "black">
+
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp; 
+
+</font> <font color = "red">
+21.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp;&nbsp;&nbsp;9.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+ <BR>
+</font> <font color = "black">
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+
+</font> <font color = "red">
+32.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;
+9.0 <BR></font> <font color = "black">
+
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;
+
+</font> <font color = "red">
+
+ 42.0&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+7.0 <BR>
+</font> <font color = "black">
+
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 
+</font> <font color = "red">
+6.0&nbsp;&nbsp;&nbsp;
+8.0 <BR>
+
+</font> <font color = "black">
+&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+3.0 <BR>
+</font>
+ </p> 
+</LI>
+
+
+<Li>
+ <p> <B>Output</B> </p> 
+
+	
+<p align ="justify">  Process   with Rank 1  prints the elements of the Upper traingular matrix entries in a row-wise </p> 
+
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- ****************** Example 4.4 Ends Here ************************ -->
+
+
+<!-- *************** Example 4.5 Start Here ****************** -->
+
+
+ <A NAME="dd-grp-top-id05"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.5:  <BR>  <BR> <BR> <BR></b> </td>
+    <td width="700" height="2" align="left">
+     <b> 
+     Write MPI program to broadcast the data from the process with rank 0 to the other 
+      process in which elements of noncontiguous data are in structure type. Use MPI_Pack and MPI_Unpack l 
+      ibrary calls. 
+</b>
+
+ 
+ <!-- **************** download  Starts here ******************* -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/memory-pack-unpack.c">memory-pack-unpack.c</A>
+  </FONT></I>)
+  &nbsp;
+
+ <!-- ***************** download  Ends here *************** -->
+
+ </td>
+ </tr> 
+</tbody>
+ </table>
+
+
+
+<table  border="0" height="28">
+<tbody> 
+<tr><td>
+<blockquote>
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <p align ="justify">  Write MPI program to broadcast the data from the process with rank 0 to the other process
+       in which elements of noncontiguous data are in structure type.
+    Use MPI_Pack and MPI_Unpack  ibrary calls.</B>
+</P>
+</LI>
+
+</A>
+<LI><B> Description </B>
+										
+<p align ="justify"> 
+
+ Given a <I> struct </i> consists of three elements two <I> floats (a,b)</i> and one <i> int (n) </i>
+ variables and this eample explains the transmission of these three elements of <I> struct </i> to other 
+processes. Assume that the these three elements i.e. a = 64.0, b = 200.0; & C = 1024 are assigned with address
+starting from 24, 40, 48 respectively. <BR> <BR>
+
+<B> A general MPI datatype </b> or <b> dervied datatype </B> is a sequence of pairs <BR> <BR>
+</p>
+
+<div align= "center">
+ <I> 
+
+ {
+     (t<sub>0</sub>, t<sub>0</sub>), &nbsp;
+     (t<sub>1</sub>, t<sub>1</sub>), &nbsp; 
+     (t<sub>2</sub>, t<sub>0</sub>), &nbsp; 
+      &nbsp; &nbsp; &nbsp; ..................&nbsp; 
+      (t<sub>n-1</sub>, t<sub>n-1</sub>), &nbsp;  
+
+</I>
+</div>
+
+<BR> 
+<p align ="justify"> 
+
+Where each t<sub>i</sub> &nbsp; is a basic MPI datatype  and each d<sub>i</sub> is a displacement in 
+bytes.Recall that the basic MPI datatypes are predefined in C : MPI_INT, MPI_CHAR, MPI_FLOAT etc.....
+The MPI derived datatypeis used to incorporate a, b, & c into a single message. <BR> <BR>
+
+MPI_Pack and MPI_Unpack library calls can be used to grouping of data. MPI_Pack allows one to 
+exlicitly store non-contiguous  data in contiguous memory locations, and MPI_Unpack can be used to 
+copy the data from a contiguous buffer into non-contiguous  memory locations. <BR> <BR>
+
+Process with rank reads the values and <B> broadcast </B> these values to other process. The process with 
+rank 0 uses MPI_Pack library calls and other processes use MPI_Unpack library calls.
+
+</P>
+</LI>
+
+<LI><B>Input</B> <Br>
+
+<!-- *************** input starts **************** -->
+
+<P><B>Input file 1</B> </p> 
+
+<p align ="justify">The Process with rank 0 reads the three values <I> a, b, </i> and <i> n. </i> 
+format. </p> 
+
+</LI>
+
+
+<Li>
+ <p> <B>Output</B> </p> 
+
+	
+<p align ="justify"> Process   with Rank greater than 1  prints the output values <I> a, b, </i> and <i> n </i>  </p> 
+
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+<a href="ddtypes-group-topology-mpi.html"><IMG src="./top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- ****************** Example 4.5 Ends Here *********************** -->
+
+
+
+<!-- ***************** Example 4.6 starts here *********************** -->
+
+<A NAME="dd-grp-top-id06"></A> 
+  <table border="0"  height="28">
+  <tbody>
+    <tr>
+     <td width="125" height="1" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.6:  &nbsp; &nbsp; &nbsp; </b> <BR> <BR> <BR></td>
+    <td width="700" height="1" align="left">
+     <b>  Description for implementation of MPI program to construct a communicator
+    consisting group of diagonal processors  in a square grid of  processors using MPI<i> group</i> library calls</b>
+<BR>
+ <!-- **************** download  Starts here ******************* -->
+
+
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/multiple-communicators.c">multiple-communicators.c</A>
+  </FONT></I>)
+
+ <!-- **************** download  Ends here ******************* -->
+
+     </td>
+     
+   </tr>
+</tbody>
+</table>
+
+
+<table border="0"  height="28"><tbody>
+    <tr>
+     <td>
+<BLOCKQUOTE>
+
+<font size="2" face="verdana">
+
+<LI><B>Objective</B> </LI>
+
+ <p align ="justify"> Write a MPI program to create a diagonal communicator group of processors in a
+     square grid processes  on cluster. </p>
+
+	
+<LI><B>Description</B> </LI>
+
+<P align = "justify"> <span class ="content">
+<B> Bakground : Communicators, Contexts  & Groups </b>
+
+In MPI, there are two types of communicators : <b> Intra-communicators </b> and <b> inter-comminicators </b>.
+<B> Intra-communicators </b> are essentially a collection of processe that can send messages to each other and engage in 
+collective communication opertions. <B> Inter-communicators </b>, are used for sending messages between processes belonging
+to the disjoint intra-communicators. A minimal (<B> intra </b> ) communicator is composed of 
+</span> </p>
+
+<li> a group </li>
+<li> a context </li> 
+
+<P align = "justify"> <span class ="content">
+A <b> group </b> is an ordered collection of porcesses. If a group consists of  <i> p </i>  processes, each processe in the 
+group is assigned a unique <b> rank </b>, which is  just a nonnegative integer in the range 0, 1, 2, ......, p-1. 
+Groups and communicators are opaque objects
+<BR> <BR>
+
+A context is a system defined  object that uniquely idnetifies a communicator. Two distinct
+communicators will have different contexts, even if they have identical underlying  groups.
+A <B> context </b> is system defined tag that is associated with a  group in a communicator.
+Contexts are used  to insure that  messages are  received correctly. <BR> <BR>
+
+In MPI environment, no messages can be received by any process unless the communicator used by the sending process 
+is idnetical to the communicator used by the receving process which is true for MPI point-to-Point and 
+Collective Communications. Since distinct communicators use the distinct contexts, the system can check whether 
+two communictors are identical by simply checking whether the <B> contexts </b> are identical.
+Contexts are not explicitly used in any MPI functions. Rather they are implicitly associated with groups when
+communicators are created.
+
+ <Br> <BR>
+
+To understand <B> contexts </b> better, one can define a group to be an array, a group, and the rank of process <i> i </i> in the group would 
+correspond to rank group[1] in MPI_COMM_WORLD. Foe example, MPI program running with <B> nine </b> processes, i.e. MPI_COMM_WORLD consits of nine processes. It is convenient to view nine processes as a 3X3 grid in which second row communicator composed of processes 3,4, and 5 from MPI_COMM_WORLD. Thus, group[0] = 3; group[1]= 4; group[2] = 5
+and process 0 in the second row communicator would be the same as process 3 in MPI_COMM_WORLD, process 1 the 
+same as process 4, and process 2 the same as process 5. <BR> <BR>
+
+
+Let us assume that we have created a communicator whose underlying group consists of the processes in the first 
+row of our virtual grid. Supose the MPI_COMM_WORLD consits of <I> p </i> processes, where q<sup>2</sup> = p. 
+Let us also suppose that our first row of prcesses consists of the processes with ranks <i> 0,1,2,...., q-1.</i>
+Now a group of new communicators can be created using MPI_Comm_Group, MPI_Group_incl, MPI_Comm_Create library 
+calls. MPI_Coom_Create is collecive operation and associates a context with the group and creates communicator.
+<BR> <BR>
+
+Assume that the number of processors is a perfect square. The processors in the 
+    processor grid are numbered in row-wise fashion. An example of a square grid of 
+    processors (<I>p</I> = 9) is described in Figure 4. Diagonal communicator consists of  
+    diagonal processors in the square processor grid. </P>
+
+
+<p align="Center">
+<IMG SRC="collective-comm-comp-images/diag-process-communicator.gif" HEIGHT="300" WIDTH="360" ALIGN="center"><I>&nbsp;</I> <BR>
+
+<B>Figure 6. Communicator consists of diagonal processors in a 3 x 3 square 
+   processor grid&nbsp; </B>  </p> <BR>  
+<p align ="justify">
+ The processors P<SUB>0</SUB>,P<SUB>4</SUB>, P<SUB>8</SUB>) along the diagonal 
+    form a diagonal communicator as shown in Figure 4.6. The ranks of the processors in the diagonal      
+    communicator will be (0,1,2). Use special ( <I>MPI_Comm_group, MPI_Group_incl,</I>and <I>MPI_Comm_create )
+   </I> MPI<I> </I> library calls. </span> </p> 
+</LI>
+
+<LI><B>Input</B>  </LI>
+
+
+<p> None </p> 
+
+
+<Li>
+ <p> <B>Output</B> </p> 
+</li>
+	
+<p align ="justify"> Print the list of Process in the diagonal communicator on each process.
+</p></font>
+
+<DIV align="right">
+<a href="ddtypes-group-topology-mpi.html"><IMG src="./top.gif" border="0" width="13" height="13"></a>
+</DIV>
+</TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+
+
+<!-- *********************** Example 4.6 Ends Here ************************ -->
+
+
+
+<!-- **************** Example 4.7 Start Here ***************** -->
+
+
+<A NAME="dd-grp-top-id07"></A> 
+  <table border="0"  height="6">
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.7:  <BR>  <BR> <BR></b> </td>
+    <td width="700" height="2" align="left">
+     <b>  Write MPI program to construct a distinct communicators from group of square grid of 
+    processes using MPI_Comm_Split library calls </b>
+
+ 
+ <!-- ***************** download  Starts here ****************** -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/multiple-communicators-split.c">multiple-communicators-split.c</A>
+  </FONT></I>)
+  &nbsp;
+
+ <!-- ***************** download  Ends here ******************* -->
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+
+<table  border="0" height="28">
+<tbody> 
+<tr><td>
+<blockquote>
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <p align ="justify">  Write MPI program to construct a distinct communicators from group of square grid of 
+    processes using MPI_Comm_split library calls 
+</P>
+</LI>
+
+</A>
+<LI><B> Description </B>
+										
+<p align ="justify"> 
+
+MPI provides a function <B>  MPI_Comm_split </B> that can create several communicators simultaneously. The library
+call <b> MPI_Comm_split </b>creates required number of new communciators, all of them having the same name. In the 
+above example, it creates <i> q </i> new communciators where <I>q</i>*<i>q</i> = <i>p</i> having the same name
+as <i> my_row_comm </i>. For example if p = 9, the group underlying <i> my_row_comm </i> will consits of processes
+{0,1,2} on processes 0,1, and 2. On processes {3,4,5} and on processes 6,7, and 8, it will consist of 
+processes {6,7,8}, it will  consist of  processes {6,7,8}. MPI_Comm_Split is a collective call, and it must be called by all the process in <i> old_comm (MPI_Comm).</i>
+
+</P>
+</LI>
+
+<LI><B>Input</B>
+
+<!-- ************** input starts ****************** -->
+
+<P><B>Input file </B> </p> 
+
+<P> None </p> 
+
+</LI>
+
+
+<Li>
+ <p> <B>Output</B> </p>
+
+	
+<p align ="justify"> Each Process   print the  Rank in old and new communicator </p>
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+<a href="ddtypes-group-topology-mpi.html"><IMG src="./top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</td>
+ </tr>
+
+</tbody></table>
+
+
+<!-- ******************** Example 4.7 Ends Here ****************** -->
+
+
+<!-- ***************** Example 4.8 Start Here ******************* -->
+
+
+ <A NAME="dd-grp-top-id08"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 4.8:  <BR>  <BR> <BR> <BR> </b> </td>
+    <td width="700" height="2" align="left">
+     <b>  Write MPI program to construct virtual topology i.e., Cartesian topology from a group of
+      processes in a square grid of processes and print the rank in the Cartesian communicator. </b>
+
+ 
+ <!-- ***************** download  Starts here ***************** -->
+<BR> 
+(Download source code :
+ <font color="#33CC00">
+<I>
+ <A href="./ddtypes-group-topology-mpi-codes/multiple-communicators-cartesian.c">multiple-communicators-cartesian.c</A>
+  </FONT></I>)
+  &nbsp;
+
+ <!-- **************** download  Ends here **************** -->
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ </p>
+
+ 
+
+<table  border="0" height="28">
+<tbody> 
+<tr>
+<td>
+
+
+<font size="2" face="verdana">
+
+<LI><B> Objective </B>
+     <P align = "justify"> <span class ="content">
+
+ Write MPI program to construct virtual topology i.e., Cartesian topology from a group of processes in a square grid of processes and print the rank in the Cartesian communicator.</I></B>
+</span> </P>
+</LI>
+
+</A>
+<LI><B> Description </B>
+										
+<P align = "justify"> <span class ="content"> Background :<BR>  
+
+MPI provides <B> topology </b> which is a mechanism for associating different addressing schemes wih the 
+processes belonging to a group. MPI toplogies are virtual topologies - there may be no simple 
+relation between the process structure implicit in a virtual toplogy and the actual underlying physical 
+structure of the paralle computing system. MPI supports two types of virtual toplogies that can be created in 
+MPI -  a Cartesian or gid toplogy and a graph toplogy. conceptually toplogies form a special case of graph
+topolgies. To define cartesian toplogies, a square grid structure can be associated with  MPI_COMM_WORLD and 
+the following information is required. 
+</span> </p> </li>
+
+<ul>
+
+<li> The number of dimensions in the grid (Two) </li>
+<li> 
+<P align = "justify"> <span class ="content">
+The sie of each dimension i.e. the number of rows and the number of columns (Assume that <i> q </i>
+      rows and <i> q </i> columns in a square grid. 
+
+</span> </p>
+</li>
+
+<li> 
+<P align = "justify"> <span class ="content">
+Periodicity of each dimension which indicates whether the first entry in each row of column is <I> 
+     adjancent </i> to the last entry in that row or column, respectively. (For examples such as 
+     <i> circular shift </i> opertions, second dimension should be periodic. 
+</span> </p>
+ </li> 
+<li> 
+<P align = "justify"> <span class ="content">
+MPI also gives the user option of allowing the system to optimize the mapping of the grid of processes to the underlying physical processors. </span> </p> </li> 
+
+
+<P align = "center"> <span class ="content">
+<IMG SRC="./ddtypes-group-toplogy-images/mpi-cartesisn-topology.jpg" HEIGHT="300" WIDTH="360" ALIGN="center"><I>&nbsp;</I> <BR> <BR>
+
+<B>Figure 2. A two-dimensional Cartesin Decomposition of a domain, also showing a shift by one in the 
+ first dimension. </B> </span> </p>   
+ <BR> 
+
+
+<P align = "justify"> <span class ="content">
+A two-dimensional Cartesisn  decomposotion is shown in Figure 2 which is simply a decomposiiton in 
+the natural coordinates (e.g. x, y) directions. Each element of the decomposition  (rectangles
+in the figure 2) is labled by a coordinate tuplie indicating the position ofthe element of each of the 
+coordinate  directions. Tuples give the coordinates as would be returned by MPI_Get_coords. <BR> <BR>
+
+In this the communicator <I> grid_comm </i> is required and it contains all the processes in 
+MPI_COMM_WORLD (possibly reordered) and a two dimensional cartesian coordinate system that will be 
+associated with it. <I> MPI_Cart_Coords </i> library call is used to determine its coordinates.
+Given the coordinates of a proces, MPI_Cart_rank returns the rank of the process <I> 
+ grid_rank. </i> MPI_Cart_Create creates a new communicator <I> cart_comm </i>, by caching a 
+Cartesian topology with <i> old_comm </i>.
+
+with the above information, a simple code is developed to demonstrate the MPI toplogies which can be used
+in Fox's algorithm for Matrix into Matrix Multiplication.
+
+</span> </P>
+</LI>
+</ul>
+<LI><B>Input</B><p> 
+
+<!-- ******************** input starts ************************* -->
+
+<P><B>Input file </B> </p> 
+
+<P> None </p> 
+
+</LI>
+
+
+<Li>
+ <p> <B>Output</B> </p>
+
+	
+<p align ="justify"> Each Process   print the  Rank in <I> cart_comm</i></p>
+</li>
+</font>
+</blockquote>
+
+<DIV align="right">
+<a href="./ddtypes-group-topology-mpi.html">
+ <IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+</td>
+</tr>
+
+</tbody></table>
+
+
+<!-- ********************* Example 4.8 Ends Here ************************** -->
+
+
+
+
+</TD></TR>
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

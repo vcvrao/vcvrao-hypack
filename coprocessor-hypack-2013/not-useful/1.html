@@ -1,0 +1,2984 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from Octobe6 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,
+ C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css"    type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css"    type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript 
+       src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013
+               src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+    
+           <A class=menul
+	      href="./../hypack13-mode03-coprocessor-lab-overview.html">
+              &#149; Mode-3 Coprocessors  </A>   
+      
+	   <A class=menul
+	       href="./../hypack13-mode03-coprocessor-arch-software.html">
+               &#149; Arch. Software </A>
+            
+	   <A class=menul  
+              href="./../hypack13-mode03-coprocessor-compiler-vect.html">
+              &#149; Compiler &amp;  Vect.</A>
+	
+			<!-- ** -->
+	   		<A class=menulslct  
+              href="./../hypack13-mode03-coprocessor-prog-env.html">
+              &#149; Prog. Env. </A>
+			  <!-- ** -->
+
+                
+                <A class=menul
+                 href="./../hypack13-mode03-coprocessor-benchmarks.html">
+                 &#149; Benchmarks </A>
+                
+              
+            <A class=menul
+	     href="./../hypack13-mode03-coprocessor-power-perf.html">
+             &#149; Power-Perf. </A>
+
+           <A class=menul 
+	     href="./../index.html">
+             &#149; Home</A>
+
+	
+<!-- ****************** left section code for about link End  here ************* -->
+	
+         <BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+         </DIV><BR><BR><BR><BR></TD>
+                
+ <TD class=rightctnt> 
+
+<TABLE cellSpacing=0 cellPadding=0  border=0>
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+<DIV align=left> <font size="3"  Color="black" face= "Arial">
+    <B>  Prog. on Multi-Core Processors with Intel Xeon Phi Coprocessors </b> </font> 
+</DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<table  border="0"  width = "100%" height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+
+   <P align=justify><span class="content"> 
+
+   Example   programs using 
+   compiler pragmas, directives, function calls, and environment variables, Compilation and execution
+   of OpenMP programs, programs numerical and non-numerical computations
+   are discussed. </font>
+  </span> </p>
+
+  <a name ="xeon-phi-mat-mat-native-multiply-01"> </a>
+
+
+<P align=justify><span class="content">
+
+   <a href= "#coproc-openmp-4x-Overview ">
+
+
+<font size="2" face="Arial" color="blue"> <B> 
+    OpenMP 4.X on Intel Xeon Phi  </a> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<font size="2" face="Arial" color="red">  <B> Document </b> : 
+  <a href ="./../OpenMP4.0.0-july2013.pdf"> 
+     <font size="2" face="Arial" color="blue"> <b>   OpenMP Version 4.0 July 2013 (pdf) </b> </font> </a>
+<BR> <BR>
+
+
+ <font size="2" face="arial" color="red">
+            <B>  Compilation : </B><font>  </span> &nbsp; &nbsp; 
+  <a href= "#coproc-compilation-vectorization-no-vectorization">
+  <font size="2" face="Arial" color="blue"> <B>(Sequential ):  Vectorize  &amp;   Not to Vectorize 
+ </b>  </font> </a> &nbsp; &nbsp; 
+
+<BR> <BR>
+
+ <font size="2" face="arial" color="red">
+            <B>  OpenMP Compilation   : </B><font>  </span> &nbsp; &nbsp; 
+
+
+<a href= "#coproc-openmp-env-compilation">
+  <font size="2" face="Arial" color="blue"> <B> 
+    OpenMP </b>  </font> </a>
+
+<BR> <BR>
+
+ <font size="2" face="arial" color="red">
+            <B>  OpenMP Execution  : </B><font>  </span> &nbsp; &nbsp;
+
+<a href= "#coproc-runtime-prog-env-execution">
+  <font size="2" face="Arial" color="blue"> <B> 
+     Set Up Run time Prog.  Env. </b>  </font> </a>
+&nbsp; &nbsp; 
+
+<a href= "#coproc-openmp-execution">
+  <font size="2" face="Arial" color="blue"> <B> 
+   Execution   </b>  </font> </a> &nbsp; &nbsp; 
+
+<a href = "#coproc-openmp-execution-with-script">  
+  <font size="2" face="Arial" color="blue"> <B> 
+   Script   </b>  </font> </a> &nbsp; &nbsp; 
+
+<BR> <BR>
+
+ <font size="2" face="arial" color="red">
+            <B>   Offload Information : </B><font>  </span> 
+
+   <a href= "#coproc-compiler-offload-pragmas-report">
+  <font size="2" face="Arial" color="blue"> <B> 
+    Compiler Offload Pragma &amp; Report   </b>  </font> </a>
+&nbsp; &nbsp;
+
+<a href = "#coproc-offload-pragmas-clauses"> 
+<font size="2" face="Arial" color="blue"> <B> 
+    Compiler Offload Clauses   </b>  </font> </a> 
+<BR> <BR>
+
+ <font size="2" face="arial" color="red">
+            <B>   Tuning &amp; Performance : </B><font>  </span> 
+
+   <a href= "#coproc-kmp-thead-affinity">
+  <font size="2" face="Arial" color="blue"> <B> 
+   KMP Thread Affinity   </b>  </font> </a>
+&nbsp; &nbsp;
+
+<a href = "#coproc-memory-alignment"> 
+<font size="2" face="Arial" color="blue"> <B> 
+    Memory Alignment     </b>  </font> </a> 
+&nbsp; &nbsp; 
+
+
+<a href = "#coproc-kmp-thread-affinity-script">  
+  <font size="2" face="Arial" color="blue"> <B> 
+   KMP-Script   </b>  </font> </a> 
+<BR>
+<blockquote> <blockquote><blockquote> <blockquote>
+ <a href = "#coproc-tuning-perf-summary"> 
+ <font size="2" face="Arial" color="blue"> <B> 
+  Summary   </b> </font> </a>
+ </blockquote> </blockquote> </blockquote> </blockquote>
+<HR>  
+</span> </p>
+
+
+ <font size="2" face="Arial" color="red"> <B> Matrix Computation Codes </b>  </font> 
+ <BR> <BR>
+
+<!-- **************** Example 1 *********** -->
+    <a href="#coproc-openmp4x-1Darray-reduction-example01">
+   <font size="2" face="Arial" color="blue"> <B> Example 1 : Reduction Operation for one dimensional integer array   </b>  </font> </a>  <BR> <BR>
+
+<!-- **************** Example 2 *********** -->
+    <a href="#coproc-openmp4x-2Darray-reduction-example02">
+   <font size="2" face="Arial" color="blue"> <B> Example 2 : Reduction Operation for two dimensional integer array   </b>  </font> </a>  <BR> <BR>
+
+<!-- **************** Example 3 ********* -->
+ <a href="#coproc-openmp4x-vect-vect-multiply-example03">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 3 : Vector-Vector Multiply  </b>  </font> </a> 
+<BR> <BR>
+  
+<!-- **************** Example 4 *********** -->
+ <a href="#coproc-openmp4x-mat-mat-addition-example04">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 4.  Matrix - Matrix Addition   </b>  </font> </a> 
+
+ <BR> <BR>
+<!-- **************** Example 5 *********** -->
+ <a href="#coproc-openmp4x-mat-mat-multiply-example05">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 5.  Matrix - Matrix Multiply   </b>  </font> </a> 
+ <BR> <BR>
+
+<!-- **************** Example 6 ********* -->
+ <a href="#coproc-openmp4x-vect-vect-addition-perf-example06">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 6 : Performance of Vector-Vector Multiply </b>  </font> </a> 
+<BR> <BR>
+
+<!-- **************** Example 7 *********** -->
+ <a href="#coproc-openmp4x-mat-infini-norm-example07">
+   <font size="2" face="Arial" color="blue"> 
+   <B> Example 7.  Infini Norm of A Square Matrix   </b>  </font> </a> 
+
+ <BR> <BR>
+
+<!-- **************** References  *********** -->
+  <P align=justify><span class="content"> <font size="2" face="arial" color="red">
+            <B>  References : </B><font>  </span> &nbsp; &nbsp; 
+
+  <a href="../reference-hypack-2013/reference-overview-hypack13-mode03-xeon-phi-coproc.html"> 
+  <font size="2" face="Arial" color="blue"><B> Xeon Phi Coprocessor </b>  </font> </a> 
+<BR>
+
+<HR>
+
+
+</td>
+</tr>
+
+
+<!-- ********************** Sub-title topics Ends here *************************** -->
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> The key specifications of Intel Xeon Coprocessor </b> </font> </font></DIV>
+
+</TD> 
+</tr>
+
+<Tr>
+<Td>
+
+<!-- ****************** table for loop ************************* -->
+    <TABLE align = "center" cellPadding=3 width="300"  border=1>
+     <tbody>
+     <P align="justify"><span class = "content">
+         <tr><B>
+           <td><b> Specification </b> </td>
+           <td><b> Feature</b> </td>
+         </B></tr>
+         <tr>
+           <td> Clock Frequency </td>
+           <td> 1.091 GHz</td> 
+	</tr>
+         <tr>
+           <td> No. of Cores </td>
+           <td> 61 </td> 
+	</tr>
+        <tr>
+           <td> Memory Size / Type </td>
+           <td> 8 GB/GDDR5 </td> 
+	</tr>
+
+         <tr>
+           <td> Memory Speed  </td>
+           <td> 5.5 GT/sec</td> 
+	</tr>
+
+            <tr>
+           <td> Peak DP/SP </td>
+           <td> 1.065/2.130 teraFLOP/s</td> 
+	</tr>
+	<tr>
+           <td> Peak Memory Bandwdith </td>
+           <td> 352 GB/s</td> 
+	</tr>
+       </span> </p> 
+
+       </td>
+      </tr>
+
+     </tbody>
+    </table>
+</TD>
+</TR>
+
+<TR>
+<TD>
+    <DIV ALIGN=right>
+         <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+        <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+        </DIV>
+
+</TD>
+</TR>
+
+  <!-- *********************** table for loop  ************************** -->
+
+ <!-- *********** Intel Xeon-Phi Prog. Summary Ends ******** -->
+
+
+<!-- ************ OpenMP 4.0 Summary Starts ************* -->
+
+
+<TR>
+<TD>
+ <a name = "coproc-openmp-4x-Overview"> </a>
+</TD>
+</tR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+ <DIV align=Left><font size="2" color ="black" > 
+<B> An Overview of OpenMP 4.0 </b> </font> </font></DIV>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+<p align = "justify"> <span class = "content">
+One of the non-shared memory model is supported On Intel Xeon host and Intel Xeon Phi Coprocessor, using offload pragmas in the application.  The compiler handled the application data at runtime and sends data buffer over to coprocessors by logically ordering the data parameters as provided by the application. The other non-shared memory model is virtual shared memory model in which system level runtime support library is used to maintain the coherency between the host and coprocessor shared memory address space.  
+The non-shared memory model is supported by OpenMP 4.0. Intel Compiler supports  non-shared programming model  and Intel OpenMP 4.0 Programming sticks to OpenMP 4.0 syntax. Intel compiler had proprietary language extensions that were implemented to support non-shared programming model.
+<BR> <BR>
+
+In the non-shared programming model, the main program starts on the host and  the data and computation can be sent to Intel Xeon Phi through Offload pragmas when the data exchange between the host and the coprocessor are bit-wise copyable.   The bitwise copyable includes scalars, arrays and structures without indirections. 
+
+<BR> <BR> At runtime, the compiler takes care-off copying data back and forth between the host and the coprocessor around the offload block indicated by the pragmas  in view of Coprocessor memory space is separate from the host memory space. 
+
+<BR> <BR>
+The data selected for offload may be implicitly copied if used inside the offload code block provided the variables are in the lexical scope of the code block performing offload and variable  listed explicitly as part of the OpenMP 4.0 pragmas.
+
+<BR> <BR>
+
+
+In OpenMP 4.0, the same code can run  on host processor with or without a coprocessor, the compiler runtime determines whether the coprocessor is present on the system or not. So if the coprocessor is not available or inactive during the offload call, the code fragment inside the offload code block may execute on the host as well.
+
+<BR> <BR>
+
+
+To understand the new language extensions of OpenMP 4.0, for non-shared memory programming, please refer to  OpenMP 4.0 Technical Report (TR) 
+i.e. <a href = "www.openmp.org/mp-documents/TR1_167.pdf"> <font Color ="blue">
+ www.openmp.org/mp-documents/TR1_167.pdf </font> </a>. 
+In order to understand the language extensions defined in Open4.0 to deal with coprocessor, we need to
+understand some terminologies associated with the specification to explain the coprocessor interaction and these are explined below. 
+
+<font color ="red" size ="2"> <B> Terminoloies & Notations </B> </font> <BR> 
+<ul>
+
+<li>
+<B> Device: </b> 
+
+The coprocessor with its own memory. A device could have one or more coprocessors or host. A host device is the device executing the main thread.A target device executes the offloaded code segment
+</li>
+
+<li>
+<B> Offload: </b> The process of sending computation from host to target. 
+</li>
+
+<li>
+<B> Data Environment: </b>
+The variables associated with a given execution environment.  
+</li>
+
+<li>
+<B>Device data environment : </b> A data environment associated with a target data or target construct. 
+</li>
+
+<li>
+<b>Mapping Variable : </b> Mapping of a variable in a data environment to a variable in a device data environment. The original and corresponding variable may share storage. 
+</li>
+<li>
+
+<b> Mappable type: </b>  A valid ‘data type’ for a mapped variable. 
+</li>
+
+</ul>
+
+<BR>
+
+<!-- ********* offload Function Starts ********************* -->
+
+<font Color ="red"> <b> Offload Function and Data Declaration Constructs </b> </font> <BR> <BR>
+<p align = "justify"> <span class = "content">
+<B> Target Data Declarations: </b> Declares device data environment for the scope of the target code block. 
+This allows creation of  versions of specified function or data that can be used inside a target region 
+executing on the coprocessor.  <BR>  <BR>
+<font Color ="red"> <B> C/C++ </b> </font>  <BR>
+<B> #pragma omp declare target </B> <I> new-line </i>   <BR> <BR>
+  &nbsp; &nbsp; <i>  [function-definition-or-declaration] </i> <BR>
+ <BR>
+<B> #pragma omp end  target </B> <I> new-line </i>   <BR> <BR> 
+
+</span> </p>
+
+<HR>
+<! -- ********** offload Function Ends ***************** -->
+<BR>
+
+<!-- ********* offload Function Constructs Starts ********************* -->
+
+<font Color ="red"> <b> Function Offload and Execution Constructs: </b> </font> <BR> 
+<p align = "justify"> <span class = "content">
+<B> Target Data Declarations: </b> 
+In order to execute on a coprocessor, a &ldquo;target&rdquo; device must be available on the host
+ system running the code. For non-shared memory model, the host application executes the initial program which 
+spawns the master execution thread called &ldquo;initial device thread&rdquo;. The OpenMP pragma 
+&ldquo;target&rdquo; provides the capability to offload computations to coprocessor(s).
+</span> </p>
+
+<ul>
+
+<li>
+<p align = "justify"> <span class = "content">
+A target region begins as a single thread of execution and executes sequentially,  as if enclosed in an implicit task  region, called the initial device task region.
+</span> </p>
+</li>
+
+<li>
+<p align = "justify"> <span class = "content">
+When a target construct is encountered, the target region is executed by the  implicit device task
+</span> </p>
+</li>
+
+<li>
+<p align = "justify"> <span class = "content">
+The task that encounters the target construct waits at the end of the construct until  execution of the region  completes. If a coprocessor does not exist, or is not supported by the  implementation, or cannot execute the target  construct  then  the target region is executed by the host device. 
+</span> </p>
+</li>
+
+<li>
+<p align = "justify"> <span class = "content">
+The data environment is created at the time the construct is encountered  if needed. Whether a construct creates a  data environment is defined in the description of the construct
+</span> </p>
+</li>
+
+</ul>
+
+<font Color ="red"> <B> C/C++ </b> </font>  <BR>
+<B> #pragma omp  target </B> <I>  [clause[[,] clause],...] new­line </i>   <BR> <BR>
+  &nbsp; &nbsp; <i>  parallel­loop­construct | parallel­sections­construct  </i> <BR>
+  <BR> 
+
+Where Clauses are :  <BR> <BR>
+&nbsp; &nbsp; 
+<B> device<I>(scalar-integer-expression)</i> </B> <BR>
+
+<blockquote>
+The integer expression must be a positive number to differentiate various coprocessor 
+available on a host. If no device is specified, the default device is determined by internal 
+control variable (ICV) named num-var.
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> device<I>map(alloc | to | from | tofrom: list), Scratch(list):</i> </B> <BR>
+
+<blockquote>
+These are data motion clauses that allow copying and mapping of variables or common 
+block to/from host scope to target device scope
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> if(scalar-expr):</i> </B> 
+<BR>
+
+<blockquote>
+  If the scalar-expression evaluates to false, the new device environment is not created.
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> Num_threads( list ) 
+</i> </B> 
+<BR> 
+ 
+<p align = "justify"> <span class = "content">
+
+The &ldquo; target &rdquo;  directive creates a device data environment and executes the
+ code block on the target device.  The target region binds to the enclosing parallel or  
+task region. It provides a superset of &ldquo; target data &rdquo;  constructs described later and describes
+ data as well as the code block to be executed on the target device. 
+The master task waits for the coprocessor to complete the target region at the  end of the
+ constructs. When an &ldquo; if &rdquo;  clause is present and if the logical expression inside the if 
+clause evaluates to false, the target region is not executed by the device. When 
+a num_threads clause is present, the <I> nthreads-var </i> in the coprocessor 
+environment is assigned the value list. 
+
+<BR> <BR>
+
+<ul>
+<li>
+If a target, target update, or target data construct appears within a target region ten the construct is ignored. 
+</li>
+
+<li>
+At most one device clause may appear on the directive.  The device expression must evaluate to a positive integer value. 
+</li>
+
+<li>
+At most one &ldquo; if &rdquo; clause can appear on the directive. 
+</li>
+
+<li>
+The result of an <FONT SIZE = 2 COLOR="#FF00FF"> <B> omp_set_default_device, </B> </font>
+
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> omp_get_default_device, </b> </font>
+ or 
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> omp_get_num_devices </b> </font>
+routine called within a target region is unspecified. The effect of an access to a 
+<FONT SIZE = 2 COLOR="#FF00FF"> <B> threadprivate </b> </font> variable in a target region is unspecified
+</li>
+
+<li>
+A variable referenced in a <FONT SIZE = 2 COLOR="#FF00FF"> <B> target construct </b> </font>
+ that is not declared in the construct is implicitly treated as if it had appeared in a <FONT SIZE = 2 COLOR="#FF00FF"> <B> map </b> </font> clause with a map-type of 
+ <FONT SIZE = 2 COLOR="#FF00FF"> <B>tofrom</b></font>.
+</li>
+
+<li>
+A variable referenced in a target region but not the target construct that is not declared in the target region, must appear in a  <FONT SIZE = 2 COLOR="#FF00FF"> <B> declare target </b> </font>  directive. 
+</li>
+
+<li>
+C/C++ Specific:  A throw executed inside a <FONT SIZE = 2 COLOR="#FF00FF"> <B> target </b> </font> 
+region must cause execution toresume within the same <FONT SIZE = 2 COLOR="#FF00FF"> <B> target </b> </font>region, and the same thread 
+that threw the exception must catch it. 
+</li>
+
+</ul>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+<TABLE align = "center" cellPadding=3 width="250"  border=1>
+     <tbody>
+     
+         <tr><B>
+           <td><b> ICV Name </b> </td>
+           <td><b> Routines </b> </td>
+         </B>
+        </tr>
+
+         <tr>
+           <td> <B> device-num-var </td>
+           <td> omp_set_device_num(), <BR>
+                omp_get_device_num(); </td> 
+	</tr>
+
+     </tbody>
+    </table>
+
+</TD>
+</TR>
+
+<!-- ****************** table for loop ************************* -->
+    
+
+<!-- VCVRAO -->
+
+<TR>
+<TD>
+
+ <P align ="justify"><span class = "content">
+The extension also provides routines to set and get runtime environment settings
+(referred to as internal control  variables ICV in the OpenMP spec). These are:
+</span> </p>
+
+ <HR> 
+
+
+<! -- ********** offload Function Construct Ends ***************** -->
+
+
+
+
+<!-- ********* Target Data Construct Starts ********************* -->
+
+<p align = "justify"> <span class ="contents">
+<font Color ="red"> <b> Target Data Construct Constructs </b> </font> <BR> <BR>
+
+<B> Target Data Declarations  : </b> Creates the device data environment for the scope of the target code block. If there are no &ldquo; device &rdquo; clause, the default device is determined by 
+<i> device-num-var</i>. <BR> <BR>
+
+<B>Syntax</B> 
+<BR>  
+<font Color ="red"><B>C/C++</b></font> <BR> <BR>
+<B> #pragma omp  target data </B> <I>  [clause[[,] clause],...] new­line </i>   <BR> <BR>
+  &nbsp; &nbsp; <i>  structured-block | parallel­sections­construct  </i> <BR>
+  <BR> 
+
+Where Clauses are :  <BR> <BR>
+&nbsp; &nbsp; 
+<B> device<I>(scalar-integer-expression)</i> </B> <BR>
+
+<blockquote>
+The integer expression must be a positive number to differentiate various coprocessor 
+available on a host. If no device is specified, the default device is determined by internal 
+control variable (ICV) named num-var.
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> device<I>map(alloc | to | from | tofrom: list), Scratch(list):</i> </B> <BR>
+
+<blockquote>
+These are data motion clauses that allow copying and mapping of variables or common 
+block to/from host scope to target device scope
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> if(scalar-expr):</i> </B> 
+<BR>
+
+<blockquote>
+  If the scalar-expression evaluates to false, the new device environment is not created.
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> <I> Strucrtured-block :  </i> </B> No branching in and out of the block of code is allowed.
+<BR> 
+ 
+<HR>
+<!-- ********* Target Data Construct Ends ********************* -->
+
+<BR>
+
+
+<!-- ********* Target Update Construct Starts ********************* -->
+
+<p align = "justify"> <span class ="contents">
+<font Color ="red"> <b> Target Update Constructs </b> </font> <BR> <BR>
+
+<B> Target Update Declarations  : </b>
+ This construct synchronizes the list items in the device data 
+environment consistent with their corresponding original list items. 
+<i> device-num-var</i>. <BR> <BR>
+
+<B>Syntax</B> 
+<BR>  
+<font Color ="red"><B>C/C++</b></font> <BR> <BR>
+<B> #pragma omp  target update </B> <I>  [clause[[,] clause],...] new­line </i>   <BR> <BR>
+ <BR> <BR>
+
+Where Clauses are :  <BR> <BR>
+&nbsp; &nbsp; 
+<B> device<I>(scalar-integer-expression)</i> </B> <BR>
+
+<blockquote>
+The integer expression must be a positive number to differentiate various coprocessor 
+available on a host. If no device is specified, the default device is determined by internal 
+control variable (ICV) named num-var.
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> device<I>map(alloc | to | from | tofrom: list), Scratch(list):</i> </B> <BR>
+
+<blockquote>
+These are data motion clauses that allow copying and mapping of variables or common 
+block to/from host scope to target device scope
+</blockquote>
+<BR>
+
+&nbsp; &nbsp; 
+<B> if(scalar-expr):</i> </B> 
+
+
+<blockquote>
+  If the scalar-expression evaluates to false, the new device enviornment is not created.
+</blockquote>
+
+&nbsp; &nbsp; 
+<B> <I> Strucrtured-block :  </i> </B> No branching in and out of the block of code is allowed.
+<BR> 
+
+<HR>
+<!-- ********* Target Update Construct Ends ********************* -->
+
+<!-- ***************** In brief OpenMP 4.0  Ends ************************ -->
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+ <P align="justify">
+
+
+       
+   <font color="#FF0011"> 
+          <B>  Using command  line arguments  (Vectorization &amp; No Vectorization )</b> </font> 
+          </p>
+
+          <P align ="justify"><span class = "content">
+
+The compilation and execution of a program for an Intel Many Integrated Core (MIC) 
+architecture coprocessor <font size = 2, face = " Courier New " color ="#FF00FF" > <B> (-mmic) </b> </font>
+also known as Intel Xeon Phi Coprocessor are given below. <BR> <BR>
+
+          <font size =2  color="red"> <B> Compilation  : </b> </font></b> <BR> <BR>
+</span> </p>
+
+</TD>
+</TR>
+
+
+<!-- ************* OpenMP 4.0 Summary Ends ************** -->
+
+
+<!-- *********** Compilation and No Vectorization ******** -->
+<TR>
+<TD>
+ <a name = "coproc-compilation-vectorization-no-vectorization"> </a>
+</TD>
+</tR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Compilation  of Sequential Programs : Compiler to Vectorize / NoVectorize</b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+
+<TR>
+<TD>
+ <P align="justify">
+
+    <!-- ***************** Using command line ************************ -->
+       
+   <font color="#FF0011"> 
+          <B>  Using command  line arguments  (Vectorization &amp; No Vectorization )</b> </font> 
+          </p>
+
+          <P align ="justify"><span class = "content">
+
+The compilation and execution of a program for an Intel Many Integrated Core (MIC) 
+architecture coprocessor <font size = 2, face = " Courier New " color ="#FF00FF" > <B> (-mmic) </b> </font>
+also known as Intel Xeon Phi Coprocessor are given below. <BR> <BR>
+
+          <font size =2  color="red"> <B> Compilation  : </b> </font></b> <BR> <BR>
+          
+<B> To compile the program :  Using Intel C Compiler with Vectorization </B>
+</span> </p>
+
+ 
+<P align="center"><span class = "content">
+
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mmic&nbsp;  -vec&nbsp; -report=3 &nbsp;  -O3&nbsp; &lt;program name&gt;  -O&nbsp; 
+       &lt;Name of executable&gt; </b>
+   </FONT>&nbsp;</I>  
+
+  </p>
+   
+For example to compile a simple <I> <FONT COLOR="#FF00FF"> seq-matrix-matrix-multiply.c </font></i> program user can type on the command line <BR> <BR>
+ 
+         
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mmic&nbsp;  -vec&nbsp; -report=3 &nbsp;  -O3&nbsp; &lt;seq-matrix-matrix-multiply.c &gt;  -O&nbsp; 
+       &lt;seq-matrix-matrix-multiply&gt; </b>
+   </FONT>&nbsp;</I>  <br> <BR>
+
+<B> To compile the program :  Using Intel C Compiler without  Vectorization </B> <BR> <BR>
+
+User can ask the complier not to vectorze the code  with 
+<I><FONT COLOR="#FF00FF"> <B>
+     &nbsp; -no -vec&nbsp;</b> </font> </i> option and execute the code. It is possible to get less 
+performance. <BR> <BR>
+         
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;  -mmic&nbsp;  -no-vec&nbsp; -vec -report=3 &nbsp;  -O3&nbsp; &lt;seq-matrix-matrix-multiply.c &gt;  -O&nbsp; 
+       &lt;seq-matrix-matrix-multiply&gt; </b>
+   </FONT> </I>  <BR>  <BR>
+
+ </span> </p>
+
+<P align="justify"> <span class = "content">       
+<B> To compile the program using Makefile Utility,   Using Intel C Compiler with Vectorization </B>
+</span> </p>         
+
+          <P align="center"> <FONT COLOR="#FF00FF"><i> <B> make </b> </i></font>  </p> 
+          <P align="left"> Note: If the Makefile has 
+          some extension like <font color="#FF00FF"> <B> Makefile_C </B>  </font>
+          then user is required to type
+            </p>
+
+          <P align="center"> <font color="#FF00FF"><i><B> make -f Makefile_C  </b> </font>
+          (instead of simply typing make)</i><CENTER>  </p>
+
+      <P align="center"> <font color="#FF00FF"><i><B> make -f make -f Makefile.OFFLOAD </b> </font>
+          (Compile using OFFLOAD mode)</i><CENTER>  </p>
+
+      <P align="center"> <font color="#FF00FF"><i><B> make -f make -f Makefile.NATIVE </b> </font>
+          (Compile using NATIVE mode)</i><CENTER>  </p>
+
+      <P align="center"> <font color="#FF00FF"><i><B> make -f Makefile.OFFLOAD clean </b> </font>
+          (Clean the Object files &amp; Binaries )</i><CENTER>  </p>
+
+<HR>
+<!-- ........... *** Compiler Flags ***** ........ -->
+
+ 
+<P align="justify"><span class = "content">
+
+ The details ofr syntax of the command to compile the program on Intel Xeon Phi are given in the 
+ following table. 
+
+</span> </p>
+
+</tbody>
+</table>
+
+<!-- ****************** table for loop ************************* -->
+    <TABLE align = "center" cellPadding=3 width="475"  border=1>
+     <tbody>
+     <P align="justify"><span class = "content">
+         <tr><B>
+           <td><b> Compiler flag </b> </td>
+           <td><b> Purpose </b> </td>
+         </B></tr>
+         <tr>
+           <td> <font size = 2, face = " Courier New " color ="#FF00FF" > <B>
+            -mmic </b> </font>
+            </td>
+
+           <td> requests the code to be generated for an Intel MIC architecture processor 
+                (<font size = 2, face = " Courier New " color ="#FF00FF" > 
+             <B>  -mmic </b> </font> </b> ) also known as Intel Xeon Phi Coprocessor.
+              </td> 
+	</tr>
+         <tr>
+           <td> <FONT COLOR="#FF00FF"> <B>  -vec -report=3 </b>  </font> </td>
+           <td> Generate a Vector Report </td> 
+	</tr>
+
+         <tr>
+           <td> <FONT COLOR="#FF00FF"> <B>  -no-vec  </b>  </font> </td>
+           <td> Not to Vectorize the code </td> 
+	</tr>
+
+        <tr>
+           <td> <FONT COLOR="#FF00FF"> <B> -O3  </b> </font> </td>
+           <td> Standard Optimisation technique </td> 
+	</tr>
+
+         <tr>
+           <td>   <FONT COLOR="#FF00FF"> <B> seq-matrix-matrix-multiply </b> </font></td>
+           <td> Writes the resulting excutable  file to 
+          <FONT COLOR="#FF00FF"> seq-matrix-matrix-multiply </font>
+     </td> 
+	</tr>
+   <tr>
+   <td>   <FONT COLOR="#FF00FF"> <B> run </b> </font></td>
+           <td> Writes the resulting excutable  file to 
+          <FONT COLOR="#FF00FF"> run </font>
+   </td> 
+   </tr>
+
+   </tbody>
+   </table>
+
+<!-- *********************** Table for loop  ************************** -->
+</td>
+</tr>
+<TR><TD><HR></TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- **************** Compilation Starts ******** -->
+<TR>
+<TD>
+<BR>
+<a name = "coproc-openmp-env-compilation"> </a>
+</TD>
+</tR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Compilation  of Programs : OpenMP  -  Compiler to Vectorize </b>
+ </font></DIV>
+</TD>
+</TR> 
+
+
+
+<TR>
+<TD>
+ <P align=justify>
+
+    <!-- ............. Using command line .............. -->
+       <BR> 
+   <font color="#FF0011"> <B>  Using command  line arguments  </b> </font>  </p>
+
+     <P align ="justify"> <span class = "content">
+The compilation and execution of a program for an Intel Many Integrated Core (MIC) 
+architecture coprocessor <font size = 2, face = " Courier New " color ="#FF00FF" > <B> (-mmic) </b> </font>
+with OpenMP framework is  given below.     
+</span> </p>
+
+ 
+<P align="center"><span class = "content">
+
+<I><FONT size = 2 COLOR="#FF00FF"> <B>
+     # icc &nbsp; -openp &nbsp;  -mmic&nbsp;  -vec-report=3 &nbsp;  -O3&nbsp; &lt;program name&gt;  -O&nbsp; 
+       &lt;Name of executable&gt; </b>
+   </FONT>&nbsp;</I>  
+
+  </p>
+ 
+     For example to compile a simple <I> <FONT COLOR="#FF00FF"> openmp-matrix-matrix-multiply.c </font></i> program user can type on the command line <BR> <BR>
+
+        <P align="center">
+         
+  <I><FONT size = 2 COLOR="#FF00FF"> <B>
+     # icc &nbsp; -openmp &nbsp;  -mmic&nbsp;  -vec-report=3 &nbsp;  -O3&nbsp; &lt;seq-matrix-matrix-multiply.c &gt;  -O&nbsp; 
+       &lt;openmp-matrix-matrix-multiply&gt; </b>
+   </FONT>&nbsp;</I>  <BR> <BR>
+
+
+
+
+    <!-- ***************** Using command line ************************ -->
+ <p align ="left"> 
+   <font color="#FF0011"> <font face="Verdana" size="2"> 
+          <B>  Using command  line arguments  </b> </font> 
+    </font> </p>   
+
+          <P align ="justify"> <span class = "content">
+
+The compilation and execution of a program for MIC 
+architecture coprocessor using <font size = 2, face = " Courier New " color ="#FF00FF" > <B> offload </b> </font>
+and compliation is given below. <BR> <BR>
+             
+ 
+
+ 
+ <font face="Verdana" size="2"> 
+
+<I><FONT COLOR="#FF00FF"> <B>
+     # icc &nbsp;   -openmp &nbsp;  -mmic&nbsp; -vec-report2 &nbsp;  -O3&nbsp;  &lt;program name&gt; \ <BR>
+ &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;
+     -O&nbsp; 
+       &lt; Name of executable &gt; </b>
+   </FONT>&nbsp;</I>  
+
+  </font> </p>
+ 
+
+ </span> 
+</p>
+</td>
+</tr>
+
+<!-- **************** Compilation Ends ****************** -->
+<TR><TD><HR></TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+<!-- ************** Run time : Set Up Programming Environment Starts *********** -->
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+<a name = "coproc-runtime-prog-env-execution"> </a>
+ <DIV align=Left><font size="2" color ="black" > 
+<B> OpenMP Set Up Run time Prog.  Env.</b> </font> </font></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<p align = "justify">
+
+  <font size="2" face="Arial" color="red"> <B> 
+ Setting Up the Prog. Environment :  OpenMP programs to  Scale upto 60 Cores </b>  </font> </a>
+ <BR> 
+   
+        <P align="justify"><span class = "content">
+
+     User can set the number of  threads  and the affinity using environment variables <BR> <BR>
+
+     <blockquote>
+       <FONT COLOR="#FF00FF"> <B>  omp_set_num_threads(32); </b></font>  <BR>
+       <FONT COLOR="#FF00FF"> <B>  kmp_set_defaults("KMP_AFFINITY = compact");  </b> </font>
+    </blockquote>
+
+   <BR> <BR>
+
+
+   in the coprocessor's Linux Operating environment. That is <BR> <BR>
+
+
+   <blockquote>
+    export <FONT COLOR="#FF00FF"> <B>  OMP_SET_THREADS=32 </b></font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  KMP_AFFINITY = compact </b></font>  <BR> <BR>
+    </blockquote>
+
+
+    Below given enviornment varaibles should be declared before execution of the program 
+    as per application requirements. <BR> <BR>
+
+ # set environment variables  <BR>
+
+
+    <blockquote>
+    export <FONT COLOR="#FF00FF"> <B>  MKL_NUM_THREADS=32 </b></font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  KMP_AFFINITY = granularity=fine,compact </b></font>  <BR>
+    export <FONT COLOR="#FF00FF"> <B>  MIC_ENV_PREFIX=PHI </b></font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  PHI_MKL_NUM_THREADS=236 </b></font>  <BR> 
+    export <FONT COLOR="#FF00FF"> <B>  PHI_KMP_AFFINITY=granularity=fine,compact </b></font>  <BR>
+    export <FONT COLOR="#FF00FF"> <B>  OFFLOAD_REPORT=2 </b> </font> <BR>
+    export <FONT COLOR="#FF00FF"> <B>  MKL_MIC_ENABLE=0 </b> </font> <BR> <BR>
+     </blockquote>
+
+
+ <font size="2" face="Arial" color="red"> <B> 
+   Un-setting Up the Prog. Environment :   </b>  </font> </a>
+ <BR> <BR>
+#unset env variables <BR>
+
+   <blockquote>
+    unset <FONT COLOR="#FF00FF"> <B>  MKL_NUM_THREADS</b></font> <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  KMP_AFFINITY </b></font>  <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  MIC_ENV_PREFIX</b></font> <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  PHI_MKL_NUM_THREADS </b></font>  <BR> 
+    unset <FONT COLOR="#FF00FF"> <B>  PHI_KMP_AFFINITY </b></font>  <BR>
+    unset <FONT COLOR="#FF00FF"> <B>  MKL_MIC_ENABLE</b> </font> <BR> <BR>
+  </blockquote>
+
+   </font> 
+
+   </span> </p>
+
+</TD>
+</TR>
+<TR><TD><HR></TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ***************** Execution Starts ************** -->
+<TR>
+<TD>
+<a name= "coproc-openmp-execution"> </a> 
+</TD>
+</TR>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Execution of  Programs : Sequential &amp; OpenMP  </b>
+ </font></DIV>
+</TD>
+</TR> 
+
+<TR>
+<TD>  
+<P align="justify"> <span class = "content">       
+<B> To execute the  applicaiton on coprocessor : Log-in to Xeon-Phi Coprocessor  </B>
+</span> </p>
+
+  <P align="left">To execute the  program on coprocessor, the user Log-in to the
+   coprocessor,  then simply type the name of executable 
+   on command line.&nbsp; </p>
+
+  <P align="center"><I><FONT COLOR="#FF00FF">
+      ./&lt;&nbsp;Name of executable&gt;</FONT></I> </p>
+
+  <P align="left">For example to execute a simple 
+  <I> <FONT COLOR="#FF00FF"> <B> seq-matrix-matrix-multiply.c </b></font></i>  application, user 
+            types the command &nbsp; </p>
+
+  <P align="center"> <I><FONT COLOR="#FF00FF">./seq-matrix-matrix-multiply</FONT></I>&nbsp; </p>
+     
+ 
+      <P align="left">For example to execute a simple 
+       <I> <FONT COLOR="#FF00FF"> <B> openmp-matrix-matrix-multiply.c </b></font></i>  OpenMP application,  user types&nbsp; </p>
+
+             <P align="center"> <I><FONT COLOR="#FF00FF"><B> ./openmp-matrix-matrix-multiply </B></FONT></I>&nbsp; </p>
+     
+ 
+           The expected output: 
+          <P align="left"><FONT SIZE = "2"  COLOR="#FF00FF">
+         <blockquote> 
+          <blockquote>
+            Initializing the Vectors <BR>
+            Computation startd <BR>
+            gigaFLOPs = **** <BR>
+            Time = **** <BR>
+            gigaFLOPs per Sec = ***** <BR>
+         </FONT> </p>
+     </blockquote>
+     </blockquote>
+ 
+ </TD>
+</TR> 
+
+<TR> <TD> <HR> </TD></TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- *************** Script Starts **************** -->
+
+<TR>
+<TD>
+<a name= "coproc-openmp-execution-with-script"> </a>
+</TD>
+</TR>
+ 
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+ <DIV align=Left><font size="2" color ="black" > 
+<B> Execution - Script </b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+
+<TR>
+<TD>
+
+<P align="left">
+<font size = 2 color="red"> <B> Script to run on Xeon Phi in Native Mode   : </b> </font></b>
+<BR> <BR>
+
+ <font face="Verdana" size="2">
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> MKL_MIC_ENABLE=0 <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> KMP_AFFINITY=
+         <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;granularity=thread,balanced&quot; </b> </font> <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> LD_LIBRARY_PATH=/tmp <BR>
+ &nbsp; nThreads=240  <BR>
+ &nbsp; i=200  <BR>
+ &nbsp; &nbsp; while[ $i –le 1000 ]  <BR>
+ &nbsp; &nbsp; do <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>echo</b></font>-n 
+          <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;mic&quot;  </b> </font> <BR>
+ &nbsp; &nbsp; &nbsp; ./openmp_matrix_matrix_multiply $i $nThreads 8  <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>let </b> </font> i+=100  <BR> 
+
+ &nbsp;  done <BR>
+</FONT> </P>
+
+</TD>
+</TR>
+
+<!-- ******* Script   ends **************  -->
+
+<TR> <TD> <HR> </TD></TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+<!-- ***************** Compiler Ofload Prama Report ********** -->
+
+<TR>
+<TD>
+<a name = "coproc-compiler-offload-pragmas-report"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Compiler Offload Pragma &amp; Report  </b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+
+
+<!-- .........  Compile & Execute : Compiler to Vectorize  Starts ............ -->
+<TR>
+<TD>
+<BR> <BR>
+
+ <font color="#FF0011" face="Verdana" size="2">  <B>Details of Code : Intel compiler's offload pragmas :  </B>  
+</font> 
+
+ <P align="justify"> <span class = "content">
+
+ On Xeon-host, the code to transfer the data to the Xeon Phi coprocessor  is automatically 
+created by the Intel complier.  When the code is written using  OpenMP pragmas to C/CC+ Fortran 
+code,  the Intel complier encounters an offload pragma, it generates code for both the coprocessor
+ and the host.
+The programmer responsibility is to include appropriate offload pragmas by adding data clauses.
+ Details can be found under &quot;Offload Using a Pragma&quot; in the Intel compiler documentation as 
+given in the references. </span> </p>
+
+<ul>
+
+<LI>  <P align="justify"> <span class = "content">
+<B> Using #pragma offload taret(mic) : </b>
+ In this example, how to offload the matrix computation to the Intel Xeon Phi
+ coprocessor using <FONT COLOR="#FF00FF"> <B>#pragma offload target(mic) </b> </FONT> 
+is shown 
+</span> </p> </LI>
+
+
+<LI> <P align="justify"> <span class = "content"> 
+<B> Choose the target MIC out of Multiple Coprocessors : </B> 
+The user could also specify the Intel Xeon-Phi Coprocessor <FONT COLOR="#FF00FF"> 
+<B> Number_Id </b> </FONT> in a system with multiple coprocessors (Ex. <B> PARAM YUVA 
+Compute Nodes </b> ) by using 
+<FONT COLOR="#FF00FF"> <B> #pragma offload target(mic:Number_Id). </B> </FONT>
+</span> </p> </LI>
+</ul>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+ <font color="#FF0011" face="Verdana" size="2">  <B> Other Information about  Intel compiler's offload  :  </B>  
+</font>
+
+
+<UL>
+<LI> <P align="justify"> <span class = "content"> 
+<B> Use -no-offload : </b> 
+Offloading is enabled per default for the Intel compiler. Use <FONT COLOR="#FF00FF"> <B>
+-no-offload </b> </font> to 
+disable the generation of offload code.
+
+</span> </p> </LI>
+
+
+
+<LI> <P align="justify"> <span class = "content">
+<B> Vec Report : </b> 
+Using the compiler option <FONT COLOR="#FF00FF"> <B> -vec-report2 </b> </font>  one can see which loops have been vectorized 
+on the host and the MIC coprocessor:
+</span> </p> </LI>
+
+<LI> <P align="justify"> <span class = "content">
+<B> Printing Data transfer (OFFLOAD_REPORT) : </b> 
+  By setting the environment variable <FONT COLOR="#FF00FF"> <B> OFFLOAD_REPORT </b> </font> 
+  one can obtain information about 
+  performance and
+  data transfers at runtime:
+
+
+<blockquote> <font size = 2> 
+   <B> hypack-01: ~offload_c> </b> </font>
+ <FONT COLOR="#FF00FF"> <B>
+  export OFFLOAD_REPORT=2
+  </b> </font>
+</blockquote>
+
+</font> </p> 
+
+</LI>
+</UL>
+
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ............ More about Offload clauses ................ -->
+<TR>
+<TD>
+<a name = "coproc-offload-pragmas-clauses"> </a>
+</TD>
+</TR>
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   Intel Xeon Phi Coprocessor Compiler Offload Clauses </b> </font> </DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+ 
+
+<ul>
+<LI>  <P align="justify"> <span class = "content">
+<B> Using #pragma offload taret(mic) : </b>
+ In all the examples given below,  the important information related to offload the matrix computations to the Intel Xeon Phi
+ coprocessor using <FONT COLOR="#FF00FF"> <B>#pragma offload target(mic) </b> </FONT> 
+is discussed.
+</span> </p> </LI>
+</ul>
+
+<P align="justify"> <span class = "content">
+ The Intel Xeon-Phi coprocessor programming environment provides &quot; offload pragma&quot;  which 
+provides additional annotation so the compiler can correctly move data to and from 
+the external Xeon Phi Card. Note that single or multiple OpenMP loops can be contained 
+within the scope of the offload directive. The clauses are interpreted as follows:
+</span> </p>
+
+<p align = "justify"> <span class= "content">
+ <font color= "red"><B> Offload: </b> </font> The offload pragma keyword specifies different  clauses that contain
+ information relevant to offloading to the target device. <BR> <BR>
+
+ <font color= "red"> <B> target(mic:MIC_DEV)  </b> </font>
+is the target clause that tells the compiler to generate code for both the host 
+processor and the specified offload device i.e., Xeon Phi Coprocessor. 
+The constant parameter MIC_DEV is an an integer associated with Xeon-Phi device.
+ Note that the offload performs different operations as per requirement. <BR> <BR>
+</span> </p> 
+
+<ul>
+<LI>  
+<p align = "justify"> <span class= "content">
+The offload runtime will schedule offload work within a single application in 
+a round-robin fashion, which can be useful to share the workload amongst 
+multiple devices. 
+</span> </p> </li>
+
+<LI>  <P align="justify"> <span class= "content">
+<p align = "justify"> <span class= "content">
+The offload runtime will utilize the host processor when no coprocessors are present
+and no device number is specified (for example, target(mic)).
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+<p align = "justify"> <span class= "content">
+programmers can  use <font color= "red"> <b> _Offload_to </B> </font> to specify a device in their code. 
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+It is the responsibility of the programmer to ensure that any persistent 
+data resides on all the devices.
+
+During the  round-robin scheduling, the persistent data resides on all the devices 
+is important from performance point  of view and to avoid PCIe bottlenecks. In general, 
+only use persistent data when the device number is specified. 
+</span> </p> </LI>
+
+<LI> <P align="justify"> <span class= "content"> 
+<B> Choose the target MIC out of Multiple Coprocessors : </B> 
+The user could also specify the Intel Xeon-Phi Coprocessor <FONT COLOR="#FF00FF"> 
+<B> MIC_DEV</b> </FONT> in a system with multiple coprocessors (Ex. <B> PARAM YUVA 
+Compute Nodes </b> ) by using 
+<FONT COLOR="#FF00FF"> <B> #pragma offload target(mic:MIC_DEV). </B> </FONT>
+</span> </p> </LI>
+</ul>
+
+
+<ul>
+<LI>  <P align="justify"> <span class = "content">
+<B> Using #pragma offload taret(mic) : </b>
+ To Offload the matrix computation to the Intel Xeon Phi
+ coprocessor using <FONT COLOR="#FF00FF"> <B>#pragma offload target(mic) </b> </FONT> 
+the following clauses are required. 
+</span> </p> </LI>
+</ul>
+
+ 
+<!-- ..................  in(Matrix_A: length....) ............. ********* -->
+
+ <P align="justify"> <span class= "content">
+<font color ="red"> <B> in(Matrix_A:length(size*size)): </b> </font> 
+The <font color ="red"> <B>in</font></b>(var-list modifiersopt) clause explicitly copies 
+data from  the host to the coprocessor. Note that:
+</span> </p>
+
+
+<ul>
+<blockquote>
+
+<LI>  <P align="justify"> <span class= "content">
+The <font color ="red"> <B> length(element-count-expr) </b> </font> specifies the number of elements to be transferred. The compiler will perform the conversion to bytes based on the type of the elements. 
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+By default, memory will be allocated on the device and deallocated on exiting the scope of the directive.
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+The  
+<font color ="red"> <B>alloc_if(condition) </b> </font> and 
+<font color ="red"> <B>free_if(condition) </b> </font> modifiers can change the default behavior. 
+</span> </p></LI>
+</blockquote>
+</ul>
+
+<!-- ............. in(Matrix_A: length....) Ends ................. -->
+
+
+<P align="justify"> <span class= "content">
+<font color ="red"> <B> out(Matrix_A:length(size*size)): </b> </font> 
+The <font color ="red"> <B>in</font></b>(var-list modifiersopt) clause explicitly clause explicitly copies data from the coprocessor to the host. Note that:
+</span> </p>
+
+<ul>
+<blockquote>
+
+<LI>  <P align="justify"> <span class= "content">
+The <font color ="red"> <B> length(element-count-expr) </b> </font> specifies the number of elements 
+to be transferred. The compiler will perform the conversion to bytes based on the type of the elements. By default, memory will be deallocated on exiting the scope of the directive.  
+</span> </p> </LI>
+
+<LI>  <P align="justify"> <span class= "content">
+The   
+<font color ="red"> <B>free_if(condition) </b> </font> modifier can change the default behavior. 
+</span> </p> </LI>
+</blockquote>
+</ul>
+
+<!-- ************** Out(Matrix_A: length....) ends ********* -->
+
+</TD>
+</TR>
+
+
+<!-- ***************** Tuning & Perf. KMP Thread Starts  ********** -->
+
+<TR>
+<TD>
+<a name = "coproc-kmp-thead-affinity"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Tuning &amp; Performancre : KMP Thread Affinity   </b> </font> </font></DIV>
+
+</TD>
+</TR> 
+
+<TR>
+<TD>
+    
+   <UL>
+          
+     <LI>
+       <P align="justify"><span class = "content">
+      
+         On Single a core, we can employ four threads. To ensure maximum performance, core needs to execute FMA calculations on evey 
+       clock cycle. To do this,  core must be running more thatn one thread. i.e., two or three or four threads.  The code is re-written
+       to execute on multiple threads, and eventually multiple cores.
+     </span> </p> 
+    </LI>
+ 
+     <LI>
+       <P align="justify"><span class = "content">
+      
+         OpenMP Framework, a widley used standard support by compilers for Intel Xeon Phi coprocessors with
+         standard API and programming model for shared memory multiprocessing  for HPC. OpenMP 
+  <FONT COLOR="#FF00FF"><B> parallel for</b></font>) directive to enable the desired threading is used 
+    and the loop iteratons are divided among the available threads and run in parallel. 
+      </span> </p> 
+    </LI>
+
+   <LI> 
+   <P align="justify"><span class = "content">
+       
+     In OpenMP implementation, each thread will work on a separate set of row array elements of Matrix and 
+   offset variables are included in the code.
+     To achieve performance close to theoretical peak performance, two openMP calls are used : <BR> <BR>
+
+       <FONT COLOR="#FF00FF"> <B>  omp_set_num_threads(32); </b></font>  <BR>
+       <FONT COLOR="#FF00FF"> <B>  kmp_set_defaults("KMP_AFFINITY = compact"); </b> </font> <BR> <BR>
+
+    The first OpeMP call  sets the number of threads to use while running the code and the second one 
+    setting  <FONT COLOR="#FF00FF"> <B> AFFINITY</b></font> to 
+    <FONT COLOR="#FF00FF"> <B> compact</b></font>  will ensure that thirty two requested OpenMP 
+   threads execute 
+    on different  cores.
+  </span> </p>  
+ </LI>
+  
+   <LI> 
+   <P align="justify"><span class = "content">
+     
+     A subset of main memory is available to an application and main memory is organised into pages. 
+   The two dimensional array Matrix_A and Matrix_B are accessed 
+   along the rows.  On a system that supports virtual memory, the memory addresses for different 
+  applications
+  are virtualised : they are given logical addresses, assigned into virutal pages. A typical page 
+  size is 4 or 8 Kbytes, but laret ones exist. 
+  In fact, the physical pages that are available to program may be spread out in memory, and so the 
+  virtual 
+   pages must be mapped to physical ones. The page addresses are stored in page table and 
+  translation-lookside buffer (TLB) a spcial cache  that 
+  stores the recently accessed entries in page table. TLB is crticial to performance and in this
+  exmaple cache reloads plus a large number of 
+  TLB misses may not result. 
+ </span> </p>  
+ </LI>
+     
+ <LI> 
+  <P align="justify"><span class = "content">
+     
+     Loop Optimisation can give sinificant improvement in performance and loop unrolling can 
+     help to improve cache line utilization by improving data reuse. Inner loop unrolling with 
+     approriate OpenMP pragmas may further improve the performance. Loop unrolling can also 
+     help to increase  the instruction-level parallelism, or ILP. The compiler switches can 
+     help to perform loop unrolling.
+   </span> </p>  
+  </LI>
+
+   <LI> 
+   <P align="justify"><span class = "content">
+     
+     Use of Pointers and Contiuous Memory in C Lanuguage : The <I> pointer aliasing problem </I>
+exists in many application codes and it prevents a compiler from performing many progrm optmizations
+since it can nto determine that they are safe. It is assumed that all pointers may reference any 
+memory address. The performance can be obtained, if pointers are guaranteed to point to portions 
+of nonoverlapping  memory. The <FONT COLOR="#FF00FF"> <B> restrict </b></font> key-word is a feature 
+of the C99 Standard which is supported by compiler and it may improve the performance. 
+   </span> </p>  
+  </LI> 
+
+  <li> <p align = "Justify") <span class = "content">
+The number of threads in an OpenMP enviornment and the mapping of cores on Intel Xeon-Phi Coprocessor 
+play an important role to achieve maximum performance of developer code. 
+The  <FONT COLOR="#FF00FF">  <B> KMP_AFFINITY  </b> </font> environment variable specifies the thread-to-core affinity. 
+
+There are three preset schemes: <i> compact</i>, <i>scatter</i>, and <i>balanced</i>
+and  the user explicitly define the affinity that works best for their application. The choice 
+of affinity schemes depends upon the memory access, data sharing and work-load for each thread,
+affinte to core. The default runtime thread affinity can also be used and it may change 
+between software releases. For consistent application performance across software releases, 
+do not rely on the default affinity scheme.
+ </span> </p> </li>
+</ul>
+
+<blockquote>
+<ul>
+  <li> <p align = "Justify") <span class = "content">
+<font color= "red"> <i> <B> Compact </b> </i>  </font> tries to use minimum number of cores by pinning four threads to a 
+core before filling the next core 
+ </span> </p> </li>
+
+  <li> <p align = "Justify") <span class = "content">	
+<font color= "red"> <i> <b>  Scatter  </b> </i> </font>tries to evenly distribute threads across all cores 
+ </span> </p> </li>
+  <li> <p align = "Justify") <span class = "content">
+<font color= "red"> <i> <b> Balanced  </b>  </i>  </font> tries to equally scatter threads across all cores such that adjacent threads (sequential thread numbers) are pinned to the same core. One caveat being that all cores refers to the total number of cores -1 because one core is reserved for the operating system during an offload 
+Interested readers can find more about the affinitization schemes 
+ </span> </p> </li>
+</blockquote>
+       
+</ul>
+      
+        
+</TD>
+</TR>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ********************* KMP Thread Affinity Script Starts ********* -->
+
+<TR>
+<TD>
+<a name = "coproc-kmp-thread-affinity-script"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Script : Using KMP Thread Affinity </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+<P align="left">
+<font color="red"> <B> Script to run on Xeon Phi in Native Mode   : </b> </font></b>
+<BR> <BR>
+
+ <font face="Verdana" size="2">
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> MKL_MIC_ENABLE=0 <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> KMP_AFFINITY=
+         <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;granularity=thread,balanced&quot; </b> </font> <BR>
+ &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>export </b> </font> LD_LIBRARY_PATH=/tmp <BR>
+ &nbsp; nThreads=240  <BR>
+ &nbsp; i=1  <BR>
+ &nbsp; &nbsp; while[ $i –lt 100 ]  <BR>
+ &nbsp; &nbsp; do <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>echo</b></font>-n 
+          <FONT SIZE = 2 COLOR="#FF00FF"> <B> &quot;mic&quot;  </b> </font> <BR>
+ &nbsp; &nbsp; &nbsp; ./openmp_matrix_matrix_multiply 1000 $i  10  <BR>
+ &nbsp; &nbsp; <FONT SIZE = 2 COLOR="#FF00FF"> <B>let</b></font>i++  <BR> 
+
+ &nbsp;  done <BR>
+</FONT> </P>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+<!-- ***************** Memory Aligment Starts ************ -->
+
+
+<TR>
+<TD>
+<a name = "coproc-memory-alignment"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Tuning &amp; Performancre : Memory Alignment for Vectorizatio  </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+
+<ul>
+
+ 
+<LI> <P align="justify"> <font face="Verdana" size="2"> 
+<B> Memory Alignment for Vectorization : </b>
+The matrices size is dynamically allocated using <B> posix_memalign(), </b> and their sizes
+ must be specified via the <FONT COLOR="#FF00FF"> <b> length() </b> </font> clause. Using in, out and inout one can specify 
+which data has to be copied in on Intel Xeon-Phi Coprocessor from host.
+
+</font> </p> </LI> 
+
+<LI> <P align="justify"> <font face="Verdana" size="2"> <FONT COLOR="#FF00FF"> 
+<B> Data alignment - 64-Byte : </b> </font> It is recommended that for Intel Xeon Phi data is 64-byte (512 Bits) aligned as 
+given in the MIC architecture.
+</font> </p> </LI>
+
+<LI> <P align="justify"> <font face="Verdana" size="2"> 
+<B> Alignment using #pragma vector alignment : </b>
+For proper alignment of data to get performance using Intel compiler vectorization, 
+ <FONT COLOR="#FF00FF">  <B> #pragma vector aligned </B> </font> is used. This tells the compiler that all array data accessed 
+in the loop is properly aligned.
+</font> </p> </LI>
+
+ <LI> 
+   <P align="justify"><span class = "content">
+   <span class ="content"> 
+  In addition, the <FONT COLOR="#FF00FF"><B>–std=c99 </b> </font>directive command-line option tells the compiler to allow use 
+  of the restrict keyword and C99 VLAs. Note that C99 restrict keyword that specifies that 
+  the vectors do not overlap. (Compile with <FONT COLOR="#FF00FF"><B>-std=c99  </b> </font> is required for efficient   vectorization)
+  </span> </p>  
+  </li>
+
+   <LI>
+    <P align="justify"><span class = "content">
+        
+   For SSE, the data is aligned to 32 Bytes (256 Bits) for AVX and 16 Bytes (128 Bits) for
+   SSE and for MIC architecture, data should be aligned to 64 Bytes (512 Bits) for the
+   MIC architecture. <BR> <BR>
+   </span> </p>  </Li>
+
+</ul>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+<!-- ********************** Tuning and Performance Summary Starts **************** -->
+
+
+<TR>
+<TD>
+<a name = "coproc-tuning-perf-summary"> </a>
+</TD>
+</TR>
+
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+<DIV align=Left><font size="2" color ="black" > 
+ <B> Tuning &amp; Performance  : Summary on Xeon Phi  </b> </font> 
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+ 
+<BR> 
+
+<DIV ALIGN=left>
+      <span class = "content">
+
+         <font color="#FF0011"> <b>  Compiler Optimisation &amp; Vectorization  </b> </font> 
+   </span> 
+</DIV>
+
+<ul>
+
+ <LI>
+       <P align="justify"><span class = "content">
+        
+        <B>Performance :  </B> 
+        The Intel Xeon-Phi coprocessor deliver peak performance greater than  1 teraFLOP/s for 
+        double precision (DP) floating point calculations and greater than  2 teraFLOP/s for 
+        single precision calculations.  </font> 
+  </span> </p> 
+      </LI>
+
+ <LI>
+       <P align="justify"><span class = "content">
+        
+       The effective use of compiler pragmas with vectorization and scale to achieve the best 
+        performance results in terms  of gigaFLOP/s  for a given code is important. That is, the 
+        code needs to use automatic compiler flags, vectorization &amp; scale to achieve the 
+       best performance. For more information on this, visit <BR>
+       <a href="./../hypack13-mode03-coprocessor-compiler-vect.html">  <font color ="blue">
+       hypack13-mode03-coprocessor-compiler-vect.html </font> </a> 
+  </span> </p> 
+    </LI>
+
+
+<LI>
+       <P align="justify"><span class = "content">
+        
+   To paralleize more loops in an application on the coprocessor than on an Intel Xeon based host,
+the MIC new instructions such as fused multiply-add, masked vector instructions, gather/scatter etc.
+can be used to improve the performance due to  large SIMD width of 64 Bytes vectorization that 
+ MIC architecture supports <BR> <BR>
+      </span> </p> </li>
+
+  <LI>
+       <P align="justify"><span class = "content">
+        
+      The coprocessor supports a key performance enhancing capability of executing both a 
+      multiplication and an addition, known as performance enhancing capability  of 
+      executing both a  multiplicaiton and an addition, known as fused multiply and add (FMA) in 
+      a single instruction without  precision loss, enabling two floating point in one instruction.
+      Use FMA in Numerical Linear Algebra (NLA) Computations <BR>
+     </span> </p> 
+   </li>
+
+
+      <LI>
+       <P align="justify"><span class = "content">
+        
+          The options for running the code will give information about the performance of 
+          code. The details of the program i.e., inner loop of matrix-matrix  Multiply 
+        and the various compiler options do not indicate number of threads &amp;  the number of cores 
+         used.  
+      </span> </p> 
+    </LI>
+ 
+      <LI>
+       <P align="justify"><span class = "content">
+       
+         To achieve maximum performance of singel core out of maximum peak performance of single core 
+         i.e., 35 giaFLOP/s (approximate), it is necessary to take full advantage of coprocessor's 
+         optimisation features and programming paradigms such as OpenMP &amp; Intel MKL libraries.
+
+         Only Single thread is used in this example and the maximum number of threads the Intel Xeon Phi  Coprocessor
+         can directly manage per core is four.
+        </span> </p> 
+    </LI>
+
+    <LI> 
+   <P align="justify"><span class = "content">
+     
+     The option  <FONT COLOR="#FF00FF"> <B>  -vec -report=3 </b>  </font> gives to user, the information
+     about the compiler's choice for vectorizin portions of the code. (Note that the sign
+(<FONT COLOR="#FF00FF"><B>-</b></font>)   is optional in this compiler option.) For Vectorization, the 
+ <B> Loops </b> and <B> array</B> processing are required.
+   </span> </p> </li>
+
+  
+    <LI> 
+   <P align="justify"><span class = "content">
+      
+     In matrix-matrix multiply examples,  the compiler was able to arrange chunks of arrays to be loaded into machine
+     registers or directly from memory via caches. Thus all 16 Single precision point point lanes 
+     are used for simulataneous calculation.
+    </span> </p>   
+  </li>
+     
+   
+    <LI> 
+   <P align="justify"><span class = "content">
+       
+    The inner and outer loops are effectively vectorized for the code.
+   </span> </p>   
+  </li>
+</ul>
+
+   
+</TD>
+</TR>
+  <!-- ******************** More about Summary ends *************************** -->
+
+
+<TR>
+<TD>
+<HR>
+</TD>
+</TR>
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" color ="black" > 
+ <b>   EXample Programs on Matrix Matrix Multiplication  </b> </font> </DIV>
+</TD>
+</TR>
+
+</tbody>
+</table>
+        
+
+<!-- ******************** Example 1 Array Reduction Starts **************** -->
+
+
+<table border="0"  height="6">
+<tbody>
+    
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-1Darray-reduction-example01"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 1  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Reduciton Operation for  one dimensional integer array  </font>
+   </B>       <BR>
+        
+       
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+    
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-reduce-1darray.c">
+
+     <I><FONT COLOR = "blue">openmp4x-reduce-1darray.c</FONT></I></a></font>,
+    <BR>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/env-setup.sh">
+         <I><FONT COLOR = "blue">env-setup.sh  </FONT>  </I> </a>,</font>
+    <BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/Makefile_openmp4x">
+         <I><FONT COLOR = "blue">Makefile_openmp4x</FONT>  </I> </a></font>
+  
+<!-- ************download End  here ***************-->
+<BR> 
+<p align ="justify"> <span class ="content">
+A simple example of how the constructs discussed below  for OpenMP 4.0 can 
+be used to offload computation to Intel Xeon Phi coprocessor.  This example shows a sum reduction operation being run on a Xeon Phi processor. 
+
+The offload computation “<B> reduce </b>” is first declared with &ldquo;<B>#pragma omp declare target</b>&rdquo;
+clause.This causes the routine or its component to be executable on  the coprocessor. The offload pragma,
+</span> </p>
+<BR> 
+<div align ="center"> &ldquo;<B>#pragma omp target map(inarray[0:SIZE]) map(sum)</B>&rdquo; </div>
+ <BR>
+<p align ="justify"> <span class ="content">
+ that causes specific code block lines of the code to be sent to coprocessor, for computing. 
+
+ In this case it is computing the reduction of an array of numbers and returning the computing value 
+through the &ldquo;<B>sum</b>&rdquo;  variable to the host. The 
+&lduo; <B>inarray</B> &rdquo;  and the  &ldquo;<B>sum</B>&rdquo;  is copied in and out of the 
+coprocessor before and after the computation.
+</span> </p>
+
+</TD>
+</TR>
+
+
+<!-- ******************** Example 1 Array Reduction Ends **************** -->
+
+
+<!-- ******************** Example 2 Array Reduction Starts **************** -->
+
+    
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-2Darray-reduction-example01"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 2  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Reduciton Operation for  two dimensional integer array  </font>
+   </B>       <BR>
+           
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+ 
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-reduce-2darray.c">
+
+     <I><FONT COLOR = "blue">openmp4x-reduce-2darray.c</FONT></I></a></font>)
+   
+<!-- ************download Ends here ***************--> 	
+
+</TD>
+</TR>
+
+<!-- ******************** Example 2 Array Reduction Ends **************** -->
+
+
+<!-- ******************** Example 3 Vect Vect Multiply Starts ************* -->
+   
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-vect-vect-multiply-example03"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 3  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Vector Vector Multiplication </font>
+   </B>       <BR>
+        
+       
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+    
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-vect-vect-multiply.c">
+
+     <I><FONT COLOR = "blue">openmp4x-vect-vect-multiply.c</FONT></I></a></font>)
+    <BR>
+
+<!-- ************download Ends here ***************--> 	
+
+</TD>
+</TR>
+<!-- ************ Example Vector Vector Multiplication Ends  ******** -->
+
+
+
+<!-- ******************** Example 4 Matrix Matrix Addition   Starts ************* -->
+   
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-mat-mat-addition-example04"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 4  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Matrix Matrix Addition </font>
+   </B>       <BR>
+        
+       
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+    
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-mat-mat-addition.c">
+
+     <I><FONT COLOR = "blue">openmp4x-mat-mat-addition.c</FONT></I></a></font>)
+    <BR>
+
+<!-- ************download Ends here ***************--> 	
+
+</TD>
+</TR>
+<!-- ************ Example Example 4 Matrix Matrix Addition  Ends  ******** -->
+
+
+  
+
+<!-- ******************** Example 5 Matrix Matrix Multiply  Starts ************* -->
+   
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-mat-mat-multiply-example05"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 5  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Matrix Matrix  Multiplication </font>
+   </B>       <BR>
+        
+       
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+    
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-mat-mat-multiply.c">
+
+     <I><FONT COLOR = "blue">openmp4x-mat-mat-multiply.c</FONT></I></a></font>)
+    <BR>
+
+<!-- ************download Ends here ***************--> 	
+
+</TD>
+</TR>
+<!-- ************ Example Example 5 Matrix Matrix Multiply  Ends  ******** -->
+
+
+
+<!-- ******************** Example 6 Vect Vect Addition Scaling and Perf. Starts ************* -->
+   
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-vect-vect-addition-perf-example06"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 6  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Vector Vector Addtion - Scaling to more cores &amp; Performance  </font>
+   </B>       <BR>
+        
+       
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+    
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-vect-vect-addition-perf.c">
+
+     <I><FONT COLOR = "blue">openmp4x-vect-vect-addition-perf.c</FONT></I></a></font>)
+    <BR>
+
+<!-- ************download Ends here ***************--> 	
+
+</TD>
+</TR>
+<!-- ************ Example 6 Vector Vector Addition (Scaling and Performance) Ends  ******** -->
+
+
+  
+
+<!-- ******************** Example 7 Matrix Infinity Norm Starts ************* -->
+   
+<TR ALIGN=LEFT> 
+<TD height="90%"> <font face="Verdana" size="2"> 
+
+<a name ="coproc-openmp4x-mat-infini-norm-example07"> </a>
+         
+   <p align = "justify">  <FONT COLOR="#FF6600">  <B>  Example. 7  :</FONT>
+
+  <font face="Verdana" size="2"> 
+     Infinity Norm of a Square Matrix </font>
+   </B>       <BR>
+        
+       
+<!-- ************download start here ***************--> 
+
+        (Download source code :
+
+    
+     <fONT size = 2 Face = "verdana" >
+     <a href ="./coprocessor-xeon-phi-codes/matrix-comp-openmp-4x/openmp4x-infinity-norm-matix.c">
+
+     <I><FONT COLOR = "blue">openmp4x-infinity-norm-matix.c</FONT></I></a></font>)
+    <BR>
+
+<!-- ************download Ends here ***************--> 	
+
+</TD>
+</TR>
+<!-- ************ Example 7 Matrix Infinity Norm  Ends  ******** -->
+
+
+
+<TR> <TD> <HR> </TD></TR>
+
+<TR>
+<TD>
+<DIV ALIGN=right>
+ <A HREF="./coprocessor-xeon-phi-matrix-matrix-multiply-openmp.html"> 
+    <IMG SRC="./coprocessor-xeon-phi-images/top.gif" border=0 width="13" height="13"></A>
+   </DIV>
+</TD>
+</TR>
+
+
+</TD>
+</TR>
+
+
+
+
+
+<!--  content of web page End here  --> 
+      
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+    
+        </TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

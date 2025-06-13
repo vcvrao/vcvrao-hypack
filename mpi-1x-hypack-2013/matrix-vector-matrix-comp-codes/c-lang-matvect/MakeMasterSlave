@@ -1,0 +1,45 @@
+#
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#
+#   Created             : August 2013 
+#
+# *******************************************************************
+#
+##### User configurable options #####
+
+#CC          =  mpcc
+CC          =  mpicc
+LIBS        =  -lm 
+
+### End User configurable options ###
+
+EXECS      =  master_c slave_c
+
+default: $(EXECS)
+
+
+#For DAY-2 mpmd examples only......
+
+#OBJECT1 = mv_mult_master_sschd.o
+#OBJECT2 = mv_mult_slave_sschd.o
+OBJECT1 = mm_mult_master_self_schd.o
+OBJECT2 = mm_mult_slave_self_schd.o
+
+master_c: $(OBJECT1)
+	$(CC) -o master_c $(OBJECT1) $(LIBS)  
+slave_c: $(OBJECT2)
+	$(CC) -o slave_c $(OBJECT2) $(LIBS)  
+
+.c.o:
+	$(CC) -c $*.c
+
+	
+clean: 
+	\rm -f *.o master_c slave_c
+

@@ -1,0 +1,28 @@
+
+
+
+# Makefile for OpenCL-Pthread Example Programs
+# Uncomment the required OBJECT to compile  
+
+CC=g++
+
+
+CLHOME=/usr/local/cuda
+CLINC=-I$(CLHOME)/include
+CLINKLIB=-L$(CLHOME)/lib64
+CLLINKFLAGS=-lOpenCL
+
+#CLINC = -I/usr/local/AMD-APP-SDK-v2.4-lnx64/include
+#CLINKLIB=-L/usr/local/AMD-APP-SDK-v2.4-lnx64/lib/x86_64
+#CLLINKFLAGS=-lOpenCL
+LFLAGS=-m64 -lpthread -ldl
+
+#OBJECT=Vect_Vect_Add_Pthreads_OpenCL_mGPU
+OBJECT=Mat_Vect_Mult_Pthreads_OpenCL_mGPU
+
+
+run:
+	$(CC) $(LFLAGS) $(CLLINKFLAGS) $(CLINC) $(CLINKLIB) -o $(OBJECT) $(OBJECT).c
+
+clean:
+	rm -f  $(OBJECT)

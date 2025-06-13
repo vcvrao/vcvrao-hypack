@@ -1,0 +1,2490 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../../index.html"><IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                             
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   	
+	    <A class=menul
+              href="./../../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+                 <!-- ** -->
+	         <A class=menulslct 
+	         href="./../../hypack13-mode01-multicore-perf-math-lib.html">
+                 &#149; Threads-Perf. Math.Lib. </A>
+                 <!-- ** -->
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../../index.html">
+              &#149; Home</A>	
+           
+<!-- ****************** left section code for about link End  here ************* -->
+	
+           <BR>
+            <DIV 
+            style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">
+</DIV><BR><BR><BR><BR></TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B> hyPACK-2013 :   Multi-Core Processors :  Performance  Using  Math Kernel Libraries   </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+<BR>
+
+<table cellPadding=0   border="0">
+<tbody>
+  <tr>
+    <td height="24" align="left">
+ <P align=justify> <span class="content">
+   
+
+ Example   programs using different APIs. Compilation and execution
+   of Pthread programs, programs numerical and non-numerical computations
+   are discussed using 
+    different thread APIs to understand  Performance issues on mutli-core processors.
+</span> </p> 
+</td> </tr> 
+</tbody>
+</table>
+
+
+<!-- *************** Table for Listing of Programs Starts  **************** -->
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr>
+<td>
+
+
+<!-- **************** Table for Listing of Programs Starts  ******************** -->
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+
+
+   <!-- *** Example 1.1 ****  -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#math-kernel-perf-prog-id11">
+        <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.1  </b> </font>  
+          </span> </p>
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <p align = "justify"> <span class = "content">
+          Write a Sequential program for efficient implementation to evaluate the polynomial
+   by Horner's rule.  
+     </td>
+     </tr>
+
+ <!-- ***** Example 1.2 **** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#math-kernel-perf-prog-id12">
+        <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.2  </b> </font> 
+      </span> </p>
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+         <p align = "justify"> <span class = "content">
+        Write a  Sequential Program for Matrix-Vector Multiplication in which the  
+        matrix entries are accessed in Row-wise fashion. Use the best Compiler flags and demonstrate the
+        performance.
+     </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ***  Example 1.3 *** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#math-kernel-perf-prog-id13">
+         <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.3    </b> </font> <BR>  
+         </span> </p>
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+       Write a  Sequential Program for Matrix-Vector Multiplication in which the  
+        matrix entries should be accessed in column-wise fashion. Use the best Compiler flags and demonstrate the
+        performance.
+     </span> </p>
+     </td>
+     </tr>
+
+ <!-- *****  Example 1.4 *** -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#math-kernel-perf-prog-id14">
+          <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.4 </b> </font>   
+       </a>  
+       </span> </p>
+     </td>
+   
+      <td width="700" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+        Write a efficient  Sequential program for efficient implementation of matrix-matrix multiplication, 
+         implementing dot product in inner loop to get better performance. Use the best Compiler flags and demonstrate 
+         their Performance.
+    </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- ****  Example 1.5 **** -->
+    <tr>
+     <td width="100" height="2" valign="top">
+       <a href="#math-kernel-perf-prog-id15">
+            <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.5  </b> </font>  
+       </a>  
+      </span> </p>
+     </td>
+   
+      <td width="690" height="2" valign="top">
+        <p align = "justify"> <span class = "content">
+          Write a efficient Sequential Program for implementation of 
+         matrix-matrix multiplication, implementing <I> daxpy  </i> in inner loop to get better performance.
+        Use the best Compiler flags and demonstrate the performance.
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ********  Example 1.6 ****** -->
+    <tr>
+     <td width="100" height="2" valign="top">
+       <a href="#math-kernel-perf-prog-id16">
+         <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.6   </b> </font> 
+       </a>  
+     </span> </p>
+     </td>
+   
+      <td width="690" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+         Write a Sequential program for matrix-matrix multiplication program, implementing dot product 
+         in inner loop, using  <I> BLAS-I, II, III </i>  libraries.   Use the best Compiler flags and demonstrate the performance.
+      </span> </p>
+     </td>
+
+   </tr>
+
+
+   <!-- **********  Example 1.7 ****  -->
+    <tr>
+     <td width="100" height="2" valign="top">
+       <a href="#math-kernel-perf-prog-id17">
+       <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.7 </b> </font>  
+       </a>  
+     </span> </p>
+     </td>
+   
+      <td width="690" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+         Write a Sequential Program for efficient implementation of  matrix-matrix multiplication program, 
+        implementing " dot product" in inner loop using system provided Mathematical libraries  to extract performance. 
+ Use the best Compiler flags and demonstrate the performance.
+     </span> </p>
+     </td>
+     </tr>
+
+ <!-- ************ Example 1.8 ************ -->
+    <tr>
+     <td width="100" height="2" valign="top"> 
+       <a href="#math-kernel-perf-prog-id18">
+      <p align = "justify"> <span class = "content">
+        <font size="2" face="Arial" color="blue">
+            <b>  Example 1.8  </b> </font>   
+       </a>  
+      </span> </p>
+     </td>
+   
+      <td width="690" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+      Write a sequential  program  to solve the matrix system of linear equations by Direct Method (Gauss Method) in which A is symmetric positive 
+       definite matrix. Use  Compiler optimizations and demonstrate the performance.
+    </span> </p>
+     </td>
+
+   </tr>
+
+   <!-- *********** Example 1.9 ************ -->
+    <tr>
+     <td width="110" height="2" valign="top">
+       <a href="#math-kernel-perf-prog-id19">
+          <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1.9  </b> </font> 
+       </a>  
+       </span> </p>
+     </td>
+   
+      <td width="690" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+        Write a sequential  program  to solve the matrix system of linear equations by Direct Method (Gauss Method) in which A is symmetric positive 
+       definite matrix using system provided Mathematical libraries.  Use  Compiler optimizations and demonstrate the 
+       performance.
+         </span> </p>
+     </td>
+     </tr>
+
+     <!-- *** Example 1.10 ** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#math-kernel-perf-prog-id110">
+         <p align = "justify"> <span class = "content">
+         <font size="2" face="Arial" color="blue">
+            <b> Example 1.10 </b> </font> 
+       </a>  
+      </span> </p>
+     </td>
+
+      <td width="690" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+         Write a sequential  program  to solve the matrix system of linear equations by Iterative  Method (Jacobi Method) in which A is symmetric positive 
+       definite matrix using system provided Mathematical libraries.  Use  Compiler optimizations and demonstrate the 
+       performance.
+       </span> </p>
+     </td>
+
+   </tr> 
+<!-- ************** Example 1.10 ends************* -->
+
+</TBODY> 
+</TABLE> 
+</p>
+
+<!-- *********** Table for Listing of Programs Ends ********* -->
+
+
+<!-- ********** Table for Description of Pthread Programs Starts ************* -->
+
+<TABLE cellPadding=0  border=0>  
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889">  
+
+<DIV align=Left>
+<font Color="black" face= "verdana" size="2">
+    <B>  Description of  Programs with/without using Math Kernel Library </B> </font>
+</DIV>
+</TD> 
+</TR> 
+</TBODY>
+ </TABLE> 
+
+
+<br>
+
+
+<!-- *********************** Example 1.1 starts *************************** -->
+
+
+<!-- ******************** Title for Example 1.1 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id11"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.1 :   </b> </font> 
+
+   Write a sequential program and estimate computational time for evalaution of function
+   expressed in terms of polynomial of degree 'p' by using direct method and Horner's rule.
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-horner-rule.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-horner-rule.f</FONT>  </I> </a>) 
+  
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.1 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+    <!-- ******** Description Example 1.1 *************** -->
+
+ <TABLE cellPadding=0  border=0> 
+ <tbody>
+ <TR>
+ <TD>
+
+
+    <li><B>Objective</B></li>
+<blockquote> 
+ <p align = "justify"> <span class = "content"> 
+
+ Write a sequential program and estimate computational time for evaluation of function
+    expressed in terms of polynomial of degree 'p' by using direct method and Horner's rule.  <BR>
+
+ </span> </p>
+   </blockquote>
+
+    <LI> <B>Description</B></LI>
+    
+<blockquote>
+
+   <p align = "justify"> <span class = "content">
+
+   This program reads a polynomial by reading its degree and then
+          prepares the polynomial with some coefficients and reads the value of variable in the 
+        polynomial at which
+          the value of the polynomial is calculated by using normal computation of a
+          polynomial and then by using Horner's Rule and prints the time taken in each
+          of the cases.
+      
+          Horner's rule states that a polynomial <BR> <BR>
+
+          <font face = "Courier New " size = 2> A(x) = a0 + a1*(x power 0) + 
+          a2*(x power 2) + a3*(x power 3) + ...<br> </font> <BR>
+
+  
+          may be written as  <BR> <BR>
+
+             <font face = "Courier New " size = 2>
+          A(x) = a0 + x(a1 + x(a2 + x(a3 + ...))).
+          </font>
+          <br> <BR>
+
+          A polynomial may be evaluated at a point x', that is A(x') computed, in
+          O(n) time using Horner's rule. That is, repeated multiplications and additions,
+          rather than the naive methods of raising x to powers, multiplying by the
+          coefficient, and accumulating which results in O(n raised to power degree)
+          time for the computation.
+  
+ </span>  </p>
+
+</blockquote>
+ 
+  <!-- **** Input & Output  Example 1.1 ********** -->
+
+
+  <li><b>Input</b></li>
+            
+<blockquote>
+  <p align = "justify"> <span class = "content">Degree of the polynomial  </span> </p>
+
+</blockquote>
+  <li><b>Output</b></li>
+    
+<blockquote>
+   <p align = "justify"> <span class = "content">
+
+    Time taken in seconds for computation of polynomial
+          using normal method and by Horner's Rule.
+   </span> 
+   </p>
+</blockquote>
+
+</TD> 
+</TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.1 Ends **** -->
+
+
+<!--  ************** Example 1.2 Starts ***************** -->
+
+
+
+<!-- *********************** Example 1.2 starts *************************** -->
+
+
+<!-- ******************** Title for Example 1.2 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id12"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.2 :   </b> </font> 
+
+   Write a Sequential Program for Matrix-Vector Multiplication in which matrix entries are
+    
+   accessed in Row-wise fashion. Use the best Compiler flags and demonstrate the performance.
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-mat-vect-mult-rowwise.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-mat-vect-mult-rowwise.f</FONT>  </I> </a>) 
+     
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.2 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+ 
+  <!-- ******** Description Example 1.2 *************** -->
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>      
+ <TR>
+ <TD>
+
+
+    <li><B>Objective</B></li>
+
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+ Write a  Sequential Program for Matrix-Vector Multiplication in which the  
+         matrix entries are accessed in Row-wise fashion. Use the best Compiler flags and 
+         demonstrate the performance.  <BR> 
+
+</span> 
+   </p>
+</blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+ <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The elements of the
+          Matrix&nbsp; are accessed in a Row wise fashion and the time taken and
+          the performance for the Matrix-Vector multiplication is calculated. In
+          FORTRAN, the arrays are stored in
+          memory in <i> Column Major</i> order. So, as the matrix size
+          increases, accessing the Matrix in Row wise fashion results in frequent
+          cache misses as the array element referred is to be loaded into cache
+          if it is not present in cache. In C, the arrays are stored in memory
+          in <i>Row wise </i>order. So, the arrays should be accesses in <i>Row
+          wise </i>order to reduce cache overheads.
+  
+</span> 
+   </p>
+</blockquote>
+
+
+ 
+  <!-- **** Input & Output  Example 1.2 ********** -->
+
+
+  <li><b>Input</b></li>
+        
+ <blockquote>
+   <p align = "justify"> <span class = "content">
+
+   Number of Rows and Columns of the Matrix and the
+          number of Rows in the vector. 
+  </span> 
+   </p>
+</blockquote>
+
+
+  <li><b>Output</b></li>
+
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for 
+        the multiplication in Row wise fashion and performance in MFLOPS.
+  </span> 
+   </p>
+</blockquote>
+ 
+
+</TD> 
+ </TR>   
+</tbody>       
+</table>
+
+
+<!--  ************ Example 1.2 Ends **** -->
+
+
+<!-- ******************** Title for Example 1.3 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id13"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.3 :   </b> </font> 
+
+   Write a Sequential Program for Matrix-Vector Multiplication in which matrix entries are 
+    accessed in column-wise fashion. Use the best Compiler flags and demonstrate the performance.
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-mat-vect-mult-columnwise.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-mat-vect-mult-columnwise.f</FONT>  </I> </a>) 
+      <BR>
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.3 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+    <!-- ******** Description Example 1.3 *************** -->
+
+ <TABLE cellPadding=0  border=0> 
+ <tbody>      
+ <TR>
+ <TD>
+
+
+
+    <li><B>Objective</B></li>
+    <blockquote>
+   <p align = "justify"> <span class = "content"> 
+
+     Write a  Sequential Program for Matrix-Vector Multiplication in which the  
+         matrix entries are accessed in column-wise  fashion. Use the best Compiler flags and 
+         demonstrate the performance.  <BR> 
+
+    </span> 
+    </p>
+    </blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+    <blockquote>
+    <p align = "justify"> <span class = "content">
+
+        The elements of the
+          Matrix&nbsp; are accessed in a Row wise fashion and the time taken and
+          the performance for the Matrix-Vector multiplication is calculated. In
+          FORTRAN, the arrays are stored in
+          memory in <i> Column Major</i> order. So, as the matrix size
+          increases, accessing the Matrix in Row wise fashion results in frequent
+          cache misses as the array element referred is to be loaded into cache
+          if it is not present in cache. In C, the arrays are stored in memory
+          in <i>Row wise </i>order. So, the arrays should be accesses in <i>Row
+          wise </i>order to reduce cache overheads.Accessing the Matrix in Column wise
+         fashion results in better performance as the elements accessed are already
+         present in the cache in fortran code.
+
+   </span> 
+   </p>
+  </blockquote>
+
+
+ 
+  <!-- **** Input & Output  Example 1.3 ********** -->
+ 
+  <li><b>Input</b></li>
+        
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+     Number of Rows and Columns of the Matrix and the
+          number of Rows in the vector. 
+
+   </span> 
+   </p>
+   </blockquote>
+
+  <li><b>Output</b></li>
+
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for 
+        the multiplication in column-wise  fashion and performance in MFLOPS.
+  </span> 
+  </p>
+  </blockquote>
+
+</TD> 
+ </TR>   
+</tbody>       
+</table>
+
+
+<!--  **************  Example 1.3 Ends ************ -->
+
+<!--  **************************  Example 1.4 starts ************ -->
+
+
+<!-- ******************** Title for Example 1.4 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id14"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.4 :   </b> </font> 
+
+   Write a efficient Sequential program for efficient implementation of matrix into matrix multiplication, 
+          implementing <B> dotproduct </b> in inner loop to get better performance. Use the best Compiler flags and 
+          demonstrate their Performance.  <BR>
+
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-mat-mat-mult-dotproduct.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-mat-mat-mult-dotproduct.f</FONT>  </I> </a>) 
+   
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.4 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+    <!-- ******** Description Example 1.4 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>
+       
+ <TR>
+ <TD>
+
+ 
+    <li><B>Objective</B></li>
+
+
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+     Write a efficient Sequential program for efficient implementation of 
+   matrix into matrix multiplication, implementing dotproduct in inner loop to get better performance.
+   Use the best Compiler flags and demonstrate the
+   Performance.   <BR> 
+
+    </span> 
+  </p>
+  </blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+ The aim is to compute two real square  matrices with dot product inner loop and use compiler
+ optimizations to extract the performance. Assume that the arrays dimension is of 2 the
+ power i where i = 4, 8. This is a simple Matrix-Matrix Multiplication with dot-product
+ inner-loop. The elements of the
+         
+ Matrix&nbsp; are accessed either in Row wise fashion or column-wise fashion.
+ In FORTRAN, the arrays are stored in  memory in <i> Column Major</i> order where as
+ C-language the matrix arrays are stored in memory <i> row major order </i>.
+
+
+ We try to achieve the maximum performance from the program using compiler optimizations.
+ For compiler optimizations, refer Vendour supplied tuning & Performance Guide. The time 
+ taken for computation of   Matrix into Matrix Multiplication is reported.
+  
+ </span> 
+ </p>
+ </blockquote>
+
+
+  <!-- **** Input & Output  Example 1.4 ********** -->
+ 
+ <li><b>Input</b></li>
+        
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+     Number of Rows and Columns of the two real square matrices
+
+ </span> 
+  </p>
+  </blockquote>
+
+
+  <li><b>Output</b></li>
+
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of Matrix into Matrix Multiplication 
+    and performance in MFLOPS.
+ 
+  </span> 
+  </p>
+  </blockquote>
+
+
+</TD> 
+</TR>   
+</tbody>       
+</table>
+
+
+<!--  ************  Example 1.4 Ends ************* -->
+
+
+<!--  **************************  Example 1.5 starts ************ -->
+
+<!-- ******************** Title for Example 1.5 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id15"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.5 :   </b> </font> 
+Write a efficient Sequential program for efficient implementation of matrix into matrix multiplication, 
+          implementing <I> daxpy  </i> in inner loop to get better performance. Use the best Compiler flags and 
+          demonstrate ther Performance <BR>
+
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-mat-mat-mult-daxpy.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-mat-mat-mult-daxpy.f</FONT>  </I> </a>) <BR>
+      <BR>
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.5 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+
+ <!-- ******** Description Example 1.5 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>
+       
+ <TR>
+ <TD>
+
+
+
+    <li><B>Objective</B></li>
+
+  
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+  Write a efficient Sequential program for efficient implementation of 
+   matrix into matrix multiplication, implementing  <I> daxpy  </i> in inner loop to get better performance.
+   in inner loop to get better performance.
+   Use the best Compiler flags and demonstrate the
+   Performance.   <BR> 
+
+ </span> 
+  </p>
+  </blockquote>
+    
+    <LI> <B>Description</B></LI>
+    
+
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+ The aim is to compute two real square  matrices with dot product inner loop and use compiler
+ optimizations to extract the performance. Assume that the arrays dimension is of 2 the
+ power i where i = 4, 8. This is a simple Matrix-Matrix Multiplication with dot-product
+ inner-loop implementing <I> daxpy  </i> in inner loop. The elements of the
+         
+ Matrix&nbsp; are accessed either in Row wise fashion or column-wise fashion.
+ In FORTRAN, the arrays are stored in  memory in <i> Column Major</i> order where as
+ C-language the matrix arrays are stored in memory <i> row major order </i>.
+
+
+ We try to achieve the maximum performance from the program using compiler optimizations.
+ For compiler optimizations, refer Vendour supplied tuning & Performance Guide. The time 
+ taken for computation of   Matrix into Matrix Multiplication is reported. The <I> daxpy </i>
+ library call can be used.
+  
+ </span> 
+  </p>
+  </blockquote>
+
+
+
+ 
+  <!-- **** Input & Output  Example 1.5 ********** -->
+ 
+ <li><b>Input</b></li>
+        
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+   Number of Rows and Columns of the two real square matrices  
+
+  </span> 
+  </p>
+  </blockquote>
+
+
+  <li><b>Output</b></li>
+ 
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of Matrix into Matrix Multiplication 
+    and performance in MFLOPS.
+    </span> 
+  </p>
+  </blockquote>
+
+
+
+
+</TD> 
+ </TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.5 Ends **** -->
+
+
+
+<!--  **************************  Example 1.6 starts ************ -->
+
+<!-- ******************** Title for Example 1.6 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id16"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.6 :   </b> </font> 
+ Write a efficient Sequential program for efficient implementation of matrix into matrix multiplication, 
+          implementing <I> dot </i> product in inner loop, using <B> BLAS-I, II, III  </b>
+     libraries. Use the best Compiler flags 
+          and demonstrate their Performance. <BR>
+
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-mat-mat-mult-dotproduct-blas.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-mat-mat-mult-dotproduct-blas.f</FONT>  </I> </a>) 
+   
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.6 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+
+ <!-- ******** Description Example 1.6 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>
+       
+ <TR>
+ <TD>
+
+  <li><B>Objective</B></li>
+
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+   Write a efficient Sequential program for efficient implementation of 
+   matrix into matrix multiplication, implementing implementing <I> BLAS-I, II, III  </i> in inner loop to get
+   better performance. in inner loop to get better performance.Use the best Compiler flags and demonstrate the
+   Performance.   <BR> 
+
+  </span> 
+  </p>
+  </blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+    <blockquote>
+   <p align = "justify"> <span class = "content"> 
+
+ The aim is to compute two real square  matrices with dot product inner loop and use compiler
+ optimizations to extract the performance. Assume that the arrays dimension is of 2 the
+ power i where i = 4, 8. This is a simple Matrix-Matrix Multiplication with dot-product
+ inner-loop implementing <I> BLAS-I, II, III  </i> in inner loop. 
+  <BR> <BR>
+
+ The BLAS library <i>ddot </i>can be obtained from 
+ <a href="http://www.netlib.org"><font color = "blue"> www.netlib.org </font> </a> <BR> <BR>
+The elements of the Matrix&nbsp; are accessed either in Row wise fashion or column-wise fashion.
+ In FORTRAN, the arrays are stored in  memory in <i> Column Major</i> order where as
+ C-language the matrix arrays are stored in memory <i> row major order </i>.
+
+
+ We try to achieve the maximum performance from the program using compiler optimizations.
+ For compiler optimizations, refer Vendor  supplied tuning & Performance Guide. The time 
+ taken for computation of   Matrix into Matrix Multiplication is reported. The <I> BLAS-I,II, III </i>
+ libraries can be used.
+  
+ </span> 
+  </p>
+  </blockquote>
+
+
+ 
+  <!-- **** Input & Output  Example 1.6 ********** -->
+
+ 
+ <li><b>Input</b></li>
+        
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+   Number of Rows and Columns of the two real square matrices  
+
+  </span> 
+  </p>
+  </blockquote>
+
+  <li><b>Output</b></li>
+
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of Matrix into Matrix Multiplication 
+     using <I> BLAS-I, II, III </i> library routines
+    and performance in MFLOPS.
+
+   </span> 
+  </p>
+  </blockquote>
+
+
+
+
+
+</TD> 
+</TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.6 Ends **** -->
+
+
+
+<!--  **************************  Example 1.7 starts ************ -->
+
+
+
+<A NAME="math-kernel-perf-prog-id17"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.7 :   </b> </font> 
+ Write a efficient Sequential program for efficient implementation of matrix into matrix multiplication, 
+          implementing <I> dot </i> product in inner loop, using <B> BLAS-I, II, III  </b>
+     libraries. Use the best Compiler flags 
+          and demonstrate their Performance. <BR>
+
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-mat-mat-mult-dotproduct-intel-mkl.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-mat-mat-mult-dotproduct-intel-mkl.f</FONT>  </I> </a>) 
+ 
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.7 ends ******************* -->
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+
+    <!-- ******** Description Example 1.7 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+ <tbody>    
+ <TR>
+ <TD>
+
+    <li><B>Objective</B></li>
+     <blockquote>
+   <p align = "justify"> <span class = "content">
+
+  Write a efficeint Sequential program for efficient implementation of 
+   matrix into matrix multiplication, implementing  <I> BLAS-I, II, III  </i> in 
+ and using system Provided Mathematical 
+    libraries to get
+   better performance.
+   in inner loop to get better performance.
+   Use the best Compiler flags and demonstrate the
+   Performance.   <BR> 
+
+   </span> 
+  </p>
+  </blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+ The aim is to compute two real square  matrices with dot product inner loop and use compiler
+ optimizations to extract the performance. Assume that the arrays dimension is of 2 the
+ power i where i = 4, 8. This is a simple Matrix-Matrix Multiplication with dot-product
+ inner-loop implementing <B> system tuned   <I> BLAS-I, II, III  </i> mathematical libraries </b>
+in inner loop. 
+ 
+
+The elements of the
+         
+ Matrix&nbsp; are accessed either in Row wise fashion or column-wise fashion.
+ In FORTRAN, the arrays are stored in  memory in <i> Column Major</i> order where as
+ C-language the matrix arrays are stored in memory <i> row major order </i>.
+
+
+ We try to achieve the maximum performance from the program using compiler optimizations.
+ For compiler optimizations, refer Vendor supplied tuning & Performance Guide. The time 
+ taken for computation of   Matrix into Matrix Multiplication is reported. 
+ The system  tuned <I> BLAS-I,II, III </i> libraries can be used.
+  
+  </span> 
+  </p>
+  </blockquote>
+
+
+  
+  <!-- **** Input & Output  Example 1.7 ********** -->
+ 
+ <li><b>Input</b></li>
+        
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    Number of Rows and Columns of the two real square matrices  
+      </span> 
+  </p>
+  </blockquote>
+
+  <li><b>Output</b></li>
+
+    <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of Matrix into Matrix Multiplication 
+     using <I> BLAS-I, II, III </i> library routines
+    and performance in MFLOPS.
+
+      </span> 
+  </p>
+  </blockquote>
+
+
+</TD> 
+</TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.7 Ends **** -->
+
+
+
+
+<!--  **************************  Example 1.8 starts ************ -->
+
+<!-- ******************** Title for Example 1.8 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id18"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.8 :   </b> </font> 
+ Write a efficient Sequential program for efficient implementation of solution of 
+ system  
+  of linear equations <B> Ax= b </b> where <B> A </B> is symmetric positive definite
+   Matrix and <B> b </b> is real vector. 
+  Obtain  better performance using the  best Compiler flags <BR>
+
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-linear-system-gauss-solver.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-linear-system-gauss-solver.f</FONT>  </I> </a>) 
+ 
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.8 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+
+    <!-- ******** Description Example 1.8 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>
+       
+ <TR>
+ <TD>
+
+
+    <li><B>Objective</B></li>
+     
+ <blockquote>
+   <p align = "justify"> <span class = "content">
+
+   Write a efficient Sequential program for efficient implementation of solution 
+      of  matrix system of linear equations <B> Ax = b </b> where <B> A </B> is symmetric positive 
+     definite Matrix and <B> b </b> is real vector. 
+          Obtain better performance using the best Compiler flags. 
+   <BR> 
+
+  </span> 
+  </p>
+  </blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+    
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+ Given a linear system of equations of form <B> AX = b  </b> where <b> A </b> is a real square positive definite 
+symmetric matrix of order <I> n </i>  and b is a real vector of order <I> n </i>. The program finds the
+ inverse of the real squre matrix A using Gauss Jordan method and the inverse is multiplied with 
+vector b to get the
+ solutions for matrix <B> X </b>. i.e. the operation can be represented as <b> X = inverse(A) * B. </b> 
+The time taken for this algorithm to be implemented and performance is printed in seconds. 
+and MFLOPS respectively.  For compiler optimizations, refer Vendor  supplied Tuning and Performance
+ Guide.
+
+  
+  
+  </span> 
+  </p>
+  </blockquote>
+
+
+ 
+  <!-- **** Input & Output  Example 1.8 ********** -->
+ 
+ <li><b>Input</b></li>
+        
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+    size of real square matrix and the real vector 
+    </span> 
+  </p>
+  </blockquote>
+
+  <li><b>Output</b></li>
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of B> AX=b  </b> and performance in MFLOPS.
+     </span> 
+  </p>
+  </blockquote>
+
+ 
+</TD> 
+</TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.8 Ends **** -->
+
+
+
+<!-- ******************** Title for Example 1.9 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id19"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.9 :   </b> </font> 
+ Write a efficient Sequential program for efficient implementation of solution of matrix 
+ system   of linear equations <B> Ax= b </b> where <B> A </B> is symmetric positive definite
+  Matrix and <B> b </b> is real vector  using    system provided mathematical libraries. 
+  Obtain  better performance using the  best Compiler
+  flags 
+
+
+
+<!-- ************download start here ***************--> 
+
+     (Download source code : 
+    <a HREF="./../math-kernel-multi-core-codes/mathlib-core-linear-system-gauss-intel-mkl.f">
+         <I> <FONT COLOR = "blue"> mathlib-core-linear-system-gauss-intel-mkl.f</FONT>  </I> </a>) <BR>
+      <BR>
+    
+  </span> </p> 
+
+    
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.9 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+    <!-- ******** Description Example 1.9 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>
+       
+ <TR>
+ <TD>
+
+ 
+    <li><B>Objective</B></li>
+ 
+ <blockquote>
+  <p align = "justify"> <span class = "content"> 
+
+   Write a efficeint Sequential program for efficient implementation of solution 
+      of  matrix system of linear equations <B> Ax = b </b> where <B> A </B> is symmetric positive 
+     definite Matrix and <B> b </b> is real vector using system provided mathematical libraries.
+          Obtain better performance using the best Compiler flags. 
+   <BR> 
+
+    </span> 
+  </p>
+  </blockquote>
+           
+    <LI> <B>Description</B></LI>
+    
+
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+ Given a linear system of equations of form <B> AX = b  </b> where <b> A </b> is a real square positive definite 
+symmetric matrix of order <I> n </i>  and b is a real vector of order <I> n </i>. The program finds the
+ inverse of the real squre matrix A using Gauss Jordan method and the inverse is multiplied with 
+vector b to get the
+ solutions for matrix <B> X </b>. i.e. the operation can be represented as <b> X = inverse(A) * B. </b> 
+  
+<BR> <BR>
+
+The System Provided mathematical libraries for solution of <B> AX = b  </b>
+or Inverse of the <B> A </b> can be  used in  numerical computations.
+The time taken for this algorithm to be implemented and performance is printed in seconds. 
+and MFLOPS respectively.
+
+ For compiler optimizations, refer Vendor  supplied Tuning and Performance
+ Guide.
+
+  
+    </span> 
+  </p>
+  </blockquote>
+
+
+ 
+  <!-- **** Input & Output  Example 1.9 ********** -->
+ 
+ <li><b>Input</b></li>
+        
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+  size of real square matrix and the real vector     
+   </span> 
+  </p>
+  </blockquote>
+
+  <li><b>Output</b></li>
+
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of B> AX=b  </b> and performance in MFLOPS.
+       </span> 
+  </p>
+  </blockquote>
+
+
+</TD> 
+</TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.9 Ends **** -->
+
+
+<!--  ************** Example 1.10 Starts ***************** -->
+
+<!-- ******************** Title for Example 1.10 Starts ******************* -->
+
+<A NAME="math-kernel-perf-prog-id110"></A> 
+
+<table border="0"  height="6">
+
+    
+<tr ALIGN=LEFT> 
+<td height="90%">
+
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1.10 :   </b> </font> 
+ Write a efficient Sequential program for efficient implementation of solution of matrix  system 
+  of linear equations <B> Ax= b </b> where <B> A </B> is symmetric positive definite
+  Matrix and <B> b </b> is real vector  by  
+
+ Iterative Method using   Jacobi Method and  Use System Provided mathematical  libraries.
+ Obtain better 
+ performance using the  best Compiler flags   (Assignment) 
+
+
+<!-- ************download start here ***************--> 
+
+      
+<!-- ************download Ends  here ***************--> 
+ </td>
+ </tr> 
+
+<!-- ******************** Title for Example 1.10 ends ******************* -->
+ 
+ 
+  </TD> 
+  </TR>
+  </tbody>
+  </table>
+
+
+    <!--  ******* Description Example 1.10 *************** -->
+
+
+ <TABLE cellPadding=0  border=0> 
+  <tbody>
+       
+ <TR>
+ <TD>
+
+  
+    <li><B>Objective</B></li>
+
+
+ <blockquote>
+   <p align = "justify"> <span class = "content"> 
+
+   Write a efficient Sequential program for efficient implementation of solution 
+      of  matrix system of linear equations <B> Ax = b </b> where <B> A </B> is symmetric positive 
+     definite Matrix and <B> b </b> is real vector by Jacobi Method and Use system provided 
+      mathematical libraries.
+          Obtain better performance using the best Compiler flags. 
+   <BR> 
+
+  </span> 
+  </p>
+  </blockquote>
+
+           
+    <LI> <B>Description</B></LI>
+    
+
+   <blockquote>
+   <p align = "justify"> <span class = "content"> 
+
+ Given a linear system of equations of form <B> AX = b  </b> where <b> A </b> is a real square positive definite 
+symmetric matrix of order <I> n </i>  and b is a real vector of order <I> n </i>. 
+With Initialsolution vector <B> {x<sub>0</sub>} </b> vector, the program computes the 
+next solution vector <B> {x<sub>1</sub>} </b> by Jacobi Method iteratively. The iterative 
+method is stopped once the convergence criteria is satisfied, resulting the final solution 
+vector <B> {x}. </b> 
+ 
+  
+<BR> <BR>
+
+The System Provided mathematical libraries for solution of <B> AX = b  </b> by Iterative 
+method can be  used in  numerical computations.
+The time taken for this algorithm to be implemented and performance is printed in seconds. 
+and MFLOPS respectively.
+
+ For compiler optimizations, refer Vendor supplied Tuning and Performance
+ Guide.
+
+  
+  </span> 
+  </p>
+  </blockquote>
+
+
+
+  <!-- **** Input & Output  Example 1.10 ********** -->
+ 
+ <li><b>Input</b></li>
+        
+  <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    size of real square matrix and the real vector  
+ 
+  </span> 
+  </p>
+  </blockquote>
+
+
+  <li><b>Output</b></li>
+   <blockquote>
+   <p align = "justify"> <span class = "content">
+
+    The time taken in seconds for computation of <B> AX=b  </b> and performance in MFLOPS.
+ </span> 
+  </p>
+  </blockquote>
+
+  </font>
+
+
+</TD> 
+ </TR>   
+</tbody>       
+</table>
+
+
+<!--  *** Example 1.10 Ends **** -->
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+ <!--  content of web page End here  --> 
+
+<!-- ********************** Table for Listing of Programs Ends **************** -->
+
+
+
+         
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+ 
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

@@ -1,0 +1,1888 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK 2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../../index.html">
+          <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+            <A class=menul
+	       href="./../../hypack13-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+            <A class=menul
+               href="./../../hypack13-mode01-multicore-openmp.html">
+                &#149; OpenMP</A>  
+
+	   <A class=menul  
+              href="./../../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+            
+           <A class=menul
+             href="./../../hypack13-mode01-multicore-pthreads.html">
+             &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>         
+        
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+               <!-- ** -->
+	       <A class=menulslct
+	        href="./../../hypack13-mode01-multicore-perf-math-lib.html">
+                &#149; Threads-Perf. Math. Lib. </A>
+               <!-- ** -->
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../../index.html">
+              &#149; Home</A>
+
+       
+<!-- ****************** left section code for about link End  here ************* -->
+	
+<BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+ 
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+
+
+
+  
+
+  
+  
+<a name= "mc-ibmaix-compiler-info">   </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Tuning and Performance of Programs/Benchmarks  on Multi-Core Processors </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+<BR>
+
+<table  border="0"  height="28">
+  <tr>
+    <td height="24" align="left" >
+ <P align= "justify" > <span  class="content" >
+
+  Tuning and Performance of Application Programs using Compiler optimisation techniques, 
+  Code restructuring techniques 
+  on Multi-Core Processors is challenging. Understanding Programming Programming Paradigms 
+ (MPI, OpenMP, Pthreads), effective use of right 
+  Compiler Optimisation flags and obtaining correct results for given application 
+  is important. Enhance performance and scalability on multi-core processors for given 
+  application with respect to increase in problem size require serious efforts. Several Optmisation 
+  techniques are discussed below.
+  </span> </p>
+
+<BR> 
+</td>
+</tr>
+</TBODY>
+ </TABLE> 
+
+
+
+
+
+<!-- ****************** Table for Description  Starts ***************** -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+                    <DIV align=Left><font size="2"  Color="black" face= "verdana">
+    <B> Compiler  Optimisation Flags on PARAM Padma (IBM AIX -Power 5/Power 6) </b>
+ </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+</p>
+
+<br>
+
+<!-- ***************** Memory Access Patterns   Starts  *******************-->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+   <tr>
+  <td> 
+
+ <P align= "justify" > <span  class="content" >
+Good performance is becoming more closely tied to good memory access patterns, and careful reuse of operands. It is necessary to have memory system that is fast enough to satisfy every reference immediately so that reasonable memory performance can be achieved.  The efficiency of memory performance depends on the behavior of the program - bad memory 
+access patterns give bad performance for user.  A single program , structured in two different ways  could run at very different speed because of the way it plays to the memory system.   Speed of the memory system is important for 
+parallelism and getting good memory throughput is important for performance of parallel program. When the compiler 
+can see how memory references interplay it can safely schedule then alongside other operations for
+ improved performance.
+
+</span> </p>
+</td>
+</tr>
+</tbody>
+</table>
+
+  <DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+
+
+<!-- ****************** Loop Interchange to Ease Memory Access Patterns Starts **************** -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <p> <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+        
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (a). Compiler Optimization Techniques
+   </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+  <P align = "justify"> <span class = "content">
+  
+
+
+ <FONT color="#000000">The following are the options available for the C and Fortran 
+compilers&nbsp;(xlf and xlc for AIX) on IBM AIX cluster.&nbsp;This section consists of detailed 
+explanation about the -O option and the table below shows other compiler options.</FONT></P>
+
+
+<FONT color="#000000"><STRONG>O Option</STRONG></P>
+
+<STRONG>Syntax</STRONG>
+<PRE>-O[<VAR>level</VAR>]
+OPTimize[(<VAR>level</VAR>)] | <STRONG><U>NOOPTimize</U></STRONG>
+
+</PRE>
+	
+Specifies whether to optimize code during compilation and, if so, at which level:
+<STRONG>Arguments</STRONG>
+
+<BR> <BR> 
+<DL>
+ <DT>not specified <BR>
+
+ <DD>
+ <DD>
+	Does no optimization on the generated code. <DT>-O
+ <DD>
+															 
+<DD>
+																
+For each release of XL Fortran, <STRONG>-O</STRONG> enables the level of 
+optimization that we feel represents the best combination of compilation speed 
+and run-time performance. If you need a specific level of optimization, specify 
+the appropriate numeric value. Currently, <STRONG>-O</STRONG> is equivalent to 
+<STRONG> -O2</STRONG>. 
+
+<DT>-O1
+																
+<DD>																
+<DD>																
+Reserved for future use. This form does not currently do any optimization, and 
+is ignored. In past releases, it was interpreted as a combination of the <STRONG>-O</STRONG>
+and <STRONG>-1</STRONG> options, which may have had unintended results.
+
+
+<DT>-O2&nbsp;
+															
+<DD>
+																
+<DD>
+																
+Performs a set of optimizations intended to offer improved performance without 
+an unreasonable increase in time or storage required for compilation.
+
+<DT>-O3&nbsp;
+																
+<DD>
+<P align = "justify"> <span class = "content">																
+Performs additional optimizations that are memory intensive, compile-time intensive, and may change the
+ semantics of the program slightly. These optimizations are recommended when the desire for
+ run-time speed improvements outweighs the concern for limiting compile-time resources. <BR><BR> 
+																
+This level of optimization also affects the setting of the <STRONG>-qfloat</STRONG>
+option, turning on the <STRONG>FLTINT</STRONG> and <STRONG>RSQRT</STRONG> suboptions 
+by default, and sets <STRONG>-qmaxmem=-1</STRONG>.
+</span> </p>
+	<DT>-O4&nbsp;
+	
+	<DD>
+<P align = "justify"> <span class = "content">
+	Aggressively optimizes the source program, trading off additional compile time for potential 
+improvements in the generated code. The option can be given at compile time, or optionally at 
+link time. If the option is given at link time, it will have no effect unless also specified 
+at compile time for at least the file containing the main program.
+
+</span> </p>
+
+<STRONG>-O4</STRONG> implies the following other options:
+</LI>
+<blockquote>	
+
+<LI> -qhot </li>  
+<LI>-qipa  </LI>
+<LI>-O3 (and all the options and settings that it implies) </LI>
+<LI>-qarch=auto  </LI>
+<LI>-qtune=auto  </LI>
+<LI>-qcache=auto  </LI>	</UL>
+
+</blockquote>
+<P align = "justify"> <span class = "content">
+Note that the "auto" setting of <STRONG>-qarch</STRONG>, <STRONG>-qtune</STRONG> 
+and <STRONG>-qcache</STRONG>
+implies that the execution environment will be the same as the compilation environment.
+
+This option follows the "last option wins" conflict resolution rule, so any of 
+the options which are modified by <STRONG>-O4</STRONG> can be subsequently 
+changed. Specifically, specifying
+
+<PRE>  <font size =2> -O4 -qarch=com  </font>  </PRE>
+would still allow aggressive intraprocedural optimization, while maintaining 
+code portability.
+</span> </p>
+</DD>
+</DL>
+<!-- *********************  Restrictions ******************** -->
+
+
+</span> </p>
+
+ <P align = "justify"> <span class = "content">
+
+<STRONG> <font size = 2> Restrictions </font> </STRONG>
+
+Increasing the level of optimization may or may not result in additional 
+performance improvements, depending on whether the additional analysis detects 
+any further optimization opportunities.
+<P>
+Compilations with optimization may require more time and machine resources than 
+other compilations. </p>
+
+The more the compiler optimizes a program, the more difficult it is to debug the program with a symbolic 
+debugger.
+			</P>
+
+
+<!-- *******************  Options for Flaoting Point ******************* -->
+	<P><FONT color="#000000" size="2"><STRONG>Options for Floating-Point 
+Processing</STRONG></FONT></P>
+
+
+To take maximum advantage of the system floating-point performance and 
+precision, you may need to specify details of how the compiler and XLF-compiled 
+programs perform floating-point calculations. 
+
+</span> </p>
+
+</td>
+</tr>
+</table>
+
+  <DIV ALIGN=right>
+ <a href="#top"><img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<BR> <BR>
+
+<!-- ******************* Table Starts Here ******************* -->
+
+
+
+ <TABLE id="Table22" border="1" height="300" >
+<tr>
+<td>
+
+<font face = "verdana"  size = "2"> 
+<TR>
+	
+<TH vAlign="bottom" align="left" width="121">
+ <PRE>Command-Line Option</PRE>
+ <BR>
+</TH>
+
+<TH vAlign="bottom" align="left" width="111">
+<PRE> @PROCESSDirective  </PRE>
+</TH>
+
+<TH vAlign="bottom" align="left" width="568">
+ <PRE>Description</PRE> <BR>
+ </TH>
+</TR>
+
+<TR>
+
+
+<TD vAlign="top" align="left" width="121">-qfloat=<VAR>options</VAR> </TD>
+
+<TD vAlign="top" align="left" width="111">FLOAT(<VAR>options</VAR>)</TD>
+
+<TD vAlign="top" align="left" width="568">Determines how the compiler generates or 
+optimizes code to handle particular types of floating-point calculations. <BR>
+
+Default suboptions are <STRONG>nofltint</STRONG>, 
+<STRONG>fold</STRONG>, <STRONG>nohsflt</STRONG>, <STRONG>nohssngl</STRONG>, 
+<STRONG>nonans</STRONG>,
+
+<STRONG>norndsngl</STRONG>, <STRONG>maf</STRONG>, <STRONG>norrm</STRONG>, and 
+<STRONG>norsqrt</STRONG>; some of these settings are different 
+with <STRONG>-O3</STRONG>optimization turned on or with <STRONG>-qarch=ppc</STRONG>.
+
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-qieee={Near| Minus| Plus| Zero}
+
+-y{n | m | p | z} </PRE> 
+<BR>
+</TD>
+
+<TD vAlign="top" align="left" width="111">IEEE ({Near  Minus|Plus|Zero})</TD>
+
+<TD vAlign="top" align="left" width="568">Specifies the rounding mode for the compiler to 
+use when evaluating constant floating-point expressions at compile time. <BR>
+
+
+
+<B>Default:</B> &nbsp; &nbsp; 
+-qieee=near <br>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+
+<!-- **************** table ends here ******************* -->
+
+
+ <TABLE id="Table22" border="1" height="150" >
+ <tbody>
+<TR>
+<TD>
+
+<P><FONT color="#000000" size="2"><STRONG>Options that control listing</STRONG></FONT></P>
+
+<P>These options control the way the <STRONG>ld</STRONG> command processes object files during compilation.
+ Some of these options are passed on to <STRONG>ld</STRONG> and not processed by the compiler at all.
+
+<P>You can actually include <STRONG>ld</STRONG> options on the compiler command line, because the 
+compiler passes unrecognized options on to the linker. Other linker options you might find helpful are 
+<STRONG>-brename</STRONG> (to change individual symbol names to avoid unresolved references) and 
+<STRONG>-bmap</STRONG> (to produce a map file showing information such as sizes of common blocks).&nbsp;
+</P>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+      <DIV ALIGN=right>
+ <a href="#top"><img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+
+
+<!-- ****************** Table starts ****************** -->
+	<P>
+	<TABLE id="Table35" height="314"  border="1">
+	<TR>
+	<TH vAlign="bottom" align="left" width="121">
+					<PRE>Command-Line Option
+</PRE>
+<BR>
+</TH>
+
+<TH vAlign="bottom" align="left" width="111">
+	<PRE> @PROCESSDirective </PRE>
+	<BR>
+	</TH>
+	<TH vAlign="bottom" align="left" width="563"><PRE>Description
+</PRE><BR>
+</TH>
+</TR>
+<TR>
+
+<TD vAlign="top" align="left" width="121">-b64* </TD>
+<TD vAlign="top" align="left" width="111"><BR></TD>
+
+<TD vAlign="top" align="left" width="563">Instructs <STRONG>ld</STRONG>
+    to bind 64-bit objects in 64-bit mode.</TD>
+
+</TR>
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-bdynamic*-bshared*-bstatic*</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">These options are 
+toggles used to control the processing of <STRONG>-l</STRONG> options and the way that shared objects are processed.</FONT></TD>
+</TR>
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-bhalt:<VAR>error_level</VAR>*</PRE></TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563">Specifies the maximum error level for 
+	linker command processing to continue. <BR>
+       <B> Default: </B> &nbsp; &nbsp; 
+       -bhalt:4, as specified in the configuration file.
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-bloadmap:<VAR>name</VAR>*</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563">Requests that a log of linker actions and 
+	messages be saved in file <VAR>name</VAR>. <BR>
+
+     <B> Default:</B> &nbsp; &nbsp; &nbsp; No log is kept.
+</TD>
+</TR>
+
+
+<TR>
+
+<TD vAlign="top" align="left" width="121">
+  <PRE>-bmaxdata:<VAR>bytes</VAR>*-bmaxstack:<VAR>bytes</VAR>*</PRE> </TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+
+<TD vAlign="top" align="left" width="563">Specifies the maximum amount of space to 
+reserve for the program data segment and stack segment, for programs where the 
+size of these regions is a constraint. <BR>
+											
+<B>Default:</B>  &nbsp; &nbsp; &nbsp: 
+     Combined stack and data space is slightly less than 
+	256MB, or lower depending on the limits for the user ID.
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="121">
+	<P>-brtl* <BR> -bnortl* </P></TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563">Determines which algorithm will be used to 
+find libraries (specified with the <STRONG>-l</STRONG> option).
+
+</TD>
+</TR>
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-c </PRE> </TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+
+<TD vAlign="top" align="left" width="563">Produces an object file instead of an 
+executable file. <BR>
+
+  <B>Default:</B> &nbsp; &nbsp; 
+  Compile and link-edit, producing an executable file.
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-L<VAR>dir</VAR>*
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563">Looks in the specified directory for 
+libraries specified by the <STRONG>-l</STRONG> option. <BR>
+
+<B>Default:</B> &nbsp; &nbsp; 
+
+<STRONG>/usr/lib</STRONG>
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-l<VAR>key</VAR>*
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563">Searches the specified library file, 
+where <VAR>key</VAR> selects the file <STRONG>lib</STRONG><VAR>key</VAR><STRONG>.a</STRONG>. <BR>
+
+ <B>Default:</B> &nbsp; &nbsp; 
+  Libraries listed in <STRONG>xlf.cfg</STRONG>.
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="121"><PRE>-qOBJect -qNOOBJect</PRE>
+</TD>
+	<TD vAlign="top" align="left" width="111">OBJect NOOBJect</TD>
+<TD vAlign="top" align="left" width="563">Specifies whether to produce an object file, or stop immediately 
+after checking the syntax of the source files. <BR>
+
+ <B>Default:</B> &nbsp; &nbsp; 
+ -qobject
+
+
+
+
+
+</TD>
+</TR>
+
+
+
+</tbody>
+</table>
+
+  <DIV ALIGN=right>
+ <a href="#top"><img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<!-- ****************** table done ******************** -->
+
+
+
+<!-- ****************** table Starts ******************** -->
+
+<P><FONT color="#000000"><STRONG> Options for performance optimization</STRONG></FONT>
+</P>
+<p>
+<TABLE id="Table10" height="668"  border="1">
+
+<TR>
+
+<TH vAlign="bottom" align="left"> <PRE>Command-Line Option </PRE>
+<BR>
+</TH>
+
+<TH vAlign="bottom" align="left" > <PRE>@PROCESS Directive </PRE>
+<BR>
+</TH>
+
+<TH vAlign="bottom" align="left">
+<PRE>Description</PRE>
+<BR>
+</TH>
+
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" ><PRE></pre>
+    <PRE><STRONG>-</STRONG>O[<VAR>level</VAR>]<br> -qoptimize [=<VAR>level</VAR>] <br>-qnooptimize </PRE>
+</TD>
+
+<TD vAlign="top" align="left"><PRE>OPTimize
+[(<VAR>level</VAR>)]
+NOOPTimize
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left">
+<P>Specifies whether code is optimized during compilation and, if so, at which 
+level (2, 3 or<BR>&nbsp;4). <BR> 
+
+  <B>Default:</B> &nbsp; &nbsp;  -qnooptimize
+
+<TR>
+<TD vAlign="top" align="left" ><PRE>-P{v|k}[!]
+</PRE>
+</TD>
+
+ <TD vAlign="top" align="left"><BR></TD>
+<TD vAlign="top" align="left">Invokes the selected optimizing preprocessor.
+ Adding !<br> prevents the compilation step following preprocessing. <BR>
+
+Note: &nbsp; &nbsp; The preprocessors are available as <br>separate 
+vendor-logo products. <BR>
+<B>Default:</B> &nbsp; &nbsp; &nbsp; No preprocessing.
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left"><PRE>-p -pg </PRE>
+</TD>
+
+<TD vAlign="top" align="left"><BR></TD>
+<TD vAlign="top" align="left"><PRE>Sets up the object file for<br> profiling.
+</PRE> <BR> 
+
+<B>Default: &nbsp; &nbsp;  No profiling.
+</TD>
+</TR>
+
+
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE>-Q
+-Q!
+-Q+<VAR>names</VAR>
+-Q-<VAR>names</VAR>
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563">Specifies whether or not Fortran 90 procedures
+ are inlined, 
+and/or particular procedures
+that should or should not be inlined. <VAR>names</VAR> is a list of procedure names 
+separated by colons. <BR>
+
+ <B>Default:</B> &nbsp; &nbsp; No inlining <BR>
+</TD> 
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE>-qalias=
+   {[no]aryovrlp |
+   [no]intptr |
+   [no]std}...]
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><PRE>ALIAS(
+{[NO]
+ ARYOVRLP |
+[NO]INTPTR
+|[NO]STD}..)
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="563">
+<P>Indicates whether a program contains certain categories of aliasing. The compiler limits<BR>
+the scope of some optimizations when there is a possibility that different names are
+aliases for the same storage locations. <BR>
+
+<B>Default:</B> &nbsp; &nbsp; 
+
+-qalias=aryovrlp:nointptr:std for the xlf90_r and 
+ xlf90 commands; -qalias=aryovrlp:intptr:std for the xlf_r, xlf, and f77 
+ commands.
+
+</TD>
+</TR>
+	
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><STRONG>-</STRONG>qalign=[no]4k
+</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><PRE>ALIGN ([NO] 4K)</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="563">Specifies the alignment of data objects 
+in storage, to avoid performance problems with misaligned data. Currently, this 
+option is mainly useful in combination with logical volume I/O and disk 
+striping, and it is very important for achieving performance gains with these 
+types of I/O. <BR>
+
+
+ <B>Default:</B> &nbsp; &nbsp; -qalign=no4k
+</TD>
+</TR>
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE>-qarch=
+<VAR>architecture</VAR></PRE>
+</TD>
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">Specifies what types of RISC systems the 
+application program may be executed on. Changing the default can improve performance, but might restrict the 
+set of machines that can run the program. The choices are com, auto, rs64a, p2sc, pwr, pwr2 (or pwrx), 
+pwr2s, ppc, 601, 603, and 604</FONT> <BR>
+
+<FONT color="#0000ff"> 
+<B>Default:</B> &nbsp; &nbsp; 
+-qarch=com, which uses only instructions that are common to all platforms</FONT>
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qassert={
+   <VAR>deps</VAR> | <VAR>nodeps</VAR> |
+   itercnt=<VAR>n</VAR>}
+</FONT></PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">Provides information about the characteristics of 
+the files that can help to fine-tune optimizations.</FONT> <BR>
+
+<<B>Default:</B></FONT> &nbsp; &nbsp; 
+
+<FONT color="#000000">-qassert=deps:itercnt=1024</FONT>
+
+</TD>
+</TR>
+
+
+</TR>
+<TR>
+
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000><STRONG>-</STRONG>qcache={
+   auto |
+   assoc=<VAR>number</VAR> |
+   cost=<VAR>cycles</VAR> |
+   level=<VAR>level</VAR> |
+   line=<VAR>bytes</VAR> |
+   size=<VAR>Kbytes</VAR> |
+   type={C|D|I}
+}[:...]
+</FONT></PRE>
+	</TD>
+
+	<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">
+
+Specifies the cache configuration for a specific execution machine. 
+The compiler uses this information to tune program performance, especially 
+for loop operations that can be structured ("blocked") to process only the amount 
+of data that can fit into the data cache.</FONT> <BR>
+
+
+<B> Default:</B></FONT> &nbsp; &nbsp; 
+
+  The compiler uses typical values based on the -qtune and/or -qarch settings.</FONT>
+</TD>
+</TR>
+	
+<TR>
+
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qcompact -qnocompact
+</FONT></PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>COMPACT
+NOCOMPACT
+</FONT></PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="563"><PRE><FONT color=#000000>Reduces optimizations that 
+ increase code size.
+</FONT></PRE> <BR>
+
+<FONT color="#000000"><B>Default:</B></FONT> &nbsp; &nbsp; &nbsp;  -qnocompact</FONT>
+
+</TD>
+</TR>
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qfdpr -qnofdpr
+</FONT></PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">Instruments object 
+files with information needed for the AIX fdpr (Feedback Directed Program 
+Restructuring) performance-tuning utility to optimize the resulting executable 
+file.</FONT> <BR>
+
+<B>Default:</B></FONT> &nbsp; &nbsp; 
+<FONT color="#000000">-qnofdpr</FONT>
+
+</TD>
+</TR>
+
+<TR>
+	<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qhot[=[no]
+arraypad[=<VAR>n</VAR>]]
+-qnohot
+</FONT></PRE>
+</TD>
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">
+Determines whether or not to perform high-order transformations on loops and array language during optimization, 
+and whether or not to pad array dimensions and data objects to avoid cache misses.</FONT> <BR>
+
+ <FONT color="#000000"><B>Default:</B></FONT> &nbsp; &nbsp; 
+ <FONT color="#000000">-qnohot</FONT>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qipa[=<VAR>suboptions</VAR>]
+</FONT></PRE>
+	</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+
+	<TD vAlign="top" align="left" width="563"><FONT color="#000000">Enhances -O 
+	optimization by doing detailed analysis across procedures 
+(<I>interprocedural analysis</I>).</FONT> <BR>
+
+<B>Default:</B></FONT> &nbsp; &nbsp; 
+
+<FONT color="#000000">-O analyzes each subprogram 
+separately, ruling out certain optimizations that apply across subprogram 
+boundaries.</FONT>
+</TD>
+</TR>
+
+
+
+<TR>
+  <TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qpdf{1|2}
+   </FONT></PRE>
+</TD>
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">
+
+Tunes optimizations 
+through profile-directed feedback, where results from sample program execution 
+are used to improve optimization near conditional branches and in frequently 
+executed code sections.</FONT> <BR>
+
+<FONT color="#000000"><B>Default:</B></FONT> &nbsp; &nbsp; 
+
+<FONT color="#000000">Optimizations use hardcoded 
+assumptions about branch frequency and other statistics</FONT>
+	</TD>
+	</TR>
+	
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qsmp[=<VAR>suboptions</VAR>] -qnosmp
+</FONT></PRE>
+	</TD>
+
+	<TD vAlign="top" align="left" width="111"><BR></TD>
+	<TD vAlign="top" align="left" width="563"><FONT color="#000000">Used along with either xlf_r or xlf90_r, 
+this option controls automatic parallelization of loops, user-directed parallelization of loops, and the choice of 
+chunking algorithm.</FONT> <BR>
+
+
+<B>Default:</B></FONT> &nbsp; &nbsp;  <FONT color="#000000">-qnosmp</FONT>
+</TD>
+</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qstrict -qnostrict
+ </FONT></PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>STRICTNOSTRICT
+</FONT></PRE>
+</TD>
+
+	<TD vAlign="top" align="left" width="563"><FONT color="#000000">Ensures that 
+	optimizations done by the -O3 and -qhot options do not alter the semantics of a 
+	Fortran 90 program.</FONT> <BR>
+
+<B>Default:</B></FONT> &nbsp; &nbsp; 
+    With -O3 in effect,  code may be rearranged so that results or exceptions are different than 
+   in unoptimized programs.</FONT>
+</TD>
+</TR>
+
+
+	<TR>
+	<TD vAlign="top" align="left" width="111">
+       <PRE><FONT color=#000000>
+        -qsuppress= <BR> nnnn-mmm &nbsp; <br>[:nnnn-mmm...] -qnosuppress
+        </FONT></PRE>
+	</TD>
+
+	<TD vAlign="top" align="left" width="111"><BR></TD>
+
+	<TD vAlign="top" align="left" width="563"><FONT color="#000000">Specifies selective 
+	messages to suppress from the output stream.</FONT>
+	</TD>
+	</TR>
+
+	<TR>
+	<TD vAlign="top" align="left" width="111"><FONT color="#000000">-qthreaded</FONT>
+	</TD>
+
+	<TD vAlign="top" align="left" width="111"><BR></TD>
+  
+        <TD vAlign="top" align="left" width="563"><FONT color="#000000">Specifies that the 
+	compiler should generate thread-safe code. This is turned on by default for the 
+	xlf90_r and xlf_r commands.</FONT> 
+	</TD>
+	</TR>
+
+
+<TR>
+<TD vAlign="top" align="left" width="111"><PRE><FONT color=#000000>-qtune=
+</FONT><FONT color=#000000><VAR>implementation</VAR>
+</FONT></PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="111"><BR></TD>
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">Tunes instruction 
+selection, scheduling, and other implementation-dependent performance 
+enhancements for a specific implementation of a hardware architecture. The following settings are valid: 
+auto 601, 603, 604, pwr, pwr2 (or pwrx), pwr2s, rs64a, or p2sc.</FONT> <BR>
+
+
+  <FONT color="#000000">Default:</FONT> &nbsp; &nbsp; 
+   <FONT color="#000000">Determined by the setting of the -qarch option.</FONT>
+</TD>
+</TR>
+
+
+	
+<TR>
+<TD vAlign="top" align="left" width="111"><FONT color="#000000">-qzerosize
+	<BR>
+	-qnozerosize </FONT>
+	</TD>
+
+<TD vAlign="top" align="left" width="111"><PRE>ZEROSIZE NOZEROSIZE</PRE>
+</TD>
+
+<TD vAlign="top" align="left" width="563"><FONT color="#000000">-qnozerosize improves 
+	performance of FORTRAN 77 and some Fortran 90 programs by preventing checking 
+		for zero-sized character strings and arrays.</FONT> <BR>
+
+		  <B>Default:</B></FONT> &nbsp; &nbsp; 
+
+-qzerosize for the xlf90_r and 
+xlf90 commands, and -qnozerosize for the xlf_r, xlf, and f77 commands (meaning 
+these commands cannot be used for programs that contain zero-sized objects).</FONT>
+		</TD>
+		</TR>
+
+		
+</tbody>
+</table>
+
+<!-- ******************** table ends ************************ -->
+
+
+
+<TABLE id="Table10" height="200"  border="1">
+<tbody>
+<tr>
+<td>
+
+ <FONT color="#0000ff"><FONT color="#000000">
+
+
+<P align = "justify"> <span class = "content">
+Compiler directives are put into the code 
+as comments with a special form. For Fortran 77 and Fortran 90, the directives 
+start with C$OMP. <br> <BR>
+For Fortran 90, the directives start with ! C$OMP.&nbsp; For C, the directives are supplied 
+as # pragma OMP.; </span> </p>
+
+ 
+
+<P align = "justify"> <span class = "content">
+
+<ul type="disc">
+
+<li>
+The directives are DO ALL, DOSERIAL, and DOSERIAL* </li>
+<li>
+DO SERIAL - directs the compiler not to parallelize the loop </li>
+	<li>
+DOSERIAL* - directs the compiler not to parallelize the loop nest. </li>
+<li>
+	DO ALL - directs the compiler to parallelize the loop </li>
+<li>
+DOSERIAL and DOSERIAL* are often used when the user knows in advance that the 
+loops is too small to parallelize efficiently. </li>
+
+						 
+</ul>
+
+</span> 
+</p>
+
+  <DIV ALIGN=right>
+ <a href="#top"><img src="../../pemg10_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+<!-- ******************  Loop Interchange to Ease Memory Access Patterns Ends  ******************* -->
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+    
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

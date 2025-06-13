@@ -1,0 +1,60 @@
+--------------------------------------------------------------
+                  README for hegapa-hpc-opencl-v1.2
+---------------------------------------------------------------------------
+
+The following are the details for usinghegapa-hpc-opencl-v1.2.
+              
+	Section 1 : Installation ofhegapa-hpc-opencl-v1.2.
+	Section 2 : Cleanup.
+   	Section 3 : Limitations.
+
+
+
+------------------------------------------------------------------------------
+Section 1 : Installation, Compilation and Execution ofhegapa-hpc-opencl-v1.2
+------------------------------------------------------------------------------
+
+  1.1.How to installhegapa-hpc-opencl-v1.2
+       ---------------------
+
+Untar the tarhegapa-hpc-opencl-v1.2.tar using the following command
+
+       tar -xvf hegapa-hpc-opencl-v1.2
+ 1.2. How to compile & Create Executable in hegapa-hpc-opencl-v1.2
+        --------------------------------------------------
+
+       Use the "Makefile" in the directory and use the following command
+       for compilation and creation of a executable same as of benchmark
+       inhegapa-hpc-opencl-v1.2
+            	
+	make 
+
+  1.3. How to Execute inhegapa-hpc-opencl-v1.2
+	---------------------------------------
+
+	The executable in hegapa-hpc-opencl-v1 is executed on target machine 
+	using the following command.
+
+	./executable name
+	
+	for example: ./MatMatMultLocalMemSP
+
+-------------------------------------------------------------------------
+Section 2 : Cleanup
+-----------------------------------------------------------------------
+
+To clean up the executable file, type
+                make clean
+
+---------------------------------------------------------------------------
+Section 3 :  Limitations
+--------------------------------------------------------------------------
+
+    1. Codes are designed for square matrices.
+    2. Codes are designed for single platform and single device.
+    3. The codes with local memory implementation Data sizes should be multiple of BLOCK_SIZE.
+
+Note:- SP: single precision , DP: double precision 
+       GM: global memory , LM: local memory
+
+-----------------------------------------------------------------------------------------------------------

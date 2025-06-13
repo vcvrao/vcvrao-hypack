@@ -1,0 +1,51 @@
+#
+# *******************************************************************
+#
+#	C-DAC Tech Workshop : hyPACK-2013
+#                 October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : Augusr 2013
+#
+# *******************************************************************
+#
+##### User configurable options #####
+
+MPIR_HOME  = 
+#F77        = mpxlf
+F77        = mpif77
+FLINKER        = mpif77
+
+OPTFLAGS   = 
+
+MPILIB     =
+LIBS       = 
+
+### End User configurable options ###
+
+EXECS	  =  master_f slave_f 
+
+run : default
+
+
+#For DAY-2 examples only 
+
+#OBJECTS3 = mv_mult_master_sschd.o
+#OBJECTS4 = mv_mult_slave_sschd.o
+
+OBJECTS3 = mm_mult_master_self_schd.o
+OBJECTS4 = mm_mult_slave_self_schd.o
+
+default: $(EXECS)
+
+master_f: $(OBJECTS3) 
+	$(FLINKER) $(OPTFLAGS) -o master_f $(OBJECTS3) $(LIBS) $(MPILIB) 
+slave_f:  $(OBJECTS4) 
+	$(FLINKER) $(OPTFLAGS) -o slave_f $(OBJECTS4) $(LIBS) $(MPILIB) 
+
+.f.o:
+	$(F77) -c $<
+
+	
+clean: 
+	\rm -f *.o $(EXECS)

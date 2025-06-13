@@ -1,0 +1,3022 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../index.html">
+      <IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../hypack13-mode04-gpgpu-lab-overview.html">
+                  &#149; Mode-4 GPGPUs </A>
+                  
+	       <A class=menul
+                  href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                   &#149; NVIDIA - CUDA/OpenCL</A>
+              
+                  <!-- ** -->
+	          <A class=menulslct   
+                   href="./../hypack13-mode04-gpgpu-amd-opencl.html">
+                   &#149; AMD APP  OpenCL </A>
+                  <!-- ** -->
+                             
+	       <A class=menul  
+                   href="./../hypack13-mode04-gpgpu-opencl.html">
+                    &#149; GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../hypack13-mode04-gpgpu-power-perf.html">
+                   &#149; GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../index.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+<H1> hypack-2013 Mode-2 : GPGPU AMD-APP (APU) SDK  </u></H1>
+
+
+
+<!--  .............******** AMD-ATI - GPU Comp starts -->	
+	
+ <P align ="justify"> <span class="content">
+ 
+AMD Accelerated Parallel Processing (AMD APP) SOftware  harnesses
+ the tremendous processing power of GPUs for high-performance, data-parallel computing in a wide range 
+of applications. The AMD Accelerated Parallel Processing system includes a software stack and the AMD GPUs. 
+Please refer to AMD-APP Accelerated Parallel Processing (AMD APP) Programming Guide OpenCL to understand 
+the relationship of the AMD Accelerated Parallel Processing components.  <BR> <BR>
+
+The AMD APP software stack provides end-users and developers with a complete, flexible suite of tools to 
+leverage the processin power in AMD GPUs.  AMD-APP OpenCL 
+software development platform for x86-based CPUs and it provides complete heterogeneous 
+OpenCL development platform for both the CPU and GPU. The software includes OpenCL compiler &amp; runtime, 
+Device Driver for GPU compute device - AMD Compute Abstraction Layer (CAL), Performance Profiling Tools - AMD 
+APP Profiler and AMD APP KernelAnalyzer and Performance Libraries - AMD Core Math Library (ACML).  
+
+ </span> </p> 
+
+ <div align = "left">
+
+ <font size="2"  color="red"> <B>  GPGPU : </b> </font>   
+
+   <a href="#gpgpu-history">
+  <font size="2"  color="blue"> <B>   History  </b>  </font> </a>   
+   &nbsp; &nbsp; 
+
+  <a href="#gpgpu-users-view">
+  <font size="2"  color="blue"> <B>  User's view </b>  </font> </a>   
+   &nbsp; &nbsp;
+
+  <a href="#gpgpu-prog-env">
+  <font size="2"  color="blue"> <B>  Prog. Env </b>  </font> </a>   
+ 
+&nbsp; &nbsp; 
+
+  <a href="#gpgpu-brook-gpu">
+  <font size="2"  color="blue"> <B>  GPU Brook  </b>  </font> </a>   
+ &nbsp;&nbsp;
+
+ 
+  <a href="#amd-ati-streamcomp"> 
+  <font size="2"  color="blue"> <B>  AMD-ATI Stream Comp  </b>  </font> </a>
+ </div>
+ 
+
+<BR>
+
+  <font size="2"  color="red"> <B>  AMD APP SDK : </b> </font>   
+
+
+  <a href="#opencl-amd-app-comp">
+  <font size="2"  color="blue"> <B>  OpenCL  </b>  </font> </a>   
+   &nbsp; &nbsp; 
+
+ <a href="#opencl-amd-app-cal">
+  <font size="2"  color="blue"> <B>   CAL </b>  </font> </a>   
+   &nbsp; &nbsp;
+
+   <a href = "#opencl-amd-app-codes">  
+   <font size="2"  color="blue"> <b> List of Programs - OpenCL   </b> </font> </a>
+  
+</div>
+
+<!--  **********  List of Codes - Modules Starts ********* -->
+
+<!-- ****************List of Programs - simple AMD-APP OpenCL programs starts [1] here********************** -->
+
+<BR> 
+
+<p> <font size="2" face="Arial" color="red"> <b> List of  Programs OpenCL - AMD APP </b> </font> </p>
+
+
+<table  border="0" >
+<tbody>
+
+
+<!--******************* Module  1 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpgpu-comp-amd-app-opencl-html/gpgpu-comp-amd-app-opencl-basics.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module 1 : </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         Getting Started : Basics - OpenCL
+       </font>
+     </td>
+
+   </tr>
+
+<!--******************* Module  2 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpgpu-comp-amd-app-opencl-html/gpgpu-comp-amd-app-opencl-num-comp.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module 2 : </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         OpenCL  Programs on Matrix Computations
+       </font>
+     </td>
+
+   </tr>
+
+<!--************************** Module 3 ******************************** -->
+	<tr>
+     <td width="100" height="2" valign="top"> 
+                                      
+    <a href="./gpgpu-comp-amd-app-opencl-html/gpgpu-comp-amd-app-opencl-num-library.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  3 :</b> </font>   
+       </a> 
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+      OpenCL  Programs using BLAS libraries for  Matrix Computations 
+     
+       </font>
+     </td>
+   </tr>
+
+
+<!--************************** Module 4  ******************************** -->
+	<tr>
+     <td width="100" height="2" valign="top"> 
+                                      
+    <a href="./gpgpu-comp-amd-app-opencl-html/gpgpu-comp-amd-app-opencl-app-kernels.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  4 : </b> </font>   
+       </a>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         OpenCL  Programs - Application Kernels
+       </font>
+     </td>
+   </tr>
+
+<!--************************** Module 5 ******************************** -->
+	<tr>
+     <td width="100" height="2" valign="top"> 
+    <a href="./gpgpu-comp-amd-app-opencl-html/gpgpu-comp-amd-app-opencl-memory-opt.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  5 : </b> </font>   
+       </a>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         OpenCL  Memory Optimization Programs - Tuning & Performance
+       </font>
+     </td>
+   </tr>
+
+
+</tbody>
+</table>
+
+<BR>  <BR>
+
+
+<!-- ............... Reference Starts Here .............-->
+<div>
+
+<font size="2" face="Arial" color="red"> <B> References  &amp; Web-Pages :  </b> </font> </a> 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode02-gpgpu.html"> 
+ <font color="blue"><B> GPGPU &amp; GPU Computing  </b>  </font> </a> 
+&nbsp; &nbsp; &nbsp;
+
+<a href ="#gpgpgu-gpu-comp-amd-app-ref">  <font size ="2" color = "blue"> <b>  Web-sites  </b> </font> </a> 
+
+</span> </p>  
+
+</div>
+
+<!--**********************Reference Ends Here**********************-->
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<HR>
+
+<!--********************* Introduction to GPGPU  : starts ************************* -->
+<a name="gpgpu-history"> </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left> <font size="2"> 
+
+   <font Color="black" face= "verdana">
+   <B>  GPGPU-History</b> </font> 
+  </DIV> 
+
+</TD> 
+</TR> 
+
+ 
+<TR>
+<TD>
+		
+ <P align ="justify">  <span class="content">
+
+In the recent years, much attention has been gained for general purpose CPU (GPGPU) processing. 
+The word "general purpose" in the context of High Performance Computing (HPC) usually means "data intensive 
+applications 
+in scientific and engineering fields. In GPGPU (Graphics) Processing, the graphics performance of specialized 
+software, e.g. 
+scientific software, image manipulation, video decoders/encoders, games that make GPU performance pretty 
+important. <BR> <BR>
+
+ The speed at which the data can be sent to the GPGPUs, 
+internally processed and the results sent back is as important as the processing power of the GPGPUs.
+ Also, the performance of Video (GFX) Rendering in which how efficiently graphics processors can handle rendering. 
+Such operations are used by all graphics software, image manipulation, video decoders/encoders, games and modern operating systems.
+ Video (GFX) Memory is crucial for performance, the bandwidth of the memory of the video adapters (GFXs) and the 
+bandwidth of the bus  drive the performance. <BR> <BR>
+
+
+In these programming techniques, programmers can use GPU's pixel shavers as general-purpose single 
+precision FPUs,  For typical Video applications, GPGPU processing is highly parallel, but it relies
+ on the size of off-chip video  memory to operate on large data sets. Off-chip memory on GPGPUs plays
+ an important role for GPGPU applications in which different threads must interact each other through 
+off chip memory. From graphics point of view, the video memory, normally used for texture maps and 
+so forth in graphics applications, may store any kind of data in GPGPCU applications. Video (GFX) 
+Memory is crucial for performance and the bandwidth of the memory of the video adapters (GFXs) and 
+the bandwidth of the bus that connects them to your computer drive the performance. <BR> <BR>
+
+
+In GPGPU (Graphics) Processing, the graphics performance of specialized software, e.g. scientific 
+software, image manipulation, video decoders/encoders, games that make GPU performance pretty important. 
+Also, the performance of Graphics (GPGPU) bandwidth i.e.  the bandwidth of the memory of the graphics 
+processors (GPGPUs) and the bandwidth of the bus that connects them to your computer. The speed at
+ which the data can be sent to the GPGPUs, internally processed and the results sent back is as important 
+as the processing power of the GPGPUs.  Also, the performance of Video (GFX) Rendering in which how 
+efficiently graphics processors can handle rendering. Such operations are used by all graphics software, 
+image manipulation, video decoders/encoders, games and modern operating systems. Video (GFX) Memory is 
+crucial for performance of applications. <BR> <BR>
+
+The nVIDA CUDA &amp; AMD-APP model is highly parallel as GPGPU model. The approach is to divide the data set 
+into smaller chunks stored in on-chip memory then allows multiple thread processors to share each chunk. 
+Storing the data locally reduces the need to access off-chip memory, thereby improving the performance. 
+<BR> <BR>
+
+
+The GPU is viewed as a compute device capable of executing a very high number of threads in parallel. 
+It operates as a coprocessor to the main CPU called host. Data-parallel, compute intensive portions of 
+applications running on the host are transferred to the device by using a function that is executed on 
+the device as many different threads. Both the host and the device maintain their own DRAM, referred to 
+as host memory and device memory, respectively. One can copy data from one DRAM to the other through 
+optimized API calls that utilize the devices high-performance Direct Memory Access (DMA) engines.
+<BR> <BR>
+
+</span></p>
+
+
+ <div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a>
+ </div> 
+
+</TD>
+</TR>
+
+</TBODY> 
+</TABLE> 
+
+<HR>
+
+
+  <a name="gpgpu-users-view"> </a>
+
+
+<!--********************* Introduction to GPGPU Viewers : starts ************************* -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left> <font size="2"> 
+<font Color="black" face= "verdana">
+   <B>   GPGPU  : User's View  </b> </font> </font></DIV> 
+</TD> 
+</TR> 
+  
+<TR>
+<TD>
+
+<ul>
+
+<li>
+ <P align=justify><span class="content" >
+High-performance computing on GPUs has attracted in the academic community as well as within the 
+industry,
+ so there is growing expertise among programmers and alternative approaches to software 
+development.
+</span> </p></li>
+
+<li>  <P align=justify><span class="content" >
+GPUs became fully programmable devices - the shaders used to be hard-wired.  Their programming 
+interfaces, 
+tools, and support of double precision are required.  Single-precision floating is sufficient 
+for consumer 
+graphics. 
+</span> </p></li>
+
+
+<li>  <P align=justify><span class="content" >
+Developers of   high performance computing  for heterogeneous applications right now must choose a nonstandard 
+approach in GPU technology 
+and nVIDIA CUDA is a only one option among many other software programming paradigms.  
+</span> </p> </li> 
+
+<li> <P align=justify><span class="content" >
+Other Multi-core Development Platform (RapdMind)  supports multiple 
+processor 
+architectures, including Nvidia's GPUs, ATI's, GPUs, IBM's Cell BE, and Intel's 
+and AMD's x86. 
+This flexibility lets developers target the architecture currently delivering 
+the best performance - 
+without rewriting or even recompiling the source code. </span> </p>
+</li>
+
+
+<li>
+ <P align=justify><span class="content" >
+Developers will probably think seriously to re-write the new code for a particular development 
+platform. 
+ They prefer an architecture-independent, industry-standard solution widely supported by tool 
+vendors. </li>
+
+<li> <P align=justify><span class="content" >
+Many companies (AMD, IBM, Intel, Microsoft, and other companies) are working in the 
+direction of 
+standard parallel-processing extensions to C/C++ and their efforts may take more time. 
+</span> </p>
+</li>
+</ul>
+
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+ <div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a>
+ </div> 
+</td>
+</tr>
+
+</tbody>
+</table>  
+
+<!-- ************************ Rapid Mind  : Starts *********************** -->
+<a name ="gpgpu-prog-env"> </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  GPGPU   Programming Environment </b> </font> </font></DIV>
+ </TD>
+ </TR> 
+
+
+
+<TR>
+<TD>
+
+ <P align=justify><span  class="content">
+<BR> 
+
+Graphic Processing units (GPUs - AMD, NVIDIA), and the Cell Broadband Engine (Cell BE) processor by Sony, Toshiba, 
+and the
+ IBM, have demonstrated tremendous performance improvements employing scalable parallel processors 
+architecture. In the past,  the RapdMind 
+Development Platform (<a href ="http://www.rapindind.net" > 
+ <font color = "blue"> http://www.rapindind.net  </font> </a> ) 
+was emerged for  programming on Multi Cores. 
+ Without changing the application logic, if multi core processors  with accelerators available, using 
+the RapidMind, an additional speedup can be archived.  The RapidMind platform will automatically manage
+ movement of data and computation between the accelerator and the host. <BR> <BR>
+
+<B> RapidMind Programming Environment : </b>
+
+RapidMind is a development and runtime platform that enables single threaded, manageable applications 
+to fully access multi-core processors. The RapidMind Development Platform is 
+a framework for expressing data-parallel computations from within C++ and executing them efficiently on 
+multicore processors.  The RapidMind Multi-core Development Platform provides a simple single-source 
+mechanism to develop portable high-performance applications for multicore processors. The computation 
+on multi cores within existing C++ applications can be carried out without much changes.  
+
+The RapidMind Platform provides a set of backends. Each provides services that support the execution 
+of RapidMind programs on a particular processor. The developer does not have to deal with the details 
+of each processor, and is free to write portable applications that work on a variety of processor 
+targets. 
+
+<ul>
+
+
+
+<li>	The x86 backend executes RapidMind programs on x86 CPUs from Intel and AMD  </li>
+<li>	The GPU backend executes RapidMind programs on a variety of Graphics Processing Units (GPUs) 
+from both AMD-ATI and NVIDIA  </li>
+
+<li>	The Cell BE backend executes RapidMind programs on the SPEs of the Cell BE Broadband Engine 
+</li>
+
+<li>	The Debug backend executes RapidMind programs on the host processor, compiling programs with a 
+C compiler  </li>
+
+</ul>
+
+
+
+ <p align ="justify">
+The RapidMind implementation  on GPU and CPU core for Fast Fourier Transform (FFT) and the Basic Linear 
+Algebra Subroutines (BLAS) and Single Precision matrix-multiply (SGEMM) showed good performance in comparison 
+with the same algorithm running on a CPU Core. In particular, RapidMind can be used  to develop 
+applications that fully exploit the power of the Cell Broadband Engine (Cell/B.E.) processor's unique
+ architecture by writing only one, single-threaded C++ program using an existing C++ compiler.  
+Applications such as real-time ray tracing for the automotive, and a real-time medical imaging 
+reconstruction have been demonstrated with strategic partner  AMD  at the 2008 SIGGRAPH Conference 
+& Exhibition. </span> </p>
+
+</TD>
+</TR>
+
+<tr>
+<td>
+
+ <div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a>
+ </div> 
+</td>
+</tr>
+
+</TBODY> 
+</TABLE> 
+
+<!-- **************************** ATI-AMD RapidMind : Ends **************************** -->
+
+<!-- ************ Standford Brook : Architecture Detail : Starts ******************* -->
+
+  
+<a name="gpgpu-brook-gpu"> </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+      <B> GPU - Standford Brook :  </b> </font> </font></DIV>
+ </TD> </TR> 
+
+
+
+<TR>
+<TD>
+
+ <P align=justify><span class="content" >
+
+<BR> 
+
+Brook for GPUs is a compiler and runtime implementation of the Brook stream program language for modern graphics hardware.
+Brook is an extension of standard ANSI C and is designed to incorporate the ideas of data parallel computing and 
+arithmetic intensity into a familiar and efficient language. 
+Brook started as an open-source project from Stanford
+University for demonstrating general-purpose data-parallel computations on graphics processors. 
+</span> </p>
+
+
+<ul>
+<li>
+<B> Data Parallelism:  </b> Allows the programmer to specify how to perform the same operations in parallel 
+on different data. 
+</li>
+
+<li>
+<b> Arithmetic Intensity: </b>  Encourages programmers to specify operations on data, which minimize global 
+communication and maximize localized computation.
+</li>
+</ul>
+
+ <P align=justify><span class="content" >
+In Data parallelism each fragment of data shaded independently, which leads to better ALU uses and
+hide memory latency. In comparison with CPU, GPU are having number of hardware thread, where
+CPU is having one or two stream of execution.
+
+  Brook was a set of extensions to the C language - "C with streams," which exposes the hardware,
+Graphics Processing Unit for general purpose computing and parallel computing world. Brook Can be
+compiled for Window , Linus and for MacOS , with DirectX v9+ , OpenGL, MacOS X. The following
+is the architectural detail of Brook Compiler.
+
+<BR> <BR>
+
+
+
+The Brook project is aimed to demonstrate general-purpose programming on GPUs and research efforts on  
+the stream language programing model, and streaming applications.Brook make programming gpus easier and hides all complexities like data management, graphics
+based construct in CG/HLSL, rendering process. It almost virtualizes the resources and exposes it as if
+an extension to cpu.
+ 
+</span></p>
+</td>
+</tr>
+
+<tr>
+<td>
+
+ <div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a>
+ </div> 
+</td>
+</tr>
+
+
+</TBODY> 
+</TABLE> 
+</p>
+
+<!-- **************** Standford Brook : Architecture Detail : Ends ******************** -->
+
+
+<!-- **************************** ATI-AMD Stream Comp. starts **************************** -->
+
+<a name="amd-ati-streamcomp"> </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+  <DIV align=Left> <font size="2" Color="black" face= "verdana">
+    <B> ATI &amp; AMD GPGPU - Stream Computing  </b> </font> </font></DIV> 
+</TD> </TR> 
+
+
+
+<TR>
+<TD>
+
+  <P align=justify><span  class="content" >
+ 
+ATI, which is acquired by AMD in 2006, developed one of the best graphics processing technology. 
+ATI graphics processing technology provides the server market with cost efficient and reliable products. 
+Graphics stability, video quality, bus architectures and software support play an important role for all 
+elements of a winning combination in server market. Provide outstanding stability in display environments 
+and maximum flexibility across multiple applications in graphics environment plays a crucial role for 
+computing. <BR> <BR>
+
+The development and evolution of parallel rendering middleware is necessary for large-scale real-time 
+applications with visualization features. This middleware application transparent toolkits (Chromium 
+and SGI OpenGL Multipipe) as well as application programming interfaces (APIs) like SGI Multipipe SDK 
+and OpenProducer play an important role from performance point of view.  The expertise in Stream 
+Processing middleware such as AMD's Close-to-the-Metal,NVIDIA's CUDA and Stanford University's Brook 
+is necessary to scale application performance and provide seamless integration with work-flow of complex 
+applications, Coupled with Algorithm Acceleration.  An extensive understanding of graphics hardware and 
+systems' architectures allows users to leverage the computational power of Graphics processors (GPUs) for 
+high-performance computing applications. </span> </p> 
+
+ 
+ 
+ <P align=justify><span  class="content" >
+ Stream computing harnesses the tremendous processing power of the graphics processor 
+unit (GPU) for high-performance, data-intensive computations over a wide range of scientific, business 
+and consumer applications. In stream computing, GPU's SIMD architecture is available and many cores are 
+provided. The operations are applied in parallel through a SIMD architecture to a given data set, 
+or stream of data. Stream computing offers a number of benefits to certain class of applications 
+that are highly parallelizable. 
+ <BR> <BR>
+
+Advanced Micro Devices, Inc. (AMD) Stream Computing is a first step in  harnessing the tremendous 
+processing power the GPU (Stream Processor) for high performance, data-parallel computing in a wide 
+range of business, scientific and consumer applications. AMD's Stream Computing software stack provides 
+flexible suite of tools to leverage the processing power of AMD Stream Processors (AMD FireStream\99 GPU)  
+processors for end-users and developers. 
+To take advantage of the GPU's SIMD architecture and the hundreds of parallel compute cores 
+it provides, AMD Stream has developed a full software stack of development tools for both 32-bit and 
+64-bit Linux and Windows operating systems; the AMD Stream SDK. AMD Stream is also porting many common 
+math library functions from the AMD ACML package to the GPU to support compute-intensive applications.
+</span> </p> <BR> 
+
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<!-- ************************* Overview ATI & AMD Software starts ******************************** -->
+
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+    <B>  AMD Stream Accelerators - Software Stack &amp; features  </b> </font> </font></DIV> 
+</TD> </TR> 
+
+
+
+<TR>
+<TD>
+
+  <P align=justify> <span class="content">
+AMD's Stream Computing Software Stack  It includes the following components: <BR> <BR>
+
+<ul>
+<li>
+
+ <I> Performance Libraries: </i> AMD Core Math Library (ACML) and COBRA for optimized domain-specific
+ Algorithms </li>
+
+<li> Compilers: Brook+ and RapidMind <BR>
+  <blockquote>
+    <P align=justify> <span class="content">
+  	<i> Brook+  </i>is AMD's implementation of the open source Brook C/C++ compiler that AMD is enhancing1 to 
+       include new features and back end which targets FireStream\99 GPU processors.  <BR> <BR>
+
+	<i> Rapidmind </i> is a complete development environment - C++ compilers and IDEs to improve programmability,
+        performance and portability of 3rd party applications developed for AMD Stream Computing. 
+   </span> </p> 
+    </blockquote>
+</li>
+
+
+ 
+<li>	
+
+  Lower Level Driver and Programming Language: AMD Compute Abstraction Layer (CAL)
+
+  <blockqote>
+   <P align=justify> <span class="content">
+
+   CAL provides access to the various parts of the GPU as needed. Developers are thus able 
+   to write directly to the GPU without needing to learn graphics specific programming languages. CAL provides
+   direct communication to the device. Intermediate language specification provides low-level access to code, 
+   increasing the ability to fine-tune device performance. 
+  </span> 
+  </p>
+
+  </blockquote> 
+  
+ </li>
+
+<li>
+	Performance Profiling Tools: GPU ShaderAnalyzer, AMD CodeAnalyst <BR>
+
+<P align=justify> <span class="content">
+	GPU ShaderAnalyzer performs throughput and flow control analyses on Stream processors 
+    generating GUI-based performance data or command line generated reports.  
+
+   GPU Shader Analyzer (GSA) is a performance 
+  profiling tool useful for developing, debugging and profiling GPU kernels using high-level GPU programming 
+  languages. 
+
+  AMD CodeAnalyst is a software performance analysis tool, which includes system-wide profiling, 
+   as well as timer-based and event-based profiling, and sampling and simulation functionality. 
+</span> </p>
+
+</li>
+
+</ul>
+
+<br>
+
+<P align=justify>
+<span  class="content">
+
+  Data-parallel processing maps data elements to parallel processing threads. Many 
+  applications that process large data sets can use a data-parallel programming model 
+  to speed up the computations. In 3D rendering large sets of pixels and vertices are 
+  mapped to parallel threads. Similarly, image and media processing applications such 
+  as post-processing of rendered images, video encoding and decoding, image scaling, 
+  stereo vision, and pattern recognition can map image blocks and pixels to parallel 
+  processing threads. In fact, many algorithms outside the field of image rendering 
+  and processing are accelerated by data-parallel processing, from general signal 
+  processing or physics simulation to computational finance or computational biology.
+
+</span> </p>
+
+
+ <P align=justify><span  class="content">
+<B> Important characteristics of AMD Stream computing & Features : </B>
+AMD's latest generation of stream computing -GPU supports double precision floating point, which
+ is critical feature for most high performance computing applications, is supported in hardware on 
+the AMD FireStream 9170. The peak power consumption is 100 watts peak power consumption that is extremely 
+low power requirements resulting in over 5GFLOPs per watt. From performance point of view, data can be
+moved without interrupting streams processor or CPU, which is Asynchronous DMA transfer that is supported.
+The programming in C-like environment high level complier is supported and it is built on the popular 
+open source Brook with enhancements from and maintained by AMD (Brook+).  It supports for 32/64 bit 
+Linux and 32/64 bit Windows OS  - Wide range of useful operating systems to ease deployment in various
+HPC environments. ATI shader analyzer, which further optimizes code through this popular freely 
+vailable code tuning application, is available. </span> </p> 
+
+
+ 
+<!-- *********  An Overview ATI & AMD Software Stack Ends *********** -->
+
+
+<!--  .............******** AMD-ATI - GPU Comp ends ********* -->
+		
+ <P align ="justify"> <span class="content">
+ 
+ In stream computing, GPU's SIMD architecture is available and many cores are provided. The operations
+ are applied in parallel through a SIMD architecture to a given data set, or stream of data. Stream computing 
+ offers a number of benefits to certain class of applications that are highly parallelizable. 
+ Advanced Micro Devices, Inc. (AMD-ATI) Stream Computing is a first step in harnessing the tremendous 
+ processing power the GPU (Stream Processor). 
+
+for high performance, data-parallel computing in a wide range of    business, scientific and consumer applications. AMD's Stream Computing software stack provides flexible suite of  tools to leverage the processing power of AMD-ATI Stream Processors (AMD-ATI FireStream GPU) processors for end-users and  developers.
+ 
+</span> 
+</p>
+ 
+
+<!--  .............******** AMD-ATI - GPU Comp ends ********* -->
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ************************* Overview AMD & APP Software starts ******************************** -->
+
+
+<a name = "opencl-amd-app-comp">  </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+    <B>  AMD Accelerated Parallel Processing (AMD APP) SOftware :  OpenCL </b> </font> </font></DIV> 
+</TD> 
+</TR> 
+
+
+<TR>
+<TD>
+
+
+<!--  .............******** AMD-APP - OpenCL Starts ********* -->
+
+<P align=justify> <span class="content">
+
+
+<B> AMD Accelerated Parallel Processing (AMD APP) SOftware : </b>
+AMD Accelerated Parallel Processing harnesses the tremendous processing power of GPUs for high-performance,
+ data-parallel computing in a wide range of applications. The AMD Accelerated Parallel Processing system 
+includes a software stack and the AMD GPUs. 
+Please refer to AMD-APP Accelerated Parallel Processing (AMD APP) Programming Guide OpenCL to 
+understand the relationship of the AMD Accelerated Parallel Processing components. <BR> <BR>
+
+The AMD APP  software stack provides end-users and developers with a 
+complete, flexible suite of tools to leverage the processin power in AMD GPUs. AMD Accelerated 
+Parallel Processing software embraces open-systems, open-platform standards. 
+The AMD APP SDK  open platform strategy enables AMD technology partners to 
+develop and provide third-party development tools. 
+
+AMD-APP OpenCL software development platform for x86-based CPUs and it provides complete heterogeneous
+OpenCL development platform for both the CPU and GPU.   
+The software includes the following components:
+</span> </p>
+
+<ul>
+<li>
+    OpenCL compiler and runtime  </li>
+
+<li> Device Driver for GPU compute device - AMD Compute Abstraction Layer
+(CAL)</li>
+
+<li> Performance Profiling Tools - AMD APP Profiler and AMD APP
+KernelAnalyzer  </li>
+
+<li> Performance Libraries - AMD Core Math Library (ACML) for optimized
+NDRange-specific algorithms </li>
+</ul>
+
+<P align=justify> <span class="content">
+The latest generation of AMD GPUs is programmed using the unified shade programming model. Programmable 
+GPU compute devices execute various user-developed programs, called stream kernels (or simply: kernels). 
+These GPUcompute devices can execute non-graphics functions using a data-parallel programming model
+ that maps executions onto compute units. In this programming model, known as AMD Accelerated Parallel 
+Processing, arrays of input data elements stored in memory are accessed by a number of compute units.
+
+Each instance of a kernel running on a compute unit is called a work-item. A specified rectangular 
+region of the output buffer to which work-items are mapped is known as the n-dimensional index space,
+ called <B> an NDRange</b>.  <BR> <BR>
+
+The GPU schedules the range of work-items onto a group of stream cores, until all work-items have been
+ processed. Subsequent kernels then can be executed, until the application completes.
+In AMD Accelerated Parallel Processing programming model,  the mapping of work-items to stream cores 
+is performed.
+
+OpenCL maps the total number of work-items to be launched onto an n-dimensional grid (ND-Range).
+ The developer can specify how to divide theseitems into work-groups. AMD GPUs execute on wavefronts 
+(groups of work-items executed in lock-step in a compute unit); there are an integer number of 
+wavefronts in each work-group. Thus, as shown in Figure 1.5, hardware that schedules work-items 
+for execution in the AMD Accelerated Parallel Processingenvironment includes the intermediate step
+ of specifying wavefronts within a work-group. This permits achieving maximum performance from AMD GPUs. 
+<Br> 
+</span> </p>
+
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+<BR> 
+
+<P align=justify> <span class="content">
+<B> Work-Item Processing :  </b>
+All stream cores within a compute unit execute the same instruction for each cycle. A work item can issue 
+one VLIW instruction per clock cycle. The block of work-items that are executed together is called a 
+wavefront. To hide latencies due to memory accesses and processing element operations, up to four 
+workitems from the same wavefront are pipelined on the same stream core.
+</span> </p> 
+
+<P align=justify> <span class="content" >
+<B> Work-Item Creation  :  </b>For each work-group, the GPU compute device spawns the required number of 
+wavefronts on a single compute unit. If there are non-active work-items within a wavefront, the stream 
+cores that would have been mapped to those work-items are idle. 
+</span> </p>
+
+<B> Memory Architecture and Access : </b>
+OpenCL has four memory domains: private, local, global, and constant; the AMD
+Accelerated Parallel Processing system also recognizes host (CPU) and PCI
+Express (PCIe) memory.
+</span> </p>
+
+<ul>
+
+ <li> private memory - specific to a work-item; it is not visible to other work-items </li>
+ <li> local memory - specific to a work-group; accessible only by work-items belonging to that work-group</li>
+ <li> global memory - accessible to all work-items executing in a context, as well as to the host
+   (read, write, and map commands).
+ </li>
+ <li> constant memory - read-only region for host-allocated and -initialized objects
+that are not changed during kernel execution
+ </li>
+ <li> host (CPU) memory - host-accessible region for an application's data
+structures and program data
+ </li>
+ <li> PCIe memory - part of host (CPU) memory accessible from, and modifiable
+by, the host program and the GPU compute device. Modifying this memory
+requires synchronization between the GPU compute device and the CPU.
+ </li> 
+</ul>
+
+
+<!--  .............******** AMD-APP GPU Comp ends ********* -->
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ************************* Overview AMD & APP Software starts ******************************** -->
+
+
+<a name = "opencl-amd-app-cal">  </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+    <B>  AMD APP SDK - Compute Abstraction Layer (CAL) Overview </b> </font> </font></DIV> 
+</TD> 
+</TR> 
+
+
+<TR>
+<TD>
+
+
+<!-- **************** OpenCL AMD-AP CAL *********** -->
+
+
+<P align=justify> <span class="content" >
+The AMD Compute Abstraction Layer (CAL) is a device driver library that provides a forward-compatible 
+interface to AMD GPU compute devices (see Figure 1.6). CAL lets software developers interact with the
+ GPU compute devices at the lowest-level for optimized performance, while maintaining forward compatibility. 
+CAL  provides the following features: 
+</span> </p>
+
+<ul>
+
+ <li> Device management </li>
+ <li> Resource management </li>
+ <li> Code generation </li>
+ <li> Kernel loading and execution </li>
+ <li> Multi-device support </li>
+ <li> Interoperability with 3D graphics API </li> 
+</ul>
+
+
+<P align=justify> <span class="content" >
+CAL provides a device driver library that allows applications to interact with the stream cores at the lowest 
+level for optimized performance, while maintaining forward compatibility.
+<BR> <BR>
+
+The CAL API is ideal for performance-sensitive developers because it minimizes software overhead and 
+provides full-control over hardware-specific features that might not be available with higher-level tools.
+CAL includes a set of C routines and data types that allow higher-level software
+tools to control hardware memory buffers (device-level streams) and GPU
+compute device programs (device-level kernels). The CAL runtime accepts
+kernels written in AMD Intermediate Language (IL) and generates optimized code
+for the target architecture. It also provides access to device-specific features.
+
+The CAL API comprises one or more stream processors connected to one or more CPUs by a high-speed bus. 
+The CPU runs the CAL and controls the stream processor by sending commands using the CAL API. 
+The stream processor runs the kernel specified by the application. The stream processor device 
+driver program (CAL) runs on the host CPU.
+<BR> 
+
+<!--  .............******** AMD-APP CAL ends ********* -->
+
+<div align ="right">
+  <a href="#top">
+  <img src="./../hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ************************* Overview AMD & APP Software starts ******************************** -->
+
+
+<a name = "opencl-amd-app-codes">  </a>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+    <B>  List of Programs - OpenCL - AMD APP  SDK </b> </font> </font></DIV> 
+</TD> 
+</TR> 
+
+<TR>
+<TD> 
+
+<!-- ****************** OpenCL AMD APP SDK Codes  *********** -->
+
+<P align=justify> 
+<span class="content">
+
+The OpenCL programming model is based on the notion of a host device,
+supported by an application API, and a number of devices connected through a
+bus. These are programmed using OpenCL C-language. The
+Most OpenCL programs follow the same pattern. Given a specific platform, select
+a device or devices to create a context, allocate memory, create device-specific
+command queues, and perform data transfers and computations.
+The compiler tool-chain provides a common framework for both CPUs and
+GPUs, sharing the front-end and some high-level compiler transformations. The
+back-ends are optimized for the device type (CPU or GPU). 
+<BR> 
+</span> </p>
+
+<ul>
+
+<li>
+<P align=justify>  <span class="content">
+Example programs based on <I> Simple Buffer write</i>, SAXPY Operation</i>, <I> Parallel Min() Function</i>,
+ <i> Prefix Operations </i> 
+Participants.
+</span> </p>
+
+<li>
+<P align=justify>  <span class="content">
+Example programs based on <I> Numeircal Linear Algebra  </i> using OpenCL Optimised features 
+</span> </p>
+</li>
+
+
+<li>
+<P align=justify>  <span class="content">
+Example programs based on <I> Numeircal Linear Algebra   </i> using BLAS Libraries on host-CPU and
+device GPU, focussing on Performance in terms of GFLOPS
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+Open Source Software  based on <I> Numeircal Linear Algebra   </i> and demonstrate Performance 
+ 
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+ Implementation of Matrix Computations (Iterative Methods to solve Ax=b Matrix System of linear equations) 
+ on Multi-GPUs 
+</span> </p>
+</li>
+
+
+<li>
+<P align=justify>  <span class="content">
+OpenCL - Perform sparse Matrix into vector multiplication Kernel 
+</span> </p>
+</li>
+
+
+<li>
+<P align=justify>  <span class="content">
+AMD-APP (using CAL) OpenCL : Write a simple HelloCAL application program using CAL of AMD Accelerated 
+Parallel Processing Technology 
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+AMD-APP: Write a Direct memory access (DMA) code to move data between the system memory and GPU local 
+memory using 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> CALMemCopy</B></font>of AMD APP 
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+AMD-APP : Write a code to use AMD-APP Asynchronous operations using CAL API of an application that must
+ perform CPU computations in the application thread and also run another kernel on the AMD-APP stream processor
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+AMD-APP : Multiple device Write a matrix into vector multiplication based on self-scheduling algorithm using AMD-APP CAL CAL
+Application using Multiple Stream Processors Using 
+
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> calDeviceGetCount</B></font>
+AMD-APP : CAL API of ADM-APP and ensure 
+that application-created threads that are created on the CPU and are used to manage the communication with 
+individual stream processors. 
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+AMD-APP :Write a matrix into matrix computation on Hybrid Computing (HC) platform in which the computations of
+ matrix into matrix multiply is performed judiciously on host-cpu using ACML -math library of AMD Opteron processor
+ and CAL-OpenCL of AMD-ATI (GPU) APP.
+</span> </p>
+</li>
+
+
+<li>
+<P align=justify>  <span class="content">
+AMd-APP Obtain maximum achievable matrix into matrix computation on Hybrid Computing (HC) platform in which
+ the computations of block matrix into matrix multiply is performed judiciously using ACML -math library of
+ AMD Opteron processor on host-cpu and tiled blocked matrix into matrix multiplication based on CAL-OpenCL 
+ on AMD-ATI (GPU) APP. 
+</span> </p>
+</li>
+
+<li>
+<P align=justify>  <span class="content">
+ OpenCL Implementation of Solution of Partial differential Equations by finite differene method
+</span> </p>
+</li>
+
+
+<li>
+<P align=justify>  <span class="content">
+ OpenCL Implementation of Image Processing - Edge Detection Algorithms
+</span> </p>
+</li>
+
+
+<li>
+<P align=justify>  <span class="content">
+ OpenCL Implementation of String Search  Algorithms
+</span> </p>
+</li>
+
+
+</ul>
+
+
+<div align ="right">
+  <a href="#top"><img src="hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+
+</ul>
+
+</tbody>
+</table>
+
+<!--  .............********  GPGPU - Important OpenCL  -  References   -->
+
+<a name = "gpgpgu-gpu-comp-amd-app-ref">  </a>
+
+<STRONG>  <font size="2" face="Arial" color="red">  References </font>  </STRONG>  
+ 
+<BR> <BR>
+
+
+<!-- Table Listing of OpenCl Ref .....  -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+  <!-- ************ Ref Starts ************ -->
+
+ <!-- Reference  1 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 1. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://en.wikipedia.org/wiki/AMD_Fusion ">
+        <font color = "blue">  
+       AMD Fusion
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+ <!-- Reference  2 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 2. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://en.wikipedia.org/wiki/Accelerated_processing_unit ">
+        <font color = "blue">  
+        APU
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+ <!-- Reference  3-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 3. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/assets/apu101.pdf ">
+        <font color = "blue">  
+        All about AMD FUSION  APUs (APU 101)
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+    <!-- Reference  4 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 4. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+              <a href =" http://www.legitreviews.com/article/1655/1/ ">
+        <font color = "blue">  
+       AMD A6 3500 APU Llano
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+    <!-- Reference  5 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 5. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+              <a href =" http://www.guru3d.com/article/amd-a6-3500-apu-review/ ">
+        <font color = "blue">  
+      AMD A6 3500 APU review
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+   <!-- Reference 6 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 6. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/downloads/Pages/default.aspx">
+
+        <font color = "blue">  
+        AMD  APP SDK with OpenCL 1.2 Support 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+   <!-- Reference  7 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 7. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/downloads/Pages/default.aspx#one">
+        <font color = "blue">  
+        AMD-APP-SDKv2.7 (Linux) 
+         with OpenCL 1.2 Support
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  8 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 8. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href ="http://developer.amd.com/libraries/appmathlibs/Pages/default.aspx ">
+      <font color = "blue">  
+        AMD Accelerated Parallel Processing Math Libraries (APPML) 
+ 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+<!-- Reference 9-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 9. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/assets/AMD_Accelerated_Parallel_Processing_OpenCL_Programming_Guide.pdf ">
+        <font color = "blue">  
+        AMD  Accelerated Parallel Processing  (AMD APP) Programming Guide OpenCL : May 2012  
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+    <!-- Reference  10 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 10. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://icl.cs.utk.edu/magma/software/ ">
+        <font color = "blue">  
+        MAGMA OpenCL 
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference 11-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 11. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/Pages/default.aspx ">
+       <font color = "blue">  
+        AMD  Accelerated Parallel Processing (APP) SDK (formerly ATI Stream) 
+         with AMD APP Math Libraries (APPML); AMD Core Math Library (ACML);
+         AMD Core Math Library for Graphic Processors (ACML-GPU)
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  12 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 12. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/OpenCLZone/pages/GettingStarted.aspx ">
+      <font color = "blue">  
+        Getting Started with  OpenCL 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  13 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 13. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/java/aparapi/pages/default.aspx ">
+      <font color = "blue">  
+        Aparapi - API &amp; Java 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  14 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 14. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/OpenCLZone/Pages/default.aspx ">
+      <font color = "blue">  
+        AMD  Developer Central  - OpenCL Zone
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  15 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 15. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/pages/default.aspx ">
+      <font color = "blue">  
+        AMD  Developer Central  - SDKs 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+
+<!-- Reference  16 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 16. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href ="http://developer.amd.com/libraries/ags/Pages/default.aspx">
+      <font color = "blue">  
+        ATI GPU Services (AGS) Library 
+ 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+
+<!-- Reference  17 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 17. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href ="http://developer.amd.com/sdks/AMDAPPSDK/pages/OpenSourceLibraries.aspx ">
+        <font color = "blue">  
+        AMD  GPU - Global Memory for Accelerators (GMAC)
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference 18 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 18. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/OpenCLZone/programming/Pages/default.aspx ">
+        <font color = "blue">  
+        AMD  Developer Central  - Programming in OpenCL 
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  19 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 19. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+           <a href ="http://developer.amd.com/sdks/AMDAPPSDK/pages/OpenSourceLibraries.aspx#two ">
+        <font color = "blue">  
+        AMD GPU Task Manager (TM)
+
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  20 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 20. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+           <a href ="http://developer.amd.com/sdks/AMDAPPSDK/documentation/Pages/default.aspx ">
+        <font color = "blue">  
+        AMD APP Documentation 
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  21 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 21. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/openclforum "> 
+        <font color = "blue">  
+         AMD Developer OpenCL FORUM  
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  22 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 22. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/zones/OpenCLZone/programming/pages/benchmarkingopenclperformance.aspx "> 
+        <font color = "blue">  
+         AMD Developer Central - Programming in OpenCL - Benchmarks performance  
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  23 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 23. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/sdks/AMDAPPSDK/assets/opencl-1.2.pdf "> 
+        <font color = "blue">  
+          OpenCL 1.2 (pdf file) 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  24 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 24. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/documentation/articles/pages/OpenCLOptimizationCaseStudy-PartI.aspx "> 
+        <font color = "blue">  
+         OpenCL\99 Optimization Case Study Fast Fourier Transform - Part 1 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  25 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 25. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/tools/PerfStudio/Pages/default.aspx "> 
+        <font color = "blue">  
+         AMD GPU PerfStudio 2 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  26 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 26. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href ="http://developer.amd.com/zones/opensource/Pages/default.aspx "> 
+        <font color = "blue">  
+         Open Source Zone - AMD CodeAnalyst Performance Analyzer for Linux
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  27 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 27. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/gpu_assets/ATI_Stream_SDK_OpenCL_Programming_Guide.pdf "> 
+        <font color = "blue">  
+         AMD ATI Stream Computing OpenCL - Programming Guide  
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  28 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 28. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/zones/opensource/pages/ocl-emu.aspx "> 
+        <font color = "blue">  
+         AMD OpenCL Emulator-Debugger 
+  
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference 29 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 29. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+    <B>  GPGPU : </b> <a href =" http://www.gpgpu.org "> 
+      <font color = "blue">    http://www.gpgpu.org </font> </a> 
+        and <B> Stanford BrookGPU discussion forum </b> 
+     <a href =" http://www.gpgpu.org/forums/ "> 
+   <font color = "blue"> http://www.gpgpu.org/forums/ <a> 
+
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+
+<!-- Reference  30 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 30. </b> 
+     
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.apple.com/mac/snowleopard/opencl.html"> 
+       <font color = "blue">  
+          Apple :  Snowleopard - OpenCL
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference 31 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 31. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/opencl" > 
+     <font color = "blue">  
+         The OpenCL Speciifcation Version : v1.0  Khronos OpenCL Working Group
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  32 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 32. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/assets/uploads/developers/library/overview/OpenCL-Overview-Jun10.pdf" > 
+     <font color = "blue">  
+           Khronos V1.0 Introduction and Overview, June 2010
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  33 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 33. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/files/opencl-1-1-quick-reference-card.pdf" > 
+     <font color = "blue">  
+           The OpenCL 1.1 Quick Reference card.
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  34 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 34. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/"> 
+     <font color = "blue">  
+           OpenCL 1.2 Specification Document Revision 15) Last Released November  15, 2011
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  35 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 35. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/specs/opencl-1.1.pdf" > 
+     <font color = "blue">  
+           The OpenCL 1.2 Specification (Document Revision 15) Last Released November  15, 2011
+            Editor : Aaftab Munshi <I> Khronos OpenCL Working Group </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference 36 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 36. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/" > 
+     <font color = "blue">  
+           OpenCL1.1  Reference Pages </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+
+
+<!-- Reference  37 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 37. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href ="http://www.mathworks.com/products/matlab/" > 
+       <font color = "blue">  
+          MATLAB 
+        </font> 
+  
+    </a> 
+    </td>
+    </tr>
+
+
+
+<!-- Reference  38 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 38. </b>  
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.mathworks.com/matlabcentral/fileexchange/30109-opencl-toolbox-v0-17l" > 
+       <font color = "blue">  
+       OpenCL Toolbox v0.17 for MATLAB
+        </font>  
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  39 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 39. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.nag.co.uk/" > 
+          <font color = "blue">  
+        NAG
+        </font>
+      
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  40 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 40. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+    <a href = "http://developer.amd.com/gpu_assets/CAL_Release_Notes.pdf" > 
+      <font color = "blue">  
+       <B>  AMD Compute Abstraction Layer (CAL) Intermediate Language (IL)
+         Reference Manual. Published by AMD. </b>
+        </font> 
+      
+  
+    </td>
+    </tr>
+
+<!-- Reference  41 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 41. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+    <a href = "http://msdn.microsoft.com/en-us/library/hh265137(v=vs.110)" > 
+      <font color = "blue">  
+       <B> C++ AMP (C++ Accelerated Massive Parallelism) </b>
+        </font> 
+      
+  
+    </td>
+    </tr>
+
+
+<!-- Reference  42 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 42. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://blogs.msdn.com/b/nativeconcurrency/" > 
+      <font color = "blue">  
+       <B> C++ AMP for the OpenCL Programmer </b>
+        </font> 
+      
+    </td>
+    </tr>
+
+
+<!-- Reference  43 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 43. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://blogs.amd.com/developer/2011/07/07/" > 
+      <font color = "blue">  
+       <B> C++ AMP for the OpenCL Programmer </b>
+        </font> 
+      
+    </td>
+    </tr>
+
+<!-- Reference  44 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 44. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://icl.cs.utk.edu/graphics/posters/files/SC11-MAGMA.pdf" > 
+      <font color = "blue">  
+       <B> MAGMA SC 2011 Handout</b>
+        </font> 
+      
+    </td>
+    </tr>
+
+<!-- Reference  45 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 45. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://developer.amd.com/libraries/appmathlibs/pages/default.aspx" > 
+      <font color = "blue">  
+       <B> AMD Accelerated Parallel Processing Math Libraries (APPML) MAGMA </b>
+        </font> 
+      
+    </td>
+    </tr>
+
+
+
+<!-- Reference  46 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 46. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+          <a href="http://www.khronos.org/opencl/">
+       <font color = "blue">
+       The OpenCL 1.2 Specification  <I> Khronos OpenCL Working Group </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  47 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 47. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+        <a href="http://www.khronos.org/files/opencl-1-2-quick-reference-card.pdf">
+          <font color = "blue">
+       The OpenCL 1.2 Quick-reference-card<I> ; Khronos OpenCL Working Group </i>
+    
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  48 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 48. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>
+     <I> Benedict R Gaster, Lee Howes, David R Kaeli, Perhadd Mistry Dana Schaa </i>
+        Heterogeneous Computing with OpenCL, Elsevier, Moran Kaufmann Publishers, 2011
+     </B>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  49 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+         <b> 49. </b>    
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>
+       Programming Massievely Parallel Processors - A Hands-on Approach, </B>
+      <I> David B Kirk, Wen-mei W. Hwu  </i>
+      nvidia corporation, 2010, Elsevier, Morgan Kaufmann Publishers, 2011
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  50 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 50. </b> 
+      
+      </td>
+   
+     </td>
+   
+      <td width="500" height="2" align="left">
+     <B>OpenCL Progrmamin Guide</B>,</i>
+     <I> Aftab Munshi Benedict R Gaster, timothy F Mattson,  James Fung, 
+            Dan Cinsburg</i>, Addision  Wesley, Pearson Education, 2012
+
+    </td>
+    </tr>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  51 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 51. </b> 
+      
+      </td>
+   
+     </td>
+
+   <td width="500" height="2" align="left">
+        <a href="http://developer.amd.com/tools/gDEBugger/Pages/default.aspx">
+          <font color = "blue">
+       AMD gDEBugger </i>
+    
+        </font> 
+    
+      
+
+    </td>
+    </tr>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  52 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 52. </b> 
+      
+      </td>
+   
+  
+     <td>
+      <a href="http://hsafoundation.com/">
+          <font color = "blue">
+       The HSA (Heterogeneous System Architecture) Foundation </i>
+
+    </td>
+    </tr>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- **************** Ref Ends  *************** -->
+
+
+</tbody> 
+</table>
+
+
+ <div align ="right">
+  <a href="#top"><img src="./../hegap12_images/top.gif" align="right" border="0" width="13" height="13"></a>
+ </div> 
+
+</td> </tr>
+
+  
+ <!--  ********** content of web page End here  ************* --> 
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+ 
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+       
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

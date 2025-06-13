@@ -1,0 +1,55 @@
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+# *******************************************************************
+#
+ALL: default
+##### User configurable options #####
+
+SHELL       = /bin/sh
+ARCH        = solaris
+MPIR_HOME   = /opt/SUNWhpc
+CC          = $(MPIR_HOME)/bin/mpcc
+CLINKER     = $(CC)
+OPTFLAGS    = -g -xarch=v8plus
+MPI_LIB     = -L$(MPIR_HOME)/lib -lmpi
+LIB_LIST    = -lsocket -lnsl
+INCLUDE_LIB = $(MPIR_HOME)/include
+LIBS        = $(LIB_LIST) -I$(INCLUDE_LIB)
+MAKE        = make
+
+### End User configurable options ###
+
+CFLAGS    = $(OPTFLAGS)
+FFLAGS    = $(OPTFLAGS)
+
+### End User configurable options ###
+.SUFFIXES:	.cc .C .f90
+
+EXECS	  = run
+ALL_EXECS = ${EXECS}
+
+all: $(EXECS) 
+
+OBJECTS = Tools_Hello_World.o
+#OBJECTS = Tools_Pi_Pt_to_Pt.o
+#OBJECTS = Tools_Pi_Collective.o
+#OBJECTS = Tools_Pi_Idleness.o
+#OBJECTS = Tools_MM_Mult_Master_Slave.o
+#OBJECTS = Tools_MM_Mult_Cartesian.o
+
+run: $(OBJECTS)
+	$(CLINKER) $(OPTFLAGS) -o run $(OBJECTS) $(MPI_LIB) $(LIBS) -lm
+
+clean:
+	rm -f *.o *~ PI* $(ALL_EXECS) core
+.c.o:
+	$(CC) $(CFLAGS) -c $<

@@ -1,0 +1,48 @@
+
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+# *******************************************************************
+
+#
+ALL: default
+##### User configurable options #####
+
+SHELL       = /bin/sh
+ARCH        = solaris
+MPIR_HOME   = /usr/local/mpich-1.2.3/Install/solaris/ch_p4
+CC          = $(MPIR_HOME)/bin/mpicc
+CLINKER     = $(CC)
+LOG_LIB     = -mpilog -lm
+
+
+### End User configurable options ###
+.SUFFIXES:	.cc .C .f90
+
+EXECS	  = run
+ALL_EXECS = ${EXECS}
+
+all: $(EXECS)
+
+OBJECTS = Tools_Hello_World.o
+#OBJECTS = Tools_Pi_Pt_to_Pt.o
+#OBJECTS = Tools_Pi_Collective.o
+#OBJECTS = Tools_Pi_Idleness.o
+#OBJECTS = Tools_MM_Mult_Master_Slave.o
+#OBJECTS = Tools_MM_Mult_Cartesian.o
+
+run: $(OBJECTS)
+	$(CLINKER) $(OPTFLAGS) -o run $(OBJECTS) $(LOG_LIB)
+
+clean:
+	rm -f *.o *~ PI* $(ALL_EXECS) core
+.c.o:
+	$(CC) $(CFLAGS) -c $<

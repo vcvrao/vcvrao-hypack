@@ -1,0 +1,4343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../../hypack13-mode04-gpgpu-lab-overview.html">
+                   Mode-4 GPGPUs </A>
+                  
+	          <!-- ** -->
+                  <A class=menulslct
+                    href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                      NVIDIA - CUDA/OpenCL</A>
+                  <!-- ** -->
+              
+	       <A class=menul  
+                  href="./../../hypack13-mode04-gpgpu-amd-opencl.html">
+                   AMD APP  OpenCL </A>
+                             
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-opencl.html">
+                    GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-power-perf.html">
+                    GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../../index.html">
+                    Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>     hyPACK-2013 Mode-2 : GPU Comp. CUDA enabled NVIDIA GPU Prog.  </b> </font></DIV> </TD> </TR> 
+
+
+
+  <tr>
+  <td height="24" align="left" >
+ <P align=justify><span  class="content">
+
+NVIDIA\92s
+Compute Unified Device Architecture (CUDA) is a soft-
+ware platform for massively parallel high-performance
+computing on the company's powerful GPUs.  NVIDIA\92s  software 
+
+CUDA Programming model automatically manages the threads and it is significantly differs from single 
+threaded CPU code and to some extent even the parallel code.  Efficient CUDA programs exploit both 
+thread parallelism within a thread block and coarser block parallelism across thread blocks. Because only 
+threads within the same block can cooperate via shared memory and thread synchronization, programmers 
+must partition computation into multiple blocks. <BR> <BR>
+</p></span>
+
+
+<div align = "left">
+
+<a href="#hetr-cuda-prog-overview"> 
+<font size="2" face="Arial" color="blue">
+<B> CUDA enabled NVIDIA GPU: A Scalable Parallel Programming Model  </b> </font> 
+</a>
+
+
+<BR> <BR>
+<a href="#hetr-cuda-prog-basic-definitions">
+
+         <font size="2" face="Arial" color="blue"> <b> Basic CUDA Definitions </b></font> </a>
+&nbsp; &nbsp; &nbsp; 
+<I> <B> struct </b> </i> 
+ <a href="#hetr-cuda-prog-device-structure">
+    <font size="2" face="Arial" color="blue">
+       <b>   cudaDeviceProp </b> 
+    </font> 
+ </a> 
+&nbsp; &nbsp; &nbsp; 
+
+
+
+<a href="#hetr-cuda-prog-device-properties">
+         <font size="2" face="Arial" color="blue"> <b> CUDA Device Properties</b></font> </a> 
+
+
+<BR> <BR>
+
+<font size="2" face="Arial" color="red"> <b> Simple Programs on CUDA APIs :  </b></font> <BR> <BR>
+
+<blockquote>
+&nbsp;
+
+<a href="#hetr-cuda-prog-simple-kernel-prog">
+         <font size="2" face="Arial" color="blue"> <b> Kernel Call </b></font> </a>
+&nbsp;&nbsp;  
+
+<a href="#hetr-cuda-prog-parameters-memory">
+         
+ <font size="2" face="Arial" color="blue"> <b> Passing Parameters - Allocation of Memory
+ &amp; Pointers </b></font> </a> 
+<BR> <BR>
+
+&nbsp;  
+<a href="#hetr-cuda-prog-simple-query-device">
+  <font size="2" face="Arial" color="blue"> <b> Querying Devices </b></font> </a>
+&nbsp; &nbsp; 
+
+
+<a href="#hetr-cuda-prog-device-properties-example"> 
+<font size="2" face="Arial" color="blue"> Get Device Properties </font> </a>
+&nbsp; &nbsp; 
+
+&nbsp; 
+<a href="#hetr-cuda-prog-find-device"> 
+<font size="2" face="Arial" color="blue"> How to find  Device  </font> </a>
+<BR> <BR>
+
+
+
+  <font size="2" face="Arial" color="red">  <B> How to Compile &amp; Execute  program  
+
+ <!-- ............ Download  Starts here .......... -->
+(Download  : </b> </font>
+<I> <a href="../gpu-comp-nvidia-cuda-num-comp-codes/Makefile">
+  <font color ="blue"> Makefile</font> </a> </i> 
+
+ &nbsp; &nbsp;  
+ <a href="#hetr-cuda-prog-compilation-online"> <font color ="blue"> Command line </font></a>)<Br> <BR>
+
+<!-- ........... Download  Ends here ...........  -->
+</blockquote>
+
+<font size="2" face="Arial" color="red"> <b> Example Programs on vector Computations :  </b></font> <BR> <BR>
+
+<blockquote>
+
+
+&nbsp; 
+<a href="#hetr-cuda-prog-simple-vect-vect-addition">
+  <font size="2" face="Arial" color="blue"> <b>  Simple Vector-Vector Addition  </b></font> </a>
+<BR> <BR>
+
+
+&nbsp; 
+<a href="#hetr-cuda-prog-vectvect-thread-cooperation">
+  <font size="2" face="Arial" color="blue"> <b> Vector-Vector Addition : Thread Cooperation (Splitting Parallel Blocks) </b></font> </a> 
+
+<BR> <BR>
+
+&nbsp; 
+<a href="#hetr-cuda-prog-vectvect-blocks-threads">
+  <font size="2" face="Arial" color="blue"> <b> Vector-Vector Addition : Dimension of Grid - Each Block </b></font> </a> 
+
+<BR> <BR>
+<!--
+&nbsp; 
+<a href="#hetr-cuda-prog-memcheck-nvml-library">
+  <font size="2" face="Arial" color="blue"> <b> Memcheck: using nvml library </b></font> </a> 
+
+<BR> <BR>-->
+
+</blockquote>
+
+</div>
+
+
+
+<P align=justify><span  class="content">
+In all the programs, 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> CUDA_SAFE_CALL() </b></font>
+that surrounds CUDA API calls is a utility macro that we have provided as part of  
+Hands-on codes. It simply detects that the call has retuned an error,  prints the associated
+error message, and exists the application with  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> ERROR FAILURE</b></font>
+code.
+
+</span> </p>
+</td>
+ </tr> 
+</tbody>
+</table>
+
+	<!-- *************** Table for Summary of Definitions Starts  ****************** -->
+
+<HR>
+
+<TABLE cellPadding=3  width=100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** CUDA Overview  Starts ******** -->
+<BR>
+
+<a name ="hetr-cuda-prog-overview"> </a>
+
+
+<DIV align=left> 
+         <font size="2" face="Arial" color="red"> <b>
+  CUDA enabled NVIDIA GPU: A Scalable Parallel Programming Model
+ </b></font> 
+</div>
+
+<BR> 
+
+<p align = "justify"> <span class = "content"> 
+CUDA is aimed to provide solution for many applications and NVIDIA\92s new GPU which
+supports double precision floating point mathematical operations can address broader 
+class of applications.  CUDA is a parallel programming model and software environment 
+designed to overcome this challenge while maintaining a low learning curve for
+ programmers familiar with standard programming languages such as C. CUDA requires 
+programmers to write special code for parallel processing but it doesn't require 
+them to explicitly manage threads, which simplifies the programming model. CUDA 
+includes C/C++ Software development tools, functions libraries and a hardware 
+abstraction mechanism that hides the GPU hardware from developers. <BR> <BR>
+
+A compiled CUDA program can therefore execute on any number of processor cores,
+ and only the runtime system needs to know the physical processor count. New CUDA 
+compatible GPUs are implemented as a set of multiprocessors. Each multiprocessor 
+has several ALUs (Arithmetic Logic Unit) that, at any given clock cycle, execute 
+the same instructions but on different data. Each ALU can access (read and write) 
+the multiprocessor shared memory and the device RAM. <BR> <BR>
+
+At its core are three key abstractions \96 a hierarchy of thread groups, shared 
+memories, and barrier synchronization \96 that are simply exposed to the programmer 
+as a minimal set of extensions to C. CUDA Programming model automatically manages 
+the threads and it is significantly differs from single threaded CPU code and to 
+some extent even the parallel code. <BR> <BR>
+
+The goal of the CUDA programming interface is to provide a relatively simple path 
+for users familiar with the C programming language to easily write programs for 
+execution by the device. It consists of: 
+
+</span> </p>
+
+<BR> 
+
+	A runtime library split into: 
+<ul>
+
+<li><p align = "justify"> <span class = "content">
+	A host component that runs on the host and provides functions to control and access one or more   compute devices from host; 
+</li>
+<li><p align = "justify"> <span class = "content">
+	 A device component, that runs on the device and provides device-specific functions; 
+</span> </p> </li>
+<li><p align = "justify"> <span class = "content">
+	A common component, that provides built-in vector typed and a subset of the C standard library that are supported in both host and device code
+</span> </p> </li>
+<li><p align = "justify"> <span class = "content">
+	A host component that runs on the host and provides functions to control and access one or more compute devices from host; 
+</span> </p> </li>
+<li><p align = "justify"> <span class = "content">
+	A device component, that runs on the device and provides device-specific functions; 
+</span> </p> </li>
+<li><p align = "justify"> <span class = "content">
+	A common component, that provides built-in vector typed and a subset of the 
+C standard library  that are supported in both host and device code
+</span> </p> </li>
+
+</ul>
+
+
+
+<p align = "justify"> <span class = "content">
+
+CUDA assumes that the CUDA threads may execute on a physically separate device 
+that operates as a co-processor to the host running the C program. This is the case, 
+for example, when the kernels execute on a GPU and the rest of the C program executes 
+on a CPU. CUDA also assumes that both the host and the device maintain their own DRAM, 
+referred to as host memory and device memory, respectively. Therefore, a program manages
+ the global, constant, and texture memory spaces visible to kernels through calls 
+to the CUDA runtime. This includes device memory allocation and deallocation, as 
+well as data transfer between host and device memory. 
+<BR> <BR>
+
+Function which gets executed on <font color ="red"> <B> grid  </b> </font> is called as kernel function.
+A kernel is executed by a <font color ="red"> <B> grid  </b> </font>which contains blocks. These blocks contain 
+threads. A thread block is a batch of threads that can co-operate 
+Sharing data through shared memory, and Synchronizing their execution. 
+Threads from different blocks operate independently.
+Because all threads in a grid execute the same kernel function, 
+they rely on unique coordinates to distinguish themselves from each other 
+and to identify the appropriate portion of the data to process. 
+
+<BR> <BR>
+These threads 
+are organized into a two-level hierarchy using unique 
+coordinates \96 <font color ="red"> <B> blockIdx  </b> </font> (for block index) 
+and <font color ="red"> <B> threadIdx  </b> </font> (for thread index)- assigned
+ to them by the CUDA runtime system.
+
+The <font color ="red"> <B> blockIdx  </b> </font>  and <font color ="red"> <B> threadIdx  </b> </font>
+ appear as builtin, pre-initialized variables that 
+can be accessed within kernel functions.
+
+When a thread executes the kernel function, references to the 
+<font color ="red"> <B> blockIdx  </b> </font>
+and
+<font color ="red"> <B> threadIdx  </b> </font>
+ variable return the coordinates of the thread. Additional built-in 
+variables,  <font color ="red"> <B> gridDim  </b> </font>
+and  <font color ="red"> <B> BlockDim</b></font>,
+
+provide the dimension of the grid and the 
+dimension of each block respectively.
+
+<BR> <BR>
+
+
+The CUDA kernel execution configuration defines the dimensions of a 
+<font color ="red"> <B> grid  </b> </font> and its blocks.
+ Unique coordinates in <font color ="red"> <B> threadIdx  </b> </font> and 
+<font color ="red"> <B> threadIdx  </b> </font> variables allow threads of a grid to 
+identify themselves and their domains.  The threads of a grid can identify themselves 
+and their domains based on variables blockIdx and threadIdx  and these variables  
+have unique coordinates. These variables are used  in CUDA kernel functions 
+so the threads can properly identify the portion of the data to process 
+based on different levels of memory that is available in CUDA. Once a grid 
+is launched, its blocks are assigned to streaming multiprocessors 
+in arbitrary order, resulting in scalability of CUDA applications.
+ Importantly, the threads in different blocks to synchronize with each other 
+are to terminate the kernel and start a new kernel for the activities after 
+the synchronization  point. <BR> <BR
+
+  
+
+<!-- **************** Defintitions 1 Starts ******** -->
+
+
+<a name ="hetr-cuda-prog-basic-definitions"> </a>
+
+
+<p align= "left"> <span class = "content"> 
+<DIV align=left> <font   Color="black" face= "verdana">
+         <font size="2" face="Arial" color="red"> <b> Basic CUDA Definitions :</b></font> </a>
+<BR> <BR>
+<B> <I> Host :</i> </B> : Refer to the CPU and the system\92s memory as the host <BR>
+
+<B> <I>  Device : </i> </B> : Refer to the GPU and its memory <BR>
+ <B> <I>  Kernel  : </i> </b> : A function that executes on the device is typically called a kernel. <BR>
+</diV>
+</font>
+</span> 
+</p>
+
+  <DIV ALIGN=right>
+       <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+   </DIV>
+
+<!-- **************** Defintitions 2 Starts ******** -->
+
+<HR>
+
+
+<a name ="hetr-cuda-prog-simple-kernel-prog"> </a>
+<DIV align=left>
+         <font size="2" face="Arial" color="red"> <b> Simple Program Kernel Call :</b></font> </a>
+
+
+<p align= "justify"> <span class = "content">  
+
+The program given below, includes important additions to the simple sequential code to 
+make <B> &ldquo;CUDA enabled Program&ldquo;</b>.
+</span> </p>
+
+<ul>
+
+<li>
+ A empty function named <font size = 2, face = " Courier New " color ="#FF00FF" > kernel() </font> 
+  qualified with <font size = 2, face = " Courier New " color ="#FF00FF" > _global_ </font>
+</li>
+
+<li> A call to empty function, written in the form as 
+<font size = 2, face = " Courier New " color ="#FF00FF"> <<<1,1>>> </font>
+
+</li>
+</ul>
+
+<p align= "justify"> <span class = "content"> 
+In Linux system, GNU <font size = 2, face = " Courier New " color ="#FF00FF"> gcc </font>
+ compiles the code on host and <font size = 2, face = " Courier New " color ="#FF00FF"> nvcc </font> 
+gives the function a  
+
+<font  face = " Courier New " color ="#FF00FF"> kernel() </font>
+to the complier 
+that handles device  code and 
+<font size = 2, face = " Courier New " color ="#FF00FF"> main() </font>
+to the host compiler.   instead of the host. Here, the calling the 
+device code from the host code is important and it is similar to host-function calls.
+
+The angle brackets denote arguments that are passed to the runtime system.  These parameters are not 
+arguments to the device code but are parameters that will influence how the runtime will launch the 
+device code. Arguments to the device code itself passed within the parentheses. 
+</span> </p>
+</diV>
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!--  ............. Example Program ........ -->
+
+<a name="cuda-prog-example-01"> </a>
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda-hello-world.cu">
+  <font color =" blue">cuda-hello-world.cu </font> </a> </I>) 
+
+ <BR> 
+</div>
+<!-- ******************** download  Ends here ****************** -->
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+<TABLE cellPadding=3  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<p align = "justify">
+<span class = "content">
+ The first CUDA  parallel program is <B>&ldquo;Hello World&rdquo;</B> program, 
+ which simply prints the  
+ message <I>&ldquo;Hello World &rdquo;</I>". 
+ The program calls function 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> kernel() </font>
+as explained above. 
+</span> </p>
+</TD>
+</TR>
+
+</tbody>
+</table>
+
+
+<TABLE cellPadding=3  width = 100% border=1> 
+<TBODY>
+
+<!-- ***************  Example Program CUDA Kernel Starts   ****************** --> 
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Example Program  : A Kernel Call Program     </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+&nbsp; #include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font> <BR>
+&nbsp; #include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font> <BR>
+<BR> <BR>
+&nbsp; &nbsp; _global_ &nbsp; void <font color ="black">kernel</font> (void) { <BR>
+&nbsp;} <BR> <BR>
+
+&nbsp; <font color ="black">int main (</font> void <font color ="black">) </font> { <BR>
+<blockquote>
+&nbsp; <font color ="black">  kernel <<< 1,2 >>>(); </font><BR>
+&nbsp; <font color ="black"> Printf ( " Hello World \n "&nbsp); </font><BR>
+&nbsp;   return <font color ="black">0; </font>
+</blockquote>
+&nbsp; } <BR>
+
+<HR>
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ***************  Example Program CUDA Kernel ends   ****************** --> 
+
+
+<TABLE cellPadding=3 width = 100%  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+
+<!-- **************** Defintitions 3 Starts ******** -->
+
+<a name="hetr-cuda-prog-parameters-memory"> </a>
+
+<p align= "justify"> <span class = "content">  
+<font size="2" face="Arial" color="red"> <b> 
+Passing Parameters - Allocation of Memory &amp; Pointers </b> </font> 
+
+
+<ul>
+<li>
+<p align= "justify"> <span class = "content">
+<B>  Parameters : </b>
+Pass parameters to a kernel similar to any C function in standard C. These parameters need
+ to get from the host to device at run-time and the runtime system 
+takes care of these parameter definitions.</span> </p>
+</li>
+
+
+
+<li>
+<p align= "justify"> <span class = "content">
+<B> Allocate Memory: </b>
+Allocate memory to do useful work on a device, such as return value to the host.
+Allocation of memory using cudaMalloc() is similar  to standard C call malloc(), 
+but it tells the CUDA runtime to allocate the memory on the device.
+</span> </p>
+</li>
+
+</ul>
+<ul>
+<li>
+<p align= "left"> <span class = "content">
+<B> First argument </b> is a pointer to hold the address of the newly allocated memory. 
+
+<B> Second parameter </B>  is the size of the allocation. 
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+<font  color="red"> 
+CUDA_SAFE_CALL() </font> that surrounds these calls is a utility macro which detects that the call 
+has returned an error, prints the associated error message and exists the application in
+ &ldquo;clean&rdquo; fashion with an EXIT_FAILURE code.
+</span> </p>
+</li>
+</ul>
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ***************  Example Program CUDA Kernel - Passing Parameters Starts   ****************** --> 
+
+<TABLE cellPadding=3 border =0> 
+<TBODY>
+<TR>
+<TD>
+
+<p align= "justify"> <span class = "content">
+Many other error-handling checks are required in production code. <BR> <BR>
+
+The following program performs addition of two values in which data transfer from host to
+device and device to host are performed. Here, the parameters to a kernel are passed and memory 
+is allocated on host and device. <BR> <BR>
+
+
+
+The second CUDA  parallel program is focused on"<I>passing parameters to a kernel and 
+allocate memory on a device</I>". It performs addition of two values and 
+ the program calls function 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> kernel() </font>
+as given in the function
+<font size = 2, face = " Courier New " color ="#FF00FF"> _global_ void add</font>.
+The description of program is as follows: 
+</span> </p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<BR> <BR>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<a name="cuda-prog-example-02"> </a>
+<!--  ............. Example Program ........ -->
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda-simple-kernel-parameter-prog.cu">
+  <font color =" blue">cuda-simple-kernel-parameter-program</font> </a> </I>) 
+
+ <BR> <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<TABLE cellPadding=0  width = 100% border=1> 
+<TBODY>
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Example Program  : A Kernel - Passing Parameters &amp; Memory Allocation     </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font><BR> 
+
+#include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font><BR> <BR>
+
+&nbsp; &nbsp; _global_ &nbsp; void <font color ="black">add</font> ( 
+   int <font color ="black">a,</font> 
+   int <font color ="black">b,</font>  
+   int  <font color ="black">*c</font>  
+   <font color ="black">) { </font><BR>
+
+ &nbsp; &nbsp;  &nbsp; 
+    <font color ="black"> *c = a + b;  </font> <BR>
+<font color ="black">} </font><BR> <BR>
+
+
+
+/*    Utility Macro : CUDA SAFE CALL */ <BR> 
+ void <font color ="black">
+
+CUDA_SAFE_CALL( cudaError_t call) <BR>
+ 
+{ <BR>
+<blockquote>
+cudaError_t ret = call; <BR>
+        switch(ret) <BR>
+
+ { <BR>
+<blockquote>
+  case cudaSuccess: <BR>
+   &nbsp; &nbsp; &nbsp;
+</font>
+ 
+   break; <BR>
+<font color ="black">
+   default : <BR>
+ &nbsp; &nbsp; &nbsp;
+ {
+  <blockquote>
+
+printf(" ERROR at line :%i.%d' ' %s\n", <BR>
+        __LINE__,ret,cudaGetErrorString(ret)); <BR>
+                                exit(-1); <BR>
+</font>
+                           break; <BR>
+<font color ="black">
+  </blockquote>                         
+  &nbsp; &nbsp; &nbsp;} <BR>
+ </blockquote>
+  } <BR>
+</blockquote>
+
+ } 
+</font> 
+<BR> <BR>
+
+<font color ="black">int main (</font> void <font color ="black">) </font> { <BR>
+<blockquote>
+ int  <font color ="black">c;</font>  <BR>
+ int  <font color ="black">*dev_c;</font> <BR> <BR>
+ 
+ <font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dev_c,</font>  sizeof
+ <font color ="black">(</font>int<font color ="black">) ) );</font> <BR> <BR>
+
+
+<font color ="black">  add <<< 1,1 >>>(2,3,dev_c); </font><BR> <BR>
+
+
+<font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy(<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+ &c, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+ dev_c, </font> <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  sizeof
+ <font color ="black">(</font>int<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyDeviceToHost) );  </font> <BR> <BR>
+
+<font color ="black"> Printf("2 + 3 %d \n ", c);  </font> <BR>
+<font color ="black"> cudaFree( dev_c);  </font> <BR>
+  return <font color ="black">0; </font>
+</blockquote>
+} <BR> <BR>
+
+</TD>
+</TR>
+
+</TBODY> 
+</TABLE> 
+<BR> <BR>
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+
+<p align= "justify"> <span class = "content">
+The second CUDA  parallel program is focussed on <I>&ldquo;passing parameters to a kernel and 
+allocate memory on a device&rdquo;</I>". It performs addition of two vlaues and 
+ the program calls function 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> kernel() </font>
+as given in the function
+<font size = 2, face = " Courier New " color ="#FF00FF"> _global_ void add</font>.
+<BR> <BR>
+
+<B> Responsibility of programmer : </B>  The programmer should aware of restrictions on the usage of
+ device pointers which are summarized as follows. 
+</span> </p>  
+
+<ul>
+<li>
+<p align= "justify"> <span class = "content">
+Pass pointers allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc() </font>
+to functions that execute on the device
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+Use pointers allocated with 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc() </font>
+ to read or write memory from code that executes on 
+the device.
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+Pass pointers allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc() </font>
+ to read or write memory from code that executes on 
+the device. 
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+Cannot use pointers allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc()</font>
+to read or write memory from code that executes
+on the host.
+</span> </p>
+</li>
+
+</ul>
+
+<p align= "justify"> <span class = "content">
+To free memory for allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc(), </font>
+ use a call 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaFree().</font> <BR> <BR>
+
+
+To access device memory \96 by using device pointers from within device code and by using calls to 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpy()</font> from host code.
+</span> </p> 
+
+<p align= "justify"> <span class = "content">
+The last parameter to 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpy() </font> is 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpyDeviceToHost </font> instructing
+the runtime  that the source pointer is a device pointer and the destination pointer is a 
+host pointer. <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpyHostToDevice </font> instructing
+the source data is on the host and the destination is an address on the device. <BR> <BR>
+
+Also, one can specify 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpyDeviceToDevice </font> 
+which indicates both pointers are on the device.
+
+</span> </p>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<HR>
+
+<!-- **************** Defintitions 3 Querying Device Starts ******** -->
+
+
+<a name="hetr-cuda-prog-simple-query-device"> </a>
+
+ <font size="2" face="Arial" color="red"> <b> Querying Devices </b> </font>  </span> </p>
+
+<p align= "justify"> <span class = "content">
+An easy interface to determine the information <I>  such as to find mechanism for determining 
+which devices (if any) are present and what capabilities  each device supports  </i>is provided.
+
+
+
+First, to get count of how many CUDA devices in the system are built on CUDA Architecture
+call the API 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>.
+
+After calling  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>,
+then iterate through the  devices  and query relevant  information about each device.
+
+The CUDA runtime returns device properties  in a structure of type 
+ 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>.
+As of CUDA 4.1 &amp; CUDA 5.0, the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+structure contains the necessary  information and
+
+most of the information in  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+is self explanatory and commonly used CUDA device properties. 
+
+
+The description of third example program is focused on device properties as given below. : 
+</span> </p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ************* CUDA Device Query Program Starts ********* -->
+
+<a name="cuda-prog-example-03"> </a>
+<!--  ............. Example Program ........ -->
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda-device-query.cu">
+  <font color =" blue">cuda-device-query</font> </a> </I> 
+  &nbsp; &nbsp;
+
+  <a  href="./../gpu-comp-nvidia-cuda-basic-codes/hostcpu_query_results.txt">
+  <font color =" blue">hostcpu_query_results</font> </a> </I>
+   &nbsp; &nbsp; 
+
+ <a  href="./../gpu-comp-nvidia-cuda-basic-codes/device_query_results.txt">
+  <font color =" blue">device_query_results</font> </a> </I>)
+   
+
+ <BR> <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+
+<TABLE cellPadding=0  width = 100% border=1> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font><BR> 
+#include <font color ="black"> &lt;time.h&gt;&nbsp; </font><BR> 
+#include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font><BR> <BR>
+
+
+<font color ="black">#define KB 1024
+&nbsp; &nbsp; &nbsp;  /* To indicate results in KiloBytes */</font><BR> <BR>
+
+
+
+/*    Utility Macro : CUDA SAFE CALL */ <BR> 
+ void <font color ="black">
+
+CUDA_SAFE_CALL( cudaError_t call) <BR>
+ 
+{ <BR>
+<blockquote>
+cudaError_t ret = call; <BR>
+        switch(ret) <BR>
+
+ { <BR>
+<blockquote>
+  case cudaSuccess: <BR>
+   &nbsp; &nbsp; &nbsp;
+</font>
+ 
+   break; <BR>
+<font color ="black">
+   default : <BR>
+ &nbsp; &nbsp; &nbsp;
+ {
+  <blockquote>
+
+printf(" ERROR at line :%i.%d' ' %s\n", <BR>
+        __LINE__,ret,cudaGetErrorString(ret)); <BR>
+                                exit(-1); <BR>
+</font>
+                           break; <BR>
+<font color ="black">
+  </blockquote>                         
+  &nbsp; &nbsp; &nbsp;} <BR>
+ </blockquote>
+  } <BR>
+</blockquote>
+
+ } 
+</font> 
+<BR> <BR>
+
+int <font color ="black"> main (</font> void <font color ="black">) </font> { <BR>
+<blockquote>
+ int  <font color ="black">count;</font>  <BR> 
+
+<font color ="black"> cudaDeviceProp prop; </font> <BR> <BR> 
+
+ <font color ="black"> CUDA_SAFE_CALL(cudaGetDeviceCount( &count) ); </font> <BR> <BR>
+
+ for<font color ="black">(</font>int <font color ="black">i = 0; i < count; index++) { </font><BR>
+
+ <blockquote>
+
+<font color ="black">
+ CUDA_SAFE_CALL( cudaGetDeviceProperties( &prop, i) );  <BR> <BR>
+
+ printf("Information about the device \t: %d\n", count); <BR> <BR>
+ printf("Name  \t\t\t\t: %s\n",prop.name); <BR> <BR>
+ printf("Compute capability \t\t: %d.%d\n", <BR>
+  &nbsp; &nbsp; &nbsp; &nbsp;  prop.major, prop.minor); <BR> <BR>
+
+ printf("Clock rate \t\t\t: %d\n", prop.clockRate); <BR> <BR>
+ printf("Device overlap \t\t\t: "); 
+  </font> <BR> <BR>
+
+ <font color ="red">if</font> <font color ="black">(prop.deviceOverlap) <BR>
+  &nbsp; &nbsp; &nbsp; &nbsp;  printf("ENABLED \n"); </font> <BR>
+	<font color ="red">	else </font> <BR>
+<font color ="black">
+  &nbsp; &nbsp; &nbsp; &nbsp; printf("DISABLED\n"); <BR> <BR>
+		printf("Kernel execution timeout \t: ");
+ </font> <BR> <BR>
+<font color ="red">if</font>
+
+<font color ="black">
+ (prop.kernelExecTimeoutEnabled) <BR>
+		 &nbsp; &nbsp; &nbsp; &nbsp;	printf("ENABLED\n"); </font> <BR> 
+
+<font color ="red">	else </font> <BR>
+<font color ="black">
+		 &nbsp; &nbsp; &nbsp; &nbsp; printf("DISABLED\n"); <BR> <BR>
+printf("Total global memory \t\t: %ld MB\n", <BR>
+   &nbsp; &nbsp; &nbsp; &nbsp;(prop.totalGlobalMem/KB)/KB); <BR> <BR>
+
+printf("Total constant memory \t\t: %ld\n", <BR>
+ &nbsp; &nbsp; &nbsp; &nbsp; prop.totalConstMem); <BR><BR>
+
+printf("Maximum memory pitch \t\t: %ld\n", prop.memPitch); <BR> <BR>
+
+
+printf("Texture alignment \t\t: %ld\n", <BR> 
+ &nbsp; &nbsp; &nbsp; &nbsp; prop.textureAlignment); <BR> <BR>
+
+printf("Multiprocessor count \t\t: %d\n", <BR>
+ &nbsp; &nbsp; &nbsp; &nbsp; prop.multiProcessorCount); <BR> <BR>
+
+printf("Shared memory per MP \t\t: %ld KB\n", <BR>
+ &nbsp; &nbsp; &nbsp; &nbsp; prop.sharedMemPerBlock/KB); <BR> <BR>
+
+printf("Registers per MP \t\t: %ld\n", <BR> 
+ &nbsp; &nbsp; &nbsp; &nbsp;  prop.regsPerBlock); <BR> <BR>
+printf("Threads in warp \t\t: %d\n", prop.warpSize); <BR> <BR>
+printf("Maximum threads per dimension \t: %d\n", <BR> 
+
+ &nbsp; &nbsp; &nbsp; &nbsp; prop.maxThreadsPerBlock); <BR> <BR>
+printf("Maximum thread dimension \t: (%d, %d, %d)\n", <BR>
+ &nbsp; &nbsp; &nbsp; &nbsp;   prop.maxThreadsDim[0], prop.maxThreadsDim[1], <BR> 
+ &nbsp; &nbsp; &nbsp; &nbsp;  prop.maxThreadsDim[2]); <BR> <BR>
+
+printf("\n\n\n"); <BR> <BR>
+</blockquote>
+	} <BR> 	
+
+	return 0; <BR> 
+</blockquote>
+} <BR> <BR>
+
+<HR>
+
+</TD>
+</TR>
+  </TBODY> 
+   </TABLE> 
+<BR> <BR>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<!-- ***************** CUDA Device Query Program  ends  ******************* -->
+
+
+<!-- ***************** CUDA Device Strcture starts  ******************* -->
+
+<HR>
+
+<B>   CUDA Device Structure </b> <BR> <BR>
+<a name ="hetr-cuda-prog-device-structure"> </a>
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+<tr>
+<td>
+
+&nbsp; <font size = 2 face = Verdana color ="red"> <B>  struct  </b></font> cudaDevice Prop { <BR>
+ 
+<blockquote>
+ <font size = 2 face = Verdana color ="red">  <b>char </b>  </font> name[256]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t </b>  </font> totalGlobalMem; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t </b>  </font> sharedMemBlock; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int </b>  </font> regsPerBlock; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int </b>  </font> warpSize; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t  </b>  </font> memPitch; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxThreadsPerBlock; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxThreadsDim[1]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxGridSize[3]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t    </b>  </font> totalConstMem; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> major;<BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> minor; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> clockRate; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>size_t  </b>  </font> texturealignment; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> deviceOverlap; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> multiProcessorcount; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> KernelExecutionTimeoutEnabled;<BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> integrated; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> canMapHostMemory; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> computeMode; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture1D; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture2d[2]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture3d[3]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> maxTexture2dArray[3]; <BR>
+ <font size = 2 face = Verdana color ="red">  <b>int   </b>  </font> concurrentKernels; 
+</blockquote>     
+&nbsp; } <BR>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<HR>
+<!-- ***************** CUDA  Device Properties Starts ************** -->
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> 
+<BR>
+
+<B>  CUDA Device Properties  </b> (Refer NVIDIA CUDA Programming Guide) <BR> <BR>
+
+<a name ="hetr-cuda-prog-device-properties"> </a>
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Device Property  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+
+     
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             char name [256];  
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		An ASCII string indentifying the device [e.g., GeForce GTX 280"]
+                </font> <BR>
+          </td>
+      </tr>
+    
+      
+        
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            size_t totalGlobalMem
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The amount of global memory on the devices in bytes
+                </font> <BR>
+          </td>
+
+       </tr>
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             size_t shareMemPerBlock 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum amount of shared memory a single block may use
+                in bytes 
+                </font> <BR>
+          </td>
+       </tr>
+ 
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            int regsPerBlock   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of 32-bit registers  available per block
+                </font> <BR>
+          </td>
+       </tr>
+
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            int warpSize 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of threads in a warp 
+                </font> <BR>
+          </td>
+       </tr>
+
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             size_t memPitch 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum pitch allowed for memory copies in bytes.
+                </font> <BR>
+          </td>
+       </tr>
+
+ 
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             int maxThreadsPerBlock 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maxmum number of threads that a block may contain
+                </font> <BR>
+          </td>
+       </tr>
+
+ 
+     <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+            int maxThreadsDim[3]
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of blocks allowed along  each dimneison of a grid
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             size_t totalConstMem 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The amount of avialable constant memory
+                </font> <BR>
+          </td>
+       </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             int  major  
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The major revision of the device's compute  capability
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int minor 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The minor revision of the device's compute  capability
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           Global  Memory size :   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		1073741824
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+         size_t textureAlignment  
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The device's requirement for texture  alignment
+                </font> <BR>
+          </td>
+       </tr>
+
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+         int deviceOverlap 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		 A bollean value  representing  whether  the device  can 
+         simultaneously perform a cudaMemcpy() and kernel execution
+                </font> <BR>
+          </td>
+       </tr>
+
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          int multiProcessorCount   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The number of multiprocessors on the device
+                </font> <BR>
+          </td>
+       </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+         int kernelExecTimeoutEnabled 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A bollean value representing whether there is a runtime limit 
+                for kernels  executed on this device
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+             int integrated
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		A bollean value representing whether the device  is an integrated 
+                GPI (i.e., part of the chipset and not a discrete GPU)
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int canMapHostMemory 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A bollean value repesenting whether the device can map host 
+                memory into the CUDA device addres space.
+                </font> <BR>
+          </td>
+       </tr>
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+          int computeMode
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A vlaue representing the device's computing mode  default, exclusive
+               or, prohibited
+                </font> <BR>
+          </td>
+       </tr>
+
+
+    <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTexture1D
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum size supported for 1D textures
+                </font> <BR>
+          </td>
+       </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTextture2D[2]   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum dimensions  supported for 2D textures
+                </font> <BR>
+          </td>
+    </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTextture3D[3]   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum dimensions  supported for 3D textures
+                </font> <BR>
+          </td>
+    </tr>
+
+  <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int maxTextture2DArray[3]   
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		The maximum dimensions  supported for 2D texture arrays
+                </font> <BR>
+          </td>
+    </tr>
+
+   <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "40% " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  
+           int concurrentKernels 
+          </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "60% " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		A bollean value repesenting whether the device supports
+                executing multiple kernels within the same context 
+                simultaneously.
+                </font> <BR>
+          </td>
+    </tr>
+
+
+</tbody>
+</table>
+ <br> 
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<HR>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr>
+<td>
+
+
+
+<!-- **************** Using Device Properties  Starts ******** -->
+
+
+<a name="hetr-cuda-prog-device-properties-example"> </a>
+
+ <font size="2" face="Arial" color="red"> <b> Using  Device Properties : Program </b> </font>  </span> </p>
+
+<p align= "justify"> <span class = "content">
+An easy interface to determine the information <I>  such as to find mechanism for determining 
+which devices (if any) are present and 
+what capabilities  each device supports  </i>is provided.
+
+
+
+First, to get count of how many CUDA devices in the system are built on CUDA Architectture
+call the API 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>.
+
+After calling  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaGetDeviceCount()</b></font>,
+then iterate through the  devices  and query relevant  information about each device.
+
+The CUDA runtime returns device properties  in a structure of type 
+ 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>.
+As of CUDA 4.1 &amp; CUDA 5.0, the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+structure contains the necessary  information and
+
+most of the information in  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> cudaDeviceProp</b></font>
+is self explanatory and commonly used CUDA device properties. <BR> <BR>
+
+Query with <font size = 2, face = " Courier New " color ="#FF00FF" > 
+ <B> cudaGetDeviceProperpties()</b></font> is useful for applications in which kernel
+needs close interaction with the CPU, and applications that may be executed on the 
+integrated GPU that shares  system memory with the CPU. <BR> <BR>
+
+For example, if application depends upon on having double-precision floatin-point support, 
+then there is a need to check on each card that have compute capability 1.3 or higher 
+support double-precision floating point mathematical calculations.  To run the application,
+we need to find at least one device of compute capability 1.3 or higher. <BR> <BR>
+
+First, we need to fill  a <font size = 2, face = " Courier New " color ="#FF00FF" > 
+ <B> cudaDeviceProp </b> </font> strcuture with the properties related to device and 
+pass it to <font size = 2, face = " Courier New " color ="#FF00FF" > 
+ <B> cudaChooseDevice() </b></font> to have CUDA runtime find a device  that 
+satisfies the given constraint. The call to 
+<font size = 2, face = " Courier New " color ="#FF00FF" > 
+ <B> cudaChooseDevice() </b> </font> returns a device ID that we can then 
+pass to <font size = 2, face = " Courier New " color ="#FF00FF" > 
+ <B> cudaSetDevice() </b> </font>. The description of program is as follows: 
+</span> </p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+<!-- ************ Table for Using Device Properties Program Ends ********************** -->
+
+
+<!-- ************* Uisng Device Properties (Find Device)  Program Starts ********* -->
+
+
+<!-- ************* CUDA Device Query Program Starts ********* -->
+<BR>
+<a name="hetr-cuda-prog-find-device"> </a>
+ <font size="2" face="Arial" color="red"> <b> Hot to find Device </b> </font>  <BR>
+
+<!--  ............. Example Program ........ -->
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+ 
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda-find-device.cu">
+  <font color =" blue">cuda-find-device</font> </a> </I>) 
+
+ <BR> <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+<TABLE cellPadding=0  width = 100% border=1> 
+<TBODY>
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font><BR> 
+#include <font color ="black"> &lt;time.h&gt;&nbsp; </font><BR> 
+#include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font><BR> <BR>
+
+
+/*    Utility Macro : CUDA SAFE CALL */ <BR> 
+ void <font color ="black">
+
+CUDA_SAFE_CALL( cudaError_t call) <BR>
+ 
+{ <BR>
+<blockquote>
+cudaError_t ret = call; <BR>
+        switch(ret) <BR>
+
+ { <BR>
+<blockquote>
+  case cudaSuccess: <BR>
+   &nbsp; &nbsp; &nbsp;
+</font>
+ 
+   break; <BR>
+<font color ="black">
+   default : <BR>
+ &nbsp; &nbsp; &nbsp;
+ {
+  <blockquote>
+
+printf(" ERROR at line :%i.%d' ' %s\n", <BR>
+        __LINE__,ret,cudaGetErrorString(ret)); <BR>
+                                exit(-1); <BR>
+</font>
+                           break; <BR>
+<font color ="black">
+  </blockquote>                         
+  &nbsp; &nbsp; &nbsp;} <BR>
+ </blockquote>
+  } <BR>
+</blockquote>
+
+ } 
+</font> 
+<BR> <BR>
+
+int <font color ="black"> main (</font> void <font color ="black">) </font> { <BR>
+<blockquote>
+ int  <font color ="black">count;</font>  <BR> 
+ int  <font color ="black">dev;</font>  <BR> 
+
+<font color ="black"> cudaDeviceProp prop; </font> <BR> <BR> 
+
+ <font color ="black"> CUDA_SAFE_CALL(cudaGetDeviceCount( &count) ); </font> <BR> <BR>
+
+ for<font color ="black">(</font>int <font color ="black">i = 0; i < count; i++) { </font><BR>
+
+ <blockquote>
+
+ <font color ="black">
+ CUDA_SAFE_CALL( cudaGetDeviceProperties( &prop, i) ); </font>  <BR> <BR>
+
+ <font color ="black">
+ CUDA_SAFE_CALL( cudaGetDevice(&dev) );  </font> <BR> <BR>
+
+ <font color ="black">
+ printf("Information about the device \t: %d\n", count); <BR> <BR>
+ printf("Name  \t\t\t\t: %s\n",prop.name); <BR> <BR>
+ printf("printf("ID of the device : %d\n", dev),  <BR>
+
+ memset(&prop, 0, <font color ="red"> sizeof </font>(cudaDeviceProp)); <BR>  <BR>
+		prop.major = 1; <BR> 
+		prop.minor = 3; </font> <BR>
+
+  <font color ="black">
+   CUDA_SAFE_CALL( cudaChooseDevice(&dev, &prop ) );  <BR> <BR>
+  
+
+ printf("ID of CUDA device closest to revision 1.3 : <BR> 
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  %d \n", dev); <BR> <BR>
+ 
+   CUDA_SAFE_CALL( cudaSetDevice(dev) ); <BR> <BR>
+
+</blockquote>
+	} <BR> 	
+
+	return 0; <BR> 
+</blockquote>
+}  </font>
+<BR> <BR>
+
+</TD>
+</TR>
+  </TBODY> 
+   </TABLE> 
+<BR> <BR>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<!-- ***************** Using CUDA Device Proerties Find Device  ends  ******************* -->
+
+
+<BR> <BR>
+
+<!-- ************  Vector Vector Multiplication starts ************************* -->
+<a name ="hetr-cuda-prog-simple-vect-vect-addition"> </a>
+<TABLE cellPadding=3 width = "100%"  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+
+  <DIV align=Left>
+ <font size="2"  Color="black" face= "verdana">
+    <B>  CUDA Program for Vector Vector Addition </b> </font></DIV> 
+</TD> 
+</TR> 
+
+
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+The input vectors are generated on host-CPU and transfer the vectors to device-GPU for vector 
+vector vector addition. 
+A simple kernel based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+Each thread performs partial  addition  of two vectors and the 
+final  resultant  value is generated on <B> device-GPU </b> and transferred 
+to  <b> host-CPU</b>. Important steps are given below.
+</span> </P> 
+
+</td>
+</tr>
+
+<!-- *************** IMPORTANT STEPS ************ -->
+  <BR> <BR>
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+ 
+       <!-- ******* title ****** -->
+       <tr bgcolor="#FFFFFF">
+     	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+		 <font size = 2 face = Verdana color ="red"> <B>  Steps  </b> </font>
+           </td>
+         
+           <td  height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="red">  <b>Description</b>  </font>
+           </td>		 
+       </tr>
+
+    
+       <!-- ******* Step 1. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  1. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Memory allocation on host-CPU and device-GPU  : </i> <BR>  
+		Allocate memory for  two input vectors and  resultant vector  on
+               host-CPU &amp;  device-GPU <BR> 
+               Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+              <I> cudaMalloc(void** array, int size)  </font>  </i> 
+                
+                </font> <BR>
+          </td>
+      </tr>
+ 
+     <!-- ******* Step 2. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  2. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Input data Generation : </i> <BR>
+		Fill the input vector with single/double precision real values using 
+                randomized data as per input specification<BR>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 3. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  3. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer  data from host-CPU to device-GPU: </i> <BR>
+		Transfer  the host-CPU vector to device-GPU to perform computation  <BR> 
+           Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+      <I> cudaMemcpy((void*)device_array, (void*)host_array, size , cudaMemcpyHostToDevice )  </font>  </i>
+          <BR></font>
+           </td> 
+      </tr>
+
+   <!-- ******* Step 4. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  4. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Launch Kernel : </i> <BR>		
+                  Define the dimensions for Grid and Block on host-CPU and launch the kernel for execution 
+                  on device-GPU. <BR>
+                  Computation on device is performed for vector vector addition </font>
+           </td> 
+      </tr>
+  
+     <!-- ******* Step 5. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  5. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Transfer the result from device-GPU to host-CPU : </i> <BR>		
+                  Copy resultant vector to host-CPU from device-GPU. <BR> 
+            Use <font size = 2, face = " Courier New " color ="#FF00FF" > 
+  <I> cudaMemcpy((void*)host_array, (void*)device_array, size , cudaMemcpyDeviceToHost)</font> </i> <BR>
+              </font>
+           </td> 
+      </tr>
+
+     <!-- ******* Step 6. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  6. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Check correctness of the result on host-CPU </i> <BR>		
+                  Compute vector-vector addition on host-CPU and Compare CPU &amp; GPU results.  <BR> </font>
+           </td> 
+    
+     <!-- ******* Step 7. ***** -->
+       <tr bgcolor="#FFFFFF">
+  	   <td  valign = "top"  width = "10 % " height="2" valign="top"> 
+       		<font size = 2 face = Verdana color ="black">  7. </font> 
+           </td>
+ 
+           <td  valign = "top" height="2 %  width = "80 % " " valign="top">
+       		<font size = 2 face = Verdana color ="black"> 
+		<I> Free the memory  </i> <BR>		
+                  Free the memory of arrays allocated on host-CPU &amp; device-GPU <BR>
+              Use  <font size = 2, face = " Courier New " color ="#FF00FF" > 
+                 <I>  cudaFree(void* array</font>)  </i> <BR> </font>
+           </td> 
+      </tr>
+</tbody>
+</table>
+<BR> <BR>
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<!-- ************* CUDA vector-vector-addition   Program Starts ********* -->
+
+
+<a name="cuda-prog-example-05"> </a>
+<!--  ............. Example Program ........ -->
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+ <font color ="blue">
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda-vector-vector-addition-blocks.cu">
+  <font color =" blue">cuda-vector-vector-addition-blocks</font> </a> </I>) 
+
+ <BR> <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+</TD>
+</TR>
+</tbody>
+</table>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+
+
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Example Program  :  Vector Vector Addition     </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+
+<TR bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font><BR> 
+
+#include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font><BR> <BR> 
+
+#define <font color ="black"> N = 100 </font><BR> <BR>
+<BR>
+
+&nbsp; _global_void <font color ="black">add</font> ( 
+   int <font color ="black">*a,</font> 
+   int <font color ="black">*b,</font>  
+   int  <font color ="black">*c</font>  
+   <font color ="black">) { </font><BR> <BR>
+<blockquote>
+ int <font color ="black"> tid = blockIdx.x;  </font> 
+         <I> <font color ="black">  // Start the data at this index   </i> <BR> <BR> 
+ // CUDA C allows you to define a group of blocks in two dimensions </font> <BR> <BR>
+If <font color ="black">( tid < N)   </font>  <BR>
+  &nbsp; &nbsp; &nbsp; &nbsp; <font color ="black"> c[tid] = a[tid] + b[tid]; </font> <BR> 
+  
+
+</blockquote>
+&nbsp; <font color ="black">} </font><BR> <BR>
+
+
+&nbsp; /*    Utility Macro : CUDA SAFE CALL */ <BR> 
+&nbsp; void <font color ="black">
+
+&nbsp;CUDA_SAFE_CALL( cudaError_t call) <BR>
+ 
+&nbsp; { <BR>
+<blockquote>
+cudaError_t ret = call; <BR>
+        switch(ret) <BR>
+
+ { <BR>
+<blockquote>
+  case cudaSuccess: <BR>
+   &nbsp; &nbsp; &nbsp;
+</font>
+ 
+   break; <BR>
+<font color ="black">
+   default : <BR>
+ &nbsp; &nbsp; &nbsp;
+ {
+  <blockquote>
+
+printf(" ERROR at line :%i.%d' ' %s\n", <BR>
+        __LINE__,ret,cudaGetErrorString(ret)); <BR>
+                                exit(-1); <BR>
+</font>
+                           break; <BR>
+<font color ="black">
+  </blockquote>                         
+  &nbsp; &nbsp; &nbsp;} <BR>
+ </blockquote>
+  } <BR>
+</blockquote>
+
+&nbsp; } 
+</font> 
+<BR> <BR>
+
+&nbsp; <font color ="black">int main (</font> void <font color ="black">) </font> { <BR>
+<blockquote>
+ int  <font color ="black"> a[N],b[N], c[N];</font>  <BR>
+
+
+ int  <font color ="black">*dev_a, *dev_b, *dev_c;</font> <BR> <BR>
+
+ // <font color ="black"> Allocate memory on the Device GPU  </font> <BR> 
+ 
+ <font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dev_a,</font> N * sizeof
+ <font color ="black">(</font>int<font color ="black">) ) );</font> <BR> <BR>
+
+ <font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dev_b,</font> N * sizeof
+ <font color ="black">(</font>int<font color ="black">) ) );</font> <BR> <BR>
+ 
+<font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dev_c,</font> N * sizeof
+ <font color ="black">(</font>int<font color ="black">) ) );</font> <BR> <BR>
+
+
+//<font color ="black">fill Arrays 'a' and 'b' on the Device GPU </font> <BR>
+for<font color ="black">(</font>int <font color ="black">i = 0; i < N; i++) { </font><BR>
+
+
+  &nbsp; &nbsp; &nbsp; &nbsp; <font color ="black"> a[i] = -i; </font> <BR> 
+   &nbsp; &nbsp; &nbsp; &nbsp; <font color ="black"> b[i] = i+1; </font> <BR>
+ 
+<font color ="black">} </font><BR> <BR>
+
+
+// <font Color = "black"> Copy the  Arrays 'a' and 'b' to  Device GPU </font> <BR>
+
+<font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy(<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+ &dev_a, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+ a, </font> <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<font color ="black">N *</font> 
+ sizeof
+ <font color ="black">(</font>int<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyHostToDevice) );  </font> <BR> <BR>
+
+
+<font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy(<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+ &dev_b, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+ b, </font> <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<font color ="black">N *</font> 
+ sizeof
+ <font color ="black">(</font>int<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyHostToDevice) );  </font> <BR> <BR>
+
+
+<font color ="black">  add <<< N,1 >>>(dev_a, dev_b, dev_c); </font><BR> <BR>
+
+<font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy(<BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+ &dev_c, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+ c, </font> <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<font color ="black">N *</font> 
+ sizeof
+ <font color ="black">(</font>int<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyDeviceToHost) );  </font> <BR> <BR>
+
+//<font color ="black"> Display the results on Host CPU  </font> <BR>
+for<font color ="black">(</font>int <font color ="black">i = 0; i < N; i++) { </font><BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<font color ="black"> printf("%d  + %d = %d \n", a[i], b[i], c[i] ); </font> <BR>
+<font color ="black">} </font> <BR> <BR>
+
+ 
+<font color ="black">// Free the memory allocated on the Device GPU  </font><BR>
+<font color ="black"> cudaFree( dev_a);  </font> <BR>
+<font color ="black"> cudaFree( dev_b);  </font> <BR>
+<font color ="black"> cudaFree( dev_c);  </font> <BR> <BR>
+  return <font color ="black">0; </font>
+</blockquote>
+&nbsp; <font color ="black">} </font> <BR> <BR>
+
+</TD>
+</TR>
+
+</TBODY> 
+</TABLE> 
+
+<BR> <BR>
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<BR> <BR>
+
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<!-- ************* CUDA Device Properties - Thread Co-operation  Program Starts ********* -->
+
+
+<a name ="hetr-cuda-prog-vectvect-thread-cooperation"> </a>
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>    Vector Vector Addition   (Thread Cooperation-Splitting Blocks)  </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+<TR>
+<TD> 
+ 
+
+<p align= "justify"> <span class = "content">
+In the earlier examples, a simple kernel <font color ="red"> <B>  add  </b> </font> is based on the grid of 
+thread blocks is generated in which thread is given a unique thread ID within its block. 
+Each thread performs partial  addition  of two vectors and the 
+final  resultant  value is generated on <B> device-GPU </b> and transferred to  <b> host-CPU</b>.
+<BR <BR>
+</span> </P> 
+</td> </tr>
+
+
+<TABLE cellPadding=0  width = "100%" border=1> 
+<TBODY>
+
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+<BR> 
+
+
+<font color ="black">   
+//  N stands for number  of Blocks <BR>
+//  1 stands for number of threads per block  
+</font> <BR> <BR>
+
+<font color ="red"> <B>  kernel <<< N,1 >>>(); </b>  </font> <BR> 
+</blockquote>
+</span> </p>
+
+
+</TD>
+</TR>
+
+</TD>
+</TR>
+</TBODY> 
+</TABLE>
+<BR> <BR>
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+The CUDA runtime allows these blocks to the split into <b> threads.</b> In earlier example,
+ N blocks are running on the GPU. To identify, which block is running, the variable 
+<font color ="red"> <b> blockIdx.x  </b> </font> is used in the kernel code.
+</span> </p>
+</td>
+</tr>
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+&nbsp; _global_void <font color ="black">add</font> ( 
+   int <font color ="black">*a,</font> 
+   int <font color ="black">*b,</font>  
+   int  <font color ="black">*c</font>  
+   <font color ="black">) { </font><BR> <BR>
+<blockquote>
+ int <font color ="black"> tid = blockIdx.x;  </font> 
+         <I> <font color ="black">  // Start the data at this index   </i> <BR> <BR> 
+ // UDA C : Allows to define a group of blocks in two dimensions </font> <BR> <BR>
+If <font color ="black">( tid < N)   </font>  <BR>
+  &nbsp; &nbsp; &nbsp; &nbsp; <font color ="black"> c[tid] = a[tid] + b[tid]; </font> <BR> 
+  
+
+</blockquote>
+&nbsp; <font color ="black">} </font><BR> <BR>
+
+</blockquote>
+</span> </p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+<BR> <BR>
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+Here, the variable <font color ="red"> <B> blockIdx.x  </b> </font> is built in variable 
+that the CUDA runtime defines it. CUDA C defines a group of blocks in two dimensions.
+CUDA runtime allows these blocks to be split into  <font color ="red"> <B> threads.</b></font>
+
+<BR> <BR>
+In above, the first argument in the angle brackets i.e., N represents the  number of blocks to 
+be launched and the second parameter represents the number of threads per block. CUDA runtime
+creates <font color ="red"> <B> &ldquo;N Parallel threads&rdquo; </b> </font> in the above example as given below.
+ <BR> <BR>
+
+<blockquote>
+
+ &nbsp; <font color ="red"><B>  N blocks X 1 thread/block = N Parallel threads </font> </b>  <BR>
+
+</blockquote>
+
+In above example, a launch of N blocks of one thread is done at CUDA runtime. <BR> <BR>
+</span> </p>
+</td>
+</tr>
+
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  width = "100%" border=1> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+<BR> 
+
+
+<font color ="red"> <B>  kernel <<< 1,N >>>(); </b>  </font> <BR> 
+</blockquote>
+</span> </p>
+
+
+</TD>
+</TR>
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+In above,  a launch of <font color ="red"> <B> N threads </b> </font>, all within one block is 
+performed. <BR> <BR>
+
+In earlier example program, the input and the output data is indexed by block Index, i.e., <br>
+ <div align = "center"> <font color ="red"> <B> int </b> </font> tid = blockIdx.x;  </div>
+
+ <BR> <BR>
+
+We have a single block with many threads, to index the data by thread index, we have <br> <br>
+<div align = "center"> 
+<font color ="red"> <B> int </b> </font> tid = threadIdx.x; </div> <BR> 
+
+
+With above, we can re-write the code in order to move from a parallel block implementation 
+to a parallel thread implementation. The source code listing is given in the following 
+few lines. <BR> <BR>
+
+</span> </p>
+</td>
+</tr>
+
+</TD>
+</TR>
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+&nbsp; _global_void <font color ="black">add</font> ( 
+   int <font color ="black">*a,</font> 
+   int <font color ="black">*b,</font>  
+   int  <font color ="black">*c</font>  
+   <font color ="black">) { </font><BR> <BR>
+<blockquote>
+ int <font color ="black"> tid = threadIdx.x;  </font> 
+         <I> <font color ="black">  // Start the data at this thread index   </i> <BR> <BR> 
+ // CUDA C : Allows to define a group of blocks in two dimensions </font> <BR> <BR>
+If <font color ="black">( tid < N)   </font>  <BR>
+  &nbsp; &nbsp; &nbsp; &nbsp; <font color ="black"> c[tid] = a[tid] + b[tid]; </font> <BR> 
+  
+
+</blockquote>
+&nbsp; <font color ="black">} </font><BR> <BR>
+
+</blockquote>
+</span> </p>
+
+</TD>
+</TR>
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+
+
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+
+The number of blocks in a single launch is 65,535 and  the  hardware limits the number of 
+threads per block with which we can launch a kernel. 
+<font color ="red"> <B> maxThreadsPerBlock </b> </font> specifies the maximum and the number 
+can not exceed this as given in device properties structure.  For many GPUs, this limit is 512 threads
+per block. <BR> <BR>
+
+To incorporate multiple blocks and threads, the indexing will start to look similar to the 
+standard  method for converting  from a two-dimensional  index space to a linear space.   <BR> <BR>
+
+We use new built variable <font color ="red"> <B> blockDim</b></font>. This variable is a constant
+for all blocks and stores the number of threads along each dimension of the block.  In the 
+present example, we are using one-dimensional block, we refer only to 
+<font color ="red"> <B> blockDim </b></font>.  The number of blocks along each dimension of the
+entire grid are stored in <font color ="red"> <B> gridDim</b></font>. It is important to note that
+<font color ="red"> <B> gridDim</b></font>, whereas a <font color ="red"> <B> blockDim</b></font>
+is actually three-dimensional. <BR> <BR>
+
+CUDA runtime allows you to launch a two-dimensional grid of blocks where each block is a three 
+dimensional array of threads.
+<BR> <BR>
+</span> </p>
+</td>
+</tr>
+
+</TD>
+</TR>
+</Tbody>
+</Table>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+
+<TABLE cellPadding=0  width ="100%" border=1> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<td> 
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+&nbsp; _global_void <font color ="black">add</font> ( 
+   int <font color ="black">*a,</font> 
+   int <font color ="black">*b,</font>  
+   int  <font color ="black">*c</font>  
+   <font color ="black">) { </font><BR>
+<blockquote>
+ int <font color ="black"> tid = threadIdx.x + bllockIdx.x + BlockDim.x;  </font>  
+  
+</blockquote>
+&nbsp; <font color ="black">} </font><BR> <BR>
+
+</blockquote>
+</span> </p>
+
+</TD>
+</TR>
+
+</TBODY> 
+</TABLE> 
+
+<BR> <BR>
+
+<!--  ************* CUDA Device  Properties Thread-Block Co-operation Ends *** -->
+
+
+<!-- ******** CUDA Device Properties  Grid  Block Dimension -Thread-Block  Starts ****** -->
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+<a name ="hetr-cuda-prog-vectvect-blocks-threads"> </a>
+
+<TABLE cellPadding=0  width = "100%" border=1> 
+<TBODY>
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>    Vector Vector Addition   (Dimension of Grid &amp; Each Block)  </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+In CUDA, all the threads in a grid execute the same kernel function. Also, each thread
+ has unique coordinate to distinguish themselves  from other and to identify the 
+approricate portion of the data to access. These threads are organized into a 
+two-level hierarchy using unique co-ordinates.  These are blockIdx (for block index) 
+and threadIdx (for thread index)- assigned to them by the CUDA runtime system and these
+ variables can be accessed within kernel functions. When a thread executes the 
+kernel function, references to the blockIdx and threadIdx variable return the 
+coordinates of the thread. Additional built-in variables, 
+<font color ="red"> <B> gridDim </b> </font> and <font color ="red"> BlockDim </b></font>, 
+provide the dimension of the grid and the dimension of each block respectively.
+<BR> <BR>
+
+
+In  CUDA thread organization, the 
+<font color ="red"> <B> grid </b> </font>
+ consists of N thread blocks, and each block, 
+in turn, consists of M threads. Each grid has a total of N*M threads.  
+All blocks at the grid level are organized as a one- or  two- dimensional (1D or 2D) 
+arrays; all threads within each block are also organized as a  one- or  two- or three- 
+dimensional (1D or 2D or 3D ) arrays. <BR> <BR>
+
+
+In general, a <font color ="red"> <B> grid </b> </font> is organized as a 2D array of blocks. Each block is organized into 
+a 3D array of threads. The exact organization of a grid is determined by the
+ execution configuration provided at kernel launch. The first parameter of the 
+execution configuration specifies the dimensions of the grid in terms of number
+ of blocks. The second specifies the dimensions of each block in terms of number 
+of threads. Each such parameter is a dim3 type, which is essentially a C struct 
+with three unsigned integer fields: x, y, and z. Because grids are 2D arrays of
+ block dimensions, the third field of the 
+<font color ="red"> <B> grid </b> </font>
+dimension parameter is ignored; 
+it should be set to 1 for clarity. The following host code can be used to launch 
+the kernel and details are explained below.<BR> <BR>
+
+
+</span> </P> 
+</td> 
+</tr>
+
+
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  width = "100% " border=1> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+<BR> 
+dim3 dimGrid(128, 1,1); <BR>
+dim3 dimBlock(32, 1,1); <BR>
+Kernel Functi on<<< dimGrid,  dimBlock>>> (...); <BR>
+
+
+<font color ="black">   
+//  N stands for number  of Blocks <BR>
+//  1 stands for number of threads per block  
+</font> <BR> <BR>
+
+<font color ="red"> <B>  kernel <<< N,1 >>>(); </b>  </font> <BR> 
+</blockquote>
+</span> </p>
+
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+The first two statements initialize the execution configuration parameters. 
+Because the grid and the blocks are ID arrays, only the first dimension of 
+dimBlock and dimGrid are used. The other dimensions are set to 1. The third
+ statement is the actual kernel launch. The execution configuration parameters 
+are between <<< and >>>. 
+<BR> <BR>
+
+The values of <font color ="red"> <B> grid Dim.x  </b> </font> and 
+<font color ="red"> <B> grid Dim.y </b> </font> can be calculated based on other variables at 
+kernel launch time. Once a kernel is launched, its dimensions cannot change. 
+All threads in a block share the same <font color ="red"> <b> blockIdx  </b> </font> value. The b1ockIdx.x value 
+ranges between 0 and  <font color ="red"> <b> gridDim.x-1  </b> </font>, and
+ the <font color ="red"> <B> blockIdx.y  </b> </font> value between 0 and 
+ <font color ="red"> <B> gridDim.y-1</b> </font>.
+<BR> <BR>
+
+In general, blocks are organized into 3D arrays of threads. All blocks in a grid 
+have the same dimensions. Each threadldx consists of three components: the x 
+coordinate <font color ="red"> <B> threadldx.x</b></font>, the y coordinate 
+<font color ="red"> <B> threadldx.y</b></font>,
+
+threadldx.y, and the z coordinate <font color ="red"> <B> threadldx.z</b></font>
+
+ The number of threads in each dimension of a block is specified by
+the second execution configuration parameter given at the kernel launch. 
+With the kernel, this configuration parameter can be accessed as a predefined 
+struct variable, 
+
+<font color ="red"> <B> blockDim</b></font>. The total size of a block is limited to 512 threads, 
+with flexibility in distributing these elements into the three dimensions as 
+long as the total number of threads does not exceed 512.
+For example, (512, 1, 1), (8, 16, 2), and (16, 16, 2) are all allowable 
+<font color ="red"> <B> blockDim</b></font> values,
+<BR> <BR>
+</span> 
+</p>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</td>
+</TR>
+</Tbody>
+</Table>
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ************* CUDA Vector Vector -Grid - Blocks - Threads Starts ********* -->
+
+<a name="cuda-prog-example-06"> </a>
+<!--  ............. Example Program ........ -->
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+ <font color ="blue">
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda-vector-vector-addition-grid-blocks-threads.cu">
+  <font color =" blue">cuda-vector-vector-addition-grid-blocks-threads</font> </a> </I>) 
+
+ <BR> <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+
+
+<TABLE cellPadding=0  width = 100% border=1> 
+<TBODY>
+
+
+
+<TABLE cellPadding=0  border=1> 
+<TBODY>
+
+<!-- ********** Program details Vect-Vect dimGrid dimBlock Starts  ********** -->
+
+<TR bgcolor="#FFFFFF">
+<TD> 
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font><BR> 
+
+#include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font><BR> <BR> 
+
+#define <font color ="black"> EPS 1.0e-12 </font><BR> 
+#define <font color ="black"> GRIDSIZE 10 </font><BR> 
+#define <font color ="black"> BLOCKSIZE 16 </font><BR> <BR>
+
+#define <font color ="black"> SIZE 128 </font><BR> <BR>
+<BR> <BR>
+
+   double <font color ="black">*dMatA,</font> 
+          <font color ="black">*dMatB,</font>
+         <font color ="black">*dresult</font>;  <BR> <BR>
+
+   double <font color ="black">*hMatA,</font> 
+          <font color ="black">*hMatB,</font>  
+          <font color ="black">*hMatC,</font> 
+          <font color ="black">*hresult</font>;  <BR> <BR>
+
+   double <font color ="black">*CPU_Result</font>;  <BR> <BR>
+
+
+   int    <font color ="black">velenth,</font> 
+          <font color ="black">count = 0</font>; <BR> <BR>
+    
+   int    <font color ="black">blockWidth</font>;
+ 
+          <font color ="black">*hresult</font>;  <BR> <BR>
+ 
+   cudaEvent_t <font color ="black">start, stop</font>; <BR> 
+   cudaDevelopProp <font color ="black">start, stop</font>; <BR>
+    
+   int <font color ="black">device_Count, size = SIZE</font>; <BR> <BR>
+
+
+<!-- ************* _global_void  ******** -->
+
+
+&nbsp; _global_void <font color ="black">vectvectadd</font>(double <font color ="black">dm1,</font> 
+   double <font color ="black">*dm2,</font> 
+   double <font color ="black">*dres,</font> 
+   int <font color ="black"> num</font><font color ="black">) {</font><BR><BR>
+<blockquote>
+  
+ int <font color ="black"> int tx = blockIdx.x*blockDim.x + threadIdx.x;</font> <BR>
+ int <font color ="black"> int ty = blockIdx.y*blockDim.y + threadIdx.y;</font> <BR>
+ int <font color ="black"> int tindex = tx + (gridDim.x)*(blockDim.x)*ty;</font> <BR><BR>
+
+ <font color ="black">
+ &nbsp; &nbsp; &nbsp;if(tindex < num) <BR>
+ &nbsp; &nbsp; &nbsp;dres[tindex]= dm1[tindex]+dm2[tindex];  </font><BR>
+
+</blockquote>
+&nbsp; <font color ="black">} </font><BR> <BR>
+
+&nbsp;<font color ="black"> /* Check for safe return of all calls to the device */ </font>
+<BR>
+
+
+<!-- ************* CUDA_SAFE_CALL  ******** -->
+
+
+&nbsp;<font color ="black"> /*    Utility Macro : CUDA SAFE CALL */  </font> <BR> 
+&nbsp; void <font color ="black">
+
+&nbsp;CUDA_SAFE_CALL( cudaError_t call) <BR>
+ 
+&nbsp; { <BR>
+<blockquote>
+cudaError_t ret = call; <BR>
+        switch(ret) <BR>
+
+ { <BR>
+<blockquote>
+  case cudaSuccess: <BR>
+   &nbsp; &nbsp; &nbsp;
+</font>
+ 
+   break; <BR>
+<font color ="black">
+   default : <BR>
+ &nbsp; &nbsp; &nbsp;
+ {
+  <blockquote>
+
+printf(" ERROR at line :%i.%d' ' %s\n", <BR>
+        __LINE__,ret,cudaGetErrorString(ret)); <BR>
+                                exit(-1); <BR>
+</font>
+                           break; <BR>
+<font color ="black">
+  </blockquote>                         
+  &nbsp; &nbsp; &nbsp;} <BR>
+ </blockquote>
+  } <BR>
+</blockquote>
+
+&nbsp; } 
+</font> 
+<BR> <BR>
+
+
+<!-- ************* Void fill_dp_vector  ******** -->
+
+
+&nbsp;<font color ="black">
+/*  Fill in the vector with double precision Values */</font> <BR>
+
+&nbsp; void <font color ="black">
+
+&nbsp;fill_dp_vector(</font> double* <font color ="black">vec,</font>
+                     int <font color ="black">size</font>) <BR>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+
+//<font color ="black">fill Arrays 'vector' on the Device GPU </font> <BR>
+for<font color ="black">(</font>int <font color ="black">i = 0; i < size; ind++) </font><BR>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; <font color ="black"> vec[i] = drand48(); </font> <BR> 
+  
+</blockquote>
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+
+<!-- ************* Void check_block_grid_dim ******** -->
+
+
+&nbsp;<font color ="black">
+/*  Terminate and exit on errors on host-memory allocation. <BR> 
+&nbsp;  &nbsp; &nbsp; 
+   This is called from the functions whch actually execute the benchmark */
+</font> <BR>
+
+&nbsp; void <font color ="black">
+       check_block_grid_dim(</font><BR>
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+
+       cudaDeviceProp <font color ="black">devProp</font>, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+
+       dim3 <font color ="black">blockDim,</font> <BR>
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+
+       dim3 <font color ="black">gridDim)</font> <BR> 
+
+&nbsp; <font color ="black">{</font> <BR>
+<blockquote>
+
+  If<font color ="black">
+    (blockDim.x >= devProp.maxThreadsDim[0] || <BR>
+  &nbsp; &nbsp;  
+     blockDim.y >= devProp.maxThreadsDim[1] || <BR>
+  &nbsp; &nbsp; 
+     blockDim.z >= devProp.maxThreadsDim[2] ) </font> <BR>
+
+ <font color ="black">{</font> <BR>
+  exit(-1); <BR>
+ <font color ="black">}</font> <BR>
+ 
+
+  If<font color ="black">
+    (gridDim.x >= devProp.maxGridSize[0] || <BR>
+  &nbsp; &nbsp;  
+     gridDim.y >= devProp.maxGridSize[1] || <BR>
+  &nbsp; &nbsp; 
+     gridDim.z >= devProp.maxThreadsDim[2] ) </font> <BR>
+
+<font color ="black">{</font> <BR>
+  exit(-1); <BR>
+ <font color ="black">}</font> <BR>
+</blockquote>
+
+&nbsp; <font color ="black">}</font> <BR> 
+ 
+<BR> <BR>
+
+
+<!-- ************* Void mem_error starts ******** -->
+
+
+&nbsp;<font color ="black">
+/*  Memory Allocation Errors */</font> <BR>
+
+&nbsp; void <font color ="black">
+
+&nbsp;mem_error(</font> char <font color ="black">*arrayname,</font>
+                     char<font color ="black">*benchmark</font>,
+                     int<font color ="black">len</font>,
+                     char<font color ="black">*type</font> 
+                     <font color ="black">) </font> <BR>
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+<font color ="black">
+   printf("\n Memory not sufficient to allocate for array <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp;
+            %s\n\t Benchmark : %s  \n \t <BR>
+&nbsp; &nbsp; &nbsp; &nbsp;
+            Memory requested = %d number of %s elements\n", <BR>
+&nbsp; &nbsp; &nbsp; &nbsp;
+           arrayname, benchmark, len, type); <BR> <BR>
+
+        printf("\n\t Aborting \n\n"); <BR>
+</font> 
+exit(-);
+  
+</blockquote>
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+<!-- ************* Void mem_error Ends ******** -->
+
+
+<!-- ************* get_DeviceCount Starts ******** -->
+
+
+&nbsp;<font color ="black">
+/*  Memory Allocation Errors */</font> <BR>
+
+&nbsp; int <font color ="black"> &nbsp;get_DeviceCount() <BR> </font>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+<font color ="black">
+   &nbsp; int count;  <BR>
+    &nbsp; cudaGetDeviceCount(&count); <BR>
+    &nbsp; retun count;  </font>
+</blockquote>
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+<!-- ************* get_DeviceCount Ends ******** -->
+
+
+<!-- ************* Void device query starts ******** -->
+
+
+&nbsp;<font color ="black">
+/*  Device Query Information  */</font> <BR>
+
+&nbsp; void <font color ="black"> &nbsp;deviceQuery() </font> <BR>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+&nbsp;  <font color ="black"> int device_Count, device; <BR>
+
+&nbsp; device_Count = get_DeviceCount(); <BR> <BR>
+
+&nbsp; cudaSetDevice(0); <BR>
+
+&nbsp; cudaGetDevice(&device); <BR>
+
+&nbsp; cudaGetDeviceProerties(&deviceProp, device); <BR>
+</font>
+
+</blockquote>
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+<!-- ************* Void device_query Ends ******** -->
+
+
+<!-- ************* Void launch_kernel starts ******** -->
+
+
+&nbsp;<font color ="black">/*  Launch Kernel  */ </font> <BR>
+
+&nbsp; void <font color ="black"> &nbsp;launch_kernel() <BR> </font>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+&nbsp; dim3 <font color ="black"> dimBlock(BLOCKSIZE, BLOCKSIZE); <BR>
+        </font> <BR>
+&nbsp; dim3 <font color ="black"> dimGrid((vlength/BLOCKSIZE*BLOCKSIZE)+1,1); <BR>
+      </font> <BR>
+
+&nbsp; check_block_grid_dim
+<font color ="black">(deviceProp,dimBlock,dimGrid); </font> <BR> <BR>
+
+&nbsp; vectvectadd <B> <<< </b> dimGrid, dimBlock <B> >>> </b> <BR> 
+ &nbsp; <font color ="black"> (dMatA, dMatB, dresult, vlength); </font> <BR>
+
+</blockquote>
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+<!-- ************* Void launch_kernel Ends ******** -->
+
+
+<!-- ************* Void Memory free starts ******** -->
+
+
+&nbsp;<font color ="black">/*  Device Memory free  */ </font> <BR>
+
+&nbsp; void <font color ="black"> &nbsp;dfree (double* arr[ ], int len) <BR> </font>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+
+//<font color ="black">Memory Free on Device GPU </font> <BR>
+for<font color ="black">(</font>int <font color ="black">i = 0; i < len; i++) </font><BR>
+
+
+  <font color ="black">
+ CUDA_SAFE_CALL( cudaFree(arr[i]));  <BR> 
+ printf("memory  freed \n ");  </font> <BR> 
+</blockquote>
+
+
+<!-- ************* Void Memory free Ends ******** -->
+
+
+<!-- ************* Vector Vector Addiiton on host-CPU Starts ******** -->
+
+
+&nbsp;<font color ="black"> /*  Vector Vector Addition   */ </font> <BR>
+
+&nbsp; void <font color ="black">
+
+&nbsp;vectvect_add_in_cpu(double *A, double *B, docuble *C, int size) <BR> </font>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+
+//<font color ="black">Memory Free on Device GPU </font> <BR>
+for<font color ="black">(</font>int <font color ="black">i = 0; i < size; i++) </font><BR>
+
+
+ 
+ <font color ="black"> c[i] = a[i] + b[i]; </font> <BR>
+
+</blockquote>
+
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+
+<!-- ************* Vector Vector Addiiton on host-CPU Ends ******** -->
+
+
+<!-- ************* print_Gflops_rating on host-CPU Starts ******** -->
+
+
+&nbsp;<font color ="black"> /*  print_Gflops_rating   */ </font> <BR>
+
+&nbsp; void <font color ="black">
+
+&nbsp;print_Gflops_rating(float Tsec, int size) <BR> </font>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+
+  //<font color ="black">Measuring Gflop Rating </font> <BR>
+
+ <font color ="black"> double gflops; </font> <BR>
+ <font color ="black"> gflops = (1.0e-9 * ( (1.0 * size ) /Tsec) ); </font> <BR>
+ //<font color ="black"> printf("Gflops is \t%f\n",gflops); </font> <BR>
+  
+</blockquote>
+
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+
+<!-- ************* print_Gflops_rating on host-CPU Ends ******** -->
+
+
+
+<!-- ************* print_on_screen on host-CPU Starts ******** -->
+
+
+&nbsp;<font color ="black"> /*  print_on_screen   */ </font> <BR>
+
+&nbsp; void <font color ="black">
+
+&nbsp;print_on_screen(char *program_name, float tsec, double gflops, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int size, int flag) 
+ &nbsp; &nbsp;// flag = 1 if Glfops calculation else flag = 0 <BR> </font>
+
+&nbsp; <font color ="black">{ </font> <BR>
+<blockquote>
+
+
+<font color ="black">
+
+&nbsp; printf("\n ........................ \n" program_name); <BR>
+
+&nbsp; printf("\t SIZE \t TIME_SEC \t Gflops\n"); <BR>
+
+&nbsp; if(flag==1) <BR>
+&nbsp; &nbsp; &nbsp;   printf("\t%d \t%f \t%lf \t",size,tsec,gflops); <BR>
+&nbsp; else <BR>
+&nbsp;  &nbsp; &nbsp;  printf("\t%d \t%lf \t%lf \t",size,"---","---"); <BR>
+</font>
+</blockquote>
+
+&nbsp; <font color ="black">} </font>
+<BR> <BR>
+
+
+<!-- ************* print_on_screen on host-CPU Ends ******** -->
+
+&nbsp; int <font color ="black"> main (</font> void <font color ="black">) </font> { <BR>
+<blockquote>
+  <font color ="black"> double *array[3]; </font>  <BR>
+  <font color ="black"> array[0] = dMatA; </font>  <BR>
+  <font color ="black"> array[1] = dMatB; </font>  <BR>
+  <font color ="black"> array[2] = dresult; </font>  <BR>
+
+  <font color ="black"> deviceQuery();</font> <BR> <BR>
+
+  // <font color ="black"> CUDA Event : Time Calculation   </font> <BR> 
+  
+  <font color ="black"> CUDA_SAFE_CALL( cudaEventCreate(&start));</font> <BR>
+  <font color ="black"> CUDA_SAFE_CALL( cudaEventCreate(&stop));</font> <BR> 
+
+   <BR> <BR>
+
+   // <font color ="black"> Allocation host memory   <BR> 
+
+      hMatA = (double*) malloc( vlength *  sizeof(double)); <BR> 
+     if(hMatA == NULL) <BR>
+                mem_error("hMatA","vectvectadd",vlength,"double"); <BR> <BR>
+
+     hMatB = (double*) malloc( vlength *  sizeof(double)); <BR> 
+     if(hMatB == NULL) <BR>
+                mem_error("hMatB","vectvectadd",vlength,"double"); <BR> <BR>
+
+     hMatC = (double*) malloc( vlength *  sizeof(double)); <BR> 
+     if(hMatC == NULL) <BR>
+                mem_error("hMatC","vectvectadd",vlength,"double"); 
+ </font>
+ <BR> <BR>
+ // <font color ="black"> Allocation Device memory  </font> <BR> 
+
+<font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dMatA,</font> vlenght * sizeof
+ <font color ="black">(</font>double<font color ="black">) ) );</font> <BR> <BR>
+ 
+<font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dMatB,</font> vlenght * sizeof
+ <font color ="black">(</font>double<font color ="black">) ) );</font> <BR> <BR>
+
+<font color ="black">
+ CUDA_SAFE_CALL( cudaMalloc( (</font>void<font color ="black">**)&dresult,</font>
+ vlenght * sizeof
+ <font color ="black">(</font>double<font color ="black">) ) );</font> <BR> <BR>
+
+// <font color ="black"> Fill the data in Host Vectors  </font> <BR> 
+<font color ="black"> fill_dp_vector(hMatA,vlength); </font> <BR> 
+<font color ="black"> fill_dp_vector(hMatB,vlength);  </font> <BR> <BR>
+
+<font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy( </font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+(void<font color ="black">*)&dMatA,</font> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+(void<font color ="black">*)&hMatA,</font> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<font color ="black">vlength *</font> 
+ sizeof <font color ="black">(</font>double<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyHostToDevice) );  </font> <BR> <BR>
+
+
+ <font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy( </font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+(void<font color ="black">*)&dMatB,</font> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+(void<font color ="black">*)&hMatB,</font> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<font color ="black">vlength *</font> 
+ sizeof <font color ="black">(</font>double<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyHostToDevice) );  </font> <BR> <BR>
+
+  // <font color ="black"> CUDA Event : Time Calculation   </font> <BR> 
+  
+  <font color ="black"> CUDA_SAFE_CALL( cudaEventRecord (start, 0));</font> <BR> <BR>
+
+   <font color ="black"> launch_kernel();</font> <BR> <BR>
+
+  <font color ="black"> CUDA_SAFE_CALL( cudaEventCreate(&stop));</font> <BR> <BR>
+
+  <font color ="black"> /* calling device kernel */ </font> <BR>
+
+<font color ="black">
+ CUDA_SAFE_CALL(cudaMemcpy( </font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+(void<font color ="black">*)hresult,</font> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+(void<font color ="black">*)dresult,</font> <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<font color ="black">vlength *</font> 
+ sizeof <font color ="black">(</font>double<font color ="black">),</font> <BR> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+  <font color ="black">
+ cudaMemcpyDevicetoHost) );  </font> <BR> <BR>
+
+  <font color ="black">
+	printf("\n --------------------------------------------------"); </font> <BR> <BR>
+
+
+// <font color ="black"> Calcultation of Gflops &map; Printing </font> <BR> 
+  
+  <font color ="black"> print_Gflops_rating(Tsec, vlenght);</font> <BR> <BR>
+
+   <font color ="black"> print_on_scerren("vect vect Addition", 
+    Tsec,print_Gflops_rating(Tsec,vlength),size,1);</font> <BR> <BR>
+
+
+
+<font color ="black">// Free the memory allocated on the Device GPU  </font><BR>
+<font color ="black"> dfree(array,3);  </font> <BR> <BR>
+
+
+<font color ="black">// Free the memory allocated on the CPU  </font><BR>
+
+<font color ="black"> free(hMatA);  </font> <BR>
+<font color ="black"> free(hMatB);  </font> <BR> 
+<font color ="black"> free(hresult); </font> <BR> 
+<BR>
+  return <font color ="black">0; </font>
+</blockquote>
+&nbsp; <font color ="black">} </font> <BR> <BR>
+
+<!-- ********** Program details Vect-Vect dimGrid dimBlock Ends  ********** -->
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD>
+</TR>
+
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+
+</TD>
+</TR>
+
+
+</TBODY> 
+</TABLE> 
+
+<BR> <BR>
+
+
+
+<!-- ****** CUDA Device Properties Grid Block Dimension -Thread-Block Ends ***** -->
+
+
+
+
+
+
+
+
+
+
+<!-- ******** CUDA MEMCHECK USING NVML LIBRARY STARTS HERE ****** -->
+<!--
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<BR> <BR>
+
+<a name ="hetr-cuda-prog-memcheck-nvml-library"> </a>
+
+<TABLE cellPadding=0  width = "100%" border=1> 
+<TBODY>
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>   Cuda Memcheck Through NVML Library   </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr> 
+<td>
+
+<p align= "justify"> <span class = "content">
+NVML is a C-based interface for monitoring and managing various states 
+within Nvidia Tesla GPUs NVML has several functions that can measure 
+characteristics of GPUs, such as device power, device temperature, 
+unit power, unit temperature, and clock frequency. Using NVML, we 
+measure power and temperature. Nvidia Management Library (NVML) high 
+level utility called nvidia-smi not only provides a way to measure power
+but also various other features like the ability to set ECC 
+(Error Correction Code) to zero if it is not needed, or to monitor memory
+ usage, among other things. using
+<font color ="red"> <B> nvmlDeviceGetMemoryInfo </b> </font>  
+function we can Retrieves the amount of used, free and total memory 
+available on the device, in bytes.
+<BR> <BR>
+
+</span> </P> 
+</td> 
+</tr>
+
+
+</Tbody>
+</Table>
+
+<TABLE cellPadding=0  width = "100% " border=1> 
+<TBODY>
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+<blockquote>
+
+<BR> 
+ nvmlReturn_t result;<BR>
+ nvmlDevice_t device;<BR>
+ <font color ="black">
+ //The identifier of the target device</font><BR>
+ nvmlMemory_t meminfo;<BR>
+  <font color ="black">
+ //Reference in which to return the memory information<BR>
+ //meminfo is of type nvmlMemory_t structure<BR>
+ //that conatin 3 data fields:total,free,used </font><BR>
+ result = nvmlDeviceGetMemoryInfo( device, &meminfo ); <BR>
+ printf("Total installed FB memory (in bytes)=%llu\n",meminfo.total);<BR>
+ printf("Unallocated FB memory (in bytes).=%llu\n",meminfo.free);<BR>
+ printf("Allocated FB memory (in bytes)=%llu\n",meminfo.used);<BR>
+</blockquote>
+</span> </p>
+
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr> 
+<td>
+
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+</td>
+</TR>
+</Tbody>
+</Table>
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+-->
+<!-- ************* CUDA MEMCHECK USING NVML LIBRARY STARTS HERE********* -->
+
+<a name="cuda-prog-example-07"> </a>
+<!--  ............. Example Program ........ -->
+
+<TABLE cellPadding=0  width = 100% border=0> 
+<TBODY>
+<TR>
+<TD>
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+ (Download source code : 
+<I>
+ <font color ="blue">
+   <a  href="./../gpu-comp-nvidia-cuda-basic-codes/cuda_memcheck_nvml.c">
+  <font color =" blue">cuda_memcheck_nvml.c</font> </a> </I>) 
+
+ <BR> <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<!-- **************** Compilation and execution of CUDA programs starts ********************** -->
+
+
+<a name="hetr-cuda-prog-compilation-online"> </a>
+
+<TABLE >
+<TBODY>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2" Color="black" face= "Verdana">
+     <B> CUDA Compilation, Linking  and Execution of Program  </b> </font></DIV> 
+
+</TD> 
+</TR> 
+
+
+<TR>
+<TD>
+<BR>
+
+<P align=justify><span  class="content" >
+For Compilation of CUDA program, additional steps are involved, partly because the program targets 
+two different processor architectures (the GPU and a host CPU), and partly because of CUDA\92s hardware 
+abstraction. Compiling a CUDA program is not as straightforward as running a C compiler to convert 
+source code into executable object code.  The same source file mixes C/C++ code written for both the
+ GPU and the CPU, and special extensions and declarations identify the GPU code. The first step 
+is to separate the source code for each target architecture. <BR> <BR>
+
+<b> <font color="red"> nvcc </font> </b> is a compiler driver that simplifies the process of compiling CUDA code: It 
+provides simple and familiar command line options and executes them by invoking 
+the collection of tools that implement the different compilation stages. 
+nvcc\92s basic work flow consists in separating device code from host code and 
+compiling the device code into a binary form or cubin object. The generated host 
+code is output either as C code that is left to be compiled using another tool or as 
+object code directly by invoking the host compiler during the last compilation stage.
+
+<br><br><br>
+<div align ="center">
+<img src="./../gpu-comp-nvidia-cuda-images/cudacompilationstages.gif" alt="software stack" border="0" height="320" width="360" > <BR> <BR>
+Figure 1. CUDA : Source Code Compilation Stages.
+</div>
+
+
+<HR>
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<br><br>
+<!-- ************** -->
+   CUDA code should include the  <font color = "red"> <i> cuda.h </i>  </font> header file. On the compilation 
+   command line, the cuda library should be specified to the linker on UNIX
+   and Linux environments. Two steps are explained below. <BR> <BR>
+
+
+   
+   <font color="red" size = "2"  face ="Arial"> <b> 
+ Using command line arguments to compile CUDA source code: </b> </font> <br><br>
+   
+<blockquote>
+	The compilation and execution details of a CUDA program is simple as like compilation of C language source code.
+	<br><br>
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+        $ nvcc -o  &lt; executable name &gt; &lt; name of source file &gt;  </i> </font>
+   <br><br>
+
+        For example to compile a simple Hello World program user can give : <br><br>
+
+ 
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+        $ nvcc -o helloworld  cuda-helloworld.cu  </i> </font>
+</blockquote>
+    <br>
+
+  
+   <font color="red" size = "2" face ="Aril"> <b>  Executing a Program: </b> </font> <br><br>
+
+<blockquote>
+
+        To execute a CUDA Program, give the name of the executable at command prompt.  <BR> <BR>
+
+      <font color="red" size = "2", face="TimesNewRoman">  <i> $  . / &lt; Name of the Executable &gt; </i> </font>  <br> <br>
+
+        For example, to execute a simple HelloWorld Program, user must type:<br><br>
+  
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+         $ ./helloworld   </font> <br><br></i>
+
+        The output must look similar to the following:<br><br>
+
+            Hello World! <br><br>
+</blockquote>
+
+</span></p>
+
+<DIV ALIGN=right>
+   <A href="gpu-comp-nvidia-cuda-basics.html"> 
+      <IMG SRC="./../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+<HR>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ********************* Compilation and execution of CUDA programs : ends ******************* -->
+
+
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!-- *********************************** example Vector Vector Addition ends ***************************** -->
+
+
+
+
+
+<!-- ************************ OpenCL Device Info Ends ***************** -->
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+
+ 
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

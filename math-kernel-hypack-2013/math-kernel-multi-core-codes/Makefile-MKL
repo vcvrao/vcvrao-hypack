@@ -1,0 +1,38 @@
+#******************************************************************
+#
+#	C-DAC Tech Workshop : hyPACK-2013
+#               October 15-18, 2013
+#
+#  Created         : August 2013 
+#
+#*****************************************************************
+#
+#.............................................................................
+# Makefile for linking the MKL library for the BLAS and other functions.
+# Author : Betatest 
+#.............................................................................
+
+MKL_LIB_PATH      = /opt/intel/Compiler/11.1/069/mkl/lib/em64t
+F90   = ifort 
+F90LINKER   =  $(F90)
+COPTION     = 
+#F90FLAGS    = -O3 -openmp
+LIBS          =  -L$(MKL_LIB_PATH) -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lpthread -lm  /opt/intel/Compiler/11.1/069/lib/intel64/libiomp5.so
+EXECS       =  run
+
+
+#Object files ...
+
+#OBJECTS = mathlib-core-mat-mat-mult-dotproduct-blas.o
+OBJECTS = mathlib-core-mat-mat-mult-dotproduct-intel-mkl.o
+
+
+
+run:$(OBJECTS) 
+	$(F90LINKER) $(F90FLAGS) -o run $(OBJECTS) $(LIBS)
+
+.f.o:
+	$(F90) -c $(F90FLAGS) $<
+
+clean:
+	\rm -rf *.o run

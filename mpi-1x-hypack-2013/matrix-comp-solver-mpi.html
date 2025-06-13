@@ -1,0 +1,2690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                      
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+             &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+ 
+              <!-- ** -->
+	      <A class=menulslct 
+               href="./../hypack13-mode01-multicore-mpi.html">
+               &#149; Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013  Mode 1 : MPI 1.X Matrix System of Linear Eqs.- MPI Lib. Calls</H1> 
+
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+<TD> 
+
+ <p align = "justify"> <span class ="content">
+       <B> Module 5 : </b>  Programming Using MPI 1.X Implementing Solution of matrix system 
+of linear equations Algorithms
+ that support MPI library. </span> </p>
+
+ </TD>
+ </TR> 
+</TBODY> 
+</TABLE>
+
+
+
+<!-- *************** Table List of programs : start ************************ -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+
+
+   <!-- ***************** Example 6.1 ******************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="matrix-comp-solver-mpi.html#matrix-comp-solv-id01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.1 </b> <br> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+          MPI program to implement the the soluiton of 
+    Matrix system of Linear Equations <B> AX=b  </b>by Jacobi Method (Iterative Method)  
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ****************** Example 6.2 ********************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="matrix-comp-solver-mpi.html#matrix-comp-solv-id02">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.2 </b> <br> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+        MPI program to implement the the soluiton of 
+    Matrix system of Linear Equations <B> AX=b  </b> by Gauss Elimination  method (Direct Method).
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- ********************** Example 6.3 ******************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="matrix-comp-solver-mpi.html#matrix-comp-solv-id03">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.3 </b> <BR> <BR></font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+         MPI program to implement the the soluiton of 
+    Matrix system of Linear Equations <B> AX=b </b> by Conjugate Gradient method (Iterative Method).
+       </span> </p>
+     </td>
+
+   </tr>
+
+  <!-- ******************** Example 6.4 ************************ -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="matrix-comp-solver-mpi.html#matrix-comp-solv-id04">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.4 </b> </font> <BR>  <BR> 
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+        MPI program  for implementation of solution of matrix 
+     system of linear equations by Gauss seidel Method (iterative Method) <B><I>(Assignment)</I></B>
+       </span> </p>
+     </td>
+
+   </tr>
+
+<tr>
+<td> </td>
+<td>
+<DIV ALIGN="right">
+        <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</TD> 
+</tr>
+
+
+</td></tr></tbody>
+</table>
+<BR>
+<!-- *********************** Table List of programs : end ******************** -->
+
+
+
+<!-- *******************  Reference Starts Here ******************** -->
+<TABLE cellPadding=3 border=0> 
+<TBODY>
+<TR>
+<tD>
+
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp;  - 
+[MC-MPI-02], [MCMPI-06], [MCMPI-07], [MCMPI-09], [MC-MPI10], [MCMPI-11], 
+  [MCMTh-12],[MCBW-44], [MCOMP-01])
+ <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *******************  Reference Ends  Here ******************** -->
+
+
+
+<!-- ************** An Overview of Summary of Matrix-Matrix Computation Suites  ************ -->
+
+
+<A name="matrixsolvers-summary">  </A>
+<TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+      <TD bgColor = "#cccdd77889">  
+      <font size="2"  color="black" face = "verdana"> 
+        <b> An Overview of direct and iterative solution of matrix system of linear equations  </b> </font> <BR>
+
+       </TD> 
+     </TR> </TBODY> 
+   </TABLE>   
+
+<BR> <BR>
+
+
+<BR> <BR>
+
+<TABLE cellPadding=3  border=0> 
+<tbody><tr><td>
+
+
+<font size="2" face="verdana">
+The system of linear equations [A]{x} = {b} is given by&nbsp; <BR> 
+<BR>&nbsp; <I>a</I><SUB>o,o<I> </I></SUB><I>x </I><SUB>o</SUB> + <I>a</I><SUB>o,1<I>
+</I></SUB><I>x</I><SUB>1 </SUB>+ ...+ <I>a</I><SUB>o<I>, n-</I>1<I> </I></SUB><I>x<SUB>n-</SUB></I><SUB>1</SUB>
+= <I>b</I><SUB>o<I> </I></SUB>,&nbsp;&nbsp;<I><br>
+  &nbsp; a</I><SUB>1,o<I> </I></SUB><I>x</I><SUB>o</SUB> + <I>a</I><SUB>1,1<I>
+</I></SUB><I>x</I><SUB>1</SUB> + ...+ <I>a</I><SUB>1<I>, n-</I>1<I> </I></SUB><I>x
+<SUB>n-</SUB></I><SUB>1</SUB> = <I>b</I><SUB>1<I> </I></SUB>,&nbsp;&nbsp;<br>
+  ...........................................................................&nbsp;&nbsp;<br>
+  ...........................................................................&nbsp;&nbsp;<br>
+  ...........................................................................&nbsp;&nbsp;<I><br>
+  a<SUB>n-</SUB></I><SUB>1<I>,</I>o<I> </I></SUB><I>x<SUB>0</SUB></I>
++ <I>a<SUB>n-</SUB></I><SUB>1<I>,</I>1<I> </I></SUB><I>x</I><SUB>1</SUB>
++ ...+ <I>a<SUB>n-</SUB></I><SUB>1<I>, n-</I>1 </SUB><I>x <SUB>n-</SUB></I><SUB>1</SUB>
+= <I>b<SUB>n-</SUB></I><SUB>1<I> </I></SUB>.&nbsp;
+
+
+<P>
+
+   In matrix notation, this system of linear equation is written as [<B>A</B>]{<I>x</I>}={<I>b</I>}
+   where <B>A</B>[<I>i, j</I>]<I> </I>= <I>a<SUB>i, j </SUB></I>, <I>b </I>is
+   an <I>n </I>x<I> </I>1 vector [<I>b</I><SUB>o</SUB>,<I>b</I><SUB>1</SUB>,...,<I>b<SUB>n-</SUB></I><SUB>1</SUB>]<SUP>T</SUP>,
+   and is the desired solution vector [<I>x</I><SUB>o</SUB>,<I>x</I><SUB>1</SUB>,...,<I>x<SUB>n-</SUB></I><SUB>1</SUB>]<SUP>T</SUP>.
+   We will make all subsequent references to <I>a<SUB>i, j</SUB></I> by <B>A</B>[<I>i,j</I>] and <I>x<SUB>i</SUB></I> 
+   by <I>x</I>[<I>i </I>]. The matrix A is partitioned using <I>block row-wise</I> striping. Each process has <I>n/p
+   </I>rows of the matrix A and the vector <I>b</I>. Since only process with rank <I>0</I> performs input and ouut, 
+  the matrix and vector must be distributed to the other processes. 
+</p>
+
+<P>
+   The direct and iterative methods  for the solution of system of equations such as Jacobi method, Gaussian Elimination method, 
+   Conjugate gradient method have been widely used  and the   parallel programs are given below to execute on message 
+   passing clusters.  Iterative methods are techniques to solve systems of equations of the form <b> [A]{x}={b} </b>  that generate 
+  a sequence of approximations to the solution vector x. In each iteration, the coefficient matrix <b> A  </b> is 
+  used to perform a matrix-vector multiplication. The number of iterations required to solve a system of 
+  equations with a desired precision is usually data dependent; hence, the number of  iterations is not 
+  known prior to executing the algorithm. 
+
+</P></font>
+
+
+
+<DIV ALIGN=right>
+        <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</TD> 
+</TR>
+</tbody></table>
+<!-- ************** An Overview of Summary of Matrix-Matrix Computation Suites Ends ************ -->
+
+
+<!-- *********** Example  6.1: Jacobi Method Ax=B matrix system of linear equations  Starts *********** -->
+
+
+
+ <P> <A NAME="matrix-comp-solv-id01"></A> 
+  <table border="0" height="6">
+   <tbody>
+    <tr>
+     <td width="125" height="1" align="left">
+     <IMG SRC="point-to-point-mpi-images/ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 6.1:  <BR> <BR><BR><BR> </b> </td>
+       <td width="675" height="1" align="left">
+        <b>  MPI program to implement solution of matrix system of linear equations  Ax=b by Jacobi method. </b>   
+
+
+   <!-- ************* download  Starts here *********** -->
+  <BR> 
+   (Download source code : 
+  
+   <font color="#33CC00">
+  <I>
+   <A href="./matrix-comp-solver-codes/jacobi-mpi-code-clang.c">jacobi-mpi-code-clang.c</A></FONT></I>
+   &nbsp; 
+
+  </font>  / <font color="#33CC00">
+
+ <I>  <A href="./matrix-comp-solver-codes/jacobi-mpi-code-flang.f">jacobi-mpi-code-flang.f</A></FONT></I>)
+   <BR> 
+
+   (Download source code : 
+ <I>   <A href="./matrix-comp-solver-codes/matrix-data-jacobi.inp">matrix-data-jacobi.inp)</A></FONT></I>
+   &nbsp; 
+    </font>  / <font color="#33CC00">
+
+ <I> <A href="./matrix-comp-solver-codes/vector-data-jacobi.inp">vector-data-jacobi.inp)</A></FONT></I>)
+   &nbsp; 
+
+
+
+ <!-- **************** download  Ends here ****************** -->     
+
+
+
+</td>
+    </tr> 
+    </tbody>
+    </table> 
+ </p>
+
+<TABLE cellPadding=3  border=0> 
+<tbody><tr><td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+
+<LI> <B>Objective</B> </Li>
+
+   <P>Write a parallel MPI program, for solving system of linear equations [A]{x} = {b} on a p processor Parallel Processing Platform
+      using <I>Jacobi method</I></P>
+
+
+<LI> <B> Description</B> </LI>
+
+<p> The Jacobi iterative method is one of the simplest iterative techniques to solve system of linear equations.
+    The <I>i<SUP>th</SUP></I> equation of a system of linear equations [A]{x}={b} is  <BR> </p>
+ 
+
+<p align ="center"> <IMG SRC="./matrix-comp-solver-images/jacobi-sum13.gif" HEIGHT = 70 WIDTH =360> </p> <BR>
+
+ <p> If all the diagonal elements of <B>A</B> are nonzero (or are made nonzero
+     by permuting the rows and columns of <B>A</B>), we can rewrite equation (1) </p> <BR>
+
+ <p align ="center"> <IMG SRC="./matrix-comp-solver-images/jacobi-sum14.gif" HEIGHT=84 WIDTH=360> </p> <BR>
+
+<P>
+  The Jacobi method starts with an initial guess <I>x</I><SUB>0</SUB> for
+  the solution vector <I>x</I>. This initial vector <I>x</I><SUB>0</SUB>
+  is used in the right-hand side of equation (2) to arrive at the next approximation
+  <I>x</I><SUB>1</SUB> to the solution vector. The vector <I>x</I><SUB>1</SUB>
+  is then used in the right hand side of equation (2), and the process continues
+  until a close enough approximation to the actual solution is found. A typical
+  iteration step in the Jacobi method is </p>
+
+<p align="Center"> <IMG SRC="./matrix-comp-solver-images/jacobi-sum15.gif" HEIGHT=86 WIDTH=360> </p> <br>
+
+<P> 
+  We now express the iteration step of equation 3 in terms of residual <I>r<SUB>k</SUB></I>. 
+  Equation (3) can be rewritten as </p> <br>
+
+<p align = "Center" > <IMG SRC="./matrix-comp-solver-images/jacobi-sum16.gif" HEIGHT=86 WIDTH=360> </p>  <br> 
+
+<P>  Each process computes <I>n/p </I>values of the vector x in each iteration. These values are 
+     gathered by all the processes and each  process tests for convergence. If the values have been 
+    computed upto a certain accuracy the iterations are stopped otherwise the processes use 
+    these values in the next iterations to compute a new set of values. </p>
+
+<!-- *********** Example  6.1 : Jacobi Method Ax=B matrix system [ Input & Output ]  ********* -->
+
+
+<LI> <B>Input</B> </li>
+        
+<P>
+
+  The input data should be given in the following format <BR> 
+  Assume that the real matrix is&nbsp; of size <I>m</I> x<I> n</I>
+  and the real vector is of size <I>n </I>. Also the number of <I>rows</I>
+ <I>m</I> should be greater than or equal to number of processes <I>p.</I>
+  Process with rank <I>0 </I>reads the input matrix <B>A</B> and the
+  vector <B>x</B>  Format for the input files are given below. </p> 
+
+<B>Input file 1</B> <br>
+
+The input file for the matrix should strictly adhere to the following
+format.&nbsp;
+
+<P>
+#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns(<I>n</I>).<I>&nbsp;</I>&nbsp; <BR>
+#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means
+         that the data of second row follows that of the first and so on.) <BR> 
+
+<P>
+
+  A sample input file for the matrix (8 x 8) is given below&nbsp; <BR>
+  8 &nbsp;&nbsp;&nbsp; 8 &nbsp; <BR>
+
+
+61.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp; 84.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 7.0&nbsp; <BR>
+
+&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 68.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;
+59.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 8.0&nbsp; <BR>
+
+&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp; 93.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 98.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; 85.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; 98.0&nbsp; <BR>
+
+
+<P><B>Input file 2</B> 
+
+The input file<B> </B>for the vector should strictly adhere to the following
+format.&nbsp; </p>
+
+#Line 1 : Size of the vector (<I>n</I>)&nbsp; <br>
+#Line 2 : <I>(data)&nbsp;</I>&nbsp;
+
+<P>A sample input file for the vector (8 x 1) is given below <BR>
+
+8&nbsp; <br>
+95.0&nbsp;   116.0&nbsp;   96.0&nbsp;   90.0&nbsp;   124.0&nbsp;   127.0&nbsp;
+127.0&nbsp;  125.0&nbsp;
+
+
+<LI> <B>Output </B> </Li>
+        
+
+
+<P>
+  Process 0 will print the results of the solution <I> x </I> of matrix system
+  B>A<I>x</I></B><I> = </I><B>b</B>. <BR> 
+
+  1.0&nbsp;       1.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 
+  1.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 1.0&nbsp;&nbsp; 
+  1.0&nbsp;
+</P>
+</font>
+
+
+<DIV ALIGN=right>
+       <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</BLOCKQUOTE>
+</TD> 
+</TR></tbody></table>
+<!-- ************** Example  6.1: MPI program for Jacobi Method Ax=B matrix system Ends  ************* -->
+
+
+<!-- ******* Exampe 6.2 Gauss Elimination  Method Ax=B matrix system of linear equations Starts Starts ****** -->
+
+ <P> <A NAME="matrix-comp-solv-id02"></A> 
+  <table border="0"  height="6">
+   <tbody>
+    <tr>
+     <td width="125" height="1" align="left">
+     <IMG SRC="point-to-point-mpi-images/ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 6.2:  <BR> <BR><BR><BR><BR>  </b> </td>
+       <td width="675" height="1" align="left">
+       <b>  Description for implementation of MPI  program for solution of matrix system of linear equations 
+            by <i>Gaussian Elimination method </i></b>
+
+
+   <!-- ******** download  Starts here ******* -->
+ <BR> 
+   (Download source code : 
+  
+   <font color="#33CC00">
+  <I>
+   <A href="./matrix-comp-solver-codes/gauss-elmn-mpi-code-clang.c">gauss-elmn-mpi-code-clang.c</A></FONT></I>
+   &nbsp; 
+
+  </font>  / <font color="#33CC00">
+
+ <I>  <A href="./matrix-comp-solver-codes/gauss-elmn-mpi-code-flang.f">gauss-elmn-mpi-code-flang.f</A></FONT></I>)
+   <BR> 
+
+   (Download source code : 
+ <I>   <A href="./matrix-comp-solver-codes/matrix-data-gauss.inp">matrix-data-gauss.inp)</A></FONT></I>
+   &nbsp; 
+    </font>  / <font color="#33CC00">
+
+ <I> <A href="./matrix-comp-solver-codes/vector-data-gauss.inp">vector-data-gauss.inp)</A></FONT></I>)
+   &nbsp; 
+
+
+
+ <!-- ******* download  Ends here ************ -->     
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+
+<TABLE cellPadding=3  border=0> 
+<tbody>
+<tr><td>
+<BLOCKQUOTE>
+
+<font size="2" face="verdana">
+  <LI> <B> Objective</B> </li>
+
+<P align = "center">
+  Write a MPI program to solve the system of linear equations [<B>A</B>]{<I>x</I>}<I> = </I>{<I>b</I>} 
+  using Gaussian elimination without pivoting and a back-substitution. Assume that <B>A </B>is symmetric 
+  positive definite dense matrix of size <I>n</I>. You may assume that <I>n</I> is evenly 
+  divisible by <I>p</I>.
+
+</P> 
+
+<!-- *****  Example 6.2 MPI program for Gauss Elimination Method Ax=B matrix system [Sequential implementation] ******** -->
+
+
+<LI> <B> Description </B> </LI>
+
+<p>
+
+  The serial Gaussian elimination algorithm has three nested loops. Several
+  variations of the algorithm exist, depending on the order in which the
+  loops are arranged. The function Gaussian elimination is given below. <BR> <BR>
+
+ <DIR>
+  <FONT COLOR="#ff00ff">
+
+  <B>void</B> <I>Gaussian_Elimination</I> 
+   (float <B>A</B>[ ][ ], float <I>b</I>[ ], float <I>y</I>[ ],  int <I>n</I>) <BR>
+
+     &nbsp; &nbsp; &nbsp; &nbsp;  {i,j,k; <BR> 
+
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+   <B>for</B> (<I>k</I> = 0; k &lt; <I>n</I>; k++)&nbsp;&nbsp;  <BR>
+
+   &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  {  <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <B>for</B> (<I>j </I>= <I>k</I>+1; j &lt; <I>n</I>; j++)&nbsp; <BR>
+
+   <B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp; A</B>[<I>k</I>][<I>j</I>] = <B>A</B>[<I>k</I>][<I>j</I>] / 
+                        <B>A</B>[<I>k</I>][<I>k</I>]&nbsp;&nbsp; <BR>
+
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <BR>
+
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  /* Assume <B>A</B>[<I>k</I>][<I>k</I>] not equal to 0 */   <BR>
+
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+   <I>y</I>[<I>k</I>]= <I>b</I>[<I>k</I>] / <B>A</B>[<I>k</I>][<I>k</I>];&nbsp;&nbsp; 
+   <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <B>A</B>[<I>k</I>][<I>k</I>] = 1;&nbsp;&nbsp;   <BR>
+
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <B>for</B><I> (i</I>= <I>k</I>+1; i &lt; <I>n</I>; i++) &nbsp;   <BR>
+
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {&nbsp;  <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
+ 
+   <B>for</B><I> (j </I>= <I>k</I>+1; j &lt; <I>n</I>; j++) &nbsp;   <BR>
+
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+
+   <B>A</B>[<I>i</I>][<I>j</I>] = <B>A</B>[<I>i</I>][<I>j</I>] - <B>A</B>[<I>i</I>][<I>k</I>]
+     * <B>A</B>[<I>k</I>][<I>j</I>];&nbsp;&nbsp;    <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+
+   <I>b</I>[<I>i</I>] = <I>b</I>[<I>i</I>] - <B>A</B>[<I>i</I>][<I>k</I>]* <I>y</I>[<I>k</I>];&nbsp;
+   >&nbsp;   <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <B>A</B>[<I>i</I>][<I>k</I>] = 0; <BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}&nbsp; <BR>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;}<BR>
+  &nbsp; &nbsp; &nbsp;  }
+
+</font> 
+</DIR> <BR> <BR> 
+
+   <B> Program 1 : A serial gaussian elimination algorithm that converts the system
+       of linear equations A<I>x</I> = <I>b</I> to a unit upper-triangular system U<I>x</I> = <I>y</I>.
+   The matrix U occupies the upper-triangular locations of A.</B> </font> <BR> <BR> 
+</P>
+
+
+<p>
+   Program shows one variation of Gaussian elimination, which we will adopt for parallel implementation
+  in the remainder of this section. This program converts a system of linear equations 
+   [<B>A</B>]{<I>x</I>}={<I>b</I>} to a unit upper-triangular system [<B>U</B>]{<I>x</I>}={<I>y</I>}.
+
+   We assume that the matrix <B>U</B> shares storage with <B>A</B> and overwrites
+   the upper-triangular portion of <B>A</B>. The element <B>A</B>[<I>k</I>,<I>
+   j</I>] computed on line 6 of above program is actually <B>U</B>[<I>k</I>,
+   <I>j</I>]. Similarly, the element <B>A</B>[<I>k</I>, <I>k</I>] equated
+   to <B>1</B> on line 8 is <B>U</B>[<I>k</I>, <I>k</I>]. The above program assumes that
+   <B>A</B>[<I>k</I>, <I>k</I>] not equal to 0 when it is used as a divisor on lines 6 and 7. 
+   A typical  computation of Gauss elimination procedure in the <I>k<SUP>th</SUP> </I>iteration of
+   the outer loop is shown in the Figure 17. 
+
+</p> 
+
+
+<p align="center"> &nbsp; <IMG SRC="./matrix-comp-solver-images/gauss-elimination-1.gif" HEIGHT=360 WIDTH=360> &nbsp;</p> <BR>
+
+<p align="left">
+Figure 17.  A typical computation in Gaussian elimination in the k<I><SUP>th</SUP></I> iteration </FONT></B> <BR>
+
+<p>
+   Gaussian elimination involves approximately <I>n</I><SUP>2</SUP>/2 divisions
+   (line 6) and approximately <I>n</I><SUP>3</SUP>/3 - <I>n</I><SUP>2</SUP>/2
+    subtractions and multiplications (line 12). We assume that scalar arithmetic
+   operations takes unit time. Thus, the total sequential run time of the
+    procedure is approximately 2<I>n<SUP>3</SUP></I>/3 for large <I>n </I>.
+</p>
+
+
+<!-- ***** Example 6.2: Gauss Elimination  Method  Ax=B matrix system [Sequential implementation] DONE ********* -->
+
+<!-- ***** Exampe 6.2 : Gauss Elimination Method Ax=B  Objective/Description (Seq implementation) Ends ******** -->
+
+
+<!-- ********* Example 6.2 : Gauss Elimination  Method  Ax=B matrix system [Parallel implementation] ****** -->
+<DIV ALIGN=right>
+      <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+<LI> <B>Parallel implementation with striped partitioning</B> </li>
+
+
+<P>  Parallel formulations of the classical <I>Gaussian elimination</I> method for upper-triangularization 
+     is discussed.  <BR>
+
+     We describe a straight-forward <I>Gaussian elimination algorithm</I> assuming that the coefficient matrix 
+    is non singular and symmetric positive definite. <BR>
+
+
+    We consider a parallel implementation of program 1 in which the coefficient matrix is rowwise 
+    strip-partitioned among the processes. A parallel implementation of this algorithm with 
+    column-wise striping is very similar, and its details can be worked out based on the implementation 
+    using <I>rowwise striping</I>. </p> <BR> <BR>
+
+
+<P align="center"><IMG SRC="./matrix-comp-solver-images/gauss-elimination-2.gif" HEIGHT=400 WIDTH=360> <BR> <BR>
+
+  <B>Figure 18&nbsp; Gaussian elimination steps during the iteration
+     corresponding to <I>k </I>= 3 for an 8 X 8 matrix and</B> <B>striped <I>
+     rowwise </I> on 8 processors. </b> <BR> <BR>
+
+<p>
+  Figure 18 illustrates the computation and communication that takes place in the iteration of the 
+   outer loop when <I>k</I> = 3. We firstconsider the case in which one row is assigned to each process, 
+   and the <I>n </I>x<I> n </I>coefficient matrix A is striped among <I>n </I>processeslabeled from 
+   <I>P</I><SUB>0</SUB> to <I>P<SUB>n</SUB></I><SUB>-1</SUB>. In this mapping, 
+   process <I>P<SUB>i </SUB></I>initially stores elements <BR> </p>
+
+<p align = "Center" > <font color = "#ff00ff"> <B>A</B>[<I>i</I>,<I> j</I>] for  0 &lt;=<I>j</I> &lt;= n &nbsp;  </FONT> </p>
+
+  
+   Figure 18(a) illustrates this mapping of the matrix onto the 
+   processors for <I>n</I> = 8.  Program 1 and Figure 18 show that <B>A</B>[<I>k</I>, <I>k</I>+1], <B>A</B>[<I>k</I>,
+   <I>k</I>+2],..., <B>A</B>[<I>k</I>, <I>n</I>-1] are divided by <B>A</B>[<I>k</I>,
+   <I>k</I>] (line 6) at the beginning of the <I>k<SUP>th</SUP></I> iteration.
+   All matrix elements participating in this operation lie on the same process (shown by the shaded 
+   portion of the matrix in Figure 18(b). So this step does not require any communication. In the second 
+   computation step of the algorithm (the elimination step of line 12), the modified (after division)
+   elements of the <I>k<SUP>th</SUP></I> row are used by all other rows of the active part of the 
+   <I>k<SUP>th</SUP></I> row to the processes storing rows <I>k</I>+1 to <I>n</I>-1. 
+
+   Finally, the computation&nbsp; <B>A</B>[<I>i</I>, <I>j</I>] = <B>A</B>[<I>i</I>, <I>j</I>] - <B>A</B>[<I>i</I>,
+   <I>k</I>] - <B>A</B>[<I>k</I>, <I>j</I>] take place in the remaining active portion of the matrix, 
+   which is shown shaded in Figure 18(a). <br> <BR>
+
+
+   This example was chosen <I>not because it illustrates the best way to parallelize </I>this particular
+    numerical computation (it doesn't), because it illustrates the  basic <B>MPI </B><I>send </I>and <I>receive </I> 
+    operations in the  context of fundamental type of parallel algorithm, applicable in many situations. 
+</p>
+
+
+<!-- ********* Example 6.2: Gauss Elimination  Method  Ax=B matrix system [Parallel implementation] ****** -->
+
+
+<!-- ********** Example 6.2 : Gauss Elimination  Method  Ax=B matrix system : Input & Output  ************* -->
+
+
+
+<LI> <B>Input</B> </LI>
+        
+<P>The input should be in following format.&nbsp;<BR>
+
+  Assume that the real matrix is&nbsp; of size <I>m</I> x<I> n</I>
+  and the real vector is of size <I>n </I>. Also the number of <I>rows</I>
+  <I>m</I> should be greater than or equal to number of processes <I>p.</I>
+   Process with rank <I>0 </I>reads the input matrix <B>A</B>&nbsp; and the
+  vector <B>x</B>.  Format for the input files are given below.&nbsp; </p>
+
+<P>
+  <B>Input file 1</B> <BR> <BR>
+
+  The<B> </B>input file for the matrix should strictly adhere to the following format. <BR>
+
+#Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns(<I>n</I>).<BR>
+#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means that the data of second row 
+          follows that of the first and so on.) <BR> <BR>
+
+A sample input file for the matrix (8 x 8) is given below&nbsp; <BR>
+
+16&nbsp;&nbsp;&nbsp; 16&nbsp; <BR>
+
+
+61.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp; 84.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 7.0&nbsp; <BR>
+
+&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 68.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;
+59.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 8.0&nbsp; <BR>
+
+&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp; 93.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 98.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; 85.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; 98.0&nbsp; <BR>
+
+</p>
+
+<P><B>Input file 2</B> <BR>
+
+The input file<B> </B>for the vector should strictly adhere to the following format. <BR>
+
+#Line 1 : Size of the vector (<I>n</I>)&nbsp; <BR>
+#Line 2 : <I>(data)&nbsp;</I>&nbsp;
+
+<P>A sample input file for the vector (8 x 1) is given below <BR>
+
+8&nbsp; <BR>
+
+95.0&nbsp; 116.0&nbsp; 96.0&nbsp; 90.0&nbsp; 124.0&nbsp; 127.0&nbsp; 127.0&nbsp; 125.0&nbsp;</P>
+
+<LI> <B> Output</B> </li>
+        
+
+<P>Process with rank 0 prints the results of the solution vector <I>x </I>of matrix system
+  <B>A<I>x</I></B> = <B>b</B>. <BR>
+
+ 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0</P>
+
+
+</font>
+<DIV ALIGN=right>
+     <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE></td></tr></tbody></table>
+
+
+<!-- *************** Example 6.2 : MPI program Gauss Elimination  Method  Ax=B matrix system :  Ends ************* -->
+
+
+
+<!-- *********** Example 6.3 : MPI program for Conjugate Gradient  Method  Ax=b matrix system : Starts  ********** -->
+
+
+
+
+<P> <A NAME="matrix-comp-solv-id03"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="point-to-point-mpi-images/ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 6.3: <BR> <BR><BR> <BR>  </b> 
+
+</td>
+    <td width="675" height="2" align="left">
+     <b>  MPI program for implementation of  solution of matrix system of  linear equations 
+      by <i>Conjugate Gradient method </i> </b>
+
+<!-- ************** download  Starts here *************** -->
+    <BR> 
+   (Download source code : 
+  
+   <font color="#33CC00">
+  <I>
+   <A href="./matrix-comp-solver-codes/conjugate-gradient-mpi-code-clang.c">conjugate-gradient-mpi-code-clang.c</A></FONT></I>
+   &nbsp; 
+
+  </font>  / <font color="#33CC00">
+
+ <I>  <A href="./matrix-comp-solver-codes/conjugate-gradient-mpi-code-flang.f">conjugate-gradient-mpi-code-flang.f</A></FONT></I>)
+   <BR> 
+
+   (Download source code : 
+ <I>   <A href="./matrix-comp-solver-codes/matrix-data-cg.inp">matrix-data-cg.inp)</A></FONT></I>
+   &nbsp; 
+    </font>  / <font color="#33CC00">
+
+ <I> <A href="./matrix-comp-solver-codes/vector-data-cg.inp">vector-data-cg.inp)</A></FONT></I>)
+   &nbsp; 
+
+
+ <!-- *************** download  Ends here ***************** -->     
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> </p>
+
+
+<TABLE cellPadding=3  border=0>
+ <tbody>
+<tr>
+<td>
+<BLOCKQUOTE>
+
+<font size="2" face="verdana">
+
+<LI> <B>Objective&nbsp;</B> </li>
+        
+<P align ="justify"> 
+  Parallel program implementaiton for  Conjugate Gradient Method with
+  MPI library to solve the system of linear equations [<B>A</B>]{<I>x</I>}={<I>b</I>}.
+  Assume that <B>A </B>is symmetric positive definite matrix.&nbsp;<B>&nbsp;</B>&nbsp;
+</P>
+
+
+<!-- ********** Example 6.3: Conjugate Gradient  Method  Ax = b matrix system : [Objective & Description] ************ -->
+
+<LI> <B>Description</B>&nbsp;  <LI>
+        
+
+
+<B>Description of  conjugate gradient method :</B> <BR>
+
+<P align ="justify"> 
+ The conjugate gradient (<I>CG</I>) method is an example of minimizing
+ method. A real n x n matrix A is positive definite if <I>x<SUP>T </SUP></I><B>A</B><I> x &gt; </I>{0} 
+ for any <I>n</I> x 1 real, nonzero vector <I>x. </I>For a symmetric positive definite matrix <B>A</B>, 
+ the unique vector <I>x</I> that minimizes the quadratic functional <BR> <BR>
+
+  <FONT COLOR="#ff00ff"> 
+ f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x-x<SUP>T</SUP>b</I>&nbsp;  </FONT> <BR> <BR>
+
+
+   is the solution to the system <B>A<I>x</I></B><I> </I>= <B>b</B>, here <I>x </I>and b 
+   are <I>n </I>x 1 vectors. It is not particularly relevant
+   when <I> n </i>  is very large, since the conjugating time for that number of iterations
+   is usually prohibitive and the property does not hold in presence of rounding
+   errors. The reason is that the gradient of functional f (<I>x</I>)<I> </I>is
+   <B>A<I>x</I></B><I> - <B>b</B></I>, which is zero when f (<I>x</I>) is
+    minimum. The gradient of a function is a <I>n</I> x 1 vector. We explain
+   some important steps in the algorithm. An iteration of a minimization method
+   is of the form <BR> <BR>
+
+        <DIR>  <FONT COLOR="#ff00ff"> 
+         <I>x<SUB>k+</SUB></I><SUB>1</SUB><I> </I>= <I>x<SUB>k</SUB>&nbsp;
+             +<SUB> </SUB></I>tau<I><SUB>k</SUB></I>d<I><SUB>k</SUB></I> &nbsp; &nbsp;  </FONT>         
+          .............................. (1)&nbsp;
+           <BR>&nbsp;
+        </DIR>
+<BR>
+
+     where  tau<I><SUB>k</SUB></I> is a scalar step size and d<I><SUB>k</SUB></I>is
+     the direction vector, d<I><SUB>k </SUB></I>is a descent direction for f
+     at <I>x</I>.&nbsp; We now consider the problem of determining tau<I><SUB>k</SUB></I>,
+     given <I>x<SUB>k</SUB></I> and d<I><SUB>k</SUB></I>, so that f(<I>x</I>)
+     is minimized on the line <I>x<SUB> </SUB></I>= <I>x<SUB>k</SUB></I> + tau<I><SUB>k</SUB></I>
+     d<I><SUB>k</SUB></I>, for tau<I><SUB>k</SUB></I>. The function f(<I>x<SUB>k</SUB></I>+
+     tau<I> </I>d<I><SUB>k</SUB></I>) is quadratic in tau, and its minimization
+     leads to the condition <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+         tau<I><SUB> k </SUB></I>=&nbsp; g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k
+     </SUB>/</I> d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB> </i>,  </FONT>                                
+         &nbsp;&nbsp;...................... (2)&nbsp;
+ </DIR>
+ <BR>
+
+    where g<I><SUB>k</SUB>=</I><B>A</B><I>x<SUB>k </SUB>- </I><B>b</B><I> </I>is
+    the gradient (residue)&nbsp; vector after <I>k</I> iterations. The residual
+    need not be computed explicitly in each iteration because it can be computed
+    incrementally by using its value from the previous iteration. In the (<I>k+</I>1)<I><SUP>th
+   </SUP></I>iteration, the residual g<SUB><I>k+</I>1</SUB> can be expressed
+    as follows:&nbsp; <BR>
+</p>
+
+<P align ="justify"> 
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <FONT COLOR="#ff00ff"> 
+    g<SUB><I>k+</I>1</SUB><I>&nbsp; </I>=<I> </I><B>A</B><I>x<SUB>k+</SUB></I><SUB>1</SUB><I>
+    -</I> <I>b&nbsp;</I>&nbsp; </FONT>
+
+    <DIR>  <FONT COLOR="#ff00ff"> 
+          &nbsp;&nbsp;&nbsp;&nbsp; =<I> </I><B>A</B>(<I>x<SUB>k</SUB></I>+ tau<I><SUB>k
+         </SUB></I>d<I><SUB>k</SUB></I>) <I>- b</I>&nbsp; 
+   <BR>
+   
+          &nbsp;&nbsp;&nbsp;&nbsp; = <B>A</B><I>x<SUB>k</SUB>- b + </I>tau<I><SUB>k
+         </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp;
+   <BR> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp; 
+       = g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k </sub> 
+                                </i> &nbsp; &nbsp; 
+ </FONT> ...........................(3) 
+   </DIR> <BR> <BR>
+
+</p>
+<P align ="justify"> 
+
+   Thus, the only matrix-vector product computed in each iteration is <B>A</B>d<I><SUB>k</SUB></I>,
+   which is already required to compute tau<I><SUB>k&nbsp; </SUB></I>in the
+   equation (2). If <B>A </B>is a symmetric positive definite matrix and d<SUB>1</SUB><I>,
+   </I>d<SUB>2<I>,</I>..., </SUB>d<I><SUB>n</SUB></I> are direction vectors
+   that are conjugate with respect to <B>A </B>(that is, d<I><SUB>i</SUB><SUP>T
+   </SUP></I><B>A</B>d<I><SUB>j</SUB>=</I>0 for all 0<I>&lt;n, j&lt;=n</I>,<I> i</I>!=<I>j</I>), 
+   then <I>x<SUB>k+</SUB></I><SUB>1</SUB> in the Equation (1) converges to the solution 
+   of <B>A</B><I>x = </I>bin at most <I>n</I>
+   iterations, assuming no rounding errors. </p>
+
+<P align ="justify"> 
+   In practice, however, the number of iterations that yields an acceptable approximation to the solution is
+   much smaller than <I>n</I>.&nbsp; It&nbsp; also&nbsp; makes the gradient
+   at <I>x<SUB>k+</SUB>1</I> orthogonal to search direction, i.e&nbsp; d<SUB>k</SUB><I><SUP>T
+   </SUP></I>g<SUB><I>k+</I>1</SUB><I>&nbsp; = </I>0.&nbsp; Now we suppose that the search directions
+   are determined by an iteration of the form&nbsp; <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    d<SUB><I>k+</I>1</SUB><I> </I>=<I> -</I>g<SUB><I>k+</I>1</SUB>+ beta<I><SUB>k
+    </SUB></I>d<I><SUB>k&nbsp;</SUB> </i> &nbsp; &nbsp; </FONT>........................(4) 
+  </DIR> <BR> <BR>
+
+
+    where d<SUB>0<I> </I></SUB>=<I> -</I>g<SUB>0</SUB><I>&nbsp;</I> and beta<SUB>0</SUB>,
+    beta<SUB>1</SUB> , ...... remain to be determined. We find the new search
+    direction in the&nbsp; plane spanned by the gradient at the most recent
+    point and previous search direction. The parameter beta<SUB><I>k+</I>1</SUB>i<I>s </I> determined by following       
+   equation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    Beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>Ad<I><SUB>k</SUB></I>/
+    d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>k</SUB></i> &nbsp; &nbsp; </FONT>...................(5) 
+  </DIR> 
+  <BR>
+
+
+  And, one can derive orthogonality relations<BR>&nbsp;
+
+   <DIR>  <FONT COLOR="#ff00ff"> 
+      g<I><SUP>T</SUP><SUB>k</SUB></I>g <I><SUB>l</SUB></I>= 0 (<I>l </I>!=
+      <I>k</I>); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      d<I><SUP>T</SUP><SUB>k</SUB></I>Ad<I><SUB>l </SUB></I>= 0 (<I>l </I>!=<I>k</I>) </FONT>
+   </DIR>
+ <BR>
+
+ <BR>
+      The derivation of the above equation (5)&nbsp; and orthogonality relations
+      is beyond the scope of this document. For details please refer [ ]. Using
+      equation (3) and orthogonality relations, the equation (5)&nbsp; can be
+      further reduced to <BR> <BR>
+  <DIR>
+ <FONT COLOR="#ff00ff"> 
+   Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB><</i> &nbsp; &nbsp; </FONT> .........................(6) 
+ </DIR> <BR>
+
+</p>
+<P align ="justify">  
+   The above equations (1) to (6) lead to <I>CG</I> algorithm. The algorithm
+   terminates when the square of the Euclidean vector norm of gradient (residual)
+   falls below a predetermined tolerance value.&nbsp; Although all of the
+   versions of the conjugate gradient method obtained by combining the formulas
+   for g<I><SUB>k</SUB></I>, Beta<I><SUB>k</SUB></I>, and tau<I><SUB>k</SUB></I>
+   in various ways are mathematically equivalent, their computer implementation
+   is not. The following version is compared with respect to computational
+   labor, storage requirements, and accuracy. The following sequence of steps
+   are widely accepted. </p>
+  <BR>
+
+
+
+ <DIR>  <FONT COLOR="#ff00ff"> 
+      1. tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+         g<I><SUB>k</SUB><SUP>T</SUP></I>g<I><SUB>k </SUB>/</I>        
+        d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+
+      2. <i> x<SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>= 
+         <I>x<SUB>k</SUB>&nbsp; +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      3. g<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I> 
+          g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+      4. Beta<I><SUB>k+</SUB>1 </I>= g<I><SUP>T</SUP><SUB>k+</SUB>1</I>g<I><SUB>k+</SUB>1</I>/
+         g<I><SUP>T</SUP><SUB>k</SUB></I>g<I><SUB>k</SUB></I>&nbsp; <BR>
+
+      5. d<I><SUB>k+</SUB>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I> -</I>g<I><SUB>k+</SUB>1 </I>+          
+         Beta<I><SUB>k </SUB></I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+</FONT>
+
+  </DIR> <BR>
+
+   where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+        calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b , and put d<SUB>0</SUB>= -g<SUB>0</SUB>&nbsp;
+
+
+<!-- ****** Example 6.3: Conjugate Gradient  Method   implementation  Algorithm *********** -->
+
+<P align ="justify"> 
+
+  The computer implementation of this algorithm is explained as follows : <BR> <BR>
+
+   <FONT COLOR="#ff00ff"> 
+
+    void CongugateGradient(float
+
+   <I> x<SUB>0</SUB> </I>[ ],  <i> float b [ ], float d)&nbsp;  </i> <BR>
+
+ <i>  &nbsp; &nbsp; {&nbsp;  </i> <BR>
+
+ <i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      float &nbsp;&nbsp; g, Delta0, Delta1, beta;&nbsp; </i> <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  float &nbsp;&nbsp; temp, tau;&nbsp;  </i> <BR>
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i>  int &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration;  </i> <BR>
+
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iteration = 0; </i><BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x &nbsp; =  <I>x<SUB>0</SUB></I><SUB>;&nbsp;</SUB>&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  g = b;&nbsp;  </i><BR>
+
+<i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g = A <I>x - </I>g;&nbsp;<BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Delta0 = g<SUP>T </SUP>* g;&nbsp; &nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( Delta0 &lt;= EPSILON)&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return; &nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = -g;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do {&nbsp; </i> <BR>
+
+<I> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   iteration = iteration + 1;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   temp = A * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   tau = Delta0 / d<I><SUP>T&nbsp;</SUP></I> * temp;&nbsp;&nbsp; <BR>
+
+<I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  x</I> = <I>x</I> + tau * d;&nbsp;&nbsp;  </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   g = g + tau * temp;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Delta1 = g<I><SUP>T&nbsp;</SUP></I> * g; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  if ( Delta1 &lt;= EPSILON )&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;&nbsp;</i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   beta = Delta1 / Delta0;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Delta0 = Delta1;&nbsp;&nbsp; </i> <BR>
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   d = -g + beta * d;&nbsp;&nbsp; </i> <BR>
+
+
+<i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+ while(Delta0 &gt; EPSILON &amp;&amp; Iteration &lt; MAX_ITERATIONS); </i><BR>
+
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return; </i><BR>
+
+ </i> </FONT>&nbsp;
+
+<P align ="justify"> 
+   Regarding one-dimensional arrays of size <I>n </I>x 1 are required for
+   temp, g, <I>x, </I>d. The storage requirement for matrix. A is depends upon the structure 
+   ( dense, band, sparse )  of the matrix.The two dimensional <I>n</I> x <I>n</I> array is the 
+   simplest structure to store  matrix A. For large sparse matrix A this structure wastes a large amount 
+    of storage space, for such matrix A suitable storage scheme should be 
+    used.
+</P>
+
+
+<!-- ****** Example 6.3 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] Ends ********* -->
+
+
+<!-- ********* Example 6.3 : Conjugate Gradient  Method  Ax=B matrix system : [Objective & Description ] 
+                         Pre-condicitoned CG method Starts  ************ -->
+
+
+<LI>
+  <B>The preconditioned conjugate gradient algorithm&nbsp;</B>&nbsp;  </LI>
+
+<P align ="justify"> 
+  <DIR>
+    Let C be a positive definite matrix factored in the form C = E E<I><SUP>T</SUP></I>, 
+    and let the quadratic functional&nbsp;  </FONT>
+  </DIR> 
+ <BR> 
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+    f(<I>x</I>) = (1<I>/</I>2)<I>x<SUP>T</SUP></I><B>A</B><I>x - x<SUP>T</SUP>b + C </I>,&nbsp;
+</FONT>
+  </DIR>
+ <BR>
+
+  We define second quadratic functional g(y) by the transformation y = E<I><SUP>T</SUP>x</I>,<BR> <BR>
+
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+     g(<I>x</I>) = g(E<SUP>-T</SUP>y) = (1<I>/</I>2)<I>y<SUP>T</SUP></I><B>A<SUP>*</SUP></B><I>y
+    - y<SUP>T</SUP>b <SUP>*</SUP> + C<SUP>*</SUP>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>where A <SUP>*</SUP> = E<SUP>-1</SUP>AE<SUP>-<I>T</I></SUP>, b<SUP>*</SUP> = 
+         E<SUP>-1</SUP>b, C<SUP>*</SUP> = C.&nbsp; </FONT>
+</DIR>
+<BR>
+  Here, A<SUP>*</SUP> is symmetric and positive definite. The similarity transformation <BR> <BR>
+
+  <DIR>  <FONT COLOR="#ff00ff"> 
+
+    E<SUP>-<I>T</I></SUP>A<SUP>*</SUP>E<I><SUP>T</SUP> </I>= E<SUP>-<I>T</I></SUP>E<SUP>-1</SUP>A
+    = C<SUP>-1</SUP>A&nbsp; </FONT>
+
+  </DIR>
+<BR>
+</p>
+
+<P align ="justify"> 
+
+   reveals that A<SUP>*</SUP> and A have same eigen values. If C can be found
+   such that the condition number of the matrix A<SUP>*</SUP> is less than
+   the condition number of the matrix A, then the rate of convergence of the
+   preconditioned method is better than that of conjugate gradient method.
+   We call C the <I>preconditioning </I>matrix, A<SUP>*</SUP> the <I>preconditioned</I>
+   matrix, We assume that the matrix C = EE<SUP>T</SUP> is positive definite,
+   since E is nonsingular by assumption. If the coefficient matrix A has <I>l</I>
+   distinct eigen values, the CG algorithm  converges to the solution
+   of the system <B>A<I>x</I> </B>=<B> b </B>in at most <I>l</I> iterations
+   (assuming no rounding errors). Therefore, if A has many distinct eigen
+   values that vary widely in magnitude, the CG algorithm may require a large
+   number of iterations to converge to an acceptable approximation to the
+   solution. <BR> <BR> 
+
+  The speed of convergence of the <I>CG</I> algorithm can be increased
+  by preconditioning <B>A</B> with the congruence transformation <B>A*</B><I>
+    = </I>E<SUP>-1</SUP>AE<SUP>-<I>T</I> </SUP> where E is a nonsingular
+  matrix. E is chosen such that <B>A*</B> has fewer distinct eigen values
+  than <B>A</B>. The <I>CG</I> algorithm is then used to solve <B>A* y <I>=</I>b<I>*</I></B>,
+  where <I>x =</I>(E<I><SUP>T</SUP></I>)<I><SUP>-</SUP>1y</I> . The resulting
+  algorithm is called the <I>preconditioned conjugate gradient</I> (<I>PCG</I>)
+  algorithm. The step performed in each iteration of the preconditioned
+ conjugate gradient algorithm are as follows <BR> <BR>
+
+<DIR>  <FONT COLOR="#ff00ff"> 
+ 
+ 1. &nbsp; tau<I><SUB> k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SUB></I>=&nbsp;
+     g<I><SUB>k</SUB><SUP>T</SUP></I>h<I><SUB>k </SUB>/</I>        
+     d<I><SUB>k</SUB><SUP>T</SUP></I><B>A</B>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 2. &nbsp; <i> x<SUB>k+</SUB></I><SUB>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </I>= <I>x<SUB>k</SUB> +<SUB> </SUB></I>tau<I><SUB>k</SUB> </I>d<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 3.&nbsp;  g<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>&nbsp;</I>
+    g<I><SUB>k </SUB>+ </I>tau<I><SUB>k </SUB></I><B>A</B>d<I><SUB>k&nbsp;</SUB></I>&nbsp; <BR>
+
+ 4. &nbsp; h<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=&nbsp;
+    C<SUP>-1</SUP>g<SUB><I>k+</I>1</SUB>&nbsp; <BR>
+
+ 5. &nsbp;  beta<SUB><I>k+</I>1</SUB><I> </I>= g<I><SUP>T</SUP><SUB>k+</SUB></I><SUB>1</SUB>h<SUB><I>k+</I>1</SUB>/
+    g<I><SUP>T</SUP><SUB>k</SUB></I>h<I><SUB>k</SUB></I>&nbsp; <BR>
+
+ 6. &nbsp;  d<SUB><I>k+</I>1</SUB><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>=<I>
+    -</I>h<SUB><I>k+</I>1</SUB><I> </I>+ beta<SUB><I>k+</I>1</SUB>d<I><SUB>k</SUB></I>
+</FONT>
+</DIR>
+
+</p>
+
+<P align ="justify"> 
+  where <I>k</I> = 0, 1, 2, .......... Initially we choose <I>x</I><SUB>0</SUB>, 
+  calculate g<SUB>0</SUB> = A<I>x</I><SUB>0 </SUB>- b, h<SUB>0</SUB>= 
+  C<SUP>-1</SUP>g<SUB>0</SUB> and d<SUB>0</SUB> = -h<SUB>0</SUB>. 
+
+  The multiplication by C<SUP>-1</SUP> in step (4) is to be interpreted as solving a system of equations  
+  with coefficient matrix C. A source of preconditioning matrices is the class
+  of stationary iterative methods for solving the system 
+ 
+  <B>A<I>x</I><SUP>*</SUP></B> = <B>b</B>.&nbsp;</DIR> 
+
+</p>
+
+<!-- ******** Example 6.3 : Conjugate Gradient  Method  Parallel implementation of PCG Starts ********** -->
+
+
+<LI> <B>Parallel implementations of the PCG algorithm</B> </li>
+
+
+<P align ="justify"> 
+
+The parallel conjugate gradient algorithm involves the following&nbsp;
+   type of computations and communications <BR> <BR>
+
+Partitioning of a matrix : The matrix A is obtained by discretization
+of partial differential equations by finite element, or finite difference
+method. In such cases, the matrix is either sparse or banded. Consequently,
+the partition&nbsp; of the matrix onto <I>p</I> processes play a vital
+role for performance. For, simplicity , we assume that <B>A </B>is symmetric
+positive definite and  is<I> rowwise</I> block-striped partitioned.&nbsp;
+<BR> <BR>
+
+<B>Scalar Multiplication of a vector and addition of vectors : </B> 
+<BR>Each of these computations  can be performed sequentially regardless
+of the preconditioner and the type of coefficient matrix. If all vectors
+are distributed identically among the processes, these steps require no
+communication in a parallel implementation. </p>
+
+<P align ="justify"> 
+<B>Vector inner products :</B> 
+
+<BR>In some situations, partial vectors are available on each&nbsp; processes.&nbsp;
+MPI Collective library calls are necessary to perform vector inner products&nbsp;
+If the parallel computer supports fast reduction operations, such as optimized
+MPI, then the communication time for the inner-product calculations can
+be made minimum. </p>
+
+
+<P align ="justify"> <B>Matrix-vector multiplication :</B>
+
+The computation and the communication cost of the matrix-vector
+multiplication;  depends on the structure of the matrix A. The
+parallel implementation of the PCG algorithm for three cases one
+in which A is a block-tridiagonal matrix of the  type, two in
+which it is banded unstructured sparse matrix, and three in which the matrix
+is sparse give different performance on parallel computers. Various
+parts of the algorithm in each of the three cases dominate in terms of
+communication overheads.</p>
+
+<P><B>Solving the preconditioned system :</B>
+<BR>The PCG algorithm solves  system of linear equations in each
+iteration The preconditioner C is chosen so that solving the system modified
+system is in expensive compared to solving the original system of
+equations <B>A<I>x </I></B>=  <B>b</B>. Nevertheless, preconditioning increases
+the  amount of computation in each iteration. For good preconditioners,
+however, the increase is compensated by a reduction in the number of iterations
+required to achieve acceptable convergence. The computation and the
+communication requirements of this step depends on the type
+of preconditioner used. preconditioning method such as diagonal preconditioning,
+in which the preconditioning matrix C has nonzero elements only
+along the principle diagonal does not involve any communication Also,
+Incomplete Cholesky (IC) preconditioning, in which C is based on incomplete
+Cholesky factorization of A and it may involve different computations and
+communications in parallel implementation. <BR><BR>
+The convergence of CG method iterations performed by checking the error
+criteria i.e. eulicidean norm of the residual vector should be less than
+prescribed tolerance. This convergence check involves gathering of real
+value from all processes, which may be very costly operation. <BR> <BR>
+
+We consider parallel implementations of the PCG algorithm using
+diagonal preconditioner for dense coefficient matrix type. As we
+will see, if C is a diagonal preconditioner, then solving the modified
+system does not require any interprocessor communication. Hence,
+the communication time in a CG iteration with diagonal preconditioning
+is the same as that in an iteration of the unpreconditioned algorithm. <BR> <BR>
+
+Thus the operations that involve any 
+   communication overheads are computation of inner products, matrix-vector 
+   multiplication and, in case of IC preconditioner solving the 
+   system.</P>
+
+</LI>
+
+<!-- *****  Example  6.3: Conjugate Gradient  Method  Parallel implementation of PCG Ends ****** -->
+
+
+<!-- ***********  Example 6.3 : Conjugate Gradient  Method  [ Input & Output ] Ends ********* -->
+
+<LI>
+<B>Input</B>&nbsp; </LI> 
+        
+
+
+<P>The input should be in following format. </P> 
+
+<P align ="justify"> Assume that the real matrix is of size <I>m</I> x<I> n</I>
+and the real vector is of size <I>n </I> Also the number of <I>rows</I>
+<I>m</I> should be greater than or equal to number of processes <I>p.</I>
+Process with rank <I>0 </I>reads the input matrix <B>A</B> and the
+vector <B>x</B>  Format for the input files are given below. </p> 
+<BR> <BR>
+
+
+<!-- ************** input and output starts *************** -->
+<B>Input file 1</B>  
+
+<P>The<B> </B>input file for the matrix should strictly adhere to the following
+format. </p> 
+
+<P align ="justify"> #Line 1 : Number of Rows (<I>m</I>),<I> </I>Number of columns(<I>n</I>).<I>&nbsp;</I>&nbsp;
+<BR>#Line 2 : (<I>data</I>)<I> </I>(in <I>row-major </I>order. This means
+that the data of second row follows that of the first and so on.) </p>
+
+<P align ="justify"> A sample input file for the matrix (8 x 8) is given below&nbsp; <BR>
+8&nbsp;&nbsp;&nbsp; 8&nbsp; <BR>
+
+
+61.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp; 84.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 7.0&nbsp; <BR>
+
+&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp; 68.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;
+59.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 8.0&nbsp; <BR>
+
+&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp; 93.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 98.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp; 9.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; 85.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; 98.0&nbsp; <BR>
+
+<BR>&nbsp;
+
+<BR>&nbsp;<B>Input file 2</B>&nbsp;
+
+<P align ="justify"> 
+
+The input file<B> </B>for the vector should strictly adhere to the following format.<BR>
+
+ #Line 1 : Size of the vector (<I>n</I>)&nbsp;
+ #Line 2 : <I>(data)&nbsp;</I>&nbsp;  <BR>
+
+
+ A sample input file for the vector (8 x 1) is given below <BR> 
+
+  8&nbsp; <BR>
+  95.0&nbsp; 116.0&nbsp; 96.0&nbsp; 90.0&nbsp;  124.0&nbsp; 127.0&nbsp; 127.0&nbsp; 125.0&nbsp; <BR>
+
+</P>
+
+
+<LI> <B>Output&nbsp;</B> </li> 
+        
+
+<P align ="justify">  Process with rank 0  prints the results of the solution <I>x </I>of linear system of matrix equations 
+  <B>A<I>x</I></B><I> = </I><B>b</B>. <BR>
+
+  1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0&nbsp; 1.0 </p>
+
+</font>
+
+
+
+<DIV ALIGN=right>
+       <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</BLOCKQUOTE></td></tr></tbody></table>
+
+<!-- *********** Example 6.3 : MPI program for Conjugate Gradient  Method  Ax=b matrix system : Ends ********** -->
+
+
+<!-- *********** Example 6.4 MPI implementation of Solution of linear system of equations Ax= by Gauss siedel method ******* -->
+
+
+
+  <A NAME="matrix-comp-solv-id04"></A> 
+  <table border="0"  height="6">
+   <tbody>
+    <tr>
+     <td width="125" height="2" align="left">
+     <IMG SRC="point-to-point-mpi-images/ballred.gif" HEIGHT="10" WIDTH="10">
+     <b>  Example 6.4: <BR> <BR>  </b> </td>
+    <td width="675" height="2" align="left">
+       <b>   MPI implementation of Solution of linear system of equations Ax= by Gauss siedel method  </b>
+     </td>
+    </tr> 
+   </tbody>
+    </table> </p>
+
+
+<table border="0">
+
+<tbody><tr><td>
+
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+  <LI> <B>Objective</B> </li>
+
+<P align ="justify"> 
+Implement a simple parallel Gauss-Seidel method with MPI library
+   to solve the system of linear equations [<B>A</B>]{<I>x</I>}<I> </I>= {<I>b</I>}.
+   Assume that <B>A</B>is symmetric positive definite matrix. 
+</p>
+
+<LI> <B>Background</B> </LI>
+
+<P align ="justify"> 
+
+  Iterative methods are techniques to solve systems of equations of the
+  form [<B>A</B>]{<I>x</I>}<I>=</I>{<I>b</I>} that generate a sequence of
+  approximations to the solution vector <I>x</I>. In each iteration, the
+  coefficient matrix <B>A</B> is used to perform a matrix-vector multiplication.
+  The number of iterations required to solve a system of equations with a
+  desired precision is usually data dependent; hence, the number of iterations
+  is not known prior to executing the algorithm. Therefore, we can analyze
+  the performance and scalability of a single iteration of an iterative method.
+  Iterative methods do not guarantee a solution for all systems of equations.
+  However, when they do yield a solution, they are usually less expensive
+  than direct methods for matrix factorization for large size of matrices. <BR> <BR>
+
+  Consider the large sparse system of linear equations of the form [<B>A</B>]{x}={b},
+  where <B>A</B> is a symmetric positive definite <I>n x n</I> matrix, <I>x</I>
+  is <I>n</I>x 1 vector and <I>b</I> is <I>n x </I>1 vector. <B>A</B> real
+  <I>n x n</I> matrix is positive definite if <I>x<SUP>T </SUP></I>[<B>A</B>]{<I>x</I>}> 
+  {0} for any real nonzero vector <I>x</I>. <BR> <BR>
+
+  We first consider serial simple jacobi iterative technique to solve matrix system of 
+  linear equations [<B>A</B>]{<I>x</I>}={<I>b</I>}. </p> <BR> <BR>
+
+
+<LI> <B> Jacobi iterative method </B></LI>
+
+
+<P align ="justify"> 
+  The Jacobi iterative method is one of the simplest iterative techniques.
+   The <I>i<SUP>th</SUP></I> equation of a system of linear equations [A]{x}={b} is <p>
+<BR> <BR>
+
+<p align="center">  <IMG SRC="./matrix-comp-solver-images/seidel-sum13.gif" HEIGHT=70 WIDTH=360> </p>
+
+<P align ="justify"> 
+  If all the diagonal elements of <B>A</B> are nonzero (or are made nonzero
+   by permuting the rows and columns of <B>A</B>), we can rewrite equation
+(1) as : </p>
+
+
+<p align="center"> <IMG SRC="./matrix-comp-solver-images/seidel-sum14.gif" HEIGHT=84 WIDTH=360>&nbsp;</p>
+
+
+<P align ="justify"> 
+
+  The Jacobi method starts with an initial guess <I>x</I><SUB>0</SUB> for
+  the solution vector <I>x</I>. This initial vector <I>x</I><SUB>0</SUB>
+  is used in the right-hand side of equation (2) to arrive at the next approximation
+  <I>x</I><SUB>1</SUB> to the solution vector. The vector <I>x</I><SUB>1</SUB>
+   is then used in the right hand side of equation (2), and the process continues
+   until a close enough approximation to the actual solution is found. A typical
+   iteration step in the Jacobi method is <BR> <BR> <p>
+
+<p align = "center"> <IMG SRC="./matrix-comp-solver-images/seidel-sum15.gif" HEIGHT=86 WIDTH=360>&nbsp;</p>
+
+
+<P align ="justify">   We know express the iteration step of equation 3 in terms of residual
+<I>r<SUB>k</SUB></I>. Equation 3 can be rewritten as </p>
+
+
+<p align = "center"> <IMG SRC="./matrix-comp-solver-images/seidel-sum16.gif" HEIGHT=86 WIDTH=360>&nbsp;</p>
+
+
+
+<LI> <B>The gauss-seidel method&nbsp;&nbsp;</B>&nbsp;</LI>
+
+
+<P align ="justify"> 
+
+  An iteration of the Jacobi method is based on equation (3). During the
+  <I>k</I><SUP>th</SUP> iteration of Jacobi algorithm to solve an 
+  <I>n x n</I> system, the step of equation (3) is performed to compute each <I>x<SUB>k</SUB></I>[<I>i</I>]
+  for 0<I>&lt;=i&lt;n. </i>  <BR>
+
+
+ The computation of<I> x<SUB>k</SUB></I>[<I>i</I>] uses the value of<I> x<SUB>k-</SUB></I>
+  <SUB>1</SUB>[0]<I>, ... , x<SUB>k-</SUB></I><SUB>1</SUB>[<I>i-</I>1]<I>,
+  x<SUB>k-</SUB></I><SUB>1</SUB>[<I>i+</I>1]<I>,..., x<SUB>k-</SUB></I><SUB>1</SUB>[<I>n-</I>1]<I>. </I>
+
+  Assuming that the<I> x<SUB>k</SUB></I>[<I>i</I>]<I> </I>values are
+  computed in increasing order of<I> i, </I>the values of<I> x<SUB>k</SUB></I>[0]<I>,
+  ... ,x<SUB>k</SUB></I>[<I>i-</I>1]<I> </I>have already been computed before
+  equation (3) is used to compute<I> x<SUB>k</SUB></I>[<I>i</I>]<I>. </I>However,
+  the Jacobi algorithm uses<I> x<SUB>k-</SUB></I><SUB>1</SUB>[0]<I>, ...,x<SUB>k-</SUB></I><SUB>1</SUB>[<I>i-</I>1] 
+  form the<I> </I>previous iteration.
+
+  The Gauss-Seidel algorithm uses the most recent value of each variable, and as a result, often achieves 
+   faster convergence than the Jacobi algorithm. The basic Gauss-Seidel iteration is given by  </p> <BR>
+
+
+
+<p align = "center"> <IMG SRC="./matrix-comp-solver-images/seidel-sum17.gif" HEIGHT=86 WIDTH=360>&nbsp;</p>
+
+<LI> <B>Parallel implementation</B>&nbsp;</LI> 
+
+
+<P align ="justify"> 
+
+  The Gauss-Seidel algorithm performs the basic iteration given by equation(5)
+  until satisfactory convergence is achieved. The test for convergence requires
+  an inner-product computation that involves global communication. However,
+  a convergence check need not be performed after each iteration. Given a
+   parallel architecture, the frequency of the convergence check can be chosen
+   to optimize the overall performance on that architecture. The issues in
+  parallelizing the inner-product computation are discussed. We concentrate
+  on performing the iteration step of equation in parallel. <BR> <BR>
+
+
+  From a preliminary glance at equation it might appear that computing
+  <I>x<SUB>k</SUB></I>[0], <I>x<SUB>k</SUB></I>[1], ... , <I>x<SUB>k</SUB></I>[<I>n-</I>1]
+  in the <I>k<SUP>th</SUP></I> iteration is completely sequential because
+  <I>x<SUB>k</SUB></I>[<I>i</I>] cannot be computed until <I>x<SUB>k</SUB></I>[<I>i-</I>1]
+  has been computed for 0<I>&lt;=i&lt;n</I>. This is indeed the case if the
+  coefficient matrix <B>A</B> is dense. However, if <B>A</B> is sparse, the
+  computation of <I>x<SUB>k</SUB></I>[<I>i</I>] need not wait until <I>x<SUB>k</SUB></I>[0]
+  , ... ,<I>x<SUB>k</SUB></I>[<I>i-</I>1] have all been computed. A majority
+  of elements in the sparse matrix <B>A</B> are zero. If <B>A</B>[<I>i, j</I>]
+  is zero, then <I>x<SUB>k</SUB></I>[<I>i</I>] on the left-hand side of equation
+  (4) does not depend upon <I>x<SUB>k</SUB></I>[<I>j</I>]. Thus, <I>x<SUB>k</SUB></I>[<I>i</I>]
+  can be computed as soon as all <I>x<SUB>k</SUB></I>[<I>j</I>] have been
+  computed such that <I>j&lt;i</I> and <B>A</B>[<I>i, j</I>] not equal to
+  0. At any time, all <I>x<SUB>k</SUB></I>[<I>i</I>] for which this condition
+  is true can be computed in parallel. <BR> <BR>
+
+<P align ="justify"> 
+  Since the computation of <I>x<SUB>k</SUB></I>[<I>i</I>] depends only
+  on the nonzero elements of <B>A</B>[<I>i, j</I>] (with <I>j>i</I>) in the
+  coefficient matrix, the degree of parallelism in Gauss-Seidel method is
+  a function of the sparsity pattern of the lower-triangular part of <B>A</B>. <BR> <BR>
+
+  For example, consider the block-tridiagonal matrix. Such a matrix results
+  for a finite difference discretization with a natural ordering of grid
+   points. In the &nbsp; 
+
+   <IMG SRC="./matrix-comp-solver-images/seidel-root10.gif" HEIGHT=18 WIDTH=75>square&nbsp;
+   <IMG SRC="./matrix-comp-solver-images/seidel-root010.gif" HEIGHT=18 WIDTH=35>
+
+  grid, except for the points on the left periphery, every point <I>i</I>
+  has <I>i-</I>1 as its neighbor, Therefore except in the rows corresponding
+  to the grid points on the left periphery, <B>A</B>[<I>i, i-</I>1]&nbsp;
+  <IMG SRC="./matrix-comp-solver-images/seidel-notequal.gif" HEIGHT=15 WIDTH=18> 0. As a result, for all but square
+
+
+    &nbsp;<IMG SRC="./matrix-comp-solver-images/seidel-root010.gif" HEIGHT=18 WIDTH=35>
+
+  values of <I>i,</I> the computation of <I>x<SUB>k</SUB></I>[<I>i</I>] has to wait
+  until <I>x<SUB>k</SUB></I>[<I>i-</I>1] has been computed. Hence, natural
+   ordering is not suitable for a parallel implementation of Gauss-Seidel
+  algorithm. It can be shown that each Gauss-Seidel iteration on an 
+  <I>n x n</I> block-tridiagonal matrix of the form shown in Figure 1 takes at least O
+
+     (<IMG SRC="./matrix-comp-solver-images/seidel-root010.gif" HEIGHT=18 WIDTH=35>)
+
+ time regardless of the number of processors used. <BR> <BR>
+
+
+<p align = "center">  <IMG SRC="./matrix-comp-solver-images/seidel-block.gif" HEIGHT=385 WIDTH=360>&nbsp;</p>
+
+
+<CENTER><B>
+
+  Figure 1. A 16 x 16 block-tridiagonal matrix. The nonzero elements are represented
+   by the symbol x. </CENTER> </B>
+
+
+<P align ="justify"> 
+  The order in which the grid points in a discretized domain are numbered
+  determines the order of the rows and columns in the coefficient matrix,
+  and hence, the location of its nonzero elements. The degree of parallelism
+  in the Gauss-Seidel algorithm for a given grid is also sensitive to this
+  ordering. However, given enough processors, an ordering more amenable to
+  parallelization is likely to yield a better overall performance, unless
+  it results in much worse convergence.
+</p>
+
+
+<LI> <B>Red-black ordering </B></LI>
+
+
+<P align ="justify"> 
+
+  We now introduce a numbering scheme for a finite difference grid so
+  that the resulting coefficient matrix permits a high degree of parallelism
+  in a <I>Gauss- Seidel iteration</I>. We will later extend this scheme to
+  deal with sparse matrices other than those resulting from a finite difference
+  discretization. Figure 2 illustrates this ordering, which is known as <B><I>red-black
+  ordering</I></B>. In red-black ordering, alternate grid points in each
+  row and column are colored red, and the remaining points are colored black.
+  For a uniform two-dimentional grid in which each point has a maximum of
+  four neighbors, this ensures that no two directly- connected grid points
+  have the same color. After assigning colors to the grid points, all red
+  points are numbered first in natural order, leaving out the black points.
+  This is followed by numbering all the black points in natural order. If
+  the grid has a total of <I>n</I> points and <I>n</I> is even, the red points
+  are numbered form 0 to <I>n</I>/2-1 and the black points are numbered from
+  <I>n</I>/2 to <I>n</I>-1
+</p>
+<DIV ALIGN="center">
+  <p> <IMG SRC="./matrix-comp-solver-images/seidel-grid.gif" HEIGHT=650 WIDTH=360></p>
+
+  <CENTER><B>
+
+     Figure 2. A partitioning among four processors of a 4 x 4 finite difference 
+     grid with red-black ordering.
+  </B></CENTER>
+</DIV>
+
+</BLOCKQUOTE></td></tr></tbody></table>
+
+<table border="0">
+
+<tbody><tr><td>
+
+<BLOCKQUOTE>
+<P align ="justify"> 
+
+  Figure 2(b) shows the sparse matrix resulting from a 4 x 4 grid of
+  Figure 2(a). In the coefficient matrix, the first <I>n</I>/2 rows correspond
+  to the red points, and the last <I>n</I>/2 correspond to the black points
+  in the grid. Since red points have only black neighbors and vice-versa,
+  the first <I>n</I>/2 rows have nondiagonal nonzero elements in only the
+  last <I>n</I>/2 columns, and the last <I>n</I>/2 rows have nondiagonal
+  nonzero elements in only the first <I>n</I>/2 columns <BR> <BR>
+
+  Consider a parallel implementation of the Gauss-Seidel method on a two-dimentional
+  mesh of processors. The grid is partitioned among the processors of the
+  mesh in a block-checkerboard fashion. Figure 2(a) shows the allocation
+  of grid points and the rows of the coefficient matrix among four processors.
+  With red-black ordering, each iteration of the <I>Gauss-Seidel algorithm</I>
+  is performed in two phases. In the <I>k<SUP>th</SUP></I> iteration, first,
+  <I>x<SUB>k</SUB></I>[0], <I>x<SUB>k</SUB></I>[1],..., <I>x<SUB>k</SUB></I>[<I>n</I>/2-1]
+  are computed in parallel. Each of these variables correspond to red points,
+  and uses values of the variables corresponding to its black neighbors form
+  the previous iteration. To perform this compuatation, each processor sends
+  the variable corresponding to the black points lying at each of its four
+  partition boundaries to the respective neighboring processors. A typical
+  processor has four boundaries with square
+
+     &nbsp;<IMG SRC="./matrix-comp-solver-images/seidel-root05.gif" HEIGHT=20 WIDTH=75>
+
+  points on each boundary. Half of these points are red and the other half
+  are black. Therefore, the communication time of the first phase is
+
+  &nbsp;<IMG SRC="./matrix-comp-solver-images/seidel-root06.gif" HEIGHT=28 WIDTH=150>,
+
+  which is equal to
+
+     &nbsp;<IMG SRC="./matrix-comp-solver-images/seidel-root07.gif" HEIGHT=24 WIDTH=115>. 
+
+   In the second phase, <I>x<SUB>k</SUB></I>[<I>n</I>/2], <I>x<SUB>k</SUB></I>[<I>n</I>/2+1],...,
+  <I>x<SUB>k</SUB></I>[<I>n</I>-1] are computed in parallel. Each of these
+  variables use the values of the variables corresponding to the red neighbors
+  that were computed in the first phase of the kth iteration. This requires
+  an exchange of all the
+
+    &nbsp;<IMG SRC="./matrix-comp-solver-images/seidel-root08.gif" HEIGHT=15 WIDTH=90> 
+
+  variables
+  corresponding to the red points at each of the four partition boundaries.
+  As in the first phase, the communication in the second phase takes
+   &nbsp;<IMG SRC="./matrix-comp-solver-images/seidel-root07.gif" HEIGHT=24 WIDTH=115>
+  time. 
+
+</p>
+<DIV ALIGN="center">
+<p align="Center"> <IMG SRC="./matrix-comp-solver-images/seidel-coarse.gif" HEIGHT=330 WIDTH=360> </p>
+</Div>
+
+<CENTER><B>
+  Figure 3. Multicolored ordering of a finite element graph using four colors.
+ </B></CENTER>
+
+<P align ="justify"> 
+
+   Each evaluation of equation for the coefficient matrix resulting form
+   a grid of the form shown in Figure 3 requires at most four multiplications,
+   four substractions, and one division. The number of multiplications and
+   substactions is at most four because there are at most four nondiagonal
+    nonzero elements in each row of <B>A</B>-one corresponding to each of the
+   four neighbors of a point in the grid. These operations are performed once
+   for each variable in every iteration. Assuming that this constant amount
+   of computation per grid point (or per row of the coefficient matrix) takes
+   time <I>t<SUB>c </SUB></I>, the total execution time per iteration is 
+ </p>
+
+<P align="center">
+
+
+<I>  T<SUB>p</SUB></I> = <I>t<SUB>c</SUB>n/p</I> + 8<I>t<SUB>s</SUB></I> + 4<I>t<SUB>w</SUB></I>&nbsp;
+  <IMG SRC="./matrix-comp-solver-images/seidel-root09.gif" HEIGHT=20 WIDTH=50> </p>
+
+<BR> <BR>
+  The above equation does not include the time spent in testing for convergence,
+  which depends on how and with what frequency the convergence test is performed. <BR> <BR>
+ 
+
+<LI> <B>Input</B> </LI>
+
+<P align ="justify"> 
+
+  There will an input file called data which your program will read. This
+  requires that in your code process <I>0 </I>will read the data from a data
+  file. The data file format is described as the follows: Line one consists
+  of an integer <I>n </I>which represents the number of rows and columns
+  in the square matrix. Line 2 and the next <I>n </I>lines contain single
+  rows of the matrix, with each number separated by at least one blank space.
+  The next <I>n </I>lines contain single elements of the <I>n </I>x <I>1
+  </I>vector. For example, the 8 x 8 matrix has 64 elements and the 8 x 1
+  vector has 8 elements as explained below. <BR> </p>
+
+<P align ="justify"> 
+
+ 8 &nbsp; <BR>
+
+61.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+&nbsp; 2.0&nbsp;&nbsp; 84.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp;&nbsp; 7.0&nbsp; <BR>
+
+&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp; 68.0&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp; 9.0&nbsp;
+59.0&nbsp;&nbsp;&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp; 8.0&nbsp; <BR>
+
+&nbsp; 6.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;
+8.0&nbsp;&nbsp; 93.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp;  <BR>
+
+&nbsp;7.0&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+9.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp; 98.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;
+1.0&nbsp; <BR>
+
+&nbsp;4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; 85.0&nbsp;&nbsp;&nbsp;
+7.0&nbsp; <BR>
+
+&nbsp;2.0&nbsp;&nbsp;&nbsp;&nbsp; 8.0&nbsp;&nbsp; 8.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 5.0&nbsp;&nbsp;&nbsp;
+6.0&nbsp; 98.0&nbsp; </p>
+
+<P align ="justify">    
+        10.0&nbsp; 50.1&nbsp;  72.5&nbsp; 43.0&nbsp;  10.0&nbsp;  52.1&nbsp;  74.5&nbsp; 58.1&nbsp;</p>
+
+
+<LI> <B>Output</B>&nbsp;</LI>
+
+
+<P align ="justify">  
+   Process with rank 0 will output the results of the solution <I>x</I> of [<B>A</B>]
+   {<I>x</I>}<I>=</I>{<I>b</I>} with one vector element per line<I>.&nbsp;</I>&nbsp;</p>
+
+</font>
+<DIV ALIGN=right>
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</BLOCKQUOTE></td></tr><tbody></table>
+
+
+<!-- ************* Example 6.4 MPI implementation of Solutioan of linear system of equations Ax= by Gauss siedel method Ends  *********** -->
+
+
+
+
+</TD></TR>
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,35 @@
+#
+#               C-DAC Tech Workshop : hyPACK-2013
+#                        October 15-18, 2013
+#   E-mail    : hpcfte@cdac.in
+#
+#
+
+CC   = icc
+
+CCFLAGS    =  -offload-build -std=c99 -mkl 
+
+OPTFLAGS   = -O3 
+
+#LIBS       = -L/opt/intel/lib/mic -Wno-unknown-pragmas 
+LIBS       = 
+EXECS      = run
+#----------------------------------------------------------------
+#               Object files ...
+#----------------------------------------------------------------
+
+
+OBJECTS = matrix-matrix-multiply-dgemm-mkl-single-core-offload.c
+
+#----------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl 
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run
+
+

@@ -1,0 +1,1496 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<<HTML><HEAD><TITLE>  : C-DAC PEMG-2010 tech. workshop  - pthreads - C-DAC ECity-Bengalore June 21-24, 2010 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=Content-Language content=en-us>
+<META id=ROBOTS content=ALL name=ROBOTS>
+
+<META id=Copyright content="Copyright (c) 2010, C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<META id=keywords content=HDF name=keywords><LINK href="../../pemg10-files/pemg-main.css" 
+type=text/css rel=stylesheet><LINK href="../../pemg10-files/pemg-home.css" type=text/css 
+rel=stylesheet><LINK href="../../pemg10-files/pemg-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="../../pemg10-files/pemg-main.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo><A 
+            href="http://www.cdac.in/pemg2010/"><IMG alt=PEMG-2010
+            src="../../pemg10-files/PEMG-2010-header.jpg" border=0></A></TD>
+
+        
+
+</TR></TBODY></TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+
+      <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+            
+
+		  <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:pemgShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('1', 1)" 
+       		href="../../pemg10-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:pemgShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('2', 1)" 
+                  href="../../pemg10-topics-of-interest-mode01-multicore.html">Topics </A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:pemgShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('3', 1)" 
+                  href="../../pemg10-tech-prog-overview.html">Tech. Prog.</A></TD>
+
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:pemgShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('4', 1)" 
+                  href="../../pemg10-complab-overview.html">Comp. Lab.</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:pemgShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('5', 1)" 
+                  href="../../pemg10-mode01-multicore-lab-overview.html"> Mode-1 (Multi-Cores)</A></TD>
+		<TD class=menusep></TD>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow6 
+                  onmouseover="javascript:pemgShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('6', 1)" 
+                  href="../../pemg10-mode02-gpgpu-lab-overview.html"> Mode-2 (GPGPUs)</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+                  href="../../pemg10-reg-private-sector.html">Registration 
+                  </A></TD>
+                <TD class=menusep></TD>
+		
+                <TD class=menu1><A class=menu1 id=mainmenurow8
+                  onmouseover="javascript:pemgShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:pemgHideSubMenuDelay('8', 1)" 
+                  href="../../pemg10-contact-address.html">Contact
+                 </A></TD>
+
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+       <TABLE id=submenutab1 onmouseover="javascript:pemgShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:pemgHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+        <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-overview.html"><B> 
+            PEMG-2010 Overview</B></A>
+
+        <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-venue.html"><B>
+            Venue : ECity, Bengaluru </B></A>
+
+        <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-faculty.html"><B>
+            Faculty Members</B></A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B> </A>
+
+
+	<A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-audience.html"><B>
+            Target Audience / Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-proceedings.html"><B>
+            PEMG-2010 Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-download-software.html"><B> 
+              Download Software </B> </A>
+
+
+	<A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-sponsors.html"><B>
+            PEMG-2010 Sponsors</B></A>
+                  
+	<A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-past-workshops.html"><B> 
+             Past Tech. Workshops </B></A>
+   
+        <A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-accommodation.html"><B>
+             Accommodation </B></A>
+
+       
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-local-travel.html"><B>
+            Local Travel</B></A>
+    
+
+	<A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-organisers.html"><B> 
+             Organisers</B> </A>
+
+        <A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-feedback.html"><B>
+             Feedback </B></A>
+
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-acknowledgements.html"><B> 
+             Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-about-contact-address.html"><B>Contact</B></A>
+ 
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onmouseover="javascript:pemgShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores </B></A>
+
+         <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-mode02-gpgpu.html"><B> 
+           Mode-2 GPGPUs/GPU Comp. </B></A>
+
+         <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-topics-of-interest-handson.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+         <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+
+<!--   Sub menu for **** Row-3-Technical program  **** start here -->
+
+
+      <TABLE id=submenutab3 onmouseover="javascript:pemgShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 152px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-overview.html"><B> 
+            Tech. Prog. Overview</B></A>
+
+    
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-at-glance-poster.html"><B> 
+            Prog. at Glance / Poster</B></A>
+
+
+	<A class=menu2 id=submenurow3s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode01-multicore.html"><B> 
+            Mode-1 Multi-Cores</B></A>
+
+	 <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-mode02-gpgpu.html"><B> 
+            Mode-2 GPGPUs/GPU Comp. </B></A>
+	
+
+         <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-keynote-invited-talks.html"><B> 
+            Key-Note / Invited Talks</B></A>
+
+	<A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-demonstration.html"><B> 
+            Demonstration</B></A>
+
+        <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-tech-prog-handson-overview.html"><B> 
+            Lab. Sessions Overview </B></A>
+
+        <A class=menu2 id=submenurow3s8 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-3-TechnicalProgram **** End here -->
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory **** start  here -->
+
+      <TABLE id=submenutab4 onmouseover="javascript:pemgShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 247px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	    <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-overview.html"><B> Comp. Lab. Overview </B></A>
+
+	<A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-access.html"><B> Comp. Lab. Access </B></A>
+
+           <A class=menu2 id=submenurow4s3
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode01-multicore.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+		
+	<A class=menu2 id=submenurow4s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-complab-mode02-gpgpu.html"><B> Mode-2  (GPGPU ) Lab. </B></A>
+
+        <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+	</TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu for **** Row-4-Computing Laboratory ****  End  here -->
+
+
+<!--   Sub menu for **** Row-5-Mode 1 : Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onmouseover="javascript:pemgShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 350px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-lab-overview.html"><B> Mode-1 (Multi-Cores) Lab. </B></A>
+
+	<A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-pthreads.html"><B>  Pthreads</B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+
+	<A class=menu2 id=submenurow5s4
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow5s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi.html"><B>MPI 1.0 / MPI 2.0</B></A>
+ 
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-openmp.html"><B>
+            MPI-OpenMP</B></A>
+ 
+      <A class=menu2 id=submenurow5s7
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-pthreads.html"><B>
+            MPI-Pthreads </B></A>
+
+      <A class=menu2 id=submenurow5s8
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-mpi-tbb.html"><B>
+            MPI-TBB </B></A>
+ 
+      <A class=menu2 id=submenurow5s9 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-java-threads.html"><B> Java Prog. - Threads</B></A>
+
+	<A class=menu2 id=submenurow5s10 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-software-tools.html"><B> Software threads- tools</B></A>
+
+        <A class=menu2 id=submenurow5s11 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Tuning / Perf. </B></A>
+
+        <A class=menu2 id=submenurow5s12 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-perf-math-lib.html"><B> Threads- Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow5s13 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+
+       <A class=menu2 id=submenurow5s14 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Performance </B></A>
+
+
+       <A class=menu2 id=submenurow5s15 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5-Mode 1 : Hands-on ****  End here  -->
+
+
+<!--   Sub menu for **** Row-6-Mode 2 : Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onmouseover="javascript:pemgShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 465px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-lab-overview.html"><B> Mode-2  (GPGPU ) Lab.   </B></A>
+
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-nvidia-gpu-cuda.html"><B>CUDA enabled NVIDIA GPUs </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-amd-stream-comp.html"><B>AMD-ATI Stream Comp.-SDK</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-opencl-opengl.html"><B> GPU Programming - OpenCL    </B></A>
+
+
+	<A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-mode02-gpgpu-hybrid-comp.html"><B>Hybrid Comp. (CPUs/GPUs)</B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6-Mode 2 : Hands-on **** End here  -->
+
+
+
+<!--  Sub menu for **** Row-7-Registration **** Start here  -->
+
+      <TABLE id=submenutab7 onmouseover="javascript:pemgShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-private-sector.html"><B>Private Sector</B></A>
+
+      <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-public-sector.html"><B>Public Sector/ Govt.  Org.</B></A>
+
+      <A class=menu2 id=submenurow7s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-govt-academic-staff.html"><B>Govt. Academic Staff </B></A>
+
+      <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-students.html"><B>Students</B></A>
+
+      <A class=menu2 id=submenurow7s5
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-reg-online-registration.html"><B>Online Registration</B></A>
+ 
+      <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+             href="../../pemg10-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-7-Registration **** End here  -->
+
+
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** Start here  -->
+
+      <TABLE id=submenutab8 onmouseover="javascript:pemgShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 567px; POSITION: absolute" 
+      onmouseout="javascript:pemgHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+      <TBODY>
+      <TR>
+
+      <TD class=menu2>
+
+     <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-address.html"><B>Contact</B></A>
+
+
+     <A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../pemg10-contact-accommodation.html"><B>Accommodation </B></A>
+
+        
+     <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:pemgShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:pemgHideSubMenuDelay('7', 1)" 
+            href="../../index.html"><B>  Home  </B> </A>
+
+  </TD> </TR></TBODY> </TABLE>
+
+  <!--   Sub menu for  **** Row-8-Contact  ***** End here  -->
+
+  </DIV>
+
+<!-- **************** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+
+	     
+           <A class=menul
+	       href="../../pemg10-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 (Multi-Cores) Lab. </A>
+            
+                <!-- *** -->
+                <A class=menulslct
+                  href="../../pemg10-mode01-multicore-pthreads.html">
+                  &#149; Pthreads</A>
+                <!-- *** -->
+			
+	   <A class=menul  
+              href="../../pemg10-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+	   <A class=menul  
+              href="../../pemg10-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+	
+              
+	   <A class=menul
+              href="../../pemg10-mode01-multicore-mpi.html">
+              &#149; MPI 1.0 / MPI 2.0</A>
+              
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-openmp.html">
+              &#149;  MPI-OpenMP</A>
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-pthreads.html">
+              &#149;  MPI-Pthreads</A> 
+
+
+           <A class=menul 
+	      href="../../pemg10-mode01-multicore-mpi-tbb.html">
+              &#149;  MPI-TBB</A>  
+   
+          
+           <A class=menul
+	      href="../../pemg10-mode01-multicore-java-threads.html">
+              &#149;  Java Prog.-Threads</A>
+          
+
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-software-tools.html">
+              &#149;  Software threads - Tools</A>
+
+            
+	   <A class=menul 
+	      href="../../pemg10-mode01-multicore-compiler-tune-perf.html">
+              &#149;  Compilers - Tuning /Perf.</A>
+            
+
+	  <A class=menul 
+	     href="../../pemg10-mode01-multicore-perf-math-lib.html">
+             &#149; Threads - Perf.  Math. Lib. </A>
+
+           
+	  <A class=menul
+	     href="../../pemg10-mode01-multicore-memory-allocators.html">
+             &#149;  Memory Allocators</A>
+            
+
+	  <A class=menul
+	     href="../../pemg10-mode01-multicore-threads-io-perf.html">
+             &#149;  Threads-I/O Performance </A>
+        
+
+          <A class=menul 
+	     href="../../index.html">
+             &#149;  Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt >
+          
+
+ 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD >
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Programming on Multi-Core Processors Using Pthreads (POSIX threads)  </b> </font></DIV> </TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+<BR>
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align=justify><span class="content" >
+   Pthreads are defined as a set of C-language programming types and procedure calls,
+ implemented with a <I> pthread.h </i> <i> header/include  </i> file and a thread library.
+
+ Solaris threads are easily
+ understood by someone familiar with POSIX threads, and while Java threads and the 
+multi-threading in the Win32 and OS/2 APIs are a little different . The subroutines, 
+which comprise the Pthreads APIs, can be formally grouped into three classes such as 
+<I> Thread Management, Mutex Variables </I> and  <I> Condition Variables. </i> Threaded applications offer
+ potential performance gains and practical advantages over non-threaded applications 
+in several other ways as we can observe from the different programs. <BR> <BR>
+
+ Example   programs using different APIs. Compilation and execution
+   of Pthread programs, programs numerical and non-numerical computations
+   are discussed using 
+    different thread APIs to understand  Performance issues on mutli-core processors.
+</span> </p> <BR>
+</td> </tr> 
+</tbody>
+</table>
+
+<!--************Table for Listing of Programs Starts ****************--->
+   <TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+   <!-- ***********************Example 3.1 *********************** -->
+
+	<tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-non-numer-prog-id31">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+        Write Pthread code to Find out minimum in an un-sorted integer array.
+       </font>
+     </td>
+
+   </tr>
+
+
+
+   
+ <!-- *************************Example 3.2 ******************************* -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-non-numer-prog-id32">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+        Write Pthread code to explain <I> Producer-Consumer  </i> example work queues.
+       </font>
+     </td>
+
+   </tr>
+
+
+   <!--*************************Example 3.3 *********************************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-non-numer-prog-id33">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+        Write Pthread code to Find <I> k </i> matches in the list.
+       </font>
+     </td>
+     </tr>
+
+
+<!--*****************************Example 3.4 ******************************* -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-non-numer-prog-id34">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.4 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+        Write pthread code to illustrate data race condition  and also its solution using mutex.
+
+       </font>
+     </td>
+     </tr>
+
+
+
+<!-- *******************************Example 3.5 ***************************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#pthread-non-numer-prog-id35">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3.5<bR> </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+ Write pthread code  to illustrate restructuring  Loop-carried dependence to Loop-independent dependence using pthread APIs.
+
+
+       </font>
+     </td>
+     </tr>
+
+
+
+</TBODY> </TABLE> 
+</p>
+
+<!-- ****************************Table for Listing of Programs Ends ***********************-->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<tD>
+
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books;</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../../reference-opecg-2009/reference-overview-mode01.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+       -[MCMTh-01], [MCMTh-02], [MCMTh-I03], [MCMTh-05], [MCMth-09], [MCMth-11], 
+       [MCMTh-15], [MCMTh-21], [MCBW-44] )  <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</tabe>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<tD width=600>
+<tD>
+<tD>
+
+ <DIV ALIGN=right>
+         <A HREF="pthread-non-numerical.html"> <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+        </DIV>
+</td>
+</tr>
+
+</TBODY> 
+</TABLE> 
+
+<TABLE cellPadding=3 width = " 100% " border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+     <B> Description of Pthread Programs </b> </font> </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+</p>
+
+<!-- ************************ Table Listing of Programs Ends **************************** -->
+
+
+<!-- ********************Example 3.1 starts ********************************** -->
+
+
+
+<a name="pthread-non-numer-prog-id31"> </a>
+
+<table border="0"  height="6">
+<tbody>
+   
+
+    <TR ALIGN=LEFT> 
+      <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 3.1 :   </b> </font> 
+     Write Pthread code  to find out minimum integer in an un-sorted integer array.  <BR>
+
+<!-- ************download start here ***************--> 
+
+        ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-findminimumvalue.c">
+         <I> <FONT COLOR = "blue">pthread-findminimumvalue.c</FONT>  </I>
+      </a>
+    )
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<TD>
+<ul>
+
+ <BR>
+ <LI><B> Objective </B> </LI>
+
+
+ <p align = "justify">
+ To write a Pthreads program to  Write Pthread code  to 
+ find out minimum integer in an un-sorted integer array. 
+      (In-house Multi-Core Real Dense Matrix Comp Suite)
+</P>
+
+
+
+<LI><B> Description </B> </li>
+										
+<P align="justify">
+
+The program randomly generated the list of integers.The list of integers is partitioned equally among the threads. 
+The size of each thread's partition of stored in a variable and the pointer to the start of each thread's partial list 
+is passed to it as a pointer.The minimum value is protected by the mutex-lock .Threads execute the mutex lock to gain 
+exclusive access to the minimum value. Once this access is gained, the value is updated as required, and the lock 
+subsequently released. Since at any time, only one thread can hold the lock, only one thread can update the value.
+</P>
+
+
+
+<LI><B>Input</B> </LI>
+
+<P align="justify">
+  Number of  Threads, Size of the Integer array in terms of Class where<br><br>
+ Class A : 10^7 <BR>
+ Class B : 10^8 <BR>
+ Class C : 10^9 <BR>
+</p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<p> Minimum Value of the list and the execution time.
+</font>
+</p>
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-non-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+
+<!--******************** example 3.1 ends ***********************************-->
+
+
+
+<!--********************** example 3.2 Start ************************************-->
+
+
+<a name="pthread-non-numer-prog-id32"> </a>
+
+<table border="0"  height="6">
+<tbody>
+   
+
+    <TR ALIGN=LEFT> 
+      <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 3.2 :   </b> </font> 
+     Write Pthread code to explain Producer-Consumer example work queues.  <BR>
+
+<!-- ************download start here ***************--> 
+
+        ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-producer-consumer.c">
+         <I> <FONT COLOR = "blue">pthread-producer-consumer.c</FONT>  </I>
+      </a>
+    )
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<TD>
+<ul>
+
+ <BR>
+ <LI><B> Objective </B> </LI>
+
+
+ <p align = "justify">
+ To write a Pthreads program for Producer-Consumer model based on  work queues
+</P>
+
+
+
+<LI><B> Description </B> </li>
+										
+<P align="justify">
+
+
+ This problem   commonly occurs in data flow decomposition in typical distributed computing. Usually, the problem can be decomposed in different 
+ways on target architecture of the computing system, and different tasks can do different work. The most important issue is how the data flow 
+between different tasks requires serious attention from performance point of view.  The <I> producer-consumer </i>  problem falls in this category 
+in which the program has ability to execute in parallel.  In this, the output of one task, the <I> producer, </i>  becomes the input to another, 
+the <I> consumer </i> . The two tasks are performed by different threads, and the second one, <I> consumer </i> , cannot start until the 
+<I> producer  </i>  finishes 
+some portion of its work.  This is quite similar to the concept of pipelining in typical Parallel computing Paradigms. <BR> <BR>
+
+The <I> producer/consumer </i> problem occurs in several typical scenarios. In one scenario, first task may complete many sub-tasks and decides
+ at some point of time, the work should be given to next task. The next task, which is executed by another thread, cannot start the work until 
+the previous sub-tasks are completed by first task.  It is difficult to identify at what point of time the first task completes the work and the 
+delay caused by the first task creates a pause for the second task. After certain point of time, both the tasks can execute in parallel. <BR> <BR>
+
+
+In another scenario, the first task may read of a file and the results of this become the input to next task, which might be threaded. This 
+process introduces substantial delay and the next step cannot begin until the first step completes the reading of file or partial reading of 
+the file is done. It is possible to do new piece of work in the next step and waiting for the completion of first step. <BR> <BR>
+
+The <I> producer-consumer  </I>  problem has different benefits when decomposing a problem. 
+
+The dependence created between <I> consumer </I>  and  <I> producer </I> can cause significant delays if this model is implemented correctly. 
+There are situations
+ in which <I> consumer  </i> threads are idling while waiting for <I> producer  </i> threads. A performance sensitive design seeks to understand 
+the exact nature of
+ the dependence and diminish the delay it imposes. <BR> <BR> 
+
+In an ideal scenario, the producer and consumer plan carefully on their interaction. Also, if the <I> consumer </i> is finishing up while 
+the <I>  producer  </I> is completely done, one thread remains idle while other threads are busy working away.
+
+</p>  
+
+
+<blockquote>
+ 
+<li>
+
+  <P align = "justify"> 
+ The <I> producer </i>  creates tasks and inserts them into a work-queue. The consumer threads pick up tasks from the
+ task queue and execute  them. This concept can be called as <I> producer-consumer </i>  work queues paradigm. Simple instances 
+ of this paradigm in which the  task queue  can hold only one task, which may be short or long but is typically have bounded size. 
+ In this simple model, the <I> producer </i>  thread can  estimate the time taken for <I> consumer  </i> work and insert the 
+ new work in a shared buffer. 
+       </p>
+ </li>
+ 
+<li>     
+
+
+          <p align = "justify">
+ In <I> producer-consumer </i>  work queue paradigm, the complex model application such as multi-media processing, the different 
+    possibilities exist on access to shared buffer. Several possibilities exist in which the producer thread must not overwrite the shared 
+   buffer when the previous task has not been picked by a <I> consumer  </i> thread. 
+    Also, the <I> consumer  </i> threads must not pick up tasks 
+   until there is something present in the shared data structure and individual <I> consumer </i> threads pick up tasks one at a time. 
+ <I> Producer-consumer </i> problem is classic synchronization problem. </font>  </li> 
+  
+   </p>									
+
+ </li>
+
+</blockquote>
+
+
+
+<p align = "justify"> 
+This program makes use of mutex-locks for establishing a producer-consumer relationship between threads. 
+The producer creates data and inserts them into a shared work -queue .The consumer threads pick up from the 
+shared work- queue and consume it.
+</p>
+     
+
+
+<LI><B>Input</B> </LI>
+
+<P align="justify">
+  No. of Producers & No of Consumers and the work-load
+</p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<P align="justify">
+Time taken to complete the <i> producer-consumer </i> model
+</p>
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-non-numerical.html">
+ <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<BR>
+
+</ul>
+
+
+</TD>
+</tr>
+</tbody>
+</table>
+<!-- *********************** example 3.2 ends *********************************** -->
+
+
+
+<!-- ************************ example 3.3 starts ********************************* -->
+
+<a name="pthread-non-numer-prog-id33"> </a>
+
+<table border="0"  height="6">
+<tbody>
+   
+
+    <TR ALIGN=LEFT> 
+      <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 3.3 :   </b> </font> 
+     Write Pthread code to Find k matches in the list.  <BR>
+
+<!-- ************download start here ***************--> 
+
+        ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-finding-k-matches.c">
+         <I> <FONT COLOR = "blue">pthread-finding-k-matches.c</FONT>  </I>
+      </a>
+    )
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<TD>
+<ul>
+
+ <BR>
+ <LI><B> Objective </B> </LI>
+
+
+ <p align = "justify">
+ To write a Pthreads program to finding k matches to a query item in a given list.
+</P>
+
+
+
+<LI><B> Description </B> </li>
+										
+<P align="justify">
+This program finding k matches to a query item in a given list. 
+The list is partitioned equally among 
+the threads. Assuming that the list has <i> n </i> entries, each of the <i> p </i>  threads 
+is responsible for searching <I> n/p  </i> entries of the
+list. 
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<P align="justify"> 
+   Number of threads. 
+  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<P align="justify">
+   Print the k matches of query item in the list.
+
+</p>
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-non-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</ul>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************** example 3.3 ends ********************************** -->
+
+
+
+<!--*********************** example 3.4 starts ************************************* -->
+
+
+<a name="pthread-non-numer-prog-id34"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+   
+
+    <TR ALIGN=LEFT> 
+      <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 3.4 :   </b> </font> 
+     Write pthread code to illustrate data race condition and also its solution using mutex.  <BR>
+
+<!-- ************download start here ***************--> 
+
+        ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-demo-datarace.c">
+         <I> <FONT COLOR = "blue">pthread-demo-datarace.c</FONT>  </I>
+      </a>
+    )
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<TD>
+<ul>
+
+ <BR>
+ <LI><B> Objective </B> </LI>
+
+ <p align = "justify">
+ Write pthread code to illustrate data race condition condition and also its solution using mutex
+</P>
+
+
+
+<LI><B> Description </B> </li>
+										
+<P align="justify">
+
+This code illustrates data race condition which is the situation which occurs when
+	           more than 1 threads are trying to work with or update global variable.
+	           Here  we have taken one global variable named "myglobal" and updated its value
+        	   in function named "thread_function_datarace" twenty times. Also in main function
+                   it is updated again 20 times. We have also included some delay in   				          		  	 
+  "thread_function_datarace". At the end of program we expect value of "myglobal"
+	           to be 40. But it gives some different value. This is because during delay which we 
+	           introduced , other thread comes and do its work. So we get unexpected result.<br><br>
+
+	           To deal with such situations,mutex is used. We have taken another function named
+     		   "thread_function_mutex".In this function we have done same thing as "thread_function_datarace" but used 		        
+   pthread_mutex_lock() and pthread_mutex_unlock() function pair between the calculation of "myglobal".  		    	  
+ Because of use of mutex function only one thread at a time can update global variable. Here we get 		     		  
+ correct value of variable "myglobal".
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<P align="justify"> 
+   None 
+  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<P align="justify">
+   Value of global variable from different functions.
+
+</p>
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-non-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************** example 3.4 ends ********************************** -->
+
+
+
+
+<!-- **************************** example 3.5 starts ************************************ -->
+
+
+<a name="pthread-non-numer-prog-id35"> </a>
+
+
+<table border="0"  height="6">
+<tbody>
+   
+
+    <TR ALIGN=LEFT> 
+      <TD height="90%">
+     <p align = "justify">
+     <FONT COLOR="#FF6600"> <b>  Example 3.5 :   </b> </font> 
+      pthread program  to illustrate restructuring  Loop-carried dependence to 
+    Loop-independent  dependence using 	pthread APIs. <BR>
+
+<!-- ************download start here ***************--> 
+
+        ( Download source code :
+   
+     <a HREF="../pthread-codes/pthread-loop-carried.c ">
+         <I> <FONT COLOR = "blue">pthread-loop-carried.c </FONT>  </I>
+      </a>
+    )
+    </p>
+    
+<!-- ************download End  here ***************--> 
+ </td>
+ </tr> 
+ 
+
+<tr> 
+<TD>
+<ul>
+
+ <BR>
+ <LI><B> Objective </B> </LI>
+
+ <p align = "justify">
+Write pthread code  to illustrate restructuring  Loop-carried dependence to 
+    Loop-independent  dependence using 	pthread APIs.
+</P>
+
+
+
+<LI><B> Description </B> </li>
+										
+<P align="justify">
+
+This code illustrates Loop-carried dependence which is the situation where a value of variable,
+ depends on the previous loop iteration. So we can not parallelize the for-loop. Here we have
+ taken one <i> Sn </i> variable which was assigned in a array and updated its value in each iteration. 
+The value of <i> Sn </i> variable depends on previous loop iteration .This case is so common in parallel
+ programming.
+Now, the loop is  reorganized in such a way that it can be  parallelizable by removing the
+
+loop carried dependency. The solution is divides the iteration into chunks 
+and calculating value of 'up' using power function at first iteration of loop for each thread
+ and multiplies the 'up' value into constant value of <i> orignSn </i>  to getting corresponding value 
+of <i> Snp </i> which is assigned in array. 
+</P>
+
+
+<LI><B>Input</B> </LI>
+
+
+<P align="justify"> 
+   None 
+  </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<P align="justify">
+   Value of <i> Sn </i> and <i> Snp </i>  variables and execution time for serial and parallel computing.
+
+</p>
+
+
+<DIV ALIGN=right>
+   <A HREF="pthread-non-numerical.html"> 
+  <IMG SRC="../pthread-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</ul>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ********************* example 3.5 ends *********************************** -->
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+     <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

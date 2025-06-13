@@ -1,0 +1,41 @@
+#
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+##---------- Makefile for opencl codes----------------
+##---------- uncomment the necessary object to compile----------------
+
+
+CC=g++
+
+
+CLHOME=/usr/local/cuda
+CLINC=-I$(CLHOME)/include
+CLINKLIB=-L$(CLHOME)/lib64
+CLLINKFLAGS=-lOpenCL
+#CLINC = -I/usr/local/AMD-APP-SDK-v2.4-lnx64/include
+#CLINKLIB=-L/usr/local/AMD-APP-SDK-v2.4-lnx64/lib/x86_64
+#CLLINKFLAGS=-lOpenCL
+
+
+# Names of set of example programs
+OBJECT=Vect-Vect-Addition
+#OBJECT=ScalarVectGlobalMemSP
+#OBJECT=ScalarMatrixGlobalMemSP
+#OBJECT=clMultiGPU-VectVectAdd
+
+
+run:
+	$(CC) $(CLLINKFLAGS) $(CLINC) $(CLINKLIB) -o $(OBJECT) $(OBJECT).cpp
+
+clean:
+	rm -f  $(OBJECT)
+

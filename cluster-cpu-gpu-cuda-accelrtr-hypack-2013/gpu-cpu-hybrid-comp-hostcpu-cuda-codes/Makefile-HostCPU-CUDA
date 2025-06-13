@@ -1,0 +1,48 @@
+#
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+#Makefile for running cuda practice programs
+#---------------------------------------------------------------------
+#               Machines Architecture :
+#---------------------------------------------------------------------
+CC  		 =  nvcc
+#CC  		 =  gcc
+CCLINKER 	 =  $(CC)
+COPTION    	 =
+OPTFLAGS   	 =  
+CCFLAGS    	 = -lmpichcxx -lmpich -DMPICH_IGNORE_CXX_SEEK
+#CCFLAGS    	 = -deviceemu
+#INCLUDE		 = /usr/local/cuda/include -I/usr/local/mpich2-1.0.7/include
+#LIBS       	 = /usr/local/cuda/lib/ -L/usr/local/mpich2-1.0.7/lib
+INCLUDE		 = /usr/local/mpich2-1.0.7/include
+LIBS       	 = /usr/local/mpich2-1.0.7/lib
+EXECS     	 =  run
+#---------------------------------------------------------------------
+#               Object files Single Precision ...
+#---------------------------------------------------------------------
+
+#OBJECTS = Mat_Vect_Mult_MPI_CUDA.cu 
+OBJECTS = Vect_Vect_Mult_mGPU_mpi.cu
+#OBJECTS = Vect_Vect_Mult_MPI_CUDA.cu
+#OBJECTS = Mat_Vect_Mult_MPI_CUDA_C++.cu
+#OBJECTS = Mat_Vect_Mult_Pthreds_CUDA.cu
+#OBJECTS = Vect_Vect_Mult_MPI_CUDA_C++.cu
+
+
+#-----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) -I$(INCLUDE) -o $@ $(OBJECTS) -L$(LIBS) $(CCFLAGS)
+
+clean:
+	\rm -rf *.o run
+

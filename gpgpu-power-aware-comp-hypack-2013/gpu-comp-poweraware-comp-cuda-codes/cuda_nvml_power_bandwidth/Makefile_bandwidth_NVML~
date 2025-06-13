@@ -1,0 +1,21 @@
+#### Makefile
+OBJS = cuda_bandwidth_nvml_pthreads_power_main.o cuda_bandwidth_nvml_measure_power.o cuda_bandwidth_nvml_power_kernel.o
+HEADER = ./cuda_bandwidth_nvml_power_kernel_define.h
+
+NVMLLIB = -L../../../tdk_3.304.5/nvml/lib64
+NVMINCLUDE = -I../../../tdk_3.304.5/nvml/include
+EXEC = run
+
+$(EXEC): $(OBJS) $(HEADER)
+	nvcc  -o $@  $(OBJS) $(NVMLLIB) -lnvidia-ml -lcublas 
+
+cuda_bandwidth_nvml_power_kernel.o: cuda_bandwidth_nvml_power_kernel.cu $(HEADER) cuda_bandwidth_nvml_power_kernel_functions.h  
+	nvcc  -c cuda_bandwidth_nvml_power_kernel.cu -arch sm_20 -lcublas -I./
+cuda_bandwidth_nvml_measure_power.o: cuda_bandwidth_nvml_measure_power.cu $(HEADER) 
+	nvcc -c cuda_bandwidth_nvml_measure_power.cu -DMKL_ILP64 -arch sm_20 $(NVMINCLUDE) $(NVMLLIB) -I./ 
+cuda_bandwidth_nvml_pthreads_power_main.o: cuda_bandwidth_nvml_pthreads_power_main.cu cuda_bandwidth_nvml_measure_power.cu cuda_bandwidth_nvml_power_kernel.cu $(HEADER)
+	nvcc -c cuda_bandwidth_nvml_pthreads_power_main.cu -I./
+default: $(EXEC)
+
+clean:
+	rm -f *.o run

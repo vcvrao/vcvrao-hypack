@@ -1,0 +1,1956 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../index.html">
+      <IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+                <!-- ** -->
+	           <A class=menulslct  
+                    href="./../hypack13-mode05-hpc-cluster-lab-overview.html">
+                    &#149; Mode-5 HPC  Cluster</A>
+                   <!-- ** -->
+                  
+	       <A class=menul
+                   href="./../hypack13-mode05-hpc-message-passing-cluster.html">
+                  &#149; Cluster : Multi-Core - MPI </A>
+
+               <A class=menul  
+                   href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html">
+                   &#149; Cluster : GPU - NVIDIA CUDA/OpenCL </A>
+                
+	       <A class=menul  
+                   href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html">
+                   &#149; Cluster : GPU - AMD OpenCL</A>
+
+               <A class=menul  
+                   href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html">
+                   &#149; Cluster : Coprocessors -Intel Xeon Phi</A>
+
+               <A class=menul  
+                   href="./../hypack13-mode05-hpc-cluster-power-perf.html">
+                   &#149; Cluster:Power &amp; Perf.</A>
+
+               <A class=menul 
+	           href="./../ndex.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+<a name="top"> </a> 
+ 
+<TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD>
+
+<H1> hyPACK-2013  HPC GPU Cluster  - Heterogeneous Programming  </H1> 
+</TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+  <td height="24" align="left" >
+  
+<p align ="justify"> <span class ="content">
+
+Two tyes of  Hybrid Heterogneous HPC GPU Cluster is used in  laboratory sessions of workshop. 
+The two clusters i.e., Intel Xeon Processor nodes as host-cpus with CUDA enabled NVIDIA GPUs
+as device accelerator GPUs and another cluster consists of AMD-Opteron processor nodes as 
+host-cpu with AMD-ATI GPUs (AMDFire Stream &amp; AMD-ATI FirePro)  accelerator GPUs. 
+These clusters  can address some of the heterogeneous computing workloads. 
+
+These sytems can be made "adaptive" to the 
+application it is running, assigning the most effective resources in real-time as per 
+application demands, without requiring 
+modifications 
+to the application. The hybrid computing system aim is to develop system software and 
+integrate components of the State-of-the-Art-Technology 
+such as Stream accelerators NVIDIA GPU computing, AMD-ATI SDK. 
+</span> </p>
+
+</td> </tr> 
+</tbody>
+</table>
+
+<!---------------------- Sub-title Starts topics CUDA here-------------------------->
+
+ 
+<table width = 100% cellSpacing=0 cellPadding=0>
+<tbody>
+
+ <tr>
+ <td>
+ <P align= "center"><span class="content" >
+ 
+<div align = "center">
+
+<!---------------------- Sub-title  Host-CPU & OpenCL Start here-------------------------->
+
+ <a href="#hypack-hpc-gpu-cluster-nvidia-configuration">
+  <font size="2"  color="blue"> <B>  CUDA - NVIDIA GPU Cluster Configuration      </b>  </font> </a>     
+ &nbsp; &nbsp;  
+
+  <a href="#hypack-hpc-gpu-cluster-cuda-codes-list">
+  <font size="2"  color="blue"> <B>  Topic of Programs (Assignment Problems) </b>  </font> </a> 
+
+  <BR> 
+
+<!-- ****************List of Programs - simple CUDA programs starts [1] here********************** -->
+
+<P align= "left"><span class="content" >
+ <font size="2" face="Arial" color="red"> 
+   <b> List of  Programs CUDA enabled NVIDIA GPUs</b> 
+  </font> 
+</span> </p>
+
+<BR> 
+
+<table width = 100% cellSpacing=0 cellPadding=0>
+<tbody>
+
+
+<!--******************* Module  1 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpu-cpu-hybrid-comp-hostcpu-cuda-html/gpu-cpu-hyb-comp-cuda-openmp-prog.html">
+                                         
+         <font size="2" face="Arial" color="blue">
+            <b>Module 1 : </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         GPU Cluster : OpenMP - CUDA  - Matrix Computations
+       </font> <BR> <BR>
+     </td>
+
+   </tr>
+
+<!--******************* Module  2 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpu-cpu-hybrid-comp-hostcpu-cuda-html/gpu-cpu-hyb-comp-cuda-pthreads-prog.html">
+                                         
+         <font size="2" face="Arial" color="blue">
+            <b> Module 2 :  </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         GPU Cluster : Pthreads - CUDA Dense Matrix Computations 
+       </font> <BR> <BR>
+     </td>
+
+   </tr>
+
+<!--******************* Module  3 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpu-cpu-hybrid-comp-hostcpu-cuda-html/gpu-cpu-hyb-comp-cuda-mpi-prog.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module 3 : </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          MPI - CUDA - Dense Matrix Compuations - Application Kernels
+       </font> <BR> <BR>
+     </td>
+   </tr>
+
+
+<!--************************** Module 4 ******************************** -->
+	<tr>
+     <td width="100" height="2" valign="top"> 
+                                      
+    <a href="./gpu-cpu-hybrid-comp-hostcpu-cuda-html/gpu-cpu-hyb-comp-cuda-health-monitor.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  4 :</b> </font>   
+       </a> 
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+      GPU Cluster Health Monitoring - Low level Benchmarks 
+     
+       </font> 
+     </td>
+   </tr>
+
+</tbody>
+</table>
+
+<BR> <BR>
+
+<TABLE cellSpacing=0 width = "100%" cellPadding=0> 
+<TBODY>
+
+<TR> 
+<TD> 
+<TR>
+<TD>
+<div align = "right">
+
+<!-- ............... Reference Starts Here .............-->
+
+ <font size="2" face="Arial" color="red"> <B> References  &amp; Web-Pages :  </b> </font> </a> 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode02-gpgpu.html"> 
+ <font color="blue"><B> GPGPU &amp; GPU Computing  </b>  </font> </a> 
+&nbsp; &nbsp; &nbsp;
+
+<a href ="#gpgpu-gpu-comp-nvidia-ref"> 
+  <font size ="2" color = "blue"> 
+    <b>  Web-sites  </b> </font> </a> 
+
+</span> </p>  
+
+<!--........ Reference Ends Here ..................--> 
+</div>
+
+<div align ="right">
+  <a href="#top">
+<img src="./../hypack13_images/top.gif" align="right" border="0" width="13"height="13"></a>
+</div> 
+
+
+<BR>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<HR>
+
+<p align = "justify"> <span class ="content">
+
+The implementation and programming issues of integrated cluster of Multi-Core processors with GPU accelerators, 
+will be discussed.  The HPC GPU Cluster supports Parallel Programming models, which include Shared memory 
+programming  (POSIX Threads, OpenMP, Intel TBB), and MPI 2.0 standard on Multi Core Processors. The Linux programming 
+environment is provided on Cluster and the operating environment can be designed to run large complex application that
+ can make use of GPGPU / GPU computing accelerators attached to Multi-Core Processors in an efficient way. 
+
+  </span>  </p> 
+
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ****************** Configuration of HPC GPU Cluster starts ************************* -->
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0"     width="13"height="13"></a>
+</div> 
+
+<BR>
+<HR>
+
+<!-- .......**  Type-1 Cluster **............  -->
+
+<a name="hegapa-hpc-gpu-cluster-nvidia-configuration"> </a>
+
+<TABLE cellSpacing=0 cellPadding=0 > 
+<TBODY>
+
+<TR> 
+<TD> 
+
+<DIV align=Left><font size="2"> 
+<font size = "2" color ="red" type = "verdana">
+     <b> Type 1 : Configuration of HPC GPU Cluster  </b> 
+</font> 
+</DIV
+
+
+</TD>
+</TR> 
+
+
+<TR> 
+<TD> 
+
+<P align= "justify"> <span class="content">
+Peak performance (in double precision) of HPC GPU Cluster with one node having Single CUDA enabled NVIDIA GPU is 615 Gflop/s
+</span> </p> 
+
+<blockquote>
+
+<DIV align=Left><font size="2"> 
+<font size = "2" color ="black" type = "verdana">
+     <b> 
+         <font color ="red"> <strong> <i> Host-CPU : </i> </font> </strong> Intel Xeon  Quad Core; 
+ 
+         <font color ="red"> <strong> <i> Device GPU :</i> </font> </strong> NVIDIA Fermi Multi GPUs   
+      </b> 
+</font> 
+</DIV>
+</blockquote>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+
+<blockquote>
+ <B> <font color ="red"> Host-CPU (Xeon) </font> </B> 
+ <ul>
+ <li>
+
+ <P align= "justify"> <span class="content">
+  One  Intel Xeon 64bit Quad Core (X5450 processor series (Harpertown Processor)  with 
+  two PCI-e 2.0 x16 Slots; RAM-16 GB; Clock Speed : 3.0 GHz;  Cent OS 5.2;  
+  GCC Version 4.1.2; Dual Socket Quad Core (6 Processors or cores)
+  </span> </p>
+  </li>
+
+<li>
+ <P align= "justify"><span class="content" >
+  Intel MKL version 10.2,  CUBLAS version 3.2, Intel icc11.1
+   Peak Performance : CPU : 96 Gflops (1 Node - 8 Cores)
+  </span> </p>  
+</li>
+</ul>   
+
+
+ <B> <font color ="red"> Device-CPU (NVIDIA)</font> </B>
+ <ul>
+
+
+
+ <li>
+
+<P align= "justify"> <span class="content">
+ One Tesla C2050 (Fermi) with 3 GB memory;  Clock Speed 1.15 GHz, CUDA 3.2 Toolkit
+  </span> </p>
+  </li>
+
+<li>
+ <P align= "justify"><span class="content" >
+ Reported theoretical peak performance of the Fermi (C2050) is   515 Gflop/s in double precision (448 cores; 1.15  GHz; one instruction per cycle) and reported maximum achievable peak performance of DGEMM in Fermi up to 58% of  that peak.
+  </span> </p>  
+</li>
+
+<li>
+The theoretical peak of the GTX280 is 936 Gflops/s in single precision (240 cores X 1.30 GHz X 3 instructions
+per cycle) and reported maximum achievable peak performance of DGEMM  up to 40% of  that peak.
+<BR> <BR>
+</ul>   
+</blockquote>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+
+<HR>
+<div align ="right">
+  <a href="#top">
+<img src="./../hypack13_images/top.gif" align="right" border="0" width="13"height="13"></a>
+</div> 
+
+<!-- ************* Topics  of Programs ********* -->
+
+
+ <a name ="hegapa-hpc-gpu-cluster-cuda-codes-list"> </a>
+
+  <font size="2"  color="red"> <b> List of Programs based on HPC GPU Cluster  </b> </font>  
+
+<ul>
+
+<li>  <P align=justify> <span class="content" >
+Performance of Matrix Computations - NVIDIA-PGI Complier Directives OpenACC on GPUs & Comparison with  CUDA enabled NVIDIA GPUs
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Demonstrate codes using different memory types of CUDA enabled NVIDIA GPUs for matrix computations.
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Example programs on Heterogeneous Programming - OpenCL based on CUDA enabled NVIDIA GPUs 
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Application & System Benchmarks related to HPC GPU Cluster based on CUDA/OpenCL NVIDIA 
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Example programs based on The OpenACC Application Program Interface (a collection of compiler directives and the details are implicit in the programming model and are managed by the OpenACC API-enabled compilers and runtimes) for matrix computations on NVIDIA GPUs.
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Example programs based on CUDA APIs to completely overlap CPU and GPU execution and I/O in HPC GPU Cluster environment.
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Performance of  pageble /pinned (page-locked) host memory & CUDA shared memory usage on CUDA enabled GPUs for application kernels.
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Develop test suites to launch multiple kernels on CUDA enabled NVIDIA single & multiple GPU devices.
+
+<li>  <P align=justify> <span class="content" >
+Programming exercises for Numerical Computations based on CUDA/OpenCL enabled NVIDIA, for  Sparse Matrices Computations
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Special example programs using CUDA Tool Chain on Multi-Core Processors with NVIDIA - GPU Computing CUDA SDK (CULA Tools, CUBLAS, CUFFT, CUSPARSE), NVIDIA Parallel Nsight tool
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Special example programs on matrix computations using Concurrent Asynchronous Execution APIs of CUDA 5.0  enabled NVIDIA GPUs (Single/Multiple devices).
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Demonstrate LLVM-based CUDA complier and toolkit technologies for CUDA enabled 
+GPU  Programming Model
+</span> </p>
+
+<li>  <P align=justify> <span class="content">
+Tuning & Performance using CUDA enabled NVIDIA GPU Libraries; Memory Optimization, Data-access optimization for matrix computations
+Performance of Application Kernels  PDE Solvers by FDM  using  NVIDIA-PGI Complier Directives OpenACC on GPUs; CUDA enabled NVIDIA GPUs
+</span> </p>
+
+<li>  <P align=justify> <span class="content">
+Solution of Partial Differential Equations (Poisson Equation in two dimensional & three dimensional regions) by finite element Method (FEM) using CUDA/OpenCL enabled NVIDIA GPUs & OpenCL on HPC GPU Cluster.
+</span> </p>
+
+<li>  <P align=justify> <span class="content">
+Matrix Computations : Matrix - Vector Multiplication, Matrix-Matrix Multiplication based on MPI and OpenCL/CUDA Implementation on HPC GPU Cluster
+</span> </p>
+
+<li>  <P align=justify> <span class="content">
+Application Kernels demonstration on HPC GPU Clusters (CUDA Prog & Intel TBB)
+Performance of Matrix Computations using vendor supplied tuned mathematical libraries (CUBLAS, MAGMA on NVIDIA GPUs) on HPC GPU Cluster with GPU Accelerators)
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Selective Numerical Computational kernels on Parallel Processing Systems with GPU Accelerator devices using MPI & CUDA & OpenCL enabled NVIDIA GPUs on HPC GPU Cluster
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Special Class of Application Kernels, and Numerical Linear algebra on Multi-Core Processors using Mixed Mode of Programming ( TBB-CUDA, MPI-CUDA, Pthreads-CUDA) on HPC GPU Cluster.
+</span> </p>
+
+
+<li>  <P align=justify> <span class="content" >
+Special Class of Application Kernels, and Numerical Linear algebra on Multi-Core Processors using Heterogeneous Programming ( OpenMP-OpenCL, MPI-OpenCL, Pthreads-OpenCL) on HPC GPU Cluster.
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+HPC GPU Cluster (MPI on host-CPU & GPU - OpenCL - Image Processing -Edge Detection algorithms using OpenACC
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+An Overview of Bio-Informatics : Sequence analysis (Smith Watermann Algorithms) on HPC GPU Cluster - CUDA enabled NVIDIA GPUs & Heterogeneous Programming environment - OpenCL
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Heterogeneous Programming (MPI on host-CPU & OpenCL  on GPU &amp; openACC for  String Search algorithms & Sequence Analysis Applications 
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+Implementation of Image Processing applications (Edge Detection algorithms) on GPGPUs using CUDA/OpenCL enabled NVIDIA GPUs 
+
+<li>  <P align=justify> <span class="content" >
+Implementation of String Search Algorithms - CUDA/OpenCL enabled NVIDIA GPUs of HPC GPU Cluster
+</span> </p>
+
+<li>  <P align=justify> <span class="content" >
+HPC GPU Cluster (MPI on host-CPU & GPU-OpenCL - Open source software Benchmarks - Solution of Matrix system Ax=b of Linear Equations (MAGMA on CUDA enabled GPUs & LINPACK solvers)
+</span> </p>
+</ul>   
+
+
+
+</TD>
+</TR>
+
+</tbody>
+</table>
+  
+
+<div align ="right">
+  <a href="#top">
+<img src="./../hypack13_images/top.gif" align="right" border="0" width="13"height="13"></a>
+</div> 
+
+<BR>
+
+<HR>
+
+<BR>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<a name = "gpgpu-gpu-comp-nvidia-ref">  </a>
+<div align = "left">
+
+
+<STRONG>  <font size="2" face="Arial" color="red">  References </font>  </STRONG>  
+</div>
+ 
+<BR>
+
+
+<!-- ************ Ref Starts ************ -->
+
+<!-- Reference  1 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 1. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://www.nvidia.com/object/nvidia-kepler.html "> 
+      <font color = "blue">  
+         NVIDIA Kepler Architecture
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  2 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 2. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.nvidia.com/cuda-toolkit "> 
+      <font color = "blue">  
+         NVIDIA CUDA toolkit 5.0 Preview Release April 2012
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  3 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 3. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.nvidia.com/category/zone/cuda-zone "> 
+      <font color = "blue">  
+         NVIDIA Developer Zone 
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  4 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 4. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a http://developer.nvidia.com/gpudirect "> 
+      <font color = "blue">  
+         RDMA for NVIDIA GPUDirect  coming in CUDA 5.0 Preview Release, April  2012
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  5 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 5. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf "> 
+      <font color = "blue">  
+         NVIDIA CUDA C Programmig Guide Version 4.2  dated 4/16/2012 (April 2012)
+        </font>  
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  6 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 6. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a http://developer.download.nvidia.com/assets/cuda/files/CUDADownloads/TechBrief_Dynamic_Parallelism_in_CUDA.pdf"> 
+      <font color = "blue">  
+         Dynamic Parallelism in CUDA Tesla K20 Kepler GPUs - Prelease of NVIDIA CUDA 5.0
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  7-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 7. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/cuda-downloads "> 
+      <font color = "blue">  
+         NVIDIA Developer ZONE - CUDA Downloads CUDA TOOLKIT 4.2 
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  8 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 8. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/gpudirect "> 
+      <font color = "blue">  
+         NVIDIA Developer ZONE - GPUDirect
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  9 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 9. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/openacct "> 
+      <font color = "blue">  
+         OpenACC - NVIDIA
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  10 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 10. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a http://developer.nvidia.com/cuda-toolkit "> 
+      <font color = "blue">  
+         Nsight, Eclipse Edition Pre-release of CUDA 5.0, April 2012
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  11 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 11. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.download.nvidia.com/compute/DevZone/docs/html/OpenCL/doc/OpenCL_Programming_Guide.pdf "> 
+       <font color = "blue">  
+         NVIDIA OpenCL Programming Guide for the CUDA Architecture version 4.0 Feb, 2011  (2/14,2011)
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  12-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 12. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/OpenCL/doc/OpenCL_Best_Practices_Guide.pdf"> 
+      <font color = "blue">  
+        Optmization : NVIDIA OpenCL Best Practices Guide Version 1.0 Feb 2011
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  13 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 13. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/OpenCL/NVIDIA_OpenCL_JumpStart_Guide.pdf"> 
+         <font color = "blue">  
+          NVIDIA OpenCL JumpStart  Guide  - Technical Brief 
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  14-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 14. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Best_Practices_Guide.pdf"> 
+       <font color = "blue">  
+          NVIDA CUDA C BEST PRACTICES GUIDE (Design Guide) V4.0, May 2011 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  15 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 15. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf"> 
+       <font color = "blue">  
+          NVIDA CUDA C Programming Guide Version  V4.0, May 2011 (5/6/2011)
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  16 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 16. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/gpu-computing-sdk"> 
+       <font color = "blue">  
+      NVIDIA GPU Computing SDK
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  17-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 17. </b> 
+     
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.apple.com/mac/snowleopard/opencl.html"> 
+       <font color = "blue">  
+          Apple :  Snowleopard - OpenCL
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  18 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 18. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <font color = "black">  
+       <B>  The OpenCL Specification, Version 1.1,</B> Published by Khronos OpenCL
+        Working Group, Aaftab Munshi (ed.), 2010. 
+        </font> 
+     
+    </td>
+    </tr>
+
+<!-- Reference  19 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 19. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/opencl" > 
+     <font color = "blue">  
+         The OpenCL Speciifcation Version : v1.0  Khronos OpenCL Working Group
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  20 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 20. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/assets/uploads/developers/library/overview/OpenCL-Overview-Jun10.pdf" > 
+     <font color = "blue">  
+           Khronos V1.0 Introduction and Overview, June 2010
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  21 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 21. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/files/opencl-1-1-quick-reference-card.pdf" > 
+     <font color = "blue">  
+           The OpenCL 1.1 Quick Reference card.
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  22 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 22. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/sdks/AMDAPPSDK/assets/opencl-1.2.pdf "> 
+        <font color = "blue">  
+          OpenCL 1.2 (pdf file) 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  23 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 23. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/"> 
+     <font color = "blue">  
+           OpenCL 1.1 Specification (Revision 44) June 1, 2011
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference 24 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 24. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/" > 
+     <font color = "blue">  
+           OpenCL Reference Pages </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+<!-- Reference  25 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 25. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href ="http://www.mathworks.com/products/matlab/" > 
+       <font color = "blue">  
+          MATLAB 
+        </font> 
+  
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  26 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 26. </b>  
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.nvidia.com/object/matlab_cuda.html" > 
+       <font color = "blue">  
+         NVIDIA - CUDA MATLAB Acceleration 
+        </font>  
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  27 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+         <b> 27. </b>    
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>CUDA BY EXAMPLE - An Introduction to General Purpose GPU Programnming, 
+     </B> <i>
+    Jason Sanders, Edward Kandrot (Foreword by Jack Dongarra)</i>, 
+    Addison Wessely  2011, nvidia
+     </B>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  28 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+         <b> 28. </b>    
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>
+       Programming Massievely Parallel Processors - A Hands-on Approach, </B>
+      <I> David B Kirk, Wen-mei W. Hwu  </i>
+      nvidia corporation, 2010, Elsevier, Morgan Kaufmann Publishers, 2011
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  29 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 29. </b>  
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.mathworks.com/matlabcentral/fileexchange/30109-opencl-toolbox-v0-17l" > 
+       <font color = "blue">  
+       OpenCL Toolbox for MATLAB
+        </font>   </a> 
+    </td>
+    </tr>
+
+<!-- Reference  30 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 30. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.nag.co.uk/" > 
+          <font color = "blue">  
+        NAG
+        </font>
+      
+    </td>
+    </tr>
+
+
+
+<!-- Reference  31-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 31. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>OpenCL Progrmamin Guide</B>,</i>
+     <I> Aftab Munshi Benedict R Gaster, timothy F Mattson,  James Fung, 
+            Dan Cinsburg</i>, Addision  Wesley, Pearson Education, 2012
+
+    </td>
+    </tr>
+ <!-- **************** Ref Ends  *************** -->
+
+
+<!-- Reference  32 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 32. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+          <a href="http://www.khronos.org/opencl/">
+       <font color = "blue">
+       The OpenCL 1.2 Specification  <I> Khronos OpenCL Working Group </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  33 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 33. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+        <a href="http://www.khronos.org/files/opencl-1-2-quick-reference-card.pdf">
+          <font color = "blue">
+       The OpenCL 1.2 Quick-reference-card<I> ; Khronos OpenCL Working Group </i>
+    
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+<HR>
+
+ 
+<div align ="right">
+  <a href="#top">
+  <img src="./../hypack13_images/top.gif" align="right" border="0" width="13"height="13"></a>
+</div> 
+
+
+</TD></TR>
+
+ <!--  content of web page End here  --> 
+ 
+           
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+
+

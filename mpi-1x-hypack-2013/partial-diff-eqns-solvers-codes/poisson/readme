@@ -1,0 +1,80 @@
+
+-------------------------------------------------------------
+
+		C-DAC Tech Workshop : hyPACK-2013
+                           October 15-18, 2013
+
+-------------------------------------------------------------
+
+Programs
+--------
+
+1dbsr.f :  Solve the 2-d Poisson problem using 1-d decomposition 
+			  and the exchange code in exchng1.f 
+           Exchange data with neighbors for a 1-d decomposition 
+			  of a 2-d domain,using MPI_BSEND and MPI_RECV. Uses 
+			  buffered sends.
+
+1dobsr.f : Solve the 2-d Poisson problem using 1-d decomposition 
+			  and the exchange code in exchng1.f
+           Exchange data with neighbors for a 1-d decomposition 
+			  of a 2-d domain,using MPI_SEND and MPI_RECV. Uses 
+			  "pair" blocking send and recvs.
+
+1dsr.f  :  Solve the 2-d Poisson problem using 1-d decomposition 
+			  and the exchange code in exchng1.f 
+           Exchange data with neighbors for a 1-d decomposition 
+			  of a 2-d domain,using MPI_SENDRECV. Uses MPI_SENDRECV 
+			  buffered sends.
+
+1dnsr.f :  Solve the 2-d Poisson problem using 1-d decomposition 
+			  and the exchange code in exchng1.f 
+           Exchange data with neighbors for a 1-d decomposition 
+			  of a 2-d domain,using MPI_ISEND and MPI_IRECV. Uses 
+			  non-blocking send and recv calls.
+
+           Non-blocking exchange.  This is similar to blocking, 
+		     except that the MPI_WAITALL is called depending on an 
+			  input argument (allowing the communication to overlap 
+			  computation). It uses nonblocking send and receive 
+			  (MPI_ISEND, MPI_IRECV, and MPI_WAITALL)
+
+1dsbsr.f:  Solve the 2-d Poisson problem using 1-d decomposition 
+			  and the exchange code in exchng1.f 
+           Exchange data with neighbors for a 1-d decomposition 
+			  of a 2-d domain,using MPI_SEND and MPI_RECV. Uses 
+			  blocking send and recvs to exchange the boundary data.
+
+1dss.f  :  Solve the 2-d Poisson problem using 1-d decomposition 
+			  and the exchange code in exchng1.f 
+           Exchange data with neighbors for a 1-d decomposition 
+			  of a 2-d domain,using MPI_SSEND and MPI_RECV. Uses 
+			  synchronise send and recv library calls 
+
+2dsr.f  :  Solve the 2-d Poisson problem using 2-d decomposition 
+			  and the exchange code in exchng1.f 
+           Exchange data with neighbors for a 2-d decomposition 
+			  of a 2-d domain,using of a 2-d domain, using MPI_SENDRECV
+
+Scripts
+-------
+
+run:
+Example script to run the programs (and the profiling versions)
+
+function : diff
+Computes the difference between two successive approximate solutions,
+assuming a 1-d decomposition of a 2-d domain
+
+function : diff2d
+Computes the difference between two successive approximate solutions,
+assuming a 2-d decomposition of a 2-d domain
+
+subroutine sweep1d : 
+Routine to perform a Jacobi sweep for a 1-d decomposition decomposition
+of a 2-d domain
+
+subroutine sweep2d : 
+Routine to perform a Jacobi sweep for a 2-d decomposition decomposition
+of a 2-d domain
+

@@ -1,0 +1,16 @@
+	PARAMETER	(NMAX=100, MAXPROCS=32)
+
+	include "mpif.h"
+
+	INTEGER		Numprocs, MyRank
+	INTEGER		ROWSTART(0:MAXPROCS), ROWEND(0:MAXPROCS), 
+     +			TOTALROWS(0:MAXPROCS)
+	REAL		A(NMAX,NMAX), Vector(NMAX),
+     +			FINALVECTOR(NMAX)
+	REAL		OUTPUT(NMAX)
+	INTEGER		ColSize, RowSize, ScatterSize
+
+	COMMON/MATRIX/	RowSize, ColSize, ScatterSize, A
+	COMMON/VECTOR/	Vector, FinalVector
+	COMMON/DIST/	Numprocs,MyRank,ROWSTART,ROWEND,TOTALROWS
+

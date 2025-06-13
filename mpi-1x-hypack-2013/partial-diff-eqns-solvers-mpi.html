@@ -1,0 +1,2240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+               Mode-1 Multi-Core  </A>
+                      
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+                Memory Allocators</A>
+   
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+               Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+               Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+               Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+               Charm++ Prog.</A>
+ 
+              <!-- ** -->
+	      <A class=menulslct 
+               href="./../hypack13-mode01-multicore-mpi.html">
+                Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+               MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+               MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+               MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+               Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+               Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+               Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+               Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+               PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+               Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+               Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+ 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013  Mode 1 : Programming Using MPI 1.X  Implementing Solution for Partial 
+differential Equations - Finite difference & Finite Element Method
+computation algorithms</H1> 
+</TR>
+     
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD> 
+ <DIV align=left><font size="2"  Color="black" face= "Arial">
+<p align = "justify">
+  <B> Module 8 : </b> MPI programs on   Dense  Matrix Computations  -
+  Parallel Programs for implementation of solution of Partial differential 
+  Equations using finite Difference/Finite Element Method 
+  and execute on Message Passing Cluster  or Multi Core Systems that support 
+  MPI library. </p> </DIV> </TD> </TR> 
+</TBODY> 
+</TABLE>
+
+
+
+<!-- ************* Table List of programs : start **************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+
+
+   <!-- *********** Example 8.1 ************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="partial-diff-eqns-solvers-mpi.html#pde-fdm-01">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 8.1 </b> <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Parallel Program for implementation of Soluiton of Poission Equation (PDE) by Finite Difference Method (One dimensional 
+       Decomposition ).  
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- ************** Example 8.2 ************* -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="partial-diff-eqns-solvers-mpi.html#pde-fdm-02">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 8.2 </b> <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+         Parallel Program for implementation of Soluiton of Poission Equation (PDE) by Finite Difference  Method (Two dimensional
+      decomposition).
+       </span> </p>
+     </td>
+
+   </tr>
+ <!-- **************** Example 8.3 ************ -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="partial-diff-eqns-solvers-mpi.html#pde-fdm-03">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 8.3 </b> <BR> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+      <p align = "justify"> <span class = "content">
+         Parallel Program for implementation of Soluiton of Poission Equation (PDE) by Finite Element  Method (Two dimensional
+      decomposition).
+       </span> </p>
+     </td>
+
+   </tr>
+
+ 
+
+
+<tr>
+<td> </td>
+<td>
+<DIV ALIGN="right">
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+</TD> 
+</tr>
+
+</TD>
+</TR>
+</tbody>
+</table>
+<BR>
+<!-- ************* Table List of programs : end *************** -->
+
+
+
+<!-- *******************  Reference Starts Here ******************** -->
+<TABLE cellPadding=3 border=0> 
+<TBODY>
+<TR>
+<tD>
+
+    <font size="2" face = "Arial" color="#990033"> (<B>Source - References :</b>  </font>
+    <font size="2" face = "Verdana" color="black">
+    
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+  &nbsp; &nbsp;  - 
+[MC-MPI-02], [MCMPI-06], [MCMPI-07], [MCMPI-09], [MC-MPI10], [MCMPI-11], 
+  [MCMTh-12],[MCBW-44], [MCOMP-01])
+ <BR>  <BR>
+  </font>
+
+ 
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *******************  Reference Ends  Here ******************** -->
+
+
+
+   
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left><font size="2" Color="black" face= "verdana">
+   <B>  Description of Programs - for solution of PDE's using MPI Library Calls </b> </font></DIV> </TD> </TR> 
+</TBODY>
+ </TABLE> 
+
+
+
+
+<!-- ********* Example 8.1 :  Soluiton of Poission Equation (PDE) by FDM Method (1D dimension) Starts ******* -->
+
+
+
+ <A NAME="pde-fdm-01"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+     
+     <b>  Example 8.1: <BR> <BR> <BR> <BR>  </b> </td>
+    <td width="80%" height="2" align="left">
+     <b>  Write  MPI program to implement Soluiton of Poission Equation (Partal differential Equations) by 
+          Finite Difference Method using One DimensionalDecomposition of Mesh  <BR> </b>
+
+ <!-- ********** download  Starts here ************ --> 
+
+  
+ ( Download  WinRAR ZIP archive: <BR>
+
+   <a href="./partial-diff-eqns-solvers-codes/poisson_fortran_lang.zip">
+ <I><font color ="blue"> Poisson (Two Dim) (WinRAR ZIP archive)  </font></I> </a>
+
+ <!-- ************* download  Ends here ************* -->
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+ 
+
+<table  border="0" ><tbody>
+  <tr>
+<td>
+<BLOCKQUOTE>
+
+<font size="2" face="verdana">
+<LI> <B>Objective : </b> <BR> 
+        
+<p align = "justify"> <span class = "contents">
+  Write a MPI program to solve the Poisson equation with <I>Dirichlet</I>
+   boundary conditions in two space dimensions by finite difference method
+   on <I> structured rectangular type&nbsp; </I>of<I> </I>grid. Use <I>Jacobi</I> 
+   iteration method to solve the discretized equations.
+</span> </p>
+</li>
+
+<LI> <B> Description: </b>  
+        
+
+
+<p align = "justify"> <span class = "contents">
+  In the <I>Poisson problem</I>, the <I>FD</I> method is imposed a regular
+  grid on the physical domain. It then approximate the derivative of unknown
+  quantity <I>u </I>at a grid point by the ratio of the difference in <I>u
+  </I>at two adjacent grid points to the distance between the grid point.
+  In a simple situation, consider a square domain discretized by <I>n</I>
+  x <I>n</I> grid points, as shown in the Figure 8.1(a). Assume that the
+  grid points are numbered in a row-major order fashion from left to right
+  and from top to bottom, as shown in the Figure 8.1(b). This ordering is
+  called <I>natural ordering </I>. Given a total of <I>n</I><SUP>2</SUP><I>
+  </I>points in the domain <I>n</I> x <I>n</I> grid, this numbering scheme
+  labels the immediate neighbors of point <I>i </I>on the top, left, right,
+  and bottom point as <I>i - n, i -</I>1<I>, i +</I>1<I> </I>and <I>i+n </I>, 
+  respectively. Figure 8.1(b) represents partitioning of mesh using one dimensional partitioning
+</span> </p>
+
+
+  <DIV ALIGN="center">
+  <IMG src="./partial-diff-eqns-solvers-images/fdm-poisson1.gif" height=281  width=300>
+  <BR> <BR> 
+
+  <IMG SRC="./partial-diff-eqns-solvers-images/fdm-poisson2.gif" HEIGHT=281  WIDTH=300> 
+</div>
+
+
+<BR> <BR>
+
+     &nbsp;
+
+     Figure 8.1(a). Finite difference grid: Five point stencil approximation&nbsp;
+     &nbsp;&nbsp;
+  
+ 
+     Figure 8.1(b). One dimensional decomposition for 2-D problem, with n=7 
+<BR>
+</li>
+
+<li> <b> Formulation of Poisson Problem : &nbsp;</B>
+<p align = "justify"> <span class = "contents">
+
+The <I>Poisson problem</I> is expressed by the equations <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; <I>Lu&nbsp; =&nbsp; f</I>(<I>x, y</I>)&nbsp; in the interior of domain [0,1] x [0,1] <BR> <BR>
+
+
+ 
+Where <I>L</I> is Laplacian operator in two space dimensions. <BR> <BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<I> u</I>(<I>x,y</I>)<I>&nbsp; =&nbsp; g</I>(<I>x,y</I>) on the boundary of the domain [0,1] x [0,1]&nbsp; <BR> <BR>
+
+ 
+We define a square <I>mesh</I> (also called a <I>grid</I>) consisting
+of the points (<I>x<SUB>i</SUB> , y<SUB>i</SUB></I>), given by&nbsp; <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp; <I>x<SUB>i</SUB> = i / n+</I>1<I>, i=</I>0<I>,
+..., n+</I>1<I>,</I>&nbsp; <BR> <BR>
+
+&nbsp; &nbsp; &nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp; <I>y<SUB>j</SUB> = j / n+</I>1<I>, j=0, ...,n+</I>1,&nbsp; <BR> <BR>
+
+
+where there are <I>n+</I>2 points along each edge of the mesh. We will
+find an approximation to <I>u(x , y)</I> only at the points (<I>x<SUB>i</SUB>,
+y<SUB>j</SUB></I>). Let <I>u<SUB>i, j</SUB></I> be the approximate solution
+to <I>u</I> at (<I>x<SUB>i</SUB>, y<SUB>j</SUB></I>). and let <I>h </I>= 
+1<I>/(n+</I>1<I>)</I>. Now, we can approximate at each of these points
+with the formula&nbsp; <BR> <BR> <I>&nbsp;&nbsp; </I>(<I>u<SUB>i-</SUB></I><SUB>1<I>, j </I></SUB>+<I>u<SUB>i,
+j+</SUB></I><SUB>1</SUB>+<I>u<SUB>i, j-</SUB></I><SUB>1</SUB><I>+u<SUB>i+</SUB></I><SUB>1<I>,
+j</I></SUB><I>-</I>4<I>u<SUB>i, j </SUB></I>)<I>/ h</I><SUP>2</SUP><I>
+= f<SUB>i, j </SUB>.</I>&nbsp; <BR> <BR>
+
+
+<P>Rewriting the above equation as&nbsp; <BR> <RB>
+
+<I>&nbsp;&nbsp; u<SUB>i, j</SUB> = </I>1<I>/4</I>(<I>u<SUB>i-1,
+j</SUB></I>+<I>u<SUB>i, j+</SUB></I><SUB>1</SUB><I>+u<SUB>i, j-</SUB></I><SUB>1</SUB>+<I>u<SUB>i+</SUB></I><SUB>1<I>,
+j</I></SUB><I>-h</I><SUP>2</SUP><I>f<SUB>i, j</SUB></I>),&nbsp; <BR> <BR>
+
+
+Jacobi iteration method is employed to obtain final solution starting
+with initial guess solution <I>u<SUB>i,j</SUB><SUP>k</SUP> </I>for <I>k=</I>0
+for all mesh points <I>u <SUB>i,j</SUB>&nbsp;</I> and solve the following
+equation iteratively until the solution is converged.&nbsp;  <BR> <BR>
+
+<I>&nbsp;&nbsp; u<SUB>i, j</SUB><SUP>k+</SUP></I><SUP>1</SUP><I>
+= </I>1<I>/</I>4(<I>u<SUB>i-</SUB></I><SUB>1<I>, j</I></SUB><I><SUP>k</SUP>+u<SUB>i,
+j+</SUB></I><SUB>1</SUB><I><SUP>k</SUP>+u<SUB>i, j-</SUB></I><SUB>1</SUB><I><SUP>k</SUP>+u<SUB>i+</SUB></I><SUB>1<I>,
+j</I></SUB><I><SUP>k</SUP>-h</I><SUP>2</SUP><I>f<SUB>i, j</SUB></I>).&nbsp;  <BR> <BR>
+
+
+ The resultant discretized banded matrix is shown in the Figure 22.
+
+</span> </p>
+
+
+<!-- ***** Example 6.1 : Solution of Poission Equation (PDE) by FDM Method [ Parallelisation Strategy ] ****** -->
+
+</li>
+
+<LI> <B>Parallelisation strategy : </B> 
+        
+
+<p align = "justify"> <span class = "contents">
+  To parallelize this algorithm, the physical domain is sliced into slabs,
+  with the computations on each slab being handled by a different process.
+  We have used <I>block row-wise strip partitioning </I>as shown in Figure 8.1(a). 
+  Each process gets its own partition as shown in the Figure 8.1(b).
+  To perform the computation in each partition, we need to obtain the grid
+  point information from adjacent processs to compute the values <I>u<SUB>i,j</SUB><SUP>k</SUP>
+  </I>for iteration <I>k</I> for all mesh points <I>u<SUB>i,j</SUB></I> near
+  to the partition boundary. The elements of the array that are used to hold
+  data from other processes are called <I>ghost points</I>.
+</span> </p>
+
+
+<DIV ALIGN="center">
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <IMG SRC="./partial-diff-eqns-solvers-images/fdm-block.gif" HEIGHT=385 WIDTH=360> 
+  <BR>
+
+  
+  Figure 8.2&nbsp;&nbsp; A 16 x 16 block-tridiagonal matrix.
+ </DIV>  
+<BR>  
+
+
+<p align = "justify"> <span class = "contents">
+
+
+   In simple situation, each process sends data to the process on top and
+   then receives data from the process below it. The order is then reversed,
+   and data is sent to the process below and received from the process above.
+   This strategy is simple, it is not necessarily the best way to implement
+   the exchange of ghost points. MPI<I> </I>topologies can be used to create
+   the position of processes and determine the decomposition of the arrays.
+   MPI allows the user to define a particular application, or virtual topology.
+   An important virtual topology is the Cartesian topology. This simply a
+   decomposition in the natural co-ordinate (e.g.. x,y,z) directions. In the
+   implementation of this algorithm, row and column MPI communicators are
+   created. <BR> <BR>
+
+   The iteration is terminated when the difference between successive computed
+   solution at all grid points is strictly less than prescribed tolerance.
+   The routine <I>MPI_Allreduce </I>is used to ensure that all 
+    processes compute the same value for the difference in all of the 
+   elements. <BR>
+
+   For higher order approximation, involving more than four neighbors
+   for approximation of unknown variable or derivatives in the <I>PDE</I>,
+   the communication at the interface of each subdomain may increase. In this
+   case, you may require more interface information from the remote process. <BR> <BR>
+
+
+   More elaborate problems and algorithm often have the same communication
+   structure that&nbsp; will use here to solve this problem. Thus, by studying
+   how <I>MPI</I> can be used here, we are providing fundamentals on how communication
+   patterns appear in more complex <I>PDE </I>problems. At the same time,
+   we can demonstrate a wide variety of message-passing techniques and how
+   <I>MPI</I> may be used to express them. We emphasize that while the <I>Poisson
+   problem</I> is a useful example for describing the feature of <I>MPI</I>
+   that can be used in solving <I>PDE's</I> and other problems that involve
+   decomposition across many processes. <BR> <BR>
+
+
+  The parallel algorithm used in this model is not efficient and may give
+  poor performance relative to more recent and sophisticated, freely available
+  parallel solver for <I>PDE's</I> that use <I>MPI</I>. This example was
+  <I>chosen </I>not because it illustrates the best way to parallelize this
+  particular numerical computation (it doesn't), because it illustrates the
+  basic <I>MPI</I><B> </B><I>send </I>and <I>receive </I>operations, <I>MPI
+  </I> topologies in the context of fundamental type of parallel algorithm, applicable in many 
+   situations.
+</span> </p>
+
+<!-- ***** Example 8.1 : Soluiton of Poission Equation (PDE) by FDM Method [ Input  ]****** -->
+
+<LI> <B>Input</B> </li>
+
+
+<p align = "justify"> <span class = "contents">
+
+
+  User defines the total number of mesh points along each side of the
+  square mesh (also called as grid) and number of iterations for the convergence
+  of the method on command line. There are <I>n</I>+2 grid points on each
+  side of the square mesh. Process with rank 0 performs all the input such
+  as grid point neighbors, co-ordinate values of the nodes, and number of
+  boundary nodes, Dirichlet boundary condition information on boundary nodes,
+  initial guess solution on process with rank 0 is given. <br> <br>
+
+<BR>
+  The program automatically generates all necessary input data and the
+  user has to specify total number of grid points. To make the program as
+  simple as possible to follow, error conditions are not checked in MPI library
+  calls. In general one should check these, and if the calls fails, the program
+  needs to exist smoothly.  <BR> <BR>
+
+  Various special MPI library calls can be used for the solution of poission
+  equation by finite difference method. MPI provides to the programmer, good
+   choice of decomposition depends on the details of the underlying hardware.
+  MPI allows the user to define a particular application, or virtual topology.
+  An important virtual topology is the cartesian topology which is simply
+  a decompostion of a grid. <BR> <BR>
+
+  Advanced point-to-point communication library calls such as <I>MPI_Send</I>
+  and <I>MPI_Recv</I> (blocking communication calls), <I>MPI_Send</I> and
+  <I>MPI_Recv</I> ( ordered send and receive blocking communication calls),
+  <I>MPI_SENDRECV</I> ( Combined send and receive), <I>MPI_BSEND</I> (Buffer
+  send), <I>MPI_ISEND</I>, <I>MPI_IRECV</I> (Non-blocking communication calls)
+  and <I>MPI_Ssend</I> (synchronus sends) can be used 
+  in the implementation of parallel programe on IBM AIX cluster. One 
+  dimensional and two dimensional decomposition of mesh is used. Jacobi 
+  iterative method is employed for the iterative method. <BR> <BR>
+
+</span> </p>
+
+
+
+<!-- ****  Example 8.1 :Solution of Poission Equation (PDE) by FDM Method [using Adv.pt-to-Pt] ***** -->
+
+
+<LI>
+<B>Implementation using MPI advanced Point-to-Point Communications library calls</B> </li> 
+
+
+<!-- ***** Example 8.1: Solution  of Poission Equation (PDE) by FDM Method [1D Partitioning] ******* -->
+
+
+<BR> <BR>
+<LI> <B>One Dimensional Decomposition of Mesh :</B>&nbsp;  
+
+
+<p align = "justify"> <span class = "contents">
+
+  We consider square grid in a two dimensional region and assume that
+  number of grid points in <I>x</I>-direction and y-direction is same. The
+  actual message passing in our program is carried out by the MPI functions
+  <I>MPI_Send</I> and <I>MPI_Recv</I>. The first command sends a message
+  to a designated process. The second receives a message from a process.
+  We have used simple MPI point-to-point communication calls <I>MPI_Send</I>
+  and <I>MPI_Recv</I> in various programs. We study more detail about the
+  advanced point-to-point communication library calls below. <BR> <BR>
+
+  Consider an example in which process 0 wants to send a message to process
+  1, and there is some type of physical connection between 0 and 1. The message
+  <I>envelope</I> contains at least the information such as the rank of the
+  receiver, the rank of the sender, a tag and a communicator. A couple of
+   natural questions might occur. What if a process one is not ready to receive
+   it? What can process zero do? There are three possibilities.<BR> <BR>
+
+ 
+  1. Process zero can stop and wait until process  one is ready to receive the message, 
+  <BR> <BR>
+
+ 2.It can copy the message out of  send buffer into  some internal buffer. This buffer may be located 
+  on process zero, process one, or somewhere else. <BR> <BR>
+
+  3. Return from the MPI_Send call or it can fail.  <BR> <RB>
+        
+</span> </p>
+
+
+<p align = "justify"> <span class = "contents">
+
+  As long as there is space available to hold a copy of the message, the
+  message passing system should provide this service to the programmer rather
+  than making the process to stop dead in its tracks until the matching receive
+  is called. Also, there is no information specifying where the receiving
+  processes should store the message. Thus, until process 1 calls <I>MPI_Recv</I>,
+  the system doesn't know where the data that <I>Process</I> 0 is sending
+  should be stored. When <I>Process</I> 1 calls <I>MPI_Recv</I>, the system
+  software that executes receive can see which (if any) buffered message
+  has an envelope that matches the parameters specified by <I>MPI_Recv</I>.
+  If there isn't a message, it waits until one arrives. If the MPI implementation
+  does copy the send buffer into internal storage, we say that it buffers
+  the data. <BR> <BR> 
+
+
+
+  Different buffering strategies provide different levels of convenience
+  and performance. For large applications that are already using a large
+  amount of memory, even requiring the message-passing system to use all
+  available memory may not provide enough memory to make this code work.
+  Sometimes, the code runs (it does not <B><I>deadlock</I></B>) but it does
+  not execute in parallel. <BR> <BR>
+
+
+
+  All of these issues suggest that programmers should be aware of the
+  pitfalls in assuming that the system will provide adequate buffering. If
+  a system has no buffering, then <I>Process</I> 0 cannot send its data until
+  it knows that <I>Process</I> 1 is ready to receive the message, and consequently
+  memory is available for the data. Programming under the assumption that
+  a system has buffering is very common (most systems automatically provide
+  some buffering), although in MPI parlance, it is unsafe. This means that
+  if the program is run on a system that does not provide buffering, the
+  program will <B><I>deadlock</I></B>. If the system has no buffering, Process
+  0's first message cannot be received until <I>Process</I> 1 has signaled
+  that it is ready to receive the first send, and <I>Process</I> 1 will hang
+  while it waits for Process 0 to execute the second send. <BR> <BR> 
+
+  We will describe ways in which the MPI programmer can ensure that the
+  correct parallel execution of a program does not depend on the amount of
+  buffering, if any, provided by the message-passing system. 
+</span> </p>
+</li>
+<BR> <BR>
+
+
+<!-- ******* Example 8.1: Solution of Poission Eq. (PDE) by FDM - 1DDecomposition - Ordered / Receive ***** -->
+
+<LI> 
+<B>(1) Ordered Send and Receive</B>&nbsp; </li>
+
+<p align = "justify"> <span class = "contents">
+
+   We discuss issues regarding MPI functions, which fail if there is no
+   system buffering. We explain the issues regarding unsafe and provide alternative
+   solutions. First, why are the functions unsafe? Consider the case that
+   we have two processes similar to what we have given in Table 3.1. Then
+   where will be a single exchange of data between process 0 and process 1?
+   If we synchronize the processes before the exchanges we'll have approximately
+   the following sequence of events: <BR> <BR>
+ </span> </p> 
+<DIV align="center">
+<TABLE BORDER="1" NOSAVE >
+<tbody>
+<TR>
+   <TD> Time </TD>
+   <TD>  Process 0 </tD>
+   <TD>  Process 1  </TD>
+</TR>
+<TR>
+
+  <TD>  1 <BR>  2 </TD>
+  <TD>  MPI_Send to 1 <BR> MPI_Recv from 1 </tD>
+  <TD>  MPI_Send to 0 <BR> MPI_Recv from 0 </tD>
+ 
+</TR>
+</tbody>
+</TABLE> 
+
+
+
+<BR>
+ Table 3.1 Process 0 sends a message to Process 1 <BR>
+
+</div> 
+
+<p align = "justify"> <span class = "contents">
+  As explained earlier, if there's no buffering, the <I>MPI_Send</I> will
+   never return. So process 0 will wait in <I>MPI_Send</I> until process 1
+  calls <I>MPI_Recv</I>. We've encountered this situation and it is called
+  as <B><I>deadlock</I></B>. Two options are considered to make them safe
+   either by re-organising the <I>send</I> and receive or let MPI make them
+   safe through use of different MPI library calls.<BR> <BR>
+
+   In order to make them safe by reorganizing the <I>sends</I> and <I>receives</I>,
+   we need to decide who will send first and who will receive first. One of
+   the easiest ways to correct for a dependence on buffering is to order the
+   sends and receives so that they are paired up. That is, the sends and receives
+    are ordered so that if one process is sending to another, the destination
+   will do receive that matches that send before doing a send of its own.
+   Now, the ordered sequence of events is listed in the table 3.2&nbsp; <BR> <BR>
+</span> </p>
+
+<DIV align="center">
+
+<TABLE BORDER="1" NOSAVE >
+<TR>
+   <TD> Time </TD>
+   <TD>  Process 0 </tD>
+   <TD>  Process 1  </TD>
+</TR>
+<TR>
+
+  <TD>  1 <BR>  2 </TD>
+  <TD>  MPI_Send to 1 <BR> MPI_Recv from 0 </tD>
+  <TD>  MPI_Recv from 1 <BR> MPI_Send to 0 </tD>
+ 
+</TR>
+</TABLE> 
+<BR> 
+
+ Table 3.2 Process 0 sends an message to Process 1 <BR>
+
+</div>
+
+<p align = "justify"> <span class = "contents">
+So there may be a delay in the completion of one communication, but
+the program will complete successfully.&nbsp; 
+</span> </p>
+
+<BR> <BR>
+
+
+<!-- **** Example 8.1 : Solution  of Poission Eq. (PDE) by FDM -1DDecomposition - Combined Send/Receive ****** -->
+
+
+<li> <B>(2) Combined Send and Receive&nbsp;</B>&nbsp; 
+
+
+<p align = "justify"> <span class = "contents">
+The approach of pairing the sends and receives is effective but can
+    be difficult to implement when the arrangement of processes is complex
+   (for example, with an irregular grid). An alternative is to use special
+     MPI calls, not worrying about <B><I>deadlock</I></B> from a lack of buffering.&nbsp;
+
+   A simpler solution is to let MPI take care of the problem. The function
+   <I>MPI_Sendrecv</I>, as its name implies, performs both send and receive,
+     and it organizes them so that even in systems with no buffering the calling
+     program won't deadlock, at least not in the way that the 
+    <I>MPI_Send</I> / <I>MPI_Recv</I> implementation deadlocks. 
+    The syntax of MPI_Sendrecv  is&nbsp; <BR> <BR>
+
+   <FONT FACE="Courier New,Courier">
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   int MPI_Sendrecv(void* send_buf, int send_count, MPI_Datatype send_type, <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   int destination, int send_tag,&nbsp;void* recv_buf, int recv_count, int recv_type,  <BR>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   int source, int recv_tag,MPI_Comm comm, MPI_Status *status) 
+
+   </FONT>
+
+<BR> <BR>
+
+    Notice that the parameter list is basically just a concatenation of
+   the parameter lists for the <I>MPI_Send</I> and <I>MPI_Recv</I>. The only
+   difference is that the communicator parameter is not repeated. The destination
+   and the source parameters can be the same. The "send" in an <I>MPI_Sendrecv</I>
+   can be matched by an ordinary <I>MPI_Recv</I>, and the "receive" can be
+   matched by an ordinary <I>MPI_Send</I>. The basic difference between a
+   call to this function and <I>MPI_Send</I> followed by <I>MPI_Recv</I> (or
+   vice versa) is that MPI can try to arrange that no deadlock occurs since
+   it knows that the sends and receives will be paired. <BR> <BR>
+
+   Recollect that MPI doesn't allow a single variable to be passed to two
+   distinct parameters if one of them is an ouut parameter. Thus, we can't
+   call <I>MPI_Sendrecv</I> with <I>send buf - recv buf</I>. Since it is very
+   common in practice of paired send/receives to use the same buffer, MPI
+   provides a variant that does allow us to use a single buffer: Note that this implies the
+   existence of some system buffering is required. <BR> <BR>
+
+   <FONT FACE="Courier New,Courier">
+
+   
+    int MPI_Sendrecv_replace(void* buffer, int count, MPI_Datatype Datatype,  <BR>
+
+   &nbsp;&nbsp;&nbsp;  
+   int destination, int send_tag, int recv_tag, MPI_Comm comm, MPI_Status *status)
+  </FONT> 
+ 
+<BR> <BR>
+
+</span> </p>
+
+<!-- ***** Example 8.1 : Solution  of Poission Eq. (PDE) by FDM - 1DDecomposition - Buffered Send/Receive ***** -->
+
+<li> <B>(3) Buffered Send and Receive</B>&nbsp; </li>
+
+<p align = "justify"> <span class = "contents">
+   Instead of requiring the programmer to determine a safe ordering of
+   the send and receive operations, MPI allows the programmer to provide a
+   buffer into which data can be placed until it is delivered (or at least
+   left in the buffer). The change in the exchange routine is simple; one
+    just replaces the <I>MPI_Send</I> calls with <I>MPI_Bsend</I>. If the programmer
+    allocates some memory (buffer space) for temporary storage on the sending
+   processor, we can perform a type of non-blocking send. The semantics of
+  buffered send mode are ; <BR> <BR>
+</font>
+
+   <FONT FACE="Courier New,Courier">
+
+   int MPI_Bsend_init(void* buf, int count, MPI_Datatype datatype, int dest,  int tag, <BR>
+
+   &nbsp;&nbsp;&nbsp; 
+     MP I_Comm comm, MPI_Request *request)
+  </font> <BR> <BR>
+
+  Builds a handle for a buffered send <BR> <BR>
+
+  <FONT FACE="Courier New,Courier">
+   int MPI_Bsend(void* buf, int count, MPI_Datatype datatype, int dest, int tag, <BR>
+    &nbsp;&nbsp;&nbsp; 
+     MP I_Comm comm)
+  </font> <BR> <BR>
+
+
+  In addition to the change in the exchange routine, MPI requires that
+  the programmer provide the storage into which the message may be placed
+   with the routine <I>MPI_Buffer_attach</I>. This buffer should be large
+   enough to hold all of the messages. <BR> <BR>
+
+   Attaches  a user-specified buffering  for sending <BR>
+
+
+   <FONT FACE="Courier New,Courier">
+   int MPI_Buffer_attach(void* buf, int size) 
+   </font> <BR> <BR>
+
+   Removes an existing Buffer  (for use in <I> MPI_Bsend </i> <BR>
+
+
+   <FONT FACE="Courier New,Courier">
+   int MPI_Buffer_detach(void** buf, int* size) 
+   </font> <BR> <BR>
+</li>
+
+
+   <!-- *** Example 8.1: Solution of Poission Eq. (PDE) by FDM - 1DDecomposition -
+        Non-Blocking Send and Receive **** -->
+
+
+
+<font size="2" face="verdana">
+
+
+ <LI>
+   <B>(4) Non-blocking Send and Receive&nbsp;</B>
+ 
+
+<p align = "justify"> <span class = "contents">
+
+   Another approach involves using communications operations that do not
+   block but permit the program to continue to execute instead of waiting
+   for communications to complete. However, the ability to overlap computation
+   with communication is just one reason to consider the non-blocking operations
+   in MPI; the ability to prevent one communication operation from preventing
+    others from finishing is just as important. Non-blocking communication
+   is explicitly designed to meet these needs. <BR> <BR>
+
+
+   A non-blocking SEND or RECEIVE does not wait for the message transfer
+   to actually complete, but it returns control back to the calling process
+   immediately. The process now is free to perform any computation that
+   does not depend on the completion of the communication operation. Later
+   in the program, the process can check whether or not a non-blocking SEND
+   or RECEIVE has completed and if necessary wait until it completes. The
+   syntax of non-blocking communications has been explained in the next section.
+   A call to a non-blocking send or receive simply starts, or posts, the communication
+   operation. It is then up to the user program to explicitly complete the
+   communication at some later point in the program. Thus, any non-blocking
+   operation requires a minimum of two function calls: a call to start the
+   operation and a call to complete the operation. <BR> <BR>
+
+
+   The basic functions in MPI for starting non-blocking communications
+   are <I>MPI_Isend</I> and <I>MPI_Irecv</I>. The "I" stands for "immediate,"
+    i.e., they return (more or less) immediately. Their syntax is very similar
+    to the syntax of <I>MPI_Send</I> and <I>MPI_Recv </I> ;  <BR> <BR>
+</font>
+
+   <FONT FACE="Courier New,Courier">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+   int MPI_Isend (void* buffer, int count, MPI_Datatype datatype int destination, <BR>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+      int tag,   MPI_Comm comm, MPI_Request* request)
+  </FONT> <BR> <BR>
+
+   and <BR> <BR>
+
+ <FONT FACE="Courier New,Courier">
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      int MPI_Irecv (void* buffer, int count, MPI_Datatype datatype int source,  <BR>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+      int tag, MPI_Comm comm, MPI_Request* request)  <BR> <BR>
+    </FONT>
+</span> </p>
+
+<p align = "justify"> <span class = "contents">
+
+ <font size="2" face="verdana">
+
+   The parameters that they have in common with <I>MPI_Send</I> and <I>MPI_Recv</I>
+    have the same meaning. However, the semantics are different. Both calls
+   only start the operation. For <I>MPI_Isend</I> this means this means that
+   the system has been informed that it can start copying data out of the
+   send buffer (either to a system buffer or to the destination). For <I>MPI_Irecv</I>,
+   it means that the system has been informed that it can start copying data
+   into the buffer. Neither send nor receive buffers should be modified until
+   the operations are explicitly completed or cancelled. <BR> <BR>
+
+    The <I>request</I> parameters purpose is to identify the operation started
+    by the nonblocking call. So it will contain information such as the source
+    or destination, the tag, the communicator, and the buffer. When the nonblocking
+    operation is completed, the request initialized by the call to <I>MPI_Isend</I>
+    or <I>MPI_Irecv</I> is used to identify the operation to be completed. <BR> <BR>
+
+   There are a variety of functions that MPI uses to complete nonblocking
+   operations. The simplest of these is <I>MPI_Wait</I>. It can be used to
+   complete any nonblocking operation. <BR> <BR></font>
+   <FONT FACE="Courier New,Courier">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Wait(MPI_Request* request,MPI_Status* status)
+   </FONT>
+
+  <BR> <BR>
+<font size="2" face="verdana">
+
+    The request parameter corresponds to the request parameter returned
+    by <I>MPI_Isend</I> or <I>MPI_Irecv</I>. MPI_Wait blocks until the operation
+    identified by request completes, if it was a <I>send,</I> either the message
+    has been sent or buffered by the system, if it was a <I>receive</I>, the
+    message has been copied into the receive buffer. When <I>MPI_Wait</I> returns,
+    request is set to <I>MPI_REQUEST_NULL</I>. This means that there is no
+    pending operation associated to <I>MPI_Request</I>. If the call to <I>MPI_Wait</I>
+    is used to complete an operation started by <I>MPI_Irecv</I>, the information
+    returned in the status parameter is the same as the information returned
+    in the status by a call to <I>MPI_Recv</I>. <BR> <BR>
+
+    Finally, it should be noted that it is perfectly legal to match blocking
+     operations with non-blocking operations. For example, a message sent with
+    <I>MPI_Isend</I> can be received by a call to <I>MPI_Recv</I>.
+
+</span> </p> </LI>
+
+
+<!-- *** Example 6.1 : Soluiton of Poission Eq. (PDE) by FDM - 1DDecomposition - Communication  Modes **** -->
+
+
+<LI><B> (5). Communication Modes : </B> 
+<p align = "justify"> <span class = "contents">
+   We discussed the idea of safety in MPI. A program is safe if it will
+   produce correct results even if the system does not provide buffering.
+   Most programmers of message-passing systems expect the system to provide
+   some buffering and, as a consequence, they routinely write unsafe programs.
+   If we are writing a program that must absolutely be portable to any system,
+   we can guarantee the safety of our program in two ways : <BR. <BR>
+
+  
+    We can reorganize our communications so that the program will not deadlock if sends cannot 
+    complete until a matching  receive is posted.  <BR> <BR>
+
+    Other solution is to reorganize our own buffering. In either case, we are, effectively, changing the 
+   communication mode.  <BR>
+        
+   There are four communication modes in MPI : standard, buffered, synchronous,
+   and ready. They correspond to four different types of send operations.
+   There is only a standard mode for receive operations. In standard mode,
+   it is up to the system to decide whether messages should be buffered. <BR> <BR>
+</span> </p>
+<!-- **** Example 8.1 : Soluiton of Poission Eq. (PDE) by FDM - One DimDecomposition -
+ Comm Mode-Synchronization **** -->
+
+
+ <B>  Synchronous Mode </B> 
+
+<p align = "justify"> <span class = "contents">
+   In synchronous mode a send won't complete until a matching receive has
+    been posted and the matching receive has begun reception of the data. To
+    ensure that a program does not depend on buffering, MPI provides the routine
+   <I>MPI_Ssend</I>. In many special applications, it is possible to show
+   that if the program runs successfully with no buffering, it will run with
+   any amount of buffering. MPI provides a way to send a message in such a
+   way that the send does not return until the destination begins to receive
+   the message. MPI provides three synchronous modes send operations: <BR> <BR>
+</font>
+
+   <FONT FACE="Courier New,Courier">
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Ssend(void* buffer, int count, MPI_Datatype datatype, int destination, <BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    int tag, MPI_Comm comm)&nbsp; <BR> <BR>
+
+ 
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Issend(void* buffer, int count, MPI_Datatype datatype, int destination, <BR>
+ 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+     int tag, MPI_Comm comm, MPI_Request* request) <BR> <BR> 
+
+   &nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Ssend_init(void* buffer, int count, MPI_Datatype datatype, int destination, <BR>
+ 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   int tag, MPI_Comm comm, MPI_Request* request)
+  
+   </FONT> <BR> <BR>
+<font size="2" face="verdana">
+
+   Their effect is much the same as the corresponding standard mode sends.
+   However, <I>MPI_Ssend</I> and the waits corresponding to <I>MPI_Issend</I>
+   and <I>MPI_Ssend_init</I> will not complete until the corresponding receives
+   have started. Thus, synchronous mode sends require no system buffering,
+   and we can assure that our program is safe if it runs correctly using only
+   synchronous mode sends. 
+   </span> </p> 
+   <BR> <BR>
+
+
+<!-- ************  Example 8.1 :Soluiton of Poission Eq. (PDE) by FDM - 1DDecomposition -Comm Mode- Ready Mode *** ** -->
+
+
+
+<B>  Ready Mode</B> 
+
+<p align = "justify"> <span class = "contents">
+
+   On some systems it's possible to improve the performance of a message
+   transmission if the system knows, before a send has been initiated, that
+   the corresponding receive has already been posted. For such systems, MPI
+   provides the ready mode. The parameter lists of the ready sends are identical
+   to the parameter lists for the corresponding standard sends: <BR> <BR>
+</font>
+
+  <FONT FACE="Courier New,Courier">
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Rsend(void* buffer, int count, MPI_Datatype datatype, int destination <BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    int tag, MPI_Comm comm)&nbsp; <BR> <BR>
+
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Irsend(void* buffer, int count, MPI_Datatype datatype, int destination,<BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    int tag, MPI_Comm comm, MPI_Request* request) <BR> <BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    int MPI_Rsend_init(void* buffer, int count, MPI_Datatype datatype, int destination,<BR>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    int tag, MPI_Comm comm, MPI_Request* request)
+
+  </FONT>
+  <BR> <BR>
+
+
+
+  The only difference between the semantics of the various ready sends
+  and the corresponding standard sends is that the ready sends are erroneous
+  if the matching receive hasn't been posted, and the behavior of an erroneous
+  program is unspecified. <BR> <BR>
+
+  We have discussed in detail about the use of various MPI point-point
+  communications library calls in order to write safe MPI programs. The different
+  MPI library calls used in each iteration of Jacobi method may give different
+  performance on a given parallel computer.
+
+<BR> <BR>
+
+  We emphasize that while the <I>Poisson problem</I> is a useful example
+  for describing the feature of MPI that can be used in solving <I>PDE</I>'s
+  and other problems that involve decomposition across many processes. The
+  parallel algorithm used in this model is not efficient and may give poor
+  performance relative to more recent and sophisticated, freely available
+  parallel solver for <I>PDE</I>'s that use MPI. <BR> <BR>
+
+
+  This example was chosen not because it illustrates the best way to parallels
+  this particular numerical computation (it doesn't), because it illustrates
+  the basic MPI <I>send</I> and <I>receive</I> operations, MPI topologies
+  in the context of fundamental type of parallel algorithm, applicable in
+  many situations.  
+
+</span> </p> </LI>
+
+
+<DIV align="right"> 
+    <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+</BLOCKQUOTE>
+</td> 
+   </tr> </tbody>
+</table> 
+
+<!-- ********* Example 8.1 :  Soluiton of Poission Equation (PDE) by FDM Method (1D dimension) Ends *********** -->
+
+<!-- *********** Example 8.2 : Soluiton of Poission Equation (PDE) by FDM Method (2D dimension) Starts ********** -->
+
+
+
+<P> <A NAME="pde-fdm-02"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+     
+     <b>  Example 8.2: <BR> <BR> <BR> <BR></b> </td>
+    <td width="80%" height="2" align="left">
+     <b>  Write  MPI program to implement Soluiton of Poission Equation (Partal differential Equation) by 
+          Finite Difference Method using two dimensionalDecomposition of Mesh  <BR> </b>
+
+<!-- *********** download  Starts here ************ --> 
+  
+ ( Download  WinRAR ZIP archive: <BR>
+
+   <a href="./partial-diff-eqns-solvers-codes/poisson_fortran_lang.zip">
+ <I><font color ="blue"> Poisson (Two Dim) (WinRAR ZIP archive)  </font></I> </a>
+
+ <!-- ************* download  Ends here ************* -->
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+<table  widht = "100%" border="0" >
+<tbody>
+ <tr>
+<td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+
+<LI> <B>Objective </b> : <BR> 
+
+
+ <p align = "justify"> <span class = "contents">
+   Write  MPI program to implement Soluiton of Poission Equation (Partal differential Equation) by 
+      Finite Difference Method using Two dimensionalDecomposition of Mesh  
+ </span> </p> </li>
+
+
+  <!-- ****  Example 8.2 : Soluiton of Poission Eq. (PDE) by FDM - 2D Decomposition of mesh ***** -->
+
+
+<LI><B>Two Dimensional Decomposition of Mesh&nbsp;</B> 
+
+<p align = "justify"> <span class = "contents">
+
+  We use higher dimensional decompositions to partition the domain and
+  find the solution to the Poisson problem by using Jacobi iteration. We
+  let MPI to compute the decomposition of the domain using <I>MPI_Cart_create</I>. <BR> <BR>
+
+  In the earlier programs, the messages have consisted of contiguous areas
+  in memory, so the basic datatypes such as <I>MPI_INTEGER</I> and <I>MPI_DOUBLE_PRECISION</I>,
+  accompanied by a count, have been sufficient to describe the messages. We use MPI's derived datatypes, 
+  which allow us to specify noncontiguous direction. <BR> <BR>
+
+   In the earlier iteration scheme, we have used <I>MPI_Send</I> and <I>MPI_Recv</I>
+   to exchange data between top and below processes. This strategy is simple
+   but it may pose problems if the parallel system doesn't have adequate buffer.
+   Consequently, it is not necessarily the best way to implement the exchange
+   of ghost points. The simplest solution to correct for a dependence on buffering
+   is to order the sends and receives so that they are paired up. That is,
+   the sends and receives are ordered so that if one process is sending to
+   another, the destination will do receive that matches that send before
+   doing a send of its own. <BR> <BR>
+
+  The approach of pairing the sends and receives is effective, but can
+  be difficult to implement when the arrangement of processes is complex.
+  An alternative is to use the <I>MPI_Sendrecv</I>. This routine allows you to send 
+  and receive data without worrying about deadlock from a lack of 
+  buffering. Each process then sends to the process below it and receives 
+  from the process above it.
+
+
+  <!-- ******** Example 8.2 : Soluiton of Poission Eq. (PDE) by FDM - 2D  Decomposition 
+       of mesh output ********* -->
+
+
+  <LI><B>Output : </B>
+
+
+<p align = "justify"> <span class = "contents">
+   The program prints the progress of the iterations, final iteration
+   count, computed solution and the difference of the solution on process with rank <I>0</I>. 
+</span> </p>
+ </font>
+<DIV align="right"> <a href="partial-diff-eqns-solvers-mpi.html">
+ <IMG src="./../hypack13_images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+</li>
+
+ </BLOCKQUOTE>
+</td> 
+</tr> 
+</tbody>
+</table> 
+ 
+  <!-- ******* Example 8.2: Soluiton of Poission Eq. (PDE) by FDM - Two Dimensional Decompositon  ENds ******** -->
+
+
+
+
+  <!------- Example 8.3: Soluiton of Poission Eq. (PDE) by FEM - Two Dimensional Decomposition ENds ---------->
+
+
+
+ <A NAME="pde-fdm-03"></A> 
+  <table border="0"  height="6">
+  <tbody>
+    <tr>
+     <td width="18%" height="2" align="left">
+     
+     <b>  Example 8.3: <BR> <BR> <BR> </b> </td>
+    <td width="80%" height="2" align="left">
+     <b>  Write  MPI program to implement Soluiton of Poission Equation 
+        (Partal differential Equation) by 
+          Finite Element Method uisng Graph Partitioning method  </b><br
+
+     </td>
+    </tr> 
+    </tbody>
+    </table> 
+
+<table  border="0" ><tbody>
+  <tr>
+<td>
+<BLOCKQUOTE>
+<font size="2" face="verdana">
+
+
+<LI> <B>Objective : </b> <BR> 
+
+
+<p align = "justify"> <span class = "contents">
+
+  You will develop MPI program to solve the Poisson equation
+  with <I>Dirichlet</I> boundary conditions in two space dimensions by
+  Finite Element (FE) method using triangular elements. You will
+  use conjugate gradient iterative method  to solve the assembled 
+  system of equations and graph partitioning algorithms for unstructured mesh 
+  decomposition.
+ </span> </p> </li>
+
+
+<LI> <B>Background </B> </LI>
+
+
+<p align = "justify"> <span class = "contents">
+  A significant number of the application problems in the various scientific
+  fields involve the solution of coupled partial differential equation (PDE)
+  systems in complex geometries and Finite Element (FE) method.  
+  In the FE discretization of simple two dimensional region, if the complete
+  region is decomposed into required subdomains, each group of cells within
+  a subdomain can be processed in parallel. An optimal decomposition is the
+  one which minimizes the communication bandwidth of the problem. Optimal
+  decomposition of the mesh can be obtained by graph partitioning algorithms.
+  The graph partitioning algorithm is employed to create nearly load balanced
+  subdomains and to minimize the interprocesser communications. In all FE
+  computations, the computation of elementary matrices and solution of associated
+  matrix systmes are compute intensive. These computations will be repeated
+  for transient FE analysis. The performance of application depends how these
+  computations can be done effectively on parallel machine. <
+
+  Since many suchsystems are evolving with time, time forms a additional dimension for 
+  these computations. Even for a small number of grid points, a three dimensional
+  coordinate system, and a resonable discritezed time step, most of the models
+  involve trillions of operations. <BR> <BR>
+
+  Also, suppose that a parallel explicit or explicit-like algorithm is
+  to be implemented on an <I>MIMD</I> computer. It could be, for example,
+  an iterative solver for the Poissson equation, or a time integration explicit
+  algorithm for the transient analysis. Typically, these computations involve
+  matrix-vector products and inner products which can evaluated in parallel.
+  This can give good performance and minimize stroage requirements to solve
+  large size of partial differential equations.  <BR> <BR>
+
+  On other hand, if implicit-like algorithm is used to solve the PDE, then one has to solve 
+  the matrix solution of system of equations <B>A</B> <I>x</I> = <I>b</I> in parallel. In this
+  case, a higher level of parallelism is obtained by treating the interface
+  nodes as a separate entity and numbering the unknowns so that all subdomains
+  can be processed in parallel after the interface problem. <BR> <BR>
+
+
+  The major difficulty is in the solution of matrix system <B> A x = b </B> which
+  is due to sparseness of the matrix <B> A </B>. Direct/Iterative methods can be 
+  used to solve the matrix system of equations. Both have advantages and 
+  disadvantages from parallel processing point of view. Direct methods often 
+  poses problems due to memory limitations for large matrix solution techniques
+  on parallel computers. Iterative methods require less memory and one can able to 
+  solve large size of matrix solution techniques. However, the parallelisation 
+  of these algorithms for various types of matrices may pose additional difficulties.
+
+ </span> </p> </li>
+
+<LI> <B>The Poisson Problem </B> :
+
+
+<p align = "justify"> <span class = "contents">
+  The <I>Poisson problem</I> is a simple partial differential equation
+  <I>(PDE)</I> that is at the core of many applications. In this technique,
+  an approximate solution to a PDE governing the behaviour of a physical
+  system is obtained. <BR> <BR>
+
+<DIV align="center">
+
+  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <I>D<SUP>2</SUP>u&nbsp; =&nbsp; f(x,y)</I>&nbsp;
+  in the interior of domain&nbsp;
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I> u(x,y)&nbsp; =&nbsp; g(x,y)</I> on
+  the boundary of domain &nbsp; <BR> <BR>
+</Div>
+
+  One of the widely adopted techniques for unstructured grid generation
+  is the automatic triangulation, which involves algorithmic division of
+  the physical region into nearly triangular elements with specific properties
+  by mesh generation algorithms.  <BR>  <BR> 
+ </span> </p> 
+
+
+  <DIV ALIGN=center>
+  <IMG SRC="./partial-diff-eqns-solvers-images/fem-discrete.gif" HEIGHT=340 WIDTH=360 ALIGN=justify> <BR><BR>
+   </DIV>
+
+ <DIV ALIGN=center>
+  Figure 8.3(a). A typical Finite element mesh in two dimension. &nbsp; &nbsp; 
+  Figure 8.3(b). Finite element discretization of two dimensional mesh &nbsp; &nbsp;  </div>
+  <BR> <BR>
+
+<p align = "justify"> <span class = "contents">
+  The given two dimensional region isdiscretized into collection of preselected finite elements say
+  triangular elements as shown in Figure 1(a-b). The triangular element with three nodal points
+  is considered for finite element approximation. We use piece-wise linear
+  degree basis functions for FE approximation and derive element
+  equations for typical elements in the mesh. Galerkin method has ben employed 
+  to obtain weak (integrated) formulation of the poisson system of equations. <BR> <BR>
+
+
+  The elementary matrix and elementary vector is computed for each element then assembly of elementary 
+  matrices is performed  and the boundary conditions have been imposed at approriate grid points on 
+  the boundary of domain resulting non-singular matrix systems of linear equations. The matrix system of 
+  equationsis then solved to obtain the solution of unknown variables in the entire domain.
+</span> </p> </li>
+
+
+
+<LI> <B> Parallelisation strategy </B> </LI>
+
+
+<p align = "justify"> <span class = "contents">
+  <I>Step 1 :</I> We first generate the finite element mesh and construct 
+   the dual (Geometrical) graph of the finite element mesh. In the dual
+   graph, each node represent triangular element and edge represent common
+   triangle side between two triangles.<BR> <BR>
+
+  The graph partitioning algorithm is employed to create
+  nearly load balanced sub domains and to minimize the interprocesser communications.
+  The multilevel recursive bisection algorithm can be used for graph partition.
+  The FE mesh decomposition problem can be modelled as a graph partitioning
+  problem in which the vertices of a graph are divided into a specified number
+  of subsets such that few edges join two vertices in different subsets.
+  A partition of the graph into subgraphs leads to a decomposition of the data
+  and/or task associated with a computational problem and the subgraphs can
+  then be mapped to the processors of a multiprocessor. <BR> <BR>
+
+  Initially, unstructured triangular mesh, followed by graph partition algorithm has 
+  been performed  on one of the processors, say 0, resulting into give <I>n</I> subdomains
+  on <I>p (=n) </I>. The figures 8.4(a) - (b) represent finite element mesh in irregular mesh 
+  region and the mesh partitioning of the finite element mesh. 
+</span> </p> </li>
+
+<div align="center">
+  <IMG SRC="./partial-diff-eqns-solvers-images/fem-lake-superior-coarse_mesh.gif"  HEIGHT=150 WIDTH=350>
+  <IMG SRC="./partial-diff-eqns-solvers-images/fem-lake-superior-withoutrepart.gif" HEIGHT=150 WIDTH=350>
+</div>
+
+
+<DIV ALIGN=center>
+
+  Figure 8.4(a). A typical Finite element mesh in two space dimensions &nbsp; &nbsp; &nbsp;
+
+  Figure 8.4(b). Mesh partitioning into eight subdomains &nbsp; &nbsp; </div>  <BR> <BR>
+
+<p align = "justify"> <span class = "contents">
+ <I>Step 2 :</I> After sending the necessary mesh data and boundary data 
+      of <I>k<SUP>th</SUP></I>sub domain to <I>k<SUP>th</SUP></I> procressor by <B>MPI_broadcast,
+     </B> from the master processor 0, the elementary matrices will be computed in parallel.
+  <BR> <BR>
+
+ <I>Step 3 :</I> A partial assembly of elementary matrices in the interior of each 
+     subdomain will be done on each processor and triangles near the interface are marked 
+     to do the computations later.  This require interporcessor communication. <BR> <BR>
+
+ <I>Step 4 :</I> Each subdomain selects specified number equations of the assembled matrix to 
+  perform the matrix solution techniques. Each sub-domain  will consider internal nodes and the 
+  choose the nodes on interface of the  subdomain if certain criteria satisfies. The selection of 
+  criteria is very important in order to ensure load balance among various subdomains. A simple criteria 
+  such as identifying independenet set of nodes on the interface for each sub-domain  can be implemented. 
+  This may cause load imbalance in the application.  The point-point communication across the neighbouring 
+  processors take place. Repeted communication  of neighbours should be avoided. <BR> <BR>
+  Now, every processor has set of required rows of the matrix. Also, a part of the right hand side of the vector 
+  is available on each processes.  <BR> <BR>
+
+ <I>Step 5 :</I> Identify the boundary nodes on every processor and apply boundary conditions to obtain 
+  resultant nodal equations on every processor. <BR> <BR>
+
+ <I>Step 6 :</I> Knowing the initial guess value of the solution variable, employ parallel conjugate gradient 
+  (CG) method to solve the resultant matrixsystem of equations. In fact, every processes has a block matrix which 
+  corresponds to the corresponding sub-domain. The computation of matrix and vector in <I> CG </I> methods play a 
+  vital  role for performance and it depends on matrix structure (i.e. <I> dense </I> or <I> sparse </I>). <BR> <BR>
+
+ <I>Step 7 :</I> Process 0 prints the computed solution of unknown variables in the entire mesh. <BR> <BR>
+</span> </p> </li>
+
+<LI> <B>Remarks </B></LI>
+
+
+<p align = "justify"> <span class = "contents">
+  More elaborate problems and algorithm often have the same communication structure that we will use here 
+  to solve this problem. Thus, by studing how <I>MPI</I> can be used here, we are providing fundamentals on how 
+  communication patterns appear in more complex <I>PDE </I>problems. At the same time, we can demonstrate a wide 
+  variety of message-passing technique and how <I>MPI</I> may be used to express them. The parallel algorithm used in
+  this model is not efficient and may give poor performance relative to more recent and sophisticated, freely available 
+  parallel solver for <I>PDE's</I> that use <I>MPI</I>. This example was <I>chosen </I>not because it illustrates
+  the best way to parallelize this particular numerical computation (it doesn't), because it illustrates the basic 
+  <B>MPI </B><I>send </I>and <I>receive </I>operations, MPI topologies in the context of fundamental type of parallel
+  algorithm, applicable in many situations.
+</span> </p> </li>
+
+<LI> <B> Input </B></LI>
+
+
+<p align = "justify"> <span class = "contents">
+  Finite element mesh input such as mesh connectivity, co-ordinate values of the nodes, and number of 
+  Dirichlet boundary nodes, initial guess solution is given on  <i> master  </i> processor. Process 0 will read
+  in the data from a data file. This data must strictly adhere to the following format. Line one, two and 
+  three consists of integers <I>npoint</I>, <I>nelem</I> and <I>nbnode </I>which represent the number of nodes, triangles,
+  and number of boundary nodes. After a leaving a blank line, the next <I>nelem </I>lines contain triangle number, 
+  nodal connectivity of its three nodes in anti-clock wise. The next <I>npoin </I>lines contain node number, and 
+  its <I>x, y </I>coordinate values.  The next <I>nbnode</I> lines contain a global node number (integer) and its 
+  boundary vlaue. 
+</span> </p> </li>
+
+
+<LI> <B>Output </B></LI>
+
+<p align = "justify"> <span class = "contents">
+
+  The program should print both the progress of the iterations, final iteration count, and the computed solution 
+  with node numbers for final iteration on master processor with process <I>id</I> 0. Process 0 prints the computed 
+  solution of unknown variables in the entire mesh.  
+
+</span> </p> </li>
+
+
+</BLOCKQUOTE>
+</td> 
+</tr>
+</tbody>
+</table>
+
+
+ <!-- ******  Example 8.3: Soluiton of Poission Eq. (PDE) by FEM - Two  DimensionalDecomposition  ENds ******** -->
+
+<DIV ALIGN=right>
+  <A href ="#top"><IMG SRC="../hypack13_images/top.gif" border=0 width="13" height="13"></a>
+</DIV>
+
+
+</TD>
+</TR>
+
+ <!--  content of web page End here  --> 
+
+         
+</TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

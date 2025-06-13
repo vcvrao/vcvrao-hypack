@@ -1,0 +1,2749 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../../index.html">
+          <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                           
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                             
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   	
+	    <A class=menul
+              href="./../../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+              <!-- ** -->
+	      <A class=menulslct
+                href="./../../hypack13-mode01-multicore-mpi.html">
+                &#149; Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	    <A class=menul
+	      href="./../../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../../index.html">
+              &#149; Home</A>	
+           
+<!-- ****************** left section code for about link End  here ************* -->
+	
+
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt >
+          
+ 
+
+
+
+<TABLE width ="100%"  cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+    
+<TABLE  width ="100%"  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B>  hyPACK-2013 : Prog. Using MPI 1.X  and Fortran 90 language
+
+</b> </font>
+</DIV> 
+</TD>
+</TR> 
+
+<TR> 
+<TD> 
+ <p align = "justify"> <span class = "content"> 
+
+  MPI Fortran 90  programs on   Dense Matrix Computations  (
+  Vector - Vector, Matrix -Vector,  Matrix-Matrix  Multiplication) are 
+  considered for execution on Message Passing Cluster  or Multi Core Systems that support 
+  MPI library. </span> </p> 
+</TD> </TR> 
+
+</TBODY> 
+</TABLE>
+
+
+<!-- ****************** Table List of programs : start ***************** -->
+
+<TABLE width ="100%"  border=0> 
+<TBODY>
+
+  <!-- *************** Example 1 ********************* -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-helloworld">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+          Fortran 90 program to print <i> Hello World program.  
+       </span> </p>
+     </td>
+     </tr>
+
+
+ <!-- ****************** Example 2 ********************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-welcome">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+        Fortran 90 program to print <i> Welcome Message .
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+ <!-- ****************** Example 3 ******************* -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-equation-of-line">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Fortran 90 program to find equation of line joining two distinct points .
+       </span> </p>
+     </td>
+
+   </tr>
+
+ 
+<!-- *************** Example 4 ********************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-matrix-vector">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Fortran 90 program to compute Matrix-Vector multiplication using intrinsic function  MATMUL ( Use Math Library function) 
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+<!-- ******************* Example 5 ********************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-root-of-quad-eqn">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 5 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+        Fortran 90 program to find root of a quadratic equation.
+       </span> </p>
+     </td>
+
+   </tr>
+
+  
+<!-- *************** Example 6 ********************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-least-square">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+        Fortran 90 program for Least Square Approximation method. 
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+
+<!-- ************** Example 7 ****************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-newton-raphson">
+         <font size= "2" face="Arial" color="blue">
+            <b>  Example 7</b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+      Fortran 90 program to find the roots of equation f(x) = 0 using Newton Raphson
+    method. 
+       </span> </p>
+     </td>
+
+   </tr>
+ 
+
+<!-- **************** Example 8 ***************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-gauss-solver">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 8 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Fortran 90 program to solve a system of linear equations Ax = b using 
+      Gaussian Elimination method. 
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- *************** Example 9 ******************* -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-matrixmatrix-mult">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 9 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+       Fortran 90 program to compute Matrix and Matrix Multiplication 
+         using block checkerboard partitioning and Cannon Algorithm. (Assignment)
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- **************** Example 10 ************** -->
+    <tr>
+     <td width="100" height="2" align="left"> 
+       <a href="#f90-mpi-io-single-file">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 10 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="600" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+       Write an MPI fortran90 program performing MPI I/O to single file (Using MPI 2.0).
+       </span> </p>
+     </td>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<TABLE width ="100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> 
+</DIV>
+
+<HR>
+
+</TD>
+</TR>
+
+
+<TR>
+<TD bgColor = "cccdd77889">  
+      <DIV align=Left><font size="2"  color="black" face = "Arial"> 
+        <b> Description of Programs:  MPI- Fortran 90    </b>  
+      </font></DIV> 
+   </TD> 
+  </TR>
+
+<TR>
+<TD>
+
+ <TR>
+ <TD>
+  MPI Fortran 90  programs on   Dense Matrix Computations  are 
+  considered for exeuction on Multi Core Systems that support 
+  MPI library. <BR> <BR>
+
+</TD>
+</TR> 
+
+</tbody>
+</table>
+
+
+<!-- **************** Example 1 starts ************************ -->
+<A NAME="f90-helloworld"> </A>
+
+<table border="0"  height="6">
+<tbody>
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 1 :   </b> </font> 
+    Description of Implementation of Fortran 90 Program to print <I> Hello World! </I>
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-hello-world.f90">
+   <I> <font color ="blue"> <B> f90-hello-world.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+<tr>
+<td>
+
+<ul>
+
+   <LI> <B>Objective</B> </LI>
+    <P>  Write a simple Fortran 90 program to print &quot;<I>Hello World!</I>&quot;<I>.</I>
+    </P>
+
+
+   <LI><B>Description</B> </LI>
+      <P> This program prints the message&nbsp; &quot;<I>Hello World</I>!&quot; on screen when it executes.</p>
+ 
+	
+  <LI><B>Input</B> </li>
+  <P> None </p>
+	
+  <LI><B>Output&nbsp;</B> </LI>
+
+   <P align="justify"> Message "<I>Hello World!</I>".  </P>
+		
+</ul>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> 
+</DIV> 
+  
+<HR>
+
+</td>
+</tr> 
+</tbody>
+ </table>
+<!-- ***************** Example 1 f90 Hello World  Ends ****************** -->
+
+
+<!-- ******************* Example 2 Starts ******************* -->
+
+
+ <A NAME="f90-welcome"> </A>
+
+<table border="0"  height="6">
+<tbody>
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 2 :   </b> </font> 
+    Description for implementation of Fortran 90 program to print <I>Welcome Message</I>
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-welcome.f90">
+   <I> <font color ="blue"> <B> f90-welcome.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+<tr>
+<td>
+
+<ul>
+
+<LI>
+<B>Objective</B>
+<P> Write a simple Fortran 90 program to print which asks user his/her title, first name and last name,
+	and prints a welcome message using both full name and first name.</P>
+</P>
+</LI>
+
+<LI><B>Description</B> </LI>
+<P> This program performs simple character manipulation. However, there are some slight difficulties in
+	combining the title, first and last names in a form which will avoid multiple spaces within the
+	composite name. The most useful intrinsic procedure TRIM is used. TRIM removes any trailing blanks
+	from the character string provided as its argument. Notice that TRIM has been used in the second
+	PRINT statement to ensure that the question mark at the end of the question comes immediately after
+	the name, and not separated from it by several spaces.</P>
+
+	
+<LI><B>Input</B>
+    <P align="justify"> Title, first name and last name of an user. </P>		
+</LI>
+
+<LI><B>Output&nbsp;</B> </LI>
+
+   <P align="justify"> Welcome message using both full name and first name.  </P></font>
+
+</UL>
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  	
+<HR>
+
+</td>
+ </tr> 
+</tbody>
+ </table>
+
+<!-- ***************** Example 2 Ends *********************** -->
+
+
+<!-- **************** Example 3 Starts ********************** -->
+
+<A NAME="f90-equation-of-line"> </A>
+<table border="0"  height="6">
+<tbody>
+
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 3 :   </b> </font> 
+   Description for implementation of Fortran 90 program to find equation of line joining two distinct points.
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-linear-eqn.f90">
+   <I> <font color ="blue"> <B> f90-linear-eqn.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+ <tr>
+ <td>
+
+<UL>
+
+
+<LI><B>Objective</B> </li>
+ <P> Write Fortran 90 program to calculate equation of line from given two distinct points.  </P>
+
+	
+<LI><B>Description :</B> </li>
+
+<p>  
+
+Each process reads respective input  array of different size <I>n</I>/<I>p</I>
+from the given input file. The process wit rank 0 accumalates the total number of integers to be recevied 
+from the each process and allocates memory for the output integer array and performs MPI_gatherv operation. </p>
+
+ <p align = "justify">
+    A straight line is defined by an equation of the form 
+ <i>ax</i>  + <i>by</i> + <i>c</i> = 0 
+  and at first sight we could simply use the three coefficients of
+   this equation as the representation of a line. However these
+three coefficients are not unique.</p>
+
+
+   <p align = "center"> 
+   <img border="0" src="./../mpi-f90-f95-images/linear-f90.gif" width="268" height="200"> </p>
+
+  <p align = "center"> &nbsp;Figure 1 : Line joining two distinct points </p> <BR>
+
+<p align = "justify"> The slope of the line is (y<sub>2</sub> - y<sub>1</sub>)/(x<sub>2 </sub>-x<sub>1</sub>) if x<sub>1</sub> is not equal to x<sub>2</sub>.</p>
+
+
+ <p align = "justify"> "At any point (x, y) other than (x<sub>1</sub>, y<sub>1</sub>), the slope is (y - y<sub>1</sub>) / (x - x<sub>1</sub>).</p>
+
+                <p align = "justify"> Therefore  equation of line becomes </p>
+ <p align = "justify">
+ (x<sub>2</sub> - x<sub>1</sub>)(y - y<sub>1</sub>) = (y<sub>2</sub> - y<sub>1</sub>)(x - x<sub>1</sub>)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+
+
+ <p align = "justify">Rearranging equation (1) we have </p>
+
+  <p align = "justify"> 
+
+           &nbsp;(y<sub>2</sub> -&nbsp; y<sub>1</sub>)x + (x<sub>1</sub>- x<sub>2</sub>)y - y<sub>2</sub>x<sub>1</sub>
+                + y<sub>1</sub>x<sub>1</sub> + y<sub>1</sub>x<sub>2</sub> - y<sub>1</sub>x<sub>1</sub>
+                = 0 </p>
+
+    <p align = "justify"> Therefore </p>
+  <p align = "justify">a  = &nbsp;  y<sub>2</sub> - y<sub>1</sub> &nbsp; &nbsp; &nbsp; &nbsp; 
+                       
+ b = &nbsp; x<sub>1</sub> - x<sub>2</sub> &nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+   c = &nbsp; y<sub>1</sub>x<sub>2</sub> - y<sub>2</sub>x<sub>1</sub> </p>
+
+
+ <p align = "justify">
+In this example we have defines two data types, one to represent a point by means of its coordinates in two
+dimensional space only and the other to represent a line which is also in two dimensional space by the coefficients 
+ of its defining equation. We have assumed that the user does not supply two
+  identical points.</p>
+  </li>
+
+		
+<LI><B>Input</B> </Li>
+   <P>  Coordinates of two distinct points. </p>
+	
+<LI><B>Output&nbsp;</B>  </li> 
+
+   <P> Equation of line joining two distinct points. </P>
+
+</ul>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> 
+
+<HR>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- **************** Example 3 Ends ******************* -->
+
+
+<!-- ****************** Example 4 Starts ***************** -->
+<A NAME="f90-matrix-vector"> </A>
+<table border="0"  height="6">
+<tbody>
+
+
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 4 :   </b> </font> 
+Description for implementation of Fortran 90 program to compute Matrix-Vector multiplication using intrinsic   function <I>MATMUL</I>
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-matrixvector-mult.f90">
+   <I> <font color ="blue"> <B> f90-matrixvector-mult.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+
+<tr>
+<td>
+
+<ul>
+<LI><B>Objective</B> </LI>
+<p>
+  Write a Fortran 90 program for matrix-vector multiplication using intrinsic function <I> MATMUL </I> 
+</P>
+
+	
+<LI><B>Description</B> </LI>
+
+  <P align="justify">
+	Fortran 90 provides some intrinsic functions specifically designed for vector and matrix
+	operations, where it is assumed that matrices are stored in two dimensional arrays and vectors are
+	stored in one dimensional arrays.. Fortran 90 contains a large number of other intrinsic functions
+	which operate on arrays of any dimension. In this example <I>Matrix_A</I> and <I>Vector</I> are
+	allocated using <I>ALLOCATE</I> statement. <I>ALLOCATE</I> statement dynamically allocates space
+	for an allocatable array. Intrinsic function <I>MATMUL</I> is used to perform matrix and vector
+	multiplication and the resultant vector is stored in <I>C</I>. Currently allocated arrays are
+	deallocated by the related <I>DEALLOCATE</I> statement. The <I>DEALLOCATE</I> statement has the
+	effect of changing its atatus to not currently allocated and making the memory space that it was
+	using available for other purpose.
+</P>
+
+	
+<LI><B>Input</B> </LI>
+<p align = "justify"> Size of the matrix and Vector
+
+</P>
+
+	
+<LI><B>Output&nbsp;</B> </LI>
+
+<P> Output Vector 
+</P>
+
+</ul>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+<HR>
+
+</td>
+ </tr> 
+
+</tbody>
+ </table>
+<!-- **************** Example 4 Ends ************************* -->
+
+
+<!-- ************* Example 5 Starts ******************* -->
+
+<A NAME="f90-root-of-quad-eqn"> </A>
+<table border="0"  height="6">
+<tbody>
+
+
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 5 :   </b> </font> 
+Write f90  Program  to find roots of a quadratic equation
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-root-quadratic-eqn.f90">
+   <I> <font color ="blue"> <B> f90-root-quadratic-eqn.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+<tr>
+<td>
+
+<ul>
+
+<LI><B>Objective</B> </LI>
+<P> Write a MPI program to gather values from each process and store the output values in the global integer 
+array <B>A </B>of dimension <I>n </I> on<I> p</I> process of  cluster. Use
+ <i> MPI_Allgather</I>Communication library call in the program.
+</P>
+
+	
+<LI><B>Description</B> </lI>
+
+ On the surface, finding root of a quadratic equation, appears to
+       be a simple problem. However, even such a simple problem
+        involves subtle numerical issues if we are trying to produce a
+          robust software.
+
+	Consider simple quadratic equation </p>
+				
+
+	<P> <i>ax</i><sup>2</sup> + <i> bx</i> + <i> c</i> = 0&nbsp; </p>
+				
+
+<P> where <i> a </i>  is not equal to zero, has two roots, given by the
+      formula </P>
+<P> <img border="0" src="./../mpi-f90-f95-images/roots-f90.gif" width="157" height="82"> </P>
+
+	<P> It is immediately apparent that there are three possible cases:<br>
+        <br>
+            (1) <i>b</i><sup>2 </sup>&gt; 4<i>ac</i> in which case the equation will have
+      <i> two</i> <i> real roots.</i><br>
+       <br>
+         (2) <i>b</i><sup>2&nbsp; </sup>= 4<i>ac</i> in which case the equation will have
+       <i> one root</i> (or two coincident roots)<br>
+     <br>
+   (3) <i>b</i><sup>2 </sup> &lt; 4<i>ac</i> in which case the equation will have
+      <i> no roots</i> (or at least no real roots, and we are not concerned with imaginary roots in this program.</P>
+
+<P align="justify">
+       In this example we have demonstrated the use of <i>CASE</i>
+      statement. However there are two major difficulties. The first
+       of these is that the values of the coefficients in this sort of
+     problem will normally be real, and therefore the expression <i> 
+		 b</i><sup>2</sup> &lt; 4<i>ac</i> is also real. 
+
+But the <i>case_expression</i> in a
+   CASE statement must be integer, character or logical.&nbsp; </P>
+
+<P align="justify">
+     The other problem concerns with case 2, where the value of the
+        expression is 0. In particular we should never compare two real
+      numbers for equality, as two numbers which are mathematically
+        equal will often differ very slightly if they have been
+      calculated in a different way. This difficulty is avoided by
+         comparing the difference between two real numbers with a very
+        small number. Thus the second case can be rewritten as </P>
+
+	<P> |<i>b</i><sup>2</sup> - 4<i>ac</i>| &lt; <i>epsilon</i> </P>
+
+	<P align="justify">
+         In this program we have dealt with both these problems at the
+        same time by dividing the value of <i>b</i><sup>2</sup> - 4<i>ac</i> by <i>epsilon</i>
+     and then assigning the result to an integer for use in CASE
+    statement. This means that if |<i>b</i><sup>2</sup> - 4<i>ac</i>| &lt; <i>epsilon</i>
+     the result off the division is between -1 and +1, and the
+        integer stored, as a result of truncation is 0. If <i>b</i>2 - 4<i>ac</i>
+         &gt; <i>epsilon</i> then the result stored is positive integer,
+        while <i>b</i><sup>2 </sup> - 4<i>ac</i> &lt; <i>epsilon</i> the result
+          stored is negative integer. We have assumed that <i>a</i> is a <i>non-zero</i>
+            value. </P>
+
+
+<LI><B>Input</B> </li>
+
+	<P>
+     Coefficients of a quadratic equation where <i>a</i> is <i>non-zero</i>
+     value. </P>
+</Li>
+
+	
+<LI><B>Output&nbsp;</B> </li>
+ <P>  Roots of a quadratic equation. </P>
+
+</ul>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+<HR>
+	
+</td>
+ </tr> 
+</tbody>
+ </table>
+<!-- *************** Example 5 Ends ******************** -->
+
+
+<!-- **************** Example 6 Starts ******************* -->
+
+<A NAME="f90-least-square"> </A>
+   <table border="0" height="6">
+   <tbody>
+
+
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 6 :   </b> </font> 
+Description for implementation of Fortran 90 program for <I>Least Square Approximation</I> method.
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-leastsquare.f90">
+   <I> <font color ="blue"> <B> f90-leastsquare.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+
+<tr>
+<td>
+
+<ul>
+
+
+<LI><B>Objective</B> </li>
+
+<P>Write  Fortran 90 program for <I>Least Square Approximation</I> method. <i> 
+Write a Fortran 90 program to calculate the value of <I>Young's modulus</I> of given material and
+				the natural length of the wire using <I>Least Square Approximation</I> method </i>
+</P>
+
+	
+<LI><B>BackGround & Description</B> </li>
+
+<P align="justify">
+            <b>Data fitting by least square Method<br>
+            </b>A frequent situation in experimental sciences is that data has been collected which it is  believed, will satisfy a linear relationship of the form<br>
+                <br>
+              <i>y</i> &nbsp; =  &nbsp;<i>ax </i>+ <i>b</i><br>
+              <br>
+            However, due to experimental error, the relationship between the data collected at different times will rarely be identical, and can typically be represented graphically as shown in Figure 2.  Fitting a straight line through the data in such a way as to obtain the fit which most closely reflects the true relationship is therefore, a widespread need.  One well-established method is
+             known as the <i> method of least squares</i>. </p>
+				
+	<P align="center">
+              <img border="0" src="./../mpi-f90-f95-images/leastsq_1-f90.gif" align="center" width="325" height="204"><br> <BR>
+                     <b>Figure 2 : Experimental data which exhibits a linear relationship.</b> </P>
+
+	<P align="center">
+                <img border="0" src="./../mpi-f90-f95-images/leastsq_2-f90.gif" width="342" height="172"><br>  <br>
+                <b> Figure 3 : Residuals for the data from Figure 2<br> <br> </b>
+             
+          <P align="justify">
+          This method can be applied to any polynomial, or even to more general functions, but for the present we shall only consider the linear case. 
+           If we assume that the equation <br>  <br>
+                <i>y</i> = <i> ax</i> + <i> b</i><br>
+                <br>
+                is a possible best fit then we can test its accuracy by calculating the predicted values of y for the actual 
+              data&nbsp;values of
+                <i> x </i>and comparing them with the corresponding data values.  The difference between a calculated value
+
+                <i>y</i>' and and experimental value <i> y</i> is called the <i>residual</i>, and the method of least squares 
+           attempts to minimize the sum of the squares of the residuals for all the data points.  Figure
+                3 shows the residuals for the data in Figure 2 in graphical form, and it can easily be seen that using the 
+             square of the residuals eliminates the problem caused by some predicted values being too 
+              large and others being too small.<br> </P>
+
+
+<LI> <B>Description</B> </LI>
+          <P align="justify">
+                In this example the extensions produced in the wire by suspending various weights from it were
+                measured very accurately.  Young's modulus is defined by the equation<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>E</i> = <i>stress </i>/ <i>strain</i><br> <br>
+         
+                which can be expressed as&nbsp; </p>
+	
+				<P align="justify">
+                &nbsp;&nbsp;&nbsp;&nbsp; <i>E</i>=(<i>f </i>/<i>A</i>) / (<i>e </i>/
+                <i>L</i>)&nbsp;&nbsp;&nbsp; or&nbsp;&nbsp;&nbsp; <i>E</i> = (<i>fL</i>) /
+                <i> Ae</i><br>
+                <br>
+                where <i> f</i> is the applied force (the weight), <i> A</i> is the cross-sectional area of the wire (measured at several
+                points and averaged), <i> e</i> is the extension, and <i> L</i> is the unstressed length of the wire.<br>
+                <br>
+                In this case, in order to eliminate the effect of any curl or kinking in the wire no measurements were 
+               taken in a completely unstressed condition, but the length of the wire was measured instead under an initial
+                 load and then under various heavier loads.<br> <br>
+            
+                From the above definition of <i> Young's modulus</i> we can derive the equation <br> <br>
+
+                &nbsp;&nbsp;&nbsp; <i>e </i>= <i>kf</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                where&nbsp;&nbsp; &nbsp;&nbsp; <i>k </i>= <i>L </i>/ <i>AE</i> <br> <br>
+      
+                However, we do not have the value of <i>e</i>, but rather the value of&nbsp;
+                <i>l</i>, where <br> <br>
+   
+              <i>e </i>= <i>l </i>- <i>L</i><br> <br>
+     
+                We therefore need to fit the equation<br> <br>
+    
+                <i>l </i>= <i>kf </i>+ <i>L</i> <br> <br>
+
+                to the experimental data.  We shall then be able to calculate the value of
+                <i>E</i>. </P>
+
+		<P align="justify">
+                In accordance with good practice all the constants required for problem
+                are placed in a module so that they can be easily accessed from any procedure in the
+                program.&nbsp; </P>
+
+		<P>
+                In this example we have used SUM and DOT_PRODUCT&nbsp; intrinsic
+                functions. </P>
+
+
+	<LI> <B>Input</B></LI>
+
+              <P>
+                 Read length of a wire under various load from a file <i>least_sq.inp</i></a> which is as follows. <BR>
+				
+		9<br>
+		10 39.967 <br>
+		12 39.971 <br>
+		15 39.979 <br>
+		17 39.986 <br>
+		20 39.993 <br>
+		22 40.000  <br>
+		25 40.007 <br>
+		28 40.016 <br>
+		30 40.022 <br>
+		0.025 <br>
+
+	     </p>
+
+			
+				
+	<LI> <B>Output</B></LI>
+
+	<P> Value of Young's modulus and natural length of wire. </p></font>
+
+</li>
+
+</ul>
+  
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+<HR>
+	
+</td>
+ </tr> 
+</tbody>
+ </table>
+
+
+<!-- ****************** Example 6 Ends  ************************ -->
+
+
+<!-- ************** Example 7 Starts ********************* -->
+
+
+<A NAME="f90-newton-raphson"> </A>
+   <table border="0"  height="6">
+   <tbody>
+
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 7 :   </b> </font> 
+Description for implementation of  Fortran 90 program to find the roots of 
+           equation f(x) = 0 using Newton Raphson method.
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-newton-raphson-root.f90">
+   <I> <font color ="blue"> <B> f90-newton-raphson-root.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+  <tr>
+  <td>
+
+<ul>
+
+<LI><B>Objective</B> </li>
+
+   <P>Write a fortran 90 program to find root of equation <i>f</i>(<i>x</i>) = 0 using
+      <i> Newton Raphson</i> method.
+   </P>
+
+	
+<LI><B>BackGround & Description</B> </li>
+
+<P align="justify">
+            <The bisection method has one major strength and one major
+                weakness. The strength is that, because the interval is halved
+                at each iteration, it is guaranteed to converge to a root after
+                a finite, and predictable, number of iterations. The weakness of
+                the method, however, is that it is too slow to converge. One of
+                the reasons for this is that the method does not use all the
+                available information, since it uses the sign of <i>f</i>(<i>x</i>)
+                at the end points of the interval, but not the value of <i>f</i>(<i>x</i>)
+                at those points. Another weakness is that, for the method to
+                work at all, the initial two points must be bracket a
+                root.&nbsp;</p>
+                <p align="justify">It is possible to combine interval-bisection with such faster
+                methods and retain much of the best of both worlds, namely fast
+                convergence and guaranteed convergence.
+            </p>
+
+
+
+<LI> <B>Description</B>&nbsp;</LI>
+          <P align="justify">
+
+                Newton's method, sometimes known as the <i>Newton-Raphoson</i>
+                method. This method uses not only function values but also
+                approximation. Figure 4 shows how, given the gradient
+                at a point <i>x<sub>i</sub></i>, it is easy to obtain a new
+                estimate for the root. In this method, we do not bracket a root
+                by an interval but, instead, generate a sequence of
+                approximation that if successful tend to the root.</p>
+                
+		<p align="center">
+                <img border="0" src="./../mpi-f90-f95-images/newtonraphson-f90.gif" width="345" height="209"></p>
+               
+		<p align="center"><b>Figure 4 : Newton Raphson Approximation</b> <BR>
+                From Figure 4<b> </b>we can readily see that</p>
+
+                <p><i>x</i><sub><i>i</i>+1</sub> &nbsp; &nbsp; = &nbsp; <i>OB</i> 
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <i>OA</i>-<i>AB</i>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <i>x</i><sub><i>i</i> </sub>- <i>AB</i>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <i>x</i><sub><i>i</i></sub> - (<i>AC</i>
+                / tan <font face="Symbol">a </font>)<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; = &nbsp;  <i>x<sub>i</sub></i> - (<i>f</i>(<i>x</i><sub><i>i</i></sub>)
+                / <i>f</i> '(<i>x</i><sub><i>i</i></sub>))<br> <br>
+
+
+                <br>
+                where <i>f</i> <sup>'</sup>(<i>x</i><sub><i>i</i></sub>) is the gradient of
+                the curve at the point <i>C</i>, ((<i>x<sub>i</sub></i>, <i>f</i>
+                '(<i>x<sub>i</sub></i>)), which is equal to tan <font face="Symbol">a</font>.</p>
+
+                <p> This formula</p>
+                <p> <i>x</i><sub><i>i</i>+1</sub> = <i>x<sub>i</sub></i> - (<i>f</i>(<i>x<sub>i</sub></i>)
+                    / <i>f</i> '(<i>x</i><sub><i>i</i></sub>)</p>
+
+                <p> is known as Newton's iteration, and is the basis for Newton'
+                    method of approximation to a root. <br>
+
+                An external function is used to define the equation and its first derivative </p>
+
+
+	<LI> <B>Input</B></LI>
+
+               <i> X-coordinate </i>of the point which can be used as the
+                  starting point for the interpolation and <i>number of iterations</i>.
+
+		 </p>
+
+			
+				
+	<LI> <B>Output</B></LI>
+
+	<P> Estimated value of root and its first derivative. </p></font>
+
+</ul>
+
+<HR>
+  
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+	
+
+</td>
+ </tr> </tbody>
+ </table>
+
+<!-- *************** Example 7 Ends  ****************** -->
+
+  
+
+<!-- **************** Example 8 Starts ****************** -->
+
+
+  <A NAME="f90-gauss-solver"> </A>
+   <table border="0"  height="6">
+  <tbody>
+
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 8 :   </b> </font> 
+Description for implementation of Fortran 90 program to solve a system of linear equations  A<I>x</I> = <I>b</I> using <I>Gaussian Elimination</I> method.
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-gauss-elimination.f90">
+   <I> <font color ="blue"> <B> f90-gauss-elimination.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+    
+
+<tr>
+<td>
+<ul>
+
+<LI><B>Objective</B> </li>
+
+   <P>Write a fortran 90 program to solve a system of linear equations 
+            A<I>x</I> = <I>b</I> using <I>Gaussian elimination</I> method.</B>
+   </P>
+
+	
+<LI><B>BackGround & Description</B>
+
+<P align="justify">
+            The system of linear equations [A]{<i>x</i>} = {<i>b</i>} is given by&nbsp;<p><i>a</i><sub>0,0</sub><i><sub>
+                </sub> </i><i>x</i><sub>0</sub> + <i>a</i><sub>0,1<i>
+                </i></sub><i>x</i><sub>1 </sub>+ ...+ <i>a</i><sub>0<i>, n-</i>1<i>
+                </i></sub><i>x<sub>n-</sub></i><sub>1</sub> = <i>b</i><sub>0</sub><sub><i> </i></sub>,&nbsp;<i><br>
+                a</i><sub>1,0</sub><i><sub> </sub> </i><i>x</i><sub>0</sub> + <i>a</i><sub>1,1<i>
+                </i></sub><i>x</i><sub>1</sub> + ...+ <i>a</i><sub>1<i>, n-</i>1<i>
+                </i></sub><i>x <sub>n-</sub></i><sub>1</sub> = <i>b</i><sub>1<i>
+                </i></sub>,&nbsp;&nbsp;<br>
+                ...........................................................................&nbsp;&nbsp;<br>
+                ...........................................................................&nbsp;<br>
+                &nbsp;...........................................................................&nbsp;&nbsp;<i><br>
+                a<sub>n-</sub></i><sub>1<i>,</i>0</sub><i><sub> </sub></i><i>x</i><sub>0</sub>
+                + <i>a<sub>n-</sub></i><sub>1<i>,</i>1<i> </i></sub><i>x</i><sub>1</sub>
+                + ...+ <i>a<sub>n-</sub></i><sub>1<i>, n-</i>1 </sub><i>x <sub>n-</sub></i><sub>1</sub>
+                = <i>b<sub>n-</sub></i><sub>1<i> </i></sub>.&nbsp;</p>
+                <p align="justify">In matrix notation, this system of linear equation is written
+                as [<b>A</b>]{<i>x</i>}={<i>b</i>} where <b>A</b>[<i>i, j</i>]<i>
+                </i>= <i>a<sub>i, j </sub></i>, <i>b </i>is an <i>n </i>x<i> </i>1
+                vector [<i>b</i><sub>o</sub>,<i>b</i><sub>1</sub>,...,<i>b<sub>n-</sub></i><sub>1</sub>]<sup>T</sup>,
+                and is the desired solution vector [<i>x</i><sub>o</sub>,<i>x</i><sub>1</sub>,...,<i>x<sub>n-</sub></i><sub>1</sub>]<sup>T</sup>.
+                We will make all subsequent references to <i>a<sub>i, j</sub></i>
+                by <b>A</b>[<i>i, j</i>] and <i>x<sub>i</sub></i> by <i>x</i>[<i>i
+                </i>]. &nbsp;
+                <p align="justify">Iterative methods are techniques to solve systems of
+                equations of the form [<i>A</i>]{<i>x</i>}={<i>b</i>} that generate a sequence of
+                approximations to the solution vector <i>x</i>. In each iteration, the
+                coefficient matrix <i> A</i> is used to perform a matrix-vector
+                multiplication. The number of iterations required to solve a
+                system of equations with a desired precision is usually data
+                dependent; hence, the number of iterations is not known prior to
+                executing the algorithm. Therefore, we can analyze the
+                performance and scalability of a single iteration of an
+                iterative method. Iterative methods do not guarantee a solution
+                for all systems of equations. However, when they do yield a
+                solution, they are usually less expensive than direct methods&nbsp;
+                for matrix factorization for large size of matrices.
+            </p>
+
+
+
+<LI> <B>Description</B>&nbsp;</LI>
+       <P align="justify">
+
+           Suppose we have a system of <i> n</i> linear equations in <i> n</i> unknowns:<br>
+            <br>
+             <i>a</i><sub>1,1</sub><i>x</i><sub>1</sub>
+                + <i> a</i><sub>1,2</span> </sub><i>x</i><sub>2</sub>
+                +...... + <i> a</i><sub>1</sub>,<sub><i>n</i></sub><i>x</i><sub> <i>n</i></sub> = <i> b</i><sub>1</sub>
+        </p>
+                
+            <i> a</i><sub>2,1</sub><i>x</i><sub>1</sub>
+                + <i> a</i><sub>2,2</sub><i>x</i><sub>2</sub>
+                + ...... + <i> a</i><sub>2</sub>,<sub><i>n</i></span></sub><i>x</i><sub>
+
+                <i>n</i></sub> = <i> b</i><sub>2</sub> 
+         </p>
+            <p> ..........................................................&nbsp;&nbsp; <br> 
+          ................................................................&nbsp;&nbsp; </p>
+
+     <p>
+        <i>a</i><sub><i>n</i>,1</span></sub><i>x</i><sub>1</sub> + <i> a</i><sub>
+       <i>n</i>,2</sub><i>x</i><sub>2</sub>  + ...... + <i> a</i><sub><i>n</i> </sub>,
+        <sub> <i>n</i></span></sub><i>x</i><sub><i>n</i></sub> = <i>b</i><sub><i>n</i></sub>
+      </P>
+
+				<P>
+                <i>
+                Gaussian elimination</i> will turn this system of equations into an equivalent system of equations of the form
+				</P>
+
+
+                 <P align="justify">
+     
+
+                <i>c</i><sub> 1,1</sub><i>x</i><sub> 1 </sub>
+                + <i> c</i><sub> 1,2 </sub><i>x</i><sub> 2 </sub>
+                + ...... + <i> c</i><sub> 1,<i>n</i></sub><i>x<sub>n</sub>
+                </i>  = <i> d</i><sub>
+                </p>
+
+                <br>
+                </sub>
+ <i>c</i><sub> 2,2 </sub><i>x</i><sub>2</sub> + ...... + <i> c</i><sub>2,<i>n</i></sub><i>x<sub>n</span></sub>
+                </i>
+                = <i> d</i><sub>2<br>
+                .<br>
+                .<br>
+                .<br>
+                </sub>
+
+
+<i>c</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i>,<i>
+                n</i></span></sub><i>x<sub><span style="mso-text-raise:-3.0pt">n</span></sub> </i> = <i> d</i><sub>
+
+<span style="mso-text-raise:-3.0pt">
+
+<i>n</i></span></sub></span></p>
+
+                <P align="justify">
+                In this form, all the coefficients below the diagonal are zero, and the matrix of coefficients, for obvious reasons, is said to be
+  <i>
+                upper triangular</i>.  As we shall see, in this form, the system of equations can be solved with no further manipulation.
+                <i>
+                Gaussian elimination</i> works by subtracting multiples of the first equations from all the other equations below it in such a way that the resulting equations each have a coefficient of 0 for
+                <i>x</i><sub>1</sub>.  Thus, the initial system of equations becomes<br>
+                <br>
+                <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>a</i><sub><span style="mso-text-raise:-3.0pt">1, 1</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt">1</span></sub>
+                + <i> a</i><sub><span style="mso-text-raise:
+-3.0pt">1, 2</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt">2</span></sub>
+                + ...... + <i> a</i><sub><span style="mso-text-raise:-3.0pt">1,</span></sub>
+                <sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub><i>x</i><sub><span style="mso-text-raise:
+-3.0pt"><i>n</i></span></sub> = <i> b</i><sub><span style="mso-text-raise:-3.0pt">1<o:p>
+                </o:p>
+                </span></sub></span><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial"><br>
+                <i>
+                a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(1)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2, 2</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">2</span></sub> + ...... +
+                <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(1)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"> <sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub>
+                = <i> b</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt;letter-spacing:-1.0pt">(<span style="mso-spacerun: yes"> </span>1<span style="mso-spacerun: yes">
+                </span>)</span></sup><sub><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt;letter-spacing:-11.0pt;mso-font-kerning:12.0pt">2</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt"><o:p> </o:p>
+                <br>
+                </span></sub><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial"><i>a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(2)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2, 2</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">2</span></sub> +...... +
+                <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(2)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"> <sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub>
+                = <i> b</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt;letter-spacing:-1.0pt">(<span style="mso-spacerun: yes">&nbsp;</span>2
+                )<span style="mso-spacerun: yes">&nbsp; </span></span></sup><sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt;letter-spacing:-11.0pt;mso-font-kerning:12.0pt">2</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt"><o:p>
+                </o:p>
+                <br>
+                </span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;font-weight:normal">.<o:p>
+                </o:p>
+                <br>
+                .<o:p>
+                </o:p>
+                <br>
+                .<o:p>
+                </o:p>
+                <br>
+                </span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><i>a</i></span><sup><span style="font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
+mso-text-raise:3.0pt;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">(2)</span></sup><sub><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><i>n</i>, 2</span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><i>x</i><sub><span style="mso-text-raise:-3.0pt">2</span></sub>
+                + ...... + <i> a</i></span><sup><span style="font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
+mso-text-raise:3.0pt;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">(1)</span></sup><sub><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><i>n</i>,</span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"> <sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub><i>x</i><sub><span style="mso-text-raise:
+-3.0pt"><i>n</i></span></sub> = <i> b</i></span><sup><span style="font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:3.0pt;letter-spacing:-1.0pt;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">(<span style="mso-spacerun: yes">&nbsp;</span>2 )<span style="mso-spacerun: yes">&nbsp; </span></span></sup><sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
+mso-text-raise:-3.0pt;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><i>n</i></span></sub>
+				</P>
+
+                <P align="justify">
+                Specifically, for&nbsp; <i>j</i> greater or equal to 2, the <i>j<sup>th</sup></i>
+                the equation is obtained by subtracting the first equation, multiplied by   from the original
+                equation.  The superscripts on the coefficients are used to denote that this is step I of the process. The solution of the second set of equations is the same as that of the original system of equations.
+				</P>
+
+                <P align="justify">
+                We now repeat the process again on the (<i>n</i> - 1) * (<i>n</i>
+                - 1) system of equations consisting of the second to the <i>n<sup>th</sup></i> equations.  Subtracting appropriate multiples of the second equation from the equations below it, we obtain a system of equations in which all the equations after the second have zero for the coefficient of
+                <i>x<sub>2</sub></i>.<br>
+                <br>
+                Proceeding iteratively, after <i>n</i>-1 steps, we obtain a system of equations of the form<br>
+                <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><br>
+                <i>
+                a</i><sub><span style="mso-text-raise:-3.0pt">1,1</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt">1</span></sub>
+                + <i> a</i><sub><span style="mso-text-raise:
+-3.0pt">1,2</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt">2</span></sub>
+                + <i> a</i><sub><span style="mso-text-raise:-3.0pt">1,3</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt">3</span></sub>
+                + <i> a</i><sub><span style="mso-text-raise:
+-3.0pt">1,4</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt">4</span></sub>
+                +<span style="mso-spacerun: yes">&nbsp; </span>......+ <i> a</i><sub><span style="mso-text-raise:
+-3.0pt">1,</span><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub>
+                + <i> a</i><sub><span style="mso-text-raise:
+-3.0pt">1,<i>n</i></span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i> </span></sub>=
+                <i>
+                b</i><sub><span style="mso-text-raise:-3.0pt">1<o:p>
+                </o:p>
+                <br>
+                </span></sub><i>a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(1)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,2</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">2</span></sub>
+                + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(1)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,3</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">3</span></sub>
+                + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(1)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,4</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">4</span></sub>
+                + ...... + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(1)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,<i>n</i>-1</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub>
+                + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(1)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>2,<i>n</i></sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x<sub><span style="mso-text-raise:-3.0pt">n</span></sub>
+                </i>
+                = <i> b</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt;letter-spacing:-1.0pt">(<span style="mso-spacerun:
+yes">&nbsp; </span>1 ) </span></sup><sub><span style="font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt;letter-spacing:
+-11.0pt;mso-font-kerning:12.0pt">2</span><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt"><o:p>
+                </o:p>
+                <br>
+                </sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i>a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(2)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>3,3</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">3</span></sub>
+                + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(2)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>3,4</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">4</span></sub>
+                +<span style="mso-spacerun: yes">&nbsp; </span>...... + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(2)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>3,</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><sub><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub> +
+                <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(2)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>3,</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i><sub><span style="mso-text-raise:-3.0pt">n</span></sub>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i> </span></sub><span style="mso-spacerun:
+yes">&nbsp;</span>= <i> b</i></span><span style="font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:3.0pt;letter-spacing:-1.0pt"><sup>(<span style="mso-spacerun: yes">&nbsp;
+                </span>2<span style="mso-spacerun: yes">&nbsp; </span>)</sup></span><sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt">3<o:p>
+                </o:p>
+                <br>
+                </span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i>a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(3)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>4,4</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt">4</span></sub>
+                + .+ <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(3)</span></sup><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><sub>4,<i>n</i>-1</sub></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub><span style="mso-text-raise:-3.0pt">+</span>
+                <i>
+                a</i></span><sup><span style="font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:3.0pt">(3)</span></sup><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt"><sub>4,<i>n</i></sub></span><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i></span></sub>=
+                <i> b</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt;letter-spacing:-1.0pt">(<span style="mso-spacerun: yes">&nbsp; </span>2<span style="mso-spacerun: yes">&nbsp;
+                </span>)</span></sup><sub><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt">4<br>
+                <o:p>
+                </o:p>
+                </span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt">.<o:p>
+                </o:p>
+                <br>
+                </span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt">.<o:p>
+                </o:p>
+                <br>
+                .<o:p>
+                </o:p>
+                <br>
+                </span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i>a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(<i>n</i> - 2)</span></sup><sub><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt"><i>n</i>-1,<i>n</i>-1</span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x</i><sub><span style="mso-text-raise:-3.0pt"><i>n</i>-1</span></sub>
+                + ...... + <i> a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(<i>n</i> - 2)</span></sup><sub><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt"><i>n</i>-1,<i>n</i></span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial"><i>x<sub><span style="mso-text-raise:-3.0pt">n</span></sub></i>=
+                <i>
+                b</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(<i>n</i> - 2)</span></sup><sub><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt"><i>n</i>-1<o:p>
+                </o:p>
+                <br>
+                </span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial"><i>a</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:3.0pt">(<i>n </i> - 1)</span></sup><sub><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+-3.0pt"><i>n</i>,<i>n</i></span></sub><i><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;">x</span><sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt">n</span></sub></i><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial">= <i>b</i></span><sup><span style="font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;mso-text-raise:
+3.0pt">(<i>n</i> - 1)</span></sup><sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-text-raise:-3.0pt"><i>n</i></span></sub><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+Arial;mso-text-raise:-3.0pt"><o:p>
+                </o:p>
+                </span>
+				</P>
+
+                <P align="justify">
+                This process is called <i> Gaussian elimination</i>, and the
+                a<sub><i>i,i</i></sub> <sup>(<i>i</i>-1)</sup>(the element along the diagonal) are called
+                <i>pivots</i>.<br>
+                <br>
+                Now the <i>n<sup>th</sup></i> equation is solved for <i>x<sub>n</sub></i> by dividing by
+                <i>
+                a</i><sub><i>n,n</i></sub><sup>(<i>n</i>-1)</sup>. This value is then substituted into the
+                (<i>n</i> - 1)<sup><i>th</i></sup> equation, which can then be solved for (<i>x<sub>n</sub></i><sub>
+                -1</sub>).  The values for <i>x<sub>n</sub></i> and <i>x<sub>n</sub></i><sub>-1</sub> are substituted in the
+                (<i>n</i>-2)<sup><i>th</i></sup> equation. which is then solved for
+                <i>x<sub>n</sub></i><sub>-2</sub>.  We proceed backwards through the set of equations in this way until we finally put the values determined for
+                <i>x<font face="b"><sub>n</sub></font></i>, <i>x<sub>n</sub></i><sub>-1</sub>,
+                ...<i>x</i><sub>3</sub>,<i>x</i><sub>2</sub> into the  first equation and solve it for
+                <i>x</i><sub>1</sub>.  This processed, for obvious reasons, is called
+                <i> back substitution</i>.&nbsp;<br>
+                <br>
+                We can see that the Gaussian elimination process will fail if, at the
+                <i>i<sup>th</sup></i> step, the coefficient a<sub><i>i,i</i></sub><sup>(<i>i</i>-1)</sup> is 0. We would in this case be unable to make all the coefficients of
+                <i>x<sub>i</sub></i> in the equations below it 0, since subtracting any multiple of 0 leaves a number unchanged.  If this situation occurs, however, we could interchange the
+                <i>i<sup>th</sup></i> equation with one below it that does not have a 0 for the coefficient of
+                xi, and then proceed.  If there is no such equation, then it can be proved that the original system either has no solution or an infinite set of solutions.  Observe that changing the order of occurrence of the equations does not change their solution.
+				</P>
+
+                <P align="justify">
+ In fact, we can go somewhat beyond this interchange procedure.  If a pivot element is small, then large multiples of the equation containing it
+                must be used during the elimination process.  This will multiply any errors (due to round-off effects) in the other coefficients of this equation.  Intuitively, we can see that this is undesirable.  So, for reasons of numerical stability, at the beginning of the
+                <i>i<sup>th</sup></i> step, we will reorder the equations from the
+                <i>i<sup>th</sup></i> one down, so that one that has the largest absolute value for the coefficient of
+                <i>x<sub>j</sub></i> becomes the <i>i<sup>th</sup></i> equation.&nbsp;
+				</P>
+
+                <P align="justify">
+ In this program two subroutines '<i>gaussian_elemination</i>' and '<i>back_substitution</i>' are called by another subroutine
+ '<i>gaussian_solve</i>'. We do not want a user to be able to                call
+ '<i>gaussian_elimination</i>' or '<i>back_substitution</i>' directly.                As well as the subroutine
+ '<i>gaussian_solve</i>' will use                assumed-shape dummy arguments, it must have an explicit                interface in the main program. To accomplish both of these                aims, all three subroutines are put in a module called
+ '<i>Linear_Equations</i>' being public
+				</P>
+
+               
+
+
+	<LI> <B>Input</B></LI>
+
+               <P>
+				Read Matrix and vector from file <I>gauss.inp</i> which is as below.
+				</P>
+				<p>
+				4<br>
+				8 3 1 1<br>
+				1 4 2 1<br>
+				1 6 2 2<br>
+				3 1 3 8<br>
+				5<br>
+				1<br>
+				5<br>
+				4<br></p>
+
+
+			
+				
+	<LI> <B>Output</B></LI>
+
+	<P> Solution <I>x</I> of matrix system A<I>x</I> = <I>b</I>. </p></font>
+  
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+</ul>
+<HR>
+
+	
+</td>
+ </tr> </tbody>
+ </table>
+
+<!-- ***************** Example 8 Ends  ********************* -->
+
+
+<!-- ***************** Example 9 Starts  *********************** -->
+
+
+ <A NAME="f90-matrixmatrix-mult"> </A>
+   <table border="0"  height="6">
+   <tbody>
+     
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 9 :   </b> </font> 
+Description for implementation of MPI program to
+            compute Matrix Matrix Multiplication using <i>block checkerboard
+            partitioning</i> and <i>Cannon Algorithm</i></B>. (Assignment)
+   </span> </p>
+    </td>
+     </tr> 
+
+    <tr>
+     <td>
+<UL>
+
+<LI><B>Objective</B> </li>
+
+   <P>Write a fortran 90 program to compute Matrix Matrix Multiplication using <i>block checkerboard
+            partitioning</i> and <i>Cannon Algorithm</i></B>
+   </P>
+
+	
+  <li>
+           <b>Objective&nbsp;</b>
+                  <p align="justify">Write a f90 program, for computing the matrix-matrix
+                  multiplication on <i>p </i> on Single core or  SMP System. Use  block
+                  checkerboard partitioning of the matrices and  Cannon's Algorithm.&nbsp;
+                  <p>Assume that size of the square matrices i.e. &nbsp;<i> p= q<sup>2 </sup></i>and 
+                the size of
+                  square matrices <b>A</b> and <b>B</b> is evenly divisible by
+                  q.&nbsp; It is assumed that the number of blocks are equal to the number of 
+                 processors as explained in Cannoon's Algorithm</p>
+   </li>
+               
+     <li>
+       <b>Description&nbsp;</b><br>
+       <p align="justify">
+       Cannon's algorithm is based on <i>cartesian virtual</i> topology. Assume that <B>A</B> and <B>B</B> are
+        square matrices of size
+	<I>n</I> and <B>C</B> be the output&nbsp; matrix. These matrices are dived
+	into blocks or submatrices to perform matrix-matrix operations in parallel
+	.For example, an <I>n </I>x<I> n </I>matrix <B>A </B>can be regarded as
+	<I>q </I>x<I> q </I>array of blocks <B>A</B><I><SUB>i, j</SUB></I> (0<I>&lt;=i
+	&lt;q</I>, 0<I>&lt;= j &lt; q</I>) such that each block is an (<I>n/q)
+	</I>x<I> (n/q</I>) submatrix. We use <I>p </I>processors to implement the
+	block version of matrix multiplication in parallel by choosing <I>q</I>
+	as a square root of&nbsp; <I>p&nbsp;</I> and compute a distinct block <B>C</B><I><SUB>i,
+	j</SUB></I> on each processor. <I>Block&nbsp; </I>and<I> cyclic checkerboard</I>
+	partitioning of a 8 x 8 matrix on a square grid (4&nbsp; x 4) of processors
+	is shown in the Figure 5&nbsp; <BR>
+
+
+       <p align="center"><IMG SRC="./../mpi-f90-f95-images/check-f90.gif" HEIGHT=385 WIDTH=360></p>
+
+       <p align="center">
+         <B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           Figure 5 : Checkerboard partitioning of 8 x 8 matrices on 16 processors</B>.&nbsp;
+        </p>
+
+<P align="justify">
+
+	The matrices <B>A </B>and<B> B </B>are<B> </B>partitioned into <I>p&nbsp;
+	</I>blocks, <B>A<I><SUB> </SUB></I></B><I><SUB>i, j<B> </B></SUB></I>and
+	<B>B </B><SUB><I>i, j</I><B> </B></SUB>(0&lt;=<I>i &lt; q</I>, 0&lt;=<I>
+	j &lt; q</I>) of size&nbsp; (<I>n/q </I>x <I>n/q</I>)&nbsp;&nbsp; on each
+	process. These blocks are mapped onto a <I>q </I>x <I>q&nbsp; </I>logical
+	mesh of processes. The processes are labeled from P<SUB>0,0</SUB> to
+	P<SUB>q<I>-</I>1,q-1</SUB>. An example of of this situation is shown in
+	Figure 14&nbsp; Process P<I><SUB>i, j</SUB></I> initially store block
+	matrices <B>A</B><I><SUB>i, j </SUB></I>and <B>B</B><I><SUB>i, j </SUB></I>and
+	computes block <B>C</B><I><SUB>i, j </SUB></I>of result matrix. To compute
+	submatrix <B>C</B><I><SUB>i, j</SUB></I> , we need all submatrices , <B>A</B><I><SUB>i,
+	k</SUB></I> and&nbsp; B<I><SUB>k, j</SUB></I> ( 0<I> </I>&lt;=<I> k </I>&lt;<I>
+		q </I>) . To acquire all the required blocks, an all-to-all broadcast of
+	matrix <B>A</B><I><SUB>i, j </SUB></I>'s&nbsp; is performed in each <I>row</I>
+	and similarly in each <I>column</I> of matrix <B>B</B><I><SUB>i, j</SUB></I>'s.
+	<B>MPI</B> collective communication is used to perform this operations.
+     </p>
+
+	<P align="justify">After P<I><SUB>i, j</SUB></I> acquires, <B>A </B><SUB><I>i,</I>0 </SUB>,
+	<B>A</B><SUB><I> i,</I>1 </SUB>, <B>A </B><SUB><I>i,</I>2<I> </I></SUB>,
+	<B>A </B><SUB><I>i, q-</I>1 </SUB>and <B>B</B><SUB>0<I>, j</I> </SUB>,
+	<B>B</B><SUB>1<I>, j</I> </SUB>, <B>B</B><SUB>2<I>, j</I> </SUB>, <B>B<I><SUB>q</SUB></I></B><SUB><I>-</I>1,
+	<I>j</I> </SUB>, it performs the serial block matrix to matrix multiplication
+	and accumulates the partial block&nbsp; matrix <B>C</B><I><SUB>i, j</SUB></I>
+	of matrix <B>C</B> . To obtain the resultant product matrix <B>C</B>, processes
+	with rank <I>0</I> gathers all the block matrices by using <B>MPI_Gather</B>
+	collective communication operation.
+     </p>
+
+   <P align="justify">
+    	&nbsp;<B>MPI</B> provides a set of special routines to <I>virtual&nbsp;
+	</I>topologies. An important <I>virtual&nbsp; </I>topology is the <I>Cartesian
+	topology </I>. This is simply a decomposition in the natural co-ordinate
+	( <I>e.g., x,y,z</I>) directions.
+   </P>
+    <p align="justify"> 
+          As discussed above, there are <i>p</i> processors arranged in <i>q</i>
+                  x <i>q</i> square grid of processors and the input matrices, <b>A</b>
+                  and <b>B</b> are distributed among the processes in
+                  checkerboard fashion. It results in constructing <i>p</i>
+                  block matrices of <b>A</b> and <b>B</b>. It uses only <i>point-to-point
+                  communication</i> for circularly shifting blocks of matrix <b>A</b>
+                  and matrix <b>B</b> among <i>p</i> processes.&nbsp;</p>
+                  <p align="justify">The algorithm proceeds in <i>q</i> stages. The first step
+                  in this algorithm is to perform initial alignment of the
+                  block matrix <b>A</b> and block matrix <b>B</b>. The blocks of
+                  matrix <b>A</b> are circularly shifted to the <i>i</i>
+                  positions to left in the <i>row</i> of the square grid of
+                  processes, where <i>i</i>&nbsp; is the <i>row</i> <i>number</i>
+                  of the process in the mesh. Similarly, blocks of matrix <b>B </b>are
+                  circularly shifted <i>j</i> positions upwards, where <i>j</i>
+                  is the<i> column</i> <i>number</i> of the process in the
+                  processes mesh.&nbsp; This operation is performed by using <b>MPI_Sendrecv_replace
+                  </b>.&nbsp; <b>MPI_Send</b> and <b>MPI_Recv</b> is not used
+                  for point-to-point communication, because if all the processes
+                  call <b>MPI_Send</b> or <b>MPI_Recv<i> </i></b>in different
+                  order the deadlocked situation may arise .&nbsp;
+                  <p>The algorithm performs the following steps in each stage :&nbsp;
+                  <p>1. Multiply the block of matrix <b>A</b> and matrix <b>B </b>and
+                  add the resultant matrix to get the block matrix <b>C</b>,&nbsp;<br>
+                  &nbsp;&nbsp;&nbsp; which is initially set to zero.&nbsp;<br>
+                  2. Circularly shift the blocks of matrix <b>A</b> to left in
+                  the rows of the processes and the blocks of&nbsp;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp; matrix<b> B</b> upwards in the
+                  columns of the square grid of processes in a <i>wrap around </i>manner.&nbsp;
+                  <p>The communication steps for 4 x 4 square grid of processors
+                  mesh are explained in the Figure 6.&nbsp;<br>
+           </p>
+ 
+          <p align="center">
+		&nbsp;<img SRC="./../mpi-f90-f95-images/cannon1-f90.gif" HEIGHT="319" WIDTH="360">
+                &nbsp;<img SRC="./../mpi-f90-f95-images/cannon2-f90.gif" HEIGHT="373" WIDTH="360"> &nbsp;
+              <img SRC="./../mpi-f90-f95-images/cannon3-f90.gif" HEIGHT="363" WIDTH="360">&nbsp;
+          </p>
+
+           <p align="center"><b>Figure 6 :&nbsp; The communication steps in
+              Cannon's Algorithm on 16 processors</b>.&nbsp;
+         </p>
+                
+
+
+<LI> <B>Input </B> </LI>
+
+
+<P>Assume <B>A </B>and <B>B </B>are real square matrices of size <I>n </I>. The 
+input matrices are 
+<B>A</B> and <B>B</B>. Format for the input file is given below.
+
+<P>The input file for the matrices<B> A</B> and <B> B</B> 
+    should strictly adhere to the following format. <BR> 
+
+ 
+ #Line 1 : Number of Rows (<I>n</I>); &nbsp;  Number of columns(<I>n</I>).&nbsp;<BR>
+ #Line 2 : (data) (in row-major order. This means that the data of second row follows that of 
+  the first and so on.) </P>
+
+
+<LI>
+<B>Input file & </B> </LI>
+
+<P> Input file 1 <BR>
+
+ A sample input file for the matrix <B>A</B> (8 x 8) is given below&nbsp; <BR> <BR>
+
+ 8 &nbsp;&nbsp; 8 &nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+3.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+4.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; <BR>
+
+3.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+2.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+3.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp; <BR>
+
+4.0&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 3.0&nbsp;
+
+
+</P>
+
+<p>
+<B>Input file 2</B> </p>
+
+
+<BR>A sample input file for the matrix <B>B</B> (8 x 8) is given below&nbsp;
+
+<P> 8&nbsp;&nbsp; 8 &nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;<BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+1.0&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp; 3.0&nbsp;&nbsp;&nbsp;&nbsp;
+4.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;
+2.0&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp; <BR>
+
+</P>
+
+<LI>
+<B>Output&nbsp;</B> </li>
+
+
+<P> Prints final matrix-matrix product matrix <B>C</B>.
+  The output of the matrix - matrix multiplication is given below : <BR> <BR>
+
+18.0&nbsp;&nbsp; 36.0&nbsp;&nbsp; 54.0&nbsp;&nbsp; 72.0&nbsp;&nbsp;
+36.0&nbsp;&nbsp; 18.0&nbsp;&nbsp;&nbsp; 36.0&nbsp;&nbsp; 18.0&nbsp; <BR>
+
+18.0&nbsp;&nbsp; 36.0&nbsp;&nbsp; 54.0&nbsp;&nbsp; 72.0&nbsp;&nbsp;
+36.0&nbsp;&nbsp; 18.0&nbsp;&nbsp;&nbsp; 36.0&nbsp;&nbsp; 18.0&nbsp; <BR>
+
+17.0&nbsp;&nbsp; 34.0&nbsp;&nbsp; 51.0&nbsp;&nbsp; 68.0&nbsp;&nbsp;
+34.0&nbsp;&nbsp; 17.0&nbsp;&nbsp;&nbsp; 34.0&nbsp;&nbsp; 17.0&nbsp; <BR>
+
+19.0&nbsp;&nbsp; 38.0&nbsp;&nbsp; 57.0&nbsp;&nbsp; 76.0&nbsp;&nbsp;
+38.0&nbsp;&nbsp; 19.0&nbsp;&nbsp;&nbsp; 38.0&nbsp;&nbsp; 19.0&nbsp; <BR>
+
+17.0&nbsp;&nbsp; 34.0&nbsp;&nbsp; 51.0&nbsp;&nbsp; 68.0&nbsp;&nbsp;
+34.0&nbsp;&nbsp; 17.0&nbsp;&nbsp;&nbsp; 34.0&nbsp;&nbsp; 17.0&nbsp; <BR>
+
+12.0&nbsp;&nbsp; 24.0&nbsp;&nbsp; 36.0&nbsp;&nbsp; 48.0&nbsp;&nbsp;
+24.0&nbsp;&nbsp; 12.0&nbsp;&nbsp;&nbsp; 24.0&nbsp;&nbsp; 12.0&nbsp; <BR>
+
+19.0&nbsp;&nbsp; 38.0&nbsp;&nbsp; 57.0&nbsp;&nbsp; 76.0&nbsp;&nbsp;
+38.0&nbsp;&nbsp; 19.0&nbsp;&nbsp;&nbsp; 38.0&nbsp;&nbsp; 19.0&nbsp; <BR>
+
+20.0&nbsp;&nbsp; 40.0&nbsp;&nbsp; 60.0&nbsp;&nbsp; 80.0&nbsp;&nbsp;
+40.0&nbsp;&nbsp; 20.0&nbsp;&nbsp;&nbsp; 40.0&nbsp;&nbsp; 20.0&nbsp;
+</P>
+
+</ul>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+<HR>
+
+	
+</td>
+ </tr> 
+</tbody>
+ </table>
+<!-- ****************** Example 9 Ends *********************** -->
+   
+
+
+<!-- ************* Example 10 starts ************************ -->
+
+<a name="f90-mpi-io-single-file"> </a>
+<table border="0"  height="6">
+<tbody>
+<TR ALIGN=LEFT> 
+<TD height="90%">
+
+     <p align = "justify"> <span class = "content">
+     <FONT COLOR="#FF6600"> <b>  Example 10 :   </b> </font> 
+Write an MPI fortran90 program performing MPI I/O to single file (Using MPI 2.0)
+   </span> </p>
+ 
+
+ <!-- ********************* download  Starts here ********************* -->
+(Download source code : 
+
+  <a href="./../mpi-f90-f95-codes/f90-mpi-io-single-file.f90">
+   <I> <font color ="blue"> <B> f90-mpi-io-single-file.f90</b> ) </font> </i> 
+  </a> 
+<!-- ***************** download  Ends here ******************* -->
+</td>
+</tr>
+
+<tr> 
+<tD>
+
+<ul>
+
+<LI><B> Objective </B> </li>
+
+
+<P> Write an MPI program performing MPI I/O (Writing) to single file (Using MPI 2.0). 
+</P>
+
+
+
+<LI><B> Description </B> </li>
+
+										
+<P align="justify">
+
+MPI process share a single file instead of the writing to seperate files, thus avoiding the
+having multiple files. This shows performance advantages of parallelism adopted using MPI. 
+The new library calls of MPI are used to sharing a a file among processes. Here, 
+<font face = "Courier New " size ="2"> 
+MPI_COMM_WORLD  </font> libray call is used instead of 
+<font face = "Courier New " size ="2"> 
+MPI_COMM_SELF  </font> libray call. This indicates that all the processes are opening a
+ single file together and it is a collective operations on the communicator, on all 
+pariticpating process. 
+ 
+
+</P>
+
+
+<LI><B>Input</B>  </LI>
+
+
+<p> The input file holding the square matrix (Number of Rows, Columns of the matrix) </p> 
+
+
+
+ <LI><B>Output</B> </LI>
+
+	
+<p> Single Output file </p> 
+
+
+</font>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-programs.html">
+ <IMG src="./../mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+</ul>
+<HR>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ******************* Example 10  ends ************************* -->
+
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color= blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

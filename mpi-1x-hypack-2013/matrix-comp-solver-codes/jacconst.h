@@ -1,0 +1,8 @@
+	
+        integer MATRIX_SIZE, VECTOR_SIZE, TOTAL_SIZE, MAX_ITERATIONS
+        real EPSILON
+
+        parameter(EPSILON = 1.0E-24, MAX_ITERATIONS = 100)
+	parameter(MATRIX_SIZE = 100, VECTOR_SIZE = 100)
+	parameter(TOTAL_SIZE = MATRIX_SIZE * MATRIX_SIZE)
+

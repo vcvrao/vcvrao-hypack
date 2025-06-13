@@ -1,0 +1,46 @@
+#
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+#
+#Makefile for sparse matrix multiplication codes using Cuda and Cudpp
+
+CC1 = gcc
+CC2 = nvcc 
+CFLAG1 = -g -o
+CFLAG2 = -I /usr/local/cudpp_1.0a/cudpp/include  -L /usr/local/cudpp_1.0a/lib -lcudpp 
+ 
+
+
+all 		:	SPmv_cudpp  SPmv_GPU
+
+SPmv_cudpp	:	SPmv_cudpp.cu
+	$(CC2)	$(CFLAG2) $(CFLAG1) SPmv_cudpp	SPmv_cudpp.cu
+SPmv_GPU	:	SPmv_GPU.cu 
+	$(CC2)	$(CFLAG1)	SPmv_GPU 	SPmv_GPU.cu
+clean:
+	rm -f ./SPmv_GPU
+	rm -f ./SPmv_cudpp
+	rm -f *.o
+	rm -f core
+	rm -f *~
+
+
+
+
+
+
+
+
+
+
+
+

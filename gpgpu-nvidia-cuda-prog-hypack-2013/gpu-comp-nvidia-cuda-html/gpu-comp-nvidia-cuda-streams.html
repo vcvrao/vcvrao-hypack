@@ -1,0 +1,2340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../../hypack13-mode04-gpgpu-lab-overview.html">
+                  &#149; Mode-4 GPGPUs </A>
+                  
+	          <!-- ** -->
+                  <A class=menulslct
+                    href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                    &#149;  NVIDIA - CUDA/OpenCL</A>
+                  <!-- ** -->
+              
+	       <A class=menul  
+                  href="./../../hypack13-mode04-gpgpu-amd-opencl.html">
+                  &#149; AMD APP  OpenCL </A>
+                             
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-opencl.html">
+                   &#149; GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-power-perf.html">
+                   &#149; GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../../index.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>     hyPACK-2013 Mode-2 : GPU Comp. CUDA enabled NVIDIA GPU Prog.  <BR>
+            CUDA Asynchronous Concurrent Execution &amp; Streams </b> </font> </DIV> </TD> </TR> 
+
+
+
+  <tr>
+  <td height="24" align="left" >
+ <P align=justify><span  class="content">
+<BR> 
+ NVIDIA's  software CUDA Programming model automatically manages the threads and it is significantly differs from single 
+threaded CPU code and to some extent even the parallel code.  Efficient CUDA programs exploit both 
+thread parallelism within a thread block and coarser block parallelism across thread blocks.
+On GPUs, massively data-parallel computations can be performed and task parallelism 
+involving multi-threaded CPU applications can also be performed on modern GPUs.  
+In data parallelism, computing the same function on lots of data elements is done
+ and in task parallelism, two or more completely different tasks in parallel. <BR> <BR>
+
+On present GPUs, the task parallelism based application kernels is  growing, and  
+the state-of-art GPUs provide an  opportunity for programmers  to extract  even more 
+speed from GPU-based implementations. 
+CUDA Streams several ways in which execution of certain operations simultaneously 
+on the single and multiple GPUs. 
+
+ Important topics on CUDA C  Runtime and &ldquo;Streams - Asynchronous Concurrent 
+Execution&rdquo; 
+ are discussed in detail with example programs
+
+</p></span>
+
+
+<div align = "left">
+
+  <a href="#hetr-cuda-runtime-memory "> 
+   <font size="2" face="Arial" color="blue">
+   <B> CUDA Runtime functions : Different types of  Memory  </b> </font> 
+  </a>
+
+  <BR> <BR>
+
+  <a href="#hetr-cuda-prog-pagelock-host-memory">
+    <font size="2" face="Arial" color="blue"> 
+    <b> CUDA Runtime Page-locked Host Memory </b> </font>  </a> <BR>
+(
+<font size="2" face="Arial" color="red"> <B> Codes : </b> </font>
+       &nbsp;&nbsp;
+    <a href="#hetr-cuda-prog-pageble-host-memory-code"> 
+  <font color ="blue"> pageble host memory  </font> </a>
+   &nbsp;&nbsp;&nbsp;
+ <a href="#hetr-cuda-prog-page-lock-host-memory-code"> 
+  <font color ="blue"> pinned host memory </font> </a>)
+
+ <BR> <BR>
+  </a>
+
+
+  <a href="#hetr-cuda-prog-cuda-async-concurrent-exec">
+    <font size="2" face="Arial" color="blue"> 
+      <b> CUDA Asynchronous Concurrent Execution </b> </font> 
+  </a> 
+<BR> <BR>
+
+  <a href="#hetr-cuda-prog-cuda-streams">
+    <font size="2" face="Arial" color="blue"> 
+      <b> CUDA Streams : </b> </font> </a> (
+    <font size="2" face="Arial" color="red"> <B>  Codes : </B> </font>
+
+ <a href="#hetr-cuda-single-cuda-stream"> 
+<font size="2" face="Arial" color="blue"> Single Stream </font> </a>
+&nbsp; &nbsp; &nbsp;
+
+<a  href="../gpu-comp-nvidia-cuda-stream-codes/multiple-cuda-streams.cu">
+<font color ="blue">Multiple Streams</font> </a> </I>) 
+<BR> <BR>
+
+<font size="2" face="Arial" color="red"> <b>  Programs on CUDA Asynchronous Concurrent Execution : 
+ </b></font> 
+&nbsp;&nbsp;
+
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/Makefile">
+  <font size="2" face="Arial" color="blue"> <b>  Makefile   </b></font> </a>
+ <BR> <BR>
+
+
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/mksg-sm-cuda-stream-Matrix-Matrix-Addition.cu">
+  <font size="2" face="Arial" color="blue"> <b>  Multiple Kernels - Single GPU-Matrix-Matrix Addition (code) </b></font> </a>
+<BR> 
+ <a  href="../gpu-comp-nvidia-cuda-stream-codes/MKSG-STREAMS.pdf">
+  <font size="2" face="Arial" color="blue"> <b>  multiplekernels-singleGPU-stream.pdf </b></font> </a>
+<BR> <BR>
+
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/multipleKernels-singleGPU-matrix-vector-multiplication.cu">
+  <font size="2" face="Arial" color="blue"> <b>  Multiple Kernels - Single GPU-Matrix-Vector Multiplication (code) </b></font> </a>
+<BR> <BR>
+
+
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/multipleKernels-multiGPU-streams-matrix-matrix-comp.cu">
+  <font size="2" face="Arial" color="blue"> <b>  Multipe Kernel- multiGPUs - Matrix-Matrix  Addition (Code) </b></font> </a>
+<BR> <BR>
+
+</blockquote>
+
+</div>
+
+<P align=justify><span  class="content">
+In all the programs, 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> CUDA_SAFE_CALL() </b></font>
+that surrounds CUDA API calls is a utility macro that we have provided as part of  
+Hands-on codes. It simply detects that the call has retuned an error,  prints the associated
+error message, and exists the application with  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  <B> ERROR FAILURE</b></font>
+code.
+
+</span> </p>
+</td>
+ </tr> 
+</tbody>
+</table>
+
+	<!-- *************** Table for Summary of Definitions Starts  ****************** -->
+
+<HR>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<!-- **************** CUDA RUNTIME - MEMORY   Starts ******** -->
+<BR>
+
+<a name ="hetr-cuda-runtime-memory"> </a>
+
+
+<DIV align=left> 
+         <font size="2" face="Arial" color="red"> <b>
+  CUDA Runtime functions : Different types of  Memory
+ </b></font> 
+</div>
+
+<BR> 
+
+<p align = "justify"> <span class = "content"> 
+<B> Initialization : </b>  CUDA runtime function is initialized when it is called first time and during initialization, 
+the runtime creates a CUDA context for each device in the system. This context is the primary 
+context for this device and it is shared among all the host threads of the application.  
+The runtime does not expose the primary context to the application. When a host thread calls 
+<font color ="red">
+cudaDeviceReset()</font>, this destroys the primary context of the device the host thread currently operates on.
+ A host thread can set the device it operates on at any time by calling 
+<font color ="red"> cudaSetDevice().</font>
+</span> </p> 
+
+<div align ="right"> 
+ <a href="#top">
+<IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</div> 
+
+<p align = "justify"> <span class = "content"> 
+<B> Device Memory :  </b> As discussed earlier, the CUDA programming model assumes a system composed of
+ a host and a device, each with their own separate memory. Kernels can only operate out of device 
+memory, so the runtime provides functions to allocate, deallocate, and copy device memory, as well 
+as transfer data between host memory and device memory.
+
+CUDA threads may access data from multiple memory spaces during their execution. Each thread has private 
+local memory. Each thread block has shared memory visible to all threads of the block and with the same lifetime as the block. All threads have access to the same global memory.
+There are also two additional read-only memory spaces accessible by all threads:
+ the constant and texture memory spaces. The global, constant, and texture memory spaces are 
+optimized for different memory usages. Texture memory also offers different addressing modes, 
+as well as data filtering, for some specific data formats.
+The global, constant, and texture memory spaces are persistent across kernel launches by the 
+same application. <BR> <BR>
+
+
+Device memory can be allocated either as linear memory or as CUDA arrays.
+CUDA arrays are opaque memory layouts optimized for texture fetching.
+Linear memory is typically allocated using 
+<font color ="red">cudaMalloc() </font> and freed using 
+<font color ="red">cudaFree() </font> and data transfer
+ between host memory and device memory are typically done using 
+<font color ="red">cudaMemcpy().</font>
+Linear memory can also be allocated through 
+<font color ="red">cudaMallocPitch() </font>
+and 
+<font color ="red">cudaMalloc3D(). </font>
+It is possible to get  best performance when accessing the row addresses or 
+performing copies between 
+2D arrays and other regions of device memory (using the 
+<font color ="red">cudaMemcpy2D() </font> and 
+<font color ="red">cudaMemcpy3D() </font>
+functions) 
+allocation and this can be achieved by  appropriately padded to meet the alignment requirements
+The following code sample illustrates various ways of accessing global variables via the runtime API:
+
+<font color ="red">cudaGetSymbolAddress() </font>
+is used to retrieve the address pointing to the memory allocated for a variable
+ declared in global memory space. The size of the allocated memory is obtained through 
+<font color ="red">cudaGetSymbolSize().</font>
+</span> </p>
+
+
+<div align ="right"> 
+ <a href="#top">
+<IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</div> 
+
+<p align = "justify"> <span class = "content"> 
+<B> Shared memory : </b> Threads within a block can cooperate by sharing data through some shared memory and by synchronizing
+ their execution to coordinate memory accesses. More precisely, one can specify synchronization points
+ in the kernel by calling the 
+<font color ="red">__syncthreads() </font>
+intrinsic function; 
+<font color ="red">__syncthreads() </font> 
+acts as a barrier at 
+which all threads in the block must wait before any is allowed to proceed. 
+
+For efficient cooperation, the shared memory is expected to be a low-latency memory 
+near each processor 
+core (much like an L1 cache) and 
+<font color ="red">__syncthreads() </font> 
+is expected to be lightweight. <BR> <BR>
+
+ shared memory is allocated using the 
+<font color ="red">__shared__ </font> qualifier.
+
+Shared memory is expected to be much faster than global memory. 
+Any opportunity to replace global memory accesses by shared memory accesses should therefore be 
+exploited as illustrated by the  matrix multiplication example in this workshop. <BR> <BR>
+
+
+The  code samples in Hand-on  are an implementation of <B>matrix addition</b> or 
+<b> multiplication </b> that does take advantage 
+of shared memory. 
+</span> </p>
+
+
+<ul>
+<li><p align = "justify"> <span class = "content"> 
+
+In this implementation, each thread block is responsible for computing one square sub-matrix  and
+ each thread within the block is responsible for computing one element. 
+</span> </p>
+</li> 
+
+<li><p align = "justify"> <span class = "content"> 
+In order to fit into the 
+device's resources, these two rectangular matrices are 
+divided into as many square matrices of dimension block_size as necessary and output block matrix is 
+computed as the sum 
+of the products of these square matrices. 
+</span> </p>
+</li> 
+
+<li><p align = "justify"> <span class = "content"> 
+Each of these products is performed by first loading the two 
+corresponding square matrices from global memory to shared memory with one thread loading one element of 
+each matrix, and then by having each thread compute one element of the product. 
+</span> </p>
+</li> 
+
+<li> <p align = "justify"> <span class = "content"> 
+Each thread accumulates 
+the result of each of these products into a register and once done writes the result to global memory.
+By blocking the computation this way, we take advantage of fast shared memory 
+and save a lot of global 
+memory bandwidth since block matrices of matrix A is only read  times 
+from global memory and block matrices of
+ B is read required number of times.
+ <font color ="red">__device__ </font>
+functions  are used 
+to get and set elements and build any sub-matrix from a matrix.
+</span> </p>
+</li> 
+</ul>
+
+<BR> 
+
+  
+ <DIV ALIGN=right>
+        <A href ="gpu-comp-nvidia-cuda-streams.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+   </DIV>
+
+
+<!-- **************** CUDA PAGE LOCK HOST MEMORY  ******** -->
+
+
+<a name ="hetr-cuda-prog-pagelock-host-memory"> </a>
+
+
+
+<HR>
+
+
+<a name ="hetr-cuda-prog-simple-kernel-prog"> </a>
+<DIV align=left>
+<font size="2" face="Arial" color="red"> <b> Page-Locked Host Memory :</b></font> </a>
+<p align = "justify"> <span class = "content"> 
+On NVIDIA GPU, memory is allocated with <font color ="red">cudaMalloc(C)</font>.  
+CUDA runtime offers its mechanism
+for allocating host memory <font color ="red">cudaHostAlloc().</font>  
+On host, C library routine <font color ="red">malloc()</font> can also
+be  used to allocate memory. <BR> <BR>
+
+It is important to note that there is a significant difference between the memory that 
+<font color ="red">malloc()</font> will allocate and the memory that 
+<font color ="red">cudaHostAlloc()</font> allocates. The C library 
+function malloc() allocates standard, pageble host memory, while  
+<font color ="red">cudaHostAlloc()</font> allocates
+ a buffer of page-locked host memory. Some times it is called as pinned memory, page-locked 
+buffers  have an important property. OS ensures  its residency in physical memory and it 
+guarantees that this memory will never page  this memory out to disk. 
+This means, the buffer is not evicted or relocated and hence, OS allow an application access 
+to the physical address of this memory. <BR> <BR>
+
+
+The CUDA runtime provides functions to allow the use of page-locked (also known as pinned) host memory (as opposed to regular pageble host memory allocated by malloc()):
+<font color ="red">cudaHostAlloc()</font> and <font color ="red">cudaFreeHost()</font>
+ allocate and free page-locked host memory;
+<font color ="red"> cudaHostRegister()</font> page-locks a range of memory allocated by
+<font color ="red"> malloc()</font>.  <BR> <BR>
+
+Knowing the Physical address of a buffer, the GPU can then use direct memory access (DMA)
+to copy data to or from the host. DMA copies proceed without intervention from the cPU,
+it also means that the CPU could be simultaneously paging these buffers out to disk or 
+relocating their physical address by updating the OS's page-tables. The CUDA runtime driver
+still uses DMA to transfer the buffer to the GPU, while performing a memory copy with 
+pageble memory. <BR> <BR>
+
+It is importatnt to observe that the copy speed of memory copies from pageble memory 
+is bounded by the lower of the PCIe transfer speed  and the system front-side bus. The
+benchmarks are focusing on <font color ="red">cudaMemcpy()</font> performance with both 
+pageble and page-locked memory.
+It should be noted that pageble buffers would still incur the overhead of an additional 
+CPU-managed copy, even the PCI Express and front-side-bus speeds are identical.
+Free the memory when they no longer needed rather than waiting  until 
+application  releases the memory while memory is used as a source or destination in 
+calls to <font color ="red">cudaMemcpy().</font>
+
+Using page-locked host memory has several benefits:
+</span> </p>
+
+
+<ul>
+<li> <p align = "justify"> <span class = "content"> 
+
+Copies between page-locked host memory and device memory can be performed concurrently 
+with kernel execution for some devices.
+</span> </p></li>
+
+
+<li> <p align = "justify"> <span class = "content"> 
+ On some devices, page-locked host memory can be mapped into the address space
+ of the device, eliminating the need to copy it to or from device memory 
+</span> </p></li>
+
+<li> <p align = "justify"> <span class = "content"> 
+On systems with a front-side bus, bandwidth between host memory and device memory is 
+higher if host memory is allocated as page-locked and even higher if in addition 
+it is allocated as write-combining.
+</span> </p></li>
+
+<li> <p align = "justify"> <span class = "content"> 
+Page-locked host memory is a scarce resource however, so allocations 
+in page-locked memory will start failing long before allocations in pageble memory. 
+In addition, by reducing the amount of physical memory available to the operating 
+system for paging, consuming too much page-locked memory reduces overall
+ system performance. 
+</span> </p></li>
+</ul>
+
+<div align ="right"> 
+ <a href="#top">
+<IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</div> 
+
+<B> Portable Memory : </b>
+
+<p align = "justify"> <span class = "content"> 
+A block of page-locked memory can be used in conjunction with any device 
+in the system 
+ 
+but by default, the benefits of using page-locked memory described above are 
+only available in conjunction with the device that was current when the block 
+was allocated (and with all devices sharing the same unified address space, 
+if any). To make these advantages available 
+to all devices, the block needs to be allocated by passing the flag 
+cudaHostAllocPortable to <font color ="red">cudaHostAlloc()</font> or page-locked by passing the 
+flag cudaHostRegisterPortable to 
+<font color ="red">cudaHostRegister(). </font><BR> <BR>
+
+CUDA runtime supports Write-Combine Memory which 
+frees up the host's L1 and L2 cache resources, making more cache 
+available to the rest of the application. In addition, write-combining 
+memory is not snooped during transfers across the PCI Express bus, which 
+can improve transfer performance by up to 40%. 
+
+
+CUDA runtime supports Mapped Memory which addresses the
+accessing host memory directly from within a kernel. Several advantages such as
+data transfers are implicitly performed as needed by the kernel and overlap 
+data transfers with kernel execution without using streams. 
+
+Since mapped page-locked memory is shared between host and device however,
+ the application must synchronize memory accesses using streams or events 
+ to avoid any potential read-after-write, write-after-read,
+ or write-after-write hazards.
+
+</span>  </p>
+</diV>
+
+
+</TD>
+</TR>
+
+</tbody>
+</table>
+
+
+
+
+<TABLE cellPadding=0  width = "100%" border=0> 
+<TBODY>
+
+<!-- ***************  Example Program CUDA MALLOC Test   ****************** --> 
+
+   <TR>
+   <TD bgColor = "#cccdd77889"> 
+ 
+    
+  
+    <DIV align = left>  
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Using Pageble host Memory : Example Program  - cuda_malloc_test    </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+
+<tr>
+<TD> 
+
+<p align = "justify">
+<span class = "content">
+
+The CUDA  parallel programs use  &ldquo;<I>pageble host&rdquo;</I> and 
+<i> &ldquo;page-locked host (pinned) memory.&rdquo; </i> in which allocate a GPU buffer and a host buffer of 
+matching sizes and then execute some number of copies between these
+ two buffers. We perform <B> &ldquo;Host to Device&rdquo; </b> and 
+<B>&ldquo;Device to Host&rdquo; </b> operations
+and use CUDA events for start and stop of the sequence of copies. The
+copy operation is performed 100 times and accurate timings are 
+calculated.
+
+
+
+The program calls function 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cuda_malloc_test </font>
+as explained above. The description of program is as follows: 
+</span> </p>
+<div align ="right"> 
+ <a href="#top">
+<IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</div> 
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<TABLE cellPadding=0 width = "100%" border=1> 
+<TBODY>
+
+<a name="hetr-cuda-prog-pageble-host-memory-code"> </a>
+<TR>
+<TD>
+
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+&nbsp; &nbsp; (Download source code : 
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/cuda-pageble-memory.cu">
+  <font color ="blue">cuda-pageble-memory.cu </font> </a> </I>) 
+
+ <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+ </td>
+ </tr> 
+
+</tbody>
+</table>
+
+<TABLE cellPadding=0  width = "100%" border=1> 
+<TBODY>
+
+<!-- ***************  Example Program CUDA MALLOC Test   ****************** --> 
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Using Pageble host Memory : Example Program  - cuda_malloc_test    </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+
+<TR bgcolor="#FFFFFF">
+<TD> 
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font> <BR>
+#include <font color ="black"> &lt;cudaSafeCall.h&gt;&nbsp; </font> <BR> 
+<BR> <BR>
+
+#define <font color ="black"> SIZE  </font> (64*1024*1024) <BR> <BR>
+
+&nbsp; &nbsp; float <font color ="black">cuda_malloc_test(</font> int 
+<font color ="black">size </font>
+bool
+<font color ="black">up){</font>
+<BR><BR>
+<font color ="black">
+&nbsp; &nbsp; &nbsp; cudaEvent_t   &nbsp; &nbsp;  start, stop; </font> <BR> 
+
+
+&nbsp;  &nbsp &nbsp; int  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<font color ="black">  *a, *dev_a; </font> <BR>
+
+&nbsp;  &nbsp; &nbsp; float  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+<font color ="black">  elapsedTime; </font> <BR> <BR> 
+
+
+ &nbsp; &nbsp; &nbsp;<font color ="black">
+ CUDA_SAFE_CALL( cudaEventCreate( &start ) );</font> <BR>
+
+ &nbsp; &nbsp; &nbsp;<font color ="black">
+ CUDA_SAFE_CALL( cudaEventCreate( &stop ) );</font> <BR> <BR>
+
+ &nbsp; &nbsp;&nbsp;  <font color ="black">
+  a = (int*)malloc( size * </font> sizeof <font color ="black"> ( *a ) ); 
+   </font> <BR> 
+
+ &nbsp; &nbsp;&nbsp; 
+<font color ="black"> CUDA_HANDLE_NULL( a ); </font> <BR>
+ 
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+    CUDA_SAFE_CALL( cudaMalloc( (</font>
+ void<font color ="black">**)&dev_a,
+                              size * </font> sizeof
+<font color ="black">( *dev_a ) ) ); </font> <BR> <BR>
+
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+CUDA_SAFE_CALL( cudaEventRecord( start, 0 ) ); </font> <BR>
+&nbsp; &nbsp;&nbsp;
+for<font color ="black">(</font>int <font color ="black">i = 0; i < count; i++) { </font><BR>
+<blockquote>
+
+  If <font color ="black">(up); </font> <BR>
+   &nbsp; &nbsp; &nbsp; 
+
+   <font color ="black">
+   CUDA_SAFE_CALL( cudaMemcpy( dev_a, a, <BR>
+ &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+   
+                                  size *</font> 
+ sizeof<font color ="black"> ( *dev_a ), cudaMemcpyHostToDevice ) ); </font> <BR>
+
+
+ 
+   else <BR>
+
+ &nbsp; &nbsp; &nbsp; 
+
+   <font color ="black">
+   CUDA_SAFE_CALL( cudaMemcpy( dev_a, a, <BR>
+ &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+   
+                                  size *</font> 
+ sizeof<font color ="black"> ( *dev_a ), cudaMemcpyDeviceToHost ) ); </font> <BR>
+
+
+ </blockquote>
+ &nbsp; &nbsp; 
+<font color ="black"> } </font> <BR>
+
+ <font color ="black">
+   &nbsp; &nbsp; &nbsp;   CUDA_SAFE_CALL( cudaEventRecord( stop, 0 ) ); <BR>
+   &nbsp; &nbsp; &nbsp;  CUDA_SAFE_CALL( cudaEventSynchronize( stop ) ); <BR>
+   &nbsp; &nbsp; &nbsp;  CUDA_SAFE_CALL( cudaEventElapsedTime( &elapsedTime, 
+                                        start, stop ) ); <BR> <BR> <BR>
+
+    &nbsp; &nbsp; &nbsp;  free( a ); <BR>
+    &nbsp; &nbsp; &nbsp; CUDA_SAFE_CALL( cudaFree( dev_a ) ); <BR>
+    &nbsp; &nbsp; &nbsp; CUDA_SAFE_CALL( cudaEventDestroy( start ) ); <BR>
+    &nbsp; &nbsp; &nbsp; CUDA_SAFE_CALL( cudaEventDestroy( stop ) ); <BR> <BR>
+
+    </font>
+&nbsp; &nbsp; &nbsp;
+    return  <font color ="black"> elapsedTime;</font> <BR>
+
+ &nbsp; &nbsp;
+ <font color ="black">}  </font> <BR> <BR>
+
+
+<div align ="right">
+ 
+ <a href="#top">
+
+<IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</div> 
+
+
+<HR>
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ***************  Example Program CUDA Kernel ends   ****************** --> 
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+<BR> 
+
+<!-- **************** Defintitions 3 Starts ******** -->
+
+<a name="hetr-cuda-prog-parameters-memory"> </a>
+
+<p align= "justify"> <span class = "content">  
+<font size="2" face="Arial" color="red"> <b> 
+Using Page-locked  host Memory (Pinned Memory) :Allocating a host and GPU buffer & Perform Copies / 
+CUDA Events - Timer 
+ </b> </font> 
+
+<p align= "justify"> <span class = "content">
+Another example code is given below using page-locked buffer in which 
+<font color ="red"> cudaHostAlloc() </font> is used.
+</span> 
+</p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ********  Example Program CUDA Timer : host-to-device /device-to-host ***** --> 
+
+<TABLE cellPadding=0 width = "100%" border=1> 
+<TBODY>
+
+<a name="hetr-cuda-prog-page-lock-host-memory-code">  </a>
+<TR>
+<TD>
+
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+&nbsp; &nbsp; (Download source code : 
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/cuda-pinned-memory.cu">
+  <font color ="blue">cuda-pinned-memory.cu </font> </a> </I>) 
+
+ <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+ </td>
+ </tr> 
+
+</tbody>
+</table>
+
+
+
+<TABLE cellPadding=0  width = "100%" border=1> 
+<TBODY>
+
+<!-- ***************  Example Program CUDA MALLOC Test   ****************** --> 
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Using Page-lock  Memory : Example Program  - cuda_malloc_test    </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+
+<TR bgcolor="#FFFFFF">
+<TD> 
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font> <BR>
+#include <font color ="black"> &lt;cudaSafeCall.h&gt;&nbsp; </font> <BR> 
+<BR> <BR>
+
+#define <font color ="black"> SIZE  </font> (64*1024*1024) <BR> <BR>
+
+&nbsp; &nbsp; float <font color ="black">cuda_malloc_test(</font> int 
+<font color ="black">size </font>
+bool
+<font color ="black">up){</font>
+<BR><BR>
+<font color ="black">
+&nbsp; &nbsp; &nbsp; cudaEvent_t   &nbsp; &nbsp;  start, stop; </font> <BR> 
+
+
+&nbsp;  &nbsp &nbsp; int  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<font color ="black">  *a, *dev_a; </font> <BR>
+
+&nbsp;  &nbsp; &nbsp; float  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+<font color ="black">  elapsedTime; </font> <BR> <BR> 
+
+
+ &nbsp; &nbsp; &nbsp;<font color ="black">
+ CUDA_SAFE_CALL( cudaEventCreate( &start ) );</font> <BR>
+
+ &nbsp; &nbsp; &nbsp;<font color ="black">
+ CUDA_SAFE_CALL( cudaEventCreate( &stop ) );</font> <BR> <BR>
+
+
+<!-- *** commented ** 
+
+ &nbsp; &nbsp;&nbsp;  <font color ="black">
+  a = (int*)malloc( size * </font> sizeof <font color ="black"> ( *a ) ); 
+   </font> <BR> 
+
+
+ &nbsp; &nbsp;&nbsp; 
+<font color ="black"> CUDA_HANDLE_NULL( a ); </font> <BR>
+
+*** .... -->
+
+&nbsp; &nbsp;&nbsp; 
+<B>
+<font color ="black">
+    CUDA_SAFE_CALL( cudaHostAlloc( (</font>
+ void<font color ="black">**)&a,
+                              size * </font> sizeof
+<font color ="black">( *a ), <BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;  
+cudaHostAllocDefault ) ); </font> </B>
+
+<BR> <BR>
+
+ 
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+    CUDA_SAFE_CALL( cudaMalloc( (</font>
+ void<font color ="black">**)&dev_a,
+                              size * </font> sizeof
+<font color ="black">( *dev_a ) ) ); </font> <BR> <BR>
+ 
+
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+CUDA_SAFE_CALL( cudaEventRecord( start, 0 ) ); </font> <BR>
+&nbsp; &nbsp;&nbsp;
+for<font color ="black">(</font>int <font color ="black">i = 0; i < count; i++) { </font><BR>
+<blockquote>
+
+  If <font color ="black">(up); </font> <BR>
+   &nbsp; &nbsp; &nbsp; 
+
+   <font color ="black">
+   CUDA_SAFE_CALL( cudaMemcpy( dev_a, a, <BR>
+ &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+   
+                                  size *</font> 
+ sizeof<font color ="black"> ( *dev_a ), cudaMemcpyHostToDevice ) ); </font> <BR>
+
+
+ 
+   else <BR>
+
+ &nbsp; &nbsp; &nbsp; 
+
+   <font color ="black">
+   CUDA_SAFE_CALL( cudaMemcpy( dev_a, a, <BR>
+ &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+   
+                                  size *</font> 
+ sizeof<font color ="black"> ( *dev_a ), cudaMemcpyDeviceToHost ) ); </font> <BR>
+
+
+ </blockquote>
+ &nbsp; &nbsp; 
+<font color ="black"> } </font> <BR>
+
+ <font color ="black">
+   &nbsp; &nbsp; &nbsp;   CUDA_SAFE_CALL( cudaEventRecord( stop, 0 ) ); <BR>
+   &nbsp; &nbsp; &nbsp;  CUDA_SAFE_CALL( cudaEventSynchronize( stop ) ); <BR>
+   &nbsp; &nbsp; &nbsp;  CUDA_SAFE_CALL( cudaEventElapsedTime( &elapsedTime, 
+                                        start, stop ) ); <BR> <BR> <BR>
+
+    &nbsp; &nbsp; &nbsp; <B> cudaFreeHost( a ) );  </B><BR>
+    &nbsp; &nbsp; &nbsp; CUDA_SAFE_CALL( cudaFree( dev_a ) ); <BR>
+    &nbsp; &nbsp; &nbsp; CUDA_SAFE_CALL( cudaEventDestroy( start ) ); <BR>
+    &nbsp; &nbsp; &nbsp; CUDA_SAFE_CALL( cudaEventDestroy( stop ) ); <BR> <BR>
+
+    </font>
+&nbsp; &nbsp; &nbsp;
+    return  <font color ="black"> elapsedTime;</font> <BR>
+
+ &nbsp; &nbsp;
+ <font color ="black">}  </font> <BR> <BR>
+
+
+<div align ="right"> 
+ <a href="#top">
+<IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</div> 
+
+<HR>
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!-- ***************  Example Program CUDA Kernel ends   ****************** --> 
+
+
+
+</TD>
+</TR>
+
+
+
+
+  </TBODY> 
+   </TABLE> 
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<TR>
+<TD>
+<p align= "justify"> <span class = "content">
+The second CUDA  parallel program is focussed on <I> &ldquo;passing parameters to a kernel and 
+allocate memory on a device&rdquo;</I>. It performs addition of two vlaues and 
+ the program calls function 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> kernel() </font>
+as given in the function
+<font size = 2, face = " Courier New " color ="#FF00FF"> _global_ void add</font>.
+<BR> <BR>
+
+<B> Responsibility of programmer : </B>  The programmer should aware of restrictions on the usage of
+ device pointers which are summarized as follows. 
+</span> </p>  
+
+<ul>
+<li>
+<p align= "justify"> <span class = "content">
+Pass pointers allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc() </font>
+to functions that execute on the device
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+Use pointers allocated with 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc() </font>
+ to read or write memory from code that executes on 
+the device.
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+Pass pointers allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc() </font>
+ to read or write memory from code that executes on 
+the device. 
+</span> </p>
+</li>
+
+<li>
+<p align= "justify"> <span class = "content">
+Cannot use pointers allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc()</font>
+to read or write memory from code that executes
+on the host.
+</span> </p>
+</li>
+
+</ul>
+
+<p align= "justify"> <span class = "content">
+To free memory for allocated with 
+ <font size = 2, face = " Courier New " color ="#FF00FF"> cudaMalloc(), </font>
+ use a call 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaFree().</font> <BR> <BR>
+
+
+To access device memory - by using device pointers from within device code and by using calls to 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpy()</font> from host code.
+</span> </p> 
+
+<p align= "justify"> <span class = "content">
+The last parameter to 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpy() </font> is 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpyDeviceToHost </font> instructing
+the runtime  that the source pointer is a device pointer and the destination pointer is a 
+host pointer. <BR> <BR>
+
+
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpyHostToDevice </font> instructing
+the source data is on the host and the destination is an address on the device. <BR> <BR>
+
+Also, one can specifiy 
+<font size = 2, face = " Courier New " color ="#FF00FF"> cudaMemcpyDeviceToDevice </font> 
+which indicates both pointers are on the device. 
+
+</span> </p>
+
+ <DIV ALIGN=right>
+    <A href ="gpu-comp-nvidia-cuda-streams.html"> 
+     <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+ </DIV>
+
+
+<HR>
+
+
+<!-- **************** CUDA ASYNC CONCURRENT EXEC Starts ******** -->
+
+
+<a name="hetr-cuda-prog-cuda-async-concurrent-exec"> </a>
+
+ <font size="2" face="Arial" color="red"> <b> CUDA Asynchronous Concurrent Execution </b> </font>  </span> </p>
+
+<p align= "justify"> <span class = "content">
+
+<!-- ************* Concurrent Execution between Host and Device  ******** -->
+
+<B> Concurrent Execution between Host and Device : </B> <BR> <BR>
+
+CUDA Runtime supports asynchronous function calls which facilitate concurrent execution
+between host and device, some function calls. In execution of these function calls,
+the  control is returned to the host thread before the device
+ has completed the requested task. Some of these are: <BR> <BR>
+
+<ul>
+<li> <p align= "justify"> <span class = "content">
+Kernel launches; 
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Memory copies between two addresses to the same device memory;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Memory copies from host to device of a memory block of 64 KB or less;
+</li> </span> </p>
+
+<li><p align= "justify"> <span class = "content">
+ Memory copies performed by functions that are suffixed with Async;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Memory set function calls.
+</li> </span> </p>
+</ul>
+
+<p align= "justify"> <span class = "content">
+Programmers can globally disable asynchronous kernel launches for all CUDA applications
+ running on a system by setting the 
+<font color ="red"> CUDA_LAUNCH_BLOCKING </font> 
+environment variable to 1. 
+This feature is provided for debugging purposes only.
+</span> </p>
+
+<!-- ************* Overlap of Data Transfer and kernel Execution  ******** -->
+
+<B> Overlap of Data Transfer and Kernel Execution </B> 
+
+<p align= "justify"> <span class = "content">
+
+Some devices of compute capability 1.1 and higher can perform copies between page-locked 
+host memory and device memory concurrently with kernel execution. Applications may 
+query this capability by checking the 
+
+<font color ="red"> asyncEngineCount </font> 
+
+device property, which is greater than zero for devices that support it. 
+For devices of compute capability 1.x, this capability is only supported for 
+memory copies that do not involve CUDA arrays or 2D arrays allocated through
+<font color ="red">
+ cudaMallocPitch(). </font>
+</span> </p>
+
+<!-- ************* Concurrent Kernel Execution  ******** -->
+
+<B> Concurrent Kernel Execution</B> 
+
+<p align= "justify"> <span class = "content">
+
+Some devices of compute capability 2.x can execute multiple kernels 
+concurrently. Applications may query this capability by checking the 
+concurrent Kernels device property, which 
+is equal to 1 for devices that support it.
+The maximum number of kernel launches that a device can execute 
+concurrently is sixteen.
+A kernel from one CUDA context cannot execute concurrently with 
+a kernel from another CUDA context.
+Kernels that use many textures or a large amount of local memory 
+are less likely to execute concurrently with other kernels.
+</span> </p>
+
+<!-- ************* Concurrent Kernel Execution  ******** -->
+
+<B> Concurrent Data Transfers</B> 
+
+<p align= "justify"> <span class = "content">
+
+Some devices of compute capability 2.x can perform a copy from 
+page-locked host memory to device memory concurrently with a copy 
+from device memory to page-locked host memory.
+Applications may query this capability by checking the 
+<font color ="red"> asyncEngineCount </font> device property, 
+which is equal to 2 for devices that support it. <BR> <BR>
+</span> </p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+
+<DIV ALIGN=right>
+   <A HREF="gpu-comp-nvidia-cuda-num-comp.html"> 
+      <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<HR>
+
+
+<TABLE cellPadding=0  border=0> 
+<TBODY>
+<tr>
+<td>
+
+
+
+<!-- **************** CUDA STREAMS  Starts ******** -->
+
+
+<a name="hetr-cuda-prog-cuda-streams"> </a>
+
+ <font size="2" face="Arial" color="red"> <b>  CUDA Streams
+ </b> </font>  </span> </p>
+
+<p align= "justify">  <span class = "content">
+
+Applications can manage concurrency through streams. A stream is a sequence 
+of commands (possibly issued by different host threads) that execute 
+in order. A CUDA represents a queue of GPU operations that get executed 
+in a specific order. Several operations can be included into a stream 
+and the order in which operations are added  to the stream 
+specifies the order in which they will be executed. Each stream can be 
+viewed as a task on the GPU, and there are no opportunities for these
+tasks in parallel.
+
+
+Different streams, on the other hand, may execute their 
+commands out of order with respect to one another or concurrently; 
+this behavior is not guaranteed and should therefore not be relied 
+upon for correctness (e.g. inter-kernel communication is undefined).
+Some of Stream features are:
+</span> </p>
+
+
+<ul>
+<li> <p align= "justify"> <span class = "content">
+Creation and Destruction; 
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Default Stream;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Explicit Synchronization;
+</li> </span> </p>
+
+<li><p align= "justify"> <span class = "content">
+ Implicit Synchronization;
+</li> </span> </p>
+
+<li> <p align= "justify"> <span class = "content">
+Overlapping Behavior.
+</li> </span> </p>
+</ul>
+
+ <font size="2" face="Arial" color="red"> <b> Using a Single Stream &amp; Multiple 
+CUDA Streams
+ </b> </font>  </span> </p>
+
+<p align= "justify"> <span class = "content">
+Application employ single or multiple CUDA Streams. When we use single stream,
+at the beginning of application, the computations are divided into chunks and 
+each chunked computation and the overlap of memory copies with kernel execution.
+<BR> <BR>
+
+On multiple streams, different streams will perform CUDA operations as per 
+application requirements. For example 
+stream 1 will do copy input buffers to the GPU, Stream 0 will execute its 
+kernel while stream 0 copies its results to the host. The performance of
+ application using single streams  and the description of 
+program is as follows: 
+</span> </p>
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+
+<!-- ************ Table for Using Device Properties Program Ends ********************** -->
+
+<!-- ********  Example Program CUDA Timer : host-to-device /device-to-host ***** --> 
+
+<TABLE cellPadding=0 width = "100%" border=0> 
+<TBODY>
+
+<a name="hetr-cuda-single-cuda-stream"> </a>
+<TR>
+<TD>
+
+<!-- **************** download  Starts here ******************* -->
+<BR> 
+<div align = "right">
+&nbsp; &nbsp; (Download source code - single CUDA Stream : 
+<I>
+ <font color ="blue">
+  <a  href="../gpu-comp-nvidia-cuda-stream-codes/single-cuda-stream.cu">
+  <font color ="blue">single-cuda-stream.cu </font> </a> </I>) 
+
+ <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+ </td>
+ </tr> 
+
+<tr>
+<td>
+
+<div align = "right">
+&nbsp; &nbsp; (Download source code - Multiple CUDA Streams  
+<I>
+ <font color ="blue">
+    <a  href="../gpu-comp-nvidia-cuda-stream-codes/multiple-cuda-streams.cu">
+  <font color ="blue">multiple-cuda-streams.cu </font> </a> </I>) 
+
+ <BR>
+</div>
+<!-- ******************** download  Ends here ****************** -->
+ </td>
+ </tr> 
+
+<TR>
+<TD>
+<BR> 
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+
+</tbody>
+</table>
+
+<!-- ************* Uisng Single CUDA Stream  Program Starts ********* -->
+
+<TABLE cellPadding=0  width ="100%" border=1> 
+<TBODY>
+
+   <TR>
+   <TD bgColor = "#cccdd77889">  
+
+    <DIV align = left> 
+        <font size="2"  face="Verdana" color="black"> 
+           <b>  Example Program  :  Using Single CUDA Stream   </b> 
+         </font>
+      </DIV> 
+       </TD> 
+     </TR> 
+
+
+
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+
+<tr bgcolor="#FFFFFF">
+<TD> 
+
+
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+#include <font color ="black"> &lt;stdio.h&gt;&nbsp; </font><BR> 
+#include <font color ="black"> &lt;time.h&gt;&nbsp; </font><BR> 
+#include <font color ="black"> &lt;cuda.h&gt;&nbsp; </font><BR> <BR>
+
+
+/*    Utility Macro : CUDA SAFE CALL */ <BR> 
+ void <font color ="black">
+
+CUDA_SAFE_CALL( cudaError_t call) <BR>
+ 
+{ <BR>
+<blockquote>
+cudaError_t ret = call; <BR>
+        switch(ret) <BR>
+
+ { <BR>
+<blockquote>
+  case cudaSuccess: <BR>
+   &nbsp; &nbsp; &nbsp;
+</font>
+ 
+   break; <BR>
+<font color ="black">
+   default : <BR>
+ &nbsp; &nbsp; &nbsp;
+ {
+  <blockquote>
+
+printf(" ERROR at line :%i.%d' ' %s\n", <BR>
+        __LINE__,ret,cudaGetErrorString(ret)); <BR>
+                                exit(-1); <BR>
+</font>
+                           break; <BR>
+<font color ="black">
+  </blockquote>                         
+  &nbsp; &nbsp; &nbsp;} <BR>
+ </blockquote>
+  } <BR>
+</blockquote>
+
+ } 
+</font> 
+<BR> <BR>
+
+<!-- ************* Vect Vect Addition ********** -->
+
+<!-- ************* _global_void  ******** -->
+<P align = "left"><font Color="red" size="2" face="verdana">
+
+&nbsp; _global_void <font color ="black">vectvectadd</font>
+   (int <font color ="black">*device_a,</font> 
+    int <font color ="black">*device_b,</font> 
+   int  <font color ="black"> *device_result,</font>) {</font><BR><BR>
+<blockquote>
+&nbsp; &nbsp; &nbsp;
+  int <font color ="black"> threadId = threadIdx.x + blockIdx.x * blockDim.x </font> <BR>
+
+
+ <font color ="black">
+ &nbsp; &nbsp; &nbsp;if (tindex < sizeOfArray) <BR> <BR>
+ &nbsp; &nbsp; &nbsp;device_result[tindex]= device_a[tindex]+device_b[tindex];  </font><BR> <Br>
+</blockquote>
+&nbsp; <font color ="black">} </font><BR> <BR>
+
+&nbsp;<font color ="black"> /* Check for safe return of all calls to the device */ </font>
+<BR>
+
+<!--  ************** main programme ********** -->
+
+
+
+int <font color ="black"> main (</font> int argc, **argv <font color ="black">) </font> { <BR>
+<blockquote>
+
+
+<font color ="black"> cudaDeviceProp prop; </font> <BR> <BR> 
+
+ int  <font color ="black">*host_a, *host_b, *host_result;</font>  <BR> 
+ int  <font color ="black">*device_a, *device_b, *device_result;</font>  <BR> 
+ int  <font color ="black">whichDevice</font>;  <BR> <BR>
+
+
+ <font color ="black"> CUDA_SAFE_CALL(cudaGetDeviceCount( &whichDevice) ); </font> <BR> 
+ <font color ="black"> CUDA_SAFE_CALL(cudaGetDeviceProperties( &prop, whichDevice) ); </font> <BR> <BR>
+<font color ="black">
+	&nbsp; &nbsp; if(!prop.deviceOverlap) <BR>
+	&nbsp; &nbsp; { <BR>
+	  &nbsp; &nbsp; 
+                printf("Device can'nt handle overlaps \n"); <BR> </font>
+	  &nbsp; &nbsp;
+    return 0; <BR> <font color ="black">
+	&nbsp; &nbsp; } </font> <BR>
+</font>
+<BR> <BR>
+
+<font Color="black" size="2" face="verdana">
+<font Color="black" >
+&nbsp; &nbsp; &nbsp; cudaEvent_t   &nbsp; &nbsp;  start, stop; </font> <BR> 
+
+&nbsp;  &nbsp; &nbsp; float  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+<font color ="black">  elapsedTime; </font> <BR> <BR> 
+
+ &nbsp; &nbsp; &nbsp;<font color ="black">
+ CUDA_SAFE_CALL( cudaEventCreate( &start ) );</font> <BR>
+
+ &nbsp; &nbsp; &nbsp;<font color ="black">
+ CUDA_SAFE_CALL( cudaEventCreate( &stop ) );</font>  <BR> <BR>
+
+
+&nbsp; &nbsp; &nbsp;<font color ="black">
+	cudaStream_t stream; </font> <BR>
+
+&nbsp; &nbsp; &nbsp;<font color ="black">
+	CUDA_SAFE_CALL(cudaStreamCreate(&stream)); </font> <br> <BR>
+
+
+<!-- ********* cudaMalloc memory ********* -->
+
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+    CUDA_SAFE_CALL( cudaMalloc( (</font>
+ void<font color ="black">**)&device_a, <BR>
+&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+                              sizeOfArray * </font> sizeof
+<font color ="black">( *device_a ) ) ); </font> <BR> 
+
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+    CUDA_SAFE_CALL( cudaMalloc( (</font>
+ void<font color ="black">**)&device_b, <BR>
+&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+                              sizeOfArray * </font> sizeof
+<font color ="black">( *device_b ) ) ); </font> <BR> 
+
+&nbsp; &nbsp;&nbsp; 
+<font color ="black">
+    CUDA_SAFE_CALL( cudaMalloc( (</font>
+ void<font color ="black">**)&device_result, <BR>
+&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
+                              sizeOfArray * </font> sizeof
+<font color ="black">( *device_result ) ) ); </font> <BR> <BR>
+
+
+&nbsp; &nbsp;&nbsp; <font color ="black">
+    CUDA_SAFE_CALL( cudaHostAlloc( (</font>
+ void<font color ="black">**)&host_a, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+                              size * </font> sizeofArray
+<font color ="black">( *a ), 
+cudaHostAllocDefault ) ); </font> </B> <BR> 
+
+
+&nbsp; &nbsp;&nbsp; <font color ="black">
+    CUDA_SAFE_CALL( cudaHostAlloc( (</font>
+ void<font color ="black">**)&host_b, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+                              size * </font> sizeofArray
+<font color ="black">( *b ), 
+cudaHostAllocDefault ) ); </font> </B> <BR> 
+
+
+&nbsp; &nbsp;&nbsp; <font color ="black">
+    CUDA_SAFE_CALL( cudaHostAlloc( (</font>
+ void<font color ="black">**)&host_result, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                              size * </font> sizeofArray
+<font color ="black">( *host_result ), 
+cudaHostAllocDefault ) ); </font> </B> <BR> <BR>
+
+
+ for<font color ="black">(</font>int <font color ="black">index = 0; index < sizeOfArray; index++) <BR>
+{ </font>
+ <blockquote>
+    host_a[index] = rand()%10; <BR>
+    host_b[index] = rand()%10;  <BR>
+  </blockquote>
+ } <BR>
+
+<BR>
+ <font color ="black">
+
+ <font color ="black">
+    CUDA_SAFE_CALL( cudaMemcpyAsync(device_a, host_a, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ sizeOfArray * </font> sizeof
+<font color ="black">( int ), <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+cudaMemcpyHostToDevice, stream)); </font>  <BR> <BR>
+
+
+ <font color ="black">
+ <font color ="black">
+    CUDA_SAFE_CALL( cudaMemcpyAsync(device_b, host_b, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ sizeOfArray * </font> sizeof
+<font color ="black">( int ), <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+cudaMemcpyHostToDevice, stream)); </font>  <BR> <BR>
+
+
+    /*Kernel call*/ <BR>
+	arrayAddition<<<256, 1, 1>>>(device_a, device_b, device_result); <BR> <BR>
+
+
+ <font color ="black">
+    CUDA_SAFE_CALL( cudaMemcpyAsync(device_result, host_result, <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ sizeOfArray * </font> sizeof
+<font color ="black">( int ), <BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+cudaMemcpyHostToDevice, stream)); </font>  <BR> <BR>
+
+
+
+	CUDA_SAFE_CALL(cudaStreamSynchronize(stream)); <BR>
+	CUDA_SAFE_CALL(cudaEventRecord(stop, 0)); <BR>
+	CUDA_SAFE_CALL(cudaEventSynchronize(stop)); <BR>
+	CUDA_SAFE_CALL(cudaEventElapsedTime(&elapsedTime, start, stop)); <BR> <BR>
+
+	printf("*********** CDAC - Tech Workshop : hyPACK-2013 \n"); <BR>
+	
+	printf("\n Size of array : %d \n", sizeOfArray); <BR>
+	printf("\n Time taken: %3.1f ms \n", elapsedTime); <BR> <BR>
+
+	CUDA_SAFE_CALL(cudaFreeHost(host_a)); <BR>
+	CUDA_SAFE_CALL(cudaFreeHost(host_b));  <BR>
+	CUDA_SAFE_CALL(cudaFreeHost(host_result)); <BR>
+
+	CUDA_SAFE_CALL(cudaFree(device_a)); <BR>
+	CUDA_SAFE_CALL(cudaFree(device_b));  <BR>
+	CUDA_SAFE_CALL(cudaFree(device_result)); <BR> <BR>
+
+	return 0; <BR>  <BR>
+
+}  </font>
+
+<BR>
+</TD>
+</TR>
+</TBODY> 
+</TABLE> 
+<BR>
+
+<!-- ************* Uisng Single CUDA Stream  Program Starts ********* -->
+<DIV ALIGN= "right">
+    <A href ="gpu-comp-nvidia-cuda-streams.html"> 
+     <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+ </DIV>
+
+<HR>
+
+</TD>
+</TR>
+
+<!--  content of web page End here  --> 
+
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

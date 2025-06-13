@@ -1,0 +1,42 @@
+#
+# ************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *************************************************************
+#
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+#
+#Makefile for running cuda - cublas programs
+#
+#-----------------------------------------------------------------
+#               Machines Architecture :
+#------------------------------------------------------------------
+CC  		 =  nvcc
+#CC  		 =  gcc
+CCLINKER 	 =  $(CC)
+COPTION    	 =
+OPTFLAGS   	 =  
+CCFLAGS    	 = -lcublas 
+#CCFLAGS    	 = -deviceemu
+INCLUDE		 = /usr/local/cuda/include
+LIBS       	 = /usr/local/cuda/lib/
+EXECS     	 =  run
+
+#---------------------------------------------------------------------
+#               Object files Single Precision ...
+#---------------------------------------------------------------------
+
+OBJECTS = CUBlasPoissonEquation.cu
+
+#-----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) -I$(INCLUDE) -o $@ $(OBJECTS) -L$(LIBS) $(CCFLAGS)
+
+clean:
+	\rm -rf *.o run
+

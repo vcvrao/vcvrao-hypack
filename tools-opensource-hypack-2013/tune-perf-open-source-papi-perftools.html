@@ -1,0 +1,2580 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+       
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+           <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+	
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+                <!-- ** -->
+                <A class=menulslct
+	         href="./../hypack13-mode01-multicore-software-tools.html">
+                 &#149; Threads-Prof. &amp; Tools </A>
+                <!-- ** -->
+ 
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<a name = "tune-perf-papi-perftools"> </a>
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+<TR>
+
+<H1> hyPACK-2013 Tools  - PAPI  : Performance Application Programming Interface (PAPI)</H1> 
+</TR>
+</TBODY>
+ </TABLE> 
+
+
+<TABLE cellPadding=0 border=0> 
+<TBODY>
+
+<TR>
+    <td height="24" align="left" >
+ <P align=justify> <span class="content">
+
+
+  PAPI aims to provide the tool designer and application engineer with a consistent interface and methodology for use of the performance counter hardware found in most major microprocessors. PAPI enables software engineers to see, in near real time, the relation between software performance and processor events.
+
+   Example   programs using different APIs Compilation and linking 
+   of the PAPI library are discussed using 
+    different APIs to get the Performance counters of the hardware. </span>
+</p>
+</td> </tr> </table>
+
+<!-- *********************  Sub-title Starts topics here **************** -->
+
+<BR> 
+
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+   <p align = "left" >
+   
+    <a href="#papi-intro">
+   <font size="2" face="Arial" color="blue"> <B> Introduction </b>  </font> </a> 
+   &nbsp; &nbsp;  &nbsp; &nbsp;  
+
+
+  <a href="#arch-papi">
+  <font size="2" face="Arial" color="blue"> <B> Architecture </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+  <a href="#events">
+  <font size="2" face="Arial" color="blue"> <B>  Events  </b>   
+  </font> </a>
+  &nbsp; &nbsp; &nbsp; 
+ 
+
+
+ <a href="#std_event_def-papi">
+  <font size="2" face="Arial " color="blue"> <B> Standardized Event Definitions </b>  </font> </a> 
+ &nbsp; &nbsp; &nbsp; 
+ <BR> <BR>
+  
+  
+<a href="#interface-papi">
+ <font size="2" face="Arial" color="blue"> <B> C & Fortran Calling Interfaces </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+
+
+
+ <a href="#compile-link-prog">
+ <font size="2" face="Arial" color="blue"> <B>Compilation & Linking</ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+
+ <a href="#error-handling">
+ <font size="2" face="Arial" color="blue"> <B> Error Handling </ b>  
+ </font> </a> 
+
+<BR><BR>
+
+<a href="#advance-papi">
+ <font size="2" face="Arial" color="blue"> <B> Advanced  Features </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+</td>
+</tr>
+</tbody>
+</table>
+<!-- *****************  Sub-title topics Ends here ********************* -->
+
+
+
+<!-- ************* List of Programs - PAPI High level API's   Starts [1] here **************** -->
+
+<p> <font size="2" face="Arial" color="red"> <b> List of Programs Using PAPI </b> </font> </p>
+
+
+<p align = "left" >
+<table border="0"  height="6">
+  <tbody> 
+
+     <tr>
+     <td> </td>
+
+     <td width="96%" height="2" align="left">
+   
+    
+        <a href="./papi-html/papi-high-level.html"> 
+          <font color="blue"> <span class="content"><p align = "justify">
+               <B>  Programs using the High-level API's. : </b>  
+          </font> 
+       </a>   
+     
+      Examples include some introductory programs which has the ability to start, stop 
+and read the counters for a specified list of events provided by High-level API's. 
+It is meant for programmers wanting simple event measurements using only PAPI preset events. 
+The benefits of using the high-level API rather than the low-level API are that it is easier
+ to use and requires less setup (additional calls). </p>  
+
+        </span> 
+     </td>
+     </tr>
+
+<!-- **************** List of Programs - PAPI High level API's ends  [1] here ****************** -->
+
+
+<!-- ****************** List of Programs PAPI Low level API's Starts [2] here **************** -->
+
+     <tr>
+     <td> </td>
+          
+
+     <td width="96%" height="2" align="left">
+    <span class="content"><p align = "justify">
+
+        <a href="./papi-html/papi-low-level.html"> 
+      <font  color="blue"> 
+         <B> Programs using the Low-level API's. :  </b> 
+        </font> </a> 
+     
+
+      Examples include some introductory programs which emphasis on the usage of the low-level
+ API's. The low-level API (Application Programming Interface) manages hardware events in 
+user-defined groups called Event Sets. It is meant for experienced application programmers 
+and tool developers wanting fine-grained measurement and control of the PAPI interface. 
+Some of the benefits of using the low-level API rather than the high-level API are that 
+it increases efficiency and functionality. </p> 
+        </span> 
+     </td>
+     </tr>
+<!-- **************** List of Programs PAPI Low level API's  Ends  [2] here ******************* -->
+
+
+<!-- ************** List of Programs PAPI-paprallel programs [3] here ********************* -->
+  <tr>
+   <td></td>
+
+   <td width="96%" height="2" align="left">
+        <span class="content"><p align = "justify">
+    
+        <a href="./papi-html/papi-parallel.html"> 
+    <font color="blue"> 
+         <B>Using PAPI with Parallel Programs : </b> 
+        </font> </a>
+     
+    Example programs (Pthreads, OpenMP & MPI) using PAPI    </p> 
+    </span> 
+    </td>
+    </tr>
+<!-- ******************* List of Programs PAPI-parallel programs  Ends  [3] here ********************** -->
+
+</tbody>
+</table>
+
+<BR> 
+
+<!-- ****************** Introduction to PAPI starts *********************** -->
+
+<a name="papi-intro">
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+    <B> Introduction to PAPI </b>  </font> </font></DIV> 
+</TD> 
+</TR> 
+
+<TR>
+<TD>
+
+  <P align=justify><FONT face="verdana" size=2, class="content" >
+<BR><BR>
+
+
+ <font color="black" size = "2" > <B> What is PAPI .. ? </b> </font> <br><br>
+
+PAPI is an acronym for Performance Application Programming Interface. The PAPI is being developed at the University of Tennessee's Innovative Computing Laboratory. The focus of the PAPI was to design and implement a portable API (Application Programming Interface) to access the hardware performance counters found on most modern microprocessors.
+<BR> <BR>
+PAPI is a specification of a cross-platform interface to hardware performance counters on modern microprocessors. These counters exist as a small set of registers that count events, which are occurrences of specific signals related to a processor's function. Monitoring these events has a variety of uses in application performance analysis and tuning. The PAPI specification consists of both a standard set of events deemed most relevant for application performance tuning, as well as both high-level and low-level sets of routines for accessing the counters. The high level interface simply provides the ability to start, stop,and read sets of events, and is intended for the acquisition of simple but accurate measurement by application engineers. The fully programmable low-level interface provides sophisticated options for controlling the counters, as well as access to all native counting modes and events. Any of over 100 preset events can be counted through either a simple high level programming interface or a more complete low level interface from either C or Fortran.
+<BR> <BR>
+
+PAPI has been implemented on a number of platforms, including Linux/x86 and Linux/IA-64. The
+Linux/x86 implementation requires a kernel patch that provides a driver for the hardware counters. The driver memory maps the counter registers into user space and allows virtualizing the counters on a per-process or per-thread basis. The kernel patch is being proposed for inclusion in the main Linux tree. The PAPI library provides access on Linux platforms not only to the standard set of events mentioned above but also to all the Linux/x86 and Linux/IA-64 native events.
+<BR><BR>
+
+ <font color="black" size = "2" > <B> History </b> </font> <br><br>
+
+Hardware counters exist on every major processor today, such as Intel Core 2 Duo,Pentium, IA-64, AMD Opetron, AMD Athlon, and IBM POWER series. These counters can provide application developers with valuable information about sections of their code that can be improved. However, there are only a few APIs that allow access to these counters.
+<br>
+Some goals of PAPI are as follows:<br><br>
+
+<blockquote>
+<li> To provide a solid foundation for cross platform performance analysis tools </li>
+<li> To present a set of standard definitions for performance metrics on all platforms </li>
+<li> To provide a standardize API among users, vendors, and academics </li>
+<li> To be easy to use, well documented, and freely available </li>
+</blockquote>
+
+</TD> 
+</TR> 
+</TBODY> </TABLE> 
+
+<!-- *******************  Introduction to PAPI ends here ******************** -->
+
+
+<!-- *****************  An PAPI Architecture start here ************************ -->
+
+<a name="arch-papi">  
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  PAPI Architecture  </b> </font> </font></DIV>
+ </TD> </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+
+The PAPI architecture uses a layered approach, as shown in Figure 1. Internally, the PAPI implementation is split into portable and machine-dependent layers. The topmost portable layer consists of the high and low level PAPI interfaces. This layer is completely machine independent and requires little porting effort. It contains all of the API functions as well as numerous utility functions that perform state handling, memory management, data structure manipulation and thread safety. In addition, this layer provides advanced functionality not always provided by the operating system, namely event profiling and overflow handling. The portable layer calls the substrate, the internal PAPI layer that handles the machine-dependent
+portions of code for accessing the counters.
+<BR><BR>
+
+<div align = "center">
+ <img src="./papi-images/papi-arch.jpg" alt="PAPI Architecture" border="0" height="650" width="460" > <BR>
+  Figure 1. PAPI Architecture 
+</div>
+<BR><BR>
+</TD> </TR> 
+
+
+</TBODY> 
+</TABLE> 
+
+<BR>
+<!-- ********************  An Overview of PAPI Ends here  ************************* -->
+
+
+<!-- *****************  An Overview of PAPI : Hardware Events Starts *********************** -->
+
+ <a name="events"> 
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+      <B>  Events </b>  </font> </font></DIV>
+ </TD> </TR> 
+<TR>
+<TD>
+
+
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+
+<BR><font color="black" size = "2" > <B> What are EVENTS ? </b> </font> <br><br>
+
+Events are occurrences of specific signals related to a processor's function. Hardware performance counters exist as a small set of registers that count events, such as cache misses and floating point operations while the program executes on the processor. Monitoring these events facilitates correlation between the structure of source/object code and the efficiency of the mapping of that code to the underlying architecture. Each processor has a number of events that are native to that architecture. PAPI provides a software abstraction of these architecture-dependent native events into a collection of preset events that are accessible through the PAPI interface.
+
+<BR><BR><font color="black" size = "2" > <B> What are Native Events ? </b> </font> <br><br>
+ 
+Native events comprise the set of all events that are countable by the CPU. There are generally far more native events available than can be mapped onto PAPI preset events. Even if no preset event is available that exposes a given native event, native events can still be accessed directly. PAPI provides access to native events on all supported platforms through the low-level interface.<BR><BR>
+Native event codes and names are platform dependent, so native codes for one platform most likely will not work for any other platform. 
+
+<BR><BR><font color="black" size = "2" > <B> What are Preset Events ? </b> </font> <br><br>
+
+Preset events, also known as predefined events, are a common set of events deemed relevant and useful for application performance tuning. These events are typically found in many CPUs that provide performance counters and give access to the memory hierarchy, cache coherence protocol events, cycle and instruction counts, functional unit, and pipeline status. Furthermore, preset events are mappings from symbolic names (PAPI preset name) to machine specific definitions (native countable events) for a particular hardware resource. For example, Total Cycles (in user mode) is PAPI_TOT_CYC. Also, PAPI supports presets that may be derived from the underlying hardware metrics. For example, Total L1 Cache Misses (PAPI_L1_TCM) might be the sum of L1 Data Misses and L1 Instruction Misses on a given platform. A preset can be either directly available as a single counter, derived using a combination of counters, or unavailable on any particular platform. The PAPI library names approximately 100 preset events, which are defined in the header file,<I> papiStdEventDefs.h </I>.
+<BR><BR>
+
+The following low-level functions can be called to query about the existence of a preset or native event (in other words, if the hardware supports that certain event), and to get details about that event:
+
+<BR><font color="black" size = "2" > <B> C: </b> </font> <br><br>
+<I> 
+&nbsp;&nbsp; PAPI_query_event(EventCode) <BR>
+&nbsp;&nbsp; PAPI_get_event_info(EventCode, &info) <BR>
+&nbsp;&nbsp; PAPI_enum_event(&EventCode, modifier) <BR>
+</I>
+
+<BR><font color="black" size = "2" > <B> Fortran: </b> </font> <br><br>
+<I> 
+&nbsp;&nbsp; PAPIF_query_event(EventCode, check) <BR>
+&nbsp;&nbsp; PAPIF_get_event_info(EventCode, symbol, longDescr, shortDescr, count, note, flags, check) <BR>
+&nbsp;&nbsp; PAPIF_enum_event(&EventCode, modifier, check) <BR>
+</I> 
+<BR><font color="black" size = "2" > <B> Arguments: </b> </font> <br><br>
+
+<I> EventCode </I>-- a defined event, such as <B> PAPI_TOT_INS </B>. <BR>
+<I> symbol </I> -- the event symbol, or name, such as the preset name,<B> PAPI_BR_CN </B>.<BR>
+<I> longDescr </I> -- a descriptive string for the event of length less than <B> PAPI_MAX_STR_LEN </B>. <BR>
+<I>shortDescr</I> -- a short descriptive string for the event of length less than 18 characters. <BR>
+<I>count</I> -- zero if the event CANNOT be counted. <BR> 
+<I>note</I> -- additional text information about an event (if available). <BR> 
+<I>flags</I> -- provides additional information about an event, e.g., <B>PAPI_DERIVED </B>for an event derived from 2 or more other events. <BR> 
+<I>modifier</I> -- modifies the search criteria; for preset events, returns all events or only available events; for native events, the definition is platform dependent. <BR>
+<BR> <BR>
+<B> Note : </B> <I> PAPI_query_event </I> asks the PAPI library if the preset or native event can be counted on this architecture. If the event CAN be counted, the function returns <B>PAPI_OK </B>.If the event CANNOT be counted, the function returns an error code. 
+</td></tr>
+</TBODY> </TABLE> 
+</p>
+
+<!-- ****************  An Overview of PAPI : Hardware Events ends ********************** -->
+
+
+
+
+
+<!-- **************  An Overview of PAPI : Standard Event Definations Starts ***************** -->
+<a name="std_event_def-papi"> 
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+ <DIV align=Left><font size="2" color ="black" > <B>
+ Standardized Event Definitions  </b> </font> </font></DIV>
+ </TD> </TR> 
+
+<TR>
+<TD>
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+
+<BR> 
+
+The header file papiStdEventDefs.h contains platform specific constants. These constants are presented in 
+Table 1: Standardized Event Definitions below. The following table of hardware events deemed relevant and useful in 
+tuning application performance. These events have identical assignments in the header files on different platforms, 
+however they may differ in their actual semantics. In addition, all of these events are not guaranteed to be present on all
+ platforms. Please check your platform's documentation carefully. 
+<BR>                                                                      
+            
+                          <dl>
+                          <center>                           
+                          <table border="0">
+                             <tbody>
+                               <tr>
+                                 <td>                                 
+                                <table nosave="" noshade="" border="5" 
+bordercolordark="pink" bordercolorlight="lightpink">
+                                   <tbody>
+                                     <tr nosave="">
+                                       <td nosave=""><b>  Value </b></td>
+                                       <td nosave=""><b> Symbol</b></td>
+                                       <td><b> Description</b></td>
+                                     </tr>
+                                     <tr nosave="">
+                                       <td nosave=""><tt> 0x80000000</tt></td>
+                                       <td nosave=""><tt> PAPI_L1_DCM</tt></td>
+                                       <td> Level 1 data cache misses</td>
+                                     </tr>
+                                     <tr nosave="">
+                                       <td nosave=""><tt> 0x80000001</tt></td>
+                                       <td><tt> PAPI_L1_ICM</tt></td>
+                                       <td nosave=""> Level 1 instruction 
+ cache  misses</td>
+                                     </tr>
+                                     <tr nosave="">
+                                       <td nosave=""><tt> 0x80000002</tt></td>
+                                       <td><tt> PAPI_L2_DCM</tt></td>
+                                       <td nosave=""> Level 2 data cache
+misses</td>
+                                     </tr>
+                                     <tr nosave="">
+                                       <td nosave=""><tt> 0x80000003</tt></td>
+                                       <td><tt> PAPI_L2_ICM</tt></td>
+                                       <td nosave=""> Level 2 instruction 
+ cache  misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000004</tt></td>
+                                       <td><tt> PAPI_L3_DCM</tt></td>
+                                       <td> Level 3 data cache misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000005</tt></td>
+                                       <td><tt> PAPI_L3_ICM</tt></td>
+                                       <td> Level 3 instruction cache misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000006</tt></td>
+                                       <td><tt> PAPI_L1_TCM</tt></td>
+                                       <td> Level 1 total cache misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000007</tt></td>
+                                       <td><tt> PAPI_L2_TCM</tt></td>
+                                       <td> Level 2 total cache misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000008</tt></td>
+                                       <td><tt> PAPI_L3_TCM</tt></td>
+                                       <td> Level 3 total cache misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000009</tt></td>
+                                       <td><tt> PAPI_CA_SNP</tt></td>
+                                       <td> Snoops</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000000A</tt></td>
+                                       <td><tt> PAPI_CA_SHR</tt></td>
+                                       <td> Request for access to shared
+cache   line (SMP)</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000000B</tt></td>
+                                       <td><tt> PAPI_CA_CLN</tt></td>
+                                       <td> Request for access to clean cache
+   line (SMP)</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000000C</tt></td>
+                                       <td><tt> PAPI_CA_INV</tt></td>
+                                       <td> Cache Line Invalidation (SMP)</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000000D</tt></td>
+                                       <td><tt> PAPI_CA_ITV</tt></td>
+                                       <td> Cache Line Intervention (SMP)</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000000E</tt></td>
+                                       <td><tt> PAPI_L3_LDM</tt></td>
+                                       <td> Level 3 load misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000000F</tt></td>
+                                       <td><tt> PAPI_L3_STM</tt></td>
+                                       <td> Level 3 store misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000010</tt></td>
+                                       <td><tt> PAPI_BRU_IDL</tt></td>
+                                       <td> Cycles branch units are idle</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000011</tt></td>
+                                       <td><tt> PAPI_FXU_IDL</tt></td>
+                                       <td> Cycles integer units are idle</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000012</tt></td>
+                                       <td><tt> PAPI_FPU_IDL</tt></td>
+                                       <td> Cycles floating point units are
+  idle</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000013</tt></td>
+                                       <td><tt> PAPI_LSU_IDL</tt></td>
+                                       <td> Cycles load/store units are idle</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000014</tt></td>
+                                       <td><tt> PAPI_TLB_DM</tt></td>
+                                       <td> Data translation lookaside buffer
+   misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000015</tt></td>
+                                       <td><tt> PAPI_TLB_IM</tt></td>
+                                       <td> Instruction translation lookaside
+   buffer misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000016</tt></td>
+                                       <td><tt> PAPI_TLB_TL</tt></td>
+                                       <td> Total translation lookaside buffer
+   misses </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000017</tt></td>
+                                       <td><tt> PAPI_L1_LDM</tt></td>
+                                       <td> Level 1 load misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000018</tt></td>
+                                       <td><tt> PAPI_L1_STM</tt></td>
+                                       <td> Level 1 store misses </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000019</tt></td>
+                                       <td><tt> PAPI_L2_LDM</tt></td>
+                                       <td> Level 2 load misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000001A</tt></td>
+                                       <td><tt> PAPI_L2_STM</tt></td>
+                                       <td> Level 2 store misses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000001B</tt></td>
+                                       <td><tt> PAPI_BTAC_M</tt></td>
+                                       <td> BTAC miss</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000001C</tt></td>
+                                       <td><tt> PAPI_PRF_DM</tt></td>
+                                       <td> Prefetch data instruction caused
+   a miss</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000001D</tt></td>
+                                       <td><tt> PAPI_L3_DCH</tt></td>
+                                       <td> Level 3 Data Cache Hit</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000001E</tt></td>
+                                       <td><tt> PAPI_TLB_SD</tt></td>
+                                       <td> Translation lookaside buffer
+shootdowns   (SMP)</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000001F</tt></td>
+                                       <td><tt> PAPI_CSR_FAL</tt></td>
+                                       <td> Failed store conditional instructions 
+                                      </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000020</tt></td>
+                                       <td><tt> PAPI_CSR_SUC</tt></td>
+                                       <td> Successful store conditional
+instructions</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000021</tt></td>
+                                       <td><tt> PAPI_CSR_TOT</tt></td>
+                                       <td> Total store conditional instructions</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000022</tt></td>
+                                       <td><tt> PAPI_MEM_SCY</tt></td>
+                                       <td> Cycles Stalled Waiting for Memory
+   Access </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000023</tt></td>
+                                       <td><tt> PAPI_MEM_RCY</tt></td>
+                                       <td> Cycles Stalled Waiting for Memory
+   Read </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000024</tt></td>
+                                       <td><tt> PAPI_MEM_WCY</tt></td>
+                                       <td> Cycles Stalled Waiting for Memory
+   Write </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000025</tt></td>
+                                       <td><tt> PAPI_STL_ICY</tt></td>
+                                       <td> Cycles with No Instruction Issue 
+                                      </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000026</tt></td>
+                                       <td><tt> PAPI_FUL_ICY</tt></td>
+                                       <td> Cycles with Maximum Instruction
+  Issue</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000027</tt></td>
+                                       <td><tt> PAPI_STL_CCY</tt></td>
+                                       <td> Cycles with No Instruction Completion</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000028</tt></td>
+                                       <td><tt> PAPI_FUL_CCY</tt></td>
+                                       <td> Cycles with Maximum Instruction
+  Completion</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000029</tt></td>
+                                       <td><tt> PAPI_HW_INT</tt></td>
+                                       <td> Hardware interrupts</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000002A</tt></td>
+                                       <td><tt> PAPI_BR_UCN</tt></td>
+                                       <td> Unconditional branch instructions
+   executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000002B</tt></td>
+                                       <td><tt> PAPI_BR_CN</tt></td>
+                                       <td> Conditional branch instructions
+  executed                                     </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000002C</tt></td>
+                                       <td><tt> PAPI_BR_TKN</tt></td>
+                                       <td> Conditional branch instructions
+  taken                                     </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000002D</tt></td>
+                                       <td><tt> PAPI_BR_NTK</tt></td>
+                                       <td> Conditional branch instructions
+  not taken </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000002E</tt></td>
+                                       <td><tt> PAPI_BR_MSP</tt></td>
+                                       <td> Conditional branch instructions
+  mispredicted                                     </td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000002F</tt></td>
+                                       <td><tt> PAPI_BR_PRC</tt></td>
+                                       <td> Conditional branch instructions
+  correctly predicted</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000030</tt></td>
+                                       <td><tt> PAPI_FMA_INS</tt></td>
+                                       <td> FMA instructions completed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000031</tt></td>
+                                       <td><tt> PAPI_TOT_IIS</tt></td>
+                                       <td> Total instructions issued</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000032</tt></td>
+                                       <td><tt> PAPI_TOT_INS</tt></td>
+                                       <td> Total instructions executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000033</tt></td>
+                                       <td><tt> PAPI_INT_INS</tt></td>
+                                       <td> Integer instructions executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000034</tt></td>
+                                       <td><tt> PAPI_FP_INS</tt></td>
+                                       <td> Floating point instructions executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000035</tt></td>
+                                       <td><tt> PAPI_LD_INS</tt></td>
+                                       <td> Load instructions executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000036</tt></td>
+                                       <td><tt> PAPI_SR_INS</tt></td>
+                                       <td> Store instructions executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000037</tt></td>
+                                       <td><tt> PAPI_BR_INS</tt></td>
+                                       <td> Total branch instructions executed 
+                                      </td>
+                                     </tr>
+                                     <tr nosave="">
+                                       <td nosave=""><tt> 0x80000038</tt></td>
+                                       <td><tt> PAPI_VEC_INS</tt></td>
+                                       <td nosave=""> Vector/SIMD instructions
+   executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000039</tt></td>
+                                       <td><tt> PAPI_FLOPS</tt></td>
+                                       <td> Floating Point Instructions executed
+   per second</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000003A</tt></td>
+                                       <td><tt> PAPI_RES_STL</tt></td>
+                                       <td> Cycles processor is stalled on
+  resource</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000003B</tt></td>
+                                       <td><tt> PAPI_FP_STAL</tt></td>
+                                       <td>Cycles any FP units are stalled</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000003C</tt></td>
+                                       <td><tt> PAPI_TOT_CYC</tt></td>
+                                       <td> Total cycles</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000003D</tt></td>
+                                       <td><tt> PAPI_IPS</tt></td>
+                                       <td> Instructions executed per second</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000003E</tt></td>
+                                       <td><tt> PAPI_LST_INS</tt></td>
+                                       <td> Total load/store instructions 
+ executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000003F</tt></td>
+                                       <td><tt> PAPI_SYC_INS</tt></td>
+                                       <td> Sync. instructions executed</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000040</tt></td>
+                                       <td><tt> PAPI_L1_DCH</tt></td>
+                                       <td> L1 data cache hit</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000041</tt></td>
+                                       <td><tt> PAPI_L2_DCH</tt></td>
+                                       <td> L2 data cache hit</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000042</tt></td>
+                                       <td><tt> PAPI_L1_DCA</tt></td>
+                                       <td> L1 data cache access</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000043</tt></td>
+                                       <td><tt> PAPI_L2_DCA</tt></td>
+                                       <td> L2 data cache access</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000044</tt></td>
+                                       <td><tt> PAPI_L3_DCA</tt></td>
+                                       <td> L3 data cache access</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000045</tt></td>
+                                       <td><tt> PAPI_L1_DCR</tt></td>
+                                       <td> L1 data cache read</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000046</tt></td>
+                                       <td><tt> PAPI_L2_DCR</tt></td>
+                                       <td> L2 data cache read</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000047</tt></td>
+                                       <td><tt> PAPI_L3_DCR</tt></td>
+                                       <td> L3 data cache read</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000048</tt></td>
+                                       <td><tt> PAPI_L1_DCW</tt></td>
+                                       <td> L1 data cache write</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000049</tt></td>
+                                       <td><tt> PAPI_L2_DCW</tt></td>
+                                       <td> L2 data cache write</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000004A</tt></td>
+                                       <td><tt> PAPI_L3_DCW</tt></td>
+                                       <td> L3 data cache write</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000004B</tt></td>
+                                       <td><tt> PAPI_L1_ICH</tt></td>
+                                       <td> L1 instruction cache hits</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000004C</tt></td>
+                                       <td><tt> PAPI_L2_ICH</tt></td>
+                                       <td> L2 instruction cache hits</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000004D</tt></td>
+                                       <td><tt> PAPI_L3_ICH</tt></td>
+                                       <td> L3 instruction cache hits</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000004E</tt></td>
+                                       <td><tt> PAPI_L1_ICA</tt></td>
+                                       <td> L1 instruction cache accesses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000004F</tt></td>
+                                       <td><tt> PAPI_L2_ICA</tt></td>
+                                       <td> L2 instruction cache accesses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000050</tt></td>
+                                       <td><tt> PAPI_L3_ICA</tt></td>
+                                       <td> L3 instruction cache accesses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000051</tt></td>
+                                       <td><tt> PAPI_L1_ICR</tt></td>
+                                       <td> L1 instruction cache reads</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000052</tt></td>
+                                       <td><tt> PAPI_L2_ICR</tt></td>
+                                       <td> L2 instruction cache reads</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000053</tt></td>
+                                       <td><tt> PAPI_L3_ICR</tt></td>
+                                       <td> L3 instruction cache reads</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000054</tt></td>
+                                       <td><tt> PAPI_L1_ICW</tt></td>
+                                       <td> L1 instruction cache writes</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000055</tt></td>
+                                       <td><tt> PAPI_L2_ICW</tt></td>
+                                       <td> L2 instruction cache writes</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000056</tt></td>
+                                       <td><tt> PAPI_L3_ICW</tt></td>
+                                       <td> L3 instruction cache writes</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000057</tt></td>
+                                       <td><tt> PAPI_L1_TCH</tt></td>
+                                       <td> L1 total cache hits</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000058</tt></td>
+                                       <td><tt> PAPI_L2_TCH</tt></td>
+                                       <td> L2 total cache hits</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000059</tt></td>
+                                       <td><tt> PAPI_L3_TCH</tt></td>
+                                       <td> L3 total cache hits</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000005A</tt></td>
+                                       <td><tt> PAPI_L1_TCA</tt></td>
+                                       <td> L1 total cache accesses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000005B</tt></td>
+                                       <td><tt> PAPI_L2_TCA</tt></td>
+                                       <td> L2 total cache accesses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000005C</tt></td>
+                                       <td><tt> PAPI_L3_TCA</tt></td>
+                                       <td> L3 total cache accesses</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000005D</tt></td>
+                                       <td><tt> PAPI_L1_TCR</tt></td>
+                                       <td> L1 total cache reads</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000005E</tt></td>
+                                       <td><tt> PAPI_L2_TCR</tt></td>
+                                       <td> L2 total cache reads</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x8000005F</tt></td>
+                                       <td><tt> PAPI_L3_TCR</tt></td>
+                                       <td> L3 total cache reads</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000060</tt></td>
+                                       <td><tt> PAPI_L1_TCW</tt></td>
+                                       <td> L1 total cache writes</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000061</tt></td>
+                                       <td><tt> PAPI_L2_TCW</tt></td>
+                                       <td> L2 total cache writes</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000062</tt></td>
+                                       <td><tt> PAPI_L3_TCW</tt></td>
+                                       <td> L3 total cache writes</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000063</tt></td>
+                                       <td><tt> PAPI_FML_INS</tt></td>
+                                       <td> Floating Multiply instructions</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000064</tt></td>
+                                       <td><tt> PAPI_FAD_INS</tt></td>
+                                       <td> Floating Add instructions</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000065</tt></td>
+                                       <td><tt> PAPI_FDV_INS</tt></td>
+                                       <td> Floating Divide instructions</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000066</tt></td>
+                                       <td><tt> PAPI_FSQ_INS</tt></td>
+                                       <td> Floating Sqare Root instructions</td>
+                                     </tr>
+                                     <tr>
+                                       <td nosave=""><tt> 0x80000067</tt></td>
+                                       <td><tt> PAPI_FNV_INS</tt></td>
+                                       <td> Floating Inverse instructions</td>
+                                     </tr>
+                                   
+                                  </tbody>                              
+  
+                                </table>
+                        </td>
+</tr>
+</table>
+</tbody>
+
+         
+                                
+
+ <BR>
+
+<BR>
+</td>
+</tr>
+</table>
+</tbody>
+
+<!-- ******************  An Overview of PAPI : Standard Event Definations Ends ********************* -->
+
+
+
+<!-- ****************** C & Fortran Calling Interfaces starts ******************** -->
+
+
+<br><br>
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "#cccdd77889f"> <a name="interface-papi">
+   <DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+      C & Fortran Calling Interfaces  </font> </font></DIV> 
+</TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+ <P align=left><FONT face="verdana" size=2, class="content" >
+ 
+<BR> <BR>
+
+PAPI is written in C. The function calls in the C interface are defined in the header file, <B>papi.h </B> and consist of the following form:
+<BR> <BR> <I> <B>< returned data type > PAPI_function_name(arg1, arg2,.) </B></I> <BR> <BR>
+ 
+The function calls in the Fortran interface are defined in the header file, <B> fpapi.h </B>
+ and consist of the following form:
+ <BR><BR> <I><B>PAPIF_function_name(arg1, arg2, ., check) </B> </I>
+<BR><BR>
+
+<B>Note : </B>Except for the functions that return C pointers to structures, 
+such as <I> PAPI_get_opt </I> and <I> PAPI_get_executable_info </I>, 
+which are either not implemented in the Fortran interface, or implemented with 
+different calling semantics. 
+
+<BR> <BR> <font color="black" size = "2" > <B> High Level API </b> </font> <br><br>
+
+The high-level API (Application Programming Interface) provides the ability to start, stop, and read the counters for a specified list of events. It is meant for programmers wanting simple event measurements using only PAPI preset events. Earlier versions of the high-level API were also not thread safe, but this restriction has been removed in PAPI 3. Some of the benefits of using the high-level API rather than the low-level API are that it is easier to use and requires less setup (additional calls). This ease of use comes with somewhat higher overhead and loss of flexibility.
+High-level API can be used in conjunction with the low-level API and in fact does call the low-level API. However, the high-level API by itself is only able to access those events countable simultaneously by the underlying hardware. <BR> <BR> 
+There are eight functions that represent the high-level API that allow the user to access and count specific hardware events. Note that these functions can be accessed from both C and Fortran. 
+<BR> 
+
+<BR> <BR> <font color="black" size = "2" > <B> Initializing the High-level API </b> </font> <br><br>
+
+
+The PAPI library is initialized implicitly by several high-level API calls. In addition to the three rate calls discussed later, either of the following two functions also implicitly initializes the library 
+
+<BR><BR>
+<B><font color="black" size="2">Number of hardware counters </B> </font>
+<BR><BR>
+<B>C: </B> <BR>
+<I> &nbsp; PAPI_num_counters() <BR>
+&nbsp; PAPI_start_counters(*events, array_length) <BR><BR>
+</I>
+
+<B>Fortran: </B> <BR>
+<I> &nbsp; PAPIF_num_counters(check)
+&nbsp; PAPIF_start_counters(*events, array_length, check)
+</I> <BR> <BR>
+
+<BR> <B> ArgumentS </B>
+
+<I> *events </I>-- an array of codes for events such as PAPI_INT_INS or a native event code. <BR>
+<I> array_length </I> -- the number of items in the events array. <BR>
+<BR>
+
+<B> <I>PAPI_num_counters </I> </B> returns the optimal length of the values array for high-level functions. This value corresponds to the number of hardware counters supported by the current substrate. <I> PAPI_num_counters </I>initializes the PAPI library using <I> PAPI_library_init </I> if necessary.
+<I>PAPI_start_counters </I> initializes the PAPI library (if necessary) and starts counting the events named in the events array. This function implicitly stops and initializes any counters running as a result of a previous call to <I>PAPI_start_counters</I>. It is the user's responsibility to choose events that can be counted simultaneously by reading the vendor's documentation. The length of the events array should be no longer than the value returned by <I> PAPI_num_counters</I>.
+<BR><BR>
+On success, PAPI_num_counters returns the number of hardware counters available on the system and on error, a non-zero error code is returned. 
+<BR><BR>
+<B><font color="black" size="2"> Execution Rate Calls </B> </font>
+<BR><BR>
+Three PAPI high-level functions are available to measure floating point or total instruction rates. These three calls are shown below:
+<BR><BR><B>C: </B> <BR>
+<I> &nbsp; PAPI_flips(*real_time, *proc_time, *flpins, *mflips) <BR>
+    &nbsp; PAPI_flops(*real_time, *proc_time, *flpins, *mflops) <BR>
+    &nbsp; PAPI_ipc(*real_time, *proc_time, *ins, *ipc) <BR>
+</I>
+<BR><BR><B> Fortran: </B> <BR>
+<I> 
+&nbsp; PAPIF_flips(real_time, proc_time, flpins, mflips, check) <BR>
+&nbsp; PAPIF_flops(real_time, proc_time, flpins, mflops, check) <BR>
+&nbsp; PAPIF_ipc(real_time, proc_time, ins, ipc, check) <BR>
+</I> <BR><BR>
+<B>ArgumentS </B> <BR> <BR>
+<I>*real_time </I> -- the total real (wallclock) time since the first rate call. <BR>
+<I>*proc_time </I>-- the total process time since the first rate call. <BR>
+<I>*flpins </I> -- the total floating point instructions since the first rate call. <BR>
+<I>*mflips, *mflops </I>- Millions of floating point operations or instructions per second achieved since the latest rate call. <BR>
+<I>*ins </I>-- the total instructions executed since the first PAPI_ipc call. <BR>
+<I>*ipc </I> - instructions per cycle achieved since the latest PAPI_ipc call. <BR>
+
+<BR><BR>
+
+The first execution rate call initializes the PAPI library if needed, sets up the counters to monitor either <B>PAPI_FP_INS</B>, <B>PAPI_FP_OPS </B> or <B>PAPI_TOT_INS </B> (depending on the call), and <B>PAPI_TOT_CYC </B>events, and starts the counters. Subsequent calls to the same rate function will read the counters and return total real time, total process time, total instructions or operations, and the appropriate rate of execution since the last call. A call to <B> PAPI_stop_counters </B> will reinitialize all values to 0. Sequential calls to different execution rate functions will return an error.
+<BR><BR>
+
+On success, the rate calls return PAPI_OK and on error, a non-zero error code is returned.
+
+<BR><BR>
+<B><font color="black" size="2"> Reading, Accumulating & Stoping Counters  </B> </font>
+<BR><BR>
+
+Counters can be read, accumulated, and stopped by calling the following high-level functions, respectively: 
+<BR><BR>
+<B>C: </B> <BR><BR>
+<I> &nbsp; PAPI_read_counters(*values, array_length) <BR>
+&nbsp; PAPI_accum_counters(*values, array_length) <BR>
+&nbsp; PAPI_stop_counters(*values, array_length) <BR>
+</I>
+<BR><BR>
+<B>Fortran: </B> <BR><BR>
+<I>
+&nbsp; PAPIF_read_counters(*values, array_length, check) <BR>
+&nbsp; PAPIF_accum_counters(*values, array_length, check) <BR>
+&nbsp; PAPIF_stop_counters(*values, array_length, check) <BR>
+</I>
+<BR><BR>
+<B>ArgumentS </B> <BR><BR>
+<I>*values </I> -- an array where to put the counter values.  <BR>
+<I>array_length </I> -- the number of items in the *values array. <BR>
+<BR><BR>
+<B> PAPI_read_counters </B>, <B>PAPI_accum_counters </B>and <B>PAPI_stop_counters </B> all capture the values of the currently running counters into the array, values. Each of these functions behaves somewhat differently. <BR>
+<B>PAPI_read_counters </B> copies the current counts into the elements of the values array, resets the counters to zero, and leaves the counters running. <BR>
+<B>PAPI_accum_counters </B>adds the current counts into the elements of the values array and resets the counters to zero, leaving the counters running. Care should be exercised not to mix calls to <B>PAPI_accum_counters</B> with calls to the execution rate functions. Such intermixing is likely to produce unexpected results. <BR>  
+<B>PAPI_stop_counters </B>stops the counters and copies the current counts into the elements of the values array. This call can also be used to reset the rate functions if used with a NULL pointer to the values array. <BR>
+<BR><font color="black" size = "2" > <B> PAPI Timers </b> </font> <br><br>
+PAPI timers use the most accurate timers available on the platform in use. These timers can be used to obtain both real and virtual time on each supported platform. The real time clock runs all the time (e.g. a wall clock) and the virtual time clock runs only when the processor is running in user mode.
+<BR><BR>
+Real time can be acquired in clock cycles and microseconds by calling the following low-level functions, respectively : <BR>
+<BR><B>C: </B> <BR>
+<I>PAPI_get_real_cyc() <BR>
+PAPI_get_real_usec() <BR> </I>
+<BR>
+<B>Fortran: </B> <BR>
+<I>PAPIF_get_real_cyc(check) <BR>
+PAPIF_get_real_usec(check) <BR> </I>
+<BR>
+Both of these functions return the total real time passed since some arbitrary starting point and are equivalent to wall clock time. Also, these functions always succeed (error-free) since they are guaranteed to exist on every PAPI supported platform. <BR><BR>
+
+Virtual time can be acquired in clock cycles and microseconds by calling the following low-level functions, respectively:
+<BR><BR><B>C:</B> <BR>
+<I>PAPI_get_virt_cyc() <BR>
+PAPI_get_virt_usec() <BR> </I>
+<BR>
+<B>Fortran:</B> <BR>
+<I>PAPIF_get_virt_cyc(check) <BR>
+PAPIF_get_virt_usec(check) <BR> </I>
+<BR>
+Both of these functions return the total number of virtual units from some arbitrary starting point. Virtual units accrue every time a process is running in user-mode. Like the real time counters, these functions always succeed (error-free) since they are guaranteed to exist on every PAPI supported platform. However, the resolution can be as bad as 1/Hz as defined by the operating system on some platforms.
+<BR> <BR> <font color="black" size = "2" > <B> Low Level API </b> </font> <br><br>
+
+
+The low-level API (Application Programming Interface) manages hardware events in user-defined groups called <B> Event Sets </B>. It is meant for experienced application programmers and tool developers wanting fine-grained measurement and control of the PAPI interface. Unlike the high-level interface, it allows both PAPI preset and native events. Another features of the low-level API are the ability to obtain information about the executable and the hardware as well as to set options for multiplexing and overflow handling. Some of the benefits of using the low-level API rather than the high-level API are that it increases efficiency and functionality. The low-level interface could be used in conjunction with the high-level interface, as long as attention is paid to insure that the PAPI library is initialized prior to the first low-level PAPI call. 
+<BR><BR>  The low-level API is only as powerful as the substrate upon which it is built. Thus, some features may not be available on every platform. The converse may also be true, that more advanced features may be available on every platform and defined in the header file. Therefore, the user is encouraged to read the documentation for each platform carefully. There are approximately 50 functions that represent the  low-level API. 
+
+<BR> <BR> <font color="black" size = "2" > <B> Initializing the Low-level API </b> </font> <br><br>
+
+
+The PAPI library must be initialized before it can be used. <BR>
+It can be initialized explicitly by calling the following low-level function:
+<BR><BR>
+<B>C:</B> <BR>
+<I>PAPI_library_init(version) </I>
+<BR><BR>
+
+<B>Fortran: </B>
+<I>PAPIF_library_init(check) </I>
+<BR><BR>
+<BR>
+<B>Argument </B> <BR>
+<I>version </I>--  upon initialization, PAPI checks the Argument against the internal value of <B>PAPI_VER_CURRENT </B> when the library was compiled. This guards against portability problems when updating the PAPI shared libraries on your system. <BR> <BR>This function must be called before calling any other low-level PAPI function. 
+On success, this function returns <B>PAPI_VER_CURRENT</B>. On error, a positive return code other than <B>PAPI_VER_CURRENT </B> indicates a library version mismatch and a negative return code indicates an initialization error. 
+
+<BR><BR>
+<font color="black" size = "2" > <B> Creating Event Set using low-level API </b> </font> <br><br>
+
+<B> Event Set : </B>  
+Event Sets are user-defined groups of hardware events (preset or native), which are used in conjunction with one another to provide meaningful information. The user specifies the events to be added to an Event Set, and other attributes, such as:  the counting domain (user or kernel), whether or not the events in the Event Set are to be multiplexed, and whether the Event Set is to be used for overflow or profiling. Other settings for the Event Set are maintained by PAPI, such as: what low-level hardware registers to use, the most recently read counter values, and the state of the Event Set (running/not running). Event Sets provide an effective abstraction for the organization of information associated with counting hardware events. The PAPI library manages the memory for Event Sets with a user interface through integer handles to simplify calling conventions. The user is free to allocate and use any number of them provided the substrate can provide the required resources. Only one Event Set can be in active use at any time in a given  thread or process.
+<BR> <BR>
+
+An event set can be created by calling the following the low-level function:
+<BR><BR><B>C: </B> <BR>
+<I>PAPI_create_eventset (*EventSet) </I>
+<BR><BR>
+<B>Fortran:</B> <BR>
+<I>PAPIF_create_eventset(EventSet, check) </I>
+<BR><BR>
+<B>ArgumentS</B> <BR>
+<I>EventSet </I>-- Address of an integer location to store the new EventSet handle.
+<BR>
+
+Once it has been created, the user may add hardware events to the EventSet by calling <I>PAPI_add_event </I> or <I>PAPI_add_events</I>.
+<BR><BR>On success, this function returns <B>PAPI_OK</B>. On error, a non-zero error code is returned. 
+For a code example using this function, see the next section. 
+
+<BR><BR>
+<font color="black" size = "2" > <B> Adding Events on Event set </b> </font> <br><br>
+
+Hardware events can be added to an event set by calling the following the low-level functions:
+<BR><BR><B>C: </B> <BR>
+<I>PAPI_add_event(EventSet, EventCode) <BR>
+PAPI_add_events(EventSet, *EventCode, number) <BR>
+</I>
+<BR><BR>
+<B>Fortran: </B> <BR>
+<I>PAPIF_add_event(EventSet, EventCode, check) <BR>
+PAPIF_add_events(EventSet, EventCode, number, check) <BR>
+</I>
+<BR> <BR>
+<B>ArgumentS </B> <BR>
+<I>EventSet </I>-- an integer handle for a PAPI Event Set as created by PAPI_create_eventset. <BR>
+<I>EventCode </I>-- a defined event such as PAPI_TOT_INS. <BR>
+<I>*EventCode </I>- address of an array of defined events. <BR>
+<I>number</I> -- an integer indicating the number of events in the array *EventCode. <BR>
+<BR> 
+<B>PAPI_add_event </B>adds a single hardware event to a PAPI event set.
+<B>PAPI_add_events </B> does the same as PAPI_add_event, but for an array of hardware event codes.
+
+<BR>
+On success, both of these functions return PAPI_OK and on error, a non-zero error code is returned.
+<BR> <BR>
+
+<BR><font color="black" size = "2" > <B> Starting, Reading, Adding and Stopping Events in and Event Set</b> </font> <br><br>
+
+Hardware events in an event set can be started, read, added, and stopped by calling the following low-level functions, respectively: <BR><BR>
+<B>C:</B> <BR> 
+<I>
+PAPI_start(EventSet) <BR>
+PAPI_read(EventSet, *values)<BR>
+PAPI_accum(EventSet, *values)<BR>
+PAPI_stop(EventSet, *values) <BR>
+</I> <BR><BR>
+<B>Fortran: </B> <BR>
+<I>PAPIF_start(EventSet, check) <BR>
+PAPIF_read(EventSet, values, check) <BR>
+PAPIF_accum(EventSet, values, check) <BR>
+PAPIF_stop(EventSet, values, check) <BR>
+</I> <BR>
+
+<BR><B>ArgumentS</B> <BR>
+<I>EventSet </I>-- an integer handle for a PAPI Event Set as created by PAPI_create_eventset. <BR>
+<I>*values </I>-- an array to hold the counter values of the counting events. <BR>
+<BR>
+<B>PAPI_start </B> starts the counting events in a previously defined event set.<BR>
+<B>PAPI_read reads </B>(copies) the counters of the indicated event set into the array, values. The counters are left counting after the read without resetting.<BR>
+<B>PAPI_accum </B>adds the counters of the indicated event set into the array, values. The counters are reset and left counting after the call of this function.<BR>
+<B>PAPI_stop </B>stops the counting events in a previously defined event set and return the current events. <BR><BR>
+
+<BR><font color="black" size = "2" > <B> Removing Events in and Event Set</b> </font> <br><br>
+
+A hardware event and an array of hardware events can be removed from an event set by calling the following low-level functions, respectively:
+<BR><BR><B>C: </B> <BR>
+<I>PAPI_remove_event(EventSet, EventCode) <BR>
+PAPI_remove_events(EventSet, EventCode, number) <BR>
+</I> <BR><BR>
+<B>Fortran: </B>
+<I>PAPIF_remove_event(EventSet, EventCode, check) <BR>
+PAPIF_remove_events(EventSet, EventCode, number, check) <BR>
+</I> <BR> <BR>
+<B>ArgumentS </B> <BR>
+<I>EventSet </I>-- an integer handle for a PAPI event set as created by PAPI_create_eventset. <BR>
+<I>EventCode </I>-- a defined event such as PAPI_TOT_INS or a native event. <BR>
+<I>*EventCode </I>-- an array of defined events.<BR>
+<I>number </I> -- an integer indicating the number of events in the array *EventCode.<BR>
+<BR>
+<B>PAPI_remove_event </B> removes a single hardware event from a PAPI event set.  <BR>
+<B>PAPI_remove_events</B>, does the same as PAPI_remove_event, but for an array of hardware event codes. <BR><BR>
+On success, these functions return PAPI_OK and on error, a non-zero error code is returned. <BR>
+<BR>
+<BR><font color="black" size = "2" > <B> Emptying and Destroying and Event Set</b> </font> <br><br>
+
+All the events in an event set can be emptied and destroyed by calling the following low-level functions, respectively:
+<BR><BR><B>C:</B> <BR> <I>
+PAPI_cleanup_eventset(EventSet) <BR>
+PAPI_destroy_eventset(EventSet) <BR> </I>
+<BR>
+<B>Fortran: </B> <BR> <I>
+PAPIF_cleanup_eventset(EventSet, check) <BR>
+PAPIF_destroy_eventset(EventSet, check) <BR> </I>
+<BR> <BR>
+<B>Argument </B> <BR>
+<I>EventSet </I> -- an integer handle for a PAPI event set as created by PAPI_create_eventset. <BR>
+On success, these functions return PAPI_OK and on error, a non-zero error code is returned.
+<BR> <BR>
+
+<BR><font color="black" size = "2" > <B> State of an Event Set</b> </font> <br><br>
+
+The counting state of an Event Set can be obtained by calling the following low-level function:
+<BR><BR><B>C: </B> <BR>
+<I>PAPI_state(EventSet, *status) </I> <BR> <BR>
+<B> Fortran: </B> <BR>
+<I>PAPIF_state(EventSet, status, check)</I> <BR><BR>
+
+<B>ArgumentS </B> <BR>
+<I>EventSet </I>-- an integer handle for a PAPI event set as created by PAPI_create_eventset.
+<I>status</I> -- an integer containing a Boolean combination of one or more of the following nonzero constants as defined in the PAPI header file, <B><I>papi.h</I> </B>
+<BR>
+On success, this function returns PAPI_OK and on error, a non-zero error code is returned.
+
+
+<BR><BR>
+<!-- ************* compilation and Linking start **************** --> 
+
+
+<TABLE>
+<TBODY>
+<TD bgColor = "#cccdd77889f"> 
+<a name="compile-link-prog">
+<DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+      Compilation and Linking of Programs With PAPI   </font> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+
+<P align=justify> <FONT face="verdana" size=2, class="content" >
+  C programs using the PAPI Calls should include the  <font color = "red"> <i> papi.h </i>  </font> header file and Fortran programs should include the  <font color = "red"> <i> fpapi.h </i>  </font> header file . On the compilation command line, the PAPI library (libpapi.a and the PAPI header files path) should be specified to the linker on UNIX and Linux environments. <BR> <BR> 
+
+
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> (A) Using command line Arguments: </b> </font> <br><br>
+  <B> Example : </B> 
+	The compilation, linking and execution of program with papi library is as follows : <br><br>
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+       
+        # gcc < program name > -o < executable name > < path to the header files of PAPI > < path to the libpapi.a > </i> </font>   <BR><BR>
+        For example to compile a program <a href= "../tools-opensource-hypack-2013/papi-codes/num-counters/avail-num-counters.c">"avail_num_counters.c"</a> 
+(Which returns the available hardware counters on the platform) <br><br>
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+        [promc007@DCDS1 ]# gcc -o run avail_num_counters.c /usr/local/papi/include /usr/local/papi/lib/libpapi.a </i> </font> 
+        
+   <br><br>
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> (B) Using a Makefile: </b> </font> <br><br>
+   
+For more control over the process of compiling and linking programs, use 'Makefile' and make utility.
+ <p><br> To compile and link the above specified program, use 
+  <a href= "../tools-opensource-hypack-2013/papi-codes/num-counters/Makefile"> 
+
+makefile. </a> <BR> <BR>
+
+<!-- ************  compilation and Linking ends **************** --> 
+
+<!-- ************** PAPI ERROR Handling starts ********************* --> 
+  
+<a name="error-handling">
+
+<BR>
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+ <DIV align=Left><font size="2"  Color="black" face= "verdana">
+     <B>  PAPI Error Handling </b> </font> 
+  </DIV> 
+  </TD> </TR> 
+
+</table>
+</tbody>
+
+<BR>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<BR><font color="black" size = "2" > <B> Error Codes / Return Codes: </b> <BR><BR>
+<font face="Verdana" size="2">
+
+All of the functions contained in the PAPI library return standardized error codes in which
+ the values that are greater than or equal to zero indicate success and those that are less than zero 
+indicate failure, as shown in the table below:
+<BR>
+<TR> <TD>                                                           
+                                <table border="5" nosave="" bordercolordark="pink" bordercolorlight="lightpink" align="Center">
+                                   <tbody>
+                                     <tr>
+                                       <td><b> Value</b></td>
+                                       <td><b> Symbol</b></td>
+                                       <td><b> Definition</b></td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> 0</tt></td>
+                                       <td><tt> PAPI_OK</tt></td>
+                                       <td> No error</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -1</tt></td>
+                                       <td><tt> PAPI_EINVAL</tt></td>
+                                       <td> Invalid Argument</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -2</tt></td>
+                                       <td><tt> PAPI_ENOMEM</tt></td>
+                                       <td> Insufficient memory</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -3</tt></td>
+                                       <td><tt> PAPI_ESYS</tt></td>
+                                       <td> A System or C library call failed,
+   please check <tt>errno</tt></td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -4</tt></td>
+                                       <td><tt> PAPI_ESBSTR</tt></td>
+                                       <td> Substrate returned an error,
+usually   the result of an                    unimplemented feature</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -5</tt></td>
+                                       <td><tt> PAPI_ECLOST</tt></td>
+                                       <td> Access to the counters was lost
+  or interrupted</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -6</tt></td>
+                                       <td><tt> PAPI_EBUG</tt></td>
+                                       <td> Internal error, please send mail
+   to the developers</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -7</tt></td>
+                                       <td><tt> PAPI_ENOEVNT</tt></td>
+                                       <td> Hardware Event does not exist</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -8</tt></td>
+                                       <td><tt> PAPI_ECNFLCT</tt></td>
+                                       <td> Hardware Event exists, but cannot
+   be counted due <br>
+    to counter                    resource limitations</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -9</tt></td>
+                                       <td><tt> PAPI_ENOTRUN</tt></td>
+                                       <td> No Events or EventSets are currently
+   not counting</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -10</tt></td>
+                                       <td><tt> PAPI_EISRUN</tt></td>
+                                       <td> EventSet is currently running</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -11</tt></td>
+                                       <td><tt> PAPI_ENOEVST</tt></td>
+                                       <td> No such EventSet available</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -12</tt></td>
+                                       <td><tt> PAPI_ENOTPRESET</tt></td>
+                                       <td> Event is not a valid preset</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -13</tt></td>
+                                       <td><tt> PAPI_ENOCNTR</tt></td>
+                                       <td> Hardware does not support performance
+   counters</td>
+                                     </tr>
+                                     <tr>
+                                       <td><tt> -14</tt></td>
+                                       <td><tt> PAPI_EMISC</tt></td>
+                                       <td>'Unknown error' code</td>
+                                     </tr>
+                                     <tr>
+                                    </tr> 
+                                   
+                                  </tbody>                              
+  
+                                </table>
+                               </td>
+			</tr>	
+
+<BR><BR>
+
+
+
+</TD> </TR>
+</tbody>
+</table>
+
+<!-- *******************  PAPI Error Handling  Ends ******************** -->
+
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+   <TR>
+     
+        <td width="96%" height="2" align="left">
+          <font face="Verdana" size="2">
+<BR> <font color="black" size = "2"> <B> Converting Error Codes into Error Messages: </B> </font> <br><br>
+
+Error codes can be converted to error messages by calling the following low-level functions:
+<BR><BR>
+<B>C:</B>
+<BR> <I>
+&nbsp;&nbsp;PAPI_perror(code, destination, length) <BR>
+&nbsp;&nbsp;PAPI_strerror(code)<BR>
+</I>
+
+
+<BR>
+<B>Fortran:</B>
+<BR>
+&nbsp;&nbsp; <I>PAPIF_perror(code, destination, check) <BR>
+</I>
+<BR><BR>
+<B> Arguments </B> <BR>
+<I> code </I>-- the error code to interpret <BR>
+<I> *destination</I> -- "the error message in quotes" <BR>  
+<I> length </I>-- either 0 or strlen(destination) <BR>
+<BR> <p>
+<I>PAPI_perror</I> fills the string, destination, with the error message corresponding to the error code <I> (code) </I>. The function copies length worth of the error description string corresponding to code into destination. The resulting string is always null terminated. If length is 0, then the string is printed to stderr.
+<I> PAPI_strerror </I> returns a pointer to the error message corresponding to the error code <I>(code) </I>. If the call fails, the function returns a NULL pointer. Otherwise, a non-NULL pointer is returned.
+<BR> <B> Note that this function is not implemented in Fortran. </B>
+</p>
+          </font> 
+       </a>  
+     </td>
+     </tr>
+</TBODY> </TABLE> 
+</p> 
+
+<!-- ********************  PAPI Error Handling  Ends ****************** -->
+
+<!-- *************** Advanced PAPI Features starts ********************* -->
+<a name="advance-papi">
+ 
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "#cccdd77889f"> 
+<DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  Advanced PAPI Features  </b> </font> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+
+<b><font color="Black" size = "2" > Using PAPI with Parallel Programs </font></b> <BR> <BR>
+<b><font color="Black" size = "2" > 1. Using PAPI with Threads (Pthreads & OpenMP) </font></b> 
+<P align=justify><FONT face="verdana" size=2, class="content" >
+
+A thread is an independent flow of instructions that can be scheduled to run by the operating system. Multi-threaded programming is a form of parallel programming where several controlled threads are executing concurrently in the program. All threads execute in the same memory space, and can therefore work concurrently on shared data. Threads can run in parallel on several processors, allowing a single program to divide its work between several processors, thus running faster than a single-threaded program, which runs on only one processor at a time.
+<BR> <BR>
+
+PAPI only supports thread level measurements with kernel or bound threads, which are threads that have a scheduling entity known and handled by the operating system's kernel. In most cases, such as with SMP or OpenMP complier directives, bound threads will be the default. Each thread is responsible for the creation, start, stop, and read of its own counters. When a thread is created, it inherits no PAPI information from the calling thread. There are some threading packages or APIs that can be used to manipulate threads with PAPI, particularly Pthreads and OpenMP
+<BR><BR>
+In addition, PAPI does support unbound or non-kernel threads, but the counts will reflect the total events for the process. Measurements that are done in other threads will get all the same values, namely the counts for the total process. For unbound threads, it is not necessary to call PAPI_thread_init.
+
+<br><br> <b><font color="Black" size = "2" >  Thread Support Initialization </font></b> <br><br>   
+Thread support in the PAPI library can be initialized by calling the following low-level function:
+<BR><BR>
+<B>C: </B><BR>
+<I> PAPI_thread_init(handle) </I> <BR> <BR>
+
+<B>Fortran: </B> <BR>
+<I> PAPIF_thread_init(handle, check) </I>
+<BR><BR>
+<B> Arguments</B> <BR>
+<I>handle </I> --Pointer to a routine that returns the current thread ID  <BR>
+On success, the function, <I>PAPI_thread_init</I>, returns PAPI_OK and on error, a non-zero error code is returned. 
+<BR><BR><B> Note : </B>
+This function should be called only once, just after <B><I>PAPI_library_init</I></B>, and before any other PAPI calls. <BR><BR> 
+
+The following example shows the correct syntax for using <I>PAPI_thread_init </I> with <B>OpenMP </B> and <B>Pthreads</B> <BR> <BR> 
+<B>OpenMP C: </B> <BR><BR>
+
+ <font color="brown" size ="2"> <I>
+&nbsp;&nbsp;#include <papi.h> <BR>
+&nbsp;&nbsp;#include <omp.h> <BR>
+&nbsp;&nbsp;&nbsp;if (PAPI_thread_init(omp_get_thread_num) != PAPI_OK) <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  handle_error(1); <BR>
+</I> </font>
+
+
+<BR><BR>
+<B>Pthreads C: </B> <BR><BR>
+<font color="brown" size ="2"> <I>
+
+&nbsp;&nbsp;#include <papi.h> <BR>
+&nbsp;&nbsp;#include <pthread.h> <BR><BR>
+
+&nbsp;&nbsp;main()<BR>
+&nbsp;&nbsp;{ <BR>
+&nbsp;&nbsp;unsigned long int tid; <BR>
+
+&nbsp;&nbsp;if (PAPI_library_init(PAPI_VER_CURRENT) != PAPI_VER_CURRENT) <BR>
+&nbsp;&nbsp;&nbsp;  exit(1); <BR>
+
+&nbsp;&nbsp;if (PAPI_thread_init(pthread_self) != PAPI_OK) <BR>
+&nbsp;&nbsp;&nbsp;  exit(1); <BR>
+
+&nbsp;&nbsp;if ((tid = PAPI_thread_id()) == (unsigned long int)-1) <BR>
+&nbsp;&nbsp;&nbsp;  exit(1);<BR>
+
+&nbsp;&nbsp;printf("Initial thread id is: %lu\n",tid); <BR>
+&nbsp;&nbsp;} <BR>
+</I> </font>
+
+<br><br> <b><font color="Black" size = "2" >  Thread ID </font></b> <br><br> 
+
+The identifier of the current thread can be obtained by calling the following low-level function: <BR>
+<BR><B>C:</B> <BR>
+<I>PAPI_thread_id() </I>
+<BR><BR><B>
+Fortran:</B><BR> <I>
+PAPIF_thread_id(check)</I><BR>
+ 
+<BR>This function calls the thread id function registered by <I>PAPI_thread_init</I> and returns an unsigned long integer containing the thread identifier.
+<BR>
+On success, this function returns a valid thread identifier and on error, (unsigned long int) -1 is returned. 
+<br><br> <b><font color="Black" size = "2" >  Some more functions related to threads </font></b> <br><br> 
+
+These functions allow you to register a newly created thread to make it available for reference by PAPI, and to create and access thread-specific storage in a platform independent fashion for use with PAPI. These functions are shown below:
+<BR><BR>
+<B>C:</B> <BR>
+<I>PAPI_register_thread() <BR>
+PAPI_get_thr_specific(tag, ptr) <BR>
+PAPI_set_thr_specific(tag, ptr) <BR>
+</I>
+<BR>
+<B>Arguments </B> <BR>
+<I>tag </I>-- Integer value specifying one of 4 storage locations. 	<BR>
+<I>ptr </I>-- Pointer to the address of a data structure. <BR> <BR>
+
+<b><font color="Black" size = "2" > 2. Using PAPI with MPI </font></b> <BR><BR>
+
+MPI is an acronym for Message Passing Interface. MPI is a library specification for message-passing, proposed as a standard by a broadly based committee of vendors, implementers, and users. MPI was designed for high performance on both massively parallel machines and on workstation clusters. <BR><BR>
+PAPI supports MPI. When using timers in applications that contain multiplexing, profiling, and overflow, MPI uses a default virtual timer and must be converted to a real timer in order to for the application to work properly. Otherwise, the application will exit. 
+<BR><BR>
+
+<!-- ******************* Multiplexing ******************** -->
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+
+<b><font color="Black" size = "2" > Multiplexing </font></b> <BR> <BR>
+
+<P align=justify><FONT face="verdana" size=2, class="content" >
+
+Multiplexing allows more events to be counted than can be supported by the hardware. When a microprocessor has a limited number of hardware counters, a large application with many hours of run time may require days or weeks of profiling in order to gather enough information on which to base a performance analysis. Multiplexing overcomes this limitation by subdividing the usage of the counter hardware over time (timesharing) among a large number of performance events.
+<BR> <BR>
+
+<B> Initialization of MULTIPLEX Support </B> <BR><BR>
+
+Multiplex support in the PAPI library can be enabled and initialized by calling the following low-level function: <BR><BR>
+<B>C:</B> <BR> <I>
+PAPI_muliplex_init()
+</I>
+<BR><BR><B>Fortran:</B>
+<I>PAPIF_multiplex_init(check) </I>
+<BR><BR>
+The above function sets up the internal structures to allow more events to be counted than there are physical counters. It does this by timesharing the existing counters at some loss in precision. This function should be used after calling PAPI_library_init. After this function is called, the user can proceed to use the normal PAPI routines.<BR><BR>
+On success, this function returns PAPI_OK and on error, a non-zero error code is returned.
+<BR><BR>
+<B> Converting an Event Set into A Multiplexed Event Set </B>
+<BR><BR>
+A standard event set can be converted to a multiplexed event set by the calling the following low-level function: <BR><BR>
+<B>C: </B><BR><I>
+PAPI_set_multiplex(EventSet)
+</I><BR><BR>
+<B>Fortran:</B> <BR><I>
+PAPIF_set_multiplex(EventSet) </I> <BR><BR>
+
+<B>Arguments</B><BR>
+<I>EventSet </I>-- an integer handle for a PAPI event set as created by <I> PAPI_create_eventset.</I> <BR><BR>
+<B>Note: </B>
+The above function converts a standard PAPI event set created by a call to <I>PAPI_create_eventset</I> into an event set capable of handling multiplexed events. This function must be used after calling PAPI_multiplex_init and PAPI_create_eventset, but prior to calling PAPI_start. Events can be added to an event set either before or after converting it into a multiplexed set.
+<BR>
+On success, both functions return PAPI_OK and on error, a non-zero error code is returned.
+<BR><BR>
+
+<b><font color="Black" size = "2" > Overflow </font></b> <BR> <BR>
+
+An overflow happens when the number of occurrences of a particular hardware event exceeds a specified threshold. PAPI provides the ability to call user-defined handlers when an overflow occurs. This can be done in hardware, if the processor generates an interrupt signal when the counter reaches a specified value, or in software, by setting up a high-resolution interval timer and installing a timer interrupt handler. For software based overflow, PAPI compares the current counter value against the threshold every time the timer interrupt occurs. If the current value exceeds the threshold, then the user's handler is called from within the signal context with some additional arguments. These arguments allow the user to determine which event overflowed, by how much it overflowed, and at what location in the source code the overflow occurred.
+<BR><BR>
+<B> Beginning Overflows in Event Sets</B> <BR><BR>
+An event set can begin registering overflows by calling the following low-level function:
+<BR><BR><B>C:</B><BR>
+<I>PAPI_overflow(EventSet, EventCode, threshold, flags, handler)</I>
+<BR><BR>
+<B>Arguments </B> <BR>
+<BR><I>EventSet</I> </I>-- a reference to the event set to use 
+<BR><I>EventCode </I>-- the event to be used for overflow detection 
+<BR><I>threshold </I>-- the overflow threshold value to use 
+<BR><I>flags </I>-- bit map that controls the overflow mode of operation. The only currently valid setting is <I>PAPI_OVERFLOW_FORCE_SW</I>, which overrides the default hardware overflow setting on a platform that supports hardware overflow.
+<BR><I>handler</I> -- the handler function to call upon overflow 
+<BR><BR>
+This function marks a specific EventCode in an EventSet to generate an overflow signal after every threshold events are counted. Mutiple events within an event set can be programmed to overflow by making successive calls to this function, but only a single overflow handler can be registered. To turn off overflow for a specific event, call PAPI_overflow with EventCode set to the desired event and threshold set to zero.
+<BR><BR>
+The handler function is a user-supplied callback routine that performs whatever special processing needed to handle the overflow interrupt, including sorting multiple overflowing events from each other. It must conform to the following prototype:
+<BR><BR><B>
+C:</B><BR>
+<I>PAPI_overflow_handler(EventSet, address, overflow_vector, void *context)</I>
+<BR><BR>	
+<B>Arguments</B> <BR>
+<BR><I>EventSet</I> -- a reference to the event set in use 
+<BR><I>address</I> - the address of the program counter when the overflow occurred 
+<BR><I>overflow_vector</I> - a 64-bit vector that specifies which counter(s) generated the overflow. Bit 0 corresponds to counter 0. The handler should be able to deal with multiple overflow bits per call if more than one event may be set to overflow.
+<BR><I>context </I>-- a platform dependent structure containing information about the state of the machine when the overflow occurred. This structure is provided for completeness, but can generally be ignored by most users.
+<BR>
+On success, this function returns PAPI_OK and on error, a non-zero error code is returned.
+<BR><BR>	
+
+
+
+<BR><BR>
+<BR><BR>
+<!-- *******************  Advanced PAPI Features ends ************************ -->
+
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<BR><BR>
+  
+         
+</TD>
+</TR>
+
+ <!--  content of web page End here  --> 
+ 
+         
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color= blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

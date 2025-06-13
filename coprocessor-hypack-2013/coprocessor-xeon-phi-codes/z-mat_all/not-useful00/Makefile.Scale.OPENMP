@@ -1,0 +1,4 @@
+# compile for host-based OpenMP 
+icc -mkl -O3 -no-offload -openmp -Wno-unknown-pragmas -std=c99 -vec-report3 \  
+   matrix.c -o matrix.omp 
+

@@ -1,0 +1,30 @@
+CC   = icc
+
+CCFLAGS    = -openmp -offload-build -std=c99 -mkl -DMKL_ILP64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lpthread -lm -Wno-unknown-pragmas
+
+OPTFLAGS   = -O3 
+
+#LIBS       = -L/opt/intel/lib/mic -Wno-unknown-pragmas 
+LIBS       = 
+EXECS      = run
+#---------------------------------------------------------------------
+#               Object files ...
+#---------------------------------------------------------------------
+
+#OBJECTS = test.c
+#OBJECTS = matrix-multiplication-dgemm.c
+#OBJECTS = matrix-multiplication-dgemm-test.c
+OBJECTS = matrix-matrix-multiply-dgemm-mkl-offload.c
+
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl 
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run
+
+

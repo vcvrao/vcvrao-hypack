@@ -1,0 +1,4267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../../index.html">
+      <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../../hypack13-mode04-gpgpu-lab-overview.html">
+                   Mode-4 GPGPUs </A>
+                  
+	          <!-- ** -->
+                  <A class=menulslct
+                    href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                      NVIDIA - CUDA/OpenCL</A>
+                  <!-- ** -->
+              
+	       <A class=menul  
+                  href="./../../hypack13-mode04-gpgpu-amd-opencl.html">
+                   AMD APP  OpenCL </A>
+                             
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-opencl.html">
+                    GPGPUs - OpenCL</A>
+
+	       <A class=menul  
+                   href="./../../hypack13-mode04-gpgpu-power-perf.html">
+                    GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../../index.html">
+                    Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>    hyPACK-2013 Mode-2 : GPU Comp. CUDA enabled NVIDIA GPU Prog.  </b> </font></DIV> </TD> </TR> 
+
+
+
+  <tr>
+  <td height="24" align="left" >
+ <P align=justify><span  class="content" >
+
+NVIDIA\92s
+Compute Unified Device Architecture (CUDA) is a soft-
+ware platform for massively parallel high-performance
+computing on the company's powerful GPUs.  NVIDIA\92s  software CUDA programming model effectively use GPUs which could be 
+harnessed for tasks other than 
+graphics, achieving teraflops of computing power.  
+
+CUDA Programming model automatically manages the threads and it is significantly differs from single 
+threaded CPU code and to some extent even the parallel code.  Efficient CUDA programs exploit both 
+thread parallelism within a thread block and coarser block parallelism across thread blocks. Because only 
+threads within the same block can cooperate via shared memory and thread synchronization, programmers 
+must partition computation into multiple blocks.
+
+</span> </p>
+
+</td>
+ </tr> 
+</tbody>
+</table>
+
+	<!-- *************** Table for Listing of Programs Starts  ****************** -->
+
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<p> <font size="2" face="Arial" color="red"> <b> List of  Programs </b> </font> </p>
+
+
+<div align="center">
+<a href="./../gpu-comp-nvidia-cuda-memopt-perf-docs/gpu-comp-nvidia-cuda-memopt-perf-codes-module-4-notes.pdf" target="new">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  4: Part 1 & Part 2 Document Information  </b> </font>   
+    </a>
+</div>
+
+
+<p> <font size="2" face="Arial" color="#FF00FF"> <b> Part I Makefile & Readme 
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp Part II Makefile & Readme</b> </font> </p>
+<a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/Makefile-01"><font size="2" face="Arial" color="blue"><b>Makefile-01</b> </font> </a> &nbsp
+<a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/README-part-I"><font size="2" face="Arial" color="blue"><b>README-Part-I</b> </font> </a>  
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/Makefile-02"><font size="2" face="Arial" color="blue"><b>Makefile-02</b> </font> </a>&nbsp
+<a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/README-part-II"><font size="2" face="Arial" color="blue"><b>README-Part-II</b> </font> </a>    
+
+</p>
+<BR>
+
+
+<HR>
+
+
+
+<!--************* Example 6.1 : starts ***************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id401">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write  CUDA  program to find out the 
+         number of CUDA  enabled devices and the device information 			
+      </span> 
+    
+     </td>
+
+   </tr>
+ <!-- ***************** Example 6.1 : ends ***************** -->
+
+
+ <!-- ************* Example 6.2 : starts ************ -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id402">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write CUDA Program to calculate achieved bandwidth for different access 
+         patterns of global memory 
+       </span>
+     </td>
+
+   </tr>
+ <!-- ***************** Example 6.2 : ends **************** -->
+
+
+ <!-- **************** Example 6.3 : starts ************* -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id403">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write  CUDA Program to use of shared memory to get coalesced data 
+         acces pattern and analyze the the bandwidth results.
+       </span>
+     </td>
+
+   </tr>
+ <!--************ Example 6.3 : ends ************* -->
+
+
+ <!--*********** Example 6.4 : starts ************ -->
+    <tr>
+     <td width="110" height="2" valign="left"> 
+       <a href="#cuda-prog-number-id404">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.4 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write CUDA Program to calculate achievable shared memory bandwidth
+         for typical read operation by all threads.
+       </span> 
+     </td>
+
+   </tr>
+ <!-- **************** Example 6.4 : ends ****************** -->
+
+ <!--************* Example 6.5 : starts ******************* -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id405">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.5 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+        <span class = "content">
+         Write  CUDA Program to calculate achievable shared memory bandwidth
+         while accessing arrays of different inbuilt data types.
+       </span> 
+     </td>
+
+   </tr>
+ <!--************ Example 6.5 : ends ***************** -->
+
+
+ <!-- ************ Example 6.6 : starts ************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id406">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.6 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+        <span class = "content">
+        Write  CUDA Program to demonstrate bank conflicts that can occur while 
+       accessing the shared memory
+      </span> 
+     </td>
+
+   </tr>
+ <!-- *************** Example 6.6 : ends ***************** -->
+
+
+<!-- *************** Example 6.7 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id407">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.7 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+        <span class = "content">
+         Write  CUDA Program to demonstrate advantage of 
+        Structure of arrays in terms of the 
+      bandwidth of the global memory that is achievable 
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.7 : ends ************ -->
+
+
+ <!--************* Example 6.8 : starts ******************* -->
+    <tr>
+     <td width="110" height="2" valign="left"> 
+       <a href="#cuda-prog-number-id408">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.8 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write  CUDA Program to demonstrate the global memory 
+         bandwidth differences for varying block sizes
+       </span> 
+     </td>
+
+   </tr>
+ <!--************ Example 6.8 : ends ***************** -->
+
+ <!-- ************ Example 6.9 : starts ************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id409">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.9 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+        Write  CUDA Program to Bandwidth improved when thread handles more 
+        than one element by making use of GPU as a 32-way SIMD processor
+      </span> 
+     </td>
+
+   </tr>
+ <!-- *************** Example 6.9 : ends ***************** -->
+
+
+<!-- *************** Example 6.10 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id410">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.10 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+      <span class = "content">
+         Write  CUDA Program to demonstrate the difference in bandwidth achieved 
+         when blocks access global memory with and without partition camping.
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.10 : ends ************ -->
+
+
+<!-- *************** Example 6.11 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id411">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.11 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+        <span class = "content">
+         Write  CUDA Program to demonstrate the difference in bandwidth achieved when threads
+         within a warp follow different execution paths.
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.11 : ends ************ -->
+
+<!-- *************** Example 6.12 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id412">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.12 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write  CUDA Program to demonstrate  the sustainable memory bandwidth (Stream Benchmark : Global
+        memory of the NIVIDA GPU device).
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.12 : ends ************ -->
+
+<!-- *************** Example 6.13 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id413">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.13 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write a progrqam to calculate the bandwidth of GPUs for pageable/pinned memory from  
+         Host-to-Device and Device-to-Host, Device-to-Device..
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.13 : ends ************ -->
+
+<!-- *************** Example 6.14 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id414">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.14 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write a progrqam to demonstrate a strategy
+ to hide bandwidth latency using CUDA stream APIs and 
+concurrent execution of  kernel through one
+ stream, while memory copy of data set is also going on 
+for the purpose of execution through other kernel 
+and analyze the advantages in terms of the execution time taken.
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.14 : ends ************ -->
+
+<!-- *************** Example 6.15 : starts ****************** -->
+    <tr>
+     <td width="110" height="2" valign="top"> 
+       <a href="#cuda-prog-number-id415">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6.15 </b> </font>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" valign="top">
+       <span class = "content">
+         Write a program to Retrieves the amount of used, free and total memory available on the each device in system, in bytes.
+       </span> 
+     </td>
+
+   </tr>
+ <!-- ************ Example 6.15 : ends ************ -->
+
+
+
+
+
+
+
+<!-- ************ bullet for going to top of the page : starts *************** -->
+
+<TR>
+<TD> </TD>
+<TD>
+
+ <DIV ALIGN=right>
+         <A HREF="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV><br>
+</td>
+</tr>
+ <!--************** bullet for going to top of the page : ends *****************-->
+
+<BR>
+
+</TBODY> 
+</TABLE> 
+
+
+
+<!-- ************ Table for Listing of Programs Ends ********************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+  <DIV align=Left>
+ <font size="2"  Color="black" face= "verdana">
+    <B>  Programs based on CUDA enabled NVIDIA GPU - Memory Optmization  </b> </font></DIV> 
+</TD> 
+</TR> 
+</TBODY>
+ </TABLE> 
+
+
+<!-- ********************** Example 6.1 starts *********************** -->
+
+<a name="cuda-prog-number-id401"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+      <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.1:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write  CUDA  program to find out the 
+         number of CUDA  enabled devices and the device information
+         </span>
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/deviceDetails.cu ">
+      <font color = "blue"> deviceDetails.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+<UL>
+<LI><B> Objective </B>
+
+<P>  Write  CUDA  program to find out the 
+         number of CUDA  enabled devices and the device information<br>
+
+</P>
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+This is a sample program that queries using the cuda API calls about the number of 
+CUDA  enabled NVIDIA devices that are present on the system and the various properties 
+of the devices like,
+	the device model, max number of threads per block, compute capability, 
+warp size, available Global,shared,and constant memories etc.
+The thread block size of <I>  &quot number of &quot; </i> threads are required to execute 
+independently. These threads can be executed in certain order, parallel or in series
+and this allow thread blocks to be scheduled in any order across any number of cores, 
+enabling programmers to write code that scales with the number of cores. The 
+number of thread blocks in a grid is closely related to  the size of the data 
+being processed.
+</span> </p>
+
+
+<TABLE cellPadding=0  border=0>
+ 
+<TBODY>
+
+<!-- ****
+    <tr bgColor= "#c4d7dd">  
+    <tr bgcolor="#FFFFFF">
+***** -->
+
+    <tr>
+    <td valign = "top"  width = "20% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+     <td   height="2 %  width = "60% " " valign="top">
+     <p align = "justify"> <span class ="content"> 
+        <font face = verdana  size = 2 color = "#FF00FF"> 
+          cudaGetDeviceCount(), <BR>
+          cudaGetDeviceProperties()
+       </font>
+   </span>  </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+<BR>
+
+<div align ="right">
+(<a  href="http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+Device Properties and Information that are present on the computing system with NVIDIA GPU
+</span> </p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+    <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.1 ends **************************** -->
+
+
+
+<!-- ********************** Example 6.2 starts *********************** -->
+
+<a name="cuda-prog-number-id402"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+    <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.2:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write CUDA Program to calculate achieved bandwidth for different access 
+         patterns of global memory
+         </span>
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/globalMemoryAccessPatterns.cu">
+      <font color = "blue"> globalMemoryAccessPatterns.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+  Write  CUDA  program to find out the 
+  number of CUDA  enabled devices and the device information
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This  program to demonstrate the different access patterns of the global memory. It measures 
+corresponding bandwidth for each of the access patterns. </span> </p>
+
+
+<!-- ********** Table ********* -->
+
+<LI> 
+
+<P align="justify"> <span class = "content">
+
+<B> Important steps of Implementation  : </b> <BR> <BR>
+Two implementations have been done, one using kernels written in CUDA and the other 
+using CUBLAS library. The steps in both implementations are the same, only the API may 
+differ.<BR> <BR> 
+
+<b> Coalescing : </b>  Simultaneous memory access by threads in a half warp (16 threads) can be combined into 
+single memory transaction of 32, 64 or 128 bytes. <BR> <BR>
+
+It implements <B> copy kernel</b>  by using following different access patterns :   <BR>
+
+
+</span> </p>
+
+<TABLE cellPadding=0  border=1 >
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+    <tr bgcolor="#FFFFFF">
+    <td  valign = "top"  width = "2 % " height="2" valign="top">   1.  </td>
+   
+     <td   height="2 %  width = "80 % " " valign="top">
+     <p align = "justify"> <span class ="content"> 
+        <i> Coalesced float memory access :  </i> <BR>
+    It is the access pattern where successive threads are accessing the successive memory locations in the
+    Global memory and the array is aligned. It results in a single memory transaction. 
+
+ 
+   </span>  </p>
+
+    </td>
+    </tr>
+
+
+   
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   2.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+     <p align = "justify"> <span class ="content"> 
+             <i> Coalesced float memory access (divergent warp) : </i> <BR>
+It is access pattern where successive threads are accessing the successive memory locations in the Global
+memory and array is aligned but some of the threads are not accessing any memory location. It results in 
+a single memory transaction. <BR>
+
+        </span>  </p>
+
+    </td>
+    </tr>
+ 
+    
+    <tr bgcolor="#FFFFFF">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   3.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+        <span class ="content">   
+      <i> Non-sequential float memory access : (Non-Coalesced) </i> <BR>
+It is access pattern where successive threads are not accessing the successive memory locations in the 
+Global memory but the starting address is aligned. <BR> 
+      </span> 
+
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   4. </td>
+   <span class ="content"> 
+       <td  height="2 %  width = "80 % " " valign="top">
+       
+<i> Access with a misaligned starting address : (Non-Coalesced)  </i> <BR>
+It is access pattern where successive threads are accessing the successive memory locations in the 
+Global memory and the starting address is misaligned. <Br> 
+</span>
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   5. </td>
+   
+       <td  height="2 %  width = "70 % " " valign="top">
+        <span class ="content">
+ <i> Non-contiguous float memory access : (Non-Coalesced) : </i> <BR>
+It is access pattern where the successive threads are not accessing the successive memory locations and 
+the starting address is aligned. (ex. one address left un-accessed )  <br>
+
+       </span>  
+
+    </td>
+    </tr>
+
+ <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   6.  </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+       <span class ="content">  
+       
+
+<i> Non-coalesced float3 memory access :  </i> <BR>
+
+   This access pattern involves accessing contiguous float3 element's first component by 
+   the contiguous threads and the starting address is aligned. <BR> 
+
+</span> 
+
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+
+<!-- ******* Table ends ******* -->
+
+
+<P align="justify"> <span class = "content">
+	           
+The access patterns that are considered in the program are meant for the devices with compute 
+capability &le; 1.1 <Br>
+
+
+
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+</span> </p>
+
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "20% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+        cudaMalloc(), <BR>
+        cudaEventCreate(), <BR>
+        cudaEventRecord(),  <BR>
+        cudaEventSynchronize(), <BR>
+        cudaEventElapsedTime(),  <BR> 
+        cudaEventDestroy(), <BR>
+        cudaFree()
+       </font>
+   </span>  </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+The different bandwidths (in GB/sec) that are achievable by the six 		  
+ patterns and by the 
+<font face = verdana  size = 2 color = "#FF00FF"> 
+        cudaMemcpy 
+ </font>
+routine.
+<BR>
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+    <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.2 ends **************************** -->
+
+
+
+
+<!-- ********************** Example 6.3 starts *********************** -->
+
+<a name="cuda-prog-number-id403"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+    <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.3:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write  CUDA Program to use of shared memory to get coalesced data 
+         acces pattern and analyze the the bandwidth results.
+      </span>
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/coalescedFloat3Access.cu">
+      <font color = "blue"> coalescedFloat3Access.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+   Write  CUDA  program to demonstrate the usage of shared memory to 
+   get coalesced data access pattern for float3 array and analyze the
+   advantages in terms of the bandwidth that is achievable
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This program  demonstrates  seemingly 
+ non-coalesced memeory accesses which can be made coalesced by using shared memory. 
+ The two patterns that are demonstrated:
+
+</span> </p>
+
+
+<!-- ********** Table ********* -->
+
+
+<TABLE cellPadding=0  border=1>
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+   
+
+ <!--    <tr bgcolor="#f7f7f7">  -->
+
+     <tr bgcolor="#F7f7f7">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">  1.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+      <span class ="content"> 
+            <i> Non-coalesced float3 memory access : </i> <BR>
+    In which, each thread accesses an element from float3 array and copies 
+   component wise to another element in the output float3 array
+        </span>  
+
+    </td> 
+    </tr>
+ 
+    
+<!--   <tr bgcolor="#d7d7d7"> -->
+
+  <tr bgcolor="#F7f7f7">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   2.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+         <span class ="content">   
+ <I> Coalesced float3 memory access using shared memory : </i> <BR>
+    In which, all threads in a block coordinate to load the corresponding elements
+   into shared memory then store the values in the corresponding element in output 
+    array such that both loads and stores can be &quot; coalesced &quot;
+
+      </span>  
+
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+
+<!-- ******* Table ends ******* -->
+
+
+<P align="justify"> <span class = "content">
+	           
+
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+</span> </p>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+     __syncthreads(), <BR>
+      cudaMalloc(), <BR>
+      cudaEventCreate(), <BR>
+      cudaThreadSynchronize(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+       </font>
+   </span>  </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+The different bandwidths (in GB/sec) that are achieved by 
+the non-coalesced access and the corresponding coalesced access 
+using the shared memory  using 
+ 
+<font face = verdana  size = 2 color = "#FF00FF"> 
+cudaMemcpy 
+ </font>
+routine.
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.3 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.4 starts *********************** -->
+
+<a name="cuda-prog-number-id404"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.4:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write CUDA Program to calculate achievable shared memory bandwidth
+         for typical read operation by all threads.
+         </span>
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/sharedMemoryReadingSameWord.cu">
+      <font color = "blue"> sharedMemoryReadingSameWord.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+   Write  CUDA  program to demonstrate the achievable shared 
+   memory bandwidth while reading the same word 
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This is an example code to demonstrate that while reading the same word by all the threads,
+there will not be any serialization even though all threads are accessing from the same bank.
+The code  generates the access patterns. 
+<BR> <BR>
+             
+The 32-bit word gets broadcasted to all the threads - hence bandwidth can be comparable
+to the value got when there were no bank conflicts. 
+</span> </p>
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, all the threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+</span> </p>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+     __syncthreads(), <BR>
+      cudaMalloc(), <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+The different bandwidths (in GB/sec) that are achieved by 
+the non-coalesced access and the corresponding coalesced access 
+using the shared memory  using 
+<font face = verdana  size = 2 color = "#FF00FF"> 
+cudaMemcpy 
+ </font>
+routine.
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+    <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.4 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.5 starts *********************** -->
+
+<a name="cuda-prog-number-id405"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+      <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.5:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+        Write  CUDA Program to calculate achievable shared memory bandwidth
+         while accessing arrays of different inbuilt data types.
+         </span>
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/sharedMemoryRestructuringDataTypes.cu">
+      <font color = "blue"> sharedMemoryRestructuringDataTypes.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+        Write  CUDA Program to calculate achievable shared memory bandwidth
+         while accessing arrays of different inbuilt data types.
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This program  demonstrate the different shared memory bandwidths achieved when <BR> <BR>
+   
+<blockquote>
+
+ 1. accessing a <i> 3d array of floats </i> <BR>
+
+ 2. accessing a <i> float3 array </i> <BR>
+
+ 3. accessing a <i> 4d array of floats </i>  <BR>
+
+ 4. accessing a <i> float4 array  </i> <BR> <BR>
+
+
+</blockquote>
+
+ In all the kernels, the arrays are just being initialized.
+
+ 
+</span> </p>
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+</span> </p>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+     __syncthreads(), <BR>
+      cudaMalloc(), <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ The different bandwidths of the shared memory that are achieved in the 
+ above mentioned accesses.
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+    <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.5 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.6 starts *********************** -->
+
+<a name="cuda-prog-number-id406"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.6:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+        Write CUDA Program to demonstrate bank conflicts that can occur 
+        while accessing the shared memory 
+      </span>
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/sharedMemoryStridedAccessPatterns.cu">
+      <font color = "blue"> sharedMemoryStridedAccessPatterns.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+       Write CUDA Program to demonstrate bank conflicts that can occur while
+       accessing the shared memory the shared memory
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This is a sample code to demonstrate the different strided access patterns in the shared memory 
+and the corresponding bandwidths of the shared memory that are achievable. <BR> <BR>
+
+A series of I/O requests are considered to be a simple-strided access pattern if each request 
+is for the same number of bytes, and if the file pointer is incremented by the same amount 
+between each request. <BR> <BR>
+
+The following strided accesses are demonstrated:
+ 
+</span> </p>
+
+
+<!-- ********** Table ********* -->
+
+
+<TABLE cellPadding=0 align = "center" border=1>
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+   
+
+ <!--    <tr bgcolor="#f7f7f7">  -->
+
+     <tr bgcolor="#F7f7f7">
+     <td  valign = "top"  width = "50 % " height="2" valign="top"> 
+            stride of one 32-bit word     
+     </td>
+   
+       <td  height="30 %  width = "40 % " " valign="top">
+     <span class ="content"> 
+            causes no bank conflicts
+        </span>  
+
+    </td> 
+    </tr>
+ 
+    
+<!--   <tr bgcolor="#d7d7d7"> -->
+
+    <tr bgcolor="#F7f7f7">
+     <td   valign = "top"  width = "50 % " height="2" valign="top"> 
+       stride of two 32-bit words  
+     </td>
+   
+       <td   height="2 %  width = "40 % " " valign="top">
+       <span class ="content">   
+         causes 2-way bank conflicts
+      </span> 
+
+    </td>
+    </tr>
+
+
+  <tr bgcolor="#F7f7f7">
+     <td   valign = "top"  width = "50 % " height="2" valign="top"> 
+       stride of three 32-bit words  
+     </td>
+   
+       <td   height="2 %  width = "40 % " " valign="top">
+       <span class ="content">   
+         causes no bank conflicts
+      </span>  
+
+    </td>
+    </tr>
+
+  <tr bgcolor="#F7f7f7">
+     <td   valign = "top"  width = "50 % " height="2" valign="top"> 
+       stride of eight 32-bit words  
+     </td>
+   
+       <td   height="2 %  width = "40 % " " valign="top">
+     <span class ="content">   
+         causes 8-way bank conflicts
+      </span>  
+    </td>
+    </tr>
+
+
+  <tr bgcolor="#F7f7f7">
+     <td   valign = "top"  width = "50 % " height="2" valign="top"> 
+       stride of sxteen 32-bit words  
+     </td>
+   
+       <td   height="2 %  width = "40 % " " valign="top">
+       <span class ="content">   
+         causes 16-way bank conflicts
+      </span>  
+
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+
+<!-- ******* Table ends ******* -->
+
+
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+</span> </p>
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+  
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ The different bandwidths of the shared memory that are achieved in 	
+ the above strided accesses
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+     <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.6 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.7 starts *********************** -->
+
+<a name="cuda-prog-number-id407"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.7:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+ 
+         Write  CUDA Program to demonstrate advantage of 
+        Structure of arrays in terms of the 
+        bandwidth of the global memory that is achievable 
+       </span>
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/SOAvsAOS.cu">
+      <font color = "blue">SOAvsAOS.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+       Write  CUDA Program to demonstrate advantage of 
+        Structure of arrays in terms of the 
+      bandwidth of the global memory that is achievable 
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This example takes "Triangle" as structure with three arrays of three floating points each 
+representing the three vertices of a triangle the same information is also is stored 
+using a structure "Triangles" which has arrays for each field of each vertex.
+
+Both the representations are initialized generating typical access patterns that will 
+be present while accessing those structures.
+
+ 
+</span> </p>
+
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+</span> </p>
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaMalloc() <BR>,
+      cudaMemcpy() <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ The different bandwidths of the global memory that are achieved by 			  
+ having different data representations.
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.7 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.8 starts *********************** -->
+
+<a name="cuda-prog-number-id408"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.8:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write CUDA Program to demonstrate the global memory bandwidth differences
+         for varying block sizes 
+      </span>
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/blockPartitioning.cu">
+      <font color = "blue">blockPartitioning.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+       Write CUDA Program to demonstrate the global memory bandwidth differences for varying 
+         block sizes 
+
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+The Program measures the bandwidth of global memory for the different block sizes and fixed length 
+array in a copy operation. In CUDA, the developer should choose the appropriate block size (grid, 
+threads)  for application and the choice of block size affects the global memory bandwidth and 
+performance. <BR> <BR>
+
+ Experiments on choice of block size, which is equal to the warp size, may give good performance
+ for most of the data intensive applications. 
+This code tests the above experiment for different block sizes in a simple copy operation. 
+    Array size is fixed to maximum limit possible.
+
+</span> </p>
+
+<TABLE cellPadding=0  border=1 >
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   1.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+     <span class ="content"> 
+ 	Best size for block depends on the application. In this case, when the block size 
+             is 128 the occupancy is close to 100% and hence we get maximum bandwidth whereas occupancy 
+is just 33% when block size is equal to 32.
+
+        </span>  
+
+    </td>
+    </tr>
+ 
+    
+    <tr bgcolor="#FFFFFF">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   2.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+       <span class ="content">   
+     
+	Minimum scheduling unit in a SMP is a warp. Each instruction on SMP could take maximum 
+of 24 cycles. NVIDIA suggests that to hide this latency we need high occupancy per multiprocessor.
+      </span>  </p>
+
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   3. </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+ <span class ="content">   
+It is access pattern where successive threads are accessing the successive memory locations in the 
+Global memory and the starting address is misaligned. <Br> 
+   </span>  
+    </td>
+    </tr>
+</tbody>
+</table>
+
+ <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+   </span>  </p>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaSafeMalloc() <BR>,
+      cudaMemcpy() <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ Global Memory Bandwidth in  GB/s for different block sizes
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+     <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.8 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.9 starts *********************** -->
+
+<a name="cuda-prog-number-id409"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+  <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.9:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write  CUDA Program to improve the bandwidth when thread handles more 
+        than one element by making use of GPU as a 32-way SIMD processor
+   </span>  
+        
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/vectorModel.cu">
+      <font color = "blue">vectorModel.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+      Write  CUDA Program to improve the bandwidth  when thread handles more 
+        than one element by making use of GPU as a 32-way SIMD processor
+
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+The Program measures the  performance improvements in bandwidth for simple initialization kernel 
+operation [a(i) = value]. GPU is considered as 32-way SIMD processor.  
+Array size and block size are fixed for the purpose of demonstration and it can be varied. <BR> <BR>
+
+
+This program demonstrates that if each thread handles more than one data element (here 4) then 
+we can achieve better performance. In this program, the factor corresponds to the number of
+ data elements handled by each thread. It is fixed to 4 but can be  varied. 
+
+</span> </p>
+
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaSafeMalloc(), <BR>
+      cudaMemcpy(), <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ Global memory bandwidth achieved (GB/s) and timing (average) for 
+two initialization kernels \96 normal and with vector mode.
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+    <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.9 ends **************************** -->
+
+
+
+
+
+<!-- ********************** Example 6.10 starts *********************** -->
+
+<a name="cuda-prog-number-id410"> </a>
+
+
+
+<table border="0" height="6">
+<tbody>
+
+      <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.10:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write  CUDA Program to demonstrate the difference in bandwidth achieved 
+         when blocks access global memory with and without partition camping.
+        
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/partitionCamping.cu">
+      <font color = "blue">partitionCamping.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+      Write  CUDA Program to demonstrate the difference in bandwidth achieved 
+         when blocks access global memory with and without partition camping. <BR> <BR>
+
+     Array size and block size should not be changed. They are fixed for the purpose of demonstration only
+
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+
+<!-- ******* -->
+
+<TABLE cellPadding=0  border=1 >
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   1.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+     <span class ="content"> 
+       
+	This Program measures the bandwidth of global memory for the initialization operation
+       [a(i) = value] using NVIDIA GPU for 2 kernels that access global memory with and
+       without partition camping
+        </span>  
+
+    </td>
+    </tr>
+ 
+    
+    <tr bgcolor="#FFFFFF">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   2.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+       <span class ="content">   
+	This code is written for 8x and 9x series of NVIDIA gpus. The global memory
+       of these gpus has 6 partitions.
+      </span>  
+
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   3. </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+   	This code is tested on 9600 GT card which has 8 multiprocessors. Since there 
+       are 6 partitions we cannot write a kernel free of partition camping. 
+       At least 2 partitions will experience collisions from atleast 2 blocks.
+
+    </td>
+    </tr>
+
+<tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   4.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+    <span class ="content"> 
+       
+    Two kernels which initialize a fixed length array are written such that 
+       one minimizes partition camping (i.e. initializationWithoutPartitionCamping) by 
+         accessing global memory more uniformly. 
+        </span>  
+
+    </td>
+    </tr>
+ 
+    
+    <tr bgcolor="#FFFFFF">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   5.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+        <span class ="content">   
+		Block size is fixed to 64 floats (256 bytes) as width of each partition is
+ 256 bytes (i.e. consecutive chunks of 256 bytes will be stored in different partitions).
+ If active blocks request data in different  partitions then there is no partition camping.
+   </span> 
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   6. </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+    <span class ="content"> 
+   	Array size is fixed to 2195264 so that total no. of blocks is equal to 34301 which is
+ relatively prime to 6. Moreover, 34302 is multiple of 6. Hence in the second kernel 
+consecutive blocks (in terms of ID) access chunks of 64 floats in stride of 6 (blocks).
+ This will lead to heavy partition camping.
+   </span>  
+    </td>
+    </tr>
+
+
+</tbody>
+</table>
+
+
+<!-- ****** -->
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaSafeMalloc() <BR>,
+      cudaMemcpy() <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ Global memory bandwidth achieved (GB/s) and timing (average) for two 
+ initialization kernels \96 with and without partition camping.
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.10 ends **************************** -->
+
+
+
+<!-- ********************** Example 6.11 starts *********************** -->
+
+<a name="cuda-prog-number-id411"> </a>
+
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.11:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+         Write CUDA Program to demonstrate the difference in bandwidth achieved when threads within 
+        a warp follow different execution paths
+       
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/warpDivergence.cu">
+      <font color = "blue">warpDivergence.cu</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+      Write  CUDA Program to demonstrate the difference in bandwidth achieved when 
+      threads within a warp follow different execution paths.
+
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+
+<!-- ******* -->
+
+<TABLE cellPadding=0  border=1 >
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">    1.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+     <span class ="content"> 
+       
+	This Program measures the bandwidth of global memory for the initialization operation
+       [a(i) = value] using NVIDIA GPU which has SIMT architecture. 
+        </span>  
+    </td>
+    </tr>
+ 
+    
+    <tr bgcolor="#FFFFFF">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   2.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+        <span class ="content">   
+	GPU employs a SIMT (single instruction multiple thread) architecture in which the threads of a block
+        are executed in groups of 32 called warp. A warp executes a single instruction at a time across all 
+        its threads, and it makes substantial difference in performance if threads within a warp follow 
+        different execution paths.
+      </span> 
+
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">  3. </td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+       In this program,  there are 4 kernels with varying no. of branch instructions. The kernel 
+       with more branches has more execution paths within a warp as a result some threads have to stall 
+      leading to performance degradation.
+
+    </td>
+    </tr>
+
+
+</tbody>
+</table>
+
+
+<!-- ****** -->
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "30% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaSafeMalloc() <BR>,
+      cudaMemcpy() <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+Global memory bandwidth achieved (GB/s) and timing (average) for initialization kernels with
+ varying no. of execution paths.
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.11 ends **************************** -->
+
+
+
+
+<!-- ********************** Example 6.12 starts *********************** -->
+
+<a name="cuda-prog-number-id412"> </a>
+
+
+
+<table border="0" height="6">
+<tbody>
+
+    <tr>
+
+    
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.12:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+      Write  CUDA Program to demonstrate  the sustainable memory bandwidth (Stream Benchark - Global
+        memory of the NIVIDA GPU device).
+      
+
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : <BR>
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/cudaStream/cudaStream.cu">
+      <font color = "blue">cudaStream/cudaStream.cu</font> </a> <br/>
+  
+    
+   <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/cudaStream/Makefile">
+      <font color = "blue">cudaStream/Makefile</font> </a> <br/>
+  
+   
+     ) 
+ 
+    </span>  
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+        Write  CUDA Program to demonstrate  the sustainable memory bandwidth (Global
+        memory of the NIVIDA GPU device).
+
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+The stream benchmark fins sustained performance i.e bandwidth of global memory of GPU.
+</span> </p>
+
+
+
+<!-- ******* -->
+
+<TABLE cellPadding=0  border=1 >
+<TBODY>
+
+<!-- <tr bgColor= "#c4d7dd">  -->
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   1.</td>
+   
+       <td  height="2 %  width = "80 % " " valign="top">
+     <span class ="content"> 
+       
+	This is a Stream Benchmark for GPU. It finds the bandwidth of global 
+        memory of GPU card by timing the four operations - <I> Copy, Scale, Add </i>
+        &amp; <I> Triad. </i>
+        </span>  
+
+    </td>
+    </tr>
+ 
+    
+    <tr bgcolor="#FFFFFF">
+     <td   valign = "top"  width = "2 % " height="2" valign="top">   2.  </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+        <span class ="content">   
+	GPU employs a SIMT (single instruction multiple thread) architecture in which the threads of a block
+        are executed in groups of 32 called warp. A warp executes a single instruction at a time across all 
+        its threads, and it makes substantial difference in performance if threads within a warp follow 
+        different execution paths.
+      </span> 
+
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   3. </td>
+   
+       <td   height="2 %  width = "80 % " " valign="top">
+       <span class ="content">   
+      The Stream   operations time is measured using CUDA events provided by runtime library.
+      </span>
+    </td>
+    </tr>
+
+   <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   4. </td>
+   
+        <td   height="2 %  width = "80 % " " valign="top">
+       <span class ="content">   
+      Device management calls of runtime API were used to output the device details.
+     </span> 
+    </td>
+    </tr>
+
+    <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   5. </td>
+   
+        <td   height="2 %  width = "80 % " " valign="top">
+        <span class ="content">   
+     Error checks for the API calls and the kernels were done using wrapper functions.
+     </span> 
+    </td>
+    </tr>
+
+   <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   6. </td>
+   
+      <td   height="2 %  width = "80 % " " valign="top">
+         <span class ="content">   
+     This program also contains the kernels to find global memory bandwidth using shared 
+  memory which results in low bandwidth as compared to previous. In the original kernels 
+  the data access is aligned and coalesced. By using shared memory for such kernels the 
+    overhead is included,  giving  low performance.
+      </span> 
+    </td>
+    </tr>
+
+
+   <tr bgcolor="#FFFFFF">
+     <td  valign = "top"  width = "2 % " height="2" valign="top">   7. </td>
+   
+      <td   height="2 %  width = "80 % " " valign="top">
+        <span class ="content">   
+   User can change ARRAY_SIZE and BLOCK_SIZE but this is not provided as command-line 
+   arguments because if the number  of blocks are too less or too many (crossing the limit) then 
+   the results may not be satisfactory or the program will exit with error. Fixing such error
+   will be responsibility of the end user which is not correct.
+    </span> 
+    </td>
+    </tr>
+
+</tbody>
+</table>
+
+
+<!-- ****** -->
+
+
+<P align="justify"> <span class = "content">
+	           
+The thread block size of <I>  number of </i> threads are required to execute 
+independently. CUDA threads may access data from multiple memory space during their execution.
+Each thread has a private local memory. Each thread block has a shread memory vaiable to all threads
+of the block. Also, al lthe threads have access to the same global memory. There are two additional
+read-only memory space accessable by all threads: the constant and texure memory space. The global, 
+constant, and texture memory are optimized for different memory usages as well as persistent across kernel
+launched by the same applications.
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0 width = 100%>
+<TBODY>
+
+<TR> 
+<TD>
+ 
+ <B> CUDA API Used : </b> <br> <BR>
+ 
+ 
+  <p align = "justify"> <span class ="content"> 
+    <font face = verdana  size = 2 color = "#FF00FF"> 
+
+  cudaError_t cudaThreadExit(void), <BR>
+  cudaError_t cudaThreadSynchronize(void), <BR>
+  const char * cudaGetErrorString(cudaError_t error), <BR>
+  cudaError_t cudaGetLastError(void), <BR>
+  cudaError_t cudaGetDevice(int *device), <BR>
+  cudaError_t cudaGetDeviceProperties( <BR>
+
+  &nbsp; &nbsp;&nbsp;   &nbsp; &nbsp;&nbsp; 
+
+   struct cudaDeviceProp *prop, int device), <BR>
+  cudaErrot_t cudaEventCreate(cudaEvent_t *event), <BR>
+  cudaError_t cudaEventDestroy(cudaEvent_t event), <BR>
+  cudaError_t cudaEventElapsedTime( <BR>
+  
+   &nbsp; &nbsp;&nbsp;   &nbsp; &nbsp;&nbsp; 
+
+   float *ms, cudaEvent_t start, cudaEvent_t end), <BR>
+
+  cudaError_t cudaEventRecord(cudaEvent_t event, cudaStream_t stream), <BR>
+  cudaError_t cudaEventSynchronize(cudaEvent_t event), <BR>
+  cudaError_t cudaMalloc(void **devPtr, size_t size), <BR>
+  cudaSafeMalloc(), <BR>
+  cudaFree()
+ 
+ </font>
+ </span>  
+ </p>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 &amp; Stream Benchmark </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content"> None </span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+Calculate the bandwidth in GB/s with time (i.e average, minimum &amp; maximum) taken for each of
+ the four operations (i.e <i> COPY, SCALE, ADD </i> and <i> TRIAD </i>)
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+       <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV><br>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.12 ends **************************** -->
+
+<!-- ********************** Example 6.13 starts *********************** -->
+
+<a name="cuda-prog-number-id413"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.13:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+ 
+        Write a progrqam to calculate the bandwidth of GPUs for
+   pageable/pinned memory from  Host-to Device and Device-to-Host, Device-to-Device.
+       </span>
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/CudaBandwidthCal-v1.1.tar">
+      <font color = "blue">CudaBandwidthCal-v1.1.tar</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+       Write a progrqam to calculate the bandwidth of GPUs for
+ pageable/pinned memory from  Host-to Device and Device-to-Host,
+Device-to-Device.
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+The code measures the memcopy bandwidth of the GPUs. The code reads 
+data transfer range (in bytes) for which to calculate 
+bandwidth as well as it takes memory mode (pageable / pinned) 
+from user). Allocate the memory on host-CPU and device-GPU 
+for given data size. Then Copy the data from host to device ,
+device-to-device and device-to-host for given data size. 
+Measures the bandwidth for device-to-device , 
+device-to-host and host-to-device for specified 
+memory mode (pageable / pinned). 
+ 
+</span> </p>
+
+
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "40% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaMalloc(), <BR>
+      cudaMallocHost(), <BR>
+      cudaMemcpy(), <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content">Memory Mode( 0 - pageable , 1 - pinned),Start data size in
+bytes,End data size in bytes,Increment value in bytes.</span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ Bandwidth in MB/s for a given data size.
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.13 ends **************************** -->
+
+<!-- ********************** Example 6.14 starts *********************** -->
+
+<a name="cuda-prog-number-id414"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.14:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+ 
+        Write a progrqam to demonstrate a strategy
+ to hide bandwidth latency using CUDA stream APIs and 
+concurrent execution of  kernel through one
+ stream, while memory copy of data set is also going on 
+for the purpose of execution through other kernel 
+and analyze the advantages in terms of the execution time taken.
+       </span>
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/CudamemcpyLatencyHiding.tar">
+      <font color = "blue">memcpyLatencyHiding.tar</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+       Write a progrqam to demonstrate a strategy
+ to hide bandwidth latency using CUDA stream APIs and 
+concurrent execution of  kernel through one
+ stream, while memory copy of data set is also going on 
+for the purpose of execution through other kernel 
+and analyze the advantages in terms of the execution time taken.
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+This program is designed to demonstrate some strategy to hide 
+bandwidth latency and concurrent execution of some execution 
+kernel through one stream, while memory copy of data set is
+ also going on for the purpose of execution 
+through  other kernel. <br><br>
+Basically in this exercise we execute bellow kernel
+ in no-stream and stream approach and compare the 
+total time required for each mode. <br><br>
+kernel detail :<br><br> &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ Kernels : A = A + B <br><br> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+
+
+				  A = A(T) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+
+
+				  A = x * A   <br><br> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+
+
+	                [Where A and B is Block Matrix] 
+</span> </p>
+
+
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "40% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+      cudaMalloc(), <BR>
+      cudaMallocHost(), <BR>
+      cudaMemcpyAsync(),<BR>
+      cudaMemcpy(), <BR>
+      cudaEventCreate(), <BR>
+      cudaEventRecord(), <BR>
+      cudaEventSynchronize(), <BR>
+      cudaEventElapsedTime(),  <BR> 
+      cudaEventDestroy(), <BR>
+      cudaFree()
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+
+
+
+All input is controlled through predefined preprocessor directives
+included in source code. Bellow is the list of all 
+important preprocessor directive .	<BR><BR>
+REP_COUNT - This directive controls the number of repeatability of executing 
+set of task[ execution kernel] before reporting average time 
+for execution.<BR><BR>
+MAT_DIMM   -	Directive to define input matrix dimension.<BR><BR>
+
+NSTREAM    -   Number of stream used in this exercise.<BR><BR>
+
+BLOCK_SIZE -   Define thread block dimension.
+
+</span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ 
+This primary version of code with un-optimized kernel shows
+ 3 to 4 percent improvement in execution time because of applying
+ ladder execution model approach. The Output shows the comparison 
+of execution time of executing same set of task in both mode( no-stream
+ and stream ).
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.14 ends **************************** -->
+
+
+
+
+
+
+
+<!-- ********************** Example 6.15 starts *********************** -->
+
+<a name="cuda-prog-number-id415"> </a>
+<BR> <BR>
+
+
+<table border="0" height="6">
+<tbody>
+
+     <td width="16%" height="2" valign="top">
+ 
+     <b>  <font color = "red">Example 6.15:  </font> </b> </td>
+ 
+     <td width="84%" height="2" align="top">
+     <span class = "content">
+	Write a program to Retrieves the amount of used, 
+free and total memory available on the each device in syatem, 
+in bytes. 
+
+       </span>
+ 
+   <!-- **************** download  Starts here **************** -->
+   <BR> 
+   (Download source code : 
+
+    <a href="../gpu-comp-nvidia-cuda-memopt-perf-codes/cuda_memcheck_nvml.c">
+      <font color = "blue">cuda_memcheck_nvml.c</font> </a> ) 
+ 
+    </span>  </p>
+
+ </td>
+ </tr> 
+ </tbody>
+ </table>
+ <!-- *************** download  Ends here ************* -->
+
+<table border="0" height="6">
+<tbody>
+<tr> 
+<TD>
+
+<UL>
+
+<LI><B> Objective </B>
+
+ <p align = "justify">  <span class = "content">
+      Write a progrqam to Retrieves the amount of used, 
+free and total memory available on the each device in syatem,
+ in bytes.
+  </span> </p>
+
+</LI>
+
+
+<LI><B> Description </B>										
+<P align="justify"> <span class = "content">
+
+
+
+
+
+
+
+
+<p align= "justify"> <span class = "content">
+NVML is a C-based interface for monitoring and managing various states 
+within Nvidia Tesla GPUs NVML has several functions that can measure 
+characteristics of GPUs, such as device power, device temperature, 
+unit power, unit temperature, and clock frequency. Using NVML, we 
+measure power and temperature. Nvidia Management Library (NVML) high 
+level utility called nvidia-smi not only provides a way to measure power
+but also various other features like the ability to set ECC 
+(Error Correction Code) to zero if it is not needed, or to monitor memory
+ usage, among other things. using
+<font color ="red"> <B> nvmlDeviceGetMemoryInfo </b> </font>  
+function we can Retrieves the amount of used, free and total memory 
+available on the device, in bytes.
+<BR> <BR>
+
+<b>Code detail</b> :<br><br> 
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ <font color ="#FF00FF">nvmlReturn_t result;</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ <font color ="#FF00FF">nvmlDevice_t device;</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ <font color ="black">
+ //The identifier of the target device</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+<font color ="#FF00FF"">nvmlMemory_t meminfo;</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+  <font color ="black">
+ //Reference in which to return the memory information<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ //meminfo is of type nvmlMemory_t structure<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ //that conatin 3 data fields:total,free,used </font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+<font color ="#FF00FF"> result = nvmlDeviceGetMemoryInfo( device, &meminfo );</font> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+<font color ="#FF00FF"> printf("Total installed FB memory (in bytes)=%llu\n",meminfo.total);</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+<font color ="#FF00FF"> printf("Unallocated FB memory (in bytes).=%llu\n",meminfo.free);</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+<font color ="#FF00FF"> printf("Allocated FB memory (in bytes)=%llu\n",meminfo.used);</font><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+
+
+</span> </p>
+
+
+
+<BR> <BR>
+
+
+<TABLE cellPadding=0  border=0>
+<TBODY>
+
+ <tr>
+ <td valign = "top"  width = "40% " height="2" valign="top"> <B> CUDA API Used : </b> </td>
+ <td   height="2 %  width = "60% " " valign="top">
+ 
+    <p align = "justify"> <span class ="content"> 
+       <font face = verdana  size = 2 color = "#FF00FF"> 
+
+nvmlReturn_t result nvmlDeviceGetMemoryInfo 
+(nvmlDevice_t device, nvmlMemory_t *memory)
+    </font>
+   </span>  
+   </p>
+
+
+ </td>
+</tr>
+</tbody>
+</table>
+
+
+<BR> <BR>
+
+
+
+<div align ="right">
+(<a  href="http://www.nvidia.com"  target="_blank" > <font color = "blue">
+The NVIDIA CUDA<sup>TM</sup>  Programming Guide Version 2.3.1 </font></a>)
+</div>
+
+</span> </p>
+
+</LI>
+
+<LI>
+<B>Input</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+
+
+
+All input is controlled through predefined NVML library APIs
+included in source code. Bellow is the list of all 
+important terms .<BR><BR>
+RESULT - This is of nvmlReturn_t stucture type that hold all
+return types from NVML API function calls<BR><BR>
+DEVICE   -The identifier of the target device.<BR><BR>
+
+MEMINFO   - Reference of type nvmlMemory_t structure in which to return the memory information.<BR><BR>
+
+
+
+</span> </p>
+
+
+ <LI>
+<B>Output</B>
+</LI>
+
+<P align="justify"> <span class = "content">
+ 
+
+The Output shows how many Total installed FB memory (in bytes),
+Unallocated FB memory (in bytes) and Allocated FB memory (in bytes).
+on each devices present in system.
+
+</span> 
+</p>			  
+
+</ul>
+
+
+<DIV ALIGN=right>
+   <A Href="gpu-comp-nvidia-cuda-memopt-perf.html"> 
+        <IMG SRC="../gpu-comp-nvidia-cuda-images/up.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ************************* Example 6.15 ends **************************** -->
+
+
+
+<!-- *************************  Table for codes ends ********************** -->
+
+
+</TD>
+</TR>
+
+ <!--  content of web page End here  --> 
+ 
+          
+                 
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 bordercolor=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+       
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

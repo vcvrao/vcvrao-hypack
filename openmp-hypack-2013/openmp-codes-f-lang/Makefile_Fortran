@@ -1,0 +1,72 @@
+
+#/*****************************************************************************
+#                  C-DAC Tech Workshop : hyPAKC-2013
+#                       August 2013 
+#
+#                     Makefile_Fortran
+#          
+# Description    : This file is used to compile and link the openmp programs.
+#                   The user has to specify the names of the program and appropriate 
+#                   compil roptions/paths to link some of the libraries required for 
+#                   OpenMP programs in the Makefile.
+#
+# Created        : August 2013 
+#
+# E-mail         : hpcfte@cdac.in
+#
+#**************************************************************************/
+
+#---------------------------------------------------------------------
+#            Compiler
+#            ---------- 
+# Use the appropriate CC (compiler) and CCFLAGS ( compiler option) values
+# to "turn on" the OpenMP Compilation.
+# Following are the compiler and compiler option to turn on the 
+# OpenMP compilation : 
+# 
+#       Compiler                             Compiler Option (For CCFLAGS) 
+#       -------------                       -------------------------------
+#  1)   GNU  (f90 or f95 or gfortran)          -fopenmp  
+#  2)   SUN  (f95)                             -xopenmp or -openmp 
+#  3)   INTEL (ifort)                          -openmp
+#  4)   PGI   (pgf77 or pgf90)                 -mp 
+#  5)   PATHScale (pathf90 or pathf95)         -mp
+# ---------------------------------------------------------------------
+
+CC   =  f95 
+OPTFLAGS    =  -O3
+CCFLAGS    = -fopenmp
+
+LIBS    = 
+EXECS       =  run
+#---------------------------------------------------------------------
+#		Object files ...
+#---------------------------------------------------------------------
+#
+
+
+#OBJECTS= omp-matmat-mult.f  
+#OBJECTS= omp-maxof-elements-critical.f   
+#OBJECTS=  omp-pi-calculation.f
+#OBJECTS= omp-sumof-elements-reductionop.f
+#OBJECTS= omp-matrix-transpose.f 
+#OBJECTS= omp-maxof-elements-lock.f  
+#OBJECTS= omp-pi-calculation-reduction.f 
+#OBJECTS= omp-unique-threadid.f
+#OBJECTS=omp-hello-world.f  
+#OBJECTS=omp-matvect-mult.f 
+#OBJECTS= omp-maxof-elements-reductionop.f 
+OBJECTS= omp-sumof-elements.f  
+
+
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) $(CCFLAGS) -o $@ $(OBJECTS) $(LIBS) -lm
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run
+

@@ -1,0 +1,38 @@
+
+		C-DAC Tech Workshop : hyPACK-2013
+                       October 15-18, 2013
+
+		README for mpi_tbb_matrix_vector_multiply.cpp
+
+		=============================================
+
+      This program makes use of both SMP (shared-memory-processor)  (i.e., processors with
+      multiple cores) and Message Passing programming ( i.e., distributed systems such as 
+      clusters with multiple cores linked by MPI).
+
+      This provides parallelism at all levels for Distributed systems such as clusters with
+      nodes having SMP processors.
+
+      In this program the MPI part takes the input (Matrix + Vector) by one process 
+      (with rank = 0). Packs this matrix to 1D matrix of equal sizes and distributes to all
+      available processes.The vector is 'broadcasted' as such to all the processes.
+      Each process than makes use intelTBB to parallely execute vector-matrix multiplication
+      process for the chunk it has received. The MPI gather is then used to obtain all small
+      chunks of result and integrated to obtain final result.
+
+      Input: Matrix.input and Vector.input file
+	     format of above file:
+	     <Number of Rows> <Number of Columns in Matrix(none for vector)>
+	     <the matrix as is represented on a paper>
+	     
+      eg:
+      Matrix.input:
+	     2 2
+	     1 0
+             0 1 
+      Vector.input:
+	     2
+	     1
+	     2
+
+      Output: Final resultant matrix.

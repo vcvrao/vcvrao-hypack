@@ -1,0 +1,19 @@
+CC=icc
+CFLAGS=-openmp -offload-build
+
+all: vec_vec_add_aos.out vec_vec_add_soa.out
+
+vec_vec_add_aos.out:  vector-vector-addition-openmp-mic-offload-aos.o
+	$(CC) -o $@ $<
+	
+vec_vec_add_soa.out:  vector-vector-addition-openmp-mic-offload-soa.o
+	$(CC) -o $@ $<
+
+vector-vector-addition-openmp-mic-offload-soa.o:  vector-vector-addition-openmp-mic-offload-soa.c
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+vector-vector-addition-openmp-mic-offload-aos.o:  vector-vector-addition-openmp-mic-offload-aos.c
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+clean:
+	rm -rf *.o *.out

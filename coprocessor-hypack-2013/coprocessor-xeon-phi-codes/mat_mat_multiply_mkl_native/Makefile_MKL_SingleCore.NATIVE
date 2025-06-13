@@ -1,0 +1,35 @@
+#
+#               C-DAC Tech Workshop : hyPACK-2013
+#                        October 15-18, 2013
+#   E-mail    : hpcfte@cdac.in
+#
+#
+#
+CC   = icc
+
+CCFLAGS    = -std=c99 -mmic -mkl  -Wno-unknown-pragmas
+
+OPTFLAGS   = -O3 
+
+#LIBS       = -L/opt/intel/lib/mic -Wno-unknown-pragmas 
+LIBS       = 
+EXECS      = run
+#----------------------------------------------------------------
+#               Object files ...
+#----------------------------------------------------------------
+
+
+OBJECTS = matrix-matrix-multiply-dgemm-mkl-single-core-native.c
+
+#----------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS)  
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run
+
+

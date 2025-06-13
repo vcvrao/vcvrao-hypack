@@ -1,0 +1,2008 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   		
+           <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+		
+               <!-- ** -->
+	       <A class=menulslct  
+                href="./../hypack13-mode01-multicore-intel-tbb.html">
+                &#149; Intel TBB </A>
+               <!-- ** -->
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+<TR>
+
+<H1> hyPACK-2013 Mode 1 :  Intel Threading Building Blocks   </H1> 
+</TR>
+</TBODY>
+ </TABLE> 
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+ <P align=justify><span class="content" >
+  The software threading model on the computing platform which consists of multi-core processors
+  play an important role to understand and enhance the performance of your application. Several factors such as proper 
+  use of threading, understanding of how threads operate, algorithm used for your application, the
+  threading application programming interface (API), the compiler runtime environment, and the 
+  number of multi-cores used for your application. <BR> <BR>
+
+
+<a href="http://www.intel.com" target ="new" > <font color ="blue">Intel</font> </a>  Threading Building Blocks is a library that helps you leverage programming on multi-core processors without 
+having to be a threading expert. It offers a rich and complete approach to expressing parallelism in a C++ program. 
+It is a library that helps you leverage multi-core processor performance without having to be a threading expert. 
+Threading Building Blocks represents a higher-level, task-based parallelism that abstracts platform details and 
+threading mechanisms for performance and scalability. 
+Threading Building Blocks helps you create applications that reap the benefits of new processors with more and
+ more cores as they become available.
+
+   
+</span> </p>
+</td> </tr> 
+</tbody>
+</table>
+
+<!-- ***********************  Sub-title Starts topics here ********************* -->
+
+<BR> 
+
+<table  border="0"  height="28">
+  <tr>
+    <td height="24" align="left" >
+   <p align = "left" >
+   
+<a href="#introduction-tbb">
+  <font size="2" face="Arial " color="blue"> <B> Introduction </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp;  
+
+  <a href="#tbb-advantages">
+  <font size="2" face="Arial " color="blue"> <B> TBB Advantages</b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp;  
+
+    
+  <a href="#overview-tbb">
+  <font size="2" face="Arial " color="blue"> <B> An Overview of TBB </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp;  
+
+
+<BR><BR>
+
+  <a href="#tbb-lib-calls">
+  <font size="2" face="Arial" color="blue"> <B> Basic TBB Library Templates </b>   
+  </font> </a> 
+   &nbsp; &nbsp; &nbsp;
+
+  
+
+ <a href="#compile-exe-prog">
+ <font size="2" face="Arial" color="blue"> <B>Compilation, Linking and Execution</ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+<br><br>
+
+  <a href="#memory-allocation">
+ <font size="2" face="Arial" color="blue"> <B> Memory Allocation in Multi-Threaded Prog. </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; 
+
+
+ <br> <BR>
+
+ 
+ 
+
+ <a href="#threads-tools">
+ <font size="2" face="Arial" color="blue"> <B> Commercial /Open Source Tools Information </ b>  
+ </font> </a> 
+   &nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+<font size="2" face="Arial" color="red"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp;  
+
+
+<!-- ******************* Reference Ends Here ************************** -->
+
+</td>
+</tr>
+
+</table>
+<!-- ************************ Sub-title topics Ends here  ************************* -->
+
+<!-- ************************* List of Programs - simple Thread APIs   Starts [1] here ********************** -->
+<HR>
+
+<font size="2" face="Arial" color="red"> <b> List of TBB Programs </b> </font> 
+
+
+
+<table border="0"  height="6">
+  <tbody> 
+
+     <tr>
+     <td width="4%" height="2" align="left">   </td>
+
+     <td width="96%" height="2" align="left">
+         
+     
+    <P align= "justify">
+        <a href="./tbb-html/tbb-basic-calls.html"> 
+          <font size="2" face="Arial" color="blue"> 
+               <B>  TBB programs to illustrate basic TBB  API library calls : </b>  
+          </font> 
+       </a>   
+     <span class="content" >
+       Examples include some introductory programs simple dot operation. multiplication 
+of two array, parallel multiple reduction operation. simple programs using Threading 
+Building Block are discussed. 
+
+        </span> </p> 
+     </td>
+     </tr>
+
+<!-- ********************** List of Programs - simple Thread APIs ends  [1] here **************************** -->
+
+
+<!-- ********************* List of Programs Numerical  Computations Starts [2] here *********************** -->
+
+     <tr>
+     <td width="4%" height="2" align="left">      </td>
+
+     <td width="96%" height="2" align="left">
+          
+     
+    <P align= "justify">
+        <a href="./tbb-html/tbb-numerical-pragmas.html"> 
+      <font size="2" face="Arial" color="blue"> 
+         <B> Programs based on Numerical Computations (Matrix,Vector Computations) using TBB APIs : </b> 
+        </font> </a> 
+     
+    <span class="content">
+      Examples programs on vector-vector multiplication using block striped partitioning, 
+    matrix-vector multiplication using self scheduling algorithm, , matrix matrix multiplication using block striped partitioning. 
+    The focus is to use
+    different thread APIs and understand  Performance issues on mutli-core processors. 
+ 
+         </span> </p> 
+     </td>
+     </tr>
+
+
+
+<!-- ********************* List of Programs Numerical  Computations Starts [2] Ends *********************** -->
+
+
+<!-- ************************** List of Programs non Numerical  Computations Starts [2] here *********************** -->
+
+     <tr>
+     <td width="4%" height="2" align="left"> 
+           </td>
+
+     <td width="96%" height="2" align="left">
+       
+     
+    <P align= "justify">
+        <a href="./tbb-html/tbb-non-numerical-pragmas.html"> 
+      <font size="2" face="Arial" color="blue"> 
+         <B>Non-Numerical Computations & I/O (Producer-Consumer) using TBB APIs :</b> 
+   
+        </font> </a> 
+     
+ <span class="content" >
+      Example programs on  Producer Consumer programs & Thread-I/O
+ programs are discussed. 
+The focus is to use different TBB APIs and understand Performance issues
+ on mutli-core processors.
+ 
+         </span> </p> 
+     </td>
+     </tr>
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</tbody>
+</table>
+
+<!-- ************************** List of Programs non Numerical  Computations Starts [2] Ends *********************** -->
+
+
+<!-- ************************ introduction to tbb starts *********************** -->
+
+<a name="introduction-tbb">  </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  TBB : Introduction  </b>  </font> </font></DIV>
+ </TD> </TR> 
+
+
+
+<TR>
+<TD>
+
+<BR> 
+ <P align = "justify"> <span class="content" >
+
+ <B>Intel Threading Building Blocks</B> (also known as TBB) is the name of  a C++ template library developed by Intel 
+for writing software programs that take advantage of multi-core processors. The library consists of data structures and
+ algorithms that allow a programmer to avoid some complications arising from the use of native threading packages  
+in which individual threads of execution are created, synchronized, and terminated manually. Instead the library 
+abstracts access to the multiple processors by allowing the operations to be treated as "tasks," which are allocated to 
+individual cores dynamically by the library's run-time engine, and by automating efficient use of the cache.<br><br>
+
+Intel® Threading Building Blocks (TBB) offers a rich and complete approach to expressing parallelism in a C++ program. 
+It is a library that helps you take advantage of multi-core processor performance without having to be a threading 
+expert. Threading Building Blocks is not just a threads-replacement library. It represents a higher-level, task-based 
+parallelism that abstracts platform details and threading mechanism for performance and scalability and 
+performance.<br><br>
+
+TBB implements "task stealing" to balance a parallel workload across available processing cores in order to 
+increase core utilization and therefore scaling. Initially, the workload is evenly divided among the available 
+processor cores. If one core completes its work while other cores still have a significant amount of work in 
+their queue, TBB reassigns some of the work from one of the busy cores to the idle core. This dynamic capability 
+decouples the programmer from the machine, allowing applications written using the library to scale to utilize 
+the available processing cores with no changes to the source code or the executable program file.<br><br>
+
+
+Using TBB, it is possible to  create applications that take advantage of new 
+processors with more and more cores as they become available and achieve scalability in performance with 
+respect to increase 
+in problem size.  Threading Building Blocks is a library that supports 
+scalable parallel programming using standard C++ code. It does not require special languages or compilers. 
+The goal of a programmer in a modern computing environment is scalability: to
+take advantage of both cores on a dual-core processor, all four cores on a quad-core processor, and so on. 
+Threading Building Blocks makes writing scalable applications much easier than it is with traditional threading 
+packages.<br><br>
+
+There are a variety of approaches to parallel programming, ranging from the use of platform-dependent threading 
+primitives to exotic new languages. The advantage of Threading Building Blocks is that it works at a higher level 
+than raw threads, yet does not require newlanguages or compilers.
+</span> </p> 
+
+
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+</TD></TR>
+</TBODY> 
+</TABLE> 
+<BR>
+
+
+<!-- ************************  Introduction to tbb ends here **************************** -->
+
+<!-- ************************  TBB Advantages start here ****************************** -->
+
+<a name="tbb-advantages">  </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+      <B>  TBB Advantages  </b> </font> </font></DIV>
+ </TD> </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+ <P align=justify> <FONT face="verdana" size=2, class="content" >
+ Threaded programming models offer significant advantages for multi-core processors. 
+
+For Example Pthread have following  Advantage.
+Software Portability,Latency Hiding,Overlapping CPU work with I/O etc.
+But writing a simple thread program is very tedious , programmer should keep track all performance issue i.e. 
+ each thread  do equal work (load balancing),Number of cores, synchronization etc. <br><br>
+ To overcome these problem Intel introduced Threading Building Block.  
+ Threading Building Blocks uses templates for common parallel iteration patterns,
+ enabling programmers to attain increased speed from multiple processor cores with-
+ out having to be experts in synchronization, load balancing, and cache optimization.
+
+Threading Building Blocks will run on systems with a single proces-
+sor core, as well as on systems with multiple processor cores.<br><br>
+</span> </p>
+TBB have the following advantage :
+
+      		
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+  <TR> 
+  <td width="2%" height="2" align="left">  <font face="Verdana" size="2">
+           <li> </li>   <BR> </font>    </td>
+
+     <td width="98%" height="2" align="left">
+          <font face="Verdana" size="2">
+     Threading Building Blocks enables you to specify tasks instead of threads.
+        </font> 
+     </td>
+     </tr>
+<TR> 
+  <td width="2%" height="2" align="left">  <font face="Verdana" size="2">
+           <li> </li>   <BR> </font>    </td>
+
+     <td width="98%" height="2" align="left">
+          <font face="Verdana" size="2">
+    Threading Building Blocks targets threading for performance.
+        </font> 
+     </td>
+     </tr>
+
+     <TR> 
+  <td width="2%" height="2" align="left">  <font face="Verdana" size="2">
+           <li> </li>   <BR> </font>    </td>
+
+     <td width="98%" height="2" align="left">
+          <font face="Verdana" size="2">
+    Threading Building Blocks is compatible with other threading packages.
+        </font> 
+     </td>
+
+
+
+<TR> 
+  <td width="2%" height="2" align="left">  <font face="Verdana" size="2">
+           <li> </li>   <BR> </font>    </td>
+
+     <td width="98%" height="2" align="left">
+          <font face="Verdana" size="2">
+   Threading Building Blocks emphasizes scalable, data-parallel programming.
+        </font> 
+     </td>
+     </tr>
+
+
+
+<TR> 
+  <td width="2%" height="2" align="left">  <font face="Verdana" size="2">
+           <li> </li>   <BR> </font>    </td>
+
+     <td width="98%" height="2" align="left">
+          <font face="Verdana" size="2">
+    Threading Building Blocks relies on generic programming.
+
+        </font> 
+     </td>
+     </tr>
+     </tr>
+
+
+</table>
+</tbody>
+
+</TD></TR>
+
+</TBODY> 
+</TABLE> 
+
+<BR>
+<!-- **********************  TBB Advantages Ends here ***************************** -->
+ 
+<!-- ************************* An Overview of tbb start here ********************* -->
+
+<a name="overview-tbb">   </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  An Overview of TBB  </b> </font> </font></DIV>
+ </TD> </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+
+TBB is a C++ library that targets  shared-memory parallel programming. Both open-source and commercial versions exist. Because it is a library, not a new language or language extension, it integrates into existing programming environments with no change to the compiler. An additional advantage, compared to depending on a language or extension for parallelism is that most programmers can more readily modify a library than a compiler. Hence a library permits more rapid evolution and customization. <br><br>
+
+A practical library for high-level parallel programming needs to be sufficiently expressive. TBB
+builds its combination of efficiency and flexibility on C++ templates and partial specialization.
+current standards for languages like C and C++ are insufficient to write portable multi-threaded code. However, in practice, compilers offer enough extensions for TBB to be implementable. <br><br>
+
+TBB's components are at various levels of abstraction. At the highest level are parallel algorithms
+and concurrent containers. At mid-level is a task scheduler. At low level are memory allocators,
+mutexes, atomic operations, and a timing facility.
+
+
+</TD></TR>
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+</TBODY> 
+</TABLE> 
+
+<BR>
+
+ <!-- ************************* An Overview of tbb start Ends ********************* -->
+   
+<!-- *************************** Basic TBB Libray calls starts ********************** -->
+
+
+<br><br>
+<a name="tbb-lib-calls"> </a>
+
+
+<TABLE cellPadding=3  width =100% border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+   <DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+    <B>   Basic TBB Library Templates  </B> </font> </font></DIV> 
+</TD> </TR> 
+
+
+
+
+
+</TBODY> 
+</TABLE> 
+
+
+<TABLE cellPadding=3 width = 100%  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+ 
+<BR> <BR>
+
+  TBB Template devide in Three parts.<br><br>
+
+<font color="black" size = "3" > <B> Basic algorithms: </b> </font> <br><br>
+
+ <font color="black" size = "2" > <B> 1.parallel_for: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	parallel_for(blocked_range&lt;T&gt;(begin,end,grainsize),body object) </i> </font>
+  <br>
+
+<p>A <i>parallel_for&lt;Range,Body&gt;</i> represents parallel execution of Body over each value in Range. This  template function tbb::parallel_for recursively splits the iteration space into chunks and runs each chunk on a separate thread. A blocked_range&lt;T&gt; is a template class provided by the library. It describes a one-dimensional iteration space over type T. begin and end are the limits of the iteration space. grainsize refers to size of each chunk. Body object is an loop body object, in which operator() process a chunk.</p>
+
+
+<font color="black" size = "2" > <B> 2.parallel_reduce: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	parallel_reduce(blocked_range&lt;T&gt;(begin,end,grainsize),body object) </i> </font>
+  <br>
+
+<p>A <i>parallel_reduce&lt;Range,Body&gt;</i> performs parallel reduction of Body over each value in Range. This template function can parallelize the loop if iterations are independent. TBB defines parallel_reduce similar to the parallel_for..</p>
+
+
+<font color="black" size = "2" > <B> 3.parallel_scan: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	parallel_scan(blocked_range&lt;T&gt;(begin,end,grainsize),body object) </i> </font>
+  <br>
+
+<p>A<i> parallel_scan&lt;Range,Body&gt;</i> computes a parallel prefix or parallel scan. The template function parallel_scan decides whether and when to generate parallel work. parallel_scan better suited for future systems with more than two cores.</p>
+
+<font color="black" size = "3" > <B> Advanced algorithms:  </b> </font> <br><br>
+
+
+<font color="black" size = "2" > <B> 1.parallel_while: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	parallel_while&lt;Body&gt; </i> </font>
+  <br>
+
+<p>A<i> parallel_while&lt;Body&gt;</i> performs parallel iteration over items. The processing to be performed on each item is defined by a function object of type Body. The template class tbb::parallel_while can be used if the end of the iteration space is not known in advance, or the loop body may add more iterations to do before the loop exits.</p>
+
+
+<font color="black" size = "2" > <B> 2.parallel_sort: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	void parallel_sort(RandomAccessIterator begin,RandomAccessIterator end,const Compare& comp );
+ </i> </font>
+  <br>
+
+<p>
+A call to<i> parallel_sort(i,j,comp)</i> sorts the sequence [i,j) using the third argument comp to determine relative orderings.<br><BR>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	void parallel_sort(RandomAccessIterator begin,RandomAccessIterator end,const Compare& comp );
+ </i> </font>
+  <br>
+<br>
+A call to <i>parallel_sort(i,j)</i> is equivalent to parallel_sort(i,j,std::less&lt;T&gt;).
+
+parallel_sort provides an unstable sort of the sequence [begin1,end1). This sort is a comparison sort with an average time complexity O(n log n).
+
+
+</p>
+
+
+
+<font color="black" size = "2" > <B> 3.Pipeline: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	class pipeline; </i> </font>
+  <br>
+
+<p>A <i>pipeline </i> represents the pipelined application of a series of filters to a stream of items. Each filter is parallel or serial. <Br>&nbsp; &nbsp;&nbsp; &nbsp;
+
+	class filter;
+
+A filter represents a filter in a pipeline. A filter is parallel or serial. A parallel filter can process multiple items in parallel and possibly out of order. A serial filter processes items one at a time in the original stream order. 
+</p>
+
+
+
+
+
+
+<font color="black" size = "3" > <B> Containers: </b> </font> <br><br>
+
+
+<font color="black" size = "2" > <B> 1.concurrent_queue: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	concurrent_queue&lt;T&gt; </i> </font>
+  <br> <BR>
+
+<p>The template class <i>concurrent_queue&lt;T&gt;</i> implements a concurrent queue with values of type T.  This is bounded data structure, that permits multiple threads to concurrently push and pop item from the queue. <br> 
+
+Pushing is provided by the <b> push </b> method.
+
+<b>Pop</b> is carried by blocking and nonblocking methods.<br> <BR>
+
+<b>pop_if_present</b><br>
+
+    It is nonblocking, if the queue is empty, it returns anyway.<br> <br>
+
+<b>Pop</b><br>
+    This method blocks until it pops a value.
+</p>
+
+
+
+
+<font color="black" size = "2" > <B> 2.concurrent_vector: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	concurrent_vector&lt;T&gt; </i> </font>
+  <br>
+
+<p>A <i>concurrent_vector&lt;T&gt;</i> is a dynamically grow able array of items of type T for which it is safe to simultaneously access elements in the vector while growing it. 
+
+
+</p>
+
+
+<font color="black" size = "2" > <B> 3.concurrent_hash_map: </b> </font> <br><br>
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+<font color="red" size = "2", face="TimesNewRoman"> <i>
+ 	concurrent_hash_map&lt;Key,T,HashCompare&gt; </i> </font>
+  <br> <BR>
+
+<p>A <i>concurrent_hash_map&lt;Key,T,HashCompare&gt;</i> is a hash table that permits concurrent accesses. The table is a map from a key to a type T. The HashCompare traits type defines how to hash a key and how to compare two keys.  A concurrent_hash_map maps keys to values in a way that permits multiple threads to concurrently access values. 
+
+
+</p>
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+</TD> </TR> 
+</TBODY> 
+</TABLE> 
+
+
+<!-- ******************************* Basic Tbb Libray calls ends ************************* -->
+
+<!-- ****************************** memory allocation start here *********************** -->
+
+<a name="memory-allocation">  </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+       <B>  Memory Allocation in Multi-Threaded Prog.  </b>      </font> </font></DIV>
+ </TD> </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+ <P align=justify><FONT face="verdana" size=2, class="content" >
+  
+  <font color="black" size = "2" face ="TimesNewRoman"> <b> TBB Memory Allocators </b> </font> <br><br>
+
+   Memory is a global resource, therefore it should be protected in multi-threaded environment. Allocating memory is not only one of the most basic programming tasks, it's also one of the 
+most challenging to do efficiently in multithreaded programs on multiprocessor systems. 
+Because memory allocation is such an essential requirement for programs, C++ offers several 
+ways to  plug in new memory allocators. Threading Building Blocks comes with a scalable 
+allocator that supports the same signatures as std::allocator.<br> <br>
+
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> Problems in  nonthreaded Memory Allocation :  </b> </font> 
+<br><br>
+
+When ordinary, nonthreaded allocators are used, memory allocation becomes a serious bottleneck 
+in a multithreaded program because each thread competes for a global lock for each allocation and deallocation of memory from a single global heap.<br><br>
+
+Programs that run this way are not scalable. In fact, because of this contention, programs that make intensive use of memory allocation may actually slow down as the  number of processor cores increases!<br><br>
+
+Another serious issue for concurrent programs is called false sharing. False sharing occurs when multiple threads use memory locations that are close together, even if they are not actually using the same memory locations.<br><br>
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> Scalable Memory Allocators :  </b> </font> 
+<br><br>
+
+The solution to the challenges of concurrent memory allocation is to use a scalable memory allocator, either in Intel Threading Building Blocks or in another third-party solution. The Threading Building Blocks scalable memory allocator utilizes a memory management algorithm divided on a per-thread basis to minimize contention associated with allocation from a single global heap.<BR><BR>
+
+In the TBB scalable memory allocator, each thread uses its own memory heap for object allocation. There is no global lock, the allocation is fast and in most cases does not require any lock to be acquired. However there is no guarantee of non-blocking behavior, as from time to time the allocator needs to access the global memory pool to request a new big piece of memory. Eventually, every allocator uses system calls such as mmap or VirtualAlloc to request memory from an operating system, which also somehow protects consistency.<BR><BR>
+
+
+Threading Building Blocks offers two choices : <br><br>
+
+&nbsp; &nbsp; &nbsp;
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> scalable_allocator  </b> </font> 
+<br><br>&nbsp; &nbsp; &nbsp;
+This template offers just scalability, but it does not completely protect against false sharing. Memory is returned to each thread from a separate pool, which helps protect against false sharing if the memory is not shared with other threads.<BR><BR>
+	
+&nbsp; &nbsp; &nbsp;
+<font color="black" size = "2" face ="TimesNewRoman"> <b> 
+cache_aligned_allocator
+  </b> </font> 
+<br><br>&nbsp; &nbsp; &nbsp;
+
+    This template offers both scalability and protection against false sharing. It
+    addresses false sharing by making sure each allocation is done on a cache line.<br><br>
+
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> 
+mmap
+  </b> </font> 
+<br><br>
+
+Memory-mapped I/O lets us map a file on disk into a buffer in memory so that, when we fetch bytes from the buffer, the corresponding bytes of the file are read. Similarly, when we store data in the buffer, the corresponding bytes are automatically written to the file.<br><br>
+
+The <i> mmap() </i> function establishes a mapping between a process' address space 
+and a file or shared memory object. The format of the call is as follows <br><br>
+
+ 
+
+  <B> void* mmap(void *start,size_t length,int prot,int flags,int fd,off_t offset); </b> <br><br>
+
+The  mmap()  function  asks to map length bytes starting at offset offset from the file (or other object)
+specified by the file descriptor fd into memory, preferably at address start.  This latter address  is  a
+hint  only,  and  is  usually specified as 0.  The actual place where the object is mapped is returned by
+mmap().<br><br>
+
+The parameter prot determines whether read, write, execute, or some combination of accesses are permitted to the data being mapped. The prot should be either PROT_NONE or the bitwise inclusive OR of one or more of the other flags in the following table, defined in the header &lt;sys/mman.h&gt;. <br><br>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<TABLE cellPadding=2 width="400" border=1 align="center"> 
+<TBODY>
+
+<TR> 
+<TD> 
+ Symbolic Constant 
+         
+ </TD> 
+  <TD> 
+ Description
+         
+ </TD>
+</TR> 
+
+<TR> 
+<TD> 
+PROT_READ  
+         
+ </TD> 
+  <TD> 
+ Data can be read. 
+         
+ </TD>
+</TR> 
+
+<TR> 
+<TD > 
+ PROT_WRITE  
+         
+ </TD> 
+  <TD> 
+ Data can be written
+         
+ </TD>
+</TR> 
+
+<TR> 
+<TD> 
+PROT_EXEC 
+         
+ </TD> 
+  <TD> 
+Data can be executed
+         
+ </TD>
+</TR> 
+
+
+<TR> 
+<TD> 
+ PROT_NONE  
+         
+ </TD> 
+  <TD> 
+ Data cannot be accessed
+         
+ </TD>
+</TR> 
+
+</TBODY> 
+</TABLE> 
+
+
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<br><br>
+
+The parameter <i>flags</i> provides other information about the handling of the mapped data.<BR>
+
+The  flags  parameter  specifies the type of the mapped object, mapping options and whether modifications made to the mapped copy of the page are private to the process or are to be shared with other references.<br><br>
+
+<TABLE cellPadding=2 width="400" border=1 align="center"> 
+<TBODY>
+
+<TR> 
+<TD > 
+ Symbolic Constant 
+         
+ </TD> 
+  <TD > 
+ Description
+         
+ </TD>
+</TR> 
+
+<TR> 
+<TD > 
+MAP_SHARED   
+         
+ </TD> 
+  <TD > 
+ Changes are shared 
+         
+ </TD>
+</TR> 
+
+<TR> 
+<TD > 
+ MAP_PRIVATE   
+         
+ </TD> 
+  <TD > 
+ Changes are private
+         
+ </TD>
+</TR> 
+
+<TR> 
+<TD > 
+MAP_FIXED 
+         
+ </TD> 
+  <TD > 
+Interpret start exactly
+         
+ </TD>
+</TR> 
+
+</TBODY> 
+</TABLE> 
+
+<br><br>
+You must specify exactly one of MAP_SHARED and MAP_PRIVATE.<br>
+
+On success, mmap() returns a pointer to the mapped area.  On error, the value MAP_FAILED (that is,  (void *)  -1)  is returned, and errno is set appropriately.<br><br>
+
+
+<font color="black" size = "3" face ="TimesNewRoman"> <b> munmap :  </b> </font> 
+<br><br>
+The munmap system call deletes the mappings for the specified address range, and causes further references to addresses within the range to generate invalid memory references. The region is also automatically unmapped when the process is terminated. On the other hand, closing the file descriptor does not unmap the region.<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<b>int munmap(void *</b>start,<b> size_t</b> length); <br><br>
+
+The address start must be a multiple of the page size. All pages containing a part of the indicated range are unmapped, and subsequent references to these pages will generate SIGSEGV. It is not an error if the indicated range does not contain any mapped pages. <br>
+On success, munmap returns 0, on failure -1, and errno is set. <br><br>
+
+<font color="black" size = "3" face ="TimesNewRoman"> <b> Hoard </b> </font> 
+<br><br>
+The Hoard memory allocator is a fast, scalable, and memory-efficient memory allocator. It runs on a variety of platforms, including Linux, Solaris, and Windows. Hoard is a drop-in replacement for malloc() that can <b>dramatically improve application performance, especially for multithreaded programs running on multiprocessors.</b><br><br>
+
+Using Hoard is easy. On UNIX-based platforms, all you have to do is set one environment variable. You do not need to change any source code. You can use the LD_PRELOAD variable to use Hoard instead of the system allocator                 for any program not linked with the "static option" (that's most programs). <br><br>
+
+		 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<b>	LD_PRELOAD="/path/libhoard.so" <b>
+
+
+</TD></TR>
+
+</TBODY> 
+</TABLE> 
+
+<BR>
+<!-- **************************  memory allocation Ends here  ******************************** -->
+
+<!-- ***************************** Compilation and execution of tbb programs starts  *************************-->
+
+
+
+<a name="compile-exe-prog"> </a>
+
+<TABLE cellPadding=3  width=100% border=0> 
+<TBODY>
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  Compilation, Linking  and Execution of TBB Programs </b> </font> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<BR>
+
+<TABLE cellPadding=3  width=100% border=0> 
+<TBODY>
+
+<TR>
+<TD>
+
+<P align=justify> <FONT face="verdana" size=2, class="content" >
+
+   TBB code should include the  <font color = "red"> <i> tbb </i>  </font> header files. On the compilation 
+   command line, the TBB library should be specified to the linker on UNIX
+   and Linux environments using the <font color = "red">  <i> -ltbb </i> </font>  command-line  switch. <BR> <BR>
+
+  
+   The specific files to be used will differ with implementation on various platforms.<br><br>
+
+   There are two ways to compile TBB codes : <br><br>
+
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> 1. Using command line arguments: </b> </font> <br><br>
+   
+	The compilation and execution details of TBB programs will vary from one system to another. 
+      	The essential steps are common to all the systems.<br><br>In our case we will be using gcc.<br>
+	First we need to compile our code,for compiling we should use following statement : 
+	<br><br>
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+        $ gcc -o  &lt; executable name &gt; &lt; name of source file &gt;  -I &lt;TBB Include path &gt; -L &lt;TBB lib path &gt;  -ltbb</i> </font>
+   <br><br>
+
+        For example to compile a simple Hello World program user can give : <br><br>
+
+ 
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+        $ gcc -o helloworld  tbb-helloworld.cc  -I /opt/user/TBB2.0/include -L/opt/user/TBB2.0/lib/ -ltbb</i> </font>
+    <br><br>
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> 2. Using a Makefile: </b> </font> <br><br>
+
+   
+For more control over the process of compiling and linking programs for TBB, you should use a 'Makefile'. You may also use some commands in Makefile particularly for programs contained in a large number of files.  The user has to specify the names of the program and appropriate paths to link some of the libraries required for TBB programs in the Makefile<p><br>
+
+        To compile and link a TBB program, you can use the command, <BR> <BR>
+
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+        make </i> </font> <BR> <BR>
+    
+   <font color="black" size = "2" face ="TimesNewRoman"> <b>  Executing a Program: </b> </font> <br><br>
+
+        To execute a TBB Program, give the name of the executable at command prompt.  <BR> <BR>
+
+      <font color="red" size = "2", face="TimesNewRoman">  <i> $  . / &lt; Name of the Executable &gt; </i> </font>  <br> <br>
+
+        For example, to execute a simple HelloWorld Program, user must type:<br><br>
+  
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+         $ ./helloworld   </font> <br><br></i>
+
+        The output must look similar to the following:<br><br>
+
+            Hello World! <br><br>
+
+</td>
+</tr>
+</tbody>
+</table>
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+<!-- *************************** compilation, Linking and execution of tbb Program ends  **************************** --> 
+
+<!-- **********************  List of extended tools available in tbb starts ******************** -->
+<a name="threads-tools"> </a>
+ 
+
+<a name = perftools-thread-tools> </a>
+<TABLE cellPadding=3  width=100% border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left>
+<font Color="black" face= "Verdana" size="2">
+   <B>   List of Tools in Multi-threaded Programming Enviornment </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+
+<TABLE cellPadding=3  width=100% border=0> 
+<TBODY>
+<TR>
+<TD>
+
+<P align=justify><FONT face="verdana" size=2, class="content" > <BR>
+
+Intel Software Web Site <a href ="http://www.intel.com/software"> 
+<font color ="blue">
+     http://www.intel.com/software </font> </a> <BR> <BR>
+
+          Etnus Total View Supports thread debugging.<br>
+
+ <a href="http://www.etnus.com/Products/TotalView/started/threads0.html">
+<font color ="blue">  
+      http://www.etnus.com/Products/TotalView/started/threads0.html </font> </a> <br> <BR>
+       
+	  GDB supports threads minimally <BR> 
+         <A HREF="http://www.delorie.com/gnu/docs/gdb/gdb_25.html">
+<font color ="blue">
+        http://www.delorie.com/gnu/docs/gdb/gdb_25.html</font> </a><br><br>
+        
+	 Smart GDB for Threads Debugging - Concurrent Programming Model:<BR>
+	<!--  <A HREF="www.cse.wustl.edu/~cdgill/RTAS03/published/james_niehaus.pdf">  
+<font color ="blue">
+         www.cse.wustl.edu/~cdgill/RTAS03/published/james_niehaus.pdf </font> </a><br>-->
+
+         <a href="http://www.gnu.org/software/pth/related.html">
+<font color ="blue">
+        http://www.gnu.org/software/pth/related.html</font> </a>          <br><br>        
+
+       Sun Studio 12 C, C++ & Fortran Compilers & Tools <br>  
+     <a href = "http://developers.sun.com/sunstudio/"> 
+<font color ="blue"> 
+       http://developers.sun.com/sunstudio/ </font> </a> <Br> <br>
+
+  <a href="http://www.as400.ibm.com/developer/threads/uguide/document.htm "> 
+<font color ="blue">             
+    http://www.as400.ibm.com/developer/threads/uguide/document.htm</font> </a><br>
+
+	  <a href=" http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html">
+<font color ="blue">
+           http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html </font> </a><br>
+	
+	
+	 <a href="http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html">             <font color ="blue">
+    http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html</font> </a><br><br>
+
+ <a href="http://www-unix.mcs.anl.gov/dbpp/text/book.html">
+<font color ="blue">
+  http://www-unix.mcs.anl.gov/dbpp/text/book.html</font> </a><BR> <BR>
+
+          <a href="http://www-unix.mcs.anl.gov/perfvis/">
+<font color ="blue">
+        http://www-unix.mcs.anl.gov/perfvis/</font> </a> <BR> <BR>
+
+
+          <a href="http://courses.uiuc.edu/cis/schedule/urbana/2008/Fall/CS/498.html">
+<font color ="blue">
+  Fall 2008 CSE Course - CS 498 DP -   Multicore and Cluster Parallel Programming  </font> </a> <BR> <BR>
+          <a href="http://www.nd.edu/~hpcc/solaris/clustertool4.html">
+<font color ="blue">
+          http://www.nd.edu/~hpcc/solaris/clustertool4.html</font> </a><BR> <BR>
+
+          <a href="http://www.cs.wisc.edu/~paradyn/release3.2.html">
+<font color ="blue">
+  http://www.cs.wisc.edu/~paradyn/release3.2.html</font> </a> <BR> <BR>
+
+           <a href="http://www.cs.uoregon.edu/research/paracomp/tau/tautools/">
+<font color ="blue">
+  http://www.acl.lanl.gov/tau/</font> </a> <BR> <BR>
+
+         <a href="http://www.llnl.gov/computing/tutorials/workshops/workshop/">
+<font color ="blue">
+http://www.llnl.gov/computing/tutorials/workshops/workshop/</font> </a> <BR> <BR>
+
+           <a href="http://www.fz-juelich.de/zam/RD/coop/cray/crayperf.html">
+<font color ="blue">
+http://www.fz-juelich.de/zam/RD/coop/cray/crayperf.html</font> </a>  <BR> <BR>
+
+         <a href="http://www-unix.mcs.anl.gov/mpi/mpich/">
+<font color ="blue">
+ http://www-unix.mcs.anl.gov/mpi/mpich/</font> </a><BR> <BR>
+
+          <a href="http://www.csar.uiuc.edu/software/paragraph/">
+<font color ="blue">
+http://www.csar.uiuc.edu/software/paragraph/</font> </a> <BR> <BR>
+
+          <a href="http://wwwbode.cs.tum.edu/Par/tools/Projects/Patop.html">
+<font color ="blue">
+http://wwwbode.cs.tum.edu/Par/tools/Projects/Patop.html</font> </a> <BR> <BR>
+
+            <a href="http://www.sai.msu.su/sal/C/3/PABLO.html"> <font color ="blue">
+http://www.sai.msu.su/sal/C/3/PABLO.html </font> </a>
+ </font> </p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+<!-- *************************** List of extended tools  in tbb ends ********************************* -->
+
+<DIV ALIGN=right>
+   <A href="#top">  
+    <IMG SRC="./tbb-images/top.gif" border=0 width="13" height="13"></A>
+</DIV>
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

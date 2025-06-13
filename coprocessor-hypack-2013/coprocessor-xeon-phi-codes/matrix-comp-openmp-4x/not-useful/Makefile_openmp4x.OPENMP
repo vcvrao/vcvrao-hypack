@@ -1,0 +1,12 @@
+#
+#         C-DAC Tech Workshop : hyPACK-2013
+#                 October 15-18, 2013
+#
+#   Created   : August 2013 
+#
+#   E-mail    : hpcfte@cdac.in
+#
+#
+# compile for host-based OpenMP 
+icc -mkl -O3 -no-offload -openmp -Wno-unknown-pragmas -std=c99 -vec-report3 \  
+   matrix.c -o matrix.omp 

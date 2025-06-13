@@ -1,0 +1,32 @@
+
+#/*********************************************************************
+#		C-DAC Tech Workshop : hyPACK-2013
+#                          October 15-18, 2013
+
+#Created               : August-2013
+      
+#*************************************************************************/
+
+
+CC   = icpc
+
+CCFLAGS    =  -offload-build -std=c99 -vec-report3 -Wno-unknown-pragmas
+OPTFLAGS   = -O3
+
+#LIBS       = -L/opt/intel/lib/mic 
+LIBS       =
+EXECS      = run
+#---------------------------------------------------------------------
+#               Object files ...
+#               #---------------------------------------------------------------------
+
+
+OBJECTS= pie-comp-cilk-plus-offload.cpp
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl 
+.c.o:	
+clean:
+	\rm -rf *.o *.out run
+

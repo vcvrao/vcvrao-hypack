@@ -1,0 +1,15 @@
+CC=icc
+CFLAGS=-openmp -DSIZE=1024 -std=c99
+
+all: mat_mat_add_soa2d_static_matrixsize.out mat_mat_add_soa2d_ptr_static_matrixsize.out mat_mat_add_soa2d_ptr_dynamic_matrixsize.out
+	
+mat_mat_add_soa2d_static_matrixsize.out:  mat-mat-addition-openmp-mic-offload-soa2d_static_matrixsize.c
+	$(CC) -o $@ $< $(CFLAGS)
+
+mat_mat_add_soa2d_ptr_static_matrixsize.out:  mat-mat-addition-openmp-mic-offload-soa2d_ptr_static_matrixsize.c
+	$(CC) -o $@ $< $(CFLAGS)
+
+mat_mat_add_soa2d_ptr_dynamic_matrixsize.out:  mat-mat-addition-openmp-mic-offload-soa2d_ptr_dynamic_matrixsize.c
+	$(CC) -o $@ $< $(CFLAGS)
+clean:
+	rm -rf *.o *.out

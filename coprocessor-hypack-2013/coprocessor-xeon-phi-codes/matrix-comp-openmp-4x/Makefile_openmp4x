@@ -1,0 +1,30 @@
+#
+#         C-DAC Tech Workshop : hyPACK-2013
+#                 October 15-18, 2013
+#
+#   Created   : August 2013 
+#
+#   E-mail    : hpcfte@cdac.in
+#
+#
+# compile for host-based OpenMP 
+CC = icc
+
+CFLAGS = -openmp -std=c99 -vec-report2
+
+SRC = openmp4x-infinity-norm-matix.c 
+#SRC = openmp4x-mat-mat-addition.c
+#SRC = openmp4x-mat-mat-multiply.c 
+#SRC = openmp4x-reduce-1Darray.c
+#SRC = openmp4x-reduce-2Darray.c
+#SRC = openmp4x-vect-vect-addition-perf.c 
+#SRC = openmp4x-vect-vect-multiply.c
+
+all     : run
+
+run     : $(SRC)
+	$(CC) $(CFLAGS)  -o $@ $(SRC) 
+
+clean   :
+	 rm -f *.o *.out run
+

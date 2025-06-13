@@ -1,0 +1,3482 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+	    <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+               &#149; OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+               <!-- ** -->
+	       <A class=menulslct
+               href="./../hypack13-mode01-multicore-mpi.html">
+               &#149; Message Passing (MPI)</A>
+               <!-- ** -->
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<TR>
+<H1> hyPACK-2013 Mode 1 : Parallel Programming Using  Fortran 90  & Fortran 95 languages </H1> 
+
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+<TR> 
+
+    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD> 
+
+  <p align = "justify"> <span class = "content">
+  MPI & Fortran 90 programs on   Dense & Sparse Matrix Computations  -
+  Vector - Vector, Matrix-Vector,  Matrix-Matrix  Multiplication Algorithms  
+  and execute on Message Passing Cluster  or Multi Core Systems that support 
+  MPI library.</span> </p> </TD> </TR> 
+</TBODY> 
+</TABLE>
+
+
+<!-- *****************  Table for Sub section Link Starts ************ -->
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+    <td height="24" align="left" >
+   <p align = "left">
+         
+<a href="#intro-f90">
+<font size="2" face="Arial" color="blue"> <B> Introduction  f90 </b>  </font> </a> 
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+
+
+<a href="#basic-f90-concepts">
+<font size="2" face="Arial" color="blue"> <B> Basic f90 concepts </b>  </font> </a> 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+ 
+
+<a href="#data-par-model">
+<font size="2" face="Arial" color="blue"> <B>  Data Parallel Prog.  Model Features </b>  </font> </a> 
+
+
+<BR> <BR> 
+<a href="#f90-data-par-model">
+<font size="2" face="Arial" color="blue"> <B> Fortran90  Features </b>  </font> </a> 
+   &nbsp; &nbsp; &nbsp;
+
+
+<a href="#f95-fata-par-model">
+<font size="2" face="Arial" color="blue"> <B> High Performance Fortran (HPF) / Fortran95  Features </b>  </font> </a> 
+
+<BR> <BR>
+
+<a href="#f90-f95-summary">
+<font size="2" face="Arial" color="blue"> <B> Summary of F90/HPF (f95)  </b>  </font> </a>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+
+<a href="#f90-f95-tools">
+<font size="2" face="Arial" color="blue"> <B> Performance Tools  f90/f95  </b>  </font> </a> 
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+
+
+ 
+<BR> <BR> 
+
+
+ <font size="2" face="Arial" >  
+ <B>  Example Programs : &nbsp; &nbsp;  </font>
+   
+    <a href="#f90-example"> <font size="2" face="Arial" color="blue"> Fortran 90  </a> 
+      &nbsp; &nbsp;  </font> 
+        
+      
+    <a href="#mpi-f90-example">  <font size="2" face="Arial" color="blue">   MPI-fortran f90  </a>   </font> 
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+    <a href="#mpi-f77-example">  <font size="2" face="Arial" color="blue">   MPI-fortran f77  </a>   </font> 
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </B> 
+  <BR> <BR> 
+ 
+<a href="#f90-comp-exec">
+<font size="2" face="Arial" color="blue"> <B> Compilation and  Execution of  &nbsp; f90 /  &nbsp; MPI-f90  &nbsp; Programs  </b>  </font> </a>  
+&nbsp; &nbsp; &nbsp; &nbsp;
+
+</p>
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+<font size="2" face="Arial" color="red"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp;  
+<!-- ************* Reference Ends Here ************************ -->
+
+   
+</td> 
+</tr>
+</tbody> 
+</table> 
+
+<HR>
+
+<!-- *****************  Table for Sub section Link Ends ************ -->
+
+<p> <font size="2" face="Arial" color="red"> <b> List of f90/f95 Programs </b> </font> </p>
+
+
+<!-- ************* Table List of programs : start ***************** -->
+
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+
+
+   <!-- *************** Example 1 ********************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-helloworld">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 1 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+          Fortran 90 program to print <i> Hello World program.  
+       </span> </p>
+     </td>
+     </tr>
+
+
+ <!-- ****************** Example 2 ********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-welcome">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 2 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+        Fortran 90 program to print <i> Welcome Message .
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+ <!-- ****************** Example 3 ******************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-equation-of-line">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 3 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Fortran 90 program to find equation of line joining two distinct points .
+       </span> </p>
+     </td>
+
+   </tr>
+
+ 
+<!-- *************** Example 4 ********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-matrix-vector">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 4 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Fortran 90 program to compute Matrix-Vector multiplication using intrinsic function  MATMUL ( Use Math Library function) 
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+<!-- ******************* Example 5 ********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-root-of-quad-eqn">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 5 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+        <p align = "justify"> <span class = "content">
+        Fortran 90 program to find root of a quadratic equation.
+       </span> </p>
+     </td>
+
+   </tr>
+
+  
+<!-- *************** Example 6 ********************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-least-square">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 6 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+        Fortran 90 program for Least Square Approximation method. 
+       </span> </p>
+     </td>
+
+   </tr>
+
+
+
+<!-- ************** Example 7 ****************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-newton-raphson">
+         <font size= "2" face="Arial" color="blue">
+            <b>  Example 7</b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+      Fortran 90 program to find the roots of equation f(x) = 0 using Newton Raphson
+    method. 
+       </span> </p>
+     </td>
+
+   </tr>
+ 
+
+<!-- **************** Example 8 ***************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-gauss-solver">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 8 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+         Fortran 90 program to solve a system of linear equations Ax = b using 
+      Gaussian Elimination method. 
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- *************** Example 9 ******************* -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-matrixmatrix-mult">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 9 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+         <p align = "justify"> <span class = "content">
+       Fortran 90 program to compute Matrix and Matrix Multiplication 
+         using block checkerboard partitioning and Cannon Algorithm.
+       </span> </p>
+     </td>
+
+   </tr>
+
+<!-- **************** Example 10 ************** -->
+    <tr>
+     <td width="120" height="2" align="left"> 
+       <a href="./mpi-f90-f95-html/mpi-f90-f95-programs.html#f90-mpi-io-single-file">
+         <font size="2" face="Arial" color="blue">
+            <b>  Example 10 </b> </font> <BR>  
+       </a>  
+      </td>
+   
+      <td width="680" height="2" align="left">
+       <p align = "justify"> <span class = "content">
+       Write an MPI fortran90 program performing MPI I/O to single file (Using MPI 2.0).
+       </span> </p>
+     </td>
+ <tr>
+     <td width="120" height="2" align="left">  </td>
+
+  <td>
+  <DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  </td>
+  </tr>
+
+
+</td></tr>
+</tbody>
+</table>
+<BR>
+<!-- ************** Table List of programs : end ****************** -->
+
+
+<!-- *************** About f90 Introduction Starts ****************** -->
+
+<a name="intro-f90">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Black" face = "Arial"> 
+        <b><font face="Verdana" color="#0000cc">
+       Introduction  - f90 Language    </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+
+
+  <TR> 
+   <TD>
+
+    <p align = "justify">	
+    <span class = "content">
+  
+    <BR> <BR>
+ 
+        The key to make better and more effective use of computers lies in 
+        the programming languages, which are used to define the probe and to specify 
+        the method of its solution in terms which can be understood by a computer 
+        system. Most of these major languages are particularly suited to a particular 
+        class of problems, although this class is often very wide. Fortran is 
+        one such language, and is particularly well suited for almost all scientific 
+        and technological problems, as well as to a wide range of other problem 
+        areas - especially those with a significant numerical or computational 
+        content. <BR> <BR>
+
+
+         Fortran 90 & Fortran 95 is the latest version of the Fortran language and provides 
+        a great many more features than its predecessors to assist the programmer 
+        in writing programs to solve problems of a scientific, technological or 
+        computational nature. Furthermore, because of Fortran's pre-eminent position 
+        in these areas, programs written in Fortran 90 can readily be transferred 
+        to execute correctly, on other types of computers in a way that is Fortran has also 
+        been the dominant computer language for engineering and scientific applications 
+        in academic circles and has been widely used in other, less obvious, areas, 
+        such as musicology. <BR> <BR>
+
+
+        Fortran 90 allows access to all this experience, while 
+        adding new and more powerful facilities to the Fortran language.
+         Fortran has evolved over 35 years in what has often been a pragmatic 
+        fashion, but always with the emphasis on efficiency and ease of use. However, 
+        FORTRAN 77 did not have many of the features, which programmers using 
+        other, newer, languages had come to find invaluable, Fortran 90, therefore, 
+        rectifies this situation by adding a considerable number of very powerful 
+        new features while retaining all of FORTRAN 77. In particular, many of 
+        the new features that are present in Fortran 90 will enable Fortran programs 
+        to be written more easily, more safely and more portably.
+    
+    
+       </span></p>
+ <DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+
+
+</TD> 
+</TR> 
+</TBODY> 
+ </TABLE> 
+
+<!-- **************** About why Fortran 90 ends  ******************** -->
+
+
+<!-- *************** About Basic f90 concepts  Starts ******************** -->
+ 
+ <a name="basic-f90-concepts">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+         <b><font face="Verdana" color="black">
+  Basic f90 Concepts    </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+
+
+<TR> 
+<TD>
+
+<a name="basic-f90-concepts"></a>
+
+
+<font color="red"><b>Fortran 90 - Basic Building Blocks </b></FONT></B>  </p>
+
+  <p align = "justify">	   
+  <span class = "content">
+
+   Fortran 90 program contains many of the basic  building blocks and concepts.
+    The first line of Fortran 90 program should be 
+  </span> </p>
+
+      <blockquote> 
+         <font color="#FF00FF" >
+        <p>PROGRAM ProgName </p> </font>
+      </blockquote>
+
+    
+       <p align = "justify">	   
+       <span class = "content">
+        Every main program unit must start with a <b> <font color="#FF00FF" > PROGRAM </font> </b> statement, which consists 
+        of the word <b> <font color="#FF00FF" > PROGRAM </font> </b> followed by the name of the program. This name must 
+        follow the rules, which apply to all Fortran 90 names, namely 
+       </span> </p>
+
+   
+      <ul>
+        
+       <p align = "justify">	   
+       <span class = "content">
+        <li>It must begin with a letter - either upper or lower case.</li>
+        <li>It may only contain the letter A-Z and a-z, the digits 0-9, and 
+        the underscore character _.</li>
+        <li>It must consist of a maximum of 31 characters</li>
+        </span> </p>
+      </ul>
+
+      
+       <p align = "justify">	   
+       <span class = "content">
+        In Fortran 90, names and keywords, upper and lower case letters are treated 
+        as identical, but can be used by the programmer to assist in the readability 
+        of the program. 
+        The name of the program should be chosen to indicate what the program 
+        does and should be different from any other names used for other purposes 
+        elsewhere in the program. <br>  <br>
+     
+       Also that there may be any number of blanks between successive words 
+        in a Fortran 90 statement, as long as there is at least one, but they 
+        will be treated as though there was only one by the compiler when it is 
+        analyzing the program. It is not necessary to include blanks between successive 
+        items in a list separated by commas or other punctuation characters, although 
+        they may be included if desired to make the program easier to read. However, 
+        it is not permitted to include spaces within a Fortran keyword or a user-specified 
+        name, except when using the older fixed form style of programming. <br>
+      </span> </p>
+
+      <b>IMPLICIT NONE </b> <br> <br>
+
+        
+       <p align = "justify">	   
+       <span class = "content">
+    
+        This is a special statement, which is used to inhibit a particularly undesirable 
+        feature of Fortran, which is carried over from earlier versions of Fortran. 
+        It should always be placed immediately after the 
+
+       <b> <font color="#FF00FF" face="verdana" > PROGRAM </font> </b> statement. 
+        <br>
+    
+
+      <blockquote> 
+        <blockquote> 
+     
+         
+ 
+           <p align = "justify">	   
+             <span class = "content">
+              <font color="#FF00FF">
+            ! This program calculates the equation of a circle passing <br>
+              ! through three points </font> </span> </p> 
+ 
+        </blockquote>
+      </blockquote>
+
+    <p align = "justify">	   
+     <span class = "content">
+      These two lines are comments. <br> <br>
+
+        A comment is a line, or part of a line, which is included purely for information 
+        for the programmer or anyone else reading the program; it is ignored by 
+        the compiler. A comment line is a line whose first non-blank character 
+        is an <i> exclamation mark</i>, !; alternatively, a comment, preceded by an exclamation 
+        mark, may follow any Fortran statement or statements on a line. User shall normally use comment lines in 
+        example programs, but will also use trailing comments where these are 
+        more appropriate.</span> </p>
+
+      <blockquote> 
+        <blockquote> 
+              
+         <p align = "justify">	   
+         <span class = "content">
+
+          <font face="Courier New" color="#FF00FF">
+            ! Variable declarations </font> 
+              <br>
+              <font face="Courier New, Courier, mono" size="2" color="#FF00FF">REAL :: x1, y1, 
+              x2, y2, x3, y3, a, b, r</font> </span>  </p>
+         
+        </blockquote>
+      </blockquote>
+
+        <p align = "justify">	   
+         <span class = "content">
+        The first of these lines is a comment which indicates that the line following 
+        contains one or more <i> variable declarations</i>. It is not obligatory, but 
+        such comments help a reader to follow the program more easily.</span> </p>
+
+      <blockquote> 
+        <blockquote> 
+              <font face="Courier New "  color="#FF00FF">PRINT *, &quot;please 
+              type the coordinates of three points&quot; <br>
+              PRINT *, &quot;in the order x1, y1, x2, y2, x3, y3&quot; </font>
+        </blockquote>
+      </blockquote>
+
+
+        <p align = "justify">	   
+        <span class = "content">
+        The above two statements are called <i> executable statements</i>. These particular 
+        executable statements are known as list-directed output statements and 
+        will cause the text contained between the quotation marks (or quotes) 
+        to be displayed on your computer's default output device, probably the 
+        screen.</span> </p>
+
+      <blockquote> 
+        <blockquote> 
+       
+              <font face="Courier New"  color="#FF00FF">Read 
+              *, x1, y1, x2, y2, x3, y3 ! Read the three points</font> 
+      
+        </blockquote>
+      </blockquote>
+
+      <p align = "justify">	   
+        <span class = "content">
+
+        This statement is clearly closely related to the previous two executable 
+        statements and has a very similar structure. It is called a list-directed 
+        input statement and will read information from the keyboard, or other 
+        default input device. </span> </p>
+
+
+      <blockquote> 
+        <blockquote> 
+    
+       
+              <font face="Courier New" size="2" color="#FF00FF">
+             CALL calculate_circle 
+              (x1, y1, x2, y2, x3, y3, a, b, r)</font>
+    
+        </blockquote>
+      </blockquote>
+
+ 
+        <p align = "justify">	   
+        <span class = "content">
+        The <i> CALL</i> statement causes the processing of the main program unit to be 
+        interrupted and processing to continue with the procedure, or subroutine, 
+        whose name is given in the statement. The items enclosed in parentheses 
+        following the procedure name are known as arguments and are used to transmit 
+        information between the main program and the procedure. </span></p>
+
+      <blockquote> 
+        <blockquote> 
+   
+              <font face="Courier New color="#FF00FF">PRINT *, &quot;The 
+              center of the circle through these points is &amp; <br>
+              &amp; (&quot;,a,&quot;,&quot;,b,&quot;)&quot; </font>
+        </blockquote>
+      </blockquote>
+
+    
+      <p align = "justify">	   
+        <span class = "content">
+        The first PRINT statement, however, incorporates a new concept - that 
+        of continuation line. If the last non-blank character of a line is an 
+        ampersand, then this is an indication that the statement is continued 
+        on the next line. There are two cases here. If, as in this case, the ampersand occurs in 
+        character context, that is, in the middle of a character string enclosed 
+        quotation marks (or one enclosed in apostrophes), then the first non-blank 
+        character on the next line must also be an <i>ampersand</i>, and the character 
+        string continues from the character after that ampersand. Thus the two 
+        lines above are identical to the single line </span></p>
+
+
+      <blockquote> 
+        <blockquote> 
+        
+              <font face="Courier New" color="#FF00FF">PRINT *,&quot;The 
+              center of the circle through these points is (&quot;, 1, &quot;, 
+              &quot;, b, &quot;)&quot; </font>
+    
+        </blockquote>
+      </blockquote>
+
+
+         <p align = "justify">	   
+        <span class = "content">
+        (where the small type is used here solely to fit the whole statement on 
+        a single line).<br><br>
+        The other situation is where the first ampersand does not occur within 
+        character string enclosed in quotes or apostrophes. In this case there 
+        are two possibilities. The first is that, as in the character string case, 
+        the first non-blank character of the next line is an ampersand, in which 
+        case the effect is just as before. However if the first non-blank character 
+        on the next line is not an ampersand then the effect is as if the whole 
+        of that line follows the previous one (excluding the ampersand). Thus, 
+        for example, the statement discussed earlier could also be written </span></p>
+
+      <blockquote> 
+        <blockquote> 
+         
+              <font face="Courier New" size="2" color="#FF00FF">
+           CALL calculate_circle 
+              (x1, y1, x2, y2, x3, y3, &amp; &amp;a, b, r)</font>
+         
+        </blockquote>
+      </blockquote>
+
+ 
+      <p align = "justify">	   
+        <span class = "content">
+        which would be identical, as far as the compiler was concerned, with the 
+        original version, or </span></p>
+ 
+     <blockquote> 
+        <blockquote> 
+        
+              <font face="Courier New, Courier, mono" size="2" color="#FF00FF" >
+        CALL calculate_circle 
+              (x1, y1, x2, y2, x3, y3, &amp; a, b, r) </font>
+      
+        </blockquote>
+      </blockquote>
+
+     <font size="2" face="verdana" > <p><br>
+        Which would be treated as though there were a number of spaces before 
+        a although, as those spaces come between items in the list of arguments, 
+        they do not matter. <br>
+        <br>
+        These two PRINT statements are different from the earlier ones in that 
+        they will print variable information as well as constant character strings. </p></font>
+      
+      <blockquote> 
+        <blockquote> 
+        
+           <font face="Courier New"  color="#FF00FF">END PROGRAM ProgName</font> 
+       
+        </blockquote>
+      </blockquote>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> 
+</DIV> <BR>
+
+
+  
+<font color="red" size ="2" ><b> Final Statement of Fortran 90 Program  </b></FONT></B>  </p>
+
+      <p align = "justify">	   
+        <span class = "content">
+        The final statement of a program must be an END statement. In this context 
+        it can take three forms: </span> </p>
+  
+     <blockquote> 
+        <blockquote> 
+    
+            <br>
+              <font face="Courier New" color="#FF00FF">END or <br>
+              <br>
+              END PROGRAM or <br>
+              <br>
+              END PROGRAM ProgName</font>
+       
+        </blockquote>
+      </blockquote>
+
+   
+      <p align = "justify">	   
+        <span class = "content">
+
+        Where name, if present, must be the same as the name on the corresponding 
+        PROGRAM statement. In general it is both a good practice, and also makes the 
+        program easier to follow, to use the third, full, form of the statement. 
+       
+        As might be expected, execution of the END statement brings the execution 
+        of the program to an end, and control is returned to the computer's operating 
+        system.</span></p>
+
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+<!-- *****************  Basic f90 concepts Ends ********* -->
+
+
+<font size = 2 color="red">
+  <b>Strucure of a Fortrran 90  Program  </b></FONT></B>  
+
+     
+       
+      <p align = "justify">	   
+        <span class = "content">
+
+    The overall structure of a Fortran 90 main program unit is as below : 
+      
+      <blockquote> 
+        <blockquote> 
+      
+            <br>
+              <font face="Courier New" color="#FF00FF">PROGRAM name <br>
+              Specification statements <br>
+              . <br>
+              . <br>
+              Executable statements <br>
+              . <br>
+              . <br>
+              END PROGRAM name</font></p>
+       
+        </blockquote>
+      </blockquote>
+     </span> </p>	
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+ </TD> 
+ </TR>
+ </TBODY> 
+ </TABLE> 
+
+<!-- **************** About Basic Fortran 90 Concepts ends ********************** -->
+
+
+<!-- ************ About Data Parallel Programming Model Features  Starts ************* -->
+
+<a name="data-par-model">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+      Data Parallel Programming Model Features    </font>  </b> 
+     </DIV> 
+       </TD> 
+     </TR> 
+
+ <TR> 
+<TD>
+
+
+<a name="data-par-model"></a>
+
+      <p align = "justify">	   
+        <span class = "content">
+  
+        <BR> <BR>
+
+      Several features characterize the data parallel programming model. Some 
+        of them are quite different from those in shared-variable and message 
+        passing models. The important features are listed below. 
+      </span> </p>
+
+      <ul>
+        <li>
+        <p align = "justify">	   
+        <span class = "content">
+
+
+        <i>Single threading</i>: From the programmer's viewpoint, a data-parallel 
+          program is executed by exactly one process, with a single thread of 
+          control. In other words, as far as control flow is concerned, a data-parallel 
+          program is just like a sequential program. There is no control parallelism. 
+        </span> </p>
+
+
+        </li>
+
+        <li>
+         <p align = "justify">	   
+        <span class = "content">
+         <i>Parallel operations on aggregate data structure</i>: A Single step (Statement) 
+          of a data-parallel program can specify multiple operations that are 
+          simultaneously applied to different elements of an array or other aggregate 
+          data structure.
+
+        </span> </p>
+ 
+        </li>
+
+        <li>
+           <p align = "justify">	   
+        <span class = "content">
+           <i>Loosely synchronous</i>: There is an implicit synchronization 
+          after every statement. This statement-level synchrony is loose, compared 
+          with tight synchrony in an SIMD system that synchronizes after every 
+          instruction. 
+
+         </span> </p>
+
+        </li>
+
+        <li>
+            <p align = "justify">	   
+        <span class = "content">
+         <i>Global naming space</i>: All variables reside in a single address 
+          space. All statements can access any variable, subject to the usual 
+          variable scope rules. This is a contrast to the message-passing approach, where variables may reside in different address 
+          space. 
+         </span> </p>
+
+       </li>
+
+        <li>
+           <p align = "justify">	   
+        <span class = "content">
+          <i>Implicit interactive</i>: There is an implicit barrier 
+          after every statement, no need for explicit synchronization 
+          in a data-parallel program. Communication is implicitly done by variable 
+          assignment. 
+          </span> </p>
+
+
+       </li>
+
+        <li>
+           <p align = "justify">	   
+        <span class = "content">
+          <i>Implicit data allocation</i>: The programmer does not have to 
+          explicitly specify how to allocate data. The programmer may give the 
+          compiler hints about data allocation to improve data locality and reduce 
+          communication.
+          </span> </p> 
+      </li>
+      </ul>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+
+   </TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+<!-- ******************** Data Parallel Programming Model Features  ends ********************* -->
+
+
+<!-- **************** About Fortran90 Parallelism  Features  Starts ************ -->
+
+<a name="f90-data-par-model">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+    <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+   Data Parallel Programming Model : Fortran 90 Parallelism Features     </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+
+ <TR> 
+  <TD>
+<a name="f90-data-par-model"></a>
+
+
+ <font color="red"><b>Fortran 90 Parallelism Features </b></FONT></B> : 
+
+  <p align = "justify">	   
+        <span class = "content">
+
+      Fortran 90 standard has significantly extended the array capability of
+      Fortran 77. In Fortran 90, the entire array or a portion of an array
+      (called an <i>array section</i>) may appear as an operator.
+      </span> </p>
+
+
+
+  <p align = "justify">	   
+        <span class = "content">
+
+   <B>Array Sections</B>: All intrinsic operators and functions may be applied 
+        to whole arrays or array sections, operating element-wise. It is also 
+        possible to perform parallel array operations that are not element-wise, 
+        through intrinsic functions. <br>
+      </span> </p>
+
+
+      <B>Example 1 : Array handling in a Fortran 90 Program</B></p></font>
+    <font face="Courier New, Courier, mono" size="3" color="#ff900ff">
+    <div align ="left">
+      <b>Real, dimension</b> (3, 3) :: A<br>
+        <b>Real, dimension</b> (2, 2) :: B,C <br>
+
+
+      <blockquote> 
+        <blockquote> 
+        
+              S1: C=0<br>
+              S2: B=A (1:3:2, 2:3)<br>
+              S3: Where (B-6) &gt; 0) C = sin(A(1:2, 1:2))
+        
+        </blockquote>
+      </blockquote>
+    </div> </font> 
+
+
+
+     <p align = "justify">	   
+        <span class = "content">
+
+   For a given array A, the results of the above code are <BR> <BR>
+
+  <center>    
+      <img src="./mpi-f90-f95-images/array-f90.gif" width="360" height="57">  
+    </center> 
+        <BR>
+ 
+    <b>Interpretations: </b>The four features of the data-parallel programming 
+        style can be elaborated with reference to  example 1. </span> </p>
+      
+      <ul>
+      
+        <li>
+         <p align = "justify">	   
+        <span class = "content">
+         <i>Single threading and loosely synchronous</i>: The code consists of three 
+          statements S1, S2, S3, which are executed as a single thread, one after 
+          another, Statement S2 (S3) does not start until all operations of S1 
+          (S2) finish. </span> </p> </li>
+      
+      
+        <li>
+        <p align = "justify">	   
+        <span class = "content">
+         <i>Parallel array operations</i>: A statement may contain multiple operations 
+          on array elements, which are executed simultaneously. Statement S1 assigns 
+          0 to all four elements of array <i>C</i>. Statement S2 assigns four elements 
+          of array <i> A</i> to array <i>B</i>. The <i> where</i> statement S3 assigns array
+          <i> C</i> according 
+          to the condition (<i>B</i>-6) &gt; 0. Only those elements of <i> C</i> where the condition 
+          is true are modified. The two elements in the first row of <i> C</i> are not 
+          changed, because the condition is false.</span> </p> </li>
+
+      
+        <li>
+        <p align = "justify">	   
+        <span class = "content">
+         <i>Global naming space</i>: All array variables and elements are visible 
+          to all statements. There is no notion of processor private data.</span> </p> </li>
+          </ul>
+
+<BR> <BR>
+ 
+       <p align = "justify">	   
+        <span class = "content">
+
+      <b>Array Shaping: </b>The number of dimensions of an array is called 
+        its <i>rank</i>. The variables <i>A</i>, <i> V</i> and <i> C</i> in Example
+      6.1 are all rank-2 arrays.  <BR> <BR>
+
+        An array section is selected by using a three-tuple <i>L</i>:<i>U</i>:<i>S</i> (called
+      <i> subscript triplet</i>) for each array dimensions, where <i>L</i>, <i>U</i>, and
+      <i> S</i> are the lower-bound, 
+        the upper bound, and the stride of the array section. Each of <i>L</i>, <i>U</i>, and
+      <i> 
+        S</i> can be any scalar expression, but the stride expression must be zero. 
+        When the stride part is missing, a default stride of 1 is assumed. Thus,
+      <i> 
+        A</i>(1:3:2, 2:3) is the array section formed by the first and the third 
+        rows and the second and the third columns of an array <i>A</i>. </p>
+      <p>When several array or array section appear in a statement, they must 
+        be <i>conformable</i>. For instance, in an array addition <i> X</i> +<i>Y</i>, the two arrays 
+        must have the same elements. Thus 2 x 3 arrays have the same shape, but
+      a 2 x 3 array and a 3 x 2 array do not. When an operator is applied to a 
+        scalar <i>s</i> and an array <i>X</i>, the scalar <i>s</i> is first expanded to an array of the 
+        same shape <i>X</i>, with all elements being s. This is shown in example 1 where <i>B</i>-6 is computed 
+       in the following way. </span> </p>
+
+
+      <center> 
+       <BR>
+        <img src="./mpi-f90-f95-images/b-6-f90.gif" width="360" height="49"> 
+      </center> <br>
+
+ 
+    <DIV align="right"> 
+       <A HREF="./mpi-f90-f95-overview.html">
+      <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13">
+     </a> </DIV> <BR>
+
+
+  <!-- ************* Intrinsic Functions in Fortran 90 ******* -->
+     
+   
+       <a name="F90_IntrinsicFun"></a>
+    
+ 
+        <font size = "2" color="red">
+       <b>Intrinsic Functions in Fortran  90 </b></font> <BR>
+
+ 
+       <p align = "justify">	   
+        <span class = "content">
+
+      Besides element-wise array operation discussed above, Fortran 90 provides 
+        additional intrinsic functions to manipulate arrays as a whole. We discuss 
+        several below:<BR> 
+
+
+      <B>Matrix Operations</B>: Fortran 90 provides several operators that operate 
+        on entire arrays. For instance, a matrix <i> X</i> can be transposed by calling 
+        <i>transpose</i>(<i>X</i>). The matrix multiplication function <i>matmul</i> 
+        multiplies an <i> m</i> x <i>n</i> array <i> X</i> by an <i> n</i> x <i>p</i> array
+      <i> Y</i> and returns an <i> m</i> x <i>p</i> array. 
+        An example is the statement <i> Z</i> = <i>matmul</i>(<i>X</i>,<i>Y</i>), where
+      <i> Z</i> must be an <i> 
+        m</i> x <i>p</i> array.<BR> <BR>
+
+      <B>Array Construction</B>: A rank-1 array can be created through an <i>array 
+        constructor</i>, which is a sequence of values separated by commas and 
+        delimited by &quot;(/&quot; and &quot;)/&quot;. For instance, a three-element 
+        vector <i> X</i> can be constructed by assignment <i>X</i>=(/1,3,5) or, equivalently, by
+      <i>X</i>=(/1:5:2/). <br> <BR>
+
+      Another way to create an array is to use the intrinsic function spread, 
+        which constructs a new array by adding an extra dimension and copying 
+        the operand. <br> 
+
+      For instance, the function spread ((/ 1,3,5/), 1, 3) makes 3 copies of 
+        (/1,3,5/), and spreads them along dimension 1 (the row dimension). The 
+        function spread ((/1,3,5/), 2,2) makes 2 copies of (/1,3,5/), and spreads 
+        them along dimension 2 (the column dimension). The results are shown as 
+        follows:<br>  <BR>
+
+
+
+
+      <center> 
+        <img src="./mpi-f90-f95-images/spread-f90.gif" width="360" height="75">
+      </center>
+      
+
+     <B>Vector Reductions</B>: Fortran 90 supports several intrinsic reduction functions, 
+        as listed in Table 6.1, where the arguments DIM and MASK are optional.
+      </span> </p>
+
+   </TD> 
+   </TR> 
+    </TBODY> 
+   </TABLE>
+
+
+<!-- ************ Table - functions ********** -->
+
+
+      <table  border="1">
+      <tbody>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><b>Function</b></div>
+          </td>
+          <td width="42%"> 
+            <div align="center"><b>Meaning</b> </div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="2" face="Times New Roman">SUM(X, 
+              DIM, MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            arithmetic sum of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="2" face="Times New Roman">PRODUCT(X, 
+              DIM, MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            arithmetic product of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="2" face="Times New Roman">MAXVAL(X, 
+              DIM, MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            arithmetic maximum of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="2" face="Times New Roman">MINVAL(X, 
+              DIM, MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            arithmetic minimum of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="2" face="Times New Roman">ALL(X, 
+              DIM, MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            logic product (AND) of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="3" face="Times New Roman">ANY(X, 
+              DIM, MASK) </font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            logic sum (OR) of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="2" face="Times New Roman">COUNT(X, 
+              DIM, MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            number of the elements of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%"> 
+            <div align="center"><font color="#000000" size="3" face="Times New Roman">MAXLOC(X, 
+              MASK)</font></div>
+          </td>
+          <td width="42%"><font color="#000000" size="2" face="Times New Roman">The 
+            location of the maximal element of array X</font></td>
+        </tr>
+        <tr> 
+          <td width="38%" height="22"> 
+            <div align="center"><font color="#000000" size="3" face="Times New Roman">MINLOC(X, 
+              MASK) </font></div>
+          </td>
+          <td width="42%" height="22"><font color="#000000" size="2" face="Times New Roman">The 
+            location of the minimal element of array X</font></td>
+        </tr>
+       </tbody>
+      </table>
+
+
+   <table  border="0">
+    <tbody>
+     <tr> 
+      <td>
+      <center><b>Table 6.1</b> Reduction Functions in Fortran 90</center>
+
+
+
+       <p align = "justify">	   
+        <span class = "content">
+
+      Several examples to illustrate how to apply these functions are as below:</p>
+    </span> </p>
+
+      <center>
+      <img src="./mpi-f90-f95-images/function-2-f90.gif" width="360" height="37"></center>
+
+   
+       <p align = "justify">	   
+        <span class = "content">
+     The DIM argument is used to restrict the reduction along the given dimension. 
+        The MASK argument restricts the reduction to those elements where the 
+        condition set by MASK is true. Thus SUM(A,1) = [5 7 9 ], because <i> A</i> is 
+        sum-reduced along the columns. COUNT(A,A&gt;2)=4 since there are four 
+        elements that are greater than 2. MAXLOC(A,A&lt;5)=[2 1 ] since the location(subscripts) 
+        of the maximum element that is less than 5 in row 2 and column 1.<BR> <BR>
+
+
+      <I>Array conformability</I> has a different meaning when parallel intrinsic 
+        functions are used. For instance, when two matrices are multiplied using 
+        the intrinsic function <i>Z</i>=MALMUL(<i>X</i>,<i>Y</i>), conformability implies that the 
+        second dimension of <i> X</i> must have the same size as the first dimension of
+      <i>Y</i>. Thus <i> X</i> and <i> Y</i> are conformable if <i> X</i> is a 2
+      x 3 array and <i> Y</i> a 3 x 2 array. 
+        They are not conformable if both are 2 x 3 arrays. <BR> <BR>
+
+      We give one example to show that Fortran 90 facilitates the writing 
+        of simple and clean programs for regularly structured parallel computing 
+        applications. With Fortran 90, programmers need not worry about process 
+        management, communication, data allocation, and synchronization issues, 
+        which are all left to the compiler. Fortran 90 provides more features 
+        and functionalities than Fortran 77. For some applications, the Fortran 
+        90 programs can be shorter and simpler than corresponding Fortran 77 codes.<br>
+     <BR> <BR>
+
+       Fortran 90 program for Jacobi relaxation is shown in the example 6.2
+      below. 
+        The main computation is contained in the <i> do while</i> loop. The sequential 
+        nature of the loop simply says that the iteration steps should be performed 
+        one by one. <BR> <BR>
+
+      Parallel computation is possible within each iteration. Because of the 
+        array capability of Fortran 90, only three statements are needed. Note 
+        that the statement labels S1, S2 and S3 are not part of the code. They 
+        are used for discussing the code.</span> </p>
+
+
+  <p align = "justify">	   
+        <span class = "content">
+
+
+      <b><font color="red">Example 2&nbsp; Jacobi relaxation in Fortran 90</font></b>
+      
+        <blockquote>
+         
+           <b><font face="Courier New" color="#ff00ff">Parameter</font></b> 
+         
+             <font face="Courier New" color="#ff00ff"> 
+              n=1024<br>
+              <b>real</b> A(n,n), x(n), b(n), error, Temp(n), DiagA(n)<br>
+              <b>integer</b> i<br>
+              error = SomeLargeValue<br>
+              initialize A, x, and b<br> <BR>
+
+              <b>do</b> i = 1, n<br>
+              &nbsp;&nbsp;&nbsp;DiagA(i) = A(i,i)<br>
+              End do<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<b>do while</b> (error &gt; ErrorBound)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;S1 : Temp = (b - MATMUL(A,x))/DiagA<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;S2 : x = Temp + x<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;S3 : error = SUM ( Temp * Temp)<br>
+              <b>end do</b></font>
+
+        <br>
+        <br>
+     
+        </blockquote>
+    
+      </span> </p>
+
+      
+      
+        <p align = "justify">	   
+        <span class = "content">
+        We can make several observations: The code is simple and concise, very close
+        to the algorithm. Using 
+        intrinsic operator SUM and MATMUL simplifies coding.
+    
+        Fortran 90 is not very flexible, compared to HPF, to be discussed 
+        shortly. For instance, the Fortran 90 code in Example 6.2 needs a do loop 
+        to get the array <i> DigA</i> for the diagonal elements of <i>A</i>. 
+
+        </li>
+        </span> 
+    
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+<!-- *********** fortran 90 Parallelism Features  ends *************** -->
+
+
+
+<!-- ************ About Fortran95 /HPF  Parallelism  Features  Starts ************** -->
+
+<a name="f95-fata-par-model">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+       <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+   Data Parallel Prog. Model : High Performance Fortran (HPF) / fortran95  
+    </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+ <TR> 
+ <TD>
+
+
+
+      <p align = "justify">
+      <span class = "content">
+    <BR> <BR>
+     High-Performance Fortran (HPF) is a language standard, designed as a 
+        superset (extension) of Fortran 90 to meet the following goals </span> </p>
+
+      <ul>
+        <li>Support for data-parallel programming</li>
+        <li>Top performance on MIMD and SIMD computers with non uniform access 
+          costs</li>
+        <li>Capability of tuning code for various architectures</li>
+      </ul>
+
+      
+      <p align = "justify">
+      <span class = "content">
+     To achieve the first goal, HPF introduces a <i> FORALL</i> construct, an
+      <i> INDEPENDENT</i> 
+        directive, and some additional intrinsic functions. These new language 
+        features allow HPF to be more flexible in specifying more general array 
+        sections and parallel computation patterns than Fortran 90. <BR> <BR>
+
+      To meet the second goal, HPF offers directives such as <i> ALIGN</i> and
+      <i>DISTRIBUTE</i>, 
+        which enable the user to tell the compiler how data should be allocated 
+        among processors, so that communication overhead is minimized and workload 
+        is evenly divided.<br> <Br>
+
+     HPF also has features targeted toward the third goal, such as <i> EXTRINSIC</i> 
+        procedures, which allow a user to take advantage of low-level features 
+        of a specific architecture. In this section, we discuss the HPF features 
+        for the first two goals, which are the most important.<BR> <BR>
+
+   </span> </p>
+
+
+   
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13">
+  </a> </DIV> 
+
+  <BR>
+  
+ 
+    <font color="red" size ="2"> <b>Support for Data Parallelism :</b></font> </p>
+
+      <p align = "justify">
+      <span class = "content">
+      HPF provides four mechanisms for the user to specify data parallelism. 
+        They are array expressions and assignments, array intrinsic functions, 
+        the FORALL statement, and the INDPENDENT directive. They first two already 
+        appear in Fortran 90, but HPF adds many more intrinsic. The FORALL and 
+        the INDEPENDENT are new features.<br> <bt>
+
+      <B>The FORALL Construct</B> A FORALL statement of HPF is similar to a 
+        Fortran 90 array assignment, but more flexible. Let us consider the following 
+        example code: <BR> <BR>
+        </span> </p>
+
+
+      <blockquote> 
+        <blockquote> 
+         
+            <p><font face="Courier New, Courier, mono" size="2" color="#ff00ff">FORALL (i=2:5, 
+              X(i) &gt; 0) X(i) = X(i-l) + X(i+l)</font></p>
+         
+        </blockquote>
+      </blockquote>
+
+  
+      <p align = "justify">
+      <span class = "content">
+ 
+      The &quot;<i>i</i> = 2:5&quot; part is called a <i>forall</i> triplet spec in HPF, 
+        where <i> i</i> is the index variable. The subscript triplet 2:5 is equivalent 
+        to 2:5:1, with lower bound 2, upper bound 5, and a default stride of 1. 
+        The <i>forall</i> triplet spec determines a set of valid index value3, {2,3,4,5}.
+      <BR><BR>
+
+ 
+      The <i>X</i>(<i>i</i>) &gt; 0 part is a scalar valued expression, called the mask. 
+        The set of active index values is a subset of the valid index values, 
+        such that the mask is true. <br> <BR>
+
+      Assume initially <i> X</i> = [1, -1, 2, -2, 3, -3] in the above FORALL statement. 
+        Then the active set is {3,5}, since <i>X</i>(2) = -1 &lt; 0 and <i>X</i>(4)
+         = -2 &lt;  0. After the active index value set is determined, all the expressions 
+        in the assignment are computed simultaneously, in any order, for all active 
+        index values 3 and 5:
+       <BR> <BR>
+
+      <blockquote> 
+        <blockquote> 
+           <font face="Courier New" color="#ff00ff" >X(3-l) + X(3+l) 
+              evaluates to -1+(-2) = -3<br>
+              X(5-l) + X(5+l) evaluates to -2+(-3) = -5</font> <BR>
+      
+        </blockquote>
+      </blockquote>
+
+      <p align = "justify">
+      <span class = "content">
+
+      Then for all active index values (3 and 5), the left-hand side array 
+        elements are assigned with the corresponding right-hand side values simultaneously. 
+        The other elements of the left-hand side array are not changed. Thus the 
+        resulting array X after the above FORALL is executed is <i>X</i>[l,-1,-3, -2, 
+        -5, -3].<br> <Br>
+
+
+      There may be more than one forall-triplet specs in a FORALL statement. 
+        Then combinations of index values are used. For instance, the FORALL statement
+  
+      </span> </p>
+
+
+      <blockquote> 
+         <blockquote> 
+           <font face="Courier New" color="#ff00ff" >
+            FORALL(i=l:2, j=l:3, Y(i,j)&gt;0) Z(i,j) = I/Y(i,j)</font> <BR>
+       </blockquote> 
+      </blockquote>
+
+   
+      <p align = "justify">
+      <span class = "content">
+
+
+is equivalent to the Fortran 90 statement<br>
+        <br>
+        where    <BR> 
+
+
+
+    <blockquote>
+
+      <font size="2" face="Courier New" color="#ff00ff">
+    (<i>Y</i>(l:2, 1:3) &gt; 0) <i>Z</i>(1:2, 1:3) = 1/<i>Y</i>(1:2, 1:3). 
+      </font>
+    </blockquote>
+
+
+
+        The set of valid combinations of index values is the set {(1,1), (1,2), 
+        (1,3), (2,1), (2,2), (2,3)}, and the set of active combinations is the 
+        subset for which <i>Y</i>(<i>i</i>,<i>j</i>) is greater than zero.</p>
+      <p>Many parallel computations can be easily specified using FORALL but not 
+        in Fortran 90. The FORALL statement <BR> <BR>
+
+</p></span> 
+
+      <blockquote> 
+        <blockquote> 
+        
+           <font face="Courier New"  color="#ff00ff">
+   FORALL(i=l:4,  j=l:5, k=l:6) X(i,j,k) = i+j-k</font> 
+<BR>
+      
+        </blockquote>
+      </blockquote>
+
+      <p align = "justify">
+      <span class = "content">
+ can be expressed equivalently by the following Fortran 90 array assignment:
+
+</span> </p>
+
+
+      <blockquote> 
+        <blockquote> 
+      
+           <font face="Courier New"  color="#ff00ff">
+             X = SPREAD( SPREAD 
+              ( (/l :4 /), 2, 5), 3, 6)<br>
+              &amp; + SPREAD( SPREAD ( (/l :5 /), 1, 4), 3, 6)<br>
+              &amp; - SPREAD( SPREAD ( (/l :6 /), 1,4), 2, 5) </font> <br>
+      
+      </blockquote>
+     </blockquote>  
+   
+      <p align = "justify">
+      <span class = "content">
+
+      Note that the Fortran 90 code is much more difficult to understand and 
+        implement efficiently. As another example, the simple FORALL statement
+      </span> </p>
+
+
+      <blockquote> 
+        <blockquote> 
+    
+          <font face="Courier New" color="#ff00ff">FORALL( i=l :n) 
+              XQ, j(i)) = Y(i)</font>
+      
+        </blockquote>
+      </blockquote>
+
+      <p align = "justify">
+      <span class = "content">
+  
+ cannot be expressed with a single array assignment in Fortran 90.<br> <BR>
+
+
+  
+ Somemes a user may want to include several assignments in a FORALL statement. 
+ This can be accomplished with a more general form of the FORALL statement, 
+ called FORALL construct, or multi-statement FORALL, as illustrated by 
+ the following code:  </span> </p>
+
+      <blockquote> 
+        <blockquote> 
+      
+           <font face="Courier New" size="2" color="#ff00ff">
+              FORALL (i=l :n)<br>
+              A(i)=sin(B(i))<br>
+              C(i)=sqrt(A(i)*A(i))<br>
+              D(i)=B(i)+2<br>
+              END FORALL
+          </font>
+         
+        </blockquote>
+      </blockquote>
+
+      <p align = "justify">
+      <span class = "content">
+   
+  The second assignment begins only after all the computations (there are 
+  <i> n </i> evaluations of the sine function) in the first assignment finish. Thus 
+  array A used in the second assignment has the new values computed in the 
+  first assignment <BR> <BR>
+
+  Similarly, the third statement starts only after the second finishes, 
+  even though it does not seem to use array C computed in the second assignment. 
+  It is possible that <i> C</i> is an alias of&nbsp; <i>B</i> (through EQUIVALENT). Then array 
+  B uses the new value of C computed in the second assignment.<br> <br>
+     
+  Note that functions and procedures can be called in a FORALL statement. 
+  The only requirement is that they be pure, that is, side-effect-free. 
+  HPF offers a list of syntactical restrictions to help the compiler determine 
+  whether a function or procedure is pure or not. For instance, one such 
+  restriction is that no global variable appear as the left-side of an assignment.</p>
+     
+ <B> Independent Directives : </B> The programmer can use this directive to assert 
+     to the compiler that there is no loop-carried dependence among the iterations 
+     of a loop. In other words, all iterations can be executed independently. <br> <br>
+
+ <br>
+ <b>Example 3 The INDEPENDENT directive : </b></p>
+
+ The effects of the INDEPENDENT directive in the the following codes are 
+ illustrated in Example 6.3. The arrows indicate execution order restrictions. 
+      
+ </span> </p>
+
+      <blockquote> 
+        <blockquote> 
+          <p><font face="Courier New" size="2" color="#ff00ff">!HPF$ INDEPENDENT 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!HPF$ 
+            INDEPENDENT<br>
+            <br>
+            FORALL(i=l:2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doi=l,2<br>
+            &nbsp;&nbsp;&nbsp;A(i)=foo(B(i)) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(i)=foo(B(i))<br>
+            &nbsp;&nbsp;C(D(i))=log(E(i)) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(D(i))=log(E(i))<br>
+            END FORALL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end 
+            do</font> </p>
+          <p><font face="Courier New, Courier, mono" size="2" color="#ff00ff" >&nbsp;&nbsp;&nbsp;
+          (a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          (b)&nbsp;&nbsp;&nbsp;</font> </p>
+        </blockquote>
+      </blockquote>
+
+  <p align = "justify">
+      <span class = "content">
+
+      Consider Example 3(a), where the INDEPENDENT directive is absent from 
+        the FORALL statement. Because of a loose synchrony, both instances of 
+        the first statement <i>A(i</i>) == <i>foo</i>(<i>B</i>(<i>i</i>)) must be finished before any of the 
+        second statement <i>C</i>(<i>D</i>(<i>i</i>)) = <i>log</i>( <i>E</i>(<i>i</i>)) can start. However, the FORALL postulates 
+        that both instances of each statement can be executed in parallel. We 
+        can visualize that there is an implicit barrier between the two statements.<br> <BR>
+
+      When the INDEPENDENT directive is added, the compiler knows then that 
+        the barrier synchronization can be removed. Thus we get Fig. 5.3(b). Note 
+        that the compiler cannot perform this optimization without the help of 
+        the INDEPENDENT directive, because it cannot tell whether the subroutine
+      <i>foo</i>() is pure, and whether there is an alias.
+
+     
+        Visualization of the INDEPENDENT directive is discc=ussed below. <BR> 
+
+     
+      <center> <img src="./mpi-f90-f95-images/forall-f90.gif" width="360" height="214"> </center>
+        <br>
+       
+
+     <center> <B> Figure 6.1(a) : FORALL without INDEPENDENT</b>  </center>
+     <BR>
+
+      <center> <img src="./mpi-f90-f95-images/forall2-f90.gif" width="360" height="214"></center><BR>
+       <center> <b>Figure 6.1(b) : FORALL with INDEPENDENT</b> </center> <BR>
+
+      <center> <img src="./mpi-f90-f95-images/doloop-f90.gif" width="360" height="214"> </center> <BR>
+      <center> <b>Figure 6.1(c) : DO loop without INDEPENDENT </b> </center> <BR>
+   
+      <center><img src="./mpi-f90-f95-images/doloop2-f90.gif" width="360" height="214"> </center> <BR>
+      <center> <b> Figure 1(d) : DO loop with INDEPENDENT</b> </center> <BR>
+       
+   <BR> 
+
+
+        The DO loop shown in Figure 1(c) follows a different order, executing the two 
+        iterations sequentially. But when the INDEPENDENT directive is added [Fig. 
+        14.3(d)], the compiler can optimize it to behave exactly like the FORALL 
+        statement with INDEPENDENT. <BR> <BR>
+
+
+     
+ 
+   <DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+
+<!-- ************** .... Data Mapping ........ ********** -->
+
+
+  
+     <font color="red" size ="2"> <b>Data Mapping in HPF </b> </font> <BR> <BR>
+
+      <p align = "justify">
+      <span class = "content">
+
+
+      Data mapping refers to the allocation of data to processors, which should 
+            be done to achieve two goals:<br> <BR>
+       </span> </p>
+
+      <ul>
+        <li>The interprocessor communication is minimized;</li>
+        <li>The workload is evenly distributed among available processors</li>
+      </ul>
+
+     <p align = "justify">
+      <span class = "content">
+     An HPF compiler can use the <i>owner-compute</i> <i>rule</i> <i>to distribute 
+        workload</i>:<i> </i>computation associated with a data item is performed 
+        by the processor, which, owns that data item. Therefore, data indirectly 
+        determines workload distribution.<br> <Br>
+   </span> </p>
+
+     
+        HPF provides a number of directives, which can be used by the programmer 
+        to recommend to the compiler how to best map data to the nodes. <BR> <BR> 
+
+      <B>Example 4 Data mapping in HPF program segments</B> <br
+       Consider the following HPF code fragment:<br>
+ 
+     </span> </p>
+
+      <font face="Courier New, Courier, mono" size="2" color="#ff00ff">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <b>Integer</b> A(100),B(100),C(101), I<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!HPF$ ALOGN A(i) WITH B(I-1)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!HPF$ PROCESSOR N(4)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!HPF$ DOSTRIBUTE A(BLOCK) ONTO N<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!HPF$ DOSTRIBUTE C(BLOCK) ONTO N<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FORALL 
+        ( I = 2: 100)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(i) 
+        = A(i) + B(I-1)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(i) 
+        = C(i-1) + C(i) + C(i+1)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; END FORALL </font></p>
+
+     <p align = "justify">
+      <span class = "content">
+
+      The data mapping realized by the above code is shown in Example 6.4. Data 
+        mapping in HPF is realized in two phases: <i> logical mapping</i> and <i> physical
+      mapping</i>. Logical mapping is specified by the user through compiler directives, 
+        which map data to a number of virtual nodes (abstract processors).<BR> <BR>
+
+ 
+      Physical mapping maps these virtual nodes to physical nodes (processors) 
+        in a real computer. Physical mapping is done by the system and is transparent 
+        to the user. A virtual node is mapped to only one physical node. In other 
+        words, all data allocated to the same virtual node must be mapped to the 
+        same physical node. <BR> <BR>
+ 
+     Logical mapping consists of two steps: alignment and distribution. Referring 
+        to the above code, the PROCESSOR directive</p></font>
+
+       <font face="Courier New" size="2" color="#ff00ff">
+
+         <blockquote> 
+          <blockquote>              !HPF$ PROCESSOR N(4)
+          </blockquote>
+        </blockquote>
+      </font>  
+
+      <p align = "justify">
+      <span class = "content">
+
+      informs the compiler that this application wishes to use a linear array 
+        of four virtual nodes, shown N1, N2, N3, and N4 in Example 6.4.<BR> <BR>
+
+      The name of this node array is <i>N</i>. HPF allows the specification of the 
+        set of virtual nodes as any rectilinear arrangement. For instance, the 
+        compiler directive. <BR> <BR>
+        </span> </p>
+
+       <font face="Courier New" size="2" color="#ff00ff">
+
+      <blockquote> 
+        <blockquote> 
+       
+           !HPF$ PROCESSOR N(4,5)
+       
+        </blockquote>
+      </blockquote>
+     </font> 
+
+   
+ <p align = "justify">
+      <span class = "content">  
+
+    specifies 20 nodes arranged as a 4 x 5 mesh, and the directive.
+
+   </span> </p>
+
+
+<font face="Courier New, Courier, mono" size="2" color="#ff00ff">
+        <blockquote> 
+          <blockquote> 
+            <p>!HPF$ PROCESSOR N(4,5,6)</p>
+
+        </blockquote>
+      </blockquote>
+ </font> 
+
+ <p align = "justify">
+ <span class = "content">
+  specifies 120 nodes arranged as a 4 x 5 x 6 mesh. 
+</span> </p>
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> 
+  
+</TD> 
+</TR>
+</TBODY>  </TABLE> 
+
+<!-- ***************** HPF Fortran 95 Features  ends ********************* -->
+
+
+
+<!-- ************** About Summary of HPF (F95) & f90  Starts ************** -->
+
+<a name="f90-f95-summary">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+  <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+       Summary of  HPF / fortran95  & fortran 90     </b>  </font></DIV> 
+    </TD> 
+    </TR> 
+
+ <TR> 
+
+  <TD>
+
+   <a name="f90-f95-summary"></a>
+
+  <font color="red"><b> Data Parallelism :Summary of HPF (f95) & f9 languages </b></FONT> : 
+ 
+
+    <p align = "justify">
+    <span class = "content">
+
+   We summarize below a number of practical issues in using either Fortran 
+        90 or HPF to exploit data parallelism in user applications. Users must 
+        learn how to deal with these issues before developing efficient applications 
+        on parallel computers. <BR> <BR>
+
+      <B>Parallelism Issues</B> Because of single threading, a data-parallel program 
+        logically has only one process, although multiple nodes can execute the 
+        same program on different data subdomains. Most parallelism issues are 
+        taken care of by the system. The user does not have to worry about creating, 
+        terminating, and grouping processes, or how many processes are running 
+        the program. <BR> <BR>
+
+      The statement-level data parallelism and the where construct allow different 
+        nodes to execute different instructions at the same time. Thus both SIMD 
+        and SPMD computations are supported, but not MPMD. The degree of parallelism 
+        in a program varies dynamically when different array assignments are used 
+        or different FORALL statements are executed.<br> <BR>
+
+      <B>Interaction Issues</B> Because of loose synchrony, most interaction issues 
+        are sidestepped in data-parallel programming. There is no interaction 
+        operation in Fortran 90 or HPF, except the intrinsic functions for reduction. <BR> <BR>
+
+      Fortran 90 provides nine intrinsic functions to support reduction, but 
+        no support for prefix, descend, or sorting. It does not support user-defined 
+        reduction operation, either. HPF extends Fortran 90's capability through 
+        a set of (nonintrinsic) library routines. These include additional reduction 
+        functions, scan functions, and sorting functions, among others.<BR> <BR>
+
+      Interactions in data-parallel programs are cooperative. There is only 
+        one interaction mode: statement-level loose synchrony. All operations 
+        of a statement must be finished before any operation of the next statement 
+        can start. Communication is implicit, through array assignment. Both regular 
+        and irregular communication patterns can be specified by different array 
+        index expressions, as shown below:<br> <BR>
+
+      <blockquote> 
+        <blockquote> 
+     
+           <font face="Courier New, Courier, mono" size="2" color="#ff00ff">
+            !HPF$ ALIGN A(i) WITH B(i)<br>
+              A(i) = B(i-1 ) !a regular left-shift<br>
+              A(V(i)) = B(i) ! an irregular communication, the pattern is<br>
+              ! specified through an index array V
+            </font>  
+        </blockquote>
+      </blockquote>
+
+
+ <p align = "justify">
+ <span class = "content">
+      HPF provides a set of array-mapping directives to minimize communication 
+        overhead by exploiting data locality. The most important directives are <i>PROCESSOR</i>,
+      <i>ALIGN</i>, and <i>DISTRIBUTE</i>. HPF also provides dynamic <i> REALIGN</i> and
+      <i> 
+        REDISTRIBUTE</i> statements to accommodate changing communication patterns. 
+        These data mapping constructs are more effective if the communication 
+        patterns are regular.
+
+      <B>Semantic Issues: </B> Due to single threading and loose synchrony, data-parallel 
+        programs have clean semantics. It is impossible to have deadlock or livelock. 
+        The only possible non- termination is due to infinite looping, just as 
+        in a sequential program. Fortran 90 and HPF data-parallel programs are 
+        similar to sequential Fortran 90 programs with respect to the structuredness, 
+        compositionality, and correctness issues. There is no additional complexity 
+        introduced by parallelism. <BR> <BR>
+
+        <br> <br>
+        Data-parallel programs are determinate as long as the single assignment 
+        rule is satisfied: Any array element is assigned at most once in a statement. 
+        Any program that does not satisfy the single-assignment rule is deemed 
+        illegal in Fortran 90 and HPF. <BR> <BR>
+
+     <B>Programmability : </B> Because Fortran 90 and HPF are a high-level language 
+        standard, any conforming program should have good portability. Because 
+        most parallelism, interaction and semantic issues are taken care of by 
+        the system, and because of their simple semantics<br>
+        Fortran 90 and HPF are easy to use.<br> <BR>
+
+      So why has it not dominated practical parallel programming? Why are still 
+        people investigating and using other approaches? The main reason is that 
+        the current Fortran 90 and HPF language specifications have severe limitations 
+        on generality and efficiency.<br> <BR>
+ 
+      Fortran 90 and HPF do not support the exploitation of control parallelism. 
+        They are not well suited in supporting algorithmic paradigms such as asynchronous 
+        iteration, work queue, and pipelining, or applications such as database.</p>
+ 
+      For instance, it is difficult to write efficient data parallel codes 
+        for the banking problem or the target detection problem. The HPF datamapping directives seem to only support 
+        arrays with regular communication patterns. It is doubtful whether it 
+        can efficiently support parallel algorithms with general data structures 
+        and irregular communication patterns. <br> <BR>
+
+  
+     Although not enough performance data are available to draw general conclusions, 
+        there is some evidence suggesting that Fortran 90 and HPF compilers can 
+        achieve good performance for computational programs with static parallelism 
+        and regular communication patterns. <BR> <br>
+
+ 
+        The speedup of the HPF programs is measured over the sequential Fortran 
+        77 programs on one processor. The DEC HPF compiler even achieves superlinear 
+        speedup in some cases, due to caching effects and additional optimizations 
+        performed by the HPF compiler. <BR> <BR>
+
+      For some applications, the data-parallel approach can achieve performance 
+        comparable to that of the message passing approach. <bR> <BR>
+
+
+<!-- ********** ....... Data Parallel Approaches ******** .... -->
+
+<a name="f90-f95-summary"></a>
+    <font color="red"><b>  Other Data Parallel Approaches </b></FONT></B> :  </font>
+ 
+    <p align = "justify">
+    <span class = "content">
+
+      There are several on-going research efforts that alleviate the generality 
+        and efficiency deficiency of Fortran 90 and HPF. We group these efforts 
+        into two categories: those that are similar to HPF but offer more flexibility, 
+        and those that are based on non-Fortran languages. We briefly introduce 
+        these approaches below, along with a review of the Connection Machine 
+        approaches to data parallelism. <BR> <BR>
+
+
+      In the first category, we mention four efforts: <i>Fortran 95</i>, <i> Fortran
+      2001</i>, <i> 
+        Fortran D</i> and <i> Vienna Fortran</i>. The first two extend Fortran 90, while the 
+        others extend HPF.<br> <BR>
+
+      Two extensions to Fortran 90 are developed 
+        by joint committee of two international standards bodies: the <i> International 
+        Organization for Standardization</i> (ISO) and the <i> International Electrotechnical
+      Commission</i> (IEC). These extensions are informally known as Fortran 95 
+        and Fortran 2001.<br> <BR>
+
+
+      Fortran 95, published in 1997, is a relatively minor enhancement and 
+        correction of Fortran 90. The major new features in Fortran 95 are the 
+        FORALL statement and the FORALL construct, PURE and ELEMENTAL procedures, 
+        and structure and pointer default initialization.<br> <BR>
+</span> </p>
+   
+<DIV align="right"> 
+  <A HREF="./mpi-f90-f95-overview.html">
+    <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13">
+  </a> 
+  </DIV> 
+
+  </TD> 
+  </TR>
+   </TBODY> 
+  </TABLE> 
+
+<!-- *************** Summary of HPF (f95) & f90 Ends ************* -->
+
+
+
+<!-- **************** List of HPF (f95) & f90 Tools  Starts ************ -->
+
+<a name="f90-f95-tools">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+      <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+  HPF (f95) & fortran 90 Tools     </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+&nbsp;
+
+<TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+      <TD>
+<p><a name="f90-f95-tools"></a><font color="red"><b> Fortran 90 Tools </b></FONT></B> : 
+
+      <p align = "justify">
+      <span class = "content">
+ 
+        Some of the tools available for debugging and profiling of Fortran 90/HPF programs are
+         listed below : </span. ></p>
+         <BR>  <BR> 
+
+          <B>IDA (Interprocedural Dependency Analyser)</B> </p>
+
+ 
+      <p align = "justify">
+      <span class = "content">
+
+            Interprocedural information is
+            invaluable for investigating and `understanding' programs,
+            especially large ones. It is particularly useful when modifying or
+            further developing a code It is an interactive tool that provides interprocedural
+            information about Fortran programs, such as:<br> <BR>
+
+            
+           
+             <i>call graphs</i> show the calling relationships between
+             program units;<br> <BR> 
+
+              
+            <i>traces of variables shows </i>where and how a variable is used throughout the
+            program;<br> <BR> 
+
+              
+            <i>common block partitioning and usage</i> shows how common blocks are partitioned into variables
+            in each program unit, and how those variables are used in that
+            unit and its descendents; <BR> <BR>
+
+ 
+            <i>procedure references and argument associations</i> shows the location and actual arguments of every call
+             to a particular procedure.<BR> <BR> 
+                         
+            Interprocedural information is invaluable for investigating
+             and `understanding' programs, especially large ones. It is
+             particularly useful when modifying or further developing a
+             code.                          
+            It is available in the public domain 
+             <a href="http://www.vcpc.univie.ac.at/information/software/ida/"> 
+              http://www.vcpc.univie.ac.at/information/software/ida/</a> <BR> <BR>
+
+      </span> </p>
+              
+            <B>SvPablo</B> <BR> <BR> 
+              
+ <p align = "justify">
+ <span class = "content">
+ 
+   High-level performance analysis tools coupling
+    dynamic performance data with compile-time information for data
+    parallel programs. <B> SvPablo  </B> is a graphical user interface for
+    instrumenting source code and browsing runtime&nbsp;performance
+    data. It was designed to provide performance data capture,
+    analysis, and presentation for applications executing on a
+    variety of sequential and parallel platforms and written in a
+    wide range of languages. This release supports interactive
+    automatic and instrumentation of ANSI C, Fortran 77, and Fortran
+    90 programs and automatic instrumentation of HPF programs. In
+    addition, it also provides interface with Autopilot. 
+
+    It is available at&nbsp;
+    <a href="http://www-pablo.cs.uiuc.edu/Software/SvPablo/svPablo.htm">
+          http://www-pablo.cs.uiuc.edu/Software/SvPablo/svPablo.htm</a>
+    </span> </p>
+
+ <DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13">
+   </a> </DIV> <BR>
+  
+
+</TD> 
+</TR> 
+</TBODY> 
+</TABLE> 
+
+<!-- ****************** List of HPF (f95) & f90 Ends ****************** -->
+
+
+<!-- ***************** Example Program  for Fortran 90 & MPI-fortran 90 Starts *************** -->
+
+<a name="f90-example">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+
+     <TD bgColor = #cccdd77889>   
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="#0000cc">
+  Example Porgram     </b> 
+      </font></DIV> 
+     </TD> 
+   </TR> 
+
+ <TR> 
+<TD>
+
+<a name="f90-example "></a>
+
+ <font color="red"><b> Fortran 90 Example Program </b></FONT></B> : 
+
+
+       <p align = "justify">
+      <span class = "content">
+
+	The simple Fortran 90 program which prints "<I>Hello World</I>"&nbsp; message when executes is
+	explained below. <BR> <BR>
+
+	
+	We describe the features of the entire program and describe the program in details. First few lines
+	of the program explain variable definitions, and constants. <BR> <BR>
+
+	
+	The following segment of the code explains these features. The description of program is as
+	follows: <BR> <BR>
+
+	
+	Every main program unit must start with a <i> PROGRAM</i> statement, which consists of the word
+         <i> PROGRAM</i> followed by the name of the program. <i>IMPLICIT</i> <i>NONE</i> is a special statement, 
+        which is used to inhibit a particularly undesirable feature of Fortran, which is carried over from 
+        earlier versions of Fortran. It should <I>always</I> be placed immediately after the <i>PROGRAM</i> 
+         statement. 
+         </span> </p>
+
+       <blockquote>
+		
+	<FONT FACE="Courier New"  color="#FF00FF">program HelloWorld
+	<BR>
+	IMPLICIT NONE
+	<BR> character (len=12) :: String
+	<BR>
+	String = &quot;Hello World!&quot; </font>
+	<BR> <BR>
+
+				
+	<I>String</I> is a character variable of length 12<I>.&nbsp;</I> <BR> <BR>
+
+                 
+	<FONT FACE="Courier New,Courier" color="#FF00FF">program HelloWorld
+	print*,String </FONT>  
+
+        </blockquote>
+
+
+        <p align = "justify">
+         <span class = "content">
+
+	The above statement is called executable statement. This particular executable
+         statement is known as list-directed output statement and will cause
+	the text contained between the quotation marks (or quotes) to be displayed on your
+         computer's
+	default output device, probably the screen.Ending of Fortran 90 program.
+          This is the final statement of a program. <BR> <BR>
+
+	
+         <FONT FACE="Courier New"  color="#FF00FF">program HelloWorld		
+            end program HelloWorld</FONT>
+          </span> </p>
+	
+
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+   </TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ************* Example Program  for Fortran 90 Ends *************** -->
+
+
+
+<!-- *************** Example Prorgam MPI fortran 90  Starts **************** --> 
+
+<a name="mpi-f90-example">
+
+
+ <TABLE cellPadding=3 border=0> 
+    <TBODY> <TR> 
+
+     <TD bgColor = #cccdd77889>  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+    Example Program  : MPI parallel prorgam using  f90 language   </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+<TR> 
+<TD>
+
+
+ <p align = "justify">
+ <span class = "content">
+Simple MPI parallel prorgam using  f90 to print   "<I>hello_world.f90</I>"&nbsp; </span> </p>
+
+<blockquote>
+
+<FONT color="#FF00FF"> program main<BR> <BR>
+	
+	USE&nbsp;&nbsp; mpi<BR> <BR>
+
+	
+        integer &nbsp;&nbsp; :: &nbsp;&nbsp;MyRank, Numprocs<BR>
+	character*12 &nbsp;&nbsp; :: &nbsp;&nbsp;Send_Buffer, Recv_Buffer <BR>
+
+	integer &nbsp;&nbsp; :: &nbsp;&nbsp;Destination, iproc<BR>
+	integer &nbsp;&nbsp; :: &nbsp;&nbsp;tag <BR>
+	integer &nbsp;&nbsp;:: &nbsp;&nbsp;Root, Send_Buffer_Count, Recv_Buffer_Count<BR>
+	integer &nbsp;&nbsp;:: &nbsp;&nbsp;status(MPI_Status_Size)<BR> <BR>
+        
+         data &nbsp;&nbsp;Send_Buffer/'Hello World'/<BR> <BR>
+	!.............MPI &nbsp;&nbsp;initialization....<BR>
+
+         &nbsp;&nbsp;call &nbsp;&nbsp;MPI_Init(ierror)<BR>
+	&nbsp;&nbsp;call &nbsp;&nbsp;MPI_Comm_rank(MPI_Comm_World, MyRank, ierror)<BR>
+	&nbsp;&nbsp;call &nbsp;&nbsp;MPI_Comm_size(MPI_Comm_World, Numprocs, ierror)<BR> <BR>
+
+	 &nbsp;&nbsp;Root &nbsp;&nbsp;= &nbsp;&nbsp;0<BR>
+		&nbsp;&nbsp;tag &nbsp;&nbsp;= &nbsp;&nbsp;0<BR>&nbsp;&nbsp;Send_Buffer_Count &nbsp;&nbsp;=         
+		&nbsp;&nbsp;12<BR>
+	&nbsp;&nbsp;Recv_Buffer_Count &nbsp;&nbsp;= &nbsp;&nbsp;12<BR> <BR>
+
+         if(MyRank &nbsp;&nbsp;.NE. &nbsp;&nbsp;Root) &nbsp;&nbsp;then<BR>
+          &nbsp;&nbsp;&nbsp;&nbsp;Destination &nbsp;&nbsp;= &nbsp;&nbsp;Root<BR>
+	
+         &nbsp;&nbsp;&nbsp;&nbsp;call &nbsp;&nbsp;MPI_SEND(Send_Buffer, Send_Buffer_Count, MPI_CHARACTER,
+         Destination, tag, MPI_COMM_WORLD, ierror)<BR>
+
+	 else <BR>
+										
+
+	&nbsp;&nbsp;do &nbsp;&nbsp;iproc &nbsp;&nbsp;= &nbsp;&nbsp;1,&nbsp;&nbsp;Numprocs-1<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;call &nbsp;&nbsp;MPI_RECV(Recv_Buffer, 
+	Recv_Buffer_Count, MPI_CHARACTER,
+	iproc, tag, MPI_COMM_WORLD, status, ierror)<BR>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;print*, &nbsp;&nbsp;Recv_Buffer, iproc<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;enddo<BR>
+	endif<BR>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;<BR>
+	call &nbsp;&nbsp;MPI_FINALIZE( ierror )<BR>
+	stop<BR>
+	end</FONT><BR>
+    
+</blockquote>
+
+    <p align = "justify">
+      <span class = "content">
+      The basic <B>MPI</B> library calls used in the above codes can be used to write MPt programs. 
+      The above program is frequently called single program multiple data (SPMD) programming.
+  </span> </p>
+
+
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+  
+</TD> 
+     </TR> </TBODY> 
+   </TABLE> 
+
+<!-- ************ Example Program  for Fortran 90 Ends ************** -->
+
+
+
+<!-- ************ Example Program  for Fortran 90 & MPI -fortran Ends ************** -->
+
+
+
+<a name="mpi-f77-example">
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+  <TD bgColor = "#cccdd77889">  
+
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="black">
+    MPI f90 & f77 Example    </b> 
+      </font></DIV> 
+       </TD> 
+     </TR> 
+
+<TR> 
+<TD>
+
+ <p align = "justify">
+  <span class = "content">
+<B> 
+Example Program (MPI C ) /   MPI Fortran77 (MPI f77 ) /  </b>
+
+
+ MPI Fortran90 (MPI f90)  Simple MPI C program "get_start.c "  <BR> <BR> 
+
+
+
+The first C parallel program is <I> hello_world </i>  program, which simply prints the message <I> Hello _World </i>.
+ Each process sends a message consists of characters to another process. If there are <i> p </i>  processes executing a program,
+ they will have ranks <I> 0, 1,......, p-1. </i>
+
+ In this example, process with rank <i>  1, 2, ......, p-1 </i> will send message to the process with rank <i> 0 </i>  which we call as Root. The Root process receives the message from processes with rank  <I> 1, 2, ......p -1  </i> and print them out.  
+
+The simple MPI program in C language prints hello_world message on the process with rank 0 is 
+explained below. 
+
+<BR> <BR>
+We describe the features of the entire code and describe the program in details. First few lines of the code explain variable definitions, and constants. Followed by these declarations, MPI library calls for initialization of MPI environment, 
+and MPI communication associated with a communicator are declared in the program. The communication describes the communication context 
+and an associated group of processes. The calls <I> MPI_Comm_Size </i> returns Numprocs the number of processes that 
+the user has started for this program. Each process finds out its rank in the group associated with a communicator by 
+calling <I> MPI_Comm_rank </i>.  The following segment of the code explains these features.  The description of program is 
+as follows: </span> </p>
+
+
+<p align = "justify">
+ <span class = "content">
+ 
+
+  <font face="Courier New" size="2" color="#FF00FF"">
+  <BR>
+
+
+#include <stdio.h>    <BR> 
+#include "mpi.h"      <BR>
+
+#define BUFLEN 512   <BR>
+
+int main(argc,argv)   <BR>
+int argc; char *argv[];   <BR>
+
+{ 
+<BR>
+      int MyRank;      /* rank of processes */   <BR> 
+      int Numprocs;    /* number of processes */  <BR>  
+      int Destination; /* rank of receiver */  <BR> 
+      int source;     /* rank of sender */   <BR> 
+      int tag = 0;    /* tag for messages */   <BR> 
+      int Root = 0;   /* Root processes with rank 0 */  <BR> <BR>
+ 
+      char Send_Buffer[BUFLEN] /*Storage for message */ <BR>
+      char Recv_Buffer[BUFLEN]; /*Storage for message */ <BR> <BR>
+      MPI_Status status; /* returns status for receive */  <BR>
+      int iproc,Send_Buffer_Count,Recv_Buffer_Count;   <BR> <BR>
+</font>
+
+
+ <p align = "justify">
+    <span class = "content">
+    MyRank is the rank of process and Numprocs is the number of processes in the communicator
+    MPI_COMM_WORLD <BR>
+  </span> </p>
+ 
+
+
+<font face="Courier New" size="2" color="#FF00FF"">
+
+     /*....MPI initialization.... */  <BR>
+
+       MPI_Init(&argc,&argv);   <BR>
+      MPI_Comm_rank(MPI_COMM_WORLD,&MyRank); <BR>  
+      MPI_Comm_size(MPI_COMM_WORLD,&Numprocs);   <BR> <BR>
+</font> 
+
+ <p align = "justify">
+ <span class = "content">
+Now, each process with MyRank not equal to Root sends message to Root, i.e., process with rank 0. Process 
+with rank Root receives message from all processes other than him and prints the message.  <BR> <BR>
+</span> </p> 
+
+
+<font face="Courier New" size="2" color="#FF00FF"">
+    if(MyRank != 0) {   <BR>
+    <Blockquote>
+          sprintf(Send_Buffer, "Hello World from process with rank %d !!!\n", MyRank);   <BR>
+          Destination = Root;   <BR>
+          Send_Buffer_Count=(strlen(Send_Buffer)+1); <BR>
+      MPI_Send(Send_Buffer,Send_Buffer_Count,MPI_CHAR, Destination, tag, MPI_COMM_WORLD);  <BR> 
+      </blockquote>
+      
+       } <BR>  
+      else{ <BR>   
+        &nbsp; &nbsp;
+         for(iproc = 1; iproc < Numprocs; iproc++) {  <BR> 
+           <Blockquote>
+              source = iproc;   <BR>
+              Recv_Buffer_Count=BUFLEN; <BR>
+              MPI_Recv(Recv_Buffer,Recv_Buffer_Count, MPI_CHAR, source, tag, MPI_COMM_WORLD, &status); <BR>   
+              printf("\n %s from Process %d *** \n", Recv_Buffer, MyRank);   <BR>
+        
+   </Blockquote>
+         }   
+
+  } 
+  </font>
+
+ <p align = "justify">
+   <span class = "content">
+
+After, this MPI_Finalize is called to terminate the program. Every process in MPI 
+computation must make this call. It terminates the MPI "environment".  <BR> <BR>
+</span> </p>
+
+
+<font face="Courier New" size="2" color="#FF00FF"">
+
+ /* ....Finalizing the MPI....*/  <BR>
+      MPI_Finalize();  <BR>
+ 
+
+}   <BR>
+  
+</p>
+
+
+
+
+<DIV align="right"> <A HREF="./mpi-f90-f95-overview.html">
+ <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13"></a> </DIV> <BR>
+
+  </TD> 
+     </TR> </TBODY> 
+   </TABLE>
+<!-- ************** Compilation & Execution of fortran 90 /MPI-fortrn 90 Program Starts ************* -->
+
+
+<!-- ************* Compilation for MPI fortran 90  Starts ****************** --> 
+
+<a name="f90-comp-exec">
+
+
+ <TABLE cellPadding=3  border=0> 
+    <TBODY> <TR> 
+     <TD bgColor = "#cccdd77889">  
+      <DIV align=Left><font size="2"  color = "Blue" face = "Arial"> 
+        <b><font face="Verdana" color="Black">
+         Compilation  and Execution of Fortran 90 Program  </b> 
+      </font></DIV> 
+       </TD> 
+     </TR>  
+
+   <TR> 
+   <TD>
+   
+     <font size = "2" color="red">
+     <a name="command"></a> 
+      <B> (A) Using Command Line Arguments </B> </font>
+
+  
+   </Blockquote>
+      The compilation and execution details of an Fortran 90 program may vary on
+      different computers. Use following command to compile the code 
+      with Fortran90. </p></font>
+
+      <blockquote> 
+        <blockquote> 
+          <blockquote> 
+            <p> <br>
+              <font face="Courier New, Courier, mono" size="2"  color="#FF00FF">
+     # mpif90   -o &lt;name of executable&gt;&nbsp;&lt;programname&gt;</font><b><font color="#000066">
+            </font></b> </p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+     </p>
+
+ 
+    <p align = "justify">
+   <span class = "content">
+       For example to compile a simple Hello World program user can type  
+     </span> </p>
+
+      <blockquote> 
+        <blockquote> 
+          <blockquote> 
+            <p> <br>
+              <font face="Courier New, Courier, mono" size="2" color="#FF00FF"># mpif90
+              -o  HelloWorld F90_Hello_World.f90</font></p>
+            <p align="left">&nbsp; </p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+     
+
+       <p> 
+        <font color="red"><a name="makefile"></a><b>(B) Using Makefile</b></font><br> </p>
+   
+    
+ <p align = "justify">
+ <span class = "content">
+
+      For more control over the process of compiling and linking programs, you
+      should use a 'Makefile '. You may also use some commands in Makefile
+      particularly for programs contained in a large number of files. The user
+      has to specify the names of the program and appropriate paths to link some
+      of the libraries required for Fortran 90 in the Makefile <br> <br>
+
+
+      To compile and link a Fortran 90 program, you can uncomment one of the 
+      lines in the Makefile consisting of OBJECTS parameter and use the command </p></font>
+
+      <blockquote> 
+        <blockquote> 
+         
+         
+              <font face="Courier New, Courier, mono" size="2" color="#FF00FF">
+              <i>make -f Makefile_F90</i></font>
+       
+        </blockquote>
+      </blockquote>
+
+
+ 
+ <p align = "justify">
+   <span class = "content">
+        For the Hands-On Session programs, the application user 
+        can use <i><a href="mpi-f90-f95-codes/Makefile">Makefile_F90</a>.</i> 
+   </span> </p>
+ 
+
+     <font color="red">
+
+   <a name="execution"></a>
+   <b>(C) Execution of Program</b></font><br> 
+  
+   <p align = "justify">
+   <span class = "content"> 
+
+      To execute a Sequential Fortran 90 program simply type the name of executable on 
+     command line. </span> </p>
+
+      <blockquote> 
+        <blockquote> 
+         
+              <i><font face="Courier New" color="#FF00FF">&lt; Name of 
+              executable&gt;</font></i> </p>
+     
+        </blockquote>
+      </blockquote>
+
+
+
+ 
+    
+ <p align = "justify">
+   <span class = "content">
+      To execute a MPI Fortran 90 program use mpirun command. </span> </p>
+      <blockquote> 
+        <blockquote> 
+        
+              <i><font face="Courier New" color="#FF00FF">mpirun -n &lt;Number of Processors&gt;&nbsp;&lt; Name of 
+              executable&gt;</font></i>
+    
+        </blockquote>
+      </blockquote>
+    
+
+
+ <p align = "justify">
+   <span class = "content">
+        For example to execute a simple Hello World program user can type 
+   </span> </p>
+
+
+      <blockquote> 
+        <blockquote> 
+          <blockquote> 
+            <p align="center">
+              <font face="Courier New" color="#FF00FF">run</font></p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    
+
+    
+ <p align = "justify">
+   <span class = "content">
+
+        The output should look similar to below. 
+ </span> </p>
+
+ <font face="Courier New"  color="#FF00FF" >Hello World!</font>
+
+
+
+<DIV align="right"> 
+  <A HREF="./mpi-f90-f95-overview.html">
+    <IMG src="./mpi-f90-f95-images/up.gif" border="0" width="13" height="13">
+ </a> 
+ </DIV> 
+
+ </TD> 
+ </TR> 
+ </TBODY> 
+ </TABLE>
+
+ <!-- ************* mpi-f77 program starts ****************** -->
+
+</TD></TR>
+
+
+ <!--  content of web page End here  --> 
+ 
+          
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+         </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

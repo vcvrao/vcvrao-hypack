@@ -1,0 +1,40 @@
+
+#**********************************************************************
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# Created       :	 August-2013
+# 
+#       
+#************************************************************************/
+
+
+
+CC   = icc
+
+#CCFLAGS    = -openmp -offload-build -std=c99 -vec-report3 -Wno-unknown-pragmas 
+CCFLAGS    = -std=c99  -vec-report3 -Wno-unknown-pragmas
+OPTFLAGS   = -O3
+
+#LIBS       = -L/opt/intel/lib/mic 
+LIBS       =
+EXECS      = run
+#---------------------------------------------------------------------
+
+#OBJECTS = matrix-matrix-multiply-mpi-openmp-IKJ-offload.c
+#OBJECTS = matrix-matrix-multiply-cilk.c
+#OBJECTS=matmat_mult_native.cpp
+
+OBJECTS=matmat_mult_native_2D.cpp
+#----------------------------------------------------------------------
+
+run:$(OBJECTS)
+	$(CC) $(OPTFLAGS) -o $@ $(OBJECTS) $(CCFLAGS) $(LIBS) -lm -mkl 
+
+.c.o:
+	$(CC) -c $(OPTFLAGS) $(CCFLAGS) $<
+
+clean:
+	\rm -rf *.o run *.out
+
+

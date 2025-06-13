@@ -1,0 +1,3085 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+  Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, Intel Xeon Phi-Co-processor, 
+ NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous  Computing,Multi-Core tools,MultiCore 
+ Processors,GPU Programming, OpenMP 4.0, HPC GPU Cluster, 
+ Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR>
+
+</HEAD>
+
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+                       <A href="./../index.html">
+      <IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+
+        
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+    
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                        
+     
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+  </DIV>
+    
+
+<!--********** left section code for about link start here**************** -->
+
+
+	<INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+			
+               <A class=menul
+		  href="./../hypack13-mode04-gpgpu-lab-overview.html">
+                  &#149; Mode-4 GPGPUs </A>
+                  
+               <A class=menul
+                  href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html">
+                   &#149;  NVIDIA - CUDA/OpenCL</A>
+
+	       <A class=menul  
+                href="./../hypack13-mode04-gpgpu-amd-opencl.html">
+                 &#149; AMD APP  OpenCL </A>
+                 
+                  <!-- ** -->            
+	          <A class=menulslct  
+                    href="./../hypack13-mode04-gpgpu-opencl.html">
+                    &#149; GPGPUs - OpenCL</A>
+                  <!-- ** -->
+
+	       <A class=menul  
+                   href="./../hypack13-mode04-gpgpu-power-perf.html">
+                   &#149; GPGPUs : Power &amp; Perf.</A>
+               
+               <A class=menul 
+	           href="./../index.html">
+                   &#149; Home</A>
+       
+ <!-- *********left section code for about link End  here *************-->
+	
+      <BR>
+       <DIV 
+          style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px">
+       </DIV><BR><BR><BR><BR></TD>
+                
+
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+
+<TR>
+<TD>
+
+
+<H1> Mode 2 :hyPACK-2013  OpenCL (Open Computing Language)  </H1>
+           
+
+<p align = "justify"> <span class ="content">
+
+Traditional programming approaches for Multi-Core CPUs and GPUS are different. To day, many class of applications 
+require computing power of CPU &amp; GPUs. Thus, it is important to enable software developers to take advantage 
+of highly parallel CPUs, GPUs, DSPs, and the Cell/B.E processor in a heterogeneous computing environment. OpenCL 
+supports wide range of applications, ranging from embedded and consume software to HPC solutions, through a low-level,
+ high-performance, portable abstraction. It is expected that OpenCL will form the foundation layer of a parallel
+ programming Eco-system of platform-independent tools, middle-ware, and applications. OpenCL stands for Open Computing Language. 
+OpenCL (Open Computing Language) is the first open, royalty-free standard for general-purpose parallel programming across CPUs, 
+GPUs and other processors.  
+
+</span> </p>
+
+
+<div align = "left">
+
+
+ <a href="#opencl-architecture">
+   <font size="2"  color="blue"> <B>    Architecture </b>  </font> </a>   
+ &nbsp; 
+
+  <a href="#opencl-framework">
+  <font size="2"  color="blue"> <B>   Frame Work</b> </font> </a>   
+    &nbsp; 
+   
+ <a href="#opencl-appln-built">
+  <font size="2" " color="blue"> <B> How an  application is built ?  </b>  </font> </a>  
+   &nbsp; &nbsp;
+
+<a href="#opencl-appln-basic-prog-steps">
+  <font size="2" " color="blue"> <B>  Basic Prog. Steps  </b>  </font> </a>  
+ <BR> <BR>
+ 
+
+</div>
+
+
+
+<!-- ****************List of Programs - simple  OpenCL programs starts [1] here********************** -->
+
+
+
+ 
+<table  border="0">
+<tbody>
+
+<font size="2" face="Arial" color="red"> <b> List of  OpenCL Programs  </b> </font> 
+
+<BR> <BR>
+
+<!--******************* Module  1 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpu-opencl-hetrg-comp-html/gpu-comp-opencl-hetrg-opencl-basics.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module 1 : </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         Getting Started : Basics - OpenCL
+       </font>
+     </td>
+
+   </tr>
+
+<!--******************* Module  2 ******************************* -->
+	<tr>
+     <td width="100" height="2" valign= "top"> 
+    <a href="./gpu-opencl-hetrg-comp-html/gpu-comp-opencl-hetrg-num-comp.html">
+                    <font size="2" face="Arial" color="blue">
+            <b>Module 2 : </b> </font>   
+       </a>  
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         OpenCL  Programs on Numerical Computations (Dense Matrix Computations)
+       </font>
+     </td>
+
+   </tr>
+
+<!--************************** Module 3 ******************************** -->
+
+   <tr>
+     <td width="100" height="2" valign="top"> 
+                     
+     <a href="./gpu-opencl-hetrg-comp-html/gpu-comp-opencl-hetrg-num-library.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  3 :</b> </font>   
+       </a> 
+      </td>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+          OpenCL  Programs using BLAS libraries for  Matrix Computations 
+     
+       </font>
+     </td>
+   </tr>
+
+<!--************************** Module 4 ******************************** -->
+	
+    <tr>
+    <td width="100" height="2" valign="top"> 
+     <a href="./gpu-opencl-hetrg-comp-html/gpu-comp-opencl-hetrg-app-kernels.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  4 : </b> </font>   
+       </a>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         OpenCL  Programs - Application Kernels
+       </font>
+     </td>
+   </tr>
+
+
+<!--************************** Module 5  ******************************** -->
+
+   <tr>
+     <td width="100" height="2" valign="top"> 
+    <a href="./gpu-opencl-hetrg-comp-html/gpu-comp-opencl-hetrg-memory-opt.html">
+         <font size="2" face="Arial" color="blue">
+            <b>Module  5 : </b> </font>   
+       </a>
+   
+      <td width="700" height="2" align="left">
+        <font size="2" face="Arial" color="black">
+         OpenCL  Memory Optimization Programs - Tuning & Performance
+       </font>
+     </td>
+   </tr>
+
+
+
+</tbody>
+</table>
+
+<BR>
+
+<table  width="100%" border="0">
+<tbody>
+<TR>
+<TD>
+
+<!--        ******************* References Starts **************** -->
+<div>
+
+<font size="2" face="Arial" color="red"> <B> References  &amp; Web-Pages :  </b> </font> </a> 
+
+<a href="./../reference-hypack-2013/reference-overview-hypack13-mode02-gpgpu.html"> 
+ <font color="blue"><B> GPGPU &amp; GPU Computing  </b>  </font> </a> 
+&nbsp; &nbsp; &nbsp;
+
+<a href ="#gpgpgu-gpu-comp-amd-app-ref">  
+<font size ="2" color = "blue"> <b>  Web-sites  </b> </font> </a> 
+
+</span> </p>  
+
+</div>
+
+</TD>
+</TR>
+</Tbody>
+</Table>
+<!--**********************Reference Ends Here**********************-->
+
+
+
+<!-- **************** starts [1] here********************** -->
+
+
+<HR>
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div> 
+ 
+<!-- ..............*** OpenCL Architecture Starts  ***............ -->
+
+<BR>
+<table  width="100%" border="0">
+<tbody>
+<TR>
+<TD>
+
+<a name="opencl-architecture"> </a>
+<p align ="justify">
+<STRONG>  <font size="2" face="Arial" color="red">  The OpenCL Architecture </font>  </STRONG>  
+
+<p align = "justify"> <span class = "content">
+OpenCL provides a uniform programming environment for software developers to write efficient, portable code for 
+high-performance compute servers, desktop computer systems and hand-held devices using a diverse mix of multi-core CPUs,
+ GPUs, Cell-type architectures and other parallel processors such as DSPs.   OpenCL is a framework for parallel programming
+ and includes a language, API, libraries, and runtime system to support software development. 
+Using OpenCL, a programmer can write general purpose programs that execute on GPUs without need to map their algorithms onto 
+a 3D graphics API such as OpenGL. <BR> <BR>
+
+
+<!-- .....*** Hirerarchy  Model Starts ***.... -->
+
+
+The OpenCL architecture model use hierarchy of models such as <I> platform Model</i>, <I> Memory  Model</i>, 
+<I> Execution Model</i>, and <I> Programming model. </i> The important points are described   below.
+</span> </p>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+
+ <!-- **** ..........Platfrom Model *** -->
+  <B> <font color ="black">  Platform Model  </font> </B>  
+
+
+<ul>
+
+<li> 
+<p align = "justify" >  <span class ="content">
+  The Platform model consists of a <B> host </b> connected  to one or more <b> OpenCL devices</b>. 
+</span> </p></li>   
+
+<li> 
+<p align = "justify" >  <span class ="content">
+ An OpenCL device is divided into one or more compute units (CUs),  which are further divided into one or 
+ more <B> processing  elements </b> (PEs). Computations on a device occur within the processing elements.
+</span> </p> </li>
+
+<li>
+<p align = "justify" >  <span class ="content">
+ An OpenCL application runs on a host according to the models, particular to the host platform. 
+</span> </p> </li> 
+
+ <li>
+<p align = "justify" >  <span class ="content">
+The OpenCL application submits <B> commands </b> from the host to execute computations on the processing 
+elements within a device. 
+</span> </p> </li> 
+
+<li>
+
+<p align = "justify" >  <span class ="content">
+The processing elements within a compute unit execute a single stream of instructions as SIMD units or SPMD units.
+</span> </p> </li> 
+
+</span>
+ </p>
+
+</ul>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+<!-- **** ............Execution Model **** -->
+
+<B> <font color ="black">  Execution Model   </font> </B> 
+
+<ul>
+
+ <li> <p align = "justify" >   <span class ="content">
+ Execution of an OpenCL program occurs in two parts: a <b> host program </b> that executes on the particular <B> host </b> 
+ platform and <B> kernels </b> that execute on one or more <b> OpenCL devices. </b>
+ </span> </p>
+ </li>
+
+ <li>  <p align = "justify" >   <span class ="content"> 
+   The core of the OpenCL execution model is defined by the kernels execute.  The concepts of <I> kernel instance </i> are called a 
+   <B> work-item </b> and these work-items are organized into <B> Work-groups.</B>
+  </span> </p>
+ </li>
+
+ <li> <p align = "justify" >   <span class ="content">
+   Execution Model: Context and Command Queues - The host defines a context for the execution of the kernels. 
+  The context includes </li>
+  </span> </p>
+
+ 
+ <blockquote>
+ <p align = "justify" >   <span class ="content">
+    <b> Devices : </b> The collection of OpenCL devices to be used by the host; <BR>
+    <b> Kernels </b> The OpenCL  functions that run on OpenCL devices); <BR>
+    <b> Program Objects: </B> The program source and executable that implement the kernels); <BR>
+    <b> Memory Objects : </b> A set of memory objects visible to the host and the OpenCL devices Memory objects contain values that 
+        can be operated on by instances of a kernel.
+ </span> </p>
+ </blockquote>
+
+</li>
+
+<li>
+ <p align = "justify">  <span class = "content">
+
+ The OpenCL execution model supports two categories of kernels: <B> OpenCL Kernels </b> &amp; <b> Native Kernels. </b> 
+</li>
+</ul>
+
+
+</td>
+</tr>
+
+<!-- **** ......... Memory Model *** -->
+
+<TR>
+<TD>
+
+
+<B> <font color ="black">  Memory Model   </font> </B> 
+
+<ul>
+
+
+
+<li> <p align = "justify" >  <span class ="content">
+Work-Item(s) executing a kernel have access to four distinct memory regions. <B> Global Memory</b>; <B> Constant Memory</b>; 
+<b> Local Memory</b>; &amp; <b> Private Memory</b>. In OpenCL, The kernel or the host can allocate from a memory region, which depends upon 
+the type of allocation and the type of access allowed.  
+
+</span> </p>
+
+<li>  <p align = "justify" >  <span class ="content">
+
+Table describes whether the kernel or the host from a memory region, the type of allocation (static i.e. compile time <i> versus </i>
+dynamic time i.e. runtime) and the type of access allowed i.e. whether the kernel or the host can read and/or write to a
+memory region. 
+
+</span> </p>
+
+
+</ul>
+</td>
+</tr>
+
+
+ <!-- *** Table *** Starts -->  
+ <tr> 
+ <td>  
+   <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+             <tr>
+              <td bgcolor="#11666D" scope="col"><table width="100%" border="0" cellspacing="1" cellpadding="4">
+                    
+                <tr>
+                       <td bgcolor="#C8DCE1">&nbsp;</td>
+                      <td bgcolor="#C8DCE1">&nbsp;<width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content"><strong> Global <BR> </strong></td>
+                      <td bgcolor="#C8DCE1">&nbsp;<width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content"><strong>  Constant  <BR> </strong></td>
+                      <td bgcolor="#C8DCE1">&nbsp;<width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content"><strong> Local  <BR> </strong></td>
+                      <td bgcolor="#C8DCE1">&nbsp;<width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content"><strong> Private   <BR>  </strong></td>
+                    </tr>
+                   
+                    <tr>
+                      <td width="10%" align="center" valign="top" bgcolor="#CFF5F3" class="opecg_heading">Host </td>
+                      <td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">
+Dynamic 
+Allocation <BR> <BR>
+ Read /Write 
+ Memory
+ </td>
+                       
+<td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">
+Dynamic Allocation <BR> <BR>
+Read /Write  Memory
+ </td>
+   <td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">
+Dynamic   Allocation <BR> <BR> 
+ No <BR> <BR>
+ </td>
+<td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">No  <BR>
+  Allocation <BR> <BR> 
+   No <BR> <BR>
+</td>
+                      
+ <tr>
+ <td width="10%" align="center" valign="top" bgcolor="#CFF5F3" class="opecg_heading">Kernel </td>
+   <td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">No
+   Allocation <BR> <BR>
+Read /Write  Memory
+ </td>
+                       
+ <td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">Static 
+Allocation <BR> <BR>
+ Read only Memory
+  </td>
+ <td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">Static 
+  Allocation <BR> <BR> 
+ Read / Write  Memory
+  </td>
+ <td width="15%" align="center" valign="middle" bgcolor="#FFFFFF" class="opecg_content">Static  <BR>
+    Allocation <BR> <BR> 
+     No <BR> <BR>   </td>
+
+</table>
+</td>
+ </tr>
+
+      </table>
+       </td>
+      </tr>
+
+
+ 
+<tr>
+<td>
+
+  <ul>
+  <li> <p align = "justify" >   <span class ="content">
+       The application running on the host uses the OpenCL API to create memory objects in global 
+memory, and to  enqueue memory commands (Refer OpenCL API specification) that operate on those 
+memory objects. 
+</span> </p>
+</li>
+
+
+
+   <li> <p align = "justify" >   <span class ="content">
+       OpenCL uses a relaxed consistency memory model: i.e the state of memory visible to a work item is not guaranteed  to be 
+       consistent across the collection of work-items at all times. </span> </p>
+  </li>
+
+</ul>
+
+</TD>
+</TR>
+
+
+<!-- .....*** Hierarchical Model  Ends ***.... -->
+
+<a name="opencl-framework"> </a>
+<!-- .....*** QOpenCL FrameWork Starts ***.... -->
+
+<TR>
+<TD>
+
+<HR>
+
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>  
+
+<b> <font size = "2" color ="red">  The OpenCL Framework  </font> </b> <Br>
+
+<ul>
+
+<li>
+
+<p align = "justify" >   <span class ="content">
+ The OpenCL Framework allows applications to use host and one or more OpenCL devices as a single heterogeneous
+ parallel computer system.  The framework  contains the components <B> OpenCL Platform layer</b>; 
+<B> OpenCL Runtime</B>; &amp;
+<b> OpenCL Compiler </b>   </span> </p>
+
+</li>
+
+</ul>
+
+
+
+<BR>
+
+
+  <!-- .....*** OpenCL FrameWork Ends ***.... -->
+
+<!-- .................*** OpenCL Architecture  Ends  ***........... -->
+
+
+
+<!-- ............*** OpenCL Platform Layer starts  ***............  -->
+
+
+
+<p align ="justify">
+<STRONG>  <font size="2" face="Arial" color="black">  The OpenCL Platform Layer </font>  </STRONG>   <BR> <BR>
+
+<ul>
+
+<li> 
+<p align = "justify"> <span class = "content">
+The OpenCL platform layer which implements platform specific features that allow  applications to query OpenCL device
+configuration information and to create OpenCL contexts using one or more devices. 
+</span> </p>
+</li>
+
+
+
+<blockquote>
+
+<li> <font face = verdana size = 2 >
+ Querying Platform Info   </font> 
+
+</li>
+
+
+<li> <font face = verdana size = 2 >
+Querying Devices   </font>
+</li>
+
+
+<li> 
+
+<font face = verdana size = 2 >
+ Contexts   </font> 
+</li>
+
+
+</blockquote>
+
+
+
+<!-- ............*** OpenCL Platform Layer Ends  ***........... -->
+
+<div align ="right">
+  <a href="#top">
+<img src="./../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>  
+
+</ul>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+
+<!-- ............*** OpenCL Runtime starts  ***............  -->
+
+
+<a name="opencl-runtime-layer"> </a>
+
+<p align ="justify">
+<STRONG>  <font size="2" face="Arial" color="black">  
+    The OpenCL Runtime </font> </STRONG> </p>  
+
+<ul>
+
+<blockquote>
+<li> 
+<font face = verdana size = 2> 
+   Command Queues   </font> 
+</li>
+
+
+<li> 
+<font face = verdana size = 2 >
+ Memory Objects    </font> <BR>
+ <blockquote>
+
+   - Creating Buffer Objects, <BR> 
+   - Reading, Writing and copying Buffer Objects <BR> 
+   - Retaining and Releasing Memory Objects <BR>
+   - Creating Image Objects, <BR>
+   - Querying List of Supported Image formats, <BR>
+   - Reading, Writing and Copying Image objects <BR>
+   - Copying between Image and Buffer Objects <BR>
+   - Mapping and Unmapping Memory Objects <BR> 
+   - Memory Object Queries 
+
+</blockquote>
+</li>
+
+<li>
+<font face = verdana size = 2 >
+Sampler Objects </font> <BR>
+</li>
+
+<li>
+ Program Objects  <BR>
+</li>
+
+<blockquote>
+
+  - Creating Program Objects <BR>
+  - Building Program Executables <BR>
+
+</blockquote>
+</li>
+
+<li>
+Build Options <BR>
+<blockquote >
+  - Options (Preprocessor, 
+    Math Intrinsic, 
+    Optimization) <BR>
+  - Uploading the OpenCL compiler <BR>
+  - Program Object Queries <BR>
+</blockquote>
+</li>
+
+<li>
+Kernel Objects  <BR>
+<blockquote >
+- Creating Kernel Objects <BR>
+- Setting Kernel Arguments <BR>
+- Kernel Object  Queries <BR>
+
+</blockquote>
+</li>
+ 
+<li>
+Executing Kernels <BR>
+</li>
+
+ 
+<li>
+Event Objects  <BR>
+</li>
+
+ 
+<li>
+Profiling Operations on Memory Objects and Kernels <BR>
+</li>
+
+ 
+<li>
+Flush and Finish <BR>
+</li>
+</ul>
+
+
+
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+
+<BR>
+<HR>
+
+</TD>
+</TR>
+
+
+<!-- ******** ..... OpenCL runtime Ends ...... ****** -->
+
+
+
+<!-- ............*** OpenCL Compiler  starts  ***............  -->
+
+<TR>
+<TD>
+
+<a name="opencl-build-compiler"> </a>
+<p align ="justify"> 
+<STRONG>  <font size="2" face="Arial" color="red">  The OpenCL Compiler : Building & Running Programs </font> </STRONG> </p>  
+
+
+
+<p align = "justify"> <span class = "content">
+The Compiler tool-chain provides a common framework for both CPUs &amp; GPUs, sharing the front-end and some high-level
+ compiler transformations. The back-ends are optimized for the device type (CPU or GPU). Most of the application remains
+same, but OpenCL APIs are included at various parts of the code. The kernels are compiled by the OpenCL compiler to 
+either CPU binaries or GPU binaries, depending on that target device. </span> </p>
+
+
+<ul>
+
+
+<li> 
+<p align = "justify"> <span class = "content">
+ <b>  CPU Processing :</B>For CPU processing, the OpenCL runtime uses the <B> LLVM AS </B> (<I> Low-level virtual Machine </i>)
+ to generate  x86 binaries. The OpenCL runtime automatically determines the number of processing elements or cores, present in the 
+ CPU and distributes the OpenCL kernel between them. </span> </p>
+ 
+</li>
+
+<li>
+
+<p align = "justify"> <span class = "content">
+ <b>  GPU Processing : </B> For GPU processing, the OpenCL runtime layer generates GPU specific AMD -ATI binaries with CAL  or
+ CUDA enabled NVIDIA architecture GPU binaries. </span> </p>
+
+</ul>
+
+<p align ="justify"> 
+<STRONG>  <font size="2" face="Arial" color="black">  Compiling Program  </font> </STRONG> </p>  
+
+
+<p align = "justify"> <span class = "content">
+ An OpenCL application consists of a host program 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  (C/C++) </font> 
+and an optional kernel program 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  (.cl)</font>.
+ To compile an OpenCL application, the host program 
+must be  compiled and  this can be done using the off-the-shelf compiler such as
+ <font size = 2, face = " Courier New " color ="#FF00FF" >  g++</font>
+or  
+<font size = 2, face = " Courier New " color ="#FF00FF" >  MSV++</font>. 
+
+The application kernels are compiled into device-specific binaries using the OpenCL compiler. 
+
+The compiler uses a standard C front-end as well as the LLVM framework, with extensions for OpenCL.
+</span> </p>
+ 
+
+<p align = "justify"> <span class = "content">
+To compile OpenCL applications on Windows requires that Visual Studio 2008 Professional Edition 
+and the Intel C compiler and all C++ files must be added with appropriate settings. To compile 
+OpenCL applications on Linux requires that the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  gcc </font> or the Intel C compiler is 
+installed and all C++ files must be compiled with appropriate settings on 32-bit /64-bit systems.
+</span> </p>
+ 
+
+
+<p align = "justify"> <span class = "content">
+The OpenCL Library and runtime environment depends upon the target GPU (i.e CUDA enabled NVIDIA or AMD ATI - Stream DSK).
+</span> </p>
+ 
+
+For more control over the process of compiling and linking programs for OpenCL programs, 
+you should use a <I> Makefile </i>. The user has to specify the names of the program and specify correct
+available platform on the system in the Makefile.
+To compile OpenCL program, type the command,<BR> <br>
+<center>
+<font size = 2, face = " verdana " color ="red" > make</font> <br><br>
+</center>
+The appropriate OpenCL Program  will be compiled and executable is installed in "/bin"
+
+<br><br>
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+
+
+
+</ul>
+
+<p align ="justify"> 
+<STRONG>  <font size="2" face="Arial" color="black">  Running  Program  </font> </STRONG> </p>  
+
+ 
+<p align = "justify"> <span class = "content">
+ An OpenCL application is compiled on the target system, the runtime system assigns the work in the command queues
+to the underling devices. Commands are placed into the queue using  the
+<font size = 2, face = " Courier New " color ="#FF00FF" >  clEnqueue </font> 
+ commands
+shown below. The commands can be broadly classified into three categories. 
+</span> </p>
+
+<ul>
+<li>
+<p align = "justify"> <span class = "content">
+kernel commands (for example, 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  clEnqueueNDRangeKernel(), </font>etc.).
+</span> </p> </li>
+
+<li>
+<p align = "justify"> <span class = "content">
+Memory commands (for example, 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  clEnqueueNDReadBuffer(), </font>etc.), and
+</span> </p> </li>
+
+<li>
+<p align = "justify"> <span class = "content">
+Memory commands (for example, 
+<font size = 2, face = " Courier New " color ="#FF00FF" >  clEnqueueWaitForEvents(),</font>etc.
+</span> </p> </li>
+</ul>
+
+ 
+<p align = "justify"> <span class = "content">
+ An OpenCL application can create multiple command queues and please refer OpenCL specification or 
+OpenCL Programming Guide for the CUDA Architecture or  AMD ATI Stream computing OpenCL Programming Guide.
+</span> </p>
+To execute a OpenCL Program,change the directory to "/bin" directory &
+give the name of the executable at command prompt. <br><br>
+<center><font face = "vedana" color="red">
+	$ cd ./bin <br>
+	$ . / < Name of the Executable > <br>
+</center></font>
+ Ex. <br>
+<center><font face = "vedana" color="red">
+                $ ./PrefixSum<br><br>
+</center></font>
+
+ Read Instruction displayed on screen to execute the programs
+           correctly.<br>
+<br>
+<font face = "vedana" color="red">
+NOTE :</font> For Compilation & execution of the OpenCL program : OpenCL Driver should be installed 
+on the system properly. OpenCL Library file path should be included in
+ environment variable "LD_LIBRARY_PATH".
+
+<!-- ............*** OpenCL Compiler Ends .... -->
+
+<BR> <BR>
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a>
+</div> 
+ 
+<BR> <BR>
+
+
+<HR>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+
+
+<!-- .... **** OpenCL Application built : ...... -->
+
+<a name ="opencl-appln-built"> </a>
+<p align = "justify"> <span class = "content">
+
+<B> <font size = "2" color="red">How an OpenCL application is built ?  :</font> </B> </span> </p>
+
+<ul>
+<li> <p align = "justify"> <span class = "content">
+First querying the runtime to determine which platforms are present. There can be any number of 
+different OpenCL implementations are present. </span> </p>
+</li>
+
+
+<li> <p align = "justify"> <span class = "content">
+Create a context (The OpenCL Context has associated with it a number of compute devices
+such as CPU or GPU devices) </span> </p>
+
+<blockquote>
+
+<p align = "justify"> <span class = "content">
+ Within a context, OpenCL guarantees a relaxed consistency between these devices.
+	This means that memory objects, such as buffers or images, are allocated per context, but 
+changes made by one device are only 
+guaranteed to be visible by another device at well-defined synchronization points. 
+
+</span> </p>
+</blockquote>
+</li>
+
+<li> <p align = "justify"> <span class = "content">
+	OpenCL provides events, with the ability to synchronization on a given event to enforce the 
+correct order of execution, 
+</span> </p></li>
+
+
+<li> <p align = "justify"> <span class = "content">
+	Many operations are performed with respect to a given context: there also are many operations
+ there are specific to a device. 
+For example, program compilation and kernel execution are done on a peer-device basis. 
+</span> </p></li>
+
+<li></span> </p>
+Performing work with a device, such as executing
+ kernels or moving data to end from the device's local memory is done using a corresponding a command queue.
+</span> </p></li>
+
+<li> <p align = "justify"> <span class = "content">
+	 A command queue is associated with a single device and a given context. : all work for a specific 
+ device is done through this 
+interface. Note that while a single command queue can be associated with only a single device. 
+For example, it is possible to have one 
+command queue for executing kernels and a command kernel for managing data transfers between the
+ host and the device.
+</span> </p></li>
+
+</ul>
+
+
+<p align = "justify"> <span class = "content">
+Most OpenCL program follows the same pattern. Given a specific platform, select a device or devices 
+to create a context, allocate memory, 
+create device-specific command queues to create a context, allocate memory, create device-specific 
+command queues, and perform data 
+transfers &amp; computations.  <BR> <BR>
+
+
+
+<p align = "justify"> <span class = "content">
+ Generally, the platform is the gateway to accessing specific devices, given these devices and a corresponding 
+context the application is independent of the platform. Given a context, the application can: </span </p>
+
+<ul>
+
+<li> 
+<p align = "justify"> <span class = "content">
+ Create a command queues
+ </span> </p> 
+</li>
+
+<li> 
+<p align = "justify"> <span class = "content">
+Create programs to run on one or more associated devices
+ </span> </p> 
+</li>
+
+
+<li> 
+<p align = "justify"> <span class = "content">
+Create kernels within those programs 
+ </span> </p> 
+</li>
+
+ 
+
+<li> 
+<p align = "justify"> <span class = "content">
+Allocate memory buffers or image, either on the host or on the device(s) (memory can be copied between 
+the host and device)
+ </span> </p> 
+</li>
+
+
+
+<li> 
+<p align = "justify"> <span class = "content">
+
+Write data to the device
+ </span> </p> 
+</li>
+
+
+
+<li> 
+<p align = "justify"> <span class = "content">
+
+Submit the kernel (with appropriate arguments) to the command queue for execution.
+ </span> </p> 
+</li>
+
+
+
+<li> 
+<p align = "justify"> <span class = "content">
+Read data back to the host form the device.
+ </span> </p> 
+</li>
+
+<p align = "justify"> <span class = "content">
+The relationship between context(s), device(s), buffer(s), program(s), kernel(s), and command queue(S) is
+ best seen by looking at 
+simple code. </span> </p>
+
+</ul>
+
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<div align ="right">
+  <a href="#top"><img src="../hypack13_images/top.gif" align="right" border="0" width="13" height="13"></a>
+</div> 
+ 
+
+
+<!-- ..... *** OpenCL application Basic Steps *** -->
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR>
+<TD>
+
+<a name = "opencl-appln-basic-prog-steps"> </a>
+<p align = "justify"> <span class = "content">
+
+<B> <font size = "2" color="red"> An Overview of Basic Programming Steps : </font> </B> </span> </p>
+
+
+<p align = "justify"> <span class = "content">
+Given below,  illustrate the basic programming steps required for  a minimum amount of code. 
+Many test programs might require similar steps and  these steps do not include error checks.
+</span> </p>
+
+
+
+<!-- Table Listing of OpenCl Program Steps  -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+   <!-- Step 1 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 1. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+  <b> Query OpenCL Platform : </b> The host program must select a  OpenCL platform, which is an 
+abstraction for a given OpenCL implementation .  Developer can use 
+    <font size = 2, face = " Courier New " color ="#FF00FF" >  clGetPlatformIDs(..)</font> API 
+to get OpenCL platforms .   
+   </span> </p>
+     </td>
+     </tr>
+
+   <!-- Step 2 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b>  2. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+      <b>Query OpenCL Device : </b> A device id for OpenCL devices is requested. Developer can use
+ <font size = 2, face = " Courier New " color ="#FF00FF" >clGetDeviceIDs(..) </font>API to 
+find a OpenCL device. A CPU device could be requested by using
+<font size = 2, face = " Courier New " color ="#FF00FF" > CL_DEVICE_TYPE_CPU </font>instead. 
+The device can be a physical device, such as a given GPU etc..
+       </span> </p>
+     </td>
+     </tr>
+
+ <!-- Step 3 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 3. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+     <b>Create Context :  </b>On the selected device, an OpenCL context is created. Developer can 
+use  <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateContext(..) </font>
+or relevant API to create a context. A context ties together a device memory buffers related to
+ that device.
+
+      </span> </p>
+     </td>
+     </tr>
+
+
+<!-- Step 4 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 4. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+ <b>Create Command Queue : </b>After creating OpenCL context, create a command queue. Command queue can 
+be created using the   <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateCommandQueue(..) </font>
+API.The command queue issues commands to a specific compute device, and ensures that a set of operations 
+occur in a particular order.
+
+      </span> </p>
+     </td>
+     </tr>
+
+
+<!-- Step 5 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 5. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+    <b> Create Program Object :  </b>Before an OpenCL kernel can be launched, its program source is
+ compiled, and a handle to the kernel is created. Create an program object directly from the source code 
+of an OpenCL program and compile it at application runtime. Alternatively,  program object can be created 
+using a previously built binary to avoid compilation at runtime. To build a program object from source, 
+use the  <font size = 2, face = " Courier New " color ="#FF00FF" > clCreateProgramWithSource(..) </font>
+and To build a program object from source, use the  
+ <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateProgramWithBinary(..)</font>.
+      </span> </p>
+     </td>
+     </tr>
+
+
+<!-- Step 6 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 6. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+   <b>  Build Program Executable :  </b>After  creation of a program object using 
+       either  <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateProgramWithSource(..) </font>
+       or  <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateProgramWithBinary(..) </font>.
+      Developer must build a program executable from the contents of that program object.
+  Building the program compiles any source code that is in the program object and links 
+     the resultant machine code into an executable program. Use the 
+      <font size = 2, face = " Courier New " color ="#FF00FF" > clBuildProgram(..)</font> API for that. 
+ 
+      </span> </p>
+     </td>
+     </tr>
+
+
+<!-- Step 7 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 7. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+ <b> Create  Kernel Object : </b> Kernel object encapsulates the specific kernel function declared
+ in a program and can also encapsulate the parameter values to use when executing this kernel.  
+Developer can use <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateKernel(..) </font>
+API to create a single kernel object or call the 
+<font size = 2, face = " Courier New " color ="#FF00FF" >clCreateKernelsInProgram(..) </font>
+  API to create kernel objects for all the kernels in the OpenCL program.
+
+
+      </span> </p>
+     </td>
+     </tr>
+
+<!-- Step 8 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 8. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+ <b>Create Memory Object :  </b>Memory objects are reserved regions of global device memory that can 
+serve as containers for your data.Memory buffer can be allocated on the device as per program requirements. 
+Developer can use <font size = 2, face = " Courier New " color ="#FF00FF" >clCreateBuffer(..) </font>
+API to create a data buffer.
+     </span> </p>
+     </td>
+     </tr>
+
+<!-- Step 9 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 9. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+ <b>Launch / Execute kernel : </b> Developer can use 
+<font size = 2, face = " Courier New " color ="#FF00FF" > clEnqueueNDRangekernel(..)</font> 
+  API to Enqueues a command to execute a kernel on a device.
+
+     </span> </p>
+     </td>
+     </tr>
+<!-- Step 10 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 10. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+ <b>Retrieving  the Results:  </b>After  kernel has completed execution, read data from the 
+device back to the host where it is accessible to the host application. To read the data, 
+call the <font size = 2, face = " Courier New " color ="#FF00FF" >  clEnqueueReadBuffer(...) </font>
+or other related API.
+
+
+     </span> </p>
+     </td>
+     </tr>
+
+<!-- Step 11 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <p align = "justify"> <span class = "content"> <b> 11. </b> </span> </p>
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <p align = "justify"> <span class = "content">
+ <b>Clean up :</b> After host application no longer requires the various objects associated with 
+the OpenCL runtime and context, it should free these resources. Developer can use the following APIs 
+to release your OpenCL objects <br>
+
+<font size = 2, face = " Courier New " color ="#FF00FF" >
+<blockquote>
+clReleaseMemObject(...) <br>
+clReleaseKernel(...) <br>
+
+clReleaseProgram<br>
+
+clReleaseCommandQueue<br>
+
+clReleaseContext<br>
+</blockquote>
+
+   </font>or other related API.
+
+
+     </span> </p>
+     </td>
+     </tr>
+</tbody>
+</table>
+
+
+<HR>
+
+<div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</div>
+
+<!-- ..........  *** OpenCL Prorgamming Model Ends ..... -->
+
+
+
+</TD>
+</TR>
+</tbody>
+</table>
+
+<!--  .............********  GPGPU - Mutli-Core - hybrid -  References   -->
+
+<a name = "gpgpgu-gpu-comp-amd-app-ref">  </a>
+
+<STRONG>  <font size="2" face="Arial" color="red">  References </font>  </STRONG>  
+ 
+<BR> <BR>
+
+
+<!-- Table Listing of OpenCl Program Steps  -->
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+
+  <!-- ************ Ref Starts ************ -->
+
+ <!-- Reference  1 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 1. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://en.wikipedia.org/wiki/AMD_Fusion ">
+        <font color = "blue">  
+       AMD Fusion
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+ <!-- Reference  2 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 2. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://en.wikipedia.org/wiki/Accelerated_processing_unit ">
+        <font color = "blue">  
+        APU
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+ <!-- Reference  3-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 3. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/assets/apu101.pdf ">
+        <font color = "blue">  
+        All about AMD FUSION  APUs (APU 101)
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+    <!-- Reference  4 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 4. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+              <a href =" http://www.legitreviews.com/article/1655/1/ ">
+        <font color = "blue">  
+       AMD A6 3500 APU Llano
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+    <!-- Reference  5 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 5. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+              <a href =" http://www.guru3d.com/article/amd-a6-3500-apu-review/ ">
+        <font color = "blue">  
+      AMD A6 3500 APU review
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+   <!-- Reference 6 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 6. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/downloads/Pages/default.aspx">
+
+        <font color = "blue">  
+        AMD  APP SDK with OpenCL 1.2 Support 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+   <!-- Reference  7 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 7. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/downloads/Pages/default.aspx#one">
+        <font color = "blue">  
+        AMD-APP-SDKv2.7 (Linux) 
+         with OpenCL 1.2 Support
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  8 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 8. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href ="http://developer.amd.com/libraries/appmathlibs/Pages/default.aspx ">
+      <font color = "blue">  
+        AMD Accelerated Parallel Processing Math Libraries (APPML) 
+ 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+<!-- Reference 9-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 9. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/assets/AMD_Accelerated_Parallel_Processing_OpenCL_Programming_Guide.pdf ">
+        <font color = "blue">  
+        AMD  Accelerated Parallel Processing  (AMD APP) Programming Guide OpenCL : May 2012  
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+    <!-- Reference  10 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 10. </b> 
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://icl.cs.utk.edu/magma/software/ ">
+        <font color = "blue">  
+        MAGMA OpenCL 
+        </font>
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference 11-->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 11. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/AMDAPPSDK/Pages/default.aspx ">
+       <font color = "blue">  
+        AMD  Accelerated Parallel Processing (APP) SDK (formerly ATI Stream) 
+         with AMD APP Math Libraries (APPML); AMD Core Math Library (ACML);
+         AMD Core Math Library for Graphic Processors (ACML-GPU)
+        </font> 
+     
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  12 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 12. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/OpenCLZone/pages/GettingStarted.aspx ">
+      <font color = "blue">  
+        Getting Started with  OpenCL 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  13 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 13. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/java/aparapi/pages/default.aspx ">
+      <font color = "blue">  
+        Aparapi - API &amp; Java 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  14 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 14. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/OpenCLZone/Pages/default.aspx ">
+      <font color = "blue">  
+        AMD  Developer Central  - OpenCL Zone
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  15 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 15. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/sdks/pages/default.aspx ">
+      <font color = "blue">  
+        AMD  Developer Central  - SDKs 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+
+<!-- Reference  16 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+      <b> 16. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href ="http://developer.amd.com/libraries/ags/Pages/default.aspx">
+      <font color = "blue">  
+        ATI GPU Services (AGS) Library 
+ 
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+
+<!-- Reference  17 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 17. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href ="http://developer.amd.com/sdks/AMDAPPSDK/pages/OpenSourceLibraries.aspx ">
+        <font color = "blue">  
+        AMD  GPU - Global Memory for Accelerators (GMAC)
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference 18 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 18. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+       <a href =" http://developer.amd.com/zones/OpenCLZone/programming/Pages/default.aspx ">
+        <font color = "blue">  
+        AMD  Developer Central  - Programming in OpenCL 
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  19 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 19. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+           <a href ="http://developer.amd.com/sdks/AMDAPPSDK/pages/OpenSourceLibraries.aspx#two ">
+        <font color = "blue">  
+        AMD GPU Task Manager (TM)
+
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  20 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+        <b> 20. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+           <a href ="http://developer.amd.com/sdks/AMDAPPSDK/documentation/Pages/default.aspx ">
+        <font color = "blue">  
+        AMD APP Documentation 
+        </font>
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  21 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 21. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/openclforum "> 
+        <font color = "blue">  
+         AMD Developer OpenCL FORUM  
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  22 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 22. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/zones/OpenCLZone/programming/pages/benchmarkingopenclperformance.aspx "> 
+        <font color = "blue">  
+         AMD Developer Central - Programming in OpenCL - Benchmarks performance  
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  23 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 23. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/sdks/AMDAPPSDK/assets/opencl-1.2.pdf "> 
+        <font color = "blue">  
+          OpenCL 1.2 (pdf file) 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  24 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 24. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/documentation/articles/pages/OpenCLOptimizationCaseStudy-PartI.aspx "> 
+        <font color = "blue">  
+         OpenCLT Optimization Case Study Fast Fourier Transform - Part 1 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  25 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 25. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/tools/PerfStudio/Pages/default.aspx "> 
+        <font color = "blue">  
+         AMD GPU PerfStudio 2 
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  26 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 26. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href ="http://developer.amd.com/zones/opensource/Pages/default.aspx "> 
+        <font color = "blue">  
+         Open Source Zone - AMD CodeAnalyst Performance Analyzer for Linux
+        </font> 
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  27 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 27. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/gpu_assets/ATI_Stream_SDK_OpenCL_Programming_Guide.pdf "> 
+        <font color = "blue">  
+         AMD ATI Stream Computing OpenCL - Programming Guide  
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference  28 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+           <b> 28. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href =" http://developer.amd.com/zones/opensource/pages/ocl-emu.aspx "> 
+        <font color = "blue">  
+         AMD OpenCL Emulator-Debugger 
+  
+        </font> 
+   
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference 29 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 29. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+    <B>  GPGPU : </b> <a href =" http://www.gpgpu.org "> 
+      <font color = "blue">    http://www.gpgpu.org </font> </a> 
+        and <B> Stanford BrookGPU discussion forum </b> 
+     <a href =" http://www.gpgpu.org/forums/ "> 
+   <font color = "blue"> http://www.gpgpu.org/forums/ <a> 
+
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+
+<!-- Reference  30 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 30. </b> 
+     
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://developer.apple.com/mac/snowleopard/opencl.html"> 
+       <font color = "blue">  
+          Apple :  Snowleopard - OpenCL
+        </font> 
+      
+    </a> 
+    </td>
+    </tr>
+
+
+<!-- Reference 31 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 31. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/opencl" > 
+     <font color = "blue">  
+         The OpenCL Speciifcation Version : v1.0  Khronos OpenCL Working Group
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  32 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 32. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/assets/uploads/developers/library/overview/OpenCL-Overview-Jun10.pdf" > 
+     <font color = "blue">  
+           Khronos V1.0 Introduction and Overview, June 2010
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  33 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 33. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/files/opencl-1-1-quick-reference-card.pdf" > 
+     <font color = "blue">  
+           The OpenCL 1.1 Quick Reference card.
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  34 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 34. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/"> 
+     <font color = "blue">  
+           OpenCL 1.2 Specification Document Revision 15) Last Released November  15, 2011
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  35 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 35. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/specs/opencl-1.1.pdf" > 
+     <font color = "blue">  
+           The OpenCL 1.2 Specification (Document Revision 15) Last Released November  15, 2011
+            Editor : Aaftab Munshi <I> Khronos OpenCL Working Group </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference 36 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+       <b> 36. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/" > 
+     <font color = "blue">  
+           OpenCL1.1  Reference Pages </i>
+        </font> 
+    
+    </a> 
+    </td>
+    </tr>
+
+
+
+
+
+<!-- Reference  37 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 37. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href ="http://www.mathworks.com/products/matlab/" > 
+       <font color = "blue">  
+          MATLAB 
+        </font> 
+  
+    </a> 
+    </td>
+    </tr>
+
+
+
+<!-- Reference  38 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 38. </b>  
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.mathworks.com/matlabcentral/fileexchange/30109-opencl-toolbox-v0-17l" > 
+       <font color = "blue">  
+       OpenCL Toolbox v0.17 for MATLAB
+        </font>  
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  39 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 39. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     
+      <a href = "http://www.nag.co.uk/" > 
+          <font color = "blue">  
+        NAG
+        </font>
+      
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  40 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 40. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+    <a href = "http://developer.amd.com/gpu_assets/CAL_Release_Notes.pdf" > 
+      <font color = "blue">  
+       <B>  AMD Compute Abstraction Layer (CAL) Intermediate Language (IL)
+         Reference Manual. Published by AMD. </b>
+        </font> 
+      
+  
+    </td>
+    </tr>
+
+<!-- Reference  41 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 41. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+    <a href = "http://msdn.microsoft.com/en-us/library/hh265137(v=vs.110)" > 
+      <font color = "blue">  
+       <B> C++ AMP (C++ Accelerated Massive Parallelism) </b>
+        </font> 
+      
+  
+    </td>
+    </tr>
+
+
+<!-- Reference  42 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 42. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://blogs.msdn.com/b/nativeconcurrency/" > 
+      <font color = "blue">  
+       <B> C++ AMP for the OpenCL Programmer </b>
+        </font> 
+      
+    </td>
+    </tr>
+
+
+<!-- Reference  43 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 43. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://blogs.amd.com/developer/2011/07/07/" > 
+      <font color = "blue">  
+       <B> C++ AMP for the OpenCL Programmer </b>
+        </font> 
+      
+    </td>
+    </tr>
+
+<!-- Reference  44 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 44. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://icl.cs.utk.edu/graphics/posters/files/SC11-MAGMA.pdf" > 
+      <font color = "blue">  
+       <B> MAGMA SC 2011 Handout</b>
+        </font> 
+      
+    </td>
+    </tr>
+
+<!-- Reference  45 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+          <b> 45. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+       <a href = "http://developer.amd.com/libraries/appmathlibs/pages/default.aspx" > 
+      <font color = "blue">  
+       <B> AMD Accelerated Parallel Processing Math Libraries (APPML) MAGMA </b>
+        </font> 
+      
+    </td>
+    </tr>
+
+
+
+<!-- Reference  46 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 46. </b> 
+      
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>
+     <I> Benedict R Gaster, Lee Howes, David R Kaeli, Perhadd Mistry Dana Schaa </i>
+        Heterogeneous Computing with OpenCL, Elsevier, Moran Kaufmann Publishers, 2011
+     </B>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  47 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+         <b> 47. </b>    
+      </td>
+   
+      <td width="500" height="2" align="left">
+     <B>
+       Programming Massievely Parallel Processors - A Hands-on Approach, </B>
+      <I> David B Kirk, Wen-mei W. Hwu  </i>
+      nvidia corporation, 2010, Elsevier, Morgan Kaufmann Publishers, 2011
+     
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  48 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 48. </b> 
+      
+      </td>
+   
+     </td>
+   
+      <td width="500" height="2" align="left">
+     <B>OpenCL Progrmamin Guide</B>,</i>
+     <I> Aftab Munshi Benedict R Gaster, timothy F Mattson,  James Fung, 
+            Dan Cinsburg</i>, Addision  Wesley, Pearson Education, 2012
+
+    </td>
+    </tr>
+    </a> 
+    </td>
+    </tr>
+
+ 
+<!-- Reference  49 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 49. </b> 
+      
+      </td>
+   
+     </td>
+
+   <td width="500" height="2" align="left">
+        <a href="http://developer.amd.com/tools/gDEBugger/Pages/default.aspx">
+          <font color = "blue">
+       AMD gDEBugger </i>
+    
+        </font> 
+    
+      
+
+    </td>
+    </tr>
+    </a> 
+    </td>
+    </tr>
+
+<!-- Reference  50 -->
+    <tr>
+     <td  valign = "top"  width="15" height="2" align="left"> 
+ 
+         <b> 50. </b> 
+      
+      </td>
+   
+  
+     <td>
+      <a href="http://hsafoundation.com/">
+          <font color = "blue">
+       The HSA (Heterogeneous System Architecture) Foundation </i>
+
+    </td>
+    </tr>
+    </a> 
+    </td>
+    </tr>
+
+<!-- **************** Ref Ends  *************** -->
+
+
+</tbody> </table>
+
+<tr>
+<td>
+   
+ <div align ="right">
+  <a href="#top"><img src="./../hypack13_images/top.gif" valign="right" border="0" width="13" height="13"></a>
+ </div> 
+
+
+    
+</TD></TR></TBODY></TABLE>
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE> 
+
+
+ 
+
+
+</TD></TR></TBODY></TABLE>
+
+     <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+       
+
+        </TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

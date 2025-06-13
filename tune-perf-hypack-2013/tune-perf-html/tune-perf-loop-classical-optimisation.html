@@ -1,0 +1,1653 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK 2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../../index.html">
+          <IMG alt=hypack-2013 src="./../../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+            <A class=menul
+	       href="./../../hypack13-mode01-multicore-lab-overview.html">
+               &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   
+            <A class=menul
+               href="./../../hypack13-mode01-multicore-openmp.html">
+                &#149; OpenMP</A>  
+
+	   <A class=menul  
+              href="./../../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+            
+           <A class=menul
+             href="./../../hypack13-mode01-multicore-pthreads.html">
+             &#149; Pthreads</A>
+              
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-java-threads.html">
+              &#149; Java - Threads</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>         
+        
+           <A class=menul 
+	      href="./../../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+               <!-- ** -->
+	       <A class=menulslct
+	        href="./../../hypack13-mode01-multicore-perf-math-lib.html">
+                &#149; Threads-Perf. Math. Lib. </A>
+               <!-- ** -->
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../../index.html">
+              &#149; Home</A>
+
+      
+<!-- ****************** left section code for about link End  here ************* -->
+	
+<BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+ 
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+              <TBODY>
+
+<!--  content of web page start here  --> 
+
+<TR>
+<TD>
+
+
+   
+<a name= "#math-kernel-prog">   </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+    <B>   Tuning and Performance  on Multi-Core Processors </b> </font></DIV> 
+</TD> 
+</TR> 
+
+<TR>
+ <td height="24" align="left" >
+ <P align=justify> <span class="content" >
+
+  Tuning and Performance of Application Programs using Compiler optimization techniques, 
+  Code restructuring techniques 
+  on Multi-Core Processors is challenging. Understanding Programming Programming Paradigms 
+ (MPI, OpenMP, Pthreads), effective use of right 
+  Compiler Optimization flags and obtaining correct results for given application 
+  is important. Enhance performance and scalability on multiple core processors for given 
+  application with respect to increase in problem size require serious efforts. Several Optimization 
+  techniques are discussed below.
+ </span> </p>
+
+</td> 
+</tr> 
+
+
+</td>
+</tr>
+</TBODY>
+ </TABLE> 
+
+<!-- ********************* Table for title Ends ******************** -->
+
+
+<!-- ***************** Table for Description of Pthread Programs Starts ************* -->
+<p align ="left">
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+    <DIV align=Left><font size="2" Color="black" face= "verdana">
+    <B>  Classical Optimization Techniques </b> </font> </font></DIV> </TD> </TR> 
+
+<br>
+
+
+<!-- *******************  Copy Propagation  Starts  *********************** -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (a). Copy Propagation  </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+  <P align = left> <span class = "content">
+  
+   Consider the following two assignment statements: </span> </p>
+   <blockquote>
+          X = Y <BR>
+          Z = 1. + X <BR>
+   </blockquote>
+
+  <P align = "justify"> <span class ="content">
+  The second statement can't execute unless the first statement is executed but it
+  need not be in that way if we rewrite them in the following way: </span> </p>
+    <blockquote>
+          X = Y <BR>
+          Z = 1. + Y <BR>
+    </blockquote>
+ <P align = "justify"> <span class ="content">
+  This is called propagating a copy of Y. This makes the compiler remove all such 
+  references statements like X = Y if X is not   used in any other following statements and also provide parallelism for     the two instructions resulting in better  performance. 
+
+</span> </p>
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD> 
+ </TR>   
+</tbody>       
+</table>
+
+
+
+<!-- **************** Copy Propagation Ends  *********************** -->
+
+
+<!-- *********************  Constant Folding  Starts  *********************** -->
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+     
+      <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (b). Constant Folding   </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+  <P align = "justify"> <span class ="content">
+  
+   The method used by compiler to trace the expressions where variables can be replaced 
+  by constants to increase the performance is called <I> Constant Folding. </i> Consider 
+   the following piece of program. </span> </p>
+
+  <blockquote>
+
+          PROGRAM MAIN <Br>
+          INTEGER I,K  <BR>
+          PARAMETER (I = 100) <BR>
+          K = 200 <BR>
+          J = I+K  <BR>
+          END  <BR>
+  </blockquote>
+<P align = "justify"> <span class ="content">
+Because I and K are constant individually, J is a constant. The compiler reduces 
+constant expressions like I+K into constants with the technique "Constant Folding". 
+The compiler does through data-flow analysis, if it finds the paths of various
+ expression paths pertaining to a variable in the data-glow graphs leading back 
+to the same value, which is a constant, it replaces all the references to that
+ variable with that constant. This allows the compiler to calculate the value 
+of some expressions at compile-time itself if the expressions contain only 
+constants.
+
+</span> </p>
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ****************** Constant Folding  Ends  ********************-->
+
+
+
+
+<!-- ********************** Dead Code Removal  Starts  ********************* -->
+
+<A NAME="single-core-tune-perf-id11"></A> 
+  <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+        
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (c). Dead Code Removal  </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+  <P align = justify> <span class ="content">
+  
+
+Dead code refers to that part of code, which is never reached while the code is being
+ executed.Dead code comes in following types: </span> </p>
+
+<Blockquote>
+<li>
+Instructions those are unreachable.  </li>
+
+<li> <P align = justify> <span class ="content">
+Instructions that produce results, which are never used. 
+</span> </p>
+ </li>
+
+<li> <P align = justify> <span class ="content">
+These parts are introduced into the code by the programmer and most commonly due to some optimizations
+ used by the compiler.
+</span> </p>
+
+  </li>
+</blockquote>
+
+
+<BR>
+ <P align = justify> <span class ="content">
+In the case of local variables, the compiler gets idea about such parts by analyzing a 
+variable's definitions and uses, the compiler can see whether any other part of the 
+routine references it. It can't tell the fate of variables, which are external 
+or common, so those computations will always be kept (as long as they are reachable).
+ Basing on these factors, the compiler can either remove such statements or 
+can give warning messages on compilation. 
+
+
+</span> 
+</p>
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ***************** Dead Code Removable Ends ******************** -->
+
+
+
+<!-- *********************** Strenght Reduction   Starts ****************** -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+        <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (d). Strength Reduction   </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+<P align = justify> <span class = "content">
+  
+
+Operations or expressions have various time costs associated with them. It is possible
+ to replace a more expensive calculation with a cheaper one, which is called strength 
+reduction, which results in better performance than without the reduction.  For example, 
+the exponentiation operation has the overheads the calling a subroutine and then 
+involves computations like logarithm, multiplication, etc. For low powers, 
+the exponentiation can be replaced by much lesser costly operations like multiplication.
+ i.e. Y = X**2 can be replaced by Y = X*X. Also the multiplications can be replaced 
+by much cheaper additions to improve the performance. <BR> <BR>
+
+One of the compiler-generated optimizations includes peephole optimization: when the
+ compiler crawls through the intermediate code looking for cheap and easy stocking 
+stuffer optimizations. 
+
+
+</span> 
+</p>
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ********************* strenght Reduction   Ends ************************ -->
+
+
+<!-- *****************  Variable Renaming   Starts  ******************** -->
+
+<A NAME="single-core-tune-perf-id11"></A> 
+<table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+  
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (e). Variable Renaming   </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+  <P align = justify> <span class ="content">
+  
+ 
+This is the technique employed by a compiler or at source-code level by the programmer 
+to give parallelism to two or more calculations when it finds that the expressions have
+ the same variable but are independent to each other. Consider the following fragment:
+</span> </p>
+
+<blockquote> 
+          x = y * z; <BR>
+          q = r + x +x; <BR>
+          x = a + b; <BR>
+</blockquote>
+  <P align = justify> <span class ="content">
+When the compiler recognizes that a variable is being recycled, and that its current and former uses 
+are independent, it can substitute a new variable to keep the calculations separate. </span> 
+</p>
+
+<blockquote>
+          x0 = y * z; <BR>
+          q  = r + x0 + x0; <BR>
+          x  = a + b; <BR>
+</blockquote>
+  <P align = justify> <span class ="content">
+Variable Renaming, which provides clarity to the flow of program and also parallelism,
+ can take place both locally, at the basic block level, and globally, as a product of
+ data flow analysis. <BR>
+
+
+</span> 
+</p>
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+
+<br>
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- *************** Variable Renaming Ends  ********************** -->
+
+
+<!-- ****************** Common Sub-expression Starts ********************  -->
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+        
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (f). Common Sub-expression Elimination  </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+ <P align = justify> <span class ="content">
+  
+
+Sub-expressions are pieces of expressions. For instance, A + B is a sub expression of C * (A + B). 
+If A + B appears in several places, like it does below, we call it a common sub expression:
+<BR>
+
+<blockquote>
+
+          D = C * (A + B)
+          E = (A + B)/2
+
+</blockquote>
+<P align = justify> <span class ="content">
+Rather than calculate A and B twice, the compiler can generate a temporary variable and use it wherever
+ A + B is required. <BR>
+
+<blockquote>
+
+          temp = A + B
+          D = C * temp
+          E = temp/2
+</blockquote>
+<P align = justify> <span class ="content">
+Information about expressions can be collected during data-flow analysis along with variable 
+use/definition information. By examining both together, the compiler can detect which sub-expressions 
+reach which basic blocks, and whether any of the variables within them have been registered. 
+This is not applicable if two sub-expressions are there in form of A + B + C and B + C + A. The same 
+is applied when more than one references are present to the same array element without any modifications
+ done to the element.
+</span> 
+</p>
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ******************** Common Sub-Expression Ends ******************** -->
+
+
+<!-- ************************ Loop Invariant  Motion  Starts  ********************** -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <p> <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+      
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (g). Loop Invariant Code Motion  </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+<P align = justify> <span class ="content">
+  
+
+The expressions that do not change on entrance into a loop are called Loop Invariant Expressions. These 
+include the expressions that are unnecessarily being executed inside a loop although it is not 
+required for such expressions to be executed for more than one time outside the loop. From use/definition 
+information on the associated basic blocks of the loops, we can identify expressions containing 
+variables that are unchanging.  The act of moving the repeated, unchanging calculations to the 
+outside is called Loop Invariant code motion.
+
+</span> 
+</p>
+</ul>
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ******************* Loop Invariant Motion  Ends ********************* -->
+
+
+
+<!-- ***************** Induction Variable Simplification  Starts **************** -->
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+     
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (h). Induction Variable Simplification   </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+<P align = justify> <span class ="content">
+  
+The variables, which are repeatedly assigned values as a function of iteration number in each iteration of a 
+loop, are called Induction Variables. Elimination of such variables or simplification of expressions related to such 
+variables can help reduce some computations in the loop and result in better performance.  Consider the following 
+loop with K as induction variable: </span> 
+</p>
+<blockquote>
+
+
+          Do 10 I = 1,N <BR>
+          &nbsp; &nbsp;  K = I*4 + M <BR>
+      10 CONTINUE <BR>
+</blockquote>
+<P align = justify> <span class ="content">
+Induction variable simplification replaces calculations for variables for variables like K with simpler ones.
+ Given a starting point and the expression's first derivative, you can arrive at K's value for the nth iteration by 
+stepping through the n-1 intervening iterations: </span> 
+</p>
+
+<blockquote>
+
+          K = M <BR>
+          DO 10 I = 1,N <BR>
+          &nbsp; &nbsp; K = K + 4 <BR>
+     10 CONTINUE <BR>
+</blockquote>
+<P align = justify> <span class ="content">
+Induction variable simplification is especially useful on processors that can automatically increment a 
+register each time it is used as a pointer for a memory reference. While stepping through a loop, the memory reference
+ and the address arithmetic can both be squeezed into a single instruction-a great savings. <BR>
+
+
+</span> 
+</p>
+</ul>
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD> 
+ </TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ************** Induction Variable Simplication  Ends *************** -->
+
+
+
+<!-- ************** Register Variable detection Starts  ************** -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+     
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (i). Register Variable detection   </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+  <P align = justify> <span class = "content">
+  
+
+On many older CISC processors there were few general-purpose registers. Because many of the instruction 
+formats could operate directly on memory locations, you could choose to leave the less critical variables 
+out in main 
+memory and bring the more important ones into registers. On RISC designs, there are often many more registers
+ to choose
+ from, and everything has to be brought into a register anyway. This means that, for at least a little while,
+ all variables 
+will be register resident. <BR> <BR>
+
+The variables, which are more frequently accesses, can be kept in registers to avoid frequent memory 
+loading and unloading to result in better performance. To determine which variables should be resident, 
+the compiler has to 
+examine how frequently each appears to be used, and whether the uses are independent of each other. 
+This information
+ comes from data flow analysis.
+</span> </p>
+
+</ul>
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- ****************** Register Variable detection  Ends  *************** -->
+
+
+<!-- ******************* Arithmetic Optimizations: Starts ******************* -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+       
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (j). Arithmetic Optimizations  </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   
+<TR>
+<TD>
+<ul>
+<BR>
+
+<P align = justify> <span class = "content">
+
+ Arithmetic Optimizations: Many of the optimizations performed on programs compiled with best compilers 
+can be seen as arithmetic optimizations because computer architecture is frequently used for numerically intensive 
+applications. </span> </p>
+
+<blockquote>
+<P align = justify> <span class = "content">
+
+<b> Strength Reduction: </b> Sometimes it's possible to replace a more expensive calculation with a cheaper one. 
+Strength reduction reduces the computation costs of an operation while providing mathematically identical results. 
+Expensive operations, taking perhaps hundreds of machine cycles, can be replaced by a cheaper alternative, paying a lower cost :
+ exponentiations and divisions can be translated into multiplications, multiplications into sums. However, most compilers
+ automatically perform these optimizations. <BR> <BR>
+
+
+<b> Data Type Conversions: </b> The type and precision of a data value determine the amount of storage required to 
+contain the value and the way in which the value can be operated on and has significant effect on performance. Statements 
+that contain runtime type conversions suffer a performance penalty each time the statement is executed. <BR> <BR>
+
+<b> Common Sub-expression Elimination: </b> If a sub-expression appears at several places, it's called a common 
+sub-expression. Detect repeated patterns in the code and replace all but one with a temporary variable. This eliminates 
+the need for computing the same value repeatedly.
+</span> </p>
+</blockquote>
+
+
+</ul>
+
+
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+</TD>  
+</TR>   
+</tbody>       
+</table>
+
+
+
+<!-- *********************** Arithmetic Optimizations: Ends  ******************** -->
+
+
+
+<!-- ***************** Inlining Starts  ***************************** -->
+
+
+<A NAME="single-core-tune-perf-id11"></A> 
+ <p> <table border="0"  height="6">
+  <tbody>
+      
+ 
+     <TR ALIGN=LEFT> 
+      <TD height="90%">
+       
+          <FONT COLOR = face="Arial" size="2" "#FF6600">
+        <B> (k). Inlining  </B></FONT> </B>
+
+</TD> 
+</TR>
+</font>
+
+   <TR>
+<TD>
+<ul>
+<BR>
+
+ <P align = justify> <span class = "content">
+  
+(k) Inlining: Function inlining replaces a call to a function or a subroutine with the body of the function
+ or subroutine. This can speed up execution by eliminating parameter passing and function/subroutine 
+call and return 
+overhead. It also allows the compiler to optimize the function with the rest of the code. Using function 
+inlining 
+indiscriminately can result in much larger code size and no increase in execution speed.
+
+</span> 
+</p>
+</ul>
+
+</TD>  </TR>   
+</tbody>       
+</table>
+
+
+<!-- *************** Inlining  Ends ********************** -->
+<DIV ALIGN=right>
+ <a href="#top"><img src="../../hypack13_images/top.gif" align="right" border="0" width="13" height="13" ></a>
+</DIV>
+<br>
+
+</TD>
+</TR>
+ <!--  content of web page End here  --> 
+ 
+          
+</TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
+

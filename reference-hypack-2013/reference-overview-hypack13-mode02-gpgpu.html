@@ -1,0 +1,2308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index".html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+               Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+                Memory Allocators</A>
+   
+          <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+                OpenMP</A>
+
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+               Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+               Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+               Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+               Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+               Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+               MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+               MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+               MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+               Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+               Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+               Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+               Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+               PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+               Power-Perf.   </A>
+ 
+               <!-- ** -->  
+              <A class=menulslct
+	        href="./reference-overview-hypack13-mode02-gpgpu.html">
+                  Reference</A>
+              <!-- ** -->
+ 
+          <A class=menul 
+	      href="./../index.html">
+               Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+		
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+<!-- ************************ Heading Multi-Core Benchmarks Here ****************** -->
+
+
+<TR>
+<TD>
+
+
+
+<A name = "gpgpu-gpu-comp-prog-ref"> </A>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on GPUS : GPGPUs /GPU Computing  : References & Web sites </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+ 
+  <table border="0"  height="6">
+   <tbody>
+   
+ <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-01].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+     Randi J. Rost, OpenGL \96 shading Language, Second Edition, Addison Wesley 2006 </font>
+       
+       
+    </td>
+    </tr> 
+       
+ <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-02].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+     GPGPU Reference <A href ="http://www.gpgpu.org" >  <font color ="blue" > http://www.gpgpu.org  </font> </a>   </font>
+       
+     
+    </td>
+    </tr> 
+
+ <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-03].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+     NVIDIA  <A href ="http://www.nvidia.com" >  <font color ="blue" > http://www.nvidia.com  </font> </a>   </font>
+       
+     
+    </td>
+    </tr> 
+
+  <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-04].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+     NVIDIA  Tesla <A href ="http://www.nvidia.com/object/tesla_computing_solutions.html" >  
+   <font color ="blue" > http://www.nvidia.com/object/tesla_computing_solutions.html  </font> </a>   </font>
+       
+       
+    </td>
+    </tr> 
+
+  <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-05].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+     CUDA sample source code:  <A href ="http://www.nvidia.com/object/cuda_get_samples.html" >  
+   <font color ="blue" > http://www.nvidia.com/object/cuda_get_samples.html   </font> </a>   </font>
+       
+      
+    </td>
+    </tr> 
+ <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-06].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+     AMD Stream Processors  <A href ="http://ati.amd.com/products/streamprocessor/specs.html" >  
+   <font color ="blue" > http://ati.amd.com/products/streamprocessor/specs.html   </font> </a>   </font>
+       
+        
+    </td>
+    </tr> 
+
+ <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-07].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    OpenCL - The open standard for parallel programming of heterogeneous systems
+   <A href ="http://www.khronos.org/opencl" >  
+   <font color ="blue" > http://www.khronos.org/opencl   </font> </a>   </font>
+       
+      
+    </td>
+    </tr>
+
+  <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-08].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    List of NVIDIA GPUs compatible with CUDA:f heterogeneous systems
+   <A href ="http://www.nvidia.com/object/cuda_learn_products.html " >  
+   <font color ="blue" > http://www.nvidia.com/object/cuda_learn_products.html    </font> </a>   </font>
+       
+     
+    </td>
+    </tr>
+
+
+   <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-09].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    RAPIDMIND
+   <A href ="http://www.rapidmind.net" >  
+   <font color ="blue" > http://www.rapidmind.net </font> </a>   </font>
+       
+     
+    </td>
+    </tr>
+
+   <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-10].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    Peak Stream - Parallel Processing (Acquired by Google in 2007) 
+   <A href ="http:/www.google.com " >  
+   <font color ="blue" > http:/www.google.com  </font> </a>   </font>
+  
+    </td>
+    </tr>
+
+  <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-11].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    guru3d.com 
+   <A href ="http://www.guru3d.com/news/sandra-2009-gets-gpgpu-support/ " >  
+   <font color ="blue" > http://www.guru3d.com/news/sandra-2009-gets-gpgpu-support/   </font> </a>   </font>
+       
+   
+    </td>
+    </tr>
+
+
+  <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-12].  </font>   </td>
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+        NVIDIA, NVIDIA CUDA, Programming Guide, v. 2.3, NVIDIA Corporation (2009). </font>
+       
+     
+    </td>
+    </tr> 
+   
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" >
+   [GPUComp-02].  <BR> </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+  	<a href =" http://www.nvidia.com/object/cuda_home.html">
+       <font color = "blue"> CUDA Zone - http://www.nvidia.com/object/cuda_home.html </font> </a> </font>
+
+     </td>
+     </tr>
+
+      <tr>
+     <td width="12%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-13]. </font>   </td>
+
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    	J. D. Owens, D. Luebke, N. Govindaraju, M. Harris, J. Kruuger, A. E Lefohn, T. J. Purcell, 
+       A Survey of General-Purpose Computation on Graphics Hardware, Computer Graphics Forum (2007), Vol 26, pages 80 - 113s
+  
+        </font>  
+    </td>
+    </tr> 
+
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font face="Verdana" size="2"> [GPUComp-14].  </font>   </td>
+
+     <td width="88%" height="2" valign="top">
+       <font face="Verdana" size="2">
+    	M. Harris, Optimizing NVIDIA CUDA, Presentation at AstroGPU conference (2007). </font>
+ 
+       
+    </td>
+    </tr> 
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [GPUComp-15].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+   G. Ruestch, P. Micikevicius, Optimizing Matrix Transpose in CUDA, Tech report, NVIDIA Corporation (2009). </font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-16]. </font>    </td>
+
+     <td width="88%" height="2" valign="top>
+       <FONT face="Verdana" size="2", class="content" > 
+      	GPU Gems book series (available online), GPU Gems:
+        <A href =" http://developer.nvidia.com/object/gpu_gems_home.html"> 
+         <font color = "blue"> http://developer.nvidia.com/object/gpu_gems_home.html </font> </a> <BR>
+
+        <A href =" http://developer.nvidia.com/object/gpu_gems_2_home.html"> 
+          <font color = "blue">  http://developer.nvidia.com/object/gpu_gems_2_home.html </font> </A> <BR>
+
+        <A href =" http://developer.nvidia.com/object/gpu-gems-3.html">
+         <font color = "blue"> http://developer.nvidia.com/object/gpu-gems-3.html</font> </a>
+    </font>
+
+     </td>
+     </tr>
+
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-17]. </font>   
+     </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+    G. Ruestch, P. Micikevicius, Optimizing Matrix Transpose in CUDA, Tech report, NVIDIA Corporation (2009).
+   </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content"> [GPUComp-18].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+     M. Harris, Parallel Prefix Sum (Scan) with CUDA, Tech report, NVIDIA Corporation (2008).  </font>
+
+     </td>
+     </tr>
+
+   
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-19].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+     	N. Sathish, M. Harris, M. Garland, Designing Efficient Sorting Algorithms for Many-core GPUs, Tech report,
+   NVIDIA Corporation (2008). </font>
+     
+     </td>
+     </tr>
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-20]. </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+     	J. Meng, K. Skadro, Performance Modeling and Automatic Ghost Zone Optimization for Iterative Stencil Loops on GPUs,
+          ICS \9209: Proceedings of the 23<sup>rd</sup> international conference on Supercomputing (2009), 256 - 265.</font>
+     
+     </td>
+     </tr>
+
+
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-21].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+   M. Harris, GPU Gems: Chapter 38 - Fast Fluid Dynamics Simulation on the GPU, GPU Gems: Programming Techniques, Tips
+  and Tricks for Real-Time Graphics - NVIDIA Corporation (2007). </font>
+     
+     </td>
+     </tr>
+ 
+    
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-22].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+  P. Micikevicius, 3D Finite Difference Computation on GPUs using CUDA, Tech report, NVIDIA Corporation (2009). </font>
+     </td>
+     </tr>
+
+
+
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-23]. </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+ 	M. Bader, H-J. Bungartz, D. Mudigere, S. Narasimhan, B. Narayanan, 
+         Optimized CUDA Implementation of a Navier-Stokes based flow solver for the 2D Lid Driven Cavity,
+        poster at the NVIDIA GPU research summit (2009).</font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">  
+    <font  face="Verdana" size="2", class="content" > [GPUComp-24].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+    J. M. Cohen, M. J. Molemaker, A Fast Double Precision CFD Code using CUDA, Tech report, NVIDIA Corporation (2009).</font>
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content" > [GPUComp-25]. </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" > 
+  M. Harris, Parallel Prefix Sum (Scan) with CUDA, Tech report, NVIDIA Corporation (2008).   </font>
+     </td>
+     </tr>
+
+
+   
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-26].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    RAPIDMIND & AMD <A href ="  http://www.rapidmind.net/News-Aug4-08-SIGGRAPH.php ">
+         <font color = "blue">  http://www.rapidmind.net/News-Aug4-08-SIGGRAPH.php </font> </a></font>
+
+     </td>
+     </tr>
+ 
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-27].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Merrimac - Stream Architecture Standford Brook for GPUs 
+
+   <A href =" http://www-graphics.stanford.edu/projects/brookgpu/ ">
+         <font color = "blue">  http://www-graphics.stanford.edu/projects/brookgpu/ </font> </a></font>
+
+     </td>
+     </tr>
+
+ 
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-28].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Standford : Merrimac - Stream Architecture 
+
+   <A href =" http://merrimac.stanford.edu/  ">
+         <font color = "blue">  http://merrimac.stanford.edu/  </font> </a></font>
+
+     </td>
+     </tr>
+
+
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-29].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+       ATI RADEON - AMD  
+
+   <A href ="http://www.canadacomputers.com/amd/">
+         <font color = "blue">  http://www.canadacomputers.com/amd/radeon/  </font> </a></font>
+
+     </td>
+     </tr>
+
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-30].  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      Sparse Matrix Solvers on the GPU ; conjugate Gradients and Multigrid by Jeff Bolts, Ian Farmer, Eitan Grinspum, 
+       Peter Schroder, Caltech Report (2003); Supported in part by NSF, NVIDIA</font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-31].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Scan Primitives for GPU Computing by Shubhabrata Sengupta, Mark Harris*, Yao Zhang and John
+      D Owens University of California Davis & *nVIDIA Corporation Graphic Hardware (2007). </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-32].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Scan Primitives for GPU Computing by Shubhabrata Sengupta, Mark Harris*, Yao Zhang and John
+      D Owens University of California Davis & *nVIDIA Corporation Graphic Hardware (2007). </font>
+
+     </td>
+     </tr>
+
+    
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-33].   <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      Scan Primitives for GPU Computing by Shubhabrata Sengupta, Mark Harris*, Yao Zhang and John
+      D Owens University of California Davis & *nVIDIA Corporation Graphic Hardware (2007). </font>
+
+     </td>
+     </tr>
+ 
+   
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-34].   <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      Bollz J., Farmer I., Grinspun F., Schroder F : Sparse Matris Solvers on the GPU ; 
+    Conjugate Gradients and multigrid ACM Transactions on Graphics (Proceedings of ACM SIGRAPH 2003) 22, 2 (Jul y2003) 
+    pp 917-924 Graphic Hardware (2007). </font>
+
+     </td>
+     </tr>
+ 
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-35].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     Number crunching with GPUs PeakStream Math API Exploits Parallelism in Graphics Processors, Ocotober 2006; 
+    Microprocessor
+       <A href =" http://www.mdronline.com ">
+         <font color = "blue">  http://www.mdronline.com </font> </a></font>
+   
+
+     </td>
+     </tr>
+ 
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-36].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Tom R. Halfhill, Parallel Processing with CUDA Nvidia's High-Performance Computing Platform Uses Massive Multithreading ; 
+  Microprocessors, Volume 22, Archive 1, January 2008
+       <A href =" http://www.mdronline.com ">
+         <font color = "blue">  http://www.mdronline.com </font> </a></font>
+     
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-37].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    I. Buck, T. Foley, D. Horn, J. Sugerman, K. Fatahalian, M. Hoston, P.Hanrahan, Brook for GPUs ; Stream Computing 
+     on GRaphics Hadrware, ACM Tran. GRaph (SIGGRAPH) 2008 </font>
+   
+     </td>
+     </tr>
+ 
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-38].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      J. Kriiger, R. Wetermann, Linear Algeria operators for GPU implementation of Numerical Algorithms 
+       ACM Tran, Graph (SIGGRAPH) 22 (3) pp. 908-916. (2003)  </font>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-39].   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      Tutorial SC 2007   : High Performance Computing with CUDA  </font>
+
+     </td>
+     </tr>
+
+
+     <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-40].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      FASTRA 
+       <A href =" http://www.fastra.ua.ac.be/en/faq.html ">
+         <font color = "blue">  http://www.fastra.ua.ac.be/en/faq.html </font> </a></font>
+ 
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-41].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      AMD Stream Computing software Stack 
+       <A href =" http://www.amd.com ">
+         <font color = "blue">  http://www.amd.com </font> </a></font>
+
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-42].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+      BrookGPU : 
+       <A href =" http://graphics.stanford.edu//projects/brookgpu/index.html">
+         <font color = "blue">  http://graphics.standafrod.edu/projects/brookgpu/index.html </font> </a></font>
+   
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-43].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     Tom R Halfhill, Intel\92s Larrabee Redefines GPUs \96 Fully Programmable  Many core Processor 
+     Reaches Beyond Graphics,  Microprocessor Report September 29, 2008
+     </font>
+
+     </td>
+     </tr>
+
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-44].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Tom R Halfhill AMD\92s Stream Becomes a River \96 Parallel Processing Platform for ATI GPUs Reaches  More Systems,
+    Microprocessor Report  December  2008
+     </font>
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-45].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     General-purpose computing on graphics processing units (GPGPU)  
+       <A href ="http://en.wikipedia.org/wiki/GPGPU">
+         <font color = "blue">  http://en.wikipedia.org/wiki/GPGPU </font> </a></font>
+   
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-46].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     Khronous Group, OpenGL 3, December 2008
+       <A href ="http://www.khronos.org/opencl">
+         <font color = "blue">  http://www.khronos.org/opengl</font> </a></font>
+   
+     </td>
+     </tr>
+
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-47].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     Perry H. Wang1, Jamison D. Collins1, Gautham N. Chinya1, Hong Jiang2, Xinmin Tian3 ,
+   EXOCHI: Architecture and Programming Environment for A Heterogeneous Multi-core Multithreaded System, 
+    PLDI\9207</font>
+   
+     </td>
+     </tr>
+
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-48].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     Daniel Weiskopf, Basics of GPU-Based Programming,  Institute of Visualization and Interactive Systems, 
+     Interactive Visualization of Volumetric Data on Consumer PC Hardware: Basics of Hardware-Based Programming 
+    University of Stuttgart, VIS 2003 </font>
+   
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-48].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+        GPU Programming Languages <A href ="http://www.cis.upenn.edu/~suvenkat/700/">
+         <font color = "blue">  http://www.cis.upenn.edu/~suvenkat/700/ </font> </a></font>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-49].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       OpenGL design  <A href ="http://graphics.stanford.edu/courses/cs448a-01-fall/design_opengl.pdf ">
+         <font color = "blue">  http://graphics.stanford.edu/courses/cs448a-01-fall/design_opengl.pdf  </font> </a></font>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-50].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       OpenCL - The open standard for parallel programming of heterogeneous systems   
+       <A href ="http://www.khronos.org/opencl ">
+       <font color = "blue">  http://www.khronos.org/opencl   </font> </a></font>
+
+     </td>
+     </tr>
+
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-51].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       Mary Fetcher and Vivek Sarkar, Introduction to GPGPUS \96 Seminar on Heterogeneous Processors, 
+    Dept. of computer Science, Rice University, October 2007</font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-52].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       C-DAC Technology Workshops PEEP-2008 &amp; OPECG-2009
+    <a href = "http://www.cdac.in/"> <font color = "blue"> http://www.cdac.in </font> </a> </font>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-53].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       NVIDIA CUDA Quick Start Guide 2007-2009
+    <a href = "http://www.nvidia.com/object/cuda_develop.html"> <font color = "blue">
+               http://www.nvidia.com/object/cuda_develop.html </font> </a> </font>
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-54].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       NVIDIA OpenCL Best Practices Guide Version 1.0 August 2009
+    <a href = "http://www.nvidia.com"> <font color = "blue"> http://www.nvidia.com </font> </a> </font>
+
+     </td>
+     </tr>
+
+  <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-55].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       NVIDIA OpenCL Getting Started  Guide Version  2009
+    <a href = "http://www.nvidia.com"> <font color = "blue"> http://www.nvidia.com </font> </a> </font>
+
+     </td>
+     </tr>
+
+
+  <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-56].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       NVIDIA OpenCL Programming Guide for the CUDA Architecture Version 2.3  August  2009
+    <a href = "http://www.nvidia.com"> <font color = "blue"> http://www.nvidia.com </font> </a> </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-57].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       NVIDIA OpenCL JumpStart Guide Technical Brief  Version 0.9 April 2009
+    <a href = "http://www.nvidia.com"> <font color = "blue"> http://www.nvidia.com </font> </a> </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-57].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+      The OpenCL  Specification version 1.0, Published by Khronous OpenCL Working Group, ed. : <i> Aftab Munshi </i> 2009
+    <a href = "http://www.khronos.org/registry/cl"> <font color = "blue"> http://www.khronos.org/registry/cl </font> </a> </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-58].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Programming Guide 
+     AMD - ATI Stream Computing - Compute Abstraction Layer (CAL) March 2010
+    <a href = "http://www.amd.com"> <font color = "blue"> http://www.amd.com</font> </a> </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-59].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+     AMD - ATI Stream 
+    <a href = "http://www.amd.com/stream"> <font color = "blue"> http://www.amd.com/stream</font> </a> </font>
+
+     </td>
+     </tr>
+    
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-60].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    Programming Guide - 
+     AMD - ATI Stream Computing - OpenCL March 2010
+    <a href = "http://www.amd.com/stream"> <font color = "blue"> http://www.amd.com/stream</font> </a> </font>
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-61].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+     AMD - ATI Stream Developer Forum
+    <a href = "http://www.amd.com/streamdevforum"> <font color = "blue"> http://www.amd.com/streamdevforum</font> </a> </font>
+
+     </td>
+     </tr>
+
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-62].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+    OpenGL Programming Guide 
+    <a href = "http://www.glprogramming.com/red/"> <font color = "blue"> http://www.glprogramming.com/red/</font> </a> </font>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-63].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+    GPGPU
+    <a href = "http://www.gpgpu.org"> <font color = "blue"> http://www.gpgpu.org </font> </a> 
+    &nbsp; &nbsp; Standford discusison forum 
+      <a href = "http://www.gpgpu.org/forums/"> <font color = "blue"> http://www.gpgpu.org/forums/ </font> </a> 
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-64].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+    Techncial Notes  -ATI Stream SDK V2.01 Performance and Optimization
+   
+      <a href = "http://www.amd.com/stream"> <font color = "blue"> http://www.amd.com/stream </font> </a> 
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-65].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+   Microsoft DirectX Reference Web site
+    
+      <a href = "http://www.msdn.microsoft.com/en-us/directx"> <font color = "blue"> http://www.msdn.microsoft.com/en-us/directx </font> </a> 
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-66].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+   I. Buck, T. Foley, D. Horn, J. Sugerman, K. Fatahalian, M. Houston, and P.
+   Hanrahan, \93Brook for GPUs: stream computing on graphics hardware,\94 ACM
+   Trans. Graph., vol. 23, no. 3, pp. 777\96786, 2004 </font>  
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-67].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       Buck, Ian; Foley, Tim; Horn, Daniel; Sugerman, Jeremy; Hanrahan, Pat;
+       Houston, Mike; Fatahalian, Kayvon. \93BrookGPU\94
+  <a href ="http://graphics.stanford.edu/projects/brookgpu/"> <font color = "blue">
+    http://graphics.stanford.edu/projects/brookgpu/ </font> </a> </font>
+
+     </td>
+     </tr>
+
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-68].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    ATI Compute Abstraction Layer (CAL) Intermediate Language (IL) Reference
+    Manual. Published by AMD. </font>
+
+     </td>
+     </tr>
+
+  <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-69].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       CAL Image. ATI Compute Abstraction Layer Program Binary Format
+       Specification. Published by AMD.</font>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-70].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       Kernighan Brian W., and Ritchie, Dennis M., The C Programming Language,
+       Prentice-Hall, Inc., Upper Saddle River, NJ, 1978.</font>
+
+     </td>
+     </tr>
+
+
+  <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-71].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     Computational Methods for Tomography - Medical Image Processing
+       <a href ="http://www.fastra.ua.ac.be"> <font color = "blue"> http://www.fastra.ua.ac.be </font> </a>
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-72].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       <B> GPU Gems 3 : </b> Chapter 37 Efficient Random Number Generation and ApplciationUsing CUDA
+         Lee Howes, David Thomas, Imperial College London  </font>
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-73].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     NVIDIA's Fermi : The First Complete GPU Computing Architecture,  A white paper by Peter N Glasowsky (Prepared under 
+    contract ith NVIDIA Coporation), September 2009
+
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-74].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       White Paper Loking Beyond Graphics - NVIDIA's NExt-Generation CUDA Compute and Graphics Architecture,
+       Code-Named Fermi, Adds Nuslce fo Parallel Computing  Analyst : Tom R HalfHill, September 2009
+      Sponsored by NVIDIA <BR>
+        <A href =" http://www.instar.com"> <font color = "blue"> http://www.in.star-com </font> </a>
+
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-75].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+    
+       White Paper Loking Beyond Graphics - NVIDIA's NExt-Generation CUDA Compute and Graphics Architecture,
+       Code-Named Fermi, Adds Nuslce fo Parallel Computing  Analyst : Tom R HalfHill, September 2009
+      Sponsored by NVIDIA <BR>
+        <A href =" http://www.in-star.com"> <font color = "blue"> http://www.in.star-com </font> </a>
+
+     </td>
+     </tr>
+
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-76].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+       Director, Parallel Computing Research Laboratory (Par Lab), U.C. Berjeley
+       The top 10 Innovations in the New NVIDIA Fermi Architecture, and the Top 3 Next Challenges,
+       September 30, 2009 (NVIDIA is one of eight sponsors of the Par. Lab.
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-77].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+       The Protland Group - CUDA Fortran Programming Guide and Reference Published November 2009 <BR>
+  <a href =" http://www.pgroup.com/resources/accel.htm"> <font color = "blue"> http://www.pgroup.com/resources/accel.htm  </font> </a>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-78].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     The Portland Grpup - PGI Accelerator Compilers - CUDA enabled NVIDIA GPUs
+      <a href =" http://www.pgroup.com/resources/accel.htm"> <font color = "blue"> http://www.pgroup.com/resources/accel.htm  </font> </a>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-79].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+     GPU Computing Solutions - NVIDIA Tesla  &amp; CUDA
+      <a href =" http://www.nvidia.com/tesla"> <font color = "blue"> http://www.nvidia.com/tesla </font> </a> <BR>
+       <a href =" http://www.nvidia.com/cuda"> <font color = "blue"> http://www.nvidia.com/cuda </font> </a> <BR>
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-80].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  Nvidia CUDA :Practical uses - BeHardwaqre, DAmien Triolet Aug 2007 
+      <a href =" http://www.behardware.com/art/lire/678/"> <font color = "blue"> http://www.behardware.com/art/lire/678/ </font> </a> <BR>
+       
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-81].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+   Sain-Zee Ueng, Melvin Lathara, Sara S BAghsorkhi, and Wen-mei W Hwu
+
+    CUDA-lite : Reducing GPU Programming Complexity, Center for Reliable and High-Performance Computing 
+    Dept of Electrical &amp; CVomp. Engg, Univ of Illinois at Urbana-Champagin
+  
+       
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-82].    </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+   Yao Zgang Jonathan Cohen, John D Owens
+   Fast Tridiagonal Solvers on the GPU 
+    University  of California, Davis, Nvidia  
+       
+     </td>
+     </tr>
+
+ <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-83]  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  Bharatkumar Sharma,Rahul Thota,Naga Vydyanathan,and Amit Kale
+   Towards a Robust,Real-time Face Processing System using CUDA-enabled GPUs
+   Siemens Corporate Techchnology Banglore,India
+     </td>
+     </tr>
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-84]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  kishore Kothapalli Rishabh,Mukherjee,M.Suhail Rehman,Suryakant Patidar,P.J.Narayanan,Kannan  Srinathan
+   A Performance Prediction Model for the CUDA GPGPU Platform 
+International Institute of Information Technology,Hyderabad,India
+
+     </td>
+     </tr>
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-85]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  John Nickolls,Ian Buck and Michael Garland,NVIDIA,Kevin Skadronn
+   Scalable Parallel Programming
+Scalable Parallel Programming
+
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-86]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  N.P.Karunadasa & D.N.Ranasinghe
+   On the comparative Performance of Parallel Algorithms on Small GPU/CUDA Clusters
+   University of Colombo School of Computing,Srilanka
+  
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-87]  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  Michael Bader,Hans-Joachim Bungartz,Dheevatsa, Srihari Narasimhan,Babu Narayanan
+   Fast GPGPU Data Rearrangement kernels using CUDA
+   Technische universitat Munchen,Munich,Germany, GE Global Research,JFWTC,Bangalore,India
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-88]  </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  M.Sussman,W.Crutchfield and M.Papakinos
+   Pseudorandom Number Generation on the GPU
+   PeakStream,Inc.,Redwood City,CA,USA
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-89]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <FONT face="Verdana" size="2", class="content" >
+  W.B.Langdon
+   A Fast High Quality Pseudo Random Number Generator for nVidia CUDA
+   Department of Computer Science,CREST Centre,King's College,London,WC@R 2LS,UK
+  
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-90]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+  Sara S.Baghsorkhi, Matthieu Delahaye, Sanjay J.atel, William D.Gropp.Wen-mei W.Hwu
+  An Adaptive Performance Modeling Tool for GPU Architectures
+   University of Illionois at Urbana-Champaign,UrbanamIL 61801
+ </span> </p> 
+     </td>
+     </tr>
+
+  <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-91]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+  David B. Kirk Wen-mei W. HWu
+  Programming Massively Parallel Processors  - A Hands-on Approach
+  Morgan Kaufmann Publishers, 2010
+ </span> </p> 
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-92]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+  Dheevatsa Mudigere, <I> Data access optimized applicatios on the GPU using NVIDIA CUDA</i>,
+ Thesis -  Master of Science in Computational Science and Engineering, TECHNISCHE UNIVERSITY MUNCHEN,Germany ,October 2009
+ </span> </p> 
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-93]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+  Dheevatsa Mudigere (Technischen Universit\E4t M\FCnchen (TUM), Munich, Germany, DE) 
+ <I> Fast GPGPU Data Rearrangement Kernels using CUDA </i>,
+  Student Research Symosium, International Conference HiPC-2009,  
+  <a href ="http://www.hipc.org"> <font color ="blue">  HiPC</font></a>, Kochi, (Kerla,India), December 2009
+ </span> </p> 
+     </td>
+     </tr>
+ 
+  <tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-94]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+        Khronos Group (2009). The OpenCL Specification Version 1.0. Beaverton, OR: Khronos Group             <a href="http://www.khronos.org/registry/cl/specs/opencl-1.0.29.pdf"> 
+        <font color ="blue"> http://www.khronos.org/registry/cl/specs/opencl-1.0.29.pdf </font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+<!------divya---------->
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-95]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+Message Passing Interface Forum. (2009). MPI: A Message-Passing Interface Standard, Version 2.2. Knowville: University of Tennessee. 
+  <a href="http://www.mpi-forum.org/docs/mpi-2.2/mpi22-report.pdf"> 
+        <font color ="blue"> http://www.mpi-forum.org/docs/mpi-2.2/mpi22-report.pdf</font> </a>
+                                   
+ </span> </p> 
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-96]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+        OpenMP Architecture Review Board. (2005). OpenMP Application Program Interface. 
+  <a href="http://www.openmp.org/mp-documents/spec25.pdf"> 
+        <font color ="blue"> http://www.openmp.org/mp-documents/spec25.pdf</font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-97]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+        Buck, I., Foley, T., Horn, D., Sugerman, K., Fatahlian, K., Houston, M., et al. (2004). Brooks for GPUs: Stream computing on graphics hardware.
+ ACM Transaction on Graphics, 23(3), 777-786
+  <a href="http://doi.acm.org/10.1145/1186562.1015800"> 
+        <font color ="blue"> http://doi.acm.org/10.1145/1186562.1015800</font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-98]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+      Fernanco, R. (Ed.), GPU gems: Programming techniques, tips, and tricks for realtime graphics. Reading, MA: Addison-Wesley 
+  <a href="http://developer.nvidia.com/object/GPU_Gems_Home.html"> 
+        <font color ="blue"> http://developer.nvidia.com/object/GPU_Gems_Home.html</font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-99]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+ Nickolls, J., Buck, I., Garland M., & Skadron, K. (2008). Scalable parallel programming with CUDA. ACM Queue, 6(2), 40-53.
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-100]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+NVIDIA. (2007b), NVIDIA computer-PTX: Parallel thread execution, ISA Version 1.1
+<a href="http://nvidia.com/object/io_1195170102263.html"> 
+        <font color ="blue"> http://nvidia.com/object/io_1195170102263.html</font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-101]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+NVIDIA. (2009). CUDA Zone 
+<a href="http://www.nvidia.com/CUDA"> 
+        <font color ="blue"> http://www.nvidia.com/CUDA</font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-102]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+Segal, M., & Akeley, K. (2006). The OpenGL\AE graphics system: A specification, Version 2.1. Mountain View, CA: Silicon Graphics <BR>
+<a href="http://www.opengl.org/documentation/specs/"> 
+      <font color ="blue"> http://www.opengl.org/documentation/specs/</font> </a>
+ </span> </p> 
+     </td>
+     </tr>
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-103]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+Sengupta, S., Harris M., Zhang, Y., & Owens, J. D. (2007). Scan primitives for GPU  computing. 
+In T. Aila & M. Segal (Eds.), Graphics hardware (pp. 97-106). San Diego, CA: ACM Press.
+ </span> </p> 
+     </td>
+     </tr>
+
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-104]   </font>    </td>
+
+     <td width="88%" height="2" valign="top">
+       <p align = "justify"> <span class="content">
+Stratton, J. A., Stone, S., & Hwu, W. W. (2008). MCUDA: An efficient implementation of CUDA kernels for multi-core CPUs. 
+In Proceedings of the 21st International Workshop on Languages and Compilers for Parallel Computing (LCPC). Canada: Edmontion.
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-105]   </font>    </td>
+
+     <td width="88%" height="2" valign="top"><p align = "justify"> <span class="content">
+Ryoo, S., Rodrigues, C. I., Baghsorkhi, S. S., & Stone, S. S. (2008). Optmization principles and application performance evaluation of a multithereaded GPU using CUDA. 
+In Proceedings of the 13th ACL SIGPLAN Symposium of Pringicples and Practice of Parallel Progrmaming (pp. 73-82). Salt lake City, UT.
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-106]   </font>    </td>
+
+     <td width="88%" height="2" valign="top"> <p align = "justify"> <span class="content">
+Ryoo, S., Rodrigues, C. I., Stone, S. S., Baghsorkhi, S. S., Ueng, S. Z., Stratton, J. A. et al. (2008).
+ Program prunning for a multithreaded GPU. In Code generation and optimization:
+ Proceedigns of the Sixth Annual IEEE/ACM International Symposium on code generation and optimization (pp. 195-204). Boston, MA.
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-107]   </font>    </td>
+
+     <td width="88%" height="2" valign="top"> <p align = "justify"> <span class="content">
+Khronos Group (2010). OpenCL implementations, tutorials, and sample code. Beaverton, OR: Khronos Group. <BR>
+<a href="http://www.khronos.org/developers/resources/opencl/"> 
+      <font color ="blue"> http://www.khronos.org/developers/resources/opencl/</font> </a> 
+ </span> </p> 
+     </td>
+     </tr>
+
+
+<tr>
+     <td width="12%" height="2" valign="top">   <font  face="Verdana" size="2", class="content">[GPUComp-108]   </font>    </td>
+
+     <td width="88%" height="2" valign="top"> <p align = "justify"> <span class="content">
+NVIDIA. (2010). OpenCL GPU computing support on NVIDIA\92s CUDA architecture GPUs. Santa Clara, CA: NVIDIA. 
+<a href="http://www.nvidia.com/object /cuda_opencl/html"> 
+      <font color ="blue"> http://www.nvidia.com/object /cuda_opencl.html</font> </a> 
+ </span> </p> 
+     </td>
+     </tr>
+
+
+</tbody>
+</table>
+         
+</TD>
+</TR>
+
+<!--  content of web page End here  --> 
+ 
+          
+</TBODY>
+</TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+    
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,37 @@
+
+#
+# *******************************************************************
+#
+#		C-DAC Tech Workshop : hyPACK-2013
+#                           October 15-18, 2013
+#
+# *******************************************************************
+#   Created             : August 2013
+#
+#   E-mail              : hpcfte@cdac.in     
+# *******************************************************************
+#
+	README for TBB_find_min_max_from_vector_with_thread_aff.cpp
+	===========================================================
+
+	For a user defined value of vector size, the program generates a float vector 
+	containing random float values. The program then searchs for minimum and
+	maximum value and determines their respective indices.
+
+	The user can also set thread-affinity value to decide no. of processes to which
+	threads are bound.
+
+	Input: Executable <Float Array Size> <intelTBB Grain Size> <Thread Affinity Mask>
+
+	if no input is given : 
+		these values are taken as default:
+		Float Array Size     = 1000
+		intel TBB GrainSize  = 10000
+		Thread Affinity Mask = system-default-value
+
+	Output : 
+		Thread affinity value (if specified)
+		Minimum Value of the vector & index
+		Maximum Value of the vector & index
+		Time taken (seconds)
+		Time taken (micro seconds)

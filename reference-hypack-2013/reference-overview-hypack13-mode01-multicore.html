@@ -1,0 +1,4932 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              . Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              .  Memory Allocators</A>
+   	
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+             . OpenMP</A>
+		
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              . Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              . Pthreads</A>
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-java-threads.html">
+              . Java - Threads</A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              . Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              . Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              . MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              . MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              . MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              . Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              . Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              . Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              . Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              . PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              . Power-Perf.   </A>
+ 
+               <!-- ** -->  
+              <A class=menulslct
+	        href="./reference-overview-hypack13-mode01-multicore.html">
+                .  Reference</A>
+              <!-- ** -->
+ 
+          <A class=menul 
+	      href="./../index.html">
+              . Home</A>
+
+           
+<!-- ****************** left section code for about link End  here ************* -->
+   <BR>
+   <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT: 300px"> </DIV>
+
+   <BR><BR><BR><BR>
+   </TD>
+                
+
+<!-- <TD class=rightctnt style="BACKGROUND: #ffffff no-repeat 0px 0px "> -->
+  
+<TD class=rightctnt>
+          
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+<!--  content of web page start here  --> 
+
+
+
+<TR>
+<TD>
+
+
+
+<!-- ********* Multi-Core-Prog-Ref Starts ******** -->
+
+<A name = "multicore-prog-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on Multi Core Processors : References & Web sites : Multi-threading </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+    
+  <TR> 
+  <TD> 
+    <tr>
+     <td width="20%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-01].  <BR> <BR></font>   </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Andrews, Grogory R. (2000) <i> Foundations of Mutlithreaded, Parallel, and Distributed Progrmaming,
+       Boston, MA : Addison-Wesley </i> 
+       
+        </font>  
+    </td>
+    </tr> 
+   
+    <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" >
+   [MCMTh-02]. <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Barney Blaise, 2006, POSIX Threads Programming Lawrence Livermore  National Laboratory,
+      Livermore computing, Available at 
+      <a href = "http://www.llnl.gov/computing/tutorials/pthreads/" target="newwin"> 
+           http://www.llnl.gov/computing/tutorials/pthreads/ </a> </font>
+
+     </td>
+     </tr>
+
+      <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-03]. <BR>   <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Butenhof, David R  (1997) <i> Programming with POSIX Threads </I>, Boston, MA : Addision 
+      Wesley Professional  </i> </font>
+       
+        </font>  
+    </td>
+    </tr> 
+
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-04].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Hughes, Cameron and Tracey Hughes   (2004) <i> Dividing C++ Programs into 
+      Multiple  Threads   </i>, Boston, MA : Addison Wesley </font>
+       
+        </font>  
+    </td>
+    </tr> 
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-05]. <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Intel Corporation, (2003) Intel Hyper-Threading Technology, Technical 
+       User's Guide, <I> Santa Clara CA : Intel Corporation  </i> 
+Available at : <a href = "http://www.intel.com/" target="newWin"> http://www.intel.com</a> </font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-06].  <BR> <BR></font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Intel Corporation, (2005) IA-32 Intel Architecture  Optmization Reference Manual, 
+ Available at : <a href = "http://www.intel.com/" target="newWin"> http://www.intel.com</a> </font>
+     </td>
+     </tr>
+
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-07]. <BR>    <BR> </font>   
+     </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Kieiman, Steve, Devang Shah, and Bart Smaalders (1996) <I> Programming with Threads </i> 
+       Upper Saddle river NJ: Prentice Hall, SunSoft Press. ISBN: 0-13-172389-8.
+ </font>
+
+     </td>
+     </tr>
+
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-08]. <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Mattson Tim   <I> Nuts and Bolts of multi-threaded Programming </i> (2002),
+      Santa Clara, CA : Intel Corporation, 
+       Available at : <a href = "http://www.intel.com/" target="newWin"> http://www.intel.com</a> </font>
+
+     </td>
+     </tr>
+
+   
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-09].  <BR> <BR></font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Stokes Jon (2002)  <I> Introduction to Multi-threading, Superthreading and Hyperthreading </i> 
+     Ars Technica October </font>
+     
+     </td>
+     </tr>
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-10]. <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Ungerer, Theo, Boruut Robic, and Jurij Silc (2003) <I> 
+ A survey of Processors with Explicit multithreading  </i> 
+     ACM Computing surveys. vol 35, No. 1 March </font>
+     
+     </td>
+     </tr>
+
+
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-11]. <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Shameem Akhter, Jason Roberts  (April 2006) <I> Multi Core Programming - 
+ Increasing Performance through Software mult-threading </i>, Intel PRESS, Intel Corporation, </font>
+     
+     </td>
+     </tr>
+ 
+    
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-12]. <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      Intel software Web Site  <a href = "http://www.intel.com/software/" target="newWin"> 
+          http://www.intel.com/software </a> </font>
+     </td>
+     </tr>
+
+
+
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-13]. <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+     pthreads-win32 An open source version of Pthreads for Windows  
+      <a href = "http://sourceware.org/pthreads-win32"target="newWin"> 
+          http://sourceware.org/pthreads-win32/ </a> </font>
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" align="left">  
+    <font  face="Verdana" size="2", class="content" > [MCMTh-14]. <BR>  <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      POSIX Threads Programming, Lawrence Livermore National Laboratory ;
+      <a href = "http://www.llnl.gov/computing/hpc/training" target="newWin"> 
+          http://www.llnl.gov/computing/hpc/training </a> </font>
+     </td>
+     </tr>
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMTh-15]. <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+    Bradford Nichols, Dick Buttlar and Jacqueline Proulx Farrell (1996)  <I> Pthread Programming </i> 
+    O'Reilly and Associates, Newton, MA 02164, 1996  </font>
+     </td>
+     </tr>
+
+
+   
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" >[MCMTh-16].   <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" >
+     Matt Gillespie (September  2007) <I> Transitioning Software to Future Generations of Multi-Core </i> 
+    Intel software Network </I> </font>
+ 
+  
+     </td>
+     </tr>
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMTh-17]. <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Clay Bresheara (November 2007) <I> 8 Simple Rules for Designing Threaded Applications 
+       </i>
+        </font>  
+    </td>
+    </tr> 
+
+   
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-18].  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      National Instruments <A href ="http://www.ni.com/multicore/" target="newWin"> 
+         http://www.ni.com/multicore/ </a>
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMTh-19]. <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    Differences Between Multithreading and Multitaksing for Programmers, <I> 
+    Multicore Programming Fundamentals Whitepaper Seires </> National Instruments , 
+       <A href ="http://www.ni.com/multicore/" target="newWin"> 
+         http://www.ni.com/multicore/ </a>. </a>
+        </font>  
+    </td>
+    </tr> 
+
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMTh-20].
+ <BR> <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+    Programming Strategies for Multicore Processing : Data Parallelism  <I> 
+    Multicore Programming Fundamentals Whitepaper Seires, </I> National Instruments, 
+       <A href ="http://www.ni.com/multicore/" target="newWin"> 
+         http://www.ni.com/multicore/ </a>. </a>
+        </font>  
+    </td>
+    </tr> 
+
+
+      <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMTh-21].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Intel Threading Methodlogy ; Principles and Practices Version 2.0 <I>
+      copy right  (March 2003), Intel Corproation 
+        </font>  
+    </td>
+    </tr> 
+
+ <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMTh-22].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Developing Multithreading Applications : A pltform consistent Approach <I>
+      copy right  (2003), Intel Corproation 
+        </font>  
+    </td>
+    </tr>
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-23]. <BR> <BR> <BR > </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Peter  F. Sweeney, Matthis Hauswirth, Amer Diwan, Marina Biberstein, Yuva Harel
+
+      <I>  Understanding Performance of MultiCore Systems using Tracebased Visualization </i>
+    First Workshop on Software Tools for MultiCore Systems (STMCS06), March 26, 2006, 
+   Manhattan, NY. USA </font>
+
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-24]. <BR> <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Outfitting C++ for Multi-core Processor Parallelism; <I> Intel Threading Building Blocks </i>,
+       O'REILLY, James Reiders, copyrihgt @2007 </font> 
+
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-25].  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Richard McDougall and James Laudon  <i> 
+       Multi Core Microprocessors are here  </i> LOGIN. (October 2006)
+  
+        </font>  
+    </td>
+    </tr> 
+
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-26].  <BR>  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+     Neil Brown, Computing Laboratory,, University of Kent, Canterbury, Kent, UK, 
+      <I> C++CSP2: A Many-to-Many Threading Model for Multicore Architectures </i> 
+       Communicating Process Architectures 2007Alistair A. McEwan, Steve Schneider, 
+        Wilson Ifill, and Peter Welch IOS Press, (2007) </font>
+
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-27].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    Emery D. Berger\A4 Kathryn S. McKinley, Robert D. Blumofe\A4 Paul R. Wilson
+    <I>  Hoard: A Scalable Memory Allocator for Multithreaded Applications </i> 
+     Dept of Computer Science, The University of Texas at Austin, Austin, Texas (2007)
+        </font>  
+    </td>
+    </tr> 
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-28].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     
+     L. Dagum and R.Menon, (1998) <I> OpenMP : An Industry-standard API for shared memory Programming 
+      </i>, IEEE Computational  Science and Engineering, No. 5(1):46-55, January/March 1998"> 
+
+        </font>  
+    </td>
+    </tr> 
+
+
+  
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-29]. <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     
+      A.Cohen, M.Woodring, and R.Peitrusha <I> win32 Multithreaded Programming </I>
+       O'Reilly & Associates, 1998
+        </font>  
+    </td>
+    </tr> 
+
+    
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-30]. <BR> <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    S.Kieriman, D.Shah, and B.Smaalders (1995) <i> Programming with Threads, SunSoft Press, Mountainview, CA. 1995
+    </td>
+    </tr> 
+
+
+
+ 
+<!--- The Portable Operating System Interface (POSIX) standard ------>
+
+ 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-31]. <BR> <BR> </font>       </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Sartaj Sahni   (2005) <I>
+    Data Strucutres, Algorithms and Applications in JAVA, <I> 
+    Second Edition, Universities Press, Computer Science, Hyderabad
+    </font>  
+    </td>
+    </tr> 
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-32].  <BR> <BR> </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Steve Kleiman, Devang Shah and Bart Smaalders,   <I>
+   Programming With Threads </I> 
+   SunSoft Press. ISBN: 0-13-172389-8.  
+    </font>  
+    </td>
+    </tr> 
+
+ <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-33]. <BR> <BR> </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Bil Lewis & Daniel J. Berg,    <I>
+   Threads Primer -A Guide to Multithreaded Programming </I> 
+   First edition. ISBN 0-13-443698-9  
+    </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-34].  <BR>  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.gnu.org/software/pth/related.html">  http://www.gnu.org/software/pth/related.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-35].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.as400.ibm.com/developer/threads/uguide/document.htm">                           http://www.as400.ibm.com/developer/threads/uguide/document.htm </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+ <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-36].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html">                         http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-37].   </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html">                               http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-38].   </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="comp.programing.threads"> comp.programing.threads </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-39].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Blumofe, R. D., Joerg, C. F., Kuszmaul, B. C., Leiserson, C. E., Randall, K. H., and Zhou, Y. (1995), Cilk: An efficient multithreaded runtime system, in <i> PPoPP'95, </i> Santa Barbara, CA.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-40]. <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       A. Agarwal, Performance tradeoffs in multithreaded processors. Technical Report 89-566, Massachusetts Institute of Technology, Microsystems Program Office, Cambridge, MA, 1989 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-41]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       A. Agarwal, Performance tradeoffs in multithreaded processors. Technical Report MIT/LCS/TR 501: VLSI memo no 89-566, Laboratory for Computer Science, Massachusetts Institute of Technology, Cambridge, MA, 1991.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-42].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Andrews, Grogory R. (2000) <i> Foundations of Mutlithreaded, Parallel, and Distributed Progrmaming,
+       Boston, MA : Addison-Wesley </i> 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-43].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       D. R. Butenhof. <i> Programming with POSIX Threads. </i> Addison- Wesley, Reading, MA, 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="13%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-44].  <BR> <BR></font>   </td>
+
+     <td width="87%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J. Beveridge and R. Wiener. <i> Multithreading Application in Win32: the Complete Guide to Threads. </i> Addison-Wesley Developers Press, Reading, MA, 1997
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-45]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       D. E. Culler, M. Gunter and J. c. Lee. Analysis of multithreaded microprocessors under multiprogramming. Report UCB/CSD 92/687, Universiry of California, Berkeley, Computer Science Division, Berkeley, CA, May 1992.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-46].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       H. Hum, O. Maquelin, K. Theobald, X. Tian, and G. Gao. A study of the earth-manna multithreaded system, <i> Intl. J. of Par. Prog., </i> 24:319-347, 1996
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-47].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       B. Lewis and D. J. Berg. <i> Threads Primer: A Guide to Multithreaded Programming. </i> Prentice Hall PTR/sun Microsystems Press, 1995.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-48]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       B.-H Lim and R. Bianchini. Limits on the performance benefits of multithreading and prefertching. Research report RC 20238 (89547), IBM T. J. Watson Research Center, Yorktown Heights, NY, October 1995.  
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-49].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       B. Lewis and D. J. Berg. <i> Multithreaded Programming with Pthreads. </i> Prentice Hall PTR/Sun Microsystems Press, 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-50].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       D. A. Lewine. <i> Posix Programmer's Guide: Writing Portable Unix Programs with the Posix. 1 Standard. </i> O'Reilly & Associates, 1991.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-51].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       C. Leiserson, K. Randall, and Y. Zhou. Cilk: An efficient multithreaded runtime system. In <i> Proceedings of the Fifth ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP), </i> Santa Narbara, CA, 1995.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-52].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       S. J. Nortan and M. D. DiPasquale. <i> Thread time: the multithreaded programming guide. </i> Hewlett-Packard professional books. Prentice-Hall, Englewood Cliffs, NJ 07632, 1996.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-53].  <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       R. H. Saavedra-Barrera, D. E. Culler, and T. Von Eiken. Analysis of multithreaded architectures for parallel computing. Report UCB/CSD 90/569, University of California, Berkeley, Computer Science Division, berkeley, CA, April 1990 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ***************** Starts  Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-54].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       SunSoft. <i> Solaris multithreaded programming guide. </i> SunSoft Press, Mountainview, CA, 1995.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+<!-- ****************** Starts Here **********************-->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-55].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       D. M. Tullsen, S. Eggers, and H. M. Levy. Simultaneous multithreading: Maximizing on-chip parallelism. In <i> Proceedings of the 22nd Annual International Symposium on Computer Architecutre, </i> 1995.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-56].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       D. M. Tullsen. <i> Simultaneous multithreading. </i> Ph. D Thesis, University of Washington, Seattle, WA, 1996.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-57].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J.-Y. Tsai and P.-C Yew. The superthreaded architecture: Thread pipelining with run-time data dependence checking and control speculation. In <i> Proceedings of the International Conference on Parallel Architectures and Compilation Techniques, </i> 35-46, 1996.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-58].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       B. Weissman. <i> Active threads manual. </i> Technical Report TR-97-037, International Computer Science Institute, Berkeley, CA 94704, 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-59].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ GDB supports threads minimally 
+<a href =" http://www.delorie.com/gnu/docs/gdb/gdb_25.html">
+ http://www.delorie.com/gnu/docs/gdb/gdb_25.html</a>
+   
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-60].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Smart GDB for Threads Debugging: 
+<a href=" http://hegel.ittc.ukans.edu/projects/smartgdb/">
+http://hegel.ittc.ukans.edu/projects/smartgdb/ </a>
+</a>
+   
+     </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-61].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Bradford Nichols, Dick Buttlar, Jacqueline Proulx Farrell; PThreads Programming A POSIX Standard for Better Multiprocessing;; First Ed., Sep 1996 O\92REILLY Media Inc. 
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-62].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Bil Lewis, Daniel J. Berg, Multithreaded Programming With PThreads; Sun Microsystems Press, 1997 
+
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-63].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+David R. Butenhof, Programming with POSIX Threads. Addison-Wesley, (1997) 
+
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-64].  <BR> <BR> </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+POSIX Threads Programming, Lawrence Livermore National Laboratory, USA
+<a href=" http://www.llnl.ogv/computing/hpc/training/ ">  http://www.llnl.ogv/computing/hpc/training/   </a>
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-65].  <BR> <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Andrews, Gregory R, Foundations of Multithreaded, Parallel, and Distributed Programming; Boston, MS: Addison \96Wesley, (2000) 
+
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-66]. <BR>  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Barney Blasie; POSIX Threads Programming; Lawrence Livermore National Laboratory; Available at 
+<a href=" http://www.llnl.gov/computing/tutorials/pthreads">  http://www.llnl.gov/computing/tutorials/pthreads (2006)    </a>
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-67]. <BR>  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Deborah T. Marr , Frank Binns, David L. Hill, Glenn Hinton, David A Koufaty, J. 
+Alan Miller, Michael Upton, \93Hyperthreading, Technology Architecture and Microarchitecture\94,
+ Intel (2000-01) 
+ 
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-68].  <BR> <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Jon Stokes; Introduction to Multithreading, Superthreading and Hyperthreading, October 2002
+
+<a href="  http://arstechnica.com/articles.ars/  ">  http://arstechnica.com/articles.ars/   </a>
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMTh-69].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Hyper-Threading Technology, Intel 
+
+<a href="  http://www.intel.com ">  http://www.inte.com/   </a>
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-70].  <BR> <BR> <BR> </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Jack Lo, Susan Eggers, Joel Emer, Henry Levy, Rebecca Stamm, and Dean Tulisen, 
+"Converting Thread-Level Parallelism into Instruction-Level Parallelism via Simultaneous Multithreading",
+<I> ACM Transactions on computer Systems, August 1997, page 322-354
+
+
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" valign="top">   <font face="Verdana" size="2"> [MCMTh-71].  <BR> <BR> <BR> <BR> </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Emery D. Berger, Kathryn S McKinley, Robert D Blumofe, Paul R.Wilson, 
+A Scalable Memory Allocator for Multi-threaded Applications ; The Ninth International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS-IX). Cambridge, MA, November (2000). Web site URL : http://www.hoard.org/
+
+</font>  
+</td>
+</tr> 
+
+ <tr>
+     <td width="12%" height="2" valign="top">   <font face="Verdana" size="2"> [MCMTh-72].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Max Domeika, Software Development embedded Multi-Core Systems, Newnes Publications, 2009
+
+    </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMTh-73].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Maurice Herlihy and Nir Shavit, The Art of Multiprocessor Programming, Elsevier Publications, 2009
+
+    </font>  
+    </td>
+    </tr> 
+
+
+
+
+<!-- **************** Ends  Here ********************* -->
+
+</tbody>
+</table>
+</p>
+
+
+<!-- ********* Multi-Core-Prog-Ref Ends  **** -->
+
+
+<!-- *********************** OPENMP Starts ************************* -->
+
+
+<A name = "multicore-prog-openmp-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on Multi Core Processors : References & Web sites - OpenMP </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+     <tr>
+     <td width="18%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-01].  <BR> <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      Michael J. Quinn (2004),  <I> Paralell Programming in C with MPI and OpenMP </i>
+      McGraw-Hill   
+      International Editions, Computer Science Series, McGraw-Hill, Inc. Newyork  </font>
+ 
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-02]  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      R.Chandra, L. Dagum, D. Kohr, D. Maydan, J.McDonald and 
+      R.M. (editors) (2000) <I> Parallel Programming in OpenMP </i> Morgan Kaufmann Publishers 
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-03].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     
+     L. Dagum and R.Menon, (1998) <I> OpenMP : An Industry-standard API for shared memory Programming 
+      </i>, IEEE Computational  Science and Engineering, No. 5(1):46-55, January/March 1998. 
+
+        </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-04].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     B.Chapman and P.Mehrotra (1998) <I> OpenMP and HPF : Integrating two paradigms </i> Lecture Notes in 
+     Computer Science, 1470. </a>
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-05]. <BR>  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Maro Gonzalez, e. Ayguade, X. Martorell, and J. Labarta   (2006) <I>
+    Nested Parallelism and Pipelining in OpenMP </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr> 
+   
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-06]. <BR>  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Feng Liu and Vipin Chauddhary  (2006) <I>
+    OpenMP for chip Multi-Processor  </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr> 
+
+ <!-- ********************* Starts Here ******************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-07].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       M. Gonzalez, E. Aygude, J. Labarta, X., Martorell, N. Navarro, and J. Oliver, NanosCompiler:
+ A Research Platform for OpenMp Extensions," in <i> First European Workshop on OpenMp, </i> Lund (Sweden), October 1999.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-08].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       M. Gonzalez, J. Oliver, X., Martorell, E. Aygude, J. Labarta, and N. Navarro, OpenMp Extensions, for Thread Groups and Their Runtime Support, in <i> Workshop on Languages and Compilers for Parallel Computing, </i> August 2000.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-09].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       M. Gonzalez, E. Aygude, X., Martorell, and J. Labarta,  Defining and Supporting Pipelined Execution in OpenMP, in <i> Workshop on OpenMP Applications and Tools (WOMPAT'01), </i> August 2001.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-10].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       OpenMP Organization, OpenMp Fortran Application Interface, v. 2.0, www.openmp. org, June 2000. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-11].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       P. Kloos, F. Mathey, and P. Blaise, OpenMP and MPI Programming witha CG Algorithm, in <i> Proceedings of the 3rd EuropeanWorkshop on OpenMP (EWOMP2001), </i> Barcelona, Sept. 2001.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-12].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       OpenMP Architecture Review Board, OpenMP C and C++ Application Program Interface, Version 2.0, http://www.openmp.org, March 2002.  
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-13].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       M. Sato, S. Satoh, K. Kusano, and Y. Tanaka. Design of OpenMP Compiler for an SMP Cluster, in <i> European Workshop on OpenMP, </i> September 1999.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-14].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       X. Tian, A. Bik, M. Girkar, P. Grey, H. Saito, and E. Su, Intel OpenMP C++/Fortran Compiler for Hyper-Threading Technology: Implementation and Performance, <i> Intel Technology Journal, 6 </i> (1), 36-49, 2002.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-15].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       M. Burcea and M. J. Voss, A Runtime Optimization System for OpenMP, in <i> FWorkshop on OpenMP Applications and Tools, </i> 2003.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-16].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       S. Satoh, K. Kusano, and M. Sato, Compiler Optimization Techniques for OpenMP Programs, in <i> 2nd European Workshop on OpenMP, </i> pp. 14-15, 2000.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-17].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       R. Bramley, Technology news & reviews: Chemkin software; OpenMP Fortran Standard; ODE toolbox for Matlab; Java products; Scientific Workplace 3.0. <i> IEEE Computational Science and Engineering, </i> 4(4); 75-78, October/December 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-18].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J. Throop. Standards: OpenMP: Shared-memory parallelism from the ashes. <i> Computer, </i> 32(5): 108-109, May 1999.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-19].   <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+  The official site for OpenMP - Simple, Portable Scalable, SMP Programming  : 
+ <a href ="http://www.openmp.org" > http://www.openmp.org </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-20].   <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       
+   The OpenMP Tutorials  <a href ="http://www.openmp.org/drupal/node/view/13" >
+        http://www.openmp.org/drupal/node/view/13 </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-21].   <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Parallel Programming with OpenMP. <a href=" http://oscinfo.osc.edu/training/openmp/big/fsld.002.html" >
+ http://oscinfo.osc.edu/training/openmp/big/fsld.002.html </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-22].   <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       OpenMP C and C++ Application Program Interface, Version 1.0". OpenMP Architecture Review Board.
+    October 1998
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-23].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+   OpenMP Fortran Application Program Interface, Version 1.0". OpenMP   Architecture Review Board.
+  October 1997.  
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-24].   <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      " OpenMP"- Workshop presentation. John Engle, Lawrence Livermore National   Laboratory. October, 1998
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-25].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	Chandra, Rohit, Leonardo Dagum, Dave Kohr, 
+Dror Maydan, Jeff McDonald, and Ramesh Menon, <i> Parallel Programming in OpenMP</i> 
+	San Fracncisco Moraan Kaufmann (2001)
+   
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-26]. <BR>  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       P. Kloos, F. Mathey, and P. Blaise, OpenMP and MPI Programming with a CG Algorithm, in <i> Proceedings of European Workshop on OpenMP (EWOMP 2000), Edinburgh, UK, September 2000 </i> 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+     
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-27].  <BR>  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Kuck and Associates. KAP/Pro Toolset for OpenMP. See www.kai.com/kpts/. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-28].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       OpenMP Architecture Review Board, OpenMP Fortran Application Program Interface. Version 2.0, http:// www.openmp.org, 2000. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-29].   <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+   The OpenMP Tutorials  <a href ="http://www.openmp.org/drupal/node/view/13" >
+        http://www.openmp.org/drupal/node/view/13 </a>
+       
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-30].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+   "Using OpenMP\94 - Portable Shared Memory Parallel Programming 
+   Chapman, Jost, van der Pas MIT Press, 2008
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-31].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+  <a href = "https://iwomp.zih.tu-dresden.de/program.html"> <font color ="blue">
+ International Workshop on OpenMP  (IWOMP 2009)</font> </a>   June 3 - 5, Dresden University of Technology,
+ Dresden, Germany 
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-32].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href =" http://www.openmp.org/wp/" > 
+ <font color = "blue"> The OpenMP News - The OPENMP API Specification for Parallel Programming : http://www.openmp.org/wp/</font> </a>
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-33].   <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href =" http://www.openmp.org">  <font color = "blue"> http://www.openmp.org/forum </font>
+</a> The OpenMP Forum
+    </td>
+    </tr> 
+
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-34].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href = "http://www.thinkingparallel.com/2007/10/23/openmp-30-public-draft-available/">
+<font color = "blue" > OpenMP 3.0 Public Draft Available </font>  </a> Thinking Parallel, Michael Suess  <BR> <BR>
+
+    </td>
+    </tr> 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-35].   <BR> <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/2.Overview_OpenMP.pdf"> <font color ="blue">
+ An Overview of OpenMP 3.0 </font> </a> Ruud Van der Pas, Sun Micro Systems, USA,   International Workshop on OpenMP  (IWOMP 2009) June 3 - 5, 2009  Dresden University of Technology,
+ Dresden, Germany 
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-36].    <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/omp30-tasks.pdf"> <font color ="blue">
+Tasking in OpenMP </font> </a> Alejandro Duran, Barcelona Supercomputing Center,
+International Workshop on  OpenMP  (IWOMP 2009) June 3 - 5, 2009, Dresden University of Technology, 
+Dresden, Germany 
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-37].   <BR> <BR> <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/omp30-tasks.pdf"> <font color ="blue">
+OpenMP Support in Sun Studio </font> </a>
+Ruud van der Pas, Senior Staff Engineer, Sun Microsystems, Menlo Park, CA, USA
+International Workshop on  OpenMP  (IWOMP 2009) June 3 - 5, 2009 Dresden University of Technology, 
+Dresden, Germany
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCOMP-38].  <BR> <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+<a href = "https://iwomp.zih.tu-dresden.de/downloads/4.OpenMP_and_Performance.pdf"> 
+<font color ="blue">
+Getting OpenMP Up to Speed </font> </a>
+Ruud van der Pas, Senior Staff Engineer, Sun Microsystems, Menlo Park, CA, USA
+International Workshop on  OpenMP  (IWOMP 2009) June 3 - 5, 2009, Dresden University of Technology,
+    </td>
+    </tr> 
+<!-- ********************* Ends  Here **************** -->
+
+
+<!-- ********* OpenMP-Ref Ends ******************** -->
+
+<!-- ********************* Java Starts *********************** -->
+</tbody>
+</table>
+</p>
+
+<A name = "mcp-ref-java-threads"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on Multi Core Processors : References & Web sites : Java threads </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+ <!--------------------Starts Here ----------------->
+     <tr>
+     <td width="18%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-01].   <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Holub Allen  (2000) <i> Tuning Java Threads  </i>, Berkely CA : Apress </font>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+    
+
+<!-- ****************** Starts Here ********************** -->
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCJTh-02]. <BR> <BR> </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+       Lea Doug (1997)  <I> Concurrent Programming in Java - Design Principles  and Patterns </i> 
+      Boston, MA: Addison-Wesley</font>
+
+     </td>
+     </tr>
+<!-- ***************** Ends  Here ******************** -->
+   
+  
+    
+
+<!-- ****************** Starts Here ********************** -->
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-03].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     D.G. Drake, (1996) <i> Introduction to Java Threads - JavaWorld : </I>. IDG's maganize for 
+     the Java Community, (12), April 1996
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-04].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    S.Kieriman, D.Shah, and B.Smaalders (1995) <i> Programming with Threads, SunSoft Press, Mountainview, CA. 1995
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-05].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    J.Magee and J.Kramer (1995) <i> Concurrency : State Models and Java Programs, 
+    John Wiley & Sons, 1999  
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+    
+ 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-06]. <BR> <BR> </font>       </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Sartaj Sahni   (2005) <I>
+    Data Strucutres, Algorithms and Applications in JAVA, <I> 
+    Second Edition, Universities Press, Computer Science, Hyderabad
+    </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+ 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-07].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Y. Gu, B.-S. Lee, and W. Cai. JBSP: A BSP programming library in Java, <i> Journal of Parallel and Sistrbuted Computing, 61, </i> 1126-1142, 2001
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-08].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Lee, G. and Morris, J. (1998), Dataflow Java: Implicitly parallel Java, in <i> Proceedings of the Australasian Computer Systems Architecture Conference, </i> pp. 151-158.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-09].   <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+  The official site for OpenMP - Simple, Portable Scalable, SMP Programming  : 
+ <a href ="http://www.openmp.org" > http://www.openmp.org </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCJTh-10].   <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Parallel Programming with OpenMP. <a href=" http://oscinfo.osc.edu/training/openmp/big/fsld.002.html" >
+ http://oscinfo.osc.edu/training/openmp/big/fsld.002.html </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCJTh-11].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Bil Lewis, Daniel J. Berg, Multithreaded Programming with Java Technology; Sun Microsystems Press, 1999  
+
+
+</font>  
+</td>
+</tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+<tr>
+     <td width="12%" height="2" align="left">   
+    <font face="Verdana" size="2"> [MCJTh-12]. <BR> <BR>  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Wenzhang Zhu, Weijian Fang, cho-Li Wang and Francics C. M. Lau   (2006) <I>
+   High-Performance Computing and Clusters : The Distributed 
+   JVM Approach  </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr>
+<!-- ***************** Ends  Here ******************** -->
+
+
+</tbody>
+</table>
+</p>
+
+<!-- ********* Multi-Core-Prog-Java Ref Ends ***** -->
+
+<!-- ************** Multi-Core-Books Starts here **************** -->
+
+<A name = "multicore-parcomp-prog-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on Multi Core Processors : Books - References & Web sites</b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="18%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-01].  <BR>  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J Almond an dD. Snelling, UNICORE : Uniform access to Supercomuting as an Element of Eletronic Commerce, <i>
+       Future Generation computer Systems 613, 1-10, 1999 
+        </font>  
+    </td>
+    </tr> 
+
+  <!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-02].   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+       Kai Hwang, Zhiwei Xu, (1998) <I> Scalable Parallel Computing (Technology Architecture Programming), </i>   
+      McGraw Hill New York. </font>
+
+     </td>
+     </tr> 
+
+   <!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-03].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      Michael J. Quinn (2004),  <I> Paralell Programming in C with MPI and OpenMP </i>
+      McGraw-Hill   
+      International Editions, Computer Science Series, McGraw-Hill, Inc. Newyork  </font>
+ 
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-04]. <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      James M. Ortega,  (1988) <I> Introduction to Parallel and vector solution of linear equations, 
+      Frontiers of  
+       computer science series editor : Arnold L. Rosenberg, Plenum Press, Newyork </i> </font> 
+
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-05].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      Golub, G.H., Charles, F. Van loan, (1989) <I> Matrix computations, Second Edition, The Johns Hopkins 
+       University Press, U.S.A., </I>  
+
+   
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ***************** Ends  Here ******************** -->
+
+     
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-06]   <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    G.F.Carey,  (1989), <I> Parallel supercomputing : Methods - Algorithms and Applications
+    </i> Wiely New York, NY 
+        </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-07].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     J.Dongarra, I.S. Duff, D. Sorensen, and H.V.Vorst (1999) <I> Numerical Linear 
+     Algebra for High Performance Computers (Software, Environments, Tools) SIAM, 1999
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-08].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     L.Fosdick, E. Jessup, G. Domik, and C. Schauble  (1996) <i> Introduction to 
+    High Performance Scientific Computing, MIT Press (1996) 
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-09].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     I. Foster (1995) <i> Desiging and Building Parallel Programs ; Concepts and tools for 
+     Parallel Software Engineering, Addison-Wesley (1995)
+        </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-10].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     S.Goedecker  and A.Hoisie (2001) <i> Performance Optimisation of Numericaly Intensive 
+     Codes </I>, SIAM 2001
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-11].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     G.H.Golub and C.V.Loan (1996) <i> Marix Computation. </i> The John Hopkins 
+     University Press, Baltimore MD, (1996)
+        </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-12].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+         Laurence T Yang & Minyi Guo (Editors), (2006) <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> 
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor    
+    </font>  
+    </td>
+    </tr> 
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-13].   <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+         Murthy, M.N, Balasubramanya Murty, and Srinivas Aluru (Editors), (2006) <I>
+     New Parallel algorithms for Direct solution of Linear Equations, </i> 
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor   
+    </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-14].  <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Alexander Tiskin  (2006) <I>
+     Bulk-synchronous Parallelism (BSP) ; An emreging Paradigm of High Performance 
+     Computing  </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr> 
+
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-15].   <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        John Morris, KyuHo Lee, and JunSeong Kim   (2006) <I>
+    Cilk Versus MPI : Comparing Two Parallel Programming Styles on
+    Heterogeneous Systems </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr> 
+
+
+
+<tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-16].  <BR> <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Wei-Keng Liao, Alok choudhary, Kenin Coloma, Lee word, 
+        Eric, Russell, and Neil Pundit   (2006) <I>
+   MPI automicity and Concurrent Overlapping I/O </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr>  
+
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-17]. <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Nancy A. Lynch   (2003) <I>
+    Distributed Algorithms <I> 
+    Morgan Kaufmann Publishers, Printed in India 2003
+    </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-18].  <BR> <BR> </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Thomas H. Cormen, Charles E. Leiserson, Ronald L Riverst, Clifford Stein  (2002) <I>
+   Introduction  to   Algorithms <I> 
+    Prentice Hall of India Private Limited, Second Edition, New Delhi  
+    </font>  
+    </td>
+    </tr> 
+
+
+
+ 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-19].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       I. Foster, <i> Designing and Building Parallel Programs, </i> Addison-Wesley, 1995
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+
+<!--------------------Starts Here ----------------->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-20].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       D. B. Skillicorn, J. M. D. Hill, and W. F. McColl, Questions and answers about BSP, <i> Scientific Programming, 6 </i> (3), 249-274, 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-21].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       A. Tiskin, The bulk-synchronous parallel random access machine, <i> Theoretical Computer Science 196 </i> (1-2), 109-130, April 1998.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-22]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       A. Waheed and J. Yan, Parallelization of NAS Benchmarks for Shared Memory Multi-processors, Technical Report, NAS-98-010, March 1998, http://www.nas.nasa.gov/Research/Reports/Techreports/1998/nas-98-010-abstract.html. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-23].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       G. Karypis and V. Kumar, Multilevel  <i> k-</i>way partitioning scheme for irregular graphs, <i> Journal of Parallel and Distributed Computing, 48, </i> 96-129, 1998.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-24].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       G. Karypis and V. Kumar, Parallel multilevel  <i> k-</i>way partitioning scheme for irregular graphs, <i> SIAM Review, 42 </i> (2) 278-300, 1999.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-25].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J. Ramanujam and P. Sadayappan, Compile-time techniques for data distribution in distributed memory machines, <i> IEEE Transactions Parallel Distributed Systems, 2</i>(4), 472-482, Oct. 1991. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-26].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Y. Saad, <i> Iterative Methods for Sparse Linear Systems, </i> PWS Publishing Company, Botson, MA, 1996.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-27].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       R. Blumofe, C. Joerg, B. Kuszmaul, C. Leiserson, K. Randall, and Y. Zhou. Cilk: An efficient multithreaded runtime system. In <i> Proceedings of the 5th Symposium on Principles and Practice of Parallel Programming, </i> 1995.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-28].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       R. Buyya, editor. <i> High Performance Cluster Computing: Architectures and Systems, </i> Prentice Hall, 1999.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-29]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J. Hill, S. Donaldson, and A. McEwan, Installation and user guide for the oxford bsp toolset: User guide for the oxford bsp toolser (v1.3) implementation of bsplib. Technical report, Oxford University Computing Laboratory, 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ******************** -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-30].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Message Passing Interface Forum <i> MPI-2: Extensions to the Message-Passing Interface. </i> Available at http://www.mpi-forum-org. July 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-31].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       J. J. Modi. <i> Parallel Algorithms and Matrix Computation. </i> Oxford University Press, Oxford, UK, 1998.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-32].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       A. Zomaya, editor. <i> Parallel and Distributed Computing Handbook. </i> McGraw-Hill, 1996.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-33].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+     Berrendorf and H. Zeigler,PCL --The Performance Counter Library, Version 2.0,      September 2000.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-34]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      S. Browne, J. J. Dongarra, N. Garner, G. Ho and P. Mucci, A Portable Programming interface for 
+   Performance Evaluation on Modern Processors,International Journal of High Performance Computing Applications, 
+  14:3 (Fall 2000), pp. 189-204.
+
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-35]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+   S. Browne, J. J. Dongarra, N. Garner, K. London and P. Mucci, A Scalable Cross-Platform Infrastructure 
+for Application Performance Optimization Using Hardware Counters, Proc.SC'2000, Dallas, Texas, November 2000.
+
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-36].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    S. Browne, J. J. Dongarra and K. London, Review of Performance Analysis Tools for
+ MPI Parallel Programs, NHSE Review, 3:1 (1998), http://www.nhse.org/NHSEreview/.   
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-37].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    H. Brunst, M. Winkler, W. E. Nagel and H.-C. Hoppe, Performance Optimization for 
+Large Scale Computing: The Scalable VAMPIR Approach, International Conference on Computational Science (ICCS2001) Workshop 
+on Tools and Environments for Parallel and Distributed Programming, San Francisco, 
+CA, May 2001.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-38].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+B. Buck and J. K. Hollingsworth, An API for Runtime Code Patching, Journal of High Performance 
+Computing Applications, 14:4 (2000), pp. 317-329
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-39].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+  Foster and N. Karonis, A Grid-Enabled MPI: Message Passing in Heterogeneous
+ Distributed Computing Systems, Proc. SC '98, November 1998.
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-40].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	Vipin Kumar, Ananth Grama, Anshul Gupta, George Karypis, <I> Introduction to Parallel
+       Computing Design and Analysis of Algorithms.</i>  Redwood City, CA : Benjamin/Cummings
+       Publishing Company.(1994).   
+   
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+  
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-41].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	 Rao, VCV, 1998, Optimising performance of Parallel Programs, Sixth International  
+Conference on Advanced Computing, December 14-16, Pune, India. (1998) 
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-42].   <BR>  <BR>
+    </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+   Jeanne C Adams, Walter S Brainerd, Jeanne T Martin, Brian T Smith, and Jerrold J Wagener     
+  	<I> Fortran 95 Handbook </i> Sicentific and Engineering computation, The MIT Press (1997)
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-43].  <BR> <BR> <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	 Rao, VCV, 1998, Optimising performance of Parallel Programs, Sixth International  
+Conference on Advanced Computing, December 14-16, Pune, India.  
+ Rao, VCV, 1999, Work Shop Coordinator,  Workshop on Parallel Computing - Algorithms and Applications,
+ 1999 (PCAA-99),  C-DAC, Pune University Campus, Pune, India
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-44]. <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Grama Ananth, Anshul Gupts, George Karypis and Vipin Kumar (2003),  
+Introduction to Parallel computing, Boston, MA : Addison-Wesley
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-45].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	 Thomas Sterling, Paul Messina and Paul H Smith, 
+ <I> Enabling Technologies for Petaflops Computing </i> Sicentific and Engineering computation, 
+    The MIT Press (1996) 
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-46].   <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	 Kevin Dowd, 
+ <I> O'Reilly & Associates, Inc.,First edition,  ISBN: 1-56592-032-5  (1993) 
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-47].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	 Rajat P. Garg
+and Ilya Sharapov
+ <I> "Techniques for Optimizing Applications: High Performance Computing" </i> ISBN: 0-13-093476-3 , 2002
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBW-48].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	 Dr.Christian Halloy and Dr. Kwai Wong
+ <I> "Parallel Computing Techniques to Maximize Your Megaflops" </i>
+Supercomputing'99-Portland, OR  Tutorial Workshop Notes, November 15, 1999
+        </font>  
+    </td>
+    </tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+</tbody>
+</table>
+</p>
+
+<!-- ************** Multi-Core-Books Ends here **************** -->
+
+<!-- ******************** Heading Starts MPI Here *************** -->
+
+<A name = "multicore-prog-mpi-ref"> </a>
+
+
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on Multi Core Processors : References & Web sites : MPI-1.X /MPI 2.X </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="18%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-01].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+William Gropp, Rusty Lusk, Tuning MPI Applications for Peak Performance, Pittsburgh (1996) 
+
+   
+</font>  
+</td>
+</tr> 
+<!-- ***************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Ends  Here ********************* -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-02].  <BR>  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+William Gropp, Ewing Lusk, N.Doss, A. Skjellum, A high performance portable implementation of the message passing Interface (mpi) standard, Parallel Computing 22 (6), Sep 1996.
+ 
+</font>  
+</td>
+</tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCMPI-03]. </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      Message Passing Interface (MPI) forum   <a href = "http://www.mpi-forum.org" target="newWin"> 
+          http://www.mpi-forum.org </a> </font>
+     </td>
+     </tr>
+
+  
+
+    
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-04].  <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      William Gropp, Ewing Lusk, Anthony Skjellum, (1994) <I> Using MPI, portable parallel programming with 
+       the Message   Passing Interface,  </i>  Sicentific and Engineering Computation, The Mit Press, Cambridge, Massachusetts, London, England </font>
+    </td>
+    </tr> 
+  
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">   [MCMPI-05]. <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      Al Geist, Adam Beguelin, Jack Dongarra, Weicheng Jiang, Bob Manchek, and Vaidy Sunderam, (1994)
+   <I> PVM: Parallel Virtual Machine-A User's Guide and Tutorial for Network 
+Parallel Computing </i> </font>
+        </font>  
+    </td>
+    </tr> 
+    
+    
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMPI-06]. <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    Marc Snir, Steve Otto, Steyen Huss-Lederman, David Walker and Jack Dongarra, (1998)
+<I> MPI-The Complete Reference: Volume 1, The MPI Core, second edition , Sicentific and Engineering Computation, The MIT Press </i>
+        </font>  
+    </td>
+    </tr> 
+
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2">  [MCMPI-07]. <BR>  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+     William Gropp, Steven Huss-Lederman, Andrew Lumsdaine, 
+     Ewing Lusk, Bill Nitzberg, William Saphir, and Marc Snir (1998)
+   <I> MPI-The Complete Reference: Volume 2, The MPI-2 Extensions </i>, Sicentific and Engineering Computation, The MIT Press </font>
+        </font>  
+    </td>
+    </tr> 
+
+    
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-08].  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       The mpich implementation developed at Argonne National Lab and Mississipi State 
+        University can be downloaded from <a href="ftp://info.mcs.anl.gov" > ftp://info.mcs.anl.gov </a>  
+
+        </font>  
+    </td>
+    </tr> 
+
+
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-09]. <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    
+       William Gropp, Ewing Lusk, Rajeev Thakur (1999) <I> 
+        Using MPI-2, Advanced Features of the Message-Passing Interface, </i>  The MIT Press. </font>  
+    </td>
+    </tr> 
+
+  
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-10]. <BR>  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      Pacheco S. Peter, (1992) <I>  Parallel Programming with MPI, </I> University of Sanfrancisco, 
+       Morgan Kaufman 
+      Publishers, Inc., Sanfrancisco, California  </font>  
+   
+     </td>
+     </tr> 
+   
+     <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-11].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+      Michael J. Quinn (2004),  <I> Paralell Programming in C with MPI and OpenMP </i>
+      McGraw-Hill   
+      International Editions, Computer Science Series, McGraw-Hill, Inc. Newyork  </font>
+ 
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-12]. <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+         The MPI-2 home page is   <A href = "http://www.mcs.anl.gov/Projects/mpi/mpi2/mpi2.html" >
+           http://www.mcs.anl.gov/Projects/mpi/mpi2/mpi2.html </a> 
+ 
+        </font>  
+    </td>
+    </tr> 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-13].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+   The High Performance Fortran Handbook, <I> Charles H Koelbel, David B Loveman, rober S Schreiber, 
+Guy L  Steele Jr, and Mary E Zosel (1993),</i> Sicentific and Engineering Computation,  The MiT Press
+        </font>  
+    </td>
+    </tr> 
+ 
+
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-14]. <BR> <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        John Morris, KyuHo Lee, and JunSeong Kim   (2006) <I>
+    Cilk Versus MPI : Comparing Two Parallel Programming Styles on
+    Heterogeneous Systems </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr> 
+
+
+
+<tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-15].  <BR> <BR> <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+        Wei-Keng Liao, Alok choudhary, Kenin Coloma, Lee word, 
+        Eric, Russell, and Neil Pundit   (2006) <I>
+   MPI automicity and Concurrent Overlapping I/O </i> in  <I> High Performance Computing - Paradigm and 
+      Infrastructure </i> by 
+      Laurence T Yang & Minyi Guo (Editors),
+      Wiley Series on Parallel and Distributed computing, Albert Y. Zomaya, Series Editor
+    </font>  
+    </td>
+    </tr>  
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-16].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       P. Kloos, F. Mathey, and P. Blaise, OpenMP and MPI Programming with a CG Algorithm, in <i> Proceedings of European Workshop on OpenMP (EWOMP 2000), Edinburgh, UK, September 2000 </i> 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+     
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-17].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Message Passing Interface Forum <i> MPI-2: Extensions to the Message-Passing Interface. </i> Available at http://www.mpi-forum-org. July 1997.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-18].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    S. Browne, J. J. Dongarra and K. London, Review of Performance Analysis Tools for
+ MPI Parallel Programs, NHSE Review, 3:1 (1998), http://www.nhse.org/NHSEreview/.   
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-19].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ H. Simitci, Pablo MPI Instrumentation User's Guide, Department of Computer Science, 
+University of Illinois, June 1996.
+
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-20].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ William Gropp and Ewing Lusk. February 1996. User\92s Guide for mpich, a Portable Implementation of MPI. Available by anonymous ftp from ftp.mcs.anl.gov   Heath, M. and J. Etheridge. September 1991. Visualizing 
+the performance of parallel programs, IEEE Softw., pp. 29-39. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-21].  <BR><BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ Oscar Naim and Tony Hey. 1996. Do-loop-surface: an abstract prepresentation of parallel program performance\92, Concurrency : Practice and experience, Volume 8, No. 3, pp. 205-234.Pacheo, S Peter. 1996. University of 
+Sanfrancisco. Parallel Programming with MPI, Morgan Kaufman Publishers, Inc., 
+Sanfrancisco, California
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-22].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+   McVoy, L., C. Staelin. January 1996. LMBENCH: Portable Tools for Performance Analysis, 
+Proc. of the 1996 USENIX Technical Conference, San Diego, CA, pp. 279-295.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-23].   <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       PARAM Communication Overhead Meaurement suites (P-COMS) - MPI Benchmarks
+
+Center for Development of Advanced Computing (C-DAC), Pune University Campus, Pune, INDIA (2003)
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-24].  <BR>  <BR> <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	Rajeev Thakur, Ewing Lusk, and William Gropp,   
+        Users guide for ROMIO: A high-performance, portable MPI-IO implementation. 
+Technical Report
+        ANL/MCS-TM-234, Mathematics and Computer Science Division, Argonne National 
+Laboratory, (1998).  
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-25].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+     William Gropp, Rusty Lusk, Tuning MPI Applications for Peak Performance , Pittsburgh, (1996).
+
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-26].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+     The mpich implementation developed at Argonne National Lab and Mississipi State University 
+   can be downloaded from 
+ <a href="ftp://info.mcs.anl.gov" >  ftp://info.mcs.anl.gov  </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-27].    <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+The LAM implementation developed at the Ohio Supercomputer Center can be downloaded from 
+ <a href="ftp://ftp.osc.edu/pub/lam">  ftp://ftp.osc.edu/pub/lam </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-28].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+The CHIMP implementation developed at the Edinburgh Parallel Computing Centre can be downloaded from  
+ <a href="ftp://ftp.epcc.ed.ac.uk/pub/chimp/release">  ftp://ftp.epcc.ed.ac.uk/pub/chimp/release </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-29].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+WinMPI runs under Windows 3.1 and is available at  
+ <a href="ftp://csftp.unomaha.edu/pub/rewini/Win">  ftp://csftp.unomaha.edu/pub/rewini/Win </a>
+W32MPI is an implementation for Win32 available at  
+<a href = "http://pandora.uc.pt/w32mpi"> http://pandora.uc.pt/w32mpi </a>
+
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-30].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+IBM PE for AIX: MPI Programming and Subroutine Reference 
+ <a href="http://www.cecalc.ula.ve/documentacion/tutoriales/AIXPE/pe_mpi_subref.html"> 
+http://www.cecalc.ula.ve/documentacion/tutoriales/AIXPE/pe_mpi_subref.html </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-31].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+MPI Information at Mississipi State University,  
+
+ <a href="http://www.erc.msstate.edu/mpi">  http://www.erc.msstate.edu/mpi</a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-32].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+MP Information at Oak Ridge National Laboratory,  
+ <a href="http://www.epm.ornl.gov/~walker/mpi">  http://www.epm.ornl.gov/~walker/mpi </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-33].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+MPI Information at Argonne National Laboratory, 
+ <a href="http://www.mcs.anl.gov/mpi ">  http://www.mcs.anl.gov/mpi </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-34].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+The MPI-2 home page is   
+ <a href="http://www.mcs.anl.gov/Projects/mpi/mpi2/mpi2.html">  
+  http://www.mcs.anl.gov/Projects/mpi/mpi2/mpi2.html  </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+<tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-35].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    
+The MPI-IO home page is 
+ <a href="http://lovelace.nas.nasa.gov/MPI-IO/mpi-io.html">  
+  http://lovelace.nas.nasa.gov/MPI-IO/mpi-io.html   </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-36].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">  
+Scalable I/O Initiative on-line documentation and links at   
+ <a href="http://www.cacr.caltech.edu/SIO/">  
+  http://www.cacr.caltech.edu/SIO/  </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCMPI-37].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Portable Parallel file system (PPFS) on line-documentation and links at  
+ <a href="http://www-pablo.cs.uiuc.edu/Projects/PPFS/ppfs/html">  
+  http://www-pablo.cs.uiuc.edu/Projects/PPFS/ppfs/html  </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-38].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+The parallel and scalable software for I/O PASSION on-line documentation links at 
+   
+ <a href="http://www.cat.syr.edu/passion.html">  
+  http://www.cat.syr.edu/passion.html  </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-39].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Abstract-device interface for I/O (ADIO) on-line documentation links at  
+   
+ <a href="http://www.mcs.anl.gov/home/thakur/adio/">  
+  http://www.mcs.anl.gov/home/thakur/adio/   </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-40].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ROMIO on-line documentation links at  
+   
+ <a href="http://www.mcs.anl.gov/home/thakur/romio">  
+  http://www.mcs.anl.gov/home/thakur/romio   </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-41].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+MPI : Lawrence Livermore National laboratories on-line documentation and links at  
+   
+ <a href="http://www.llnl.gov/liv_comp/siof/">  
+  http://www.llnl.gov/liv_comp/siof/  </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-42].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+MPI- IO : NASA Ames Research Center on-line documentation and links at  
+   
+ <a href="http://parallel.nas.nasa.gov/MPI-IO/mpi-io/html">  
+  http://parallel.nas.nasa.gov/MPI-IO/mpi-io/html    </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCMPI-43].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+The MPI FAQ (frequently asked questions) list is available at  
+   
+ <a href="http://www.erc.msstate.edu/mpi/mpi-faq.html">  
+  http://www.erc.msstate.edu/mpi/mpi-faq.html    </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- ****************** Ends  Here ********************* -->
+
+</tbody>
+</table>
+</p>
+
+
+
+<!-- ******************** Heading Ends MPI Here *************** -->
+
+
+<!-- ************************ Heading Multi-Core Benchmarks Starts Here ****************** -->
+
+<A name = "mc-benchmarks-ref"> </A>
+
+ 
+<p>    
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "cccdd77889"> 
+ <DIV align=left><font size="2"  Color="black" face= "verdana">
+      <B> Prog. on Multi Core Processors :  Benchmarks  & Web-sites </b> </font></DIV> </TD> </TR> 
+</TBODY> </TABLE> 
+</p>
+
+
+  
+  <p align = "left" >
+  <table border="0"  height="6">
+   <tbody>
+   
+<!-- ****************** Starts Here ********************** -->
+     <tr>
+     <td width="18%" height="2" align="left">   <font  face="Verdana" size="2", class="content" > [MCBeT-01]. </font>    </td>
+
+     <td width="88%" height="2" align="left">
+       <FONT face="Verdana" size="2", class="content" > 
+      Intel software Web Site  <a href = "http://www.intel.com/software/" target="newWin"> 
+          http://www.intel.com/software </a> </font>
+     </td>
+     </tr>
+
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-02].  <BR>  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.gnu.org/software/pth/related.html">  http://www.gnu.org/software/pth/related.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-03].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.as400.ibm.com/developer/threads/uguide/document.htm">   http://www.as400.ibm.com/developer/threads/uguide/document.htm </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-04].  </font>   </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html">                         http://www.llnl.gov/computing/tutorials/workshops/workshop/pthreads/MAIN.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+   <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-05].   </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html">  http://userpages.umbc.edu/~schmitt/331F96/tshida1/thread.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+         [MCBeT-06].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+      GDB supports threads minimally 
+        <a href =" http://www.delorie.com/gnu/docs/gdb/gdb_25.html">
+         http://www.delorie.com/gnu/docs/gdb/gdb_25.html</a>
+   
+      </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+       [MCBeT-07].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Smart GDB for Threads Debugging: 
+        <a href=" http://hegel.ittc.ukans.edu/projects/smartgdb/">
+       http://hegel.ittc.ukans.edu/projects/smartgdb/ </a>
+       </a>
+   
+      </font>  
+    </td>
+    </tr> 
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-08].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     Scripts - Available from 
+      <a href =" http://www.scirpts.com/"target="newWin">  http://www.scripts.com/ </a>
+        </font>  
+    </td>
+    </tr> 
+
+   
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-09]. <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+    G.R. Andrews (1991) <I> Concurrent Programming :Principles & Practice </I>
+    Benjamin/Cummings, Redwood City CA
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-10]. <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       A. Waheed and J. Yan, Parallelization of NAS Benchmarks for Shared Memory Multi-processors, Technical Report, NAS-98-010, March 1998, http://www.nas.nasa.gov/Research/Reports/Techreports/1998/nas-98-010-abstract.html. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-11].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Basic linear algebra communication subprograms, <a href="http://www.netlib.org/blacs/index.html" >
+       http://www.netlib.org/blacs/index.html </a>
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-12].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Basic linear algebra subprograms, <a href =" http://www.netlib.org/bias/faq.html" > 
+        http://www.netlib.org/bias/faq.html </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-13].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Parallel basic linear algebra subprograms,
+  <a href =" http://www.netlib.org/scalapack/pblas_qref.html">
+    http://www.netlib.org/scalapack/pblas_qref.html </a>
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-14].  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       The scalapack project, <A href = "http://www.netlib.org/sclapack/">  
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-15].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+    S. Browne, J. J. Dongarra and K. London, Review of Performance Analysis Tools for
+ MPI Parallel Programs, NHSE Review, 3:1 (1998), <a href="http://www.nhse.org/NHSEreview/">
+    http://www.nhse.org/NHSEreview/ </a>
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-16].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ Kuck and Associates, Inc., 
+ The GuideView performance analysis tool, <a href="http://www.kai.com/"> http://www.kai.com/ </a>
+
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-17].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ H. Simitci, Pablo MPI Instrumentation User's Guide, Department of Computer Science, 
+University of Illinois, June 1996.
+
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-18].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+  Bernd Mohr. April 1991. SIMPLE: A performance evaluation tool environment for parallel 
+and distributed systems, in EDMCC2, Munich
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-19].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Gropp William and Ewing Lusk. February 1996. User\92s Guide for mpich, a Portable Implementation of MPI. Available by anonymous ftp from ftp.mcs.anl.gov   Heath, M. and J. Etheridge. September 1991. Visualizing 
+the performance of parallel programs, IEEE Softw., pp. 29-39. 
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-20].  <BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+   Reed, Daniel, Ruth Aydt, Tara Madhyastha, Roger Noe, Keith Shields and Bradley Schwartz. 1992. The PABLO performance analysis environment, 
+Department of Computer Science, University of Illinois at Urbana-Champaign.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-21].  <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+Pallas, GmbH, 1991, PA-Tools, Performance Analysis Tools.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-22].  <BR><BR> <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ Oscar Naim and Tony Hey. 1996. Do-loop-surface: an abstract prepresentation of parallel program performance\92, Concurrency : Practice and experience, Volume 8, No. 3, pp. 205-234.Pacheo, S Peter. 1996. University of 
+Sanfrancisco. Parallel Programming with MPI, Morgan Kaufman Publishers, Inc., 
+Sanfrancisco, California
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-23].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       PAPI :  Performance Application Programming Interface. <i> Developed at the University
+      of Tennessee\92s Innovative Computing Laboratory. USA </i> 
+   <a href="http://icl.cs.utk.edu/papi/" >  http://icl.cs.utk.edu/papi/ </a>
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-24].  <BR>  <BR> </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	Jack Dongarra, Kevin London, Shirley Moore, Phil Mucci, and Dan Terpstra<i> Using PAPI for hardware performance monitoring on Linux systems</i> 
+   
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-25].  <BR>  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       	Browne, S., J. Dongarra J., Garner N., London K., and Mucci, P.<i> A Portable Programming Interface for Performance Evaluation on Modern Processors</i> 
+	University of Tennessee Technical Report, Knoxville, Tennessee
+   
+ 
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-26].  <BR>   </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+usenet newsgroup devoted to MPI <i> comp.parallel.mpi </i>
+   
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-27].  <BR>  <BR> </font>   </td> 
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+ Bjarne Stroustup, <I> STAPL ; Standard Template Adaptive Parallel Library,</i>, <I> Parasol Smarter computing, 
+Texas A & M Univeristy </i>, 
+<a href="http://www.research.att.com/~bs">
+ http://http://www.research.att.com/~bs  </a>
+   
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-28].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+The PALLAS MPI Benchmarks,<a href ="http://www.pallas.com/">  http://www.pallas.com/ </a>
+ </a>
+</a>
+   
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-29].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+LMBench,<a href="http://www.bitmover.com/lmbench/" target="_blank"> http://www.bitmover.com/lmbench/</a>
+</a>
+   
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-30].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+MPIBench  
+<a href=" http://icl.cs.utk.edu/projects/llcbench/mpbench.html">
+http://icl.cs.utk.edu/projects/llcbench/mpbench.html </a>
+</a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-31].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+NAS Benchmarks
+<a href=" http://www.nas.nasa.gov/Software/NPB">
+http://www.nas.nasa.gov/Software/NPB </a>
+</a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-32].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+STREAM: Measuring Sustainable Memory Bandwidth in High Performance Computing,
+<a href=" http://www.cs.virginia.edu/stream">
+http://www.cs.virginia.edu/stream </a>
+</a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-33].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+CDAC :
+
+<a href="  http://www.cdacindia.com ">  http://www.cdacindia.com </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-34].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+IBM Redbooks :
+
+<a href="   http://www.ibm.com/redbooks/  ">   http://www.ibm.com/redbooks/  </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-35].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+
+
+<a href="   http://www.top500.org  ">  http://www.top500.org  </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-36].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+BLAS : 
+
+<a href="    http://www.netlib.org/blas  ">    http://www.netlib.org/blas </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-37].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+LAPACK : 
+
+<a href=" http ://www.netlib.org/lapack  ">    http ://www.netlib.org/lapack </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-38].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+SPPM : 
+
+<a href="  http://www.lnln.gov/asci_benchmarks/asci/limited/ppm/sppm/readme.html  ">    
+ http://www.lnln.gov/asci_benchmarks/asci/limited/ppm/sppm/readme.html </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-39].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+ATLAS : 
+
+<a href="  http://math-atlas.sourceforge.net/target  "> http://math-atlas.sourceforge.net/target </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-40].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+   McVoy, L., C. Staelin. January 1996. LMBENCH: Portable Tools for Performance Analysis, 
+Proc. of the 1996 USENIX Technical Conference, San Diego, CA, pp. 279-295.
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-41].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+ESSL : 
+
+<a href=" http://www-1.ibm.com/servers/eserver/pseries/software/sp/essl.html  "> 
+http://www-1.ibm.com/servers/eserver/pseries/software/sp/essl.html</a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-42].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Watson Sparse Matrix Package (WSMP) : 
+
+<a href="  http://www.cs.umn.edu/~agupta/wsmp.html  ">  http://www.cs.umn.edu/~agupta/wsmp.html</a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-43].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+SPEC : 
+
+<a href="   http://www.specbench.org   ">  http://www.specbench.org </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-44].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+TPC : 
+
+<a href="   http://www.tpc.org    ">  http://www.tpc.org  </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-45].  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+The SPEC Benchmarks : 
+
+<a href="  http://www.specbench.org ">  http://www.specbench.org </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-46].  <BR> <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+The P-COMS (MPI Benchmarks)  -PARAM Communication Measurement Suites  : 
+
+<a href="  http://www.cdacindia.com/">  http://www.cdacindia.com/  </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-47].  <BR> <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Hey, T., and Lancaster, D., The development of Parkbench and performance prediction, The Inter. J. of High Performance Computing Applications 14, No. 3, pp. 205-215, 2000 
+ 
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-48]. <BR> <BR>  <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Woo S., Ohara M.,Torre E., Singh J.P., and Gupta A, The SPALSH-2 Programs : Characterization and methodological considerations, In Proceedings of 22nd International Symposium on Computer Architectures, Italy, June 1995 
+
+ 
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> 
+[MCBeT-49].  <BR> <BR>  </font>   </td>
+
+<td width="88%" height="2" align="left">
+<font face="Verdana" size="2">
+
+Dongarra, J., Bunch, J., Moler C., An Stewart, G. W., LINPACK user guide, Tech report, 1979  : 
+
+<a href="  http://www.top500.org/list/linpack.php      ">  http://www.top500.org/list/linpack.php  </a>
+   
+</font>  
+</td>
+</tr> 
+<!-- **************** Ends  Here ****************** -->
+
+ <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-50].  <BR>  </font>   </td>
+
+     <td width="88%" height="2" align="left">
+
+      <font face="Verdana" size="2">
+     
+     L.S.Blackford et. al <I> ScaLAPACK USer's guide </I> 
+        </font>  
+    </td>
+    </tr> 
+
+<!-- ****************** Starts Here ********************** -->
+    <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-51].  <BR> <BR></font>   </td>
+
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       Top500 Organization, the Top500 Supercomputers and historical lists Top 500 Supercomputer Sites,
+  <a href ="http://www.top500.org/"> http://www.top500.org/ </a>  
+       
+        </font>  
+    </td>
+    </tr> 
+<!-- **************** Ends  Here ****************** -->
+
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-52].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.etnus.com/Products/TotalView/started/threads0.html">    http://www.etnus.com/Products/TotalView/started/threads0.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-53].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://docs.sun.com"> http://docs.sun.com </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+  <tr>
+     <td width="12%" height="2" align="left">   <font face="Verdana" size="2"> [MCBeT-54].  </font>       </td>
+     <td width="88%" height="2" align="left">
+       <font face="Verdana" size="2">
+       <a href="http://www.etnus.com/Products/TotalView/started/threads0.html">   http://www.etnus.com/Products/TotalView/started/threads0.html </a>
+
+    </font>  
+    </td>
+    </tr> 
+
+  
+
+
+
+</tbody>
+</table>
+</p>
+<!-- ************************ Heading Multi-Core Benchmarks Ends Here ****************** -->
+
+
+            
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=red size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+    
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

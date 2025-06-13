@@ -1,0 +1,2133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<TITLE> C-DAC,Pune : High-Perf. Comp. Frontier Technologies Exploration Group and
+ CMSD, University of Hyderabad, Technology Workshop hyPACK (October 15-18), 2013 </TITLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+
+<meta name="Description" content="Center for Development of Advanced Computing (C-DAC) Pune and 
+
+   Centre for Modelling Simulation and Design (CMSD), High-Performance Computing (HPC) Facility
+   University of Hyderabad, Hyderabad are jointly organizing four days technology 
+   workshop on   Hybrid Computing - Coprocessors &amp; Accelerators - 
+   Power-aware Computing &amp;  Performance of  
+  Application Kernels (HyPACK-2013)
+  (Initiatives on Measurement Power Consumption &amp; Performance of Kernels"
+    which is scheduled from October 15-18, 2013 at CMSD,
+   High-Performance Computing (HPC) facility University of 
+Hyderabad, Hyderabad.The hyPACK-2013 is designed four days for HPC GPU Cluster
+ for Applications."/>
+
+<meta name="KeyWords" content="Multi-Core, Parallel Processing,
+ Software threading,GPGPU,GPU computing,MPI,OpenCL, 
+NVIDIA -CUDA,AMD-APP Computing, Intel MIC, C-DAC workshops,OpenMP,Pthreads,Heterogenous Computing,Multi-Core tools,MultiCore 
+Processors,GPU Programming, HPC GPU Cluster, 
+Performance CDAC Technology training programme(S),Intel Software tools" />
+
+<META id=Copyright content="Copyright (c) 2013,C-DAC." name=Copyright>
+
+<META http-equiv=imagetoolbar content=no>
+
+<LINK href="./../hypack13-files/hypack-main.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-home.css" type=text/css rel=stylesheet>
+<LINK href="./../hypack13-files/hypack-schedule.css" rel=stylesheet>
+
+<SCRIPT language=JavaScript src="./../hypack13-files/hypack-main.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR></HEAD>
+<BODY style="MARGIN: 0px" leftMargin=0 topMargin=0 marginheight="0" 
+marginwidth="0">
+
+<TABLE class=container cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=container>
+      <TABLE class=header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=headerlogo>
+           <A href="./../index.html"><IMG alt=hypack-2013 src="./../hypack13-files/hypack-2013-header.jpg" border=0>
+           </A>
+       </TD>
+ 
+     </TR>
+     </TBODY>
+     </TABLE>
+      
+
+<SCRIPT language=JavaScript1.2 type=text/javascript>
+
+</SCRIPT>
+
+     
+    
+  <TABLE class=mainmenubar cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+ 
+	      <TR>
+
+                <TD class=menu1><A class=menu1 id=mainmenurow1 
+                  onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+       		  href="./../hypack13-about-overview.html">About</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow2 
+                  onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+                  href="./../hypack13-tech-prog-topics-overview.html">  Tech. Prog. </A></TD>
+ 
+               
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow3 
+                  onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+                  href="./../hypack13-mode01-multicore-lab-overview.html">Muti-Core </A></TD>
+                
+               <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow4 
+                  onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+                  href="./../hypack13-mode02-arm-proc-lab-overview.html"> ARM Proc</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow5 
+                  onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+                  href="./../hypack13-mode03-coprocessor-lab-overview.html">Coprocessors </A></TD>
+                           
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+                  href="./../hypack13-mode04-gpgpu-lab-overview.html"> GPUs </A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+                  href="./../hypack13-mode05-hpc-cluster-lab-overview.html"> HPC Cluster</A></TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow6
+                  onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+                  href="./../hypack13-mode06-app-kernels-lab-overview.html"> App. Kernels</A> </TD>
+
+                <TD class=menusep></TD>
+                <TD class=menu1><A class=menu1 id=mainmenurow7 
+                  onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+                  onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+                  href="./../hypack13-reg-overview.html">Registration </A></TD>
+
+                                                          
+</TR></TBODY></TABLE></TD></TR></TBODY>
+	</TABLE>
+
+      <DIV class=menu2>
+
+ <!--   Sub menu for **** Row-1-About ****  start here -->
+
+      <TABLE id=submenutab1 onMouseOver="javascript:hypackShowSubMenuDelay('1',1)" 
+       style="VISIBILITY: hidden; MARGIN-LEFT: 0px; POSITION: absolute" 
+       onmouseout="javascript:hypackHideSubMenuDelay('1',1)" cellSpacing=0 
+       cellPadding=0 width=150>
+
+       <TBODY>
+       <TR>
+       <TD class=menu2>
+
+
+      <A class=menu2 id=submenurow1s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-overview.html"><B> Overview </B></A>
+  
+      <A class=menu2 id=submenurow1s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-venue.html"><B>  Venue : CMSD, UoH </B></A>
+
+       <A class=menu2 id=submenurow1s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-keynote-invited-talks.html"><B>  Key-Note/Invited Talks </B> </A>
+
+        <A class=menu2 id=submenurow1s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-faculty.html"><B>  Faculty / Speakers </B></A>
+
+       <A class=menu2 id=submenurow1s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-proceedings.html"><B>   Proceedings </B></A>
+
+	<A class=menu2 id=submenurow1s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-download-software.html"><B>  Downloads  </B> </A>
+  
+	<A class=menu2 id=submenurow1s7
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-past-workshops.html"><B>  Past Tech. Workshops </B></A>
+
+       <A class=menu2 id=submenurow1s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-audience.html"><B> Target Audience </B></A>
+
+       <A class=menu2 id=submenurow1s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-benefits.html"><B> Benefits</B></A>
+
+	<A class=menu2 id=submenurow1s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-organisers.html"><B>  Organisers </B> </A>
+
+        <A class=menu2 id=submenurow1s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-accommodation.html"><B>  Accommodation </B></A>
+
+        <A class=menu2 id=submenurow1s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-local-travel.html"><B> Local Travel</B></A>
+
+	<A class=menu2 id=submenurow1s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-sponsors.html"><B>  Sponsors </B></A>
+
+        <A class=menu2 id=submenurow1s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-feedback.html"><B>  Feedback </B></A>
+
+        <A class=menu2 id=submenurow1s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-acknowledgements.html"><B>  Acknowledgements </B> </A>
+
+        <A class=menu2 id=submenurow1s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../hypack13-about-contact-address.html"><B>  Contact </B> </A>
+
+        <A class=menu2 id=submenurow1s17 
+            onmouseover="javascript:hypackShowSubMenuDelay('1', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('1', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+ 
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-1-About **** End  here --> 
+
+
+
+<!--   Sub menu for **** Row-2-Topics of interest ****  start  here --> 
+
+      <TABLE id=submenutab2 onMouseOver="javascript:hypackShowSubMenuDelay('2',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 60px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('2',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+          <A class=menu2 id=submenurow2s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-topics-overview.html"><B>  Topics of Interest </B></A>
+
+          <A class=menu2 id=submenurow2s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-tech-prog-schedule.html"><B> Tech. Prog. Schedule</B></A>
+   
+	 <A class=menu2 id=submenurow2s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode01-multicore.html"><B>  Topic : Multi-Core </B></A>
+
+         <A class=menu2 id=submenurow2s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode02-arm-proc.html"><B>  Topic : ARM Proc. </B></A>
+
+         <A class=menu2 id=submenurow2s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode03-coprocessor.html"><B>  Topic : Coprocessors </B></A>
+
+         <A class=menu2 id=submenurow2s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode04-gpgpu.html"><B>  Topic : GPGPUs </B></A>
+
+         <A class=menu2 id=submenurow2s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode05-hpc-cluster.html"><B>  Topic : HPC  Cluster</B></A>
+
+         <A class=menu2 id=submenurow2s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-mode06-app-kernels.html"><B>  Topic : App. Kernels.</B></A>
+                    
+         <A class=menu2 id=submenurow2s9
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-laboratory.html"><B>  Topic : Lab. Session</B></A>
+
+         <A class=menu2 id=submenurow2s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../hypack13-topics-keynote-invited-talks.html"><B> Key-Note / Invited Talks</B> </A>
+
+           
+         <A class=menu2 id=submenurow2s11 
+            onmouseover="javascript:hypackShowSubMenuDelay('2', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('2', 1)" 
+            href="./../index.html"><B>    Home  </B> </A>
+ 
+	
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-2-Topics of interest ***** End  here -->
+
+
+
+<!--   Sub menu for **** Row-3 : Mode 1 (Multi-Cores): Hands-on ****  start here  -->
+
+      <TABLE id=submenutab3 onMouseOver="javascript:hypackShowSubMenuDelay('3',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('3',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow3s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-lab-overview.html"><B>   Mode-1 Multi-Core </B></A>
+
+        <A class=menu2 id=submenurow3s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-memory-allocators.html"><B> Memory Allocators</B></A>
+
+        <A class=menu2 id=submenurow3s3
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-openmp.html"><B>OpenMP  </B></A>
+
+        <A class=menu2 id=submenurow3s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-intel-tbb.html"><B> Intel TBB </B></A>
+
+        <A class=menu2 id=submenurow3s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pthreads.html"><B>  Pthreads  </B></A>
+	
+       <A class=menu2 id=submenurow3s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-java-threads.html"><B> Java - Threads  </B></A>
+
+       <A class=menu2 id=submenurow3s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-charmplusplus.html"><B> Charm++ Prog. </B></A>
+
+        <A class=menu2 id=submenurow3s8
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi.html"><B> Message Passing (MPI) </B></A>
+ 
+        <A class=menu2 id=submenurow3s9
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-openmp.html"><B>  MPI - OpenMP</B></A>
+  
+       <A class=menu2 id=submenurow3s10
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-tbb.html"><B>  MPI - Intel TBB </B></A>
+ 
+       <A class=menu2 id=submenurow3s11
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-mpi-pthreads.html"><B>  MPI - Pthreads </B></A>
+
+        <A class=menu2 id=submenurow3s12 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-compiler-tune-perf.html"><B> Compilers - Opt. Features </B></A>
+
+        <A class=menu2 id=submenurow3s13 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-perf-math-lib.html"><B> Threads-Perf. Math. Lib.</B></A>
+
+        <A class=menu2 id=submenurow3s14 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-software-tools.html"><B>  Threads-Prof. &amp; Tools</B></A>
+
+       <A class=menu2 id=submenurow3s15 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-threads-io-perf.html"><B>Threads - I/O Perf. </B></A>
+  
+        <A class=menu2 id=submenurow3s16 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-pgas-langlib.html"><B> PGAS : UPC / CAF/ GA</B></A>
+
+        <A class=menu2 id=submenurow3s17
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../hypack13-mode01-multicore-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow3s18 
+            onmouseover="javascript:hypackShowSubMenuDelay('3', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('3', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu **** Row-3 : Mode 1 (Multi-Cores ) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-4 : Mode 2 (ARM Processor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab4 onMouseOver="javascript:hypackShowSubMenuDelay('4',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('4',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow4s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-lab-overview.html"><B>   Mode-2 ARM  </B></A>
+
+        <A class=menu2 id=submenurow4s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-prog-env.html"><B> Prog. Env </B></A>
+      
+       <A class=menu2 id=submenurow4s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-benchmarks.html"><B> Benchmarks</B></A>
+
+       <A class=menu2 id=submenurow4s4
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../hypack13-mode02-arm-proc-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+       <A class=menu2 id=submenurow4s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('4', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('4', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-4 : Mode 2 (ARM Processor) : Hands-on ****  End here  -->
+
+
+
+
+<!--   Sub menu for **** Row-5 : Mode 3 (Coprocessor) Hands-on ****  start here  -->
+
+      <TABLE id=submenutab5 onMouseOver="javascript:hypackShowSubMenuDelay('5',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 200px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('5',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+        <A class=menu2 id=submenurow5s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-lab-overview.html"><B>   Mode-3 Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow5s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-arch-software.html"><B> Arch. Software </B></A>
+
+        <A class=menu2 id=submenurow5s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-compiler-vect.html"><B> Compiler &amp; Vect. </B></A>
+     
+        <A class=menu2 id=submenurow5s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-prog-env.html"><B> Prog. Env. </B></A>
+
+        <A class=menu2 id=submenurow5s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-benchmarks.html"><B> Benchmarks</B></A>
+
+        <A class=menu2 id=submenurow5s6
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../hypack13-mode03-coprocessor-power-perf.html"><B> Power &amp; Perf.  </B></A>
+
+        <A class=menu2 id=submenurow5s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('5', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('5', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+
+<!--   Sub menu **** Row-5 : Mode 3 (Coprocessor) : Hands-on ****  End here  -->
+
+
+
+<!--   Sub menu for **** Row-6 : Mode 4 (GPGPUs): Hands-on **** Start here  -->
+
+      <TABLE id=submenutab6 onMouseOver="javascript:hypackShowSubMenuDelay('6',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 285px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('6',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+	<A class=menu2 id=submenurow6s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-lab-overview.html"><B> Mode-4 GPGPUs  </B></A>
+
+	<A class=menu2 id=submenurow6s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-nvidia-gpu-cuda.html"><B>NVIDIA - CUDA/OpenCL </B></A>
+
+
+	<A class=menu2 id=submenurow6s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-amd-opencl.html"><B>AMD  APP - OpenCL</B></A>
+
+
+	<A class=menu2 id=submenurow6s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-opencl.html"><B> GPGPUs - OpenCL </B></A>
+
+        <A class=menu2 id=submenurow6s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../hypack13-mode04-gpgpu-power-perf.html"><B> GPGPUs : Power &amp; Perf. </B></A>
+
+        <A class=menu2 id=submenurow6s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('6', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('6', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+	   </TD></TR> </TBODY></TABLE>
+
+<!--  Sub menu for **** Row-6 : Mode-4 (GPGPUs) : Hands-on **** End here  -->
+
+
+
+<!--   Sub menu for **** Row-7 : Mode-5 (HPC GPU Cluster): Hands-on  **** start  here -->
+
+      <TABLE id=submenutab7 onMouseOver="javascript:hypackShowSubMenuDelay('7',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 365px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('7',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+
+        <A class=menu2 id=submenurow7s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-lab-overview.html"><B>  Mode-5  HPC Cluster </B></A>
+        
+        <A class=menu2 id=submenurow7s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-message-passing-cluster.html"><B> HPC  MPI   Cluster   </B></A>
+
+	<A class=menu2 id=submenurow7s3
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-nvidia-cuda.html"><B> GPU Cluster - NVIDIA   </B></A>
+
+        <A class=menu2 id=submenurow7s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-gpu-cluster-amd-opencl.html"><B>GPU Cluster - AMD APP </B></A>
+
+
+        <A class=menu2 id=submenurow7s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-intel-coprocessor-cluster.html"><B> Cluster - Intel Coprocessors </B></A>
+
+        <A class=menu2 id=submenurow7s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../hypack13-mode05-hpc-cluster-power-perf.html"><B>  Cluster- Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow7s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('7', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('7', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+      
+	</TD></TR>
+        </TBODY>
+        </TABLE>
+
+
+<!--   Sub menu for **** Row-7 : MODe-5 : (HPC GPU Cluster) Hands-on ****  End  here -->
+
+
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application  program  **** start here -->
+
+
+      <TABLE id=submenutab8 onMouseOver="javascript:hypackShowSubMenuDelay('8',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 510px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('8',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+        <TBODY>
+        <TR>
+          <TD class=menu2>
+ 
+	 <A class=menu2 id=submenurow8s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-lab-overview.html"><B> Mode-6 App. Kernels </B></A>
+                  
+	<A class=menu2 id=submenurow8s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-pdesolvers-fdm-fem.html"><B>  PDE Solvers : FDM/FEM  </B></A>
+
+        <A class=menu2 id=submenurow8s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-image-processing-fft.html"><B>  Image Processing - FFT </B></A>    
+
+         <A class=menu2 id=submenurow8s4
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-phys-monte-carlo.html"><B> Monte Carlo Methods </B> </A>
+
+     	 <A class=menu2 id=submenurow8s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-string-srch.html"><B>  String Srch. </B></A>
+    
+
+     	 <A class=menu2 id=submenurow8s6 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-seq-analysis.html"><B>  Seq. Analy.</B></A>
+       
+         <A class=menu2 id=submenurow8s7
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-video-processing.html"><B> Video Process. </B> </A>
+
+        <A class=menu2 id=submenurow8s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-intrusion-detection-sys.html"><B>  Intr. Detcn. Sys  </B> </A>
+
+        <A class=menu2 id=submenurow8s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../hypack13-mode06-app-kernels-power-perf.html"><B>  App. Power &amp; Perf.  </B> </A>
+
+        <A class=menu2 id=submenurow8s10 
+            onmouseover="javascript:hypackShowSubMenuDelay('8', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('8', 1)" 
+            href="./../index.html"><B>   Home  </B> </A>
+
+
+       </TD></TR></TBODY></TABLE>
+
+<!--   Sub menu for **** Row-8 :Mode-6 Application Program **** End here -->
+
+
+<!--  Sub menu for **** Row-9-Registration **** Start here  -->
+
+      <TABLE id=submenutab9 onMouseOver="javascript:hypackShowSubMenuDelay('9',1)" 
+      style="VISIBILITY: hidden; MARGIN-LEFT: 610px; POSITION: absolute" 
+      onmouseout="javascript:hypackHideSubMenuDelay('9',1)" cellSpacing=0 
+      cellPadding=0 width=150>
+
+      <TBODY>
+      <TR>
+      <TD class=menu2>
+
+      <A class=menu2 id=submenurow9s1 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-overview.html"><B> Reg. Overview</B></A>
+           
+      <A class=menu2 id=submenurow9s2 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-private-sector.html"><B>Pvt. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s3 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-public-sector.html"><B>Pub. Sector</B></A>
+
+      <A class=menu2 id=submenurow9s4 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-govt-academic-staff.html"><B>Govt. Acad. Staff </B></A>
+
+      <A class=menu2 id=submenurow9s5 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-students.html"><B>Students Reg. </B></A>
+
+      <A class=menu2 id=submenurow9s6
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-online-registration.html"><B>On-line Reg.</B></A>
+ 
+      <A class=menu2 id=submenurow9s7 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+             href="./../hypack13-reg-accommodation.html"><B>Accommodation </B></A>
+
+      <A class=menu2 id=submenurow9s8 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../hypack13-reg-contact-address.html"><B>Contact</B></A>
+
+       <A class=menu2 id=submenurow9s9 
+            onmouseover="javascript:hypackShowSubMenuDelay('9', 1)" 
+            onmouseout="javascript:hypackHideSubMenuDelay('9', 1)" 
+            href="./../index.html"><B>  Home  </B> </A>
+
+      </TD></TR></TBODY></TABLE>
+
+  <!--   Sub menu for  **** Row-9-Registration **** End here  -->
+
+
+  </DIV>
+
+<!--  *** left section code for about link start here ***  -->
+
+   
+     <INPUT id=menuval 
+      type=hidden name=menuval> <INPUT id=menuval2 type=hidden name=menuval2> 
+      <TABLE class=mainctnt cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=mainctntcell>
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=leftmenu><BR>
+                  
+              
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-lab-overview.html">
+              &#149; Mode-1 Multi-Core  </A>
+                
+              
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-memory-allocators.html">
+              &#149;  Memory Allocators</A>
+   	
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-openmp.html">
+              &#149; OpenMP</A>
+
+	   <A class=menul  
+              href="./../hypack13-mode01-multicore-intel-tbb.html">
+              &#149; Intel TBB </A>
+
+           <A class=menul
+              href="./../hypack13-mode01-multicore-pthreads.html">
+              &#149; Pthreads</A>
+              
+              <!-- ** -->
+              <A class=menulslct
+	        href="./../hypack13-mode01-multicore-java-threads.html">
+                &#149; Java - Threads</A>
+              <!- ** -->
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-charmplusplus.html">
+              &#149; Charm++ Prog.</A>
+          
+	   <A class=menul
+              href="./../hypack13-mode01-multicore-mpi.html">
+              &#149; Message Passing (MPI)</A>
+              
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-openmp.html">
+              &#149; MPI - OpenMP</A>
+
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-tbb.html">
+              &#149; MPI - Intel TBB</A>  
+        
+           <A class=menul 
+	      href="./../hypack13-mode01-multicore-mpi-pthreads.html">
+              &#149; MPI - Pthreads</A> 
+
+	   <A class=menul
+	      href="./../hypack13-mode01-multicore-compiler-tune-perf.html">
+              &#149; Compiler Opt. Features</A>
+             
+	   <A class=menul 
+	      href="./../hypack13-mode01-multicore-perf-math-lib.html">
+              &#149; Threads-Perf. Math.Lib. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-software-tools.html">
+              &#149; Threads-Prof. &amp; Tools </A>
+  
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-threads-io-perf.html">
+              &#149; Threads-I/O Perf. </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-pgas-langlib.html">
+              &#149; PGAS : UPC / CAF / GA </A>
+
+           <A class=menul
+	      href="./../hypack13-mode01-multicore-power-perf.html">
+              &#149; Power-Perf.   </A>
+ 
+          <A class=menul 
+	      href="./../index.html">
+              &#149; Home</A>
+
+
+<!-- ****************** left section code for about link End  here ************* -->
+	
+	<BR>
+         <DIV style="BACKGROUND: url(images/) no-repeat 100% 100%; WIDTH: auto; HEIGHT:300px">        </DIV><BR><BR><BR><BR>
+
+      </TD>
+             
+ <TD class=rightctnt> 
+
+<!--  content of web page start here  --> 
+
+
+<TABLE cellSpacing=0 cellPadding=0 border=0 >
+<TBODY>
+
+
+<TR>
+<H1> hyPACK-2013 Mode 1 : Software Threading :  Java Threading </H1> 
+
+
+<TABLE cellPadding=3  width = "100%" border=0> 
+<TBODY>
+
+
+
+  <tr>
+  <td height="24" align="left" >
+ <P align=justify><span class="content" >
+ 
+ Multi-threading is extremely useful in practice and it has distinct capabilities for 
+  Java application.  The Java programming language itself uses a thread to to garbage 
+collection in the background - thus saving managing of memory for complex applications.
+
+ Multi-threading changed  in JDK 5.0, with the addition of a large number of 
+classes and interfaces that provide high-quality implementations of the mechanisms that 
+most application programmers  will need.  
+
+
+The new features of  JDK 5.0 and issues such as <i> Interrupting Threads, thread States,
+thread properties, synchronization, blocking queues, thread safe collections, 
+callable and futures, executors, synchronizers, and Threads & Swing </i> require serious 
+attention to understand overheads in thread programming. 
+
+   Example   programs using different APIs. Compilation and execution
+   of java threads programs, programs numerical and non-numerical computations
+   are discussed using different thread APIs and understand  Performance issues
+   on multi-core processors.
+
+</span> 
+</p>
+</td> 
+</tr> 
+</tbody>
+</table>
+
+<!-- ********************* Sub-title Starts topics here ********************** -->
+
+<table  border="0"  height="28">
+<tbody>
+  <tr>
+   <td height="24" align="left" >
+ 
+   
+  <a href="#java-history">
+   <font size="2" face="Arial" color="blue"> <B> History </b>  </font> </a> 
+   &nbsp; &nbsp;   
+
+   <a href="#multicore-introduction">
+   <font size="2" face="Arial" color="blue"> <B> Introduction Java threads  </b>  </font> </a> 
+   &nbsp; &nbsp;  
+
+  <a href="#java-thread-category">
+  <font size="2" face="Arial" color="blue"> <B> Java thread Categories </b>   </font> </a> 
+   &nbsp; &nbsp; &nbsp; &nbsp; 
+
+ <BR> <BR>
+    <a href="#java-thread-overview">
+  <font size="2" face="Arial" color="blue"> <B> An Overview of Java-threads  </b>  </font> </a>  
+
+ &nbsp; &nbsp; &nbsp; &nbsp; 
+
+  <a href="#java-thread-challenges">
+  <font size="2" face="Arial " color="blue"> <B> Java thread Programming  Challenges</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+ <BR> <BR>
+  <a href="#java-thread-pitfalls">
+  <font size="2" face="Arial " color="blue"> <B> Pitfalls multi threaded programming in the Java language 
+ </b>  </font> </a> 
+ <BR> <BR>
+
+ <a href="#java-thread-compile-execution">
+ <font size="2" face="Arial" color="blue"> <B>Compilation and Execution </ b>  
+ </font> </a> 
+&nbsp; &nbsp; &nbsp; &nbsp;<BR><BR>
+
+
+<!-- ************************ Reference Starts Here ************************** -->
+
+<font size="2" face="Arial" color="red"><B> References  : </b>  </font> </a> 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Multi-threading </b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-openmp-ref"> 
+ <font size="2" face="Arial" color="blue"><B> OpenMP</b>  </font> </a> 
+ &nbsp; &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mcp-ref-java-threads"> 
+ <font size="2" face="Arial" color="blue"><B> Java Threads</b>  </font> </a> 
+ &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-parcomp-prog-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Books</b>  </font> </a>
+  &nbsp; &nbsp; 
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#multicore-prog-mpi-ref"> 
+ <font size="2" face="Arial" color="blue"><B> MPI </b>  </font> </a>
+  &nbsp;  
+
+<a href="../reference-hypack-2013/reference-overview-hypack13-mode01-multicore.html#mc-benchmarks-ref"> 
+ <font size="2" face="Arial" color="blue"><B> Benchmarks</b>  </font> </a>
+  &nbsp;  
+<!-- ************* Reference Ends Here ************************ -->
+
+ </td>
+</tr>
+</tbody>
+</table>
+<!-- ********************** Sub-title topics Ends here ******************* --->
+<BR>
+ 
+<HR>        
+<p> <font size="2" face="Arial" color="red"> <b> List of Java Threads Programs </b> </font> </p>
+
+
+
+
+<!-- *********************** Table for Listing of Programs Starts ************************ -->
+
+<TABLE width = "100%" cellPadding=3  border=0> 
+<TBODY>
+
+<tr>
+   <td width="96%" height="2" align="top">
+   <ul> 
+  
+  <!--List of Programs Java APIs Starts [1] here-->
+
+<li> 
+ <p align ="justify"> <span class ="content">  
+  <B> <a href="./java-threads-html/java-threads-programs.html">
+<font  color="blue"> Java APIs on Multi-Core Processor Systems : </font> </a></b>   Example programs on 
+  computation of  the sum of <I> n </i>  natural numbers, search the minimum integer  in  an unsorted 
+  integer array,   
+  computation of  Vector-Vector Multiplication using block-striped method, Computation of  matrix - matrix
+   multiplication, and implementation of Producer-Consumer model problem. 
+  </span> </p>
+</li>
+
+
+  <!--List of Programs Java concurrent APIs Starts [2] here-->
+
+
+ <li>    
+ <p align ="justify"> <span class ="content"> <a href="./java-threads-html/java-concurrent-programs.html">
+  <B><font  color="blue"> 
+ Java Concurrent APIs on Multi-Core Processor Systems : </font></a></b>  
+     
+  Examples include Writing programs for sorting an unsorted array using  Sorting algorithm, 
+rank calculation for a large array, calculate power of <i> n </i>, concurrently read and write a 
+memory block using new <i> read-write lock </i> (new concurrency Java APIs) than old synchronization 
+construct, concurrently read and write to a <i> concurrentHashMap  </i> collection (new concurrency Java APIs) 
+and compare performance with old Hash-table collection, concurrently read and write to a vector and
+<i> ArrayList collection  </i> and 
+analyze the performance, <i> CopyOnwriteArrayList </i>  collection which is thread safe version of old ArrayList 
+collection, allows concurrent updation on  ArrayList while iterating.
+</span>
+</p> 
+</li>
+</ul>
+</td></tr>
+   
+
+</tbody>
+</table>
+
+<BR> <BR>
+
+
+<!-- ********************** History  starts ********************************** -->
+
+<a name="java-history"> </a>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">	
+    <b> Java : History  </b> </font> </font></DIV> 
+</TD> </TR> 
+
+
+
+<TR>
+<TD>
+
+<P align="justify"> <span class="content" >
+<BR>
+
+Java was started as a project called "Oak" by James Gosling in June 1991. Gosling's goals were to implement
+ a virtual machine and a language that had a familiar C-like notation but with greater uniformity and simplicity 
+than C/C++. The first public implementation was Java 1.0 in 1995. It made the promise of "Write Once,
+ Run Anywhere", with free runtime on popular platforms. It was fairly secure and its security was 
+configurable, allowing for network and file access to be limited.  
+<BR><BR>
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+</span></p>
+</TD>
+</TR>
+
+</TBODY> 
+</TABLE>
+
+<!-- ********************** History  ends here **************************** -->
+
+
+<!-- *********************** Introduction to Java threads  starts ********************* -->
+
+<a name="multicore-introduction"> </a>
+
+<TABLE width ="100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+                    <DIV align=Left><font size="2"> 
+<font Color="black" face= "verdana">
+     <B> Introduction  Java Threads :  Multi-Core Processors  </b>  </font> </font></DIV> 
+</TD> </TR> 
+
+
+
+<TR>
+<TD>
+
+<P align="justify"> <span class="content" >
+<BR>
+
+A multi-core microprocessor is one that combines two or more independent processors into a single package. The 
+typical multi-core processor implements multiple processors that share a single coherent cache at the highest on-device 
+cache level (e.g. L2 for the Intel Core 2.) The processors also share a single interconnect system (usually a bus) 
+to the rest of the system. The proximity of multiple CPU cores on the same die have the advantage that the cache 
+coherency circuitry can operate at a much higher clock rate, combining equivalent CPUs on a single die significantly 
+improves the performance. In this new era of multi-core computing, Moore's law can be applied to the number of cores. 
+Current multi-core architectures 
+consist of only a few cores, but this number is expected to increase as exemplified by the announcement of 80 
+core architecture 
+by Intel. 
+<BR><BR>
+
+Software designers are challenged to efficiently exploiting the 
+massive parallelism available on these
+ future multi-core architectures. 
+According to Moore's law the number of transistors on a single die is doubling every two every years. During the last decades 
+this evolution has lead to an exponential performance increase because processor clock speeds also doubled at the same rate. 
+Due to power limitations this clock speed doubling came to an end. Computer architects came up with the idea of multi-core 
+computing: large and complex processors are re-placed by simpler and slimmer cores working together.
+
+<BR> <BR>
+
+
+The parallelization of sequential code on multiple core processors may meet complex challenges and the software designers 
+have to exchange the conventional sequential programming paradigm for parallel programming.  The transition requires  
+a fundamentally different way of thinking about algorithms and programming problems.
+
+Parallel programming language and programming models are needed to help programmers with this parallel thinking.
+ Multi-Threaded programming languages can be used to describe parallel behaviors, .i.e. Java. The programming 
+language  Java alone is not sufficient, because multi-threaded programming is cumbersome. <BR> <BR>
+
+
+Communicating Sequential Processes (CSP) is a precise mathematical theory of concurrency that can be used to build multi-threaded applications that are guaranteed to be free of the common problems of concurrency. Concurrent programming is a technique that provides for the execution of operations simultaneously, whether on a single system or spread across a number of systems. Such operations are essentially sequences of instructions, such as the subtasks for a single top-level task that can be executed in parallel, either as threads or processes. 
+
+The essential difference between threads and processes is that while processes are typically independent (separate address spaces, for example) and can therefore interact only through system-provided interprocess communication mechanisms, threads typically share the state information of a single process and can share objects in memory and system resources directly. 
+<BR> 
+
+</span>
+</p>
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</TD>
+</TR>
+
+</TBODY> 
+</TABLE>
+
+<!-- ********************* Introduction to Java thread ends here ******************************** -->
+
+
+
+<!-- *************************** An Overview of Java threads starts  here ****************************** -->
+
+<a name="java-thread-overview">  </A>
+
+<TABLE  width ="100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+      <B> An Overview of Java-threads  </b>  </font> </font></DIV>
+ </TD> 
+ </TR> 
+
+ <BR>
+
+<TR>
+<TD>
+
+<BR> 
+<P align="justify"> <span class="content" >
+
+
+The Java programming language is naturally multi-threaded and because of this the underlying OS implementation can make a 
+substantial difference in the performance of
+Threads.Threads are a fundamental part of the Java platform. As multi-core processors become the norm, using concurrency
+effectively becomes essential for building high-performance applications.  using concurrency effectively becomes essential 
+for building 
+high-performance applications  Java thread Programming may help the developer. Java SE 5 and 6 are a huge 
+step forward for the development of concurrent applications, with improvements to the Java Virtual Machine to 
+support high-performance, highly scalable concurrent classes and a rich set of new concurrency building blocks. <BR> <BR>
+
+ Java are a huge step forward for the development of concurrent applications, 
+with improvements to the Java Virtual Machine to support high-performance, highly scalable concurrent classes and a rich 
+set of new concurrency building blocks. The developer can  choose from multiple threading models and different methods of 
+synchronization within the model, but this varies from one Virtual Machine to Virtual Machine. <BR> <BR>
+
+Java is a sequential programming language that features Object-Orientation and multi-threading. However, multiple threads 
+can run in parallel processes and are created in a sequential fashion.
+
+A concurrent program is a single program that consists of several processes running in parallel. A process is a sequential 
+program in execution.  A concurrent program has control over its processes. Processes are highly independent, because they 
+are bounded to their task, and they provide fundamentals of the structure of the program. <BR> <BR>
+
+The concept of multi threading within a sequential programming language, such as Java allows us to create processes running 
+in parallel. Processes and threads are conceptually related.  A process is the actual program executed by one or more threads. 
+The process maintains its program structure and state, i.e., objects and variables. A thread is a single flow of control that
+ can execute its instructions independently. 
+
+Communication between processes can be established by means of shared memory or by interprocess-communication (IPC) facilities. 
+Java provides communication through shared-memory, message passing, input/output streams and remote links. Channels are 
+also used in Java for communication. <BR> <BR>
+
+
+Programming Java threaded applications to run on multi-core processors is much tougher than programming for their 
+single-core counterparts. While multiple applications can easily run on different cores, you must
+ meticulously code applications to take advantage of multi-core technology. This means that existing 
+applications must likely see the performance increase, if any, when running on a modem multicore machine.
+Java-thread Programs having the following characteristics may be well suited :<br><br> </p>
+
+
+<blockquote>
+<P align="justify"> <span class="content" >
+<li> The decomposition of a single application into several, dependent and interacting tasks. 
+<li>  Work that can be executed, or data that can be operated on, by multiple tasks simultaneously </li>
+<li>  low  synchronization and low communication overhead is required in design of algorithms </li>
+  <li>   Block for potentially long I/O waits </li>
+  <li> Use many CPU cycles in some places but not others </li>
+   <li> Must respond to asynchronous events </li>
+  <li>  Some work is more important than other work (priority interrupts) </li> 
+  <li> Efficient load balancing of work across threads </li>
+  <li> Scalability of application on 4/8/16/32 cores to get expected performance </li>
+</span>
+</p>
+
+</blockquote>
+
+
+
+<P align="justify"> <span class="content" >
+
+In Java Concurrency in Practice, the creators of these new facilities explain not only how they work and how to 
+use them, but also the motivation and design patterns behind them. 
+
+However, developing, testing, and debugging multi-threaded programs can still be very difficult; it is all too 
+easy to create concurrent programs that appear to work, but fail when it matters most: in production, 
+under heavy load. Java Concurrency in Practice arms readers with both the theoretical underpinnings and 
+concrete techniques for building reliable, scalable, maintainable concurrent applications. Also, it provides design rules, 
+patterns, and mental models that make it easier to build concurrent programs that are both correct and performance. 
+  
+
+ <BR> <BR>
+
+The Java Virtual Machine (JVM) allows creating multiple Java threads. It is well known that standard JVM may run only 
+on single java process, but any number of threads. JVM internally implements the mapping of threads onto real OS threads. 
+ Threads in Java
+ is a runnable object and Synchronization in Java can be achieved by critical sections  in which code segments allowing 
+access to shared data from multiple threads. Also access to shared data required mutual exclusion to ensure atomic 
+operations. Basic synchronization mechanism in Java is monitor and <i> java.util.concurrent </i> library provides many
+ other synchronization primitives. Threads usually communicate via queues. <BR> <BR>
+</span>
+</p>
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+<b> <font color = "red" > Creating Java Thread : </font> </b>
+<P align="justify"> <span class="content" >
+
+In Java, each thread is represented by an object of class java.lang.Thread, which handles the necessary
+bookkeeping and provides methods for controlling the thread.
+</span>
+</p>
+
+<P align="justify"> <span class="content" >
+
+To create a new type of Java thread, you write a class that does one of the following: 
+<blockquote>
+<li> Inherits from the class <i>java.lang.Thread </i></li>
+<li> Implements the interface <i>java.lang.Runnable </i></li>
+</span>
+</p>
+
+</blockquote>
+
+
+<P align="justify"> <span class="content" >
+Usually, it is better to implement Runnable than to extend Thread, because extending Thread means you can't extend any other class.You put the code you want executed by the thread into the run method of your new class
+The Thread class has constructors that accept various combinations of the following parameters:
+</br>
+
+<blockquote>
+	<li><i>A Runnable object, </i>whose run method will be executed within the thread
+	<li><i>A ThreadGroup object,</i> determining the thread group in which the thread will be created
+	<li><i>A name for the thread (a String),</i> which is used mostly for debugging output
+
+</span>
+</p>
+
+</blockquote>
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+
+<font color = "red" > <b>Starting and Terminating Threads : </b> </font> 
+ 
+<P align="justify"> <span class="content" >
+The start method - which takes no parameters - starts
+the run method (either the one in the <i>class itself</i>, or the one in a provided<i> Runnable</i>) in a new thread
+A thread terminates when the run method returns, either successfully or because of an unchecked exception A terminated thread cannot be restarted.
+</span>
+</p>
+
+<blockquote>
+<P align="justify"> <span class="content" >
+<li>Thread Interleaving Example <br><BR> &nbsp;&nbsp; <i>
+
+  public class Test implements Runnable<BR>&nbsp;&nbsp;
+    { <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	private int number; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public Test(int number)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		this.number = number;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public void run()<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		for (int i = 0; i < 2; i++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			System.out.print("I am thread number " + number);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			System.out.println();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public static void main(String[] argv)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		for (int i = 0;i < Integer.parseInt(argv[0]); i++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Thread thread = new Thread(new Test(i));<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			thread.start();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<BR>&nbsp;&nbsp;&nbsp;
+}<BR></i>
+</li>
+</blockquote>
+</span></p>
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+<blockquote>
+<P align="justify"> <span class="content" >
+
+<li> <font color = "red"> <B> Thread Control - Interrupt  </b> </font>  <BR><BR>
+Each thread has an interruption status (a boolean) Calling interrupt on a Thread object has one of two
+effects
+<ol>
+<li> If the thread is sleeping or waiting, an InterruptedException is
+raised in the thread and its interruption status is set to <B>false</B>
+</li>
+
+<li>If the thread is doing anything else, its interruption status is set to
+<B>true</B>
+</li>
+</ol>
+
+</li>
+</span></p>
+<P align="justify"> <span class="content" >
+
+
+ A thread determines its interruption status with the static method Thread.interrupted. This is a very basic form of inter-thread communication
+<i>
+<blockquote>
+public class Interruptee implements Runnable
+{
+<br>
+	public void run()
+	{
+		<blockquote>
+		while (!Thread.interrupted())
+		{<blockquote>
+			System.out.println("No interrupt yet.");
+		 </blockquote>
+		}
+		
+		<BR>System.out.println("Finally, an interrupt!");</blockquote>
+		
+		
+	}</blockquote>
+        
+	<blockquote>
+	public static void main (String[] argv)
+	{
+		<blockquote>
+		Thread thread = new Thread (new Interruptee());
+		thread.start();
+		thread.interrupt();
+		</blockquote>
+	}</blockquote>
+}
+
+
+</i>
+</blockquote>
+
+</span></p>
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+<blockquote>
+<li> <font color = "red"> <B> Thread Control - Join </b> </font>  <BR><BR>
+
+
+<blockquote>
+Calling join on a Thread object t causes the calling thread to suspend until the target thread has completed. The call returns when t.isAlive is false .If a timeout is specified, the call returns when the timeout expires even if the target thread is still running.You should only call the join method on threads you created - otherwise, you don't necessarily know how they will behave.
+
+public class Joinee implements Runnable
+{
+<br>
+	public void run()
+	{       <blockquote>
+		for (int i = 0; i < 5; i++)
+		{       <blockquote>
+			System.out.println("Line number " + i);
+			</blockquote>
+		}<br>
+		System.out.println]("Thread exiting.");</blockquote>
+	}</blockquote>
+	<blockquote>
+	public static void main(String[] argv)
+	{       <blockquote>
+		Thread thread =new Thread(new Joinee());<br>
+		System.out.println("Starting thread.");<br>
+		thread.start();<br>
+		thread.join();<br>
+		System.out.println("Thread terminated.");<br>
+		</blockquote>
+	}
+}
+
+
+<i>Thread Control - Static Methods: </i>
+The Thread.sleep method takes as a parameter a long number of milliseconds, and causes the current thread to suspend for at least that amount of time
+
+
+</blockquote>
+
+
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+<li> <font color = "red"> <B> Synchronization  </b> </font>  <BR><BR>
+
+Thread Control - Join
+
+Java has constructs for synchronization that, when used properly, can ensure that only one thread is accessing a particular object at any given point in the computation.The synchronization construct in Java is the lock, and
+the Java keyword synchronized is used to manipulate locks
+There are two ways to use the synchronized keyword: block synchronization and method synchronization
+<ol>
+	
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+
+ <font color = "red"> <B>  <li>  Block  Synchronization  </b> </font>  <BR><BR>
+
+	The syntax for block synchronization is:
+		<blockquote>
+		synchronized (object-reference)
+		{
+			<blockquote>
+			// I hold the lock on object object-reference.
+			</blockquote>
+		}</blockquote>
+
+Block synchronization allows you to lock any object,anywhere in your code .The most common usage is to lock <i>this</i>
+<br>
+Block Synchronization Example
+
+public class BlockSync
+{	<blockquote>
+	private static Object lock =new Object();<br>
+	private int number;<br>
+	
+	public void run()
+	{	<blockquote>
+		for (int i = 0; i < 2; i++)
+		{	<blockquote>
+			synchronized (lock)
+			{<br>	
+			&nbsp;&nbsp; System.out.print("I am thread number"+number);<br>
+			&nbsp;&nbsp;	System.out.println();<br>
+				
+				
+			}</blockquote>
+		}</blockquote>
+	}</blockquote>
+	<blockquote>
+	public BlockSync(int number)
+	{	<blockquote>
+		this.number = number;
+		</blockquote>
+	}</blockquote>
+	<blockquote>
+	public static void main(String[] argv)
+	{	<blockquote>
+		for (int i = 0;i < Integer.parseInt(argv[0]); i++)
+		{	<blockquote>
+			Thread thread =new Thread(new BlockSync(i));<br>
+			thread.start();
+			</blockquote>
+		}</blockquote>
+	}</blockquote>
+}
+
+
+
+
+</li>
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+ <font color = "red"> <B>  <li>  Method Synchronization  </b> </font>  <BR><BR>
+
+
+	The syntax for method synchronization is to add the keyword synchronized at the beginning (anywhere in the modifier list) of a method declaration, such as:
+	<blockquote>
+	synchronized Object getObjectAt(int position)
+	{ /* body */ }
+	</blockquote>
+	Method synchronization is exactly equivalent to block
+	synchronization of the entire method on this:
+	<blockquote>
+	Object getObjectAt(int position)
+	{ synchronized (this) { /* body */ } }
+
+	</blockquote>	
+
+</li>
+
+</ol>The synchronized keyword is not part of a method's signature; this has two important effects
+When you override a synchronized method in a child class, the new method is not automatically synchronized you must use the keyword again.The superclass method remains synchronized, so if you call it with super.foo(), the synchronization behavior is as expected Methods in interfaces cannot be declared with the synchronized modifier.
+<ol>
+	<B> <li>Acquiring and Releasing Locks : </b> <br>
+	All locking is based on blocks - a lock is acquired when a synchronized block or method is entered, and released when it is exited.  Locks operate 		per-thread, so if a thread already holds a lock for a particular object and hits another synchronized block for that object, it doesn't 			suspend. This is called reentrant locking.If an object has both synchronized methods and normal methods, the normal methods may be executed at any 		time (even if a thread is executing a synchronized method)
+	</li><br> <BR>
+
+	<b> <li>Locks and Static Fields and Methods : </b> <br>
+	Locking an object doesn't have any effect on access to static fields or methods of that object's class Access to static fields can only be protected 		using synchronized static methods or blocks, since fields cannot be synchronized. Synchronization on static methods and blocks acquires and releases 		the lock for the Class object associated with those methods and blocks.
+
+
+	</li>
+
+</ol>
+
+</blockquote>
+	
+
+
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+
+ <font color = "red"> <B>   Advantages of Java Multi-threading on Solaris : </b> </font>  <BR><BR>
+
+
+<P align="justify"> <span class="content" >
+Sun's Java Virtual Machine (JVM), central to the performance and scalability of the Java Development Kit (JDK) for Solaris, is designed to take full advantage of multi-processor computing systems by using the native multi-threading capabilities of Solaris. It performs byte-code interpretation using native multi-threading and fast synchronization . These features provide developers with significant performance boosts required for successfully developing and deploying Java applications that deliver solid performance and fast response times under peak loads. 
+</span></p>
+
+<P align="justify"> <span class="content" >
+Java on Solaris leverages the multi-threading capabilities of the operating system kernel while allowing developers to create powerful Java applications using thousands of user-level threads, if needed, for multiprocessor or uniprocessor systems through a very simple programming interface. 
+
+</span></p>
+<P align="justify"> <span class="content" >
+The Java on Solaris environment supports the many-to-many threads model. As illustrated in Figure 1, the Solaris two-level architecture separates the programming interface from the implementation by providing an intermediate layer, called lightweight processes (LWPs). LWPs allow application developers to rapidly create very fast and cheap threads through a portable application-level interface. Developers simply write applications using threads. The runtime environment, as implemented by a threads library, multiplexes and schedules runnable threads onto "execution resources," the LWPs. 
+
+</span></p>
+
+
+<div align=center>
+<img src="./java-threads-images/java-thread-perfor.gif" alt="MixedModeModel" border="0" height="400" width="300" >
+</div>
+
+<P align="justify"> <span class="content" >
+Individual LWPs operate like virtual CPUs that execute code or system calls. LWPs are dispatched separately by the kernel, according to scheduling class and priority, so they can perform independent system calls, incur independent page faults and run in parallel on multiple processors. The threads library implements a user-level scheduler that is separate from the system scheduler. User-level threads are supported in the kernel by the kernel-schedulable LWPs. Many user threads are multiplexed on a pool of kernel LWPs. 
+</span></p>
+
+<P align="justify"> <span class="content" >
+Solaris threads provide an application with the option to bind a user-level thread to an LWP or to keep a user-level thread unbound. Binding a user-level thread to an LWP establishes an exclusive connection between the two. Thread binding is useful to applications that need to maintain strict control over their own concurrency, such as those that require real-time response. 
+</span></p>
+
+<P align="justify"> <span class="content" >
+Since most Java applications would not require it, there is no Java API to perform the binding. If required, a Solaris native method call can be made to perform the binding. Therefore, all Java threads are unbound by default. Unbound user-level threads defer control of their concurrency to the threads library, which automatically expands and shrinks the pool of LWPs to meet the demands of the application's unbound threads 
+</span></p>
+
+<P align="justify"> <span class="content" >
+The Solaris two-level model delivers unprecedented levels of flexibility for meeting many different programming requirements. Certain programs, such as window programs, demand heavy logical parallelism. Other programs, such as matrix multiplication applications, must map their parallel computation onto the actual number of available processors. The two-level model allows the kernel to accommodate the concurrency demands of all program types without blocking or otherwise restricting thread access to system services. 
+</span></p>
+<BR>
+
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+ <font color = "red"> <B>   Evaluating Multi-threading Capabilities with Real-World Application : </b> </font>  <BR><BR>
+
+<P align="justify"> <span class="content" >
+While benchmarks can be a valuable tool to assess the performance and stability of an application, the true test is in real-world implementation.  
+</span></p>
+
+<P align="justify"> <span class="content" >
+The latest in JVM technology for Solaris is currently being evaluated as part of an early access program by several real-world Internet applications, including Vitria's BusinessWare application integration software and Volano's VolanoChat, which allows Web developers and businesses to create easily customized chat rooms for their public Websites and corporate intranets.   
+</span></p>
+
+
+<P align="justify"> <span class="content" >
+As a result, these highly threaded, highly networked, multiuser applications are realizing tremendous gains in Java performance, further demonstrating that the Java on Solaris threading model delivers the best combination of speed, concurrency, functionality and kernel resource utilization. 
+</span></p>
+
+<P align="justify"> <span class="content" >
+Because of the flexible manner in which the Solaris Java Virtual Machine maps Java 
+threads to its kernel, there are no predefined limits on the number of threads that can be used per application, according to John Neffenger, CTO, Volano LLC. "We have reason to believe that the new version of the Solaris JavaVirtual Machine coming out from Sun later this summer will be the platform with all the speed, scalability, and stability that Java deserves."
+
+</span></p>
+
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+</td>
+</tr>
+
+</TBODY> 
+</TABLE> 
+
+<!-- ************************  An Overview of Java-thread Ends here  **************************** -->
+
+<BR> 
+
+<!-- ******************* Java & Threads Backgorund Starts  ***************************** -->
+
+
+<a name="java-thread-category"> </A>
+
+<TABLE  width ="100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left> <font size="2"  Color="black" face= "verdana">
+     <B>  Java thread categories  </b>  </font> 
+    </DIV> 
+  </TD> 
+   </TR> 
+
+<TR>
+<TD>
+
+<P align="justify"> <span class="content" >
+
+
+
+<BR> 
+Two different threading models commonly used are a many-to-many model and a one-to-one model. Many-to-many and one-to-one
+ refer to (essentially) LWPs (lightweight processes) and Solaris Threads. For example Java threads are really Solaris Threads. 
+The major challenge is to achieving thread synchronization in many-to-many model on Multi-Core processors in Java Threading model. 
+Also, for large number of threads on Multi-Core processors, the factors such as the thread stack size, thread local heap, 
+garbage collection affects, and extensive shared memory and handling data race conditions play an important role for Java 
+threads on Multi-Cores. The other factors that could affect the application performance are to analyze the large numbers 
+of threads or cpus.  <BR> <BR>
+
+Process-oriented programming, based on CSP (Communicating Sequential Processes) principles, aims to make concurrency easy for developers.
+ In order to provide this concurrency, developers of CSP implementations must use (or implement) a threading mechanism. When running 
+on top of Operating System (OS), such threading mechanisms fall into three main categories: user-threads, kernel-threads and hybrid 
+threading models. <BR> <BR>
+
+
+<font color ="red"> <B> Threading categories :    </b>  </font> <BR> <BR> 
+
+
+<font color ="red"> <B> User-threads </b>  </font> (also known as user-space or user-level threads) are implemented in user-space and are invisible to the OS kernel. 
+They are co-operatively scheduled and provide fast context switches. Intelligent scheduling can allow them to be more efficient
+ than kernel-threads by reducing unnecessary context switches and unnecessary spinning.  However, they do not usually support preemption, 
+and one blocking call blocks all the user-threads containing in a kernel-thread. Therefore blocking calls have to be avoided, 
+or run in a separate kernel-thread. Only one user-thread in a kernel-thread can be running at any time, even on multi-processor/multi-core 
+systems. <BR> <BR>
+
+<font color ="red"> <B> Kernel-threads </b>  </font> (Also known as kernel-space or kernel-level thread ) are implemented in the OS kernel. They usually rely 
+on preemption to perform scheduling. 
+Due to the crossing of the user-space/kernel-space divide and other overheads, a kernel-thread context switch is slower than 
+a user-space context switch.  However, blocking calls do not cause any problems like they do with user-threads and different 
+kernel-threads can run on different processors simultaneously. JCSP (on Sun's Java Virtual Machine on most operating Systems) uses 
+kernel-threads. <BR> <BR>
+
+<font color ="red"> <B> Hybrid models </b>  </font> (also known as many-to-many threading ) mix kernel threads and user-threads. 
+For example SunOS contained (adapting their technology to that user here) multiple kernel-threads, each possibly containing multiple 
+user-threads, which would dynamically choose a process to run from a pool, and run the processes until it could no longer be run. 
+Much research on hybrid models has involved the user-thread and kernel-thread schedulers sharing information. <BR> <BR>
+
+The speed of kernel-threading is increasing on multi-Core systems. The development of NGPT (Next Generation POSIX Threads) 
+library for Linux alongside the NPTL (Native POSIX Thread Library) are interesting research areas of work which are in progress, 
+NGPT was complex hybrid threading library, whereas NPTL  was  primarily centered on a speed-up of kernel-threading. NPTL is now 
+the default library for Linux <BR> <BR>
+</span></p>
+
+ </td>
+ </tr>
+<tr>
+<td>
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</tbody>
+</table>
+
+
+
+<!-- *************************** Java & Threads Background ends ********************************** -->
+
+<!-- *************************** An Overview of Java-thread challenges Starts *********************** -->
+
+<a name="java-thread-challenges">  </a> 
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  Java thread programing  Challenges </b>  </font> </font></DIV>
+ </TD> 
+  </TR> 
+
+
+
+<TR>
+<TD>
+
+<P align="justify"> <span class="content" >
+
+<BR> 
+
+In general, programmers are facing problems when they make the transition from the conventional programming paradigm into the new era of 
+
+parallel programming.
+ New programming models and tools can support this transition. The recent approaches to 
+extending the Java language to make it more suitable for programming multi-core architectures are interesting. The main aim is
+ pose some new ideas 
+and extensions to alleviate the burden of parallel programming.  Some efforts on implementation of run-time environment - build on top of 
+the Java virtual machine - to execute parallel threaded programs is going on. <BR> <BR> 
+
+The  Java thread Programming users should understand concepts of 
+synchronization, critical section and deadlock conditions. 
+Synchronization 
+is an enforcing mechanism used to impose constraints on the order of execution of threads.
+ 
+The most important challenge for Java thread programmers is the decomposition of a single application into several, dependent 
+and interacting tasks. The efficiency of the parallel program is highly dependent on this decomposition step: it determines
+ the synchronization and communication overhead. Other challenges are synchronization and communication between parallel threads. Synchronizing parallel threads is a tedious 
+task: synchronizing too often leads to inefficient program execution but not enough synchronization can lead to incorrect results
+ due to the data races or condition hazards. Faulty synchronization can lead to deadlocks. <BR> <BR>
+The load balancing is another important challenge and achieving an appropriate decomposition of the problem in 
+several tasks that can be run on multiple cores. 
+
+A special care is needed  about executing these tasks efficiently in parallel and division of the work load equally among all these cores
+is important and avoid the some cores remain idle  for long time.
+
+A related challenge is scheduling of these parallel threads and tasks. Another challenge is to discuss the  scalability of application.
+
+This is equivalent to  execute the same application on single core architecture as well as on a multi-core architecture with 4 cores as on 
+an architecture 
+With 80 cores and think about scalability. The following questions require answers on Java threaded application 
+on Multi cores. <BR> <BR>
+</span></p>
+
+
+
+
+<P align="justify"> <span class="content" >
+ <li>
+Can we describe our parallel algorithms in such a way that we can exploit the  parallelism on an 80 core machine ?  </li>
+
+
+
+ <li> Can our parallel algorithms execute efficiently on Dual /Quad Core  ?  </li>
+
+
+<LI> Can Java thread Programing tools  available to address challenges ?  </li>
+
+
+<LI> Can the performance of Java threads on Multi-Core Systems requires trace-based statistics ? </li>
+
+<LI>  Can  flexible visualization technique  analyze the trace data of java-thread application ? </li>
+
+</span></p>
+
+<BR> <BR> 
+<P align="justify"> <span class="content" >
+
+The programming language Java has multi-threading capabilities for concurrent programming. To provide synchronization between 
+asynchronously running threads, the Java language and runtime system uses <i> monitors </i>. The concept of Communication 
+Sequential Processes (CSP) implementation in Java is popular in the recent past. In CSP channels and composition constructs 
+are described to provide well-behaved communication between processes i.e. threads. Instead, Java provides general concepts
+ for implementing communication constructs that are as flexible as possible. <BR> <BR>
+
+
+<font color ="red"><B> Thread safety and synchronization </b>  </font> <BR> <BR>
+
+A method in a Java object is said to be thread safe if it can be safely run in a multi-threaded 
+environment. To achieve this safety, there must be a mechanism by which multiple threads running
+ the same method can synchronize their operations, such that only one of them is allowed to proceed 
+when accessing the same object or lines of code. This synchronization requires the threads to communicate
+ with each other using objects called semaphores.
+
+One specific type of semaphore is called a mutual exclusion semaphore or a mutex. As the name indicates, ownership of this semaphore object is mutually exclusive, in that only one thread can own the mutex at 
+any given time. Any other thread that tries to acquire ownership will be blocked and must wait until 
+the owning thread releases the mutex. If multiple threads are waiting in line for the same mutex, 
+only one of them will get it when it is released by the current owner; the others will continue to block.
+<BR> <BR>
+
+
+The concept  a <I> monitor </i> is a body of code whose access is guarded by a mutex. Any thread wishing 
+to execute this code must acquire the associated mutex at the top of the code block and release 
+it at the bottom. Because only one thread can own a mutex at a given time, this effectively ensures
+ that only the owing thread can execute a monitor block of code. (The guarded code need not be 
+contiguous -- for example, every object in the Java language has a single monitor associated with it.) <BR> <BR>
+
+
+Any developer with exposure to thread programming in the Java language will immediately recognize 
+the above as the net effect of what the synchronized keyword does. Java code enclosed within a 
+synchronized block is guaranteed to be run by a single thread at any given time. Internally, the 
+synchronized keyword is translated by the run time into a situation wherein all contending threads
+ are trying to acquire the (single) mutex associated with the object instance on which they (the threads) 
+are operating. The thread that succeeds in acquiring the mutex runs the code and releases the mutex when 
+exiting the synchronized block. <BR> <BR>
+
+
+<font color ="red"><b> Waiting and notification </b> </font> <Br> <BR>
+
+The construct of wait/notify also plays an important role in the Java language's inter-thread communication mechanism. The essential idea is that one thread needs a certain condition that can be brought about by another thread to become true. It therefore waits for the condition to be met. Once the condition is true, the causing thread notifies the waiting thread to wake up and proceed from where it left off.
+The wait/notify mechanism is much more difficult to understand and reason about than the synchronized mechanism. To reason about the behavioral logic of one method that uses wait/notify requires that you reason about the logic of all the methods using it. Reasoning about one method at a time, in isolation from others, is a sure means to arriving at incorrect conclusions about the overall system behavior. Clearly, the complexity of doing this increases very rapidly as the number of methods to be reasoned about increases. <Br> <Br> 
+
+
+<font color ="red"><B> Thread states </b>  </font> <Br> <BR>
+
+The <i> start() </i> method of a newly created thread must be called to start its execution. However, simply calling the <I> start()  </i> method need not imply the thread starts running immediately. This method just changes the state of the thread from new to runnable. The thread state becomes running (from runnable) only when it is actually scheduled for execution by the OS. <BR> <BR>
+
+
+Typical OS support two threading models <I>  cooperative </i>  and <I> preemptive </i>. In the cooperative
+ model, each thread has the final say on how long it will retain control of the CPU and when it will give 
+it up. In this model, because a rogue thread may never relinquish control, the other threads may never get
+ to run. In the preemptive model, the OS itself uses a timer on the clock "ticks" on which it can abruptly transfer control from one thread to another. In this case, the scheduling policy that decides which thread 
+will gain control next may be based on a variety of criteria, such as relative priorities, how long a 
+particular thread has been waiting to execute, etc. <BR> <BR>
+
+A thread in the running state can enter the blocked state if it decides to sleep for some reason, needs 
+to wait for a resource (for example, for input data to arrive on a device, or for notification that 
+some condition has been set), or is blocked while trying to acquire a mutex. A blocked thread reenters
+ the runnable state when either the sleep period expires, the expected input arrives, or the current
+ owner of the mutex has released it and notified the waiting threads that the mutex is up for grabs
+ again. <Br> <BR>
+
+A thread terminates when its <I> run() </i>  method completes, either by returning normally or by throwing an unchecked exception such as <I> RuntimeException </i>. At this time, the state of the thread is dead. Once a thread is dead, it cannot be restarted by re-invoking its <I> start() </i>  method, as doing so will throw the 
+<I> InvalidThreadStateException. </i> 
+</span></p>
+
+<BR> 
+</td>
+</tr>
+<tr>
+<td>
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ************************** An Overview of Java-thread challenges end ************************** -->
+
+<!-- *********************** An Overview of Java-thread Pitfalls Starts *********************** -->
+ 
+<a name="java-thread-pitfalls">  </a>
+
+<TABLE  width ="100%" cellPadding=3  border=0> 
+<TBODY>
+
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+ <DIV align=Left><font size="2"> 
+<font Color="black" face= "Verdana">
+     <B>  Pitfalls multithreaded programming in the Java language  </b> </font> </font></DIV>
+ </TD> 
+  </TR> 
+
+
+
+<TR>
+<TD>
+
+<P align="justify"> <span class="content" >
+
+<BR> 
+
+
+<font color ="red"> <B> Four common pitfalls multi-threaded programming in the Java language </b> </font> <BR> <BR>
+
+Multi-threaded programming in the Java language is facilitated by a number of well-designed constructs supported by the language. In addition, a large collection of design patterns and guidelines
+ have been devised to help you steer clear of the many pitfalls of this complex undertaking.
+ In spite of this, it is very easy to inadvertently introduce a subtle bug into your multi-threaded code and, more importantly, 
+such problems are just as difficult to analyze and debug. What follows is a list of the most common problems 
+you'll encounter (and likely have encountered) while attempting multi-threaded programming in the Java language.
+<BR> <BR>
+
+<font color ="red"> <B> Race conditions </b>  </font> <BR> <BR>
+
+A race condition is said to exist in a system when there is contention for a shared resource between multiple threads and the winner determines the behavior of the system. Allen Holub provides a very simple example of a multi-threaded program with this bug in his article "Programming Java threads in the real world" (see Resources). An even more insidious consequence of incorrect synchronization between conflicting access requests is data corruption, wherein the shared data structure is partly updated by one thread and partly by another. In this case, instead of the system behaving per the winning thread's intent, it behaves according to neighbor's intent, so that both threads end up losing. <Br> <BR>
+
+<font color ="red"> <B> Deadlocks </b>  </font> <Br> <BR>
+
+A deadlock is a condition where a thread is blocked forever because it is waiting for a certain condition to become true (such as a resource being available), but the condition is prevented from becoming true because the thread that would make it true is, in turn, waiting for the first thread to "do something." In this way, both threads are waiting for the other to take the first step and neither is able to do anything. Read Allen Holub's article (see Resources) for examples of how deadlocks can happen in multi-threaded Java code. <BR> <BR>
+
+<font color ="red"> <b> Livelocks </b>  </font> <BR> <BR>
+
+A livelock, unlike a deadlock, happens when threads are actually running, but no work gets done. This usually happens when the two threads are working at cross-purposes, so what is done by the first thread is undone by another. A simple example is where each thread already holds one object and needs another that is held by the other thread. Now imagine a situation wherein each thread puts down the object it possesses and picks up the object put down by the other thread. Clearly, these two threads can run forever in lock-step, effectively managing to achieve nothing at all. (A common real world example is when two people approach each other in a narrow corridor. Each person tries to be polite by moving to one side to let the other one pass, but both keep moving to the same side at the same time, thereby ensuring that neither can pass. This continues for some time, with both of them swaying from side to side and no progress being made.) <BR> <BR>
+
+
+<font color ="red"> <B> Resource starvation </b> </font> <BR> <BR>
+
+Resource starvation, also known as thread starvation, is a consequence of the fact that the wait/notify primitives of the Java language do not guarantee live-ness. It is mandatory that these methods hold locks for the objects that they are waiting or notifying. The wait() method called on a particular thread releases the monitor lock prior to commencing to wait, and it must be reacquired before returning from the method, post notification. Accordingly, the Java Language Specification (see Resources) describes a wait set associated with each object, in addition to the lock itself. Once a thread releases the lock on an object (following the call to wait), it is placed in this wait set. <BR> <BR>
+
+Most JVM implementations place waiting threads in a queue. Therefore, if there are other threads waiting for the monitor when a notification happens, a new thread will be placed at the back of the queue and won't be the next one to acquire the lock. So, by the time the notified thread actually gets the monitor, the condition for which it was notified may no longer be true and it will have to wait again. This can continue indefinitely, thereby leading to wasted computational effort (because of the shunting of threads in and out of the wait sets) and thread starvation. <BR> <BR>
+</span></p>
+
+</TD> 
+</TR> 
+
+</td>
+</tr>
+<tr>
+<td>
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</TBODY>
+ </TABLE> 
+
+<!-- *********************** An Overview of Java-thread Pitfalls Ends *********************** -->
+
+
+<!-- ********************** compilation and execution of Java-thread Program starts  ******************* --> 
+  
+<a name="java-thread-compile-execution"> </a>
+
+<!--<a name ="pthread-compile-link-execute">-->
+<TABLE  width ="100%" cellPadding=3  border=0> 
+<TBODY>
+<TR> 
+<TD bgColor = "#cccdd77889"> 
+<DIV align=Left>
+<font size="2"  Color="black" face= "verdana">
+ <B> Compilation, Linking  and Execution of java Programs </b> </font> </font></DIV>
+ </TD> </TR> 
+</TBODY> </TABLE> 
+
+<BR>
+
+<TABLE cellPadding=3  border=0> 
+<TBODY>
+
+<TR>
+<TD>
+
+<P align="justify"> <span class="content" >
+    
+    The creation of a Java program generally follows the steps below<BR><BR><BR>
+     
+<div align=center>
+<img src="./java-threads-images/compile.gif" alt="MixedModeModel" border="0" height="250" width="200" >
+</div>
+
+The code is developed in either a plain text editor or an Integrated Development Environment (IDE) and saved to a file with a .java extension. It is then checked for syntax errors by the Java Compiler (javac.exe). If successfully compiled, the resultant .class file is passed to the Java Virtual Machine (java.exe) for execution
+<BR><BR>
+
+
+<DIV align="right">
+<a href="java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+<BR>
+
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> (A) Using command line arguments: </b> </font> <br><br>
+   
+	The compilation and execution details of java programs  are common to all the systems.<br><br>
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+
+        # javac &lt; program name &gt;  </i> </font>
+   <br><br>
+
+        For example to compile a simple Hello World program user can type<br><br>
+
+ 
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+        # javac HelloWorld.java </i> </font>
+    <br><br>
+
+<font color="black" size = "2" face ="TimesNewRoman"> <b> (B) Using a Ant Utility: </b> </font> <br><br>
+
+   
+Ant is a build management tool designed to replace MAKE as the tool for automated builds of large Java applications. Like Java, and unlike MAKE, Ant is designed to be platform independent.
+
+<p><br>
+
+        To compile a java program, you can use the command, <BR> <BR>
+
+
+   <font color="red" size = "2", face="TimesNewRoman"> <i>
+       ant </i> </font> <BR> <BR>
+    
+   <font color="black" size = "2" face ="TimesNewRoman"> <b> (C) Executing a Program: </b> </font> <br><br>
+
+        To execute a java Program, type the name of the executable at command prompt.  <BR> <BR>
+
+      <font color="red" size = "2", face="TimesNewRoman">  <i> java &lt; Name of the Executable &gt; </i> </font>  <br> <br>
+
+        For example, to execute a simple HelloWorld Program, user must type:<br><br>
+  
+       <font color="red" size = "2", face="TimesNewRoman"> <i>
+         # java HelloWorld  </i> </font> <br><br>
+
+        The output must look similar to the following:<br><br>
+
+            Hello World! <br><br>
+
+
+<!-- ************************** executing program on MPI based Cluster : starts ****************************** -->
+
+ <font color="black" size = "2" face ="TimesNewRoman"> <b> (D) Executing a Program on MPI based Cluster: </b> </font> <br><br>
+
+ To Execute the above Programs on MPI based Cluster , the user should submit job to scheduler.
+ To submit the job use the following command.
+
+         <FONT COLOR="red"><I></I><font face="TimesNewRoman"><br><br>bsub -q &lt;queue-name&gt; [options] ./&lt;executable-name&gt;</font></FONT>  </p>
+       
+For Example :
+
+  <P>
+     <FONT COLOR="red" face="TimesNewRoman">
+              bsub -q normal -ext"SULRM[nodes=1]" -o java-hello-world.out -e java-hello-world.err ./java-helloworld 
+          </FONT>
+  </p>
+NOTE : 1) Where "java-helloworld"  is binary executable of java-helloworld.c program.        
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) "nodes=1" indicates number of nodes required to run the executable.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Refer man pages of "bsub" for options.
+
+<br><br><br><br>
+<!-- ********************* executing program on cetus cluster : ends  ************************** -->
+
+<tr>
+<td>
+<DIV align="right">
+<a href="./java-threads-overview.html"><IMG src="./java-threads-images/top.gif" border="0" width="13" height="13"></a>
+</DIV>
+
+</td>
+</tr>
+</span></p>
+</TD> 
+</TR> 
+</TBODY>
+</TABLE> 
+
+<!-- ********************** compilation, Linking and execution of Pthread Program ends  *************************** --> 
+
+
+
+
+
+</TD></TR>
+ <!--  content of web page End here  --> 
+ 
+          
+
+
+
+</TBODY></TABLE>
+
+
+
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE> 
+
+
+      <TABLE  class=footarea cellSpacing=0 cellPadding=0 border=0 >
+        <TBODY>
+        <TR>
+
+          <TD class=footertext align=center>
+           <A href="http://www.cdac.in" target=_blank><FONT color=blue size=2>
+            Centre for Development of Advanced Computing </FONT></A> 
+         </TD>
+
+        
+
+        </TR></TBODY></TABLE>
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>

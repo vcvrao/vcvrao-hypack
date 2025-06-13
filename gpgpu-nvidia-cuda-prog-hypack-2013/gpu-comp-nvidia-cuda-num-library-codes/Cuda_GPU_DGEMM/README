@@ -1,0 +1,73 @@
+
+
+ *******************************************************************
+
+		C-DAC Tech Workshop : hyPACK-2013
+                          October 15-18, 2013
+
+ *******************************************************************
+   Created             : August 2013
+
+   E-mail              : hpcfte@cdac.in     
+
+		README
+             ------------
+
+
+Contents
+-----------
+	[ 1 ] Directory Structure 
+	[ 2 ] Compilation 
+	[ 3 ] Execution
+
+[1] Directory structure.
+
+README   : Gives quick information regarding Package and how to compile 
+           and execute
+
+Makefile : Makefile for make utility to compile source codes.
+
+Make.inc : Configuartion file required for compilation
+
+run.sh	 : Shell script to compile and execute the program for different 
+	   data sizes in single stroke and generate the result/log in
+	   ./result directory	
+
+src/     : Consists of program source code. 
+
+bin/     : Holds the executable generates after the compilation.  
+
+	
+[2] Compilation:
+
+1. Before compilation, prepare configuration file 'Make.inc'  with the help of
+   a templete provided.
+
+2. Use the following command to compile .
+  
+   	 	%make compile_all 
+
+[3] Execution
+
+The executable is placed in the bin subdirectory. 
+To run the gpu-Metaflops-dgemm program do the following
+	
+1. Change the directory to the bin directory 
+
+	  cd ./bin
+
+2. Use the following command for execution 
+
+	 ./<executable> [arguments]  
+
+   Eg.
+
+        % ./gpu-dgemm 1024 1024 1024
+
+		
+Note : User can use the run.sh script to compile and execute the cpu-gpu-dgemm in 
+single stroke for different data size. use the below command to execute the scipt 
+		 
+		% sh run.sh
+
+
